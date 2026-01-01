@@ -11,8 +11,9 @@ h1 {
     color: #2c3e50;
     border-bottom: 3px solid #3498db;
     padding-bottom: 10px;
-    font-weight: 700; /* Makes it bold */
-    font-size: 3rem; /* Makes it larger - adjust as needed */
+    font-weight: 800; /* Extra bold */
+    font-size: 3.5rem; /* Even larger */
+    text-align: center; /* Optional: center it */
 }
 /* Navigation Styles */
 header {
