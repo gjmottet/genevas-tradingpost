@@ -88,3 +88,167 @@ section h2 {
     border-bottom: 2px solid #eee;
     padding-bottom: 10px;
 }
+    <main>
+        <!-- Hero Banner -->
+        <section class="hero-banner">
+            <img src="images/manyhalibuts_rsz.jpg" alt="Collection of Halibut Hot Pads" style="width:100%; max-height:400px; object-fit:cover; border-radius:10px;">
+            <div class="banner-text">
+                <h2>Alaskan Fiber Art & Mathematical Craft</h2>
+                <p>Handcrafted in Fairbanks & Gustavus</p>
+            </div>
+        </section>
+
+        <section id="gallery">
+            <h2>Featured Work</h2>
+            <p class="section-intro">From mathematical designs to Alaskan wildlife-inspired pieces</p>
+            
+            <div class="gallery-grid">
+                <!-- Mathematical Art -->
+                <div class="artwork" data-tags="mathematical functional">
+                    <img src="images/whale_potholder_rsz.jpg" alt="Humpback Whale Potholder with Chaos Spiral">
+                    <div class="art-info">
+                        <h3>Chaos Theory Whale</h3>
+                        <p>Humpback whale potholder featuring deterministic chaos spiral</p>
+                        <div class="art-tags">
+                            <span class="tag">Mathematical</span>
+                            <span class="tag">Functional</span>
+                            <span class="tag">Alaskan</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Alaskan Wildlife Series -->
+                <div class="artwork" data-tags="alaskan functional">
+                    <img src="images/Octopus_potholder_rsz.jpg" alt="Giant Pacific Octopus Potholder">
+                    <div class="art-info">
+                        <h3>Giant Pacific Octopus</h3>
+                        <p>Knit and embroidered octopus potholder</p>
+                        <div class="art-tags">
+                            <span class="tag">Alaskan</span>
+                            <span class="tag">Marine</span>
+                            <span class="tag">Functional</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="artwork" data-tags="alaskan functional">
+                    <img src="images/Mushroom_potholder_rsz.jpg" alt="Winter Chanterelle Mushroom Potholder">
+                    <div class="art-info">
+                        <h3>Winter Chanterelle</h3>
+                        <p>Edible mushroom potholder from Gustavus</p>
+                        <div class="art-tags">
+                            <span class="tag">Alaskan</span>
+                            <span class="tag">Foraged</span>
+                            <span class="tag">Functional</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Halibut Collection -->
+                <div class="artwork" data-tags="alaskan functional collection">
+                    <img src="images/halibuts3left_rsz.jpg" alt="Three Halibut Hot Pads in Different Colors">
+                    <div class="art-info">
+                        <h3>Fresh-Knit Flatties</h3>
+                        <p>Halibut hot pad collection in varying colors</p>
+                        <div class="art-tags">
+                            <span class="tag">Alaskan</span>
+                            <span class="tag">Collection</span>
+                            <span class="tag">Functional</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="artwork" data-tags="alaskan functional">
+                    <img src="images/halibutredblue_rsz.jpg" alt="Close-up of Knit Halibut Hot Pad">
+                    <div class="art-info">
+                        <h3>Halibut Detail</h3>
+                        <p>Close-up showing knit texture and embroidery</p>
+                        <div class="art-tags">
+                            <span class="tag">Alaskan</span>
+                            <span class="tag">Detailed</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Wearables -->
+                <div class="artwork" data-tags="wearable premium">
+                    <img src="images/beaded_fingerlessgloves_rsz.jpg" alt="Beaded Fingerless Gloves in Merino Wool">
+                    <div class="art-info">
+                        <h3>Beaded Fingerless Gloves</h3>
+                        <p>Merino wool with glass seed beads</p>
+                        <div class="art-tags">
+                            <span class="tag">Wearable</span>
+                            <span class="tag">Beaded</span>
+                            <span class="tag">Premium</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="artwork" data-tags="wearable premium">
+                    <img src="images/hat_texture_rsz.jpg" alt="Owl Pattern Hat with Cable Knitting">
+                    <div class="art-info">
+                        <h3>Owl Cable Hat</h3>
+                        <p>Wool-silk blend with intricate cable pattern</p>
+                        <div class="art-tags">
+                            <span class="tag">Wearable</span>
+                            <span class="tag">Cabled</span>
+                            <span class="tag">Premium</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Teddy Bear Collection -->
+                <div class="artwork" data-tags="toy collection">
+                    <img src="images/holiday_market_rsz.jpg" alt="Basket of Hand-Knit Teddy Bears">
+                    <div class="art-info">
+                        <h3>Ursa's Constellations</h3>
+                        <p>Hand-knit teddy bear collection</p>
+                        <div class="art-tags">
+                            <span class="tag">Toys</span>
+                            <span class="tag">Collection</span>
+                            <span class="tag">Heirloom</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="process">
+            <h2>The Process</h2>
+            <div class="process-grid">
+                <div class="process-item">
+                    <img src="images/knitting_actionshot_rsz.jpg" alt="Knitting in Progress">
+                    <p>Each bead placed individually during knitting</p>
+                </div>
+                <div class="process-item">
+                    <img src="images/craftfair.jpg" alt="Artist at Gustavus Market">
+                    <p>Available at local markets in Gustavus & Fairbanks</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="about">
+            <h2>Recognition</h2>
+            <div class="awards">
+                <img src="images/prizes.jpg" alt="Southeast Alaska State Fair Awards">
+                <div class="awards-text">
+                    <h3>Best in Show - Textiles</h3>
+                    <p>Southeast Alaska State Fair - Halibut Hot Pad Collection</p>
+                    <p>Celebrating Alaskan craftsmanship and mathematical design in fiber art.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contact">
+            <h2>Contact & Commissions</h2>
+            <p>Based in Fairbanks (winter) and Gustavus (summer). Available for:</p>
+            <ul>
+                <li><strong>Fantasy Ball Fairbanks</strong> - Dragon potholders & cosplay accessories</li>
+                <li>Custom commissions - Wildlife, mathematical designs, wearables</li>
+                <li>Local markets - Juneau, Gustavus, Fairbanks</li>
+                <li>Gallery exhibitions</li>
+            </ul>
+            <p>Email: [Your Email Here] | Instagram: [Your Handle Here]</p>
+            <p><em>Dragon potholder series in progress for fantasy events</em></p>
+        </section>
+    </main>
