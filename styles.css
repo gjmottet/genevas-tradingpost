@@ -12,3 +12,39 @@ h1 {
     border-bottom: 3px solid #3498db;
     padding-bottom: 10px;
 }
+/* Navigation Styles */
+header {
+    text-align: center;
+    background: #2c3e50;
+    color: white;
+    padding: 40px 20px;
+    margin: -20px -20px 30px -20px;
+}
+
+nav {
+    margin-top: 20px;
+}
+
+nav a {
+    color: #ecf0f1;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #3498db;
+}
+
+main {
+    min-height: 300px;
+    padding: 20px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    border-top: 2px solid #eee;
+    color: #7f8c8d;
+}
