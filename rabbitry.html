@@ -103,6 +103,25 @@
             z-index: 1;
         }
         
+        /* NEW: Full-width divider bar */
+        .full-divider {
+            border-top: 4px solid #2c3e50;
+            margin: 4rem auto;
+            max-width: 1200px;
+            position: relative;
+        }
+        
+        .full-divider::after {
+            content: "🐇";
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            padding: 0 1rem;
+            font-size: 1.5rem;
+        }
+        
         .rabbit-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -274,30 +293,56 @@
             margin-bottom: 0.8rem;
         }
         
-        .services {
-            background: #2c3e50;
+        /* UPDATED: Full-width tanning services */
+        .tanning-services {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
             color: white;
-            padding: 3rem 2rem;
-            margin-top: 4rem;
-            border-radius: 10px;
+            padding: 4rem 2rem;
+            margin: 4rem 0;
+            width: 100%;
+            text-align: center;
+            border-top: 5px solid #3498db;
+            border-bottom: 5px solid #3498db;
+        }
+        
+        .tanning-content {
             max-width: 1000px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .services h3 {
-            color: white;
-            font-size: 1.8rem;
-            margin-top: 0;
-            text-align: center;
-        }
-        
-        .services p {
-            font-size: 1.2rem;
-            line-height: 1.7;
-            text-align: center;
-            max-width: 800px;
             margin: 0 auto;
+        }
+        
+        .tanning-services h3 {
+            color: white;
+            font-size: 2rem;
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+        }
+        
+        .tanning-services p {
+            font-size: 1.3rem;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+        
+        .price-highlight {
+            display: inline-block;
+            background: #e67e22;
+            color: white;
+            padding: 0.8rem 1.8rem;
+            border-radius: 30px;
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin: 1rem 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .note {
+            font-style: italic;
+            color: #ecf0f1;
+            font-size: 1.1rem;
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255,255,255,0.2);
         }
         
         .back-btn {
@@ -352,6 +397,18 @@
             
             .rabbit-image-container {
                 height: 250px;
+            }
+            
+            .tanning-services {
+                padding: 3rem 1rem;
+            }
+            
+            .tanning-services h3 {
+                font-size: 1.7rem;
+            }
+            
+            .tanning-services p {
+                font-size: 1.1rem;
             }
         }
     </style>
@@ -485,23 +542,23 @@
                 </div>
             </div>
             
-           
-      <!-- Pippy - FIXED FILENAME -->
-<div class="rabbit-card">
-    <div class="rabbit-image-container">
-        <img src="images/PippieSquare.jpg" alt="Pippy the Holland Lop Rabbit">
-    </div>
-    <div class="rabbit-info">
-        <div class="rabbit-details">
-            <span class="breed-tag">Holland Lop</span>
-            <span class="gender-tag">Doe</span>
-            <span class="age-tag">Shelter Rescue</span>
+            <!-- Pippy - USING WORKING IMAGE -->
+            <div class="rabbit-card">
+                <div class="rabbit-image-container">
+                    <img src="images/PippieLookingLeft.jpg" alt="Pippy the Holland Lop Rabbit">
+                </div>
+                <div class="rabbit-info">
+                    <div class="rabbit-details">
+                        <span class="breed-tag">Holland Lop</span>
+                        <span class="gender-tag">Doe</span>
+                        <span class="age-tag">Shelter Rescue</span>
+                    </div>
+                    <h3>Pippy</h3>
+                    <p><strong>Our cute random pet rabbit</strong> (not part of the breeding program). This Holland Lop came from the animal shelter via my husband's gaming buddy. Pippy is pure pet who enjoys lounging and getting treats.</p>
+                    <p><strong>Role:</strong> Family pet, comic relief, professional napper</p>
+                </div>
+            </div>
         </div>
-        <h3>Pippy</h3>
-        <p><strong>Our cute random pet rabbit</strong> (not part of the breeding program). This Holland Lop came from the animal shelter via my husband's gaming buddy. Pippy is pure pet who enjoys lounging and getting treats.</p>
-        <p><strong>Role:</strong> Family pet, comic relief, professional napper</p>
-    </div>
-</div>
         
         <!-- Breeding Program Info -->
         <section class="breeding-program">
@@ -516,10 +573,23 @@
             </ul>
         </section>
         
-        <!-- Services Section -->
-        <section class="services">
-            <h3>Rabbit Fur Services</h3>
-            <p>I hand-tan rabbit and snowshoe hare skins for $5-10 per skin, depending on pelt size. This traditional skill allows us to use the entire animal and create beautiful, warm fur items. (Photos of rabbit skin hats and products coming soon!)</p>
+        <!-- NEW: Full-width divider bar -->
+        <div class="full-divider"></div>
+        
+        <!-- UPDATED: Full-width Tanning Services -->
+        <section class="tanning-services">
+            <div class="tanning-content">
+                <h3>Rabbit & Snowshoe Hare Fur Tanning Services</h3>
+                <p>I offer traditional hand-tanning services for rabbit and snowshoe hare pelts. Using time-honored methods, I transform raw hides into soft, usable fur perfect for crafts, clothing, and traditional Alaskan items.</p>
+                
+                <div class="price-highlight">
+                    $5–10 per skin (based on pelt size)
+                </div>
+                
+                <p>This service honors the full use of the animal, creating beautiful, warm fur items while practicing sustainable harvest traditions. Perfect for hunters, homesteaders, and crafters who want to utilize every part of their harvest.</p>
+                
+                <p class="note">Photos of rabbit skin hats and finished products coming soon! Custom fur items available upon request.</p>
+            </div>
         </section>
         
         <!-- Back to Home Button -->
@@ -534,4 +604,3 @@
     </footer>
 </body>
 </html>
-         
