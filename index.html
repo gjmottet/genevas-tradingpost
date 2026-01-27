@@ -3,185 +3,257 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Geneva's Trading Post</title>
+    <title>Geneva's Trading Post - Alaskan Art & Rabbitry</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Homepage-specific styles */
+        .business-name {
+            text-align: center;
+            padding: 1.5rem;
+            background: #2c3e50;
+            color: white;
+            margin: 0;
+        }
+        
+        .business-name h1 {
+            font-size: 2.8rem;
+            margin: 0;
+            color: white;
+        }
+        
+        .business-name p {
+            font-size: 1.2rem;
+            margin: 0.5rem 0 0 0;
+            color: #ecf0f1;
+        }
+        
+        .banner-container {
+            width: 100%;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+        
+        .banner-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        nav {
+            background: #34495e;
+            padding: 1.2rem;
+            text-align: center;
+            border-bottom: 3px solid #3498db;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        
+        nav a:hover {
+            background: #3498db;
+            transform: translateY(-3px);
+        }
+        
+        .welcome-section {
+            text-align: center;
+            padding: 3rem 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .welcome-section h2 {
+            color: #2c3e50;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .welcome-section p {
+            font-size: 1.2rem;
+            line-height: 1.7;
+            color: #34495e;
+        }
+        
+        .rabbit-feature {
+            text-align: center;
+            padding: 2rem;
+            background: #f8f9fa;
+            border-radius: 10px;
+            margin: 2rem auto;
+            max-width: 800px;
+        }
+        
+        .rabbit-image {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin: 1rem 0;
+        }
+        
+        .page-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            padding: 3rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .link-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+        
+        .link-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .link-card h3 {
+            color: #2c3e50;
+            margin-top: 0;
+        }
+        
+        .link-card p {
+            color: #7f8c8d;
+            margin-bottom: 1.5rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 0.8rem 1.8rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+        
+        .btn:hover {
+            background: #2980b9;
+        }
+        
+        .coming-soon {
+            opacity: 0.9;
+        }
+        
+        .coming-soon .btn {
+            background: #95a5a6;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: #2c3e50;
+            color: white;
+            margin-top: 3rem;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            nav a {
+                display: block;
+                margin: 0.5rem auto;
+                width: 80%;
+                max-width: 300px;
+            }
+            
+            .business-name h1 {
+                font-size: 2.2rem;
+            }
+            
+            .banner-image {
+                height: 200px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header>
+    <!-- Business Name Header -->
+    <header class="business-name">
         <h1>Geneva's Trading Post</h1>
-        <nav>
-            <a href="#gallery">Gallery</a> | 
-            <a href="#about">About</a> | 
-            <a href="#contact">Contact</a>
-        </nav>
+        <p>Alaskan Fiber Art & Rabbitry</p>
     </header>
     
-     <main>
-        <!-- Hero Banner -->
-        <section class="hero-banner">
-            <img src="images/manyhalibuts_rsz.jpg" alt="Collection of Halibut Hot Pads" style="width:100%; max-height:400px; object-fit:cover; border-radius:10px;">
-            <div class="banner-text">
-                <h2>Alaskan Fiber Art & Wildlife Craft</h2>
-                <p>Handcrafted in Fairbanks & Gustavus</p>
-            </div>
+    <!-- Banner Image -->
+    <div class="banner-container">
+        <img src="images/manyhalibuts_rsz.jpg" alt="Collection of Halibut Hot Pads" class="banner-image">
+    </div>
+    
+    <!-- Navigation Menu -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="alaska-textiles.html">Alaskan Textile Art</a>
+        <a href="rabbitry.html">My Rabbitry</a>
+        <a href="fantasy-balls.html">Fantasy Balls</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    
+    <main>
+        <!-- Welcome Message -->
+        <section class="welcome-section">
+            <h2>Welcome to My Alaskan World</h2>
+            <p>I'm Geneva, an Alaskan artist creating wildlife-inspired textile art in Fairbanks and Gustavus. Each piece is handcrafted with attention to detail, from halibut hot pads to beaded fingerless gloves. Alongside my fiber art, I raise happy, healthy rabbits here in the Last Frontier.</p>
         </section>
-
-        <section id="gallery">
-            <h2>Featured Work</h2>
-            <p class="section-intro">Alaskan wildlife-inspired pieces</p>
+        
+        <!-- Rabbit Feature -->
+        <section class="rabbit-feature">
+            <h2>Meet Lucille</h2>
+            <p>One of the wonderful rabbits from our rabbitry</p>
+            <img src="images/LucilleTall.jpg" alt="Lucille the Rabbit" class="rabbit-image">
+            <p><em>Lucille is just one of our happy bunnies. Visit the Rabbitry page to meet them all!</em></p>
+        </section>
+        
+        <!-- Page Links Grid -->
+        <div class="page-links">
+            <!-- Alaskan Textiles Card -->
+            <div class="link-card">
+                <h3>Alaskan Textile Art</h3>
+                <p>Hand-knit wildlife potholders, wearable art, and functional pieces inspired by Alaska's nature. Award-winning designs.</p>
+                <a href="alaska-textiles.html" class="btn">View Gallery</a>
+            </div>
             
-            <div class="gallery-grid">
-                <!-- Mathematical Art -->
-                <div class="artwork" data-tags="mathematical functional">
-                    <img src="images/whale_potholder_rsz.jpg" alt="Humpback Whale Potholder">
-                    <div class="art-info">
-                        <h3>Humpback Whale</h3>
-                        <p>Humpback whale potholder</p>
-                        <div class="art-tags">
-                            <span class="tag">Wild</span>
-                            <span class="tag">Functional</span>
-                            <span class="tag">Alaskan</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Alaskan Wildlife Series -->
-                <div class="artwork" data-tags="alaskan functional">
-                    <img src="images/Octopus_potholder_rsz.jpg" alt="Giant Pacific Octopus Potholder">
-                    <div class="art-info">
-                        <h3>Giant Pacific Octopus</h3>
-                        <p>Knit and embroidered octopus potholder</p>
-                        <div class="art-tags">
-                            <span class="tag">Alaskan</span>
-                            <span class="tag">Marine</span>
-                            <span class="tag">Functional</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="artwork" data-tags="alaskan functional">
-                    <img src="images/Mushroom_potholder_rsz.jpg" alt="Winter Chanterelle Mushroom Potholder">
-                    <div class="art-info">
-                        <h3>Winter Chanterelle</h3>
-                        <p>Edible mushroom potholder from Gustavus</p>
-                        <div class="art-tags">
-                            <span class="tag">Alaskan</span>
-                            <span class="tag">Foraged</span>
-                            <span class="tag">Functional</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Halibut Collection -->
-                <div class="artwork" data-tags="alaskan functional collection">
-                    <img src="images/halibuts3left_rsz.jpg" alt="Three Halibut Hot Pads in Different Colors">
-                    <div class="art-info">
-                        <h3>Fresh-Knit Flatties</h3>
-                        <p>Halibut hot pad collection in varying colors</p>
-                        <div class="art-tags">
-                            <span class="tag">Alaskan</span>
-                            <span class="tag">Collection</span>
-                            <span class="tag">Functional</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="artwork" data-tags="alaskan functional">
-                    <img src="images/halibutredblue_rsz.jpg" alt="Close-up of Knit Halibut Hot Pad">
-                    <div class="art-info">
-                        <h3>Halibut Detail</h3>
-                        <p>Close-up showing knit texture and embroidery</p>
-                        <div class="art-tags">
-                            <span class="tag">Alaskan</span>
-                            <span class="tag">Detailed</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Wearables -->
-                <div class="artwork" data-tags="wearable premium">
-                    <img src="images/beaded_fingerlessgloves_rsz.jpg" alt="Beaded Fingerless Gloves in Merino Wool">
-                    <div class="art-info">
-                        <h3>Beaded Fingerless Gloves</h3>
-                        <p>Merino wool with glass seed beads</p>
-                        <div class="art-tags">
-                            <span class="tag">Wearable</span>
-                            <span class="tag">Beaded</span>
-                            <span class="tag">Premium</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="artwork" data-tags="wearable premium">
-                    <img src="images/hat_texture_rsz.jpg" alt="Owl Pattern Hat with Cable Knitting">
-                    <div class="art-info">
-                        <h3>Owl Cable Hat</h3>
-                        <p>Wool-silk blend with intricate cable pattern</p>
-                        <div class="art-tags">
-                            <span class="tag">Wearable</span>
-                            <span class="tag">Cabled</span>
-                            <span class="tag">Premium</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Teddy Bear Collection -->
-                <div class="artwork" data-tags="toy collection">
-                    <img src="images/holiday_market_rsz.jpg" alt="Basket of Hand-Knit Teddy Bears">
-                    <div class="art-info">
-                        <h3>Ursa's Constellations</h3>
-                        <p>Hand-knit teddy bear collection</p>
-                        <div class="art-tags">
-                            <span class="tag">Toys</span>
-                            <span class="tag">Collection</span>
-                            <span class="tag">Heirloom</span>
-                        </div>
-                    </div>
-                </div>
+            <!-- Rabbitry Card -->
+            <div class="link-card">
+                <h3>My Rabbitry</h3>
+                <p>Meet our rabbit family! Raised with care in Alaska, each bunny has its own personality and charm.</p>
+                <a href="rabbitry.html" class="btn">Meet the Bunnies</a>
             </div>
-        </section>
-        
-        <section id="process">
-            <h2>The Process</h2>
-            <div class="process-grid">
-                <div class="process-item">
-                    <img src="images/knitting_actionshot_rsz.jpg" alt="Knitting in Progress">
-                    <p>Each bead placed individually during knitting</p>
-                </div>
-                <div class="process-item">
-                    <img src="images/craftfair_rsz.jpg" alt="Artist at Gustavus Market">
-                    <p>Available at local markets in Gustavus & Fairbanks</p>
-                </div>
+            
+            <!-- Fantasy Balls Card -->
+            <div class="link-card coming-soon">
+                <h3>Fantasy Ball Specials</h3>
+                <p>Dragon potholders, cosplay accessories, and magical creations for Fantasy Fairbanks events.</p>
+                <a href="fantasy-balls.html" class="btn">Coming Soon</a>
             </div>
-        </section>
-        
-        <section id="about">
-            <h2>Recognition</h2>
-            <div class="awards">
-                <img src="images/prizes_rsz.jpg" alt="Southeast Alaska State Fair Awards">
-                <div class="awards-text">
-                    <h3>Best in Show - Textiles</h3>
-                    <p>Southeast Alaska State Fair - Halibut Hot Pad Collection</p>
-                    <p>Celebrating Alaskan craftsmanship and mathematical design in fiber art.</p>
-                </div>
+            
+            <!-- Contact Card -->
+            <div class="link-card">
+                <h3>Contact & Commissions</h3>
+                <p>Based in Fairbanks (winter) and Gustavus (summer). Available for custom commissions and local markets.</p>
+                <a href="contact.html" class="btn">Get in Touch</a>
             </div>
-        </section>
-        
-        <section id="contact">
-            <h2>Contact & Commissions</h2>
-            <p>Based in Fairbanks (winter) and Gustavus (summer). Available for:</p>
-            <ul>
-                <li><strong>Fantasy Ball Fairbanks</strong> - Dragon potholders & cosplay accessories</li>
-                <li>Custom commissions - Wildlife, mathematical designs, wearables</li>
-                <li>Local markets - Gustavus, Fairbanks</li>
-                <li>Gallery exhibitions</li>
-            </ul>
-            <p>Email: gjmottet AT alaska.edu (change the AT to @ when emailing, bot prevention)</p>
-            <p><em>Dragon potholder series in progress for fantasy events</em></p>
-        </section>
+        </div>
     </main>
+    
     <footer>
-        <p>© 2024 Geneva's Trading Post</p>
+        <p>© 2024 Geneva's Trading Post | Fairbanks & Gustavus, Alaska</p>
+        <p>Handcrafted with care in the Last Frontier</p>
     </footer>
 </body>
 </html>
