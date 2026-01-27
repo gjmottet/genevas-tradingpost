@@ -75,19 +75,47 @@
             margin-bottom: 1rem;
         }
         
-        .award-banner {
+        .award-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
             background: linear-gradient(135deg, #f9f3e9 0%, #fff8e1 100%);
-            border-left: 5px solid #e67e22;
-            padding: 1.5rem;
+            padding: 2.5rem;
             margin: 2rem auto;
-            max-width: 900px;
-            border-radius: 5px;
-            text-align: center;
+            max-width: 1000px;
+            border-radius: 10px;
+            border-left: 5px solid #e67e22;
+            gap: 2rem;
         }
         
-        .award-banner h3 {
+        .award-image {
+            flex: 0 0 300px;
+        }
+        
+        .award-image img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
+        
+        .award-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .award-text h3 {
             color: #d35400;
             margin-top: 0;
+            font-size: 1.8rem;
+        }
+        
+        .award-text p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #34495e;
         }
         
         .section-divider {
@@ -141,11 +169,14 @@
             box-shadow: 0 12px 25px rgba(0,0,0,0.15);
         }
         
-        .artwork-card img {
+        .artwork-image {
             width: 100%;
-            height: 300px;
-            object-fit: cover;
+            height: auto;
+            min-height: 300px;
+            object-fit: contain;
             border-bottom: 3px solid #3498db;
+            padding: 1rem;
+            background: #f8f9fa;
         }
         
         .artwork-info {
@@ -169,51 +200,26 @@
             line-height: 1.5;
         }
         
-        .art-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin: 1rem 0;
-        }
-        
-        .material-tag {
+        .material-badge {
             display: inline-block;
-            background: #9b59b6;
+            background: #2c3e50;
             color: white;
             padding: 0.4rem 1rem;
             border-radius: 20px;
             font-size: 0.9rem;
-            font-weight: bold;
+            margin-right: 0.5rem;
+            margin-bottom: 0.8rem;
         }
         
-        .theme-tag {
+        .location-badge {
             display: inline-block;
             background: #3498db;
             color: white;
             padding: 0.4rem 1rem;
             border-radius: 20px;
             font-size: 0.9rem;
-            font-weight: bold;
-        }
-        
-        .location-tag {
-            display: inline-block;
-            background: #2ecc71;
-            color: white;
-            padding: 0.4rem 1rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: bold;
-        }
-        
-        .functional-tag {
-            display: inline-block;
-            background: #e67e22;
-            color: white;
-            padding: 0.4rem 1rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: bold;
+            margin-right: 0.5rem;
+            margin-bottom: 0.8rem;
         }
         
         .process-section {
@@ -247,7 +253,6 @@
             border-radius: 10px;
             margin: 3rem auto;
             max-width: 1000px;
-            text-align: center;
         }
         
         .wearables-section h3 {
@@ -255,6 +260,7 @@
             font-size: 1.8rem;
             margin-top: 0;
             margin-bottom: 1.5rem;
+            text-align: center;
         }
         
         .back-btn {
@@ -273,6 +279,16 @@
         
         .back-btn:hover {
             background: #95a5a6;
+        }
+        
+        .market-info {
+            background: linear-gradient(135deg, #e8f4f8 0%, #f0f7ff 100%);
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem auto;
+            max-width: 800px;
+            text-align: center;
+            border-left: 5px solid #3498db;
         }
         
         footer {
@@ -296,8 +312,13 @@
                 max-width: 300px;
             }
             
-            .artwork-card img {
-                height: 250px;
+            .award-section {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .artwork-image {
+                min-height: 250px;
             }
         }
     </style>
@@ -324,12 +345,17 @@
             <p>All materials are natural fibers - wool, cotton, and silk - often sourced locally or chosen for their sustainability and quality.</p>
         </section>
         
-        <!-- Award Banner -->
-        <div class="award-banner">
-            <h3>🏆 Award-Winning Designs</h3>
-            <p>Best in Show - Textiles | Southeast Alaska State Fair | Halibut Hot Pad Collection</p>
-            <p>Celebrating Alaskan craftsmanship and mathematical design in fiber art.</p>
-        </div>
+        <!-- Award Section with Actual Photo -->
+        <section class="award-section">
+            <div class="award-image">
+                <img src="images/prizes_rsz.jpg" alt="Southeast Alaska State Fair Awards">
+            </div>
+            <div class="award-text">
+                <h3>🏆 Award-Winning Designs</h3>
+                <p><strong>Best in Show - Textiles</strong><br>Southeast Alaska State Fair - Halibut Hot Pad Collection</p>
+                <p>Celebrating Alaskan craftsmanship and mathematical design in fiber art. These awards recognize the creativity and skill behind each handcrafted piece.</p>
+            </div>
+        </section>
         
         <!-- Potholders Section -->
         <div class="section-divider">
@@ -341,65 +367,49 @@
         <div class="gallery-grid">
             <!-- Mushroom Potholder -->
             <div class="artwork-card">
-                <img src="images/Mushroom_potholder_Jan.jpg" alt="Winter Chanterelle Mushroom Potholder">
+                <img src="images/Mushroom_potholder_Jan.jpg" alt="Winter Chanterelle Mushroom Potholder" class="artwork-image">
                 <div class="artwork-info">
+                    <span class="material-badge">All Natural Fiber</span>
+                    <span class="location-badge">Glacier Bay National Park</span>
                     <h3>Winter Chanterelle</h3>
-                    <div class="art-tags">
-                        <span class="theme-tag">Forest Fungi</span>
-                        <span class="location-tag">Glacier Bay National Park</span>
-                        <span class="material-tag">All Natural Fiber</span>
-                        <span class="functional-tag">Potholder</span>
-                    </div>
-                    <p><strong>Edible mushroom potholder</strong> inspired by the Winter Chanterelles that grow throughout Glacier Bay National Park. These golden mushrooms are a favorite forager's find in Southeast Alaska.</p>
-                    <p><strong>Details:</strong> Hand-knit with intricate embroidery, capturing the distinctive funnel shape and gills of this prized edible fungus.</p>
+                    <p>Edible mushroom potholder inspired by the Winter Chanterelles that grow throughout Glacier Bay National Park. These golden mushrooms are a favorite forager's find in Southeast Alaska.</p>
+                    <p>Hand-knit with intricate embroidery, capturing the distinctive funnel shape and gills of this prized edible fungus.</p>
                 </div>
             </div>
             
             <!-- Octopus Potholder -->
             <div class="artwork-card">
-                <img src="images/Octopus_potholder_Jan.jpg" alt="Giant Pacific Octopus Potholder">
+                <img src="images/Octopus_potholder_Jan.jpg" alt="Giant Pacific Octopus Potholder" class="artwork-image">
                 <div class="artwork-info">
+                    <span class="material-badge">All Natural Fiber</span>
+                    <span class="location-badge">Pacific Northwest Waters</span>
                     <h3>Giant Pacific Octopus</h3>
-                    <div class="art-tags">
-                        <span class="theme-tag">Marine Life</span>
-                        <span class="location-tag">Pacific Northwest</span>
-                        <span class="material-tag">All Natural Fiber</span>
-                        <span class="functional-tag">Potholder</span>
-                    </div>
-                    <p><strong>Knit and embroidered octopus potholder</strong> featuring Alaska's largest octopus species. The Giant Pacific Octopus is an intelligent, captivating creature of our coastal waters.</p>
-                    <p><strong>Details:</strong> Intricate tentacle detailing with suction cup embroidery, created with mathematically precise patterning.</p>
+                    <p>Knit and embroidered octopus potholder featuring Alaska's largest octopus species. The Giant Pacific Octopus is an intelligent, captivating creature of our coastal waters.</p>
+                    <p>Intricate tentacle detailing with suction cup embroidery, created with mathematically precise patterning.</p>
                 </div>
             </div>
             
             <!-- Whale Potholder -->
             <div class="artwork-card">
-                <img src="images/whale_potholder_Jan.jpg" alt="Humpback Whale Potholder">
+                <img src="images/whale_potholder_Jan.jpg" alt="Humpback Whale Potholder" class="artwork-image">
                 <div class="artwork-info">
+                    <span class="material-badge">All Natural Fiber</span>
+                    <span class="location-badge">Glacier Bay Feeding Grounds</span>
                     <h3>Humpback Whale</h3>
-                    <div class="art-tags">
-                        <span class="theme-tag">Marine Mammal</span>
-                        <span class="location-tag">Glacier Bay National Park</span>
-                        <span class="material-tag">All Natural Fiber</span>
-                        <span class="functional-tag">Potholder</span>
-                    </div>
-                    <p><strong>Humpback whale potholder</strong> inspired by the majestic whales that feed in Glacier Bay's summer waters. These whales migrate thousands of miles to feast in Alaska's rich seas.</p>
-                    <p><strong>Details:</strong> Features the distinctive pectoral fins and knobby head of the humpback, with embroidery highlighting baleen plates.</p>
+                    <p>Humpback whale potholder inspired by the majestic whales that feed in Glacier Bay's summer waters. These whales migrate thousands of miles to feast in Alaska's rich seas.</p>
+                    <p>Features the distinctive pectoral fins and knobby head of the humpback, with embroidery highlighting baleen plates.</p>
                 </div>
             </div>
             
             <!-- Halibut Collection -->
             <div class="artwork-card">
-                <img src="images/halibuts3left_Jan.jpg" alt="Three Halibut Hot Pads in Different Colors">
+                <img src="images/halibuts3left_Jan.jpg" alt="Three Halibut Hot Pads in Different Colors" class="artwork-image">
                 <div class="artwork-info">
-                    <h3>Fresh-Knit Flatties</h3>
-                    <div class="art-tags">
-                        <span class="theme-tag">Alaskan Fish</span>
-                        <span class="location-tag">Gulf of Alaska</span>
-                        <span class="material-tag">Wool & Cotton</span>
-                        <span class="functional-tag">Hot Pad Collection</span>
-                    </div>
-                    <p><strong>Halibut hot pad collection</strong> in varying natural colors. Pacific halibut are a prized Alaska fishery, and these functional pieces celebrate their unique flat shape.</p>
-                    <p><strong>Details:</strong> Award-winning design featuring three color variations. Each halibut shows both eyes on one side, accurate to the real fish's adaptation.</p>
+                    <span class="material-badge">Wool & Cotton</span>
+                    <span class="location-badge">Gulf of Alaska</span>
+                    <h3>Halibut Hot Pad Collection</h3>
+                    <p>Three halibut hot pads in varying natural colors. Pacific halibut are a prized Alaska fishery, and these functional pieces celebrate their unique flat shape.</p>
+                    <p>Award-winning design. Each halibut shows both eyes on one side, accurate to the real fish's adaptation.</p>
                     <p><em>🏆 Southeast Alaska State Fair - Best in Show Textiles</em></p>
                 </div>
             </div>
@@ -410,7 +420,7 @@
             <h3>The Making Process</h3>
             <p>Each piece begins with mathematical patterning, followed by careful hand-knitting and finishing with detailed embroidery.</p>
             <img src="images/knitting_actionshot_Jan.jpg" alt="Knitting in Progress - Making a Glove" class="process-image">
-            <p><strong>Action shot</strong> showing the knitting process for a glove. Each stitch is placed intentionally, and beads are added individually during the knitting process for precise placement and durability.</p>
+            <p>Action shot showing the knitting process for a glove. Each stitch is placed intentionally, and beads are added individually during the knitting process for precise placement and durability.</p>
         </section>
         
         <!-- Wearables Section -->
@@ -424,25 +434,21 @@
             <div class="gallery-grid">
                 <!-- Beaded Gloves -->
                 <div class="artwork-card">
-                    <img src="images/beaded_fingerlessgloves_Jan.jpg" alt="Beaded Fingerless Gloves in Merino Wool">
+                    <img src="images/beaded_fingerlessgloves_Jan.jpg" alt="Beaded Fingerless Gloves in Merino Wool" class="artwork-image">
                     <div class="artwork-info">
+                        <span class="material-badge">Merino Wool</span>
+                        <span class="material-badge">Glass Beads</span>
                         <h3>Beaded Fingerless Gloves</h3>
-                        <div class="art-tags">
-                            <span class="theme-tag">Wearable Art</span>
-                            <span class="material-tag">Merino Wool</span>
-                            <span class="material-tag">Glass Beads</span>
-                            <span class="functional-tag">Fingerless Gloves</span>
-                        </div>
-                        <p><strong>Merino wool with glass seed beads</strong> - perfect for chilly Fairbanks days while maintaining dexterity. Each bead is placed individually during the knitting process.</p>
-                        <p><strong>Details:</strong> Made with luxurious merino wool for warmth without bulk. The glass seed beads add sparkle and are securely integrated into the knit structure.</p>
-                        <p><strong>Function:</strong> Ideal for artists, knitters, or anyone who needs hand warmth while working in cool temperatures.</p>
+                        <p>Merino wool with glass seed beads - perfect for chilly Fairbanks days while maintaining dexterity. Each bead is placed individually during the knitting process.</p>
+                        <p>Made with luxurious merino wool for warmth without bulk. The glass seed beads add sparkle and are securely integrated into the knit structure.</p>
+                        <p>Ideal for artists, knitters, or anyone who needs hand warmth while working in cool temperatures.</p>
                     </div>
                 </div>
             </div>
         </section>
         
-        <!-- Availability Note -->
-        <div class="award-banner" style="background: linear-gradient(135deg, #e8f4f8 0%, #f0f7ff 100%); border-color: #3498db;">
+        <!-- Market Information -->
+        <div class="market-info">
             <h3>📍 Available at Local Markets</h3>
             <p>Find these pieces at markets in Gustavus (summer) and Fairbanks (winter). Also available for custom commissions - wildlife, mathematical designs, and wearables.</p>
             <p><strong>Based in Fairbanks (winter) and Gustavus (summer)</strong></p>
