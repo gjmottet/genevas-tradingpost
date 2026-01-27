@@ -1,1 +1,408 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Geneva's Trading Post</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Contact page specific styles */
+        .page-header {
+            text-align: center;
+            padding: 2rem 1rem;
+            background: #2c3e50;
+            color: white;
+            margin: 0;
+        }
+        
+        .page-header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            color: white;
+        }
+        
+        .page-header p {
+            font-size: 1.2rem;
+            margin: 0.5rem 0 0 0;
+            color: #ecf0f1;
+            max-width: 800px;
+            margin: 1rem auto;
+        }
+        
+        nav {
+            background: #34495e;
+            padding: 1rem;
+            text-align: center;
+            border-bottom: 3px solid #3498db;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: bold;
+            padding: 0.7rem 1.3rem;
+            border-radius: 5px;
+            display: inline-block;
+            transition: background 0.3s ease;
+        }
+        
+        nav a:hover {
+            background: #3498db;
+        }
+        
+        .current {
+            background: #3498db;
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            padding: 3rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .contact-info {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+            border-left: 5px solid #3498db;
+        }
+        
+        .contact-info h2 {
+            color: #2c3e50;
+            font-size: 1.8rem;
+            margin-top: 0;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.8rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-details {
+            margin-bottom: 2rem;
+        }
+        
+        .contact-item {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .contact-item::before {
+            content: "•";
+            color: #3498db;
+            font-size: 1.5rem;
+            position: absolute;
+            left: 0;
+            top: -2px;
+        }
+        
+        .contact-item h3 {
+            color: #2c3e50;
+            margin: 0 0 0.5rem 0;
+            font-size: 1.3rem;
+        }
+        
+        .contact-item p {
+            color: #34495e;
+            margin: 0;
+            line-height: 1.6;
+            font-size: 1.1rem;
+        }
+        
+        .email-protected {
+            background: #f8f9fa;
+            padding: 1.2rem;
+            border-radius: 8px;
+            border: 1px dashed #3498db;
+            margin-top: 1.5rem;
+        }
+        
+        .email-protected p {
+            margin: 0.5rem 0;
+            font-family: monospace;
+            font-size: 1.2rem;
+        }
+        
+        .markets-section {
+            background: #f8f9fa;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+        }
+        
+        .markets-section h2 {
+            color: #2c3e50;
+            font-size: 1.8rem;
+            margin-top: 0;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.8rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .market-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .market-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+        
+        .market-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .market-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-bottom: 3px solid #3498db;
+        }
+        
+        .market-info {
+            padding: 1.5rem;
+        }
+        
+        .market-info h3 {
+            color: #2c3e50;
+            margin-top: 0;
+            font-size: 1.4rem;
+        }
+        
+        .market-info p {
+            color: #34495e;
+            line-height: 1.6;
+            margin: 0.5rem 0;
+        }
+        
+        .market-season {
+            display: inline-block;
+            background: #2ecc71;
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin-top: 0.5rem;
+        }
+        
+        .bio-section {
+            grid-column: 1 / -1;
+            background: linear-gradient(135deg, #e8f4f8 0%, #f0f7ff 100%);
+            padding: 3rem;
+            border-radius: 12px;
+            margin-top: 2rem;
+            border-left: 5px solid #9b59b6;
+        }
+        
+        .bio-section h2 {
+            color: #2c3e50;
+            font-size: 1.8rem;
+            margin-top: 0;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .bio-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .bio-text {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #34495e;
+        }
+        
+        .bio-highlight {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            margin-top: 1.5rem;
+        }
+        
+        .bio-highlight h4 {
+            color: #9b59b6;
+            margin-top: 0;
+            font-size: 1.3rem;
+        }
+        
+        .back-btn {
+            display: inline-block;
+            background: #7f8c8d;
+            color: white;
+            padding: 0.9rem 2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin: 3rem auto;
+            text-align: center;
+            font-size: 1.1rem;
+            transition: background 0.3s ease;
+            grid-column: 1 / -1;
+            justify-self: center;
+        }
+        
+        .back-btn:hover {
+            background: #95a5a6;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: #2c3e50;
+            color: white;
+            margin-top: 3rem;
+        }
+        
+        @media (max-width: 768px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+                padding: 1.5rem;
+            }
+            
+            nav a {
+                display: block;
+                margin: 0.5rem auto;
+                width: 80%;
+                max-width: 300px;
+            }
+            
+            .bio-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-info, .markets-section {
+                padding: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="page-header">
+        <h1>Contact Geneva's Trading Post</h1>
+        <p>Get in Touch for Commissions, Rabbitry Inquiries & Market Information</p>
+    </header>
+    
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="alaska-textiles.html">Alaskan Textile Art</a>
+        <a href="rabbitry.html">My Rabbitry</a>
+        <a href="fantasy-ball.html">Fantasy Ball</a>
+        <a href="contact.html" class="current">Contact</a>
+    </nav>
+    
+    <main>
+        <div class="contact-container">
+            <!-- Contact Information -->
+            <section class="contact-info">
+                <h2>Contact & Commission Information</h2>
+                
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <h3>Email</h3>
+                        <div class="email-protected">
+                            <p><strong>For commissions & inquiries:</strong></p>
+                            <p>gjmottet@gmail.com</p>
+                            <p><em>(Please replace AT with "@" and DOT with "." when emailing)</em></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <h3>Based In</h3>
+                        <p><strong>Fairbanks (Winter)</strong> - Available for local markets and commissions</p>
+                        <p><strong>Gustavus (Summer)</strong> - Available at Gustavus markets and local events</p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <h3>Available For</h3>
+                        <p>• Custom textile art commissions</p>
+                        <p>• Rabbitry inquiries and adoptions</p>
+                        <p>• Rabbit fur tanning services</p>
+                        <p>• Gallery exhibitions and craft fairs</p>
+                        <p>• Fantasy Ball Fairbanks special orders</p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <h3>Commission Process</h3>
+                        <p>All textile art is made to order with original designs. Contact me to discuss custom wildlife pieces, wearables, or fantasy-themed creations. Turnaround time varies based on complexity.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Markets Section -->
+            <section class="markets-section">
+                <h2>Find Me at Local Markets</h2>
+                
+                <div class="market-grid">
+                    <!-- Fairbanks Market -->
+                    <div class="market-card">
+                        <img src="images/holiday_market_rsz.jpg" alt="Fairbanks Craft Fair with Teddy Bear Display">
+                        <div class="market-info">
+                            <h3>Fairbanks Markets</h3>
+                            <p>Winter craft fairs and holiday markets in the Fairbanks area. Features the full spread of textile art including the popular hand-knit teddy bear collection.</p>
+                            <p><strong>Season:</strong> October - April</p>
+                            <span class="market-season">Winter Season</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Gustavus Market -->
+                    <div class="market-card">
+                        <img src="images/craftfair_rsz.jpg" alt="Gustavus Community Center Market">
+                        <div class="market-info">
+                            <h3>Gustavus 2nd Saturday Market</h3>
+                            <p>Located at the Gustavus Community Center. Summer markets featuring Alaskan wildlife-inspired pieces perfect for visitors and locals alike.</p>
+                            <p><strong>Season:</strong> May - September</p>
+                            <span class="market-season">Summer Season</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Bio Section -->
+            <section class="bio-section">
+                <h2>About Geneva</h2>
+                
+                <div class="bio-content">
+                    <div class="bio-text">
+                        <p>With <strong>20 years of rabbit breeding experience</strong>, I'm a dedicated ARBA (American Rabbit Breeders Association) member focused on raising healthy, friendly Champagne d'Argent and Silver Fox rabbits in Alaska.</p>
+                        
+                        <p>My textile art journey began when I <strong>taught myself to knit</strong>, developing original designs inspired by Alaska's incredible wildlife and landscapes. Each piece is mathematically patterned and handcrafted with natural fibers.</p>
+                        
+                        <div class="bio-highlight">
+                            <h4>Credentials & Expertise</h4>
+                            <p>• ARBA Member with 20 years rabbit breeding experience</p>
+                            <p>• Self-taught fiber artist specializing in original designs</p>
+                            <p>• Award-winning textile artist (Southeast Alaska State Fair)</p>
+                            <p>• Traditional fur tanning services for rabbit and snowshoe hare</p>
+                            <p>• Custom commissions for wildlife, fantasy, and wearable art</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Back to Home Button -->
+            <a href="index.html" class="back-btn">← Back to Home</a>
+        </div>
+    </main>
+    
+    <footer>
+        <p>© 2024 Geneva's Trading Post | Fairbanks & Gustavus, Alaska</p>
+        <p>ARBA Member | Original Handcrafted Designs | Sustainable Practices</p>
+    </footer>
+</body>
+</html>
