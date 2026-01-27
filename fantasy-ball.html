@@ -1,1 +1,460 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fantasy Ball Specials - Geneva's Trading Post</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Fantasy Ball specific styles */
+        .page-header {
+            text-align: center;
+            padding: 2rem 1rem;
+            background: linear-gradient(135deg, #2c3e50 0%, #4a235a 100%);
+            color: white;
+            margin: 0;
+        }
+        
+        .page-header h1 {
+            font-size: 2.8rem;
+            margin: 0;
+            color: white;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .page-header p {
+            font-size: 1.3rem;
+            margin: 0.5rem 0 0 0;
+            color: #ecf0f1;
+            max-width: 800px;
+            margin: 1rem auto;
+        }
+        
+        nav {
+            background: #34495e;
+            padding: 1rem;
+            text-align: center;
+            border-bottom: 3px solid #8e44ad;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: bold;
+            padding: 0.7rem 1.3rem;
+            border-radius: 5px;
+            display: inline-block;
+            transition: background 0.3s ease;
+        }
+        
+        nav a:hover {
+            background: #8e44ad;
+        }
+        
+        .current {
+            background: #8e44ad;
+        }
+        
+        .fantasy-intro {
+            text-align: center;
+            padding: 3rem 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, #f9f3ff 0%, #f0e6ff 100%);
+            border-radius: 15px;
+            margin-top: 2rem;
+        }
+        
+        .fantasy-intro h2 {
+            color: #4a235a;
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .fantasy-intro p {
+            font-size: 1.2rem;
+            line-height: 1.7;
+            color: #34495e;
+            margin-bottom: 1.5rem;
+        }
+        
+        .event-banner {
+            background: linear-gradient(135deg, #8e44ad 0%, #9b59b6 100%);
+            color: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            text-align: center;
+            margin: 3rem auto;
+            max-width: 1000px;
+            box-shadow: 0 8px 25px rgba(142, 68, 173, 0.3);
+            border: 3px solid #d7bde2;
+        }
+        
+        .event-banner h3 {
+            font-size: 2rem;
+            margin-top: 0;
+            color: white;
+            margin-bottom: 1rem;
+        }
+        
+        .event-banner p {
+            font-size: 1.3rem;
+            line-height: 1.7;
+            max-width: 800px;
+            margin: 0 auto 1.5rem;
+        }
+        
+        .event-link {
+            display: inline-block;
+            background: white;
+            color: #8e44ad;
+            padding: 1rem 2.5rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin: 1rem 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .event-link:hover {
+            background: #f8f9fa;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+        }
+        
+        .coming-soon-banner {
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            margin: 2rem auto;
+            max-width: 900px;
+            border: 2px dashed white;
+        }
+        
+        .coming-soon-banner h3 {
+            margin-top: 0;
+            font-size: 1.8rem;
+        }
+        
+        .fantasy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 3rem;
+            padding: 3rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .fantasy-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 2px solid #e8e8e8;
+            position: relative;
+        }
+        
+        .fantasy-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+            border-color: #d7bde2;
+        }
+        
+        .fantasy-image {
+            width: 100%;
+            height: 280px;
+            background: linear-gradient(135deg, #f9f3ff 0%, #f0e6ff 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 3px solid #8e44ad;
+            padding: 2rem;
+        }
+        
+        .fantasy-image img {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+        }
+        
+        .placeholder-text {
+            color: #9b59b6;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .fantasy-info {
+            padding: 2rem;
+            background: linear-gradient(to bottom, white, #fcf9ff);
+        }
+        
+        .fantasy-info h3 {
+            margin-top: 0;
+            color: #4a235a;
+            font-size: 1.6rem;
+            border-bottom: 2px solid #d7bde2;
+            padding-bottom: 0.8rem;
+            margin-bottom: 1.2rem;
+        }
+        
+        .fantasy-info p {
+            color: #34495e;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin: 0.8rem 0;
+        }
+        
+        .fantasy-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1.2rem 0;
+        }
+        
+        .fantasy-tag {
+            display: inline-block;
+            background: #d7bde2;
+            color: #4a235a;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+        
+        .cosplay-tag {
+            background: #3498db;
+            color: white;
+        }
+        
+        .dragon-tag {
+            background: #e74c3c;
+            color: white;
+        }
+        
+        .zodiac-tag {
+            background: #2ecc71;
+            color: white;
+        }
+        
+        .custom-section {
+            background: linear-gradient(135deg, #e8f4f8 0%, #f0f7ff 100%);
+            padding: 3rem 2rem;
+            border-radius: 15px;
+            margin: 3rem auto;
+            max-width: 1000px;
+            text-align: center;
+            border-left: 5px solid #3498db;
+        }
+        
+        .custom-section h3 {
+            color: #2c3e50;
+            font-size: 1.8rem;
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+        }
+        
+        .custom-section p {
+            font-size: 1.2rem;
+            line-height: 1.7;
+            color: #34495e;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .back-btn {
+            display: inline-block;
+            background: #7f8c8d;
+            color: white;
+            padding: 0.9rem 2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin: 3rem auto;
+            text-align: center;
+            font-size: 1.1rem;
+            transition: background 0.3s ease;
+        }
+        
+        .back-btn:hover {
+            background: #95a5a6;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: #2c3e50;
+            color: white;
+            margin-top: 3rem;
+        }
+        
+        @media (max-width: 768px) {
+            .fantasy-grid {
+                grid-template-columns: 1fr;
+                padding: 1.5rem;
+                gap: 2rem;
+            }
+            
+            nav a {
+                display: block;
+                margin: 0.5rem auto;
+                width: 80%;
+                max-width: 300px;
+            }
+            
+            .page-header h1 {
+                font-size: 2.2rem;
+            }
+            
+            .fantasy-image {
+                height: 220px;
+            }
+            
+            .event-banner {
+                padding: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="page-header">
+        <h1>Fantasy Ball Specials</h1>
+        <p>Magical Creations for SUNA'S ZODIAC FANTASY BALL & Fantasy Fairbanks Events</p>
+    </header>
+    
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="alaska-textiles.html">Alaskan Textile Art</a>
+        <a href="rabbitry.html">My Rabbitry</a>
+        <a href="fantasy-ball.html" class="current">Fantasy Ball</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    
+    <main>
+        <!-- Introduction -->
+        <section class="fantasy-intro">
+            <h2>Enchanted Fiber Art for Fantasy Events</h2>
+            <p>Specializing in magical creations for Fantasy Fairbanks events, I blend traditional fiber arts with fantasy themes. From dragon potholders to zodiac-inspired accessories, each piece is handcrafted with attention to mystical details.</p>
+            <p>Perfect for cosplay, LARP events, or adding a touch of magic to your home.</p>
+        </section>
+        
+        <!-- Event Banner -->
+        <section class="event-banner">
+            <h3>SUNA'S ZODIAC FANTASY BALL</h3>
+            <p>Join us for an enchanting evening of fantasy, music, and magic! This special event celebrates the zodiac with costumes, dancing, and fantasy-themed creations.</p>
+            
+            <a href="https://www.eventbrite.com/e/sunas-zodiac-fantasy-ball-tickets-1849540277759" target="_blank" class="event-link">
+                🎟️ Get Tickets on Eventbrite →
+            </a>
+            
+            <p style="margin-top: 1.5rem; font-size: 1.1rem; opacity: 0.9;">
+                <strong>Event Details:</strong> Fantasy Ball featuring zodiac themes, costumes, and fantasy vendors
+            </p>
+        </section>
+        
+        <!-- Coming Soon Banner -->
+        <div class="coming-soon-banner">
+            <h3>✨ Fantasy Ball Collection Coming Soon! ✨</h3>
+            <p>Special zodiac and fantasy-themed creations are currently in progress for the Fantasy Ball. Photos will be added here as pieces are completed!</p>
+            <p>Check back soon or contact me for custom fantasy commissions.</p>
+        </div>
+        
+        <!-- Fantasy Creations Grid -->
+        <div class="fantasy-grid">
+            <!-- Dragon Potholder -->
+            <div class="fantasy-card">
+                <div class="fantasy-image">
+                    <div class="placeholder-text">
+                        🐉 Dragon Potholder<br>
+                        <span style="font-size: 1rem;">Photo Coming Soon</span>
+                    </div>
+                </div>
+                <div class="fantasy-info">
+                    <h3>Dragon Potholder Series</h3>
+                    <div class="fantasy-tags">
+                        <span class="fantasy-tag dragon-tag">Dragon Theme</span>
+                        <span class="fantasy-tag">Functional Art</span>
+                        <span class="fantasy-tag">Kitchen Magic</span>
+                    </div>
+                    <p>Mythical dragon-inspired potholders featuring scale patterns, wing designs, and fiery color schemes. Each dragon has unique characteristics and colors.</p>
+                    <p><strong>Perfect for:</strong> Fantasy kitchen decor, cosplay props, or magical gifts</p>
+                    <p><strong>Materials:</strong> Natural fibers with metallic embroidery accents</p>
+                </div>
+            </div>
+            
+            <!-- Zodiac Accessories -->
+            <div class="fantasy-card">
+                <div class="fantasy-image">
+                    <div class="placeholder-text">
+                        ♈♉♊ Zodiac Collection<br>
+                        <span style="font-size: 1rem;">Photos Coming Soon</span>
+                    </div>
+                </div>
+                <div class="fantasy-info">
+                    <h3>Zodiac-Inspired Accessories</h3>
+                    <div class="fantasy-tags">
+                        <span class="fantasy-tag zodiac-tag">Zodiac Signs</span>
+                        <span class="fantasy-tag">Wearable Art</span>
+                        <span class="fantasy-tag">Astrology</span>
+                    </div>
+                    <p>Special creations for SUNA'S ZODIAC FANTASY BALL featuring all twelve zodiac signs. Constellation patterns, elemental colors, and celestial designs.</p>
+                    <p><strong>Includes:</strong> Fingerless gloves, hats, scarves, and decorative items</p>
+                    <p><strong>Custom:</strong> Available for your specific zodiac sign</p>
+                </div>
+            </div>
+            
+            <!-- Cosplay Pieces -->
+            <div class="fantasy-card">
+                <div class="fantasy-image">
+                    <div class="placeholder-text">
+                        🎭 Cosplay Accessories<br>
+                        <span style="font-size: 1rem;">Photos Coming Soon</span>
+                    </div>
+                </div>
+                <div class="fantasy-info">
+                    <h3>Fantasy Cosplay Accessories</h3>
+                    <div class="fantasy-tags">
+                        <span class="fantasy-tag cosplay-tag">Cosplay</span>
+                        <span class="fantasy-tag">LARP Gear</span>
+                        <span class="fantasy-tag">Fantasy Wear</span>
+                    </div>
+                    <p>Handcrafted accessories for fantasy cosplay and LARP events. Elven-inspired pieces, medieval wear, and magical creature features.</p>
+                    <p><strong>Examples:</strong> Elven leaf gloves, wizard hat accents, druid-inspired wraps</p>
+                    <p><strong>Custom:</strong> Commission pieces for specific characters or costumes</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Custom Commissions -->
+        <section class="custom-section">
+            <h3>Custom Fantasy Commissions</h3>
+            <p>Looking for something specific for your fantasy event, cosplay, or magical home? I accept custom commissions for fantasy-themed creations.</p>
+            <p>Contact me to discuss your vision - whether it's a specific dragon design, zodiac piece, or unique fantasy accessory. All pieces are original designs made to order.</p>
+            <p><strong>Turnaround time:</strong> Varies based on complexity (typically 2-4 weeks)</p>
+            <p><strong>Materials:</strong> Natural fibers with special fantasy-themed embellishments</p>
+        </section>
+        
+        <!-- Link to Contact -->
+        <div style="text-align: center; padding: 2rem;">
+            <p style="font-size: 1.2rem; color: #34495e;">Ready to discuss a fantasy commission or have questions about Fantasy Ball pieces?</p>
+            <a href="contact.html" class="back-btn">Contact Me for Fantasy Commissions</a>
+            <br>
+            <a href="index.html" class="back-btn" style="background: #95a5a6;">← Back to Home</a>
+        </div>
+    </main>
+    
+    <footer>
+        <p>© 2024 Geneva's Trading Post | Fantasy Creations for Fairbanks Events</p>
+        <p>Original Designs for SUNA'S ZODIAC FANTASY BALL & Fantasy Fairbanks</p>
+    </footer>
+</body>
+</html>
