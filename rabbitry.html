@@ -293,28 +293,72 @@
             margin-bottom: 0.8rem;
         }
         
-        /* UPDATED: Full-width tanning services */
+        /* NEW: Rabbit Skins Banner */
+        .skins-banner {
+            position: relative;
+            width: 100%;
+            height: 350px;
+            overflow: hidden;
+            margin: 3rem 0;
+        }
+        
+        .skins-banner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .banner-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .banner-overlay h3 {
+            font-size: 2.5rem;
+            margin: 0 0 1rem 0;
+            color: white;
+            text-shadow: 0 3px 10px rgba(0,0,0,0.5);
+        }
+        
+        .banner-overlay p {
+            font-size: 1.4rem;
+            max-width: 800px;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+        }
+        
+        /* UPDATED: Tanning services with photos */
         .tanning-services {
             background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
             color: white;
             padding: 4rem 2rem;
-            margin: 4rem 0;
+            margin: 0;
             width: 100%;
-            text-align: center;
             border-top: 5px solid #3498db;
             border-bottom: 5px solid #3498db;
         }
         
         .tanning-content {
-            max-width: 1000px;
+            max-width: 1400px;
             margin: 0 auto;
         }
         
         .tanning-services h3 {
             color: white;
-            font-size: 2rem;
+            font-size: 2.2rem;
             margin-top: 0;
             margin-bottom: 1.5rem;
+            text-align: center;
         }
         
         .tanning-services p {
@@ -322,6 +366,76 @@
             line-height: 1.8;
             max-width: 800px;
             margin: 0 auto 2rem;
+            text-align: center;
+        }
+        
+        .skins-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin: 3rem 0;
+        }
+        
+        .skins-image-container {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 300px;
+        }
+        
+        .skins-image-container img {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            border-radius: 5px;
+            object-fit: contain;
+        }
+        
+        .hats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin: 3rem 0;
+        }
+        
+        .hat-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        
+        .hat-image-container {
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .hat-image-container img {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            border-radius: 5px;
+            object-fit: contain;
+        }
+        
+        .hat-card h4 {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 0 0.5rem 0;
+        }
+        
+        .hat-card p {
+            font-size: 1.1rem;
+            margin: 0;
+            color: #ecf0f1;
         }
         
         .price-highlight {
@@ -332,17 +446,9 @@
             border-radius: 30px;
             font-size: 1.4rem;
             font-weight: bold;
-            margin: 1rem 0;
+            margin: 2rem auto;
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        }
-        
-        .note {
-            font-style: italic;
-            color: #ecf0f1;
-            font-size: 1.1rem;
-            margin-top: 2rem;
-            padding-top: 1.5rem;
-            border-top: 1px solid rgba(255,255,255,0.2);
+            text-align: center;
         }
         
         .back-btn {
@@ -399,16 +505,25 @@
                 height: 250px;
             }
             
-            .tanning-services {
-                padding: 3rem 1rem;
+            .skins-banner {
+                height: 250px;
             }
             
-            .tanning-services h3 {
-                font-size: 1.7rem;
+            .banner-overlay h3 {
+                font-size: 1.8rem;
             }
             
-            .tanning-services p {
+            .banner-overlay p {
                 font-size: 1.1rem;
+            }
+            
+            .skins-grid, .hats-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .skins-image-container, .hat-image-container {
+                height: 250px;
             }
         }
     </style>
@@ -423,6 +538,7 @@
         <a href="index.html">Home</a>
         <a href="alaska-textiles.html">Alaskan Textile Art</a>
         <a href="rabbitry.html" class="current">My Rabbitry</a>
+        <a href="farm-stand.html">Farm Stand</a>
         <a href="fantasy-ball.html">Fantasy Ball</a>
         <a href="contact.html">Contact</a>
     </nav>
@@ -576,24 +692,62 @@
         <!-- NEW: Full-width divider bar -->
         <div class="full-divider"></div>
         
-        <!-- UPDATED: Full-width Tanning Services -->
+        <!-- NEW: Rabbit Skins Banner -->
+        <div class="skins-banner">
+            <img src="images/TextureOfRabbitSkinInSnow.jpg" alt="Rabbit Skin Texture in Snow">
+            <div class="banner-overlay">
+                <h3>Rabbit & Snowshoe Hare Fur Tanning</h3>
+                <p>Traditional hand-tanning services for beautiful, usable fur</p>
+            </div>
+        </div>
+        
+        <!-- UPDATED: Tanning Services with Photos -->
         <section class="tanning-services">
             <div class="tanning-content">
-                <h3>Rabbit & Snowshoe Hare Fur Tanning Services</h3>
+                <h3>Hand-Tanned Rabbit & Snowshoe Hare Pelts</h3>
                 <p>I offer traditional hand-tanning services for rabbit and snowshoe hare pelts. Using time-honored methods, I transform raw hides into soft, usable fur perfect for crafts, clothing, and traditional Alaskan items.</p>
+                
+                <div class="skins-grid">
+                    <div class="skins-image-container">
+                        <img src="images/RabbitSkins.jpg" alt="Hand-Tanned Rabbit Skins">
+                    </div>
+                </div>
+                
+                <p>This service honors the full use of the animal, creating beautiful, warm fur items while practicing sustainable harvest traditions. Perfect for hunters, homesteaders, and crafters who want to utilize every part of their harvest.</p>
                 
                 <div class="price-highlight">
                     $5–10 per skin (based on pelt size)
                 </div>
                 
-                <p>This service honors the full use of the animal, creating beautiful, warm fur items while practicing sustainable harvest traditions. Perfect for hunters, homesteaders, and crafters who want to utilize every part of their harvest.</p>
+                <h3 style="margin-top: 4rem;">Finished Rabbit Skin Hats</h3>
+                <p>See examples of finished products made from our hand-tanned rabbit skins:</p>
                 
-                <p class="note">Photos of rabbit skin hats and finished products coming soon! Custom fur items available upon request.</p>
+                <div class="hats-grid">
+                    <!-- Rabbit Skin Hat -->
+                    <div class="hat-card">
+                        <div class="hat-image-container">
+                            <img src="images/RabbitSkinHat.jpg" alt="Rabbit Skin Hat">
+                        </div>
+                        <h4>Rabbit Skin Hat</h4>
+                        <p>Warm, handcrafted hat made from our tanned rabbit skins. Perfect for Alaska winters.</p>
+                    </div>
+                    
+                    <!-- Modeling the Hat -->
+                    <div class="hat-card">
+                        <div class="hat-image-container">
+                            <img src="images/RabbitHatOn.jpg" alt="Modeling Rabbit Skin Hat">
+                        </div>
+                        <h4>Warm & Cozy</h4>
+                        <p>Modeling one of our rabbit skin hats. Each hat is custom made and incredibly warm.</p>
+                    </div>
+                </div>
+                
+                <p style="margin-top: 2rem;">Custom fur items available upon request. Contact me to discuss your tanning needs or custom hat orders.</p>
             </div>
         </section>
         
         <!-- Back to Home Button -->
-        <div style="text-align: center;">
+        <div style="text-align: center; padding: 2rem;">
             <a href="index.html" class="back-btn">← Back to Home</a>
         </div>
     </main>
