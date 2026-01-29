@@ -97,6 +97,21 @@
             font-style: italic;
         }
         
+        .location-note {
+            background: #e8f6f3;
+            padding: 1rem;
+            border-radius: 10px;
+            margin: 1rem auto 2rem;
+            max-width: 800px;
+            border-left: 4px solid #27ae60;
+        }
+        
+        .location-note p {
+            margin: 0;
+            font-size: 1.1rem;
+            color: #2c3e50;
+        }
+        
         .quail-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -158,6 +173,17 @@
             margin: 1rem 0;
         }
         
+        .availability-tag {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 0.5rem 1.2rem;
+            border-radius: 20px;
+            font-size: 1rem;
+            font-weight: bold;
+            margin: 0.5rem 0;
+        }
+        
         .price-tag {
             display: inline-block;
             background: #e74c3c;
@@ -171,7 +197,7 @@
         
         .coming-soon-tag {
             display: inline-block;
-            background: #3498db;
+            background: #9b59b6;
             color: white;
             padding: 0.6rem 1.5rem;
             border-radius: 30px;
@@ -327,7 +353,7 @@
         <img src="images/SquashPlant.jpg" alt="Squash Plant in Garden" class="farm-banner">
         <div class="banner-overlay">
             <h1>Farm Stand</h1>
-            <p>Fresh Local Produce & Homestead Goods from Fairbanks, Alaska</p>
+            <p>Fresh Local Produce & Homestead Goods from Gustavus, Alaska</p>
         </div>
     </header>
     
@@ -345,7 +371,11 @@
         <!-- Quail Section -->
         <section class="quail-section">
             <h2>We Have Coturnix Quail!</h2>
-            <p>Fresh quail eggs and future chicks available from our homestead</p>
+            <p>Fresh quail eggs available year-round from our homestead</p>
+            
+            <div class="location-note">
+                <p><strong>📍 Location Note:</strong> We're based in Gustavus, Alaska from April to October. All garden photos are from our Gustavus homestead. Quail eggs are available year-round wherever we are!</p>
+            </div>
             
             <div class="quail-grid">
                 <!-- Quail Eggs -->
@@ -357,8 +387,9 @@
                         <h3>Fresh Quail Eggs</h3>
                         <p>Nutrient-rich Coturnix quail eggs from our happy, free-range quail. These miniature eggs pack a nutritional punch with rich flavor.</p>
                         <p><strong>Features:</strong> High in protein, rich in vitamins, beautiful speckled shells</p>
+                        <span class="availability-tag">Available Year-Round</span>
                         <div class="price-tag">$10/dozen</div>
-                        <p><em>Available seasonally at our farm stand</em></p>
+                        <p><em>Available wherever we are - Gustavus (April-Oct) or Fairbanks (Nov-Mar)</em></p>
                     </div>
                 </div>
                 
@@ -382,21 +413,22 @@
         <!-- Sunflower Section -->
         <section class="sunflower-section">
             <div class="sunflower-image-container">
-                <img src="images/Sunflower.jpg" alt="Sunflower in Garden">
+                <img src="images/Sunflower.jpg" alt="Sunflower in Gustavus Garden">
             </div>
+            <p style="margin-top: 1rem; font-style: italic; color: #7f8c8d;">Sunflower growing in our Gustavus garden</p>
         </section>
         
         <!-- Market Banner -->
         <section class="market-banner">
             <div class="market-image">
-                <img src="images/GreenBeans.jpg" alt="Fresh Green Beans">
+                <img src="images/GreenBeans.jpg" alt="Fresh Green Beans from Gustavus">
             </div>
             <div class="market-info">
                 <h3>See You at Second Saturday Markets!</h3>
-                <p>Starting in April 2026, visit our farm stand at the local Second Saturday Markets in Fairbanks. Fresh seasonal produce, quail eggs, and other homestead goods.</p>
-                <p><strong>Location:</strong> Fairbanks local markets</p>
-                <p><strong>Season:</strong> Spring through Fall</p>
-                <div class="season-date">Starting April 2026</div>
+                <p>Starting in April 2026, visit our farm stand at the Gustavus Second Saturday Markets. Fresh seasonal produce, quail eggs, and other homestead goods from our Gustavus garden.</p>
+                <p><strong>Location:</strong> Gustavus Community Center Markets</p>
+                <p><strong>Season:</strong> April through October</p>
+                <div class="season-date">Starting April 2026 in Gustavus</div>
             </div>
         </section>
         
@@ -407,7 +439,7 @@
     </main>
     
     <footer>
-        <p>© 2024 Geneva's Trading Post | Farm Stand in Fairbanks, Alaska</p>
+        <p>© 2024 Geneva's Trading Post | Farm Stand in Gustavus, Alaska (April-October)</p>
         <p>Fresh Local Produce & Homestead Goods | Seasonal Availability</p>
     </footer>
 </body>
