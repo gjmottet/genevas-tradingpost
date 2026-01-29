@@ -8,25 +8,47 @@
     <style>
         /* Textile Art specific styles */
         .page-header {
+            position: relative;
             text-align: center;
-            padding: 2rem 1rem;
-            background: #2c3e50;
             color: white;
             margin: 0;
+            height: 400px;
+            overflow: hidden;
+        }
+        
+        .page-header-banner {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .header-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
         
         .page-header h1 {
-            font-size: 2.5rem;
+            font-size: 3.5rem;
             margin: 0;
             color: white;
+            text-shadow: 0 3px 10px rgba(0,0,0,0.5);
         }
         
         .page-header p {
-            font-size: 1.2rem;
-            margin: 0.5rem 0 0 0;
-            color: #ecf0f1;
+            font-size: 1.5rem;
+            margin: 1rem 0 0 0;
+            color: white;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.5);
             max-width: 800px;
-            margin: 1rem auto;
+            padding: 0 1rem;
         }
         
         nav {
@@ -252,7 +274,7 @@
             padding: 3rem 2rem;
             border-radius: 10px;
             margin: 3rem auto;
-            max-width: 1000px;
+            max-width: 1200px;
         }
         
         .wearables-section h3 {
@@ -291,6 +313,15 @@
             border-left: 5px solid #3498db;
         }
         
+        .fun-fact {
+            background: #e8f6f3;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            border-left: 4px solid #2ecc71;
+            font-style: italic;
+        }
+        
         footer {
             text-align: center;
             padding: 2rem;
@@ -320,19 +351,37 @@
             .artwork-image {
                 min-height: 250px;
             }
+            
+            .page-header {
+                height: 300px;
+            }
+            
+            .page-header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .page-header p {
+                font-size: 1.2rem;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- New Header with Owl Banner -->
     <header class="page-header">
-        <h1>Alaskan Textile Art</h1>
-        <p>Handcrafted Wildlife-Inspired Pieces from Fairbanks & Gustavus</p>
+        <img src="images/OwlCloseUp.jpg" alt="Owl Pattern Knitting Close Up" class="page-header-banner">
+        <div class="header-overlay">
+            <h1>Alaskan Textile Art</h1>
+            <p>Handcrafted Wildlife-Inspired Pieces from Fairbanks & Gustavus</p>
+        </div>
     </header>
     
+    <!-- Navigation Menu -->
     <nav>
         <a href="index.html">Home</a>
         <a href="alaska-textiles.html" class="current">Alaskan Textile Art</a>
         <a href="rabbitry.html">My Rabbitry</a>
+        <a href="farm-stand.html">Farm Stand</a>
         <a href="fantasy-ball.html">Fantasy Ball</a>
         <a href="contact.html">Contact</a>
     </nav>
@@ -413,6 +462,34 @@
                     <p><em>🏆 Southeast Alaska State Fair - Best in Show Textiles</em></p>
                 </div>
             </div>
+            
+            <!-- NEW: School of Flat Fish in Snow -->
+            <div class="artwork-card">
+                <img src="images/SchoolFlatFishSnow.jpg" alt="School of Flat Fish Potholders in Snow" class="artwork-image">
+                <div class="artwork-info">
+                    <span class="material-badge">All Natural Fiber</span>
+                    <span class="location-badge">Alaskan Waters</span>
+                    <h3>School of Flat Fish</h3>
+                    <p>A school of flat fish potholders displayed in the snow, showing their beautiful natural colors against a winter background.</p>
+                    <div class="fun-fact">
+                        <strong>Fun Fact:</strong> Right-eyed flat fish are sole and left-eyed are flounder. Halibut are the world's largest flounder species!
+                    </div>
+                    <p>Each fish in this school shows the unique flat fish adaptation where both eyes migrate to one side of the head.</p>
+                </div>
+            </div>
+            
+            <!-- NEW: Basket of Teddy Bears in Snow -->
+            <div class="artwork-card">
+                <img src="images/BasketOfBearsInSnow.jpg" alt="Basket of Hand-Knit Teddy Bears in Snow" class="artwork-image">
+                <div class="artwork-info">
+                    <span class="material-badge">Wool & Cotton</span>
+                    <span class="location-badge">Alaskan Winter</span>
+                    <h3>Ursa's Constellations</h3>
+                    <p>A basket of hand-knit teddy bears nestled in the snow, each with its own personality and charm. These heirloom-quality toys are perfect for children and collectors alike.</p>
+                    <p>Made with soft, durable natural fibers and embroidered details. Each bear is unique, with different colors and expressions.</p>
+                    <p><strong>Perfect for:</strong> Gifts, heirlooms, or comforting companions</p>
+                </div>
+            </div>
         </div>
         
         <!-- Process Section -->
@@ -432,16 +509,31 @@
             </div>
             
             <div class="gallery-grid">
-                <!-- Beaded Gloves -->
+                <!-- Aurora Lace Scarf -->
                 <div class="artwork-card">
-                    <img src="images/beaded_fingerlessgloves_Jan.jpg" alt="Beaded Fingerless Gloves in Merino Wool" class="artwork-image">
+                    <img src="images/AuroraScarf.jpg" alt="Aurora Lace Scarf" class="artwork-image">
+                    <div class="artwork-info">
+                        <span class="material-badge">Merino Wool</span>
+                        <span class="material-badge">Lace Pattern</span>
+                        <span class="location-badge">Northern Lights Inspired</span>
+                        <h3>Aurora Lace Scarf</h3>
+                        <p>Inspired by the dancing colors of the Aurora Borealis, this lace scarf features flowing, wavelike patterns that mimic the northern lights.</p>
+                        <p>Made with fine merino wool for warmth without weight. The intricate lace pattern creates a delicate, ethereal look perfect for dressy occasions or everyday elegance.</p>
+                        <p><strong>Features:</strong> Lightweight, breathable, elegant lace design, northern lights color palette</p>
+                    </div>
+                </div>
+                
+                <!-- Updated: Fingerless Gloves in Snow -->
+                <div class="artwork-card">
+                    <img src="images/FingerlessGlovesInSnow.jpg" alt="Beaded Fingerless Gloves in Snow" class="artwork-image">
                     <div class="artwork-info">
                         <span class="material-badge">Merino Wool</span>
                         <span class="material-badge">Glass Beads</span>
+                        <span class="location-badge">Alaskan Winter</span>
                         <h3>Beaded Fingerless Gloves</h3>
-                        <p>Merino wool with glass seed beads - perfect for chilly Fairbanks days while maintaining dexterity. Each bead is placed individually during the knitting process.</p>
-                        <p>Made with luxurious merino wool for warmth without bulk. The glass seed beads add sparkle and are securely integrated into the knit structure.</p>
-                        <p>Ideal for artists, knitters, or anyone who needs hand warmth while working in cool temperatures.</p>
+                        <p>Merino wool with glass seed beads, photographed in the snow to show their winter warmth and beauty. Perfect for chilly Alaska days while maintaining dexterity.</p>
+                        <p>Each bead is placed individually during the knitting process. Made with luxurious merino wool for warmth without bulk, with glass seed beads adding sparkle.</p>
+                        <p><strong>Ideal for:</strong> Artists, knitters, or anyone who needs hand warmth while working in cool temperatures</p>
                     </div>
                 </div>
             </div>
