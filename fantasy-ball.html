@@ -125,7 +125,7 @@
             box-shadow: 0 6px 20px rgba(0,0,0,0.25);
         }
         
-        .coming-soon-banner {
+        .rush-order-banner {
             background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
             color: white;
             padding: 2rem;
@@ -136,9 +136,14 @@
             border: 2px dashed white;
         }
         
-        .coming-soon-banner h3 {
+        .rush-order-banner h3 {
             margin-top: 0;
             font-size: 1.8rem;
+        }
+        
+        .rush-order-banner p {
+            font-size: 1.2rem;
+            line-height: 1.6;
         }
         
         .fantasy-grid {
@@ -185,12 +190,35 @@
             object-fit: contain;
         }
         
-        .placeholder-text {
-            color: #9b59b6;
-            font-size: 1.5rem;
-            font-weight: bold;
-            text-align: center;
-            padding: 2rem;
+        /* Special hover effect for flower barrett */
+        .flower-barrett-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .flower-barrett-front, .flower-barrett-back {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.5s ease;
+        }
+        
+        .flower-barrett-back {
+            opacity: 0;
+        }
+        
+        .flower-barrett-container:hover .flower-barrett-front {
+            opacity: 0;
+        }
+        
+        .flower-barrett-container:hover .flower-barrett-back {
+            opacity: 1;
         }
         
         .fantasy-info {
@@ -231,19 +259,99 @@
             font-weight: bold;
         }
         
+        .price-tag {
+            display: inline-block;
+            background: #27ae60;
+            color: white;
+            padding: 0.5rem 1.2rem;
+            border-radius: 20px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin: 0.5rem 0;
+        }
+        
+        .special-offer {
+            background: #e67e22;
+            color: white;
+            padding: 0.5rem 1.2rem;
+            border-radius: 20px;
+            font-size: 1rem;
+            font-weight: bold;
+            margin: 0.5rem 0;
+            display: inline-block;
+        }
+        
+        .valentines-tag {
+            background: #e74c3c;
+            color: white;
+        }
+        
         .cosplay-tag {
             background: #3498db;
             color: white;
         }
         
         .dragon-tag {
-            background: #e74c3c;
+            background: #9b59b6;
             color: white;
         }
         
         .zodiac-tag {
             background: #2ecc71;
             color: white;
+        }
+        
+        .nerd-tag {
+            background: #34495e;
+            color: white;
+        }
+        
+        .valentines-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+        
+        .valentines-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+            border: 2px solid #f8c8dc;
+        }
+        
+        .valentines-image {
+            width: 100%;
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #fff0f5 0%, #ffe4e1 100%);
+            padding: 1.5rem;
+            border-bottom: 3px solid #e74c3c;
+        }
+        
+        .valentines-image img {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+        }
+        
+        .valentines-info {
+            padding: 1.8rem;
+        }
+        
+        .valentines-info h3 {
+            color: #e74c3c;
+            margin-top: 0;
+            font-size: 1.5rem;
+            border-bottom: 2px solid #f8c8dc;
+            padding-bottom: 0.5rem;
         }
         
         .custom-section {
@@ -304,6 +412,11 @@
                 gap: 2rem;
             }
             
+            .valentines-section {
+                grid-template-columns: 1fr;
+                padding: 0 1rem;
+            }
+            
             nav a {
                 display: block;
                 margin: 0.5rem auto;
@@ -317,6 +430,10 @@
             
             .fantasy-image {
                 height: 220px;
+            }
+            
+            .valentines-image {
+                height: 200px;
             }
             
             .event-banner {
@@ -335,6 +452,7 @@
         <a href="index.html">Home</a>
         <a href="alaska-textiles.html">Alaskan Textile Art</a>
         <a href="rabbitry.html">My Rabbitry</a>
+        <a href="farm-stand.html">Farm Stand</a>
         <a href="fantasy-ball.html" class="current">Fantasy Ball</a>
         <a href="contact.html">Contact</a>
     </nav>
@@ -361,22 +479,59 @@
             </p>
         </section>
         
-        <!-- Coming Soon Banner -->
-        <div class="coming-soon-banner">
-            <h3>✨ Fantasy Ball Collection Coming Soon! ✨</h3>
-            <p>Special zodiac and fantasy-themed creations are currently in progress for the Fantasy Ball. Photos will be added here as pieces are completed!</p>
-            <p>Check back soon or contact me for custom fantasy commissions.</p>
+        <!-- Rush Order Banner -->
+        <div class="rush-order-banner">
+            <h3>✨ Rush Orders Available! ✨</h3>
+            <p>Need cosplay accessories or Valentine's gifts quickly? Contact me for rush order options!</p>
+            <p>Perfect for last-minute Fantasy Ball outfits or special Valentine's Day surprises.</p>
+        </div>
+        
+        <!-- Valentine's Section -->
+        <div class="valentines-section">
+            <!-- Folk Heart Baskets -->
+            <div class="valentines-card">
+                <div class="valentines-image">
+                    <img src="images/FolkHeartBasket.jpg" alt="Folk Heart Baskets">
+                </div>
+                <div class="valentines-info">
+                    <h3>Folk Heart Baskets</h3>
+                    <div class="fantasy-tags">
+                        <span class="fantasy-tag valentines-tag">Valentine's Special</span>
+                        <span class="fantasy-tag">Handmade</span>
+                    </div>
+                    <p>Charming folk art heart baskets, perfect for Valentine's Day gifts or decorations. Made with natural fibers and traditional patterns.</p>
+                    <div class="price-tag">$6/each</div>
+                    <div class="special-offer">4 for $20</div>
+                    <p><strong>FREE embroidery</strong> of loved ones' initials or important dates</p>
+                    <p><em>Perfect for the week before Valentine's Day!</em></p>
+                </div>
+            </div>
+            
+            <!-- Yellow Bear with Scarf -->
+            <div class="valentines-card">
+                <div class="valentines-image">
+                    <img src="images/YellowBearWithScarf.jpg" alt="Yellow Bear with Scarf">
+                </div>
+                <div class="valentines-info">
+                    <h3>Yellow Bear with Scarf</h3>
+                    <div class="fantasy-tags">
+                        <span class="fantasy-tag valentines-tag">Valentine's Gift</span>
+                        <span class="fantasy-tag">Hand-Knit</span>
+                    </div>
+                    <p>Adorable hand-knit yellow bear wearing a cozy scarf. A perfect cuddly companion for Valentine's Day or any special occasion.</p>
+                    <p><strong>FREE embroidery</strong> available for initials or special dates</p>
+                    <p><strong>Features:</strong> Soft natural fibers, detailed scarf, embroidered face</p>
+                    <p><em>Makes a heartfelt personalized gift</em></p>
+                </div>
+            </div>
         </div>
         
         <!-- Fantasy Creations Grid -->
         <div class="fantasy-grid">
-            <!-- Dragon Potholder -->
+            <!-- Dragon Potholders -->
             <div class="fantasy-card">
                 <div class="fantasy-image">
-                    <div class="placeholder-text">
-                        🐉 Dragon Potholder<br>
-                        <span style="font-size: 1rem;">Photo Coming Soon</span>
-                    </div>
+                    <img src="images/DragonPotHolders.jpg" alt="Dragon Potholders">
                 </div>
                 <div class="fantasy-info">
                     <h3>Dragon Potholder Series</h3>
@@ -386,50 +541,112 @@
                         <span class="fantasy-tag">Kitchen Magic</span>
                     </div>
                     <p>Mythical dragon-inspired potholders featuring scale patterns, wing designs, and fiery color schemes. Each dragon has unique characteristics and colors.</p>
+                    <p><strong>Features:</strong> Thick natural fiber construction, functional heat protection, beautiful detailed embroidery</p>
                     <p><strong>Perfect for:</strong> Fantasy kitchen decor, cosplay props, or magical gifts</p>
                     <p><strong>Materials:</strong> Natural fibers with metallic embroidery accents</p>
                 </div>
             </div>
             
-            <!-- Zodiac Accessories -->
+            <!-- D&D Dice Bags -->
             <div class="fantasy-card">
                 <div class="fantasy-image">
-                    <div class="placeholder-text">
-                        ♈♉♊ Zodiac Collection<br>
-                        <span style="font-size: 1rem;">Photos Coming Soon</span>
-                    </div>
+                    <img src="images/DandDDiceBag.jpg" alt="Dungeons & Dragons Dice Bag">
                 </div>
                 <div class="fantasy-info">
-                    <h3>Zodiac-Inspired Accessories</h3>
+                    <h3>D&D Dice Bags</h3>
                     <div class="fantasy-tags">
-                        <span class="fantasy-tag zodiac-tag">Zodiac Signs</span>
-                        <span class="fantasy-tag">Wearable Art</span>
-                        <span class="fantasy-tag">Astrology</span>
+                        <span class="fantasy-tag nerd-tag">Dungeons & Dragons</span>
+                        <span class="fantasy-tag">Gaming</span>
+                        <span class="fantasy-tag">Hand-Sewn</span>
                     </div>
-                    <p>Special creations for SUNA'S ZODIAC FANTASY BALL featuring all twelve zodiac signs. Constellation patterns, elemental colors, and celestial designs.</p>
-                    <p><strong>Includes:</strong> Fingerless gloves, hats, scarves, and decorative items</p>
-                    <p><strong>Custom:</strong> Available for your specific zodiac sign</p>
+                    <p>Hand-sewn dice bags perfect for your favorite nerd! Each bag includes a set of dice and features fantasy-themed designs.</p>
+                    <div class="price-tag">$25 each</div>
+                    <p><strong>Includes:</strong> Hand-sewn bag + matching dice set</p>
+                    <p><strong>Designs:</strong> Various fantasy themes, colors, and patterns available</p>
+                    <p><em>The perfect gift for tabletop gaming enthusiasts!</em></p>
                 </div>
             </div>
             
-            <!-- Cosplay Pieces -->
+            <!-- Flower Barrett -->
             <div class="fantasy-card">
                 <div class="fantasy-image">
-                    <div class="placeholder-text">
-                        🎭 Cosplay Accessories<br>
-                        <span style="font-size: 1rem;">Photos Coming Soon</span>
+                    <div class="flower-barrett-container">
+                        <div class="flower-barrett-front">
+                            <img src="images/FlowerFrountSquare.jpg" alt="Flower Barrett Front">
+                        </div>
+                        <div class="flower-barrett-back">
+                            <img src="images/FlowerBackSquare.jpg" alt="Flower Barrett Back">
+                        </div>
                     </div>
                 </div>
                 <div class="fantasy-info">
-                    <h3>Fantasy Cosplay Accessories</h3>
+                    <h3>Flower Barrett</h3>
                     <div class="fantasy-tags">
-                        <span class="fantasy-tag cosplay-tag">Cosplay</span>
-                        <span class="fantasy-tag">LARP Gear</span>
-                        <span class="fantasy-tag">Fantasy Wear</span>
+                        <span class="fantasy-tag">Hair Accessory</span>
+                        <span class="fantasy-tag">Floral</span>
+                        <span class="fantasy-tag">Handcrafted</span>
                     </div>
-                    <p>Handcrafted accessories for fantasy cosplay and LARP events. Elven-inspired pieces, medieval wear, and magical creature features.</p>
-                    <p><strong>Examples:</strong> Elven leaf gloves, wizard hat accents, druid-inspired wraps</p>
-                    <p><strong>Custom:</strong> Commission pieces for specific characters or costumes</p>
+                    <p>Beautiful flower barrett featuring intricate floral designs. Hover over the image to see both front and back views!</p>
+                    <p><strong>Features:</strong> Secure clip, detailed floral embroidery, comfortable wear</p>
+                    <p><strong>Perfect for:</strong> Fantasy costumes, everyday wear, or special events</p>
+                    <p><strong>Materials:</strong> Natural fibers with bead and embroidery details</p>
+                </div>
+            </div>
+            
+            <!-- Watermelon Gloves and Flowers -->
+            <div class="fantasy-card">
+                <div class="fantasy-image">
+                    <img src="images/WatermelonGlovesAndFlowers.jpg" alt="Watermelon Gloves and Flower Barretts">
+                </div>
+                <div class="fantasy-info">
+                    <h3>Artistic Arrangement</h3>
+                    <div class="fantasy-tags">
+                        <span class="fantasy-tag">Beaded Gloves</span>
+                        <span class="fantasy-tag">Flower Barretts</span>
+                        <span class="fantasy-tag">Set</span>
+                    </div>
+                    <p>An artistic arrangement showcasing beaded fingerless gloves and matching flower barretts. The watermelon color scheme is refreshing and unique.</p>
+                    <p><strong>Includes:</strong> Beaded fingerless gloves + coordinating flower barrett</p>
+                    <p><strong>Features:</strong> Glass seed beads, floral embroidery, complementary colors</p>
+                    <p><strong>Perfect for:</strong> Coordinated fantasy outfits or statement accessories</p>
+                </div>
+            </div>
+            
+            <!-- Dust Sprites -->
+            <div class="fantasy-card">
+                <div class="fantasy-image">
+                    <img src="images/DustSprites.jpg" alt="Dust Sprites">
+                </div>
+                <div class="fantasy-info">
+                    <h3>Dust Sprites</h3>
+                    <div class="fantasy-tags">
+                        <span class="fantasy-tag">Studio Ghibli</span>
+                        <span class="fantasy-tag">Whimsical</span>
+                        <span class="fantasy-tag">Miniature</span>
+                    </div>
+                    <p>Adorable dust sprites inspired by Studio Ghibli films. These fluffy black creatures with big eyes are perfect for fans of Japanese animation.</p>
+                    <p><strong>Features:</strong> Fluffy texture, embroidered eyes, whimsical design</p>
+                    <p><strong>Perfect for:</strong> Ghibli fans, cute desk decorations, or magical gifts</p>
+                    <p><strong>Materials:</strong> Soft yarn with detailed embroidery</p>
+                </div>
+            </div>
+            
+            <!-- Blue Owl Hat -->
+            <div class="fantasy-card">
+                <div class="fantasy-image">
+                    <img src="images/BlueOwlHat.jpg" alt="Blue Owl Hat">
+                </div>
+                <div class="fantasy-info">
+                    <h3>Blue Owl Hat</h3>
+                    <div class="fantasy-tags">
+                        <span class="fantasy-tag">Wise Owl</span>
+                        <span class="fantasy-tag">Wearable</span>
+                        <span class="fantasy-tag">Fantasy</span>
+                    </div>
+                    <p>Enchanting blue owl hat featuring detailed owl face patterns. This whimsical hat brings a touch of magic to any outfit.</p>
+                    <p><strong>Features:</strong> Owl face design, cozy fit, natural fiber construction</p>
+                    <p><strong>Perfect for:</strong> Fantasy events, cold weather, or owl enthusiasts</p>
+                    <p><strong>Materials:</strong> Wool blend with intricate colorwork</p>
                 </div>
             </div>
         </div>
@@ -440,6 +657,7 @@
             <p>Looking for something specific for your fantasy event, cosplay, or magical home? I accept custom commissions for fantasy-themed creations.</p>
             <p>Contact me to discuss your vision - whether it's a specific dragon design, zodiac piece, or unique fantasy accessory. All pieces are original designs made to order.</p>
             <p><strong>Turnaround time:</strong> Varies based on complexity (typically 2-4 weeks)</p>
+            <p><strong>Rush orders:</strong> Available for last-minute needs - contact for details!</p>
             <p><strong>Materials:</strong> Natural fibers with special fantasy-themed embellishments</p>
         </section>
         
