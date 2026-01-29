@@ -51,9 +51,9 @@
             color: white;
             text-decoration: none;
             margin: 0 1rem;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-weight: bold;
-            padding: 0.8rem 1.5rem;
+            padding: 0.7rem 1.2rem;
             border-radius: 5px;
             display: inline-block;
             transition: all 0.3s ease;
@@ -148,6 +148,14 @@
             background: #2980b9;
         }
         
+        .farm-btn {
+            background: #27ae60;
+        }
+        
+        .farm-btn:hover {
+            background: #219955;
+        }
+        
         .coming-soon {
             opacity: 0.9;
         }
@@ -170,7 +178,8 @@
                 display: block;
                 margin: 0.5rem auto;
                 width: 80%;
-                max-width: 300px;
+                max-width: 250px;
+                font-size: 1rem;
             }
             
             .business-name h1 {
@@ -179,6 +188,11 @@
             
             .banner-image {
                 height: 200px;
+            }
+            
+            .page-links {
+                grid-template-columns: 1fr;
+                padding: 2rem 1rem;
             }
         }
     </style>
@@ -200,6 +214,7 @@
         <a href="index.html">Home</a>
         <a href="alaska-textiles.html">Alaskan Textile Art</a>
         <a href="rabbitry.html">My Rabbitry</a>
+        <a href="farm-stand.html">Farm Stand</a>
         <a href="fantasy-ball.html">Fantasy Ball</a>
         <a href="contact.html">Contact</a>
     </nav>
@@ -235,11 +250,18 @@
                 <a href="rabbitry.html" class="btn">Meet the Bunnies</a>
             </div>
             
-            <!-- Fantasy Balls Card -->
+            <!-- Farm Stand Card -->
+            <div class="link-card">
+                <h3>Farm Stand</h3>
+                <p>Fresh local produce, rabbit meat, eggs, and other homestead goods available seasonally in Fairbanks.</p>
+                <a href="farm-stand.html" class="btn farm-btn">Visit Farm Stand</a>
+            </div>
+            
+            <!-- Fantasy Ball Card -->
             <div class="link-card coming-soon">
                 <h3>Fantasy Ball Specials</h3>
                 <p>Dragon potholders, cosplay accessories, and magical creations for Fantasy Fairbanks events.</p>
-                <a href="fantasy-balls.html" class="btn">Coming Soon</a>
+                <a href="fantasy-ball.html" class="btn">Coming Soon</a>
             </div>
             
             <!-- Contact Card -->
