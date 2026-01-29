@@ -169,9 +169,10 @@
             border-color: #d7bde2;
         }
         
+        /* Larger container for dragon potholders */
         .fantasy-image {
             width: 100%;
-            height: 320px; /* Increased height for larger images */
+            height: 320px;
             background: linear-gradient(135deg, #f9f3ff 0%, #f0e6ff 100%);
             display: flex;
             align-items: center;
@@ -180,12 +181,23 @@
             padding: 1.5rem;
         }
         
+        /* Special larger container for dragon potholders */
+        .dragon-image {
+            height: 380px; /* Even taller for dragon potholders */
+        }
+        
         .fantasy-image img {
             max-width: 100%;
             max-height: 100%;
             width: auto;
             height: auto;
             object-fit: contain;
+        }
+        
+        /* Make dragon potholder image fill more space */
+        .dragon-image img {
+            max-width: 95%;
+            max-height: 95%;
         }
         
         /* Special hover effect for flower barrett */
@@ -323,7 +335,7 @@
         
         .valentines-image {
             width: 100%;
-            height: 280px; /* Increased height */
+            height: 280px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -435,7 +447,11 @@
             }
             
             .fantasy-image {
-                height: 280px;
+                height: 300px;
+            }
+            
+            .dragon-image {
+                height: 340px;
             }
             
             .valentines-image {
@@ -531,9 +547,9 @@
         
         <!-- Fantasy Creations Grid -->
         <div class="fantasy-grid">
-            <!-- Dragon Potholders -->
+            <!-- Dragon Potholders - LARGER IMAGE -->
             <div class="fantasy-card">
-                <div class="fantasy-image">
+                <div class="fantasy-image dragon-image">
                     <img src="images/DragonPotHolders.jpg" alt="Dragon Potholders">
                 </div>
                 <div class="fantasy-info">
