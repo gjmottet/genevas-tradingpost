@@ -1,1 +1,414 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farm Stand - Geneva's Trading Post</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Farm Stand specific styles */
+        .farm-header {
+            position: relative;
+            text-align: center;
+            color: white;
+            margin: 0;
+        }
+        
+        .farm-banner {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .banner-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .farm-header h1 {
+            font-size: 3.5rem;
+            margin: 0;
+            color: white;
+            text-shadow: 0 3px 10px rgba(0,0,0,0.5);
+        }
+        
+        .farm-header p {
+            font-size: 1.5rem;
+            margin: 1rem 0 0 0;
+            color: white;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+            max-width: 800px;
+            padding: 0 1rem;
+        }
+        
+        nav {
+            background: #27ae60;
+            padding: 1rem;
+            text-align: center;
+            border-bottom: 3px solid #2ecc71;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: bold;
+            padding: 0.7rem 1.3rem;
+            border-radius: 5px;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        
+        nav a:hover {
+            background: #2ecc71;
+            transform: translateY(-3px);
+        }
+        
+        .current {
+            background: #2ecc71;
+        }
+        
+        .quail-section {
+            text-align: center;
+            padding: 3rem 2rem;
+            background: linear-gradient(135deg, #f9fff9 0%, #f0fff0 100%);
+            margin: 0;
+        }
+        
+        .quail-section h2 {
+            color: #27ae60;
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .quail-section p {
+            font-size: 1.3rem;
+            color: #34495e;
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+        
+        .quail-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            padding: 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .quail-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            border: 2px solid #e0f7e0;
+        }
+        
+        .quail-card:hover {
+            transform: translateY(-8px);
+        }
+        
+        .quail-image-container {
+            width: 100%;
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            padding: 1.5rem;
+        }
+        
+        .quail-card img {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+        }
+        
+        .quail-info {
+            padding: 2rem;
+            background: linear-gradient(to bottom, white, #f9fff9);
+        }
+        
+        .quail-info h3 {
+            margin-top: 0;
+            color: #27ae60;
+            font-size: 1.8rem;
+            border-bottom: 2px solid #2ecc71;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .quail-info p {
+            color: #34495e;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin: 1rem 0;
+        }
+        
+        .price-tag {
+            display: inline-block;
+            background: #e74c3c;
+            color: white;
+            padding: 0.6rem 1.5rem;
+            border-radius: 30px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin: 1rem 0;
+        }
+        
+        .coming-soon-tag {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 0.6rem 1.5rem;
+            border-radius: 30px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin: 1rem 0;
+        }
+        
+        .sunflower-section {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: white;
+        }
+        
+        .sunflower-image-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+        
+        .sunflower-image-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+        }
+        
+        .market-banner {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+            color: white;
+            margin: 3rem auto;
+            max-width: 1200px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+        
+        .market-image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            background: rgba(255,255,255,0.1);
+        }
+        
+        .market-image img {
+            max-width: 100%;
+            max-height: 250px;
+            width: auto;
+            height: auto;
+            border-radius: 10px;
+            object-fit: contain;
+        }
+        
+        .market-info {
+            padding: 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .market-info h3 {
+            font-size: 2rem;
+            margin-top: 0;
+            margin-bottom: 1rem;
+            color: white;
+        }
+        
+        .market-info p {
+            font-size: 1.3rem;
+            line-height: 1.7;
+            margin: 0.5rem 0;
+        }
+        
+        .season-date {
+            display: inline-block;
+            background: white;
+            color: #27ae60;
+            padding: 0.8rem 1.8rem;
+            border-radius: 30px;
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin-top: 1rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .back-btn {
+            display: inline-block;
+            background: #7f8c8d;
+            color: white;
+            padding: 0.9rem 2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin: 3rem auto;
+            text-align: center;
+            font-size: 1.1rem;
+            transition: background 0.3s ease;
+        }
+        
+        .back-btn:hover {
+            background: #95a5a6;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: #2c3e50;
+            color: white;
+            margin-top: 3rem;
+        }
+        
+        @media (max-width: 768px) {
+            .farm-header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .farm-header p {
+                font-size: 1.2rem;
+            }
+            
+            .farm-banner {
+                height: 250px;
+            }
+            
+            nav a {
+                display: block;
+                margin: 0.5rem auto;
+                width: 80%;
+                max-width: 250px;
+            }
+            
+            .quail-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .market-banner {
+                grid-template-columns: 1fr;
+            }
+            
+            .quail-image-container {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Farm Stand Header with Banner -->
+    <header class="farm-header">
+        <img src="images/SquashPlant.jpg" alt="Squash Plant in Garden" class="farm-banner">
+        <div class="banner-overlay">
+            <h1>Farm Stand</h1>
+            <p>Fresh Local Produce & Homestead Goods from Fairbanks, Alaska</p>
+        </div>
+    </header>
+    
+    <!-- Navigation Menu -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="alaska-textiles.html">Alaskan Textile Art</a>
+        <a href="rabbitry.html">My Rabbitry</a>
+        <a href="farm-stand.html" class="current">Farm Stand</a>
+        <a href="fantasy-ball.html">Fantasy Ball</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    
+    <main>
+        <!-- Quail Section -->
+        <section class="quail-section">
+            <h2>We Have Coturnix Quail!</h2>
+            <p>Fresh quail eggs and future chicks available from our homestead</p>
+            
+            <div class="quail-grid">
+                <!-- Quail Eggs -->
+                <div class="quail-card">
+                    <div class="quail-image-container">
+                        <img src="images/QuailEggs.jpg" alt="Fresh Quail Eggs">
+                    </div>
+                    <div class="quail-info">
+                        <h3>Fresh Quail Eggs</h3>
+                        <p>Nutrient-rich Coturnix quail eggs from our happy, free-range quail. These miniature eggs pack a nutritional punch with rich flavor.</p>
+                        <p><strong>Features:</strong> High in protein, rich in vitamins, beautiful speckled shells</p>
+                        <div class="price-tag">$10/dozen</div>
+                        <p><em>Available seasonally at our farm stand</em></p>
+                    </div>
+                </div>
+                
+                <!-- Quail Chicks -->
+                <div class="quail-card">
+                    <div class="quail-image-container">
+                        <img src="images/Quail1.jpg" alt="Coturnix Quail">
+                    </div>
+                    <div class="quail-info">
+                        <h3>Quail Chicks</h3>
+                        <p>Healthy Coturnix quail chicks coming soon! Perfect for starting your own backyard quail flock for eggs or meat.</p>
+                        <p><strong>Breed:</strong> Coturnix (Japanese) Quail</p>
+                        <p><strong>Benefits:</strong> Quiet, low maintenance, excellent egg layers</p>
+                        <div class="coming-soon-tag">Chicks Coming Soon</div>
+                        <p><em>Check back for availability updates</em></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Sunflower Section -->
+        <section class="sunflower-section">
+            <div class="sunflower-image-container">
+                <img src="images/Sunflower.jpg" alt="Sunflower in Garden">
+            </div>
+        </section>
+        
+        <!-- Market Banner -->
+        <section class="market-banner">
+            <div class="market-image">
+                <img src="images/GreenBeans.jpg" alt="Fresh Green Beans">
+            </div>
+            <div class="market-info">
+                <h3>See You at Second Saturday Markets!</h3>
+                <p>Starting in April 2026, visit our farm stand at the local Second Saturday Markets in Fairbanks. Fresh seasonal produce, quail eggs, and other homestead goods.</p>
+                <p><strong>Location:</strong> Fairbanks local markets</p>
+                <p><strong>Season:</strong> Spring through Fall</p>
+                <div class="season-date">Starting April 2026</div>
+            </div>
+        </section>
+        
+        <!-- Back to Home Button -->
+        <div style="text-align: center; padding: 2rem;">
+            <a href="index.html" class="back-btn">← Back to Home</a>
+        </div>
+    </main>
+    
+    <footer>
+        <p>© 2024 Geneva's Trading Post | Farm Stand in Fairbanks, Alaska</p>
+        <p>Fresh Local Produce & Homestead Goods | Seasonal Availability</p>
+    </footer>
+</body>
+</html>
