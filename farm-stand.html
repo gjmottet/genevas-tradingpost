@@ -119,6 +119,23 @@
             border: 2px solid #e0f7e0;
         }
         
+        .quail-image-container {
+            width: 100%;
+            height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+        
+        .quail-card img {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+        }
+        
         .quail-card h3 {
             color: #27ae60;
             margin-top: 0;
@@ -158,17 +175,17 @@
             margin: 0.5rem 0;
         }
         
-        /* Workshop Announcement - Compact */
-        .workshop-announcement {
+        /* Workshop Section */
+        .workshop-section {
             padding: 3rem 2rem;
             background: white;
-            text-align: center;
         }
         
-        .workshop-announcement h2 {
+        .workshop-section h2 {
             color: #9b59b6;
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 2rem;
         }
         
         .workshop-content {
@@ -176,8 +193,8 @@
             grid-template-columns: 300px 1fr;
             gap: 2rem;
             max-width: 1000px;
-            margin: 2rem auto;
-            align-items: center;
+            margin: 0 auto 3rem;
+            align-items: start;
         }
         
         .workshop-image {
@@ -208,97 +225,32 @@
             margin: 0.8rem 0;
         }
         
-        .grant-note {
-            background: #f4ecf7;
+        .starter-kit {
+            background: #fef9e7;
             padding: 1rem;
             border-radius: 8px;
             margin: 1rem 0;
-            border-left: 4px solid #9b59b6;
-            text-align: left;
+            border-left: 4px solid #f39c12;
         }
         
-        /* Workshop Series */
-        .workshop-series {
-            padding: 3rem 2rem;
-            background: linear-gradient(135deg, #f9f3ff 0%, #f0e6ff 100%);
-        }
-        
-        .workshop-series h2 {
-            color: #8e44ad;
-            text-align: center;
-            font-size: 2rem;
-            margin-bottom: 2rem;
-        }
-        
-        .series-grid {
+        /* Carrot Tasting Workshop */
+        .carrot-workshop {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: 300px 1fr;
             gap: 2rem;
             max-width: 1000px;
-            margin: 0 auto;
+            margin: 0 auto 3rem;
+            align-items: start;
         }
         
-        .series-card {
-            background: white;
-            border-radius: 12px;
-            padding: 1.5rem;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-        
-        .series-card h3 {
-            color: #8e44ad;
-            margin-top: 0;
-            font-size: 1.4rem;
-            border-bottom: 2px solid #d7bde2;
-            padding-bottom: 0.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        /* Carrot Tasting Section */
-        .carrot-section {
-            padding: 3rem 2rem;
-            background: white;
-        }
-        
-        .carrot-section h2 {
-            color: #e67e22;
-            text-align: center;
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        .harvest-images {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            max-width: 800px;
-            margin: 2rem auto;
-        }
-        
-        .harvest-image {
-            text-align: center;
-        }
-        
-        .harvest-image img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-        
-        .carrot-tasting {
-            background: linear-gradient(135deg, #f9f3e9 0%, #fff8e1 100%);
-            padding: 2rem;
-            border-radius: 10px;
-            margin: 2rem auto;
-            max-width: 1000px;
-            border-left: 4px solid #e67e22;
+        .carrot-data {
+            margin-top: 2rem;
         }
         
         .tasting-tables {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-            gap: 2rem;
+            gap: 1.5rem;
             margin: 2rem 0;
         }
         
@@ -308,6 +260,7 @@
             border-radius: 8px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
             overflow-x: auto;
+            border: 1px solid #fdebd0;
         }
         
         .tasting-table h4 {
@@ -320,7 +273,7 @@
         table {
             width: 100%;
             border-collapse: collapse;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
         }
         
         th {
@@ -330,13 +283,11 @@
             border-bottom: 2px solid #e67e22;
             font-weight: bold;
             color: #2c3e50;
-            font-size: 0.8rem;
         }
         
         td {
             padding: 0.5rem;
             border-bottom: 1px solid #e0e0e0;
-            font-size: 0.8rem;
         }
         
         .rank-1 {
@@ -352,13 +303,24 @@
             background: #f4ecf7;
         }
         
-        .seed-bank {
-            background: #e8f6f3;
+        /* Harvest Festival Workshop */
+        .harvest-workshop {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+            align-items: start;
+        }
+        
+        .grant-note {
+            background: #f4ecf7;
             padding: 1.5rem;
             border-radius: 8px;
-            margin: 2rem auto;
-            max-width: 800px;
-            border-left: 4px solid #27ae60;
+            margin: 3rem auto 0;
+            max-width: 1000px;
+            border-left: 4px solid #9b59b6;
+            text-align: center;
         }
         
         /* Market Banner */
@@ -469,19 +431,21 @@
                 max-width: 250px;
             }
             
-            .workshop-content {
+            .workshop-content,
+            .carrot-workshop,
+            .harvest-workshop {
                 grid-template-columns: 1fr;
                 text-align: center;
             }
             
             .workshop-details h3,
-            .workshop-details p {
+            .workshop-details p,
+            .carrot-data h3,
+            .carrot-data p {
                 text-align: center;
             }
             
-            .quail-grid,
-            .series-grid,
-            .harvest-images {
+            .quail-grid {
                 grid-template-columns: 1fr;
                 gap: 1.5rem;
             }
@@ -505,8 +469,8 @@
     <header class="farm-header">
         <img src="images/SquashPlant.jpg" alt="Squash Plant in Garden" class="farm-banner">
         <div class="banner-overlay">
-            <h1>Farm Stand & Workshops</h1>
-            <p>Local Food, Quail Eggs & Sustainable Farming Education in Gustavus</p>
+            <h1>Farm Stand</h1>
+            <p>Local Food, Quail Eggs & Sustainable Farming in Gustavus</p>
         </div>
     </header>
     
@@ -528,14 +492,20 @@
             
             <div class="quail-grid">
                 <div class="quail-card">
+                    <div class="quail-image-container">
+                        <img src="images/QuailEggs.jpg" alt="Fresh Quail Eggs">
+                    </div>
                     <h3>Fresh Quail Eggs</h3>
-                    <p><strong>Available Now:</strong> $6/dozen</p>
+                    <div class="price-tag" style="background: #e74c3c; color: white; padding: 0.6rem 1.5rem; border-radius: 30px; font-size: 1.3rem; font-weight: bold; margin: 0.5rem 0; display: inline-block;">$10/dozen</div>
                     <p>Fertile eggs - perfect for eating or hatching. Some eggs have rare celadon genetics for possible blue egg layers!</p>
                     <p><strong>Hatching:</strong> Eggs in incubator Feb 1 → Hatch Feb 17 → Chicks available Mar 10</p>
                     <span class="availability-tag">Year-Round Availability</span>
                 </div>
                 
                 <div class="quail-card">
+                    <div class="quail-image-container">
+                        <img src="images/Quail1.jpg" alt="Coturnix Quail">
+                    </div>
                     <h3>Quail Chicks & Adults</h3>
                     <div class="pricing-box">
                         <div class="pricing-item">
@@ -561,11 +531,11 @@
             </div>
         </section>
         
-        <!-- Workshop Announcement -->
-        <section class="workshop-announcement">
-            <h2>Announcing: Cultivating Food Sovereignty for Gustavus Workshop Series</h2>
-            <p>Free community workshops at the Gustavus Public Library - Summer 2026</p>
+        <!-- Workshop Section -->
+        <section class="workshop-section">
+            <h2>2026 Workshop Series</h2>
             
+            <!-- Workshop 1: Meat Rabbits -->
             <div class="workshop-content">
                 <div class="workshop-image">
                     <img src="images/BabyRabbits1.jpg" alt="Baby Rabbits from Gustavus" width="300">
@@ -573,166 +543,144 @@
                 <div class="workshop-details">
                     <h3>Meat Rabbit Husbandry & Cage Building</h3>
                     <p><strong>August 2026</strong> - Learn rabbit care from a Master Gardener with 20 years experience. Hands-on handling and collaborative cage building workshop.</p>
-                    <p><strong>Bonus:</strong> First 6 registrants receive a Rabbit Starter Kit with essential supplies!</p>
-                    <div class="grant-note">
-                        <p><strong>Community Support:</strong> This workshop series receives financial support from the RurAL CAP Foundation, with additional support going to the Harvest Festival Rabbit & Poultry Show.</p>
+                    <div class="starter-kit">
+                        <strong>Bonus:</strong> First 6 registrants receive a Rabbit Starter Kit with essential supplies!
                     </div>
                 </div>
             </div>
-        </section>
-        
-        <!-- Workshop Series -->
-        <section class="workshop-series">
-            <h2>2026 Workshop Series</h2>
-            <div class="series-grid">
-                <div class="series-card">
-                    <h3>1. Meat Rabbit Workshop</h3>
-                    <p><strong>August 2026</strong></p>
-                    <p>45-minute talk on rabbit husbandry followed by hands-on handling and cage building. Learn skills to raise your own meat rabbits.</p>
-                </div>
-                
-                <div class="series-card">
-                    <h3>2. Carrot Tasting & Seed Saving</h3>
-                    <p><strong>September 2026</strong></p>
-                    <p>Third annual community carrot tasting featuring 14 varieties. Learn seed saving and help select varieties for the free library seed bank.</p>
-                </div>
-                
-                <div class="series-card">
-                    <h3>3. Harvest Festival Show</h3>
-                    <p><strong>September 2026</strong></p>
-                    <p>Rabbit & Poultry Show at the Gustavus Harvest Festival. Educational judged show with ribbons and family-friendly activities.</p>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Carrot Tasting & Harvest Festival -->
-        <section class="carrot-section">
-            <h2>Community Carrot Tasting Results</h2>
-            <p>Annual evaluations help select the best varieties for our Gustavus growing conditions</p>
             
-            <div class="harvest-images">
-                <div class="harvest-image">
-                    <img src="images/HarvestFestCarrots2024.jpg" alt="Carrots at 2024 Harvest Festival">
-                    <p>2024 Harvest Festival Carrots</p>
+            <!-- Workshop 2: Carrot Tasting -->
+            <div class="carrot-workshop">
+                <div class="workshop-image">
+                    <img src="images/HarvestFestCarrots2024.jpg" alt="Carrots at Harvest Festival">
                 </div>
-                <div class="harvest-image">
-                    <img src="images/WinningBasketHarvestFestival2025.jpg" alt="Winning Basket at 2025 Harvest Festival">
-                    <p>Winning Basket - 2025 Harvest Festival</p>
-                </div>
-            </div>
-            
-            <div class="carrot-tasting">
-                <div class="tasting-tables">
-                    <div class="tasting-table">
-                        <h4>2024 Carrot Tasting Results</h4>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Rank</th>
-                                    <th>Variety</th>
-                                    <th>Score</th>
-                                    <th>Norm</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="rank-1">
-                                    <td>1</td>
-                                    <td>Royal Chantenay</td>
-                                    <td>41</td>
-                                    <td>4.10</td>
-                                </tr>
-                                <tr class="rank-2">
-                                    <td>2</td>
-                                    <td>Bolero Nantes</td>
-                                    <td>31</td>
-                                    <td>3.10</td>
-                                </tr>
-                                <tr class="rank-3">
-                                    <td>3</td>
-                                    <td>Bambino</td>
-                                    <td>31</td>
-                                    <td>3.10</td>
-                                </tr>
-                                <tr>
-                                    <td>4</td>
-                                    <td>Scarlet Nantes</td>
-                                    <td>33</td>
-                                    <td>3.00</td>
-                                </tr>
-                                <tr>
-                                    <td>5</td>
-                                    <td>Yellow</td>
-                                    <td>30</td>
-                                    <td>3.00</td>
-                                </tr>
-                                <tr>
-                                    <td>6</td>
-                                    <td>Imperator 58</td>
-                                    <td>29</td>
-                                    <td>2.90</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                <div class="carrot-data">
+                    <h3>Carrot Tasting 2026</h3>
+                    <p><strong>September 2026</strong> - Third annual community carrot tasting featuring 14 varieties from Johnny's Selected Seeds. Help select top performers for the free library seed bank.</p>
                     
-                    <div class="tasting-table">
-                        <h4>2025 Carrot Tasting Results</h4>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Rank</th>
-                                    <th>Variety</th>
-                                    <th>Score</th>
-                                    <th>Norm</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="rank-1">
-                                    <td>1</td>
-                                    <td>Royal Chantenay</td>
-                                    <td>94</td>
-                                    <td>3.92</td>
-                                </tr>
-                                <tr class="rank-2">
-                                    <td>2</td>
-                                    <td>St. Valery</td>
-                                    <td>95</td>
-                                    <td>3.80</td>
-                                </tr>
-                                <tr class="rank-3">
-                                    <td>3</td>
-                                    <td>Purple Dragon</td>
-                                    <td>82</td>
-                                    <td>3.57</td>
-                                </tr>
-                                <tr>
-                                    <td>4</td>
-                                    <td>Gniff</td>
-                                    <td>84</td>
-                                    <td>3.50</td>
-                                </tr>
-                                <tr>
-                                    <td>5</td>
-                                    <td>Little Fingers</td>
-                                    <td>87</td>
-                                    <td>3.48</td>
-                                </tr>
-                                <tr>
-                                    <td>6</td>
-                                    <td>Bolero Nantes</td>
-                                    <td>79</td>
-                                    <td>3.29</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    <div class="tasting-tables">
+                        <div class="tasting-table">
+                            <h4>2024 Carrot Tasting Results</h4>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Rank</th>
+                                        <th>Variety</th>
+                                        <th>Score</th>
+                                        <th>Norm</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="rank-1">
+                                        <td>1</td>
+                                        <td>Royal Chantenay</td>
+                                        <td>41</td>
+                                        <td>4.10</td>
+                                    </tr>
+                                    <tr class="rank-2">
+                                        <td>2</td>
+                                        <td>Bolero Nantes</td>
+                                        <td>31</td>
+                                        <td>3.10</td>
+                                    </tr>
+                                    <tr class="rank-3">
+                                        <td>3</td>
+                                        <td>Bambino</td>
+                                        <td>31</td>
+                                        <td>3.10</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>Scarlet Nantes</td>
+                                        <td>33</td>
+                                        <td>3.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>Yellow</td>
+                                        <td>30</td>
+                                        <td>3.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>Imperator 58</td>
+                                        <td>29</td>
+                                        <td>2.90</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <div class="tasting-table">
+                            <h4>2025 Carrot Tasting Results</h4>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Rank</th>
+                                        <th>Variety</th>
+                                        <th>Score</th>
+                                        <th>Norm</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="rank-1">
+                                        <td>1</td>
+                                        <td>Royal Chantenay</td>
+                                        <td>94</td>
+                                        <td>3.92</td>
+                                    </tr>
+                                    <tr class="rank-2">
+                                        <td>2</td>
+                                        <td>St. Valery</td>
+                                        <td>95</td>
+                                        <td>3.80</td>
+                                    </tr>
+                                    <tr class="rank-3">
+                                        <td>3</td>
+                                        <td>Purple Dragon</td>
+                                        <td>82</td>
+                                        <td>3.57</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>Gniff</td>
+                                        <td>84</td>
+                                        <td>3.50</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>Little Fingers</td>
+                                        <td>87</td>
+                                        <td>3.48</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>Bolero Nantes</td>
+                                        <td>79</td>
+                                        <td>3.29</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
-                
-                <div class="seed-bank">
-                    <h3>Gustavus Library Seed Bank</h3>
-                    <p><strong>2026 Additions:</strong> Bolero and Purple Dragon carrot seeds (top performers from past years) will be added to the free community seed bank following the 2026 workshop.</p>
-                    <p><strong>Location:</strong> Gustavus Public Library - Free seeds for all community members</p>
+            </div>
+            
+            <!-- Workshop 3: Harvest Festival -->
+            <div class="harvest-workshop">
+                <div class="workshop-image">
+                    <img src="images/WinningBasketHarvestFestival2025.jpg" alt="Winning Basket at Harvest Festival">
                 </div>
+                <div class="workshop-details">
+                    <h3>Rabbit & Poultry Show joins the Harvest Festival 2026</h3>
+                    <p><strong>September 2026</strong> - Educational judged show with ribbons and family-friendly activities at the Gustavus Harvest Festival. Featuring rabbits, poultry, and community celebration of local livestock.</p>
+                    <p>Part of the free annual Gustavus Harvest Festival with community participation and educational displays.</p>
+                </div>
+            </div>
+            
+            <!-- Grant Note at Bottom -->
+            <div class="grant-note">
+                <p><strong>Community Support:</strong> This workshop series receives financial support from the RurAL CAP Foundation, with additional support going to the Harvest Festival Rabbit & Poultry Show.</p>
             </div>
         </section>
         
@@ -757,7 +705,7 @@
     </main>
     
     <footer>
-        <p>© 2024 Geneva's Trading Post | Farm Stand & Workshops in Gustavus, Alaska</p>
+        <p>© 2024 Geneva's Trading Post | Farm Stand in Gustavus, Alaska</p>
         <p>Supporting local food sovereignty through education and community resources</p>
     </footer>
 </body>
