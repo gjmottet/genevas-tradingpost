@@ -268,7 +268,7 @@
             border-left: 4px solid #f39c12;
         }
         
-        /* Carrot Tasting Workshop */
+        /* Carrot Tasting Workshop - UPDATED */
         .carrot-workshop {
             display: grid;
             grid-template-columns: 300px 1fr;
@@ -296,23 +296,36 @@
         
         .carrot-charts {
             margin-top: 2rem;
+            grid-column: 1 / -1; /* Makes it span full width */
+            width: 100%;
         }
         
-        /* FIXED: Side-by-side tables styling */
+        /* NEW: Full-width charts container */
+        .charts-full-width {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border: 2px solid #fdebd0;
+            margin-top: 1rem;
+            width: 100%;
+        }
+        
+        /* Side-by-side tables styling */
         .tasting-tables {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 1.5rem;
+            gap: 2rem;
             margin: 1.5rem 0;
         }
         
         .tasting-table {
-            background: white;
+            background: #f9f9f9;
             padding: 1.5rem;
             border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
             overflow-x: auto;
-            border: 1px solid #fdebd0;
+            border: 1px solid #e0e0e0;
             max-height: 500px;
             overflow-y: auto;
             width: 100%;
@@ -326,10 +339,10 @@
             font-size: 1.2rem;
             position: sticky;
             top: 0;
-            background: white;
+            background: #f9f9f9;
             z-index: 10;
             padding: 10px;
-            border-bottom: 2px solid #fdebd0;
+            border-bottom: 2px solid #e0e0e0;
         }
         
         table {
@@ -339,7 +352,7 @@
         }
         
         th {
-            background: #f8f9fa;
+            background: #f1f1f1;
             padding: 0.6rem;
             text-align: left;
             border-bottom: 2px solid #e67e22;
@@ -393,7 +406,7 @@
             text-align: center;
         }
         
-        /* Market Banner - UPDATED with larger image */
+        /* Market Banner */
         .market-banner {
             display: grid;
             grid-template-columns: 1fr 2fr;
@@ -642,7 +655,7 @@
                 </div>
             </div>
             
-            <!-- Workshop 2: Carrot Tasting - UPDATED WITH FULL DATA -->
+            <!-- Workshop 2: Carrot Tasting - UPDATED WITH FULL WIDTH CHARTS -->
             <div class="carrot-workshop">
                 <div class="workshop-image">
                     <img src="images/HarvestFestCarrots2024.jpg" alt="Carrots at Harvest Festival">
@@ -655,8 +668,11 @@
                     <div class="seed-bank-note">
                         <strong>Seed Bank Additions:</strong> Bolero and Purple Dragon seeds will be available at the free Gustavus Library Seed Bank.
                     </div>
-                    
-                    <div class="carrot-charts">
+                </div>
+                
+                <!-- FULL WIDTH CHARTS CONTAINER -->
+                <div class="carrot-charts">
+                    <div class="charts-full-width">
                         <div class="tasting-tables">
                             <!-- 2025 Results Table - FULL DATA -->
                             <div class="tasting-table">
@@ -740,7 +756,7 @@
             </div>
         </section>
         
-        <!-- Market Banner - UPDATED with larger image -->
+        <!-- Market Banner -->
         <section class="market-banner">
             <div class="market-image">
                 <img src="images/GreenBeans.jpg" alt="Fresh Green Beans from Gustavus">
