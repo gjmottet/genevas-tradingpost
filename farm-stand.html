@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Farm Stand - Geneva's Trading Post</title>
     <meta name="description" content="Geneva's Trading Post: Alaskan fiber art, rabbitry, and farm stand in Gustavus & Fairbanks. Hand-knit wildlife potholders, Champagne d'Argent rabbits, local produce.">
-<meta name="keywords" content="Alaska, Gustavus, Fairbanks, knitting, fiber art, rabbitry, Champagne d'Argent, Silver Fox, farm stand, quail eggs, potholders, handmade, local produce">
-<meta name="author" content="Geneva's Trading Post">
+    <meta name="keywords" content="Alaska, Gustavus, Fairbanks, knitting, fiber art, rabbitry, Champagne d'Argent, Silver Fox, farm stand, quail eggs, potholders, handmade, local produce">
+    <meta name="author" content="Geneva's Trading Post">
     <link rel="stylesheet" href="styles.css">
     <style>
         /* Farm Stand specific styles */
@@ -298,9 +298,10 @@
             margin-top: 2rem;
         }
         
+        /* UPDATED: Side-by-side tables styling */
         .tasting-tables {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
             gap: 1.5rem;
             margin: 1.5rem 0;
         }
@@ -312,6 +313,8 @@
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
             overflow-x: auto;
             border: 1px solid #fdebd0;
+            max-height: 500px;
+            overflow-y: auto;
         }
         
         .tasting-table h4 {
@@ -320,6 +323,12 @@
             margin-top: 0;
             margin-bottom: 1rem;
             font-size: 1.2rem;
+            position: sticky;
+            top: 0;
+            background: white;
+            z-index: 10;
+            padding: 10px;
+            border-bottom: 2px solid #fdebd0;
         }
         
         table {
@@ -335,6 +344,9 @@
             border-bottom: 2px solid #e67e22;
             font-weight: bold;
             color: #2c3e50;
+            position: sticky;
+            top: 50px;
+            z-index: 10;
         }
         
         td {
@@ -380,7 +392,7 @@
             text-align: center;
         }
         
-        /* Market Banner */
+        /* Market Banner - UPDATED with larger image */
         .market-banner {
             display: grid;
             grid-template-columns: 1fr 2fr;
@@ -397,16 +409,15 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 2rem;
+            padding: 1rem;
             background: rgba(255,255,255,0.1);
         }
         
         .market-image img {
             width: 100%;
-            height: auto;
-            max-height: 300px;
-            border-radius: 10px;
+            height: 100%;
             object-fit: cover;
+            border-radius: 10px;
         }
         
         .market-info {
@@ -467,6 +478,16 @@
             margin-top: 3rem;
         }
         
+        @media (max-width: 1100px) {
+            .tasting-tables {
+                grid-template-columns: 1fr;
+            }
+            
+            .tasting-table {
+                min-width: 300px;
+            }
+        }
+        
         @media (max-width: 768px) {
             .farm-header h1 {
                 font-size: 2.5rem;
@@ -510,12 +531,20 @@
                 grid-template-columns: 1fr;
             }
             
+            .market-image {
+                min-height: 250px;
+            }
+            
             .tasting-tables {
                 grid-template-columns: 1fr;
             }
             
             .tasting-table {
                 overflow-x: scroll;
+            }
+            
+            .tasting-table table {
+                min-width: 600px;
             }
         }
     </style>
@@ -612,7 +641,7 @@
                 </div>
             </div>
             
-            <!-- Workshop 2: Carrot Tasting -->
+            <!-- Workshop 2: Carrot Tasting - UPDATED WITH FULL DATA -->
             <div class="carrot-workshop">
                 <div class="workshop-image">
                     <img src="images/HarvestFestCarrots2024.jpg" alt="Carrots at Harvest Festival">
@@ -620,7 +649,7 @@
                 <div class="carrot-data">
                     <h3>Carrot Tasting</h3>
                     <span class="workshop-date">September 2026</span>
-                    <p>Third annual community carrot tasting featuring 14 varieties from Johnny's Selected Seeds.</p>
+                    <p>Third annual community carrot tasting. Past tastings: 2024 (6 varieties) → 2025 (17 varieties) → 2026 (14 varieties planned).</p>
                     
                     <div class="seed-bank-note">
                         <strong>Seed Bank Additions:</strong> Bolero and Purple Dragon seeds will be available at the free Gustavus Library Seed Bank.
@@ -628,106 +657,61 @@
                     
                     <div class="carrot-charts">
                         <div class="tasting-tables">
+                            <!-- 2025 Results Table - FULL DATA -->
                             <div class="tasting-table">
-                                <h4>2024 Results</h4>
+                                <h4>2025 Results - 17 Varieties</h4>
                                 <table>
                                     <thead>
                                         <tr>
                                             <th>Rank</th>
                                             <th>Variety</th>
+                                            <th>Total</th>
                                             <th>Score</th>
                                             <th>Norm</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr class="rank-1">
-                                            <td>1</td>
-                                            <td>Royal Chantenay</td>
-                                            <td>41</td>
-                                            <td>4.10</td>
-                                        </tr>
-                                        <tr class="rank-2">
-                                            <td>2</td>
-                                            <td>Bolero Nantes</td>
-                                            <td>31</td>
-                                            <td>3.10</td>
-                                        </tr>
-                                        <tr class="rank-3">
-                                            <td>3</td>
-                                            <td>Bambino</td>
-                                            <td>31</td>
-                                            <td>3.10</td>
-                                        </tr>
-                                        <tr>
-                                            <td>4</td>
-                                            <td>Scarlet Nantes</td>
-                                            <td>33</td>
-                                            <td>3.00</td>
-                                        </tr>
-                                        <tr>
-                                            <td>5</td>
-                                            <td>Yellow</td>
-                                            <td>30</td>
-                                            <td>3.00</td>
-                                        </tr>
-                                        <tr>
-                                            <td>6</td>
-                                            <td>Imperator 58</td>
-                                            <td>29</td>
-                                            <td>2.90</td>
-                                        </tr>
+                                        <tr class="rank-1"><td>1</td><td>Royal Chantenay</td><td>24</td><td>94</td><td>3.92</td></tr>
+                                        <tr class="rank-2"><td>2</td><td>St. Valery</td><td>25</td><td>95</td><td>3.80</td></tr>
+                                        <tr class="rank-3"><td>3</td><td>Purple Dragon</td><td>23</td><td>82</td><td>3.57</td></tr>
+                                        <tr><td>4</td><td>Gniff</td><td>24</td><td>84</td><td>3.50</td></tr>
+                                        <tr><td>5</td><td>Little Fingers</td><td>25</td><td>87</td><td>3.48</td></tr>
+                                        <tr><td>6</td><td>Bolero Nantes</td><td>24</td><td>79</td><td>3.29</td></tr>
+                                        <tr><td>7</td><td>Oxheart</td><td>26</td><td>79</td><td>3.04</td></tr>
+                                        <tr><td>8</td><td>Giant Red</td><td>25</td><td>74</td><td>2.96</td></tr>
+                                        <tr><td>9</td><td>Chantenay Red Core</td><td>24</td><td>75</td><td>3.13</td></tr>
+                                        <tr><td>10</td><td>Bambino</td><td>22</td><td>60</td><td>2.73</td></tr>
+                                        <tr><td>11</td><td>Imperator 58</td><td>25</td><td>62</td><td>2.48</td></tr>
+                                        <tr><td>12</td><td>Seedra Scarlet Nantes</td><td>24</td><td>56</td><td>2.33</td></tr>
+                                        <tr><td>13</td><td>Scarlet Nantes</td><td>26</td><td>52</td><td>2.00</td></tr>
+                                        <tr><td>14</td><td>Lunar White</td><td>25</td><td>48</td><td>1.92</td></tr>
+                                        <tr><td>15</td><td>Solar Yellow</td><td>22</td><td>41</td><td>1.86</td></tr>
+                                        <tr><td>16</td><td>Black Nebula</td><td>26</td><td>48</td><td>1.85</td></tr>
+                                        <tr><td>17</td><td>Pusa Asita Black</td><td>24</td><td>36</td><td>1.50</td></tr>
                                     </tbody>
                                 </table>
                             </div>
                             
+                            <!-- 2024 Results Table - FULL DATA -->
                             <div class="tasting-table">
-                                <h4>2025 Results</h4>
+                                <h4>2024 Results - 6 Varieties</h4>
                                 <table>
                                     <thead>
                                         <tr>
                                             <th>Rank</th>
                                             <th>Variety</th>
+                                            <th>Total</th>
                                             <th>Score</th>
                                             <th>Norm</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr class="rank-1">
-                                            <td>1</td>
-                                            <td>Royal Chantenay</td>
-                                            <td>94</td>
-                                            <td>3.92</td>
-                                        </tr>
-                                        <tr class="rank-2">
-                                            <td>2</td>
-                                            <td>St. Valery</td>
-                                            <td>95</td>
-                                            <td>3.80</td>
-                                        </tr>
-                                        <tr class="rank-3">
-                                            <td>3</td>
-                                            <td>Purple Dragon</td>
-                                            <td>82</td>
-                                            <td>3.57</td>
-                                        </tr>
-                                        <tr>
-                                            <td>4</td>
-                                            <td>Gniff</td>
-                                            <td>84</td>
-                                            <td>3.50</td>
-                                        </tr>
-                                        <tr>
-                                            <td>5</td>
-                                            <td>Little Fingers</td>
-                                            <td>87</td>
-                                            <td>3.48</td>
-                                        </tr>
-                                        <tr>
-                                            <td>6</td>
-                                            <td>Bolero Nantes</td>
-                                            <td>79</td>
-                                            <td>3.29</td>
-                                        </tr>
+                                        <tr class="rank-1"><td>1</td><td>Royal Chantenay</td><td>10</td><td>41</td><td>4.10</td></tr>
+                                        <tr class="rank-2"><td>2</td><td>Bolero Nantes</td><td>10</td><td>31</td><td>3.10</td></tr>
+                                        <tr class="rank-3"><td>3</td><td>Bambino</td><td>10</td><td>31</td><td>3.10</td></tr>
+                                        <tr><td>4</td><td>Scarlet Nantes</td><td>11</td><td>33</td><td>3.00</td></tr>
+                                        <tr><td>5</td><td>Yellow</td><td>10</td><td>30</td><td>3.00</td></tr>
+                                        <tr><td>6</td><td>Imperator 58</td><td>10</td><td>29</td><td>2.90</td></tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -755,7 +739,7 @@
             </div>
         </section>
         
-        <!-- Market Banner -->
+        <!-- Market Banner - UPDATED with larger image -->
         <section class="market-banner">
             <div class="market-image">
                 <img src="images/GreenBeans.jpg" alt="Fresh Green Beans from Gustavus">
@@ -777,11 +761,6 @@
     </main>
     
     <footer>
-        <p>© 2024 Geneva's Trading Post | Farm Stand in Gustavus, Alaska</p>
-        <p>Supporting local food sovereignty through education and community resources</p>
-    </footer>
-</body>
-</html>
         <p>© 2024 Geneva's Trading Post | Farm Stand in Gustavus, Alaska</p>
         <p>Supporting local food sovereignty through education and community resources</p>
     </footer>
