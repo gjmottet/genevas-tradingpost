@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -377,6 +377,37 @@
             object-fit: contain;
         }
         
+        /* Special hover effect for embroidered flower barrett */
+        .flower-barrett-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .flower-barrett-front, .flower-barrett-back {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.5s ease;
+        }
+        
+        .flower-barrett-back {
+            opacity: 0;
+        }
+        
+        .flower-barrett-container:hover .flower-barrett-front {
+            opacity: 0;
+        }
+        
+        .flower-barrett-container:hover .flower-barrett-back {
+            opacity: 1;
+        }
+        
         .fantasy-info {
             padding: 2rem;
             background: linear-gradient(to bottom, white, #fcf9ff);
@@ -424,6 +455,17 @@
         .costume-tag {
             background: #e67e22;
             color: white;
+        }
+        
+        .price-tag {
+            display: inline-block;
+            background: #27ae60;
+            color: white;
+            padding: 0.5rem 1.2rem;
+            border-radius: 20px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin: 0.5rem 0;
         }
         
         /* Gallery Section */
@@ -591,40 +633,40 @@
             </div>
             
             <div class="seasonal-grid">
-                <!-- Folk Heart Baskets -->
+                <!-- Folk Hearts -->
                 <div class="seasonal-card">
                     <div class="seasonal-image">
-                        <img src="images/FolkHeartBasket.jpg" alt="Folk Heart Baskets">
+                        <img src="images/FolkHeartBasket.jpg" alt="Folk Hearts">
                     </div>
                     <div class="seasonal-info">
-                        <h3>Folk Heart Baskets</h3>
+                        <h3>Folk Hearts</h3>
                         <div class="seasonal-tags">
                             <span class="valentine-tag">Valentine's Special</span>
                         </div>
-                        <p>Charming folk art heart baskets, perfect for Valentine's Day gifts or home decorations. Made with natural fibers and traditional patterns.</p>
+                        <p>Charming folk art hearts, perfect for Valentine's Day gifts or home decorations. Made with natural fibers and traditional patterns.</p>
                         <div class="embroidery-offer">
                             ✨ FREE embroidery of initials or dates!
                         </div>
                         <p><strong>Price:</strong> $6 each | <strong>Special:</strong> 4 for $20</p>
-                        <p><em>Order by February 10th for Valentine's delivery!</em></p>
+                        <p><em>Order by February 13th for Valentine's delivery!</em></p>
                     </div>
                 </div>
                 
-                <!-- Yellow Bear with Scarf -->
+                <!-- Hand-Knit Teddy Bears -->
                 <div class="seasonal-card">
                     <div class="seasonal-image">
-                        <img src="images/YellowBearWithScarf.jpg" alt="Yellow Bear with Scarf">
+                        <img src="images/YellowBearWithScarf.jpg" alt="Hand-Knit Teddy Bear">
                     </div>
                     <div class="seasonal-info">
-                        <h3>Yellow Bear with Scarf</h3>
+                        <h3>Hand-Knit Teddy Bears</h3>
                         <div class="seasonal-tags">
                             <span class="valentine-tag">Valentine's Gift</span>
                         </div>
-                        <p>Adorable hand-knit yellow bear wearing a cozy scarf. A perfect cuddly companion for Valentine's Day or any special occasion.</p>
+                        <p>Adorable hand-knit teddy bears, each with unique details like scarves, bows, or special outfits. Perfect cuddly companions for Valentine's Day or any occasion.</p>
                         <div class="embroidery-offer">
-                            ✨ FREE embroidery available!
+                            ✨ FREE embroidery available! Choose a bear and I'll add the details you want.
                         </div>
-                        <p><strong>Features:</strong> Soft natural fibers, detailed scarf, embroidered face</p>
+                        <p><strong>Features:</strong> Soft natural fibers, detailed accessories, embroidered faces</p>
                         <p><em>Makes a heartfelt personalized gift</em></p>
                     </div>
                 </div>
@@ -633,32 +675,39 @@
         
         <!-- Science Art Section -->
         <section class="science-section">
-            <h2>Mathematical Art Potholders</h2>
+            <h2>A Dynamics Yarn: Mathematical Potholders</h2>
             <div class="science-content">
                 <div class="science-image-container">
-                    <img src="images/MathPots.jpg" alt="Mathematical Potholders: Fixed Point, Limit Cycle, Deterministic Chaos">
+                    <img src="images/MathPots.jpg" alt="Mathematical Potholders: The Ember, The Proof, The BZ Reaction">
                 </div>
                 <div class="science-text">
-                    <p><strong>Where Science Meets Stitchcraft</strong></p>
-                    <p>Created for the University of Alaska Fairbanks Library's "Science in Art" exhibition, these potholders visualize mathematical concepts through textile art.</p>
+                    <p><strong>Featured at the Keith B. Mather Library's First Friday Art Show</strong></p>
+                    <p>This set of three hand-knit potholders translates the abstract beauty of nonlinear dynamics into tactile form. Created from natural fibers with intricate embroidery.</p>
                     
                     <div>
-                        <span class="science-tag">Fixed Point</span>
-                        <span class="science-tag">Limit Cycle</span>
-                        <span class="science-tag">Deterministic Chaos</span>
+                        <span class="science-tag">The Ember: Stable Attractor</span>
+                        <span class="science-tag">The Proof: Limit Cycle</span>
+                        <span class="science-tag">The BZ Reaction: Deterministic Chaos</span>
                     </div>
                     
-                    <p>Perfect for math enthusiasts, professors, science fans, or unique home decor. These pieces bridge academic concepts with everyday functional art.</p>
+                    <p><strong>Artist Statement:</strong> "These functional potholders celebrate the patterns that underpin reality. 'The Ember' depicts a stable attractor, 'The Proof' a rhythmic limit cycle, and 'The Belousov-Zhabotinsky Reaction' the beauty of deterministic chaos."</p>
                     
-                    <p><strong>Also popular at university events like PopCon Fairbanks!</strong></p>
+                    <p><strong>Set Price:</strong> $320</p>
+                    <p><em>Exhibited at the Geophysical Institute's Keith B. Mather Library First Friday events in November/December</em></p>
                 </div>
             </div>
         </section>
         
         <!-- Event Calendar -->
         <section class="events-section">
-            <h2>Upcoming Fantasy Events</h2>
+            <h2>Upcoming Events & Exhibitions</h2>
             <div class="event-calendar">
+                <div class="event-card">
+                    <h3>First Friday Art Show</h3>
+                    <div class="event-date">Nov/Dec 2026</div>
+                    <p>Keith B. Mather Library at the Geophysical Institute, UAF. Featuring scientific and mathematical art creations.</p>
+                </div>
+                
                 <div class="event-card">
                     <h3>Persephone's Lair</h3>
                     <div class="event-date">Fall 2027</div>
@@ -667,14 +716,8 @@
                 
                 <div class="event-card">
                     <h3>PopCon Fairbanks</h3>
-                    <div class="event-date">November 2027</div>
-                    <p>University gaming & pop culture convention. Perfect venue for dice bags, fantasy accessories, and science art.</p>
-                </div>
-                
-                <div class="event-card">
-                    <h3>Custom Commissions</h3>
-                    <div class="event-date">Year-Round</div>
-                    <p>Planning costumes or event pieces? Contact me for custom fantasy, science, or seasonal creations.</p>
+                    <div class="event-date">November 2026</div>
+                    <p>University gaming & pop culture convention. Perfect venue for dice bags, fantasy accessories, and unique creations.</p>
                 </div>
             </div>
         </section>
@@ -700,8 +743,8 @@
                         </div>
                         <p>Hand-sewn dice bags perfect for your gaming sessions! Each bag includes a matching set of dice.</p>
                         <p><strong>Includes:</strong> Hand-sewn bag + matching dice set</p>
-                        <p><strong>Price:</strong> $25 per set</p>
-                        <p><em>Popular at PopCon and Fantasy Ball events!</em></p>
+                        <div class="price-tag">$25 per set</div>
+                        <p><em>Popular at PopCon and gaming events!</em></p>
                     </div>
                 </div>
                 
@@ -722,19 +765,26 @@
                     </div>
                 </div>
                 
-                <!-- Beaded Flower Barrett -->
+                <!-- Red Embroidered Flower Barrett -->
                 <div class="fantasy-card">
                     <div class="fantasy-image">
-                        <img src="images/FlowerFrountSquare.jpg" alt="Beaded Flower Barrett">
+                        <div class="flower-barrett-container">
+                            <div class="flower-barrett-front">
+                                <img src="images/FlowerFrountSquare.jpg" alt="Red Embroidered Flower Barrett Front">
+                            </div>
+                            <div class="flower-barrett-back">
+                                <img src="images/FlowerBackSquare.jpg" alt="Red Embroidered Flower Barrett Back">
+                            </div>
+                        </div>
                     </div>
                     <div class="fantasy-info">
-                        <h3>Beaded Flower Barrett</h3>
+                        <h3>Red Embroidered Flower Barrett</h3>
                         <div class="fantasy-tags">
                             <span class="fantasy-tag costume-tag">Costume Accessory</span>
-                            <span class="fantasy-tag costume-tag">Beaded</span>
+                            <span class="fantasy-tag costume-tag">Embroidered</span>
                         </div>
-                        <p>Intricately beaded flower barrett featuring detailed floral designs. Perfect for fantasy costumes or special occasions.</p>
-                        <p><strong>Features:</strong> Secure clip, glass seed beads, comfortable wear</p>
+                        <p>Elegant red flower barrett featuring intricate embroidery. Hover over the image to see both front and back views!</p>
+                        <p><strong>Features:</strong> Secure clip, detailed floral embroidery, comfortable wear</p>
                         <p><strong>Perfect for:</strong> Persephone's Lair costumes, fantasy events, or elegant everyday wear</p>
                     </div>
                 </div>
@@ -752,7 +802,8 @@
                         </div>
                         <p>Adorable dust sprites inspired by Studio Ghibli films. These fluffy black creatures with big eyes are perfect for animation fans.</p>
                         <p><strong>Features:</strong> Fluffy texture, embroidered eyes, whimsical design</p>
-                        <p><strong>Perfect for:</strong> Ghibli fans, cute decorations, or magical gifts</p>
+                        <div class="price-tag">$2 each</div>
+                        <p><em>Perfect for Ghibli fans, cute decorations, or magical gifts</em></p>
                     </div>
                 </div>
             </div>
@@ -790,14 +841,14 @@
         
         <!-- Custom Commissions -->
         <section class="custom-section">
-            <h3>Custom Fantasy & Science Commissions</h3>
+            <h3>Custom Commissions & Quick Turnaround</h3>
             <p>Looking for something specific for an event, gift, or collection? I accept custom commissions for:</p>
             <p><strong>• Fantasy themes</strong> (Persephone's Lair, dragons, mythology)<br>
                <strong>• Science/Math concepts</strong> (like the mathematical potholders)<br>
                <strong>• Seasonal specialties</strong> (Valentine's, holidays)<br>
                <strong>• Gaming accessories</strong> (custom dice bags, character-themed items)</p>
-            <p><strong>Turnaround:</strong> Typically 2-4 weeks (rush options available)<br>
-               <strong>Materials:</strong> Natural fibers with detailed embroidery and embellishments</p>
+            <p><strong>Fast Turnaround:</strong> Most pieces completed in less than a week. Embroidery at shows often takes less than an hour for names or dates!</p>
+            <p><strong>Materials:</strong> Natural fibers with detailed embroidery and embellishments</p>
         </section>
         
         <!-- Contact Links -->
