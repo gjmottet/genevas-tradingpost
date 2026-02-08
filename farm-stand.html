@@ -80,119 +80,10 @@
             background: #2ecc71;
         }
         
-        .workshop-banner {
-            background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
-            color: white;
-            padding: 3rem 2rem;
-            text-align: center;
-            margin: 0;
-        }
-        
-        .workshop-banner h2 {
-            font-size: 2.5rem;
-            margin-top: 0;
-            margin-bottom: 1rem;
-            color: white;
-        }
-        
-        .workshop-banner p {
-            font-size: 1.4rem;
-            line-height: 1.7;
-            max-width: 1000px;
-            margin: 0 auto 1.5rem;
-        }
-        
-        .grant-note {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 1.5rem;
-            border-radius: 10px;
-            margin: 2rem auto;
-            max-width: 900px;
-            border-left: 4px solid #f1c40f;
-        }
-        
-        .workshop-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 2rem auto;
-        }
-        
-        .workshop-card {
-            background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-            transition: transform 0.3s ease;
-        }
-        
-        .workshop-card:hover {
-            transform: translateY(-8px);
-        }
-        
-        .workshop-image {
-            width: 100%;
-            height: 200px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: rgba(255, 255, 255, 0.9);
-            padding: 1.5rem;
-        }
-        
-        .workshop-card img {
-            max-width: 100%;
-            max-height: 100%;
-            width: auto;
-            height: auto;
-            object-fit: contain;
-        }
-        
-        .workshop-info {
-            padding: 2rem;
-            background: linear-gradient(to bottom, white, #f9f9f9);
-        }
-        
-        .workshop-info h3 {
-            margin-top: 0;
-            color: #9b59b6;
-            font-size: 1.6rem;
-            border-bottom: 2px solid #d7bde2;
-            padding-bottom: 0.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        .workshop-info p {
-            color: #34495e;
-            font-size: 1.1rem;
-            line-height: 1.6;
-            margin: 0.8rem 0;
-        }
-        
-        .starter-kit {
-            background: #fef9e7;
-            padding: 1rem;
-            border-radius: 8px;
-            margin: 1rem 0;
-            border-left: 3px solid #f1c40f;
-            color: #34495e;
-        }
-        
-        .workshop-date {
-            display: inline-block;
-            background: #9b59b6;
-            color: white;
-            padding: 0.5rem 1.2rem;
-            border-radius: 20px;
-            font-size: 1rem;
-            font-weight: bold;
-            margin: 0.5rem 0;
-        }
-        
+        /* Quail Section - Compact */
         .quail-section {
             text-align: center;
-            padding: 4rem 2rem;
+            padding: 3rem 2rem;
             background: linear-gradient(135deg, #f9fff9 0%, #f0fff0 100%);
             margin: 0;
         }
@@ -203,117 +94,52 @@
             margin-bottom: 0.5rem;
         }
         
-        .quail-section p {
+        .quail-intro {
             font-size: 1.3rem;
             color: #34495e;
             margin-bottom: 2rem;
-        }
-        
-        .location-note {
-            background: #e8f6f3;
-            padding: 1rem;
-            border-radius: 10px;
-            margin: 1rem auto 2rem;
             max-width: 800px;
-            border-left: 4px solid #27ae60;
+            margin-left: auto;
+            margin-right: auto;
         }
         
         .quail-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2.5rem;
-            padding: 1rem;
-            max-width: 1200px;
+            gap: 2rem;
+            max-width: 1000px;
             margin: 0 auto;
         }
         
         .quail-card {
             background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             border: 2px solid #e0f7e0;
         }
         
-        .quail-card:hover {
-            transform: translateY(-8px);
-        }
-        
-        .quail-image-container {
-            width: 100%;
-            height: 250px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: white;
-            padding: 1.5rem;
-        }
-        
-        .quail-card img {
-            max-width: 100%;
-            max-height: 100%;
-            width: auto;
-            height: auto;
-            object-fit: contain;
-        }
-        
-        .quail-info {
-            padding: 2rem;
-            background: linear-gradient(to bottom, white, #f9fff9);
-        }
-        
-        .quail-info h3 {
-            margin-top: 0;
+        .quail-card h3 {
             color: #27ae60;
-            font-size: 1.8rem;
+            margin-top: 0;
+            font-size: 1.5rem;
             border-bottom: 2px solid #2ecc71;
             padding-bottom: 0.5rem;
             margin-bottom: 1rem;
         }
         
-        .quail-info p {
-            color: #34495e;
-            font-size: 1.2rem;
-            line-height: 1.6;
-            margin: 1rem 0;
-        }
-        
-        .genetics-note {
-            background: #e8f6f3;
-            padding: 1rem;
-            border-radius: 8px;
-            margin: 1rem 0;
-            border-left: 4px solid #3498db;
-        }
-        
-        .timeline-note {
-            background: #fef9e7;
-            padding: 1rem;
-            border-radius: 8px;
-            margin: 1rem 0;
-            border-left: 4px solid #f39c12;
-        }
-        
         .pricing-box {
             background: #f8f9fa;
-            padding: 1.2rem;
+            padding: 1rem;
             border-radius: 8px;
             margin: 1rem 0;
-            border: 2px solid #27ae60;
-        }
-        
-        .pricing-box h4 {
-            margin-top: 0;
-            color: #27ae60;
-            font-size: 1.2rem;
-            margin-bottom: 0.8rem;
+            border: 1px solid #e0e0e0;
         }
         
         .pricing-item {
             display: flex;
             justify-content: space-between;
-            padding: 0.5rem 0;
+            padding: 0.4rem 0;
             border-bottom: 1px solid #e0e0e0;
         }
         
@@ -325,120 +151,153 @@
             display: inline-block;
             background: #3498db;
             color: white;
-            padding: 0.5rem 1.2rem;
+            padding: 0.4rem 1rem;
             border-radius: 20px;
-            font-size: 1rem;
+            font-size: 0.9rem;
             font-weight: bold;
             margin: 0.5rem 0;
         }
         
-        .price-tag {
-            display: inline-block;
-            background: #e74c3c;
-            color: white;
-            padding: 0.6rem 1.5rem;
-            border-radius: 30px;
-            font-size: 1.3rem;
-            font-weight: bold;
-            margin: 1rem 0;
-        }
-        
-        .carrot-section {
-            padding: 4rem 2rem;
+        /* Workshop Announcement - Compact */
+        .workshop-announcement {
+            padding: 3rem 2rem;
             background: white;
+            text-align: center;
         }
         
-        .carrot-section h2 {
-            text-align: center;
-            color: #e67e22;
-            font-size: 2.2rem;
+        .workshop-announcement h2 {
+            color: #9b59b6;
+            font-size: 2rem;
             margin-bottom: 0.5rem;
         }
         
-        .carrot-intro {
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto 3rem;
-            font-size: 1.3rem;
-            color: #34495e;
-            line-height: 1.7;
-        }
-        
-        .carrot-grid {
+        .workshop-content {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2.5rem;
-            max-width: 1200px;
-            margin: 0 auto;
+            grid-template-columns: 300px 1fr;
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 2rem auto;
+            align-items: center;
         }
         
-        .carrot-card {
-            background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-            border: 2px solid #fdebd0;
-        }
-        
-        .carrot-image-container {
-            width: 100%;
-            height: 250px;
+        .workshop-image {
             display: flex;
             align-items: center;
             justify-content: center;
-            background: #fff8e1;
-            padding: 1.5rem;
         }
         
-        .carrot-image-container img {
+        .workshop-image img {
             max-width: 100%;
-            max-height: 100%;
-            width: auto;
             height: auto;
-            object-fit: contain;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
         
-        .carrot-info {
-            padding: 2rem;
-        }
-        
-        .carrot-info h3 {
+        .workshop-details h3 {
+            color: #9b59b6;
             margin-top: 0;
-            color: #e67e22;
             font-size: 1.6rem;
-            border-bottom: 2px solid #f39c12;
+            text-align: left;
+        }
+        
+        .workshop-details p {
+            color: #34495e;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            text-align: left;
+            margin: 0.8rem 0;
+        }
+        
+        .grant-note {
+            background: #f4ecf7;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            border-left: 4px solid #9b59b6;
+            text-align: left;
+        }
+        
+        /* Workshop Series */
+        .workshop-series {
+            padding: 3rem 2rem;
+            background: linear-gradient(135deg, #f9f3ff 0%, #f0e6ff 100%);
+        }
+        
+        .workshop-series h2 {
+            color: #8e44ad;
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .series-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .series-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .series-card h3 {
+            color: #8e44ad;
+            margin-top: 0;
+            font-size: 1.4rem;
+            border-bottom: 2px solid #d7bde2;
             padding-bottom: 0.5rem;
             margin-bottom: 1rem;
         }
         
-        .seed-bank-note {
-            background: #e8f6f3;
-            padding: 1rem;
-            border-radius: 8px;
-            margin: 1rem 0;
-            border-left: 4px solid #27ae60;
-        }
-        
-        .tasting-section {
-            background: linear-gradient(135deg, #f9f3e9 0%, #fff8e1 100%);
+        /* Carrot Tasting Section */
+        .carrot-section {
             padding: 3rem 2rem;
-            border-radius: 15px;
-            margin: 3rem auto;
-            max-width: 1200px;
-            border-left: 5px solid #e67e22;
+            background: white;
         }
         
-        .tasting-section h3 {
-            color: #d35400;
+        .carrot-section h2 {
+            color: #e67e22;
             text-align: center;
-            font-size: 1.8rem;
-            margin-top: 0;
-            margin-bottom: 2rem;
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .harvest-images {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 800px;
+            margin: 2rem auto;
+        }
+        
+        .harvest-image {
+            text-align: center;
+        }
+        
+        .harvest-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .carrot-tasting {
+            background: linear-gradient(135deg, #f9f3e9 0%, #fff8e1 100%);
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem auto;
+            max-width: 1000px;
+            border-left: 4px solid #e67e22;
         }
         
         .tasting-tables {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
             gap: 2rem;
             margin: 2rem 0;
         }
@@ -446,8 +305,8 @@
         .tasting-table {
             background: white;
             padding: 1.5rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
             overflow-x: auto;
         }
         
@@ -455,7 +314,7 @@
             color: #e67e22;
             text-align: center;
             margin-top: 0;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
         }
         
         table {
@@ -466,20 +325,18 @@
         
         th {
             background: #f8f9fa;
-            padding: 0.8rem;
+            padding: 0.6rem;
             text-align: left;
             border-bottom: 2px solid #e67e22;
             font-weight: bold;
             color: #2c3e50;
+            font-size: 0.8rem;
         }
         
         td {
-            padding: 0.6rem;
+            padding: 0.5rem;
             border-bottom: 1px solid #e0e0e0;
-        }
-        
-        tr:hover {
-            background: #f8f9fa;
+            font-size: 0.8rem;
         }
         
         .rank-1 {
@@ -495,56 +352,23 @@
             background: #f4ecf7;
         }
         
-        .variety-list {
+        .seed-bank {
             background: #e8f6f3;
             padding: 1.5rem;
-            border-radius: 10px;
+            border-radius: 8px;
             margin: 2rem auto;
             max-width: 800px;
+            border-left: 4px solid #27ae60;
         }
         
-        .variety-list h4 {
-            color: #27ae60;
-            margin-top: 0;
-            text-align: center;
-        }
-        
-        .variety-columns {
-            columns: 2;
-            column-gap: 2rem;
-        }
-        
-        .variety-columns li {
-            margin-bottom: 0.5rem;
-            break-inside: avoid;
-        }
-        
-        .baby-rabbit-section {
-            text-align: center;
-            padding: 3rem 2rem;
-            background: linear-gradient(135deg, #f9f3ff 0%, #f0e6ff 100%);
-        }
-        
-        .baby-rabbit-container {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 1rem;
-        }
-        
-        .baby-rabbit-container img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-        }
-        
+        /* Market Banner */
         .market-banner {
             display: grid;
             grid-template-columns: 1fr 2fr;
             background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
             color: white;
             margin: 3rem auto;
-            max-width: 1200px;
+            max-width: 1000px;
             border-radius: 15px;
             overflow: hidden;
             box-shadow: 0 8px 25px rgba(0,0,0,0.2);
@@ -560,7 +384,7 @@
         
         .market-image img {
             max-width: 100%;
-            max-height: 250px;
+            max-height: 200px;
             width: auto;
             height: auto;
             border-radius: 10px;
@@ -568,22 +392,22 @@
         }
         
         .market-info {
-            padding: 3rem;
+            padding: 2rem;
             display: flex;
             flex-direction: column;
             justify-content: center;
         }
         
         .market-info h3 {
-            font-size: 2rem;
+            font-size: 1.8rem;
             margin-top: 0;
             margin-bottom: 1rem;
             color: white;
         }
         
         .market-info p {
-            font-size: 1.3rem;
-            line-height: 1.7;
+            font-size: 1.2rem;
+            line-height: 1.6;
             margin: 0.5rem 0;
         }
         
@@ -591,9 +415,9 @@
             display: inline-block;
             background: white;
             color: #27ae60;
-            padding: 0.8rem 1.8rem;
+            padding: 0.6rem 1.5rem;
             border-radius: 30px;
-            font-size: 1.4rem;
+            font-size: 1.2rem;
             font-weight: bold;
             margin-top: 1rem;
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
@@ -645,9 +469,21 @@
                 max-width: 250px;
             }
             
-            .quail-grid, .carrot-grid, .workshop-grid {
+            .workshop-content {
                 grid-template-columns: 1fr;
-                gap: 2rem;
+                text-align: center;
+            }
+            
+            .workshop-details h3,
+            .workshop-details p {
+                text-align: center;
+            }
+            
+            .quail-grid,
+            .series-grid,
+            .harvest-images {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
             }
             
             .market-banner {
@@ -660,10 +496,6 @@
             
             .tasting-table {
                 overflow-x: scroll;
-            }
-            
-            .variety-columns {
-                columns: 1;
             }
         }
     </style>
@@ -689,255 +521,217 @@
     </nav>
     
     <main>
-        <!-- Workshop Banner with Three Cards -->
-        <section class="workshop-banner">
-            <h2>Cultivating Food Sovereignty for Gustavus</h2>
-            <p>Free workshop series at the Gustavus Public Library - Summer 2026</p>
-            
-            <div class="workshop-grid">
-                <!-- Workshop 1: Meat Rabbits -->
-                <div class="workshop-card">
-                    <div class="workshop-image">
-                        <img src="images/BabyRabbits1.jpg" alt="Baby Rabbits from Gustavus">
-                    </div>
-                    <div class="workshop-info">
-                        <span class="workshop-date">August 2026</span>
-                        <h3>Meat Rabbit Husbandry & Collaborative Cage Building</h3>
-                        <p>45-minute talk on raising rabbits, followed by hands-on rabbit handling and health checks. Participants will collaboratively build a professional-grade rabbit cage, learning skills to build their own at home.</p>
-                        <div class="starter-kit">
-                            <strong>First 6 registrants receive:</strong> Rabbit Starter Kit with waterers, feeders, and essential care items ($50 value)
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Workshop 2: Carrot Tasting -->
-                <div class="workshop-card">
-                    <div class="workshop-image">
-                        <img src="images/CarrotsVarieties.jpg" alt="Carrot Varieties">
-                    </div>
-                    <div class="workshop-info">
-                        <span class="workshop-date">September 2026</span>
-                        <h3>Community Carrot Tasting & Seed Saving Workshop</h3>
-                        <p>Third annual carrot tasting featuring 14 varieties from Johnny's Selected Seeds. Learn seed saving techniques and help select top-performing varieties for the community seed bank.</p>
-                        <p><strong>When:</strong> Monday preceding the Harvest Festival</p>
-                        <p><strong>Where:</strong> Gustavus Community Center</p>
-                    </div>
-                </div>
-                
-                <!-- Workshop 3: Harvest Festival Show -->
-                <div class="workshop-card">
-                    <div class="workshop-image">
-                        <img src="images/Quail1.jpg" alt="Quail and Rabbit Show">
-                    </div>
-                    <div class="workshop-info">
-                        <span class="workshop-date">September 2026</span>
-                        <h3>Rabbit & Poultry Show at Gustavus Harvest Festival</h3>
-                        <p>Public exhibition at the free annual Gustavus Harvest Festival. Includes educational judged show with ribbons and a family-friendly "Critter Race" celebrating local livestock.</p>
-                        <p><strong>Features:</strong> Durable judging coops, ribbons, community engagement activities</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="grant-note">
-                <p><strong>🎓 Grant Funded:</strong> This workshop series is made possible by a $1,600 RurAL CAP Foundation grant awarded to the Gustavus Public Library.</p>
-                <p><strong>👩‍🌾 Project Lead:</strong> Geneva Mottet, Master Gardener (2023) with 20 years rabbit husbandry experience</p>
-                <p><strong>📞 Contact:</strong> 775-343-8113 | gjmottet@alaska.edu</p>
-            </div>
-        </section>
-        
-        <!-- Quail Section - UPDATED with pricing -->
+        <!-- Quail Section - Compact -->
         <section class="quail-section">
-            <h2>Coturnix Quail Eggs & Chicks</h2>
-            <p>Fresh, fertile eggs and healthy chicks from our homestead</p>
-            
-            <div class="location-note">
-                <p><strong>📍 Location Note:</strong> We're based in Gustavus, Alaska from April to October. All garden photos are from our Gustavus homestead. Quail eggs are available year-round wherever we are!</p>
-            </div>
+            <h2>We Have Coturnix Quail!</h2>
+            <p class="quail-intro">Fresh eggs and chicks available from our Gustavus homestead</p>
             
             <div class="quail-grid">
-                <!-- Quail Eggs - UPDATED -->
                 <div class="quail-card">
-                    <div class="quail-image-container">
-                        <img src="images/QuailEggs.jpg" alt="Fresh Quail Eggs">
-                    </div>
-                    <div class="quail-info">
-                        <h3>Fresh Quail Eggs</h3>
-                        <p>Nutrient-rich Coturnix quail eggs from our happy, free-range quail. These miniature eggs pack a nutritional punch with rich flavor.</p>
-                        
-                        <div class="genetics-note">
-                            <strong>🌟 Special Genetics:</strong> Some eggs have rare celadon genetics - may produce blue egg layers!
-                        </div>
-                        
-                        <div class="timeline-note">
-                            <strong>📅 Hatching Schedule:</strong><br>
-                            • Eggs in incubator: February 1<br>
-                            • Expected hatch: February 17<br>
-                            • Chicks available: March 10
-                        </div>
-                        
-                        <p><strong>Note:</strong> All eggs sold are fertile. Can be used for eating or hatching purposes.</p>
-                        
-                        <span class="availability-tag">Fertile Eggs Available Now</span>
-                        <div class="price-tag">$6/dozen</div>
-                        <p><em>Available wherever we are - Gustavus (April-Oct) or Fairbanks (Nov-Mar)</em></p>
-                    </div>
+                    <h3>Fresh Quail Eggs</h3>
+                    <p><strong>Available Now:</strong> $6/dozen</p>
+                    <p>Fertile eggs - perfect for eating or hatching. Some eggs have rare celadon genetics for possible blue egg layers!</p>
+                    <p><strong>Hatching:</strong> Eggs in incubator Feb 1 → Hatch Feb 17 → Chicks available Mar 10</p>
+                    <span class="availability-tag">Year-Round Availability</span>
                 </div>
                 
-                <!-- Quail Chicks - UPDATED with pricing -->
                 <div class="quail-card">
-                    <div class="quail-image-container">
-                        <img src="images/Quail1.jpg" alt="Coturnix Quail">
+                    <h3>Quail Chicks & Adults</h3>
+                    <div class="pricing-box">
+                        <div class="pricing-item">
+                            <span>3-week-old chicks (straight run):</span>
+                            <span><strong>$5.50 each</strong></span>
+                        </div>
+                        <div class="pricing-item">
+                            <span>Special: 5 chicks:</span>
+                            <span><strong>$25</strong></span>
+                        </div>
+                        <div class="pricing-item">
+                            <span>Young laying hens:</span>
+                            <span><strong>$10 each</strong></span>
+                        </div>
+                        <div class="pricing-item">
+                            <span>Adult roosters:</span>
+                            <span><strong>$6 each</strong></span>
+                        </div>
                     </div>
-                    <div class="quail-info">
-                        <h3>Quail Chicks & Adults</h3>
-                        <p>Healthy Coturnix quail available at various life stages. Perfect for starting your own backyard quail flock for eggs or meat.</p>
-                        
-                        <div class="pricing-box">
-                            <h4>🐣 Chicks (Available March 10):</h4>
-                            <div class="pricing-item">
-                                <span>Straight run 3-week-old chicks:</span>
-                                <span><strong>$5.50 each</strong></span>
-                            </div>
-                            <div class="pricing-item">
-                                <span>Special: 5 chicks:</span>
-                                <span><strong>$25</strong></span>
-                            </div>
-                        </div>
-                        
-                        <div class="pricing-box">
-                            <h4>🐔 Adults (Available end of March):</h4>
-                            <div class="pricing-item">
-                                <span>Young laying hens:</span>
-                                <span><strong>$10 each</strong></span>
-                            </div>
-                            <div class="pricing-item">
-                                <span>Adult roosters:</span>
-                                <span><strong>$6 each</strong></span>
-                            </div>
-                        </div>
-                        
-                        <p><strong>Genetics:</strong> Some chicks from celadon genetics stock - may lay blue eggs!</p>
-                        <p><strong>Benefits:</strong> Quiet, low maintenance, excellent egg layers, cold-hardy</p>
-                        
-                        <span class="availability-tag">Available March 10, 2026</span>
+                    <p><strong>Available March 10, 2026</strong></p>
+                    <span class="availability-tag">March Availability</span>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Workshop Announcement -->
+        <section class="workshop-announcement">
+            <h2>Announcing: Cultivating Food Sovereignty for Gustavus Workshop Series</h2>
+            <p>Free community workshops at the Gustavus Public Library - Summer 2026</p>
+            
+            <div class="workshop-content">
+                <div class="workshop-image">
+                    <img src="images/BabyRabbits1.jpg" alt="Baby Rabbits from Gustavus" width="300">
+                </div>
+                <div class="workshop-details">
+                    <h3>Meat Rabbit Husbandry & Cage Building</h3>
+                    <p><strong>August 2026</strong> - Learn rabbit care from a Master Gardener with 20 years experience. Hands-on handling and collaborative cage building workshop.</p>
+                    <p><strong>Bonus:</strong> First 6 registrants receive a Rabbit Starter Kit with essential supplies!</p>
+                    <div class="grant-note">
+                        <p><strong>Community Support:</strong> This workshop series receives financial support from the RurAL CAP Foundation, with additional support going to the Harvest Festival Rabbit & Poultry Show.</p>
                     </div>
                 </div>
             </div>
         </section>
         
-        <!-- Baby Rabbit Photo Section -->
-        <section class="baby-rabbit-section">
-            <div class="baby-rabbit-container">
-                <img src="images/BabyRabbits1.jpg" alt="Baby Rabbits in Gustavus">
-                <p style="margin-top: 1rem; font-style: italic; color: #7f8c8d;">Baby rabbits from our Gustavus homestead - Like what you see? Join our rabbit husbandry workshop!</p>
+        <!-- Workshop Series -->
+        <section class="workshop-series">
+            <h2>2026 Workshop Series</h2>
+            <div class="series-grid">
+                <div class="series-card">
+                    <h3>1. Meat Rabbit Workshop</h3>
+                    <p><strong>August 2026</strong></p>
+                    <p>45-minute talk on rabbit husbandry followed by hands-on handling and cage building. Learn skills to raise your own meat rabbits.</p>
+                </div>
+                
+                <div class="series-card">
+                    <h3>2. Carrot Tasting & Seed Saving</h3>
+                    <p><strong>September 2026</strong></p>
+                    <p>Third annual community carrot tasting featuring 14 varieties. Learn seed saving and help select varieties for the free library seed bank.</p>
+                </div>
+                
+                <div class="series-card">
+                    <h3>3. Harvest Festival Show</h3>
+                    <p><strong>September 2026</strong></p>
+                    <p>Rabbit & Poultry Show at the Gustavus Harvest Festival. Educational judged show with ribbons and family-friendly activities.</p>
+                </div>
             </div>
         </section>
         
-        <!-- Carrot Section -->
+        <!-- Carrot Tasting & Harvest Festival -->
         <section class="carrot-section">
-            <h2>2026 Carrot Tasting & Seed Bank</h2>
-            <div class="carrot-intro">
-                <p>Our third annual Community Carrot Tasting will feature 14 varieties from Johnny's Selected Seeds. Following the tasting, the top-performing varieties will be added to the free Gustavus Library Seed Bank for community use.</p>
+            <h2>Community Carrot Tasting Results</h2>
+            <p>Annual evaluations help select the best varieties for our Gustavus growing conditions</p>
+            
+            <div class="harvest-images">
+                <div class="harvest-image">
+                    <img src="images/HarvestFestCarrots2024.jpg" alt="Carrots at 2024 Harvest Festival">
+                    <p>2024 Harvest Festival Carrots</p>
+                </div>
+                <div class="harvest-image">
+                    <img src="images/WinningBasketHarvestFestival2025.jpg" alt="Winning Basket at 2025 Harvest Festival">
+                    <p>Winning Basket - 2025 Harvest Festival</p>
+                </div>
             </div>
             
-            <div class="carrot-grid">
-                <div class="carrot-card">
-                    <div class="carrot-image-container">
-                        <img src="images/CarrotsVarieties.jpg" alt="Variety of Carrots from Garden">
+            <div class="carrot-tasting">
+                <div class="tasting-tables">
+                    <div class="tasting-table">
+                        <h4>2024 Carrot Tasting Results</h4>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Rank</th>
+                                    <th>Variety</th>
+                                    <th>Score</th>
+                                    <th>Norm</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="rank-1">
+                                    <td>1</td>
+                                    <td>Royal Chantenay</td>
+                                    <td>41</td>
+                                    <td>4.10</td>
+                                </tr>
+                                <tr class="rank-2">
+                                    <td>2</td>
+                                    <td>Bolero Nantes</td>
+                                    <td>31</td>
+                                    <td>3.10</td>
+                                </tr>
+                                <tr class="rank-3">
+                                    <td>3</td>
+                                    <td>Bambino</td>
+                                    <td>31</td>
+                                    <td>3.10</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Scarlet Nantes</td>
+                                    <td>33</td>
+                                    <td>3.00</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Yellow</td>
+                                    <td>30</td>
+                                    <td>3.00</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>Imperator 58</td>
+                                    <td>29</td>
+                                    <td>2.90</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
-                    <div class="carrot-info">
-                        <h3>2026 Carrot Varieties</h3>
-                        <p>14 varieties selected from Johnny's Selected Seeds catalogue for the 2026 growing season and tasting event.</p>
-                        
-                        <div class="variety-list">
-                            <h4>2026 Tasting Varieties</h4>
-                            <div class="variety-columns">
-                                <ul>
-                                    <li>Bolero</li>
-                                    <li>Candy</li>
-                                    <li>Orange Fancy</li>
-                                    <li>Napoli</li>
-                                    <li>Mokum</li>
-                                    <li>Romance</li>
-                                    <li>Shin Kuroda</li>
-                                </ul>
-                                <ul>
-                                    <li>Sugarsnax 54</li>
-                                    <li>Rubypak</li>
-                                    <li>Deep Purple</li>
-                                    <li>Purple Elite</li>
-                                    <li>Dragon</li>
-                                    <li>Gold Nugget</li>
-                                    <li>Rainbow</li>
-                                </ul>
-                            </div>
-                        </div>
-                        
-                        <div class="seed-bank-note">
-                            <strong>🌱 Seed Bank Donation:</strong> Bolero and Purple Dragon seeds (top performers from past years) will be added to the free Gustavus Library Seed Bank for community use!
-                        </div>
+                    
+                    <div class="tasting-table">
+                        <h4>2025 Carrot Tasting Results</h4>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Rank</th>
+                                    <th>Variety</th>
+                                    <th>Score</th>
+                                    <th>Norm</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="rank-1">
+                                    <td>1</td>
+                                    <td>Royal Chantenay</td>
+                                    <td>94</td>
+                                    <td>3.92</td>
+                                </tr>
+                                <tr class="rank-2">
+                                    <td>2</td>
+                                    <td>St. Valery</td>
+                                    <td>95</td>
+                                    <td>3.80</td>
+                                </tr>
+                                <tr class="rank-3">
+                                    <td>3</td>
+                                    <td>Purple Dragon</td>
+                                    <td>82</td>
+                                    <td>3.57</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Gniff</td>
+                                    <td>84</td>
+                                    <td>3.50</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Little Fingers</td>
+                                    <td>87</td>
+                                    <td>3.48</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>Bolero Nantes</td>
+                                    <td>79</td>
+                                    <td>3.29</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
                 
-                <!-- Carrot Tasting Results -->
-                <div class="tasting-section">
-                    <h3>Past Carrot Tasting Results</h3>
-                    <p>Community-based evaluations help determine the best varieties for our Gustavus growing conditions.</p>
-                    
-                    <div class="tasting-tables">
-                        <div class="tasting-table">
-                            <h4>2025 Carrot Tasting - Top Performers</h4>
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th>Rank</th>
-                                        <th>Variety</th>
-                                        <th>Score</th>
-                                        <th>Normalized</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr class="rank-1">
-                                        <td>1</td>
-                                        <td>Royal Chantenay</td>
-                                        <td>94</td>
-                                        <td>3.92</td>
-                                    </tr>
-                                    <tr class="rank-2">
-                                        <td>2</td>
-                                        <td>St. Valery</td>
-                                        <td>95</td>
-                                        <td>3.80</td>
-                                    </tr>
-                                    <tr class="rank-3">
-                                        <td>3</td>
-                                        <td>Purple Dragon</td>
-                                        <td>82</td>
-                                        <td>3.57</td>
-                                    </tr>
-                                    <tr>
-                                        <td>4</td>
-                                        <td>Gniff</td>
-                                        <td>84</td>
-                                        <td>3.50</td>
-                                    </tr>
-                                    <tr>
-                                        <td>5</td>
-                                        <td>Little Fingers</td>
-                                        <td>87</td>
-                                        <td>3.48</td>
-                                    </tr>
-                                    <tr>
-                                        <td>6</td>
-                                        <td>Bolero Nantes</td>
-                                        <td>79</td>
-                                        <td>3.29</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <p style="text-align: center; margin-top: 1rem; font-size: 0.9rem; color: #7f8c8d;">Based on evaluations from 26 community tasters</p>
-                        </div>
-                    </div>
+                <div class="seed-bank">
+                    <h3>Gustavus Library Seed Bank</h3>
+                    <p><strong>2026 Additions:</strong> Bolero and Purple Dragon carrot seeds (top performers from past years) will be added to the free community seed bank following the 2026 workshop.</p>
+                    <p><strong>Location:</strong> Gustavus Public Library - Free seeds for all community members</p>
                 </div>
             </div>
         </section>
