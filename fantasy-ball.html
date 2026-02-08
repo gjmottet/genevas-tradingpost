@@ -200,13 +200,13 @@
             border-left: 4px solid var(--valentine-red);
         }
         
-        /* Science Art Section */
+        /* Science Art Section - UPDATED LAYOUT */
         .science-section {
             background: linear-gradient(135deg, #E8F4F8 0%, #F0F7FF 100%);
             padding: 3rem 2rem;
             border-radius: 15px;
             margin: 3rem auto;
-            max-width: 1000px;
+            max-width: 1200px;
             border-left: 5px solid var(--science-blue);
         }
         
@@ -215,30 +215,31 @@
             text-align: center;
             font-size: 2rem;
             margin-top: 0;
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
         }
         
         .science-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+            display: flex;
+            flex-direction: column;
             align-items: center;
+            gap: 2rem;
         }
         
         .science-image-container {
             background: white;
             border-radius: 10px;
-            padding: 1.5rem;
+            padding: 2rem;
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 300px;
+            width: 100%;
+            max-width: 900px;
             border: 2px solid var(--science-blue);
         }
         
         .science-image-container img {
             max-width: 100%;
-            max-height: 100%;
+            max-height: 400px;
             width: auto;
             height: auto;
             object-fit: contain;
@@ -249,17 +250,37 @@
             font-size: 1.2rem;
             line-height: 1.8;
             color: var(--text-medium);
+            max-width: 900px;
+            text-align: center;
+        }
+        
+        .science-tags {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.8rem;
+            margin: 1.5rem 0;
         }
         
         .science-tag {
             display: inline-block;
             background: var(--science-blue);
             color: white;
-            padding: 0.3rem 0.8rem;
+            padding: 0.5rem 1.2rem;
             border-radius: 20px;
-            font-size: 0.9rem;
+            font-size: 1rem;
             font-weight: bold;
-            margin: 0.5rem 0.5rem 0.5rem 0;
+        }
+        
+        .price-highlight {
+            display: inline-block;
+            background: var(--fantasy-gold);
+            color: var(--persephone-dark);
+            padding: 0.8rem 1.8rem;
+            border-radius: 30px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin: 1.5rem 0;
         }
         
         /* Event Calendar */
@@ -367,6 +388,7 @@
             justify-content: center;
             border-bottom: 3px solid var(--persephone-purple);
             padding: 1.5rem;
+            position: relative;
         }
         
         .fantasy-image img {
@@ -375,6 +397,21 @@
             width: auto;
             height: auto;
             object-fit: contain;
+        }
+        
+        /* Price tag on image */
+        .image-price-tag {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #27ae60;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 1rem;
+            z-index: 3;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
         }
         
         /* Special hover effect for embroidered flower barrett */
@@ -602,6 +639,23 @@
             .fantasy-image, .seasonal-image {
                 height: 250px;
             }
+            
+            .science-image-container {
+                padding: 1rem;
+            }
+            
+            .science-image-container img {
+                max-height: 300px;
+            }
+            
+            .science-tags {
+                gap: 0.5rem;
+            }
+            
+            .science-tag {
+                font-size: 0.9rem;
+                padding: 0.4rem 0.8rem;
+            }
         }
     </style>
 </head>
@@ -673,18 +727,21 @@
             </div>
         </section>
         
-        <!-- Science Art Section -->
+        <!-- Science Art Section - UPDATED LAYOUT -->
         <section class="science-section">
             <h2>A Dynamics Yarn: Mathematical Potholders</h2>
+            
             <div class="science-content">
+                <!-- Bigger image first -->
                 <div class="science-image-container">
                     <img src="images/MathPots.jpg" alt="Mathematical Potholders: The Ember, The Proof, The BZ Reaction">
                 </div>
+                
+                <!-- Condensed text below -->
                 <div class="science-text">
-                    <p><strong>Featured at the Keith B. Mather Library's First Friday Art Show</strong></p>
-                    <p>This set of three hand-knit potholders translates the abstract beauty of nonlinear dynamics into tactile form. Created from natural fibers with intricate embroidery.</p>
+                    <p>Featured at the Keith B. Mather Library's First Friday Art Show. This set of three hand-knit potholders translates the abstract beauty of nonlinear dynamics into tactile form.</p>
                     
-                    <div>
+                    <div class="science-tags">
                         <span class="science-tag">The Ember: Stable Attractor</span>
                         <span class="science-tag">The Proof: Limit Cycle</span>
                         <span class="science-tag">The BZ Reaction: Deterministic Chaos</span>
@@ -692,16 +749,23 @@
                     
                     <p><strong>Artist Statement:</strong> "These functional potholders celebrate the patterns that underpin reality. 'The Ember' depicts a stable attractor, 'The Proof' a rhythmic limit cycle, and 'The Belousov-Zhabotinsky Reaction' the beauty of deterministic chaos."</p>
                     
-                    <p><strong>Set Price:</strong> $320</p>
+                    <div class="price-highlight">Set Price: $320</div>
+                    
                     <p><em>Exhibited at the Geophysical Institute's Keith B. Mather Library First Friday events in November/December</em></p>
                 </div>
             </div>
         </section>
         
-        <!-- Event Calendar -->
+        <!-- Event Calendar - REORDERED -->
         <section class="events-section">
             <h2>Upcoming Events & Exhibitions</h2>
             <div class="event-calendar">
+                <div class="event-card">
+                    <h3>PopCon Fairbanks</h3>
+                    <div class="event-date">November 2026</div>
+                    <p>University gaming & pop culture convention. Perfect venue for dice bags, fantasy accessories, and unique creations.</p>
+                </div>
+                
                 <div class="event-card">
                     <h3>First Friday Art Show</h3>
                     <div class="event-date">Nov/Dec 2026</div>
@@ -712,12 +776,6 @@
                     <h3>Persephone's Lair</h3>
                     <div class="event-date">Fall 2027</div>
                     <p>Fantasy Ball featuring Greek underworld themes. Planning custom mythologically-inspired creations!</p>
-                </div>
-                
-                <div class="event-card">
-                    <h3>PopCon Fairbanks</h3>
-                    <div class="event-date">November 2026</div>
-                    <p>University gaming & pop culture convention. Perfect venue for dice bags, fantasy accessories, and unique creations.</p>
                 </div>
             </div>
         </section>
@@ -789,10 +847,11 @@
                     </div>
                 </div>
                 
-                <!-- Dust Sprites -->
+                <!-- Dust Sprites - WITH PRICE TAG ON IMAGE -->
                 <div class="fantasy-card">
                     <div class="fantasy-image">
                         <img src="images/DustSprites.jpg" alt="Dust Sprites">
+                        <div class="image-price-tag">$2 each</div>
                     </div>
                     <div class="fantasy-info">
                         <h3>Dust Sprites</h3>
@@ -802,7 +861,6 @@
                         </div>
                         <p>Adorable dust sprites inspired by Studio Ghibli films. These fluffy black creatures with big eyes are perfect for animation fans.</p>
                         <p><strong>Features:</strong> Fluffy texture, embroidered eyes, whimsical design</p>
-                        <div class="price-tag">$2 each</div>
                         <p><em>Perfect for Ghibli fans, cute decorations, or magical gifts</em></p>
                     </div>
                 </div>
@@ -868,3 +926,4 @@
     </footer>
 </body>
 </html>
+  
