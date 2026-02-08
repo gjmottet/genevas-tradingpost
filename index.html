@@ -138,33 +138,75 @@
         
         .btn {
             display: inline-block;
-            background: #3498db;
             color: white;
             padding: 0.8rem 1.8rem;
             text-decoration: none;
             border-radius: 5px;
             font-weight: bold;
-            transition: background 0.3s ease;
+            transition: all 0.3s ease;
         }
         
         .btn:hover {
-            background: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        /* Rich color buttons */
+        .alaska-art-btn {
+            background: #2980b9; /* Rich blue */
+        }
+        
+        .alaska-art-btn:hover {
+            background: #21618c;
+        }
+        
+        .rabbitry-btn {
+            background: #8B4513; /* Rich brown */
+        }
+        
+        .rabbitry-btn:hover {
+            background: #6E2C00;
         }
         
         .farm-btn {
-            background: #27ae60;
+            background: #27ae60; /* Rich green */
         }
         
         .farm-btn:hover {
             background: #219955;
         }
         
-        .coming-soon {
-            opacity: 0.9;
+        .fantasy-btn {
+            background: #9b59b6; /* Rich purple */
         }
         
-        .coming-soon .btn {
-            background: #95a5a6;
+        .fantasy-btn:hover {
+            background: #8e44ad;
+        }
+        
+        .contact-btn {
+            background: #2c3e50; /* Dark grey */
+        }
+        
+        .contact-btn:hover {
+            background: #1a252f;
+        }
+        
+        /* Sunflower Image Section */
+        .sunflower-section {
+            text-align: center;
+            padding: 2rem;
+            max-width: 800px;
+            margin: 2rem auto;
+        }
+        
+        .sunflower-image {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin: 1rem 0;
         }
         
         footer {
@@ -212,13 +254,13 @@
         <img src="images/manyhalibuts_rsz.jpg" alt="Collection of Halibut Hot Pads" class="banner-image">
     </div>
     
-    <!-- Navigation Menu -->
+    <!-- Navigation Menu - UPDATED: Fantasy Ball to Fantasy Art -->
     <nav>
         <a href="index.html">Home</a>
         <a href="alaska-textiles.html">Alaskan Textile Art</a>
         <a href="rabbitry.html">My Rabbitry</a>
         <a href="farm-stand.html">Farm Stand</a>
-        <a href="fantasy-ball.html">Fantasy Ball</a>
+        <a href="fantasy-art.html">Fantasy Art</a>
         <a href="contact.html">Contact</a>
     </nav>
     
@@ -243,14 +285,14 @@
             <div class="link-card">
                 <h3>Alaskan Textile Art</h3>
                 <p>Hand-knit wildlife potholders, wearable art, and functional pieces inspired by Alaska's nature. Award-winning designs.</p>
-                <a href="alaska-textiles.html" class="btn">View Gallery</a>
+                <a href="alaska-textiles.html" class="btn alaska-art-btn">View Gallery</a>
             </div>
             
             <!-- Rabbitry Card -->
             <div class="link-card">
                 <h3>My Rabbitry</h3>
                 <p>Meet our rabbit family! Raised with care in Alaska, each bunny has its own personality and charm.</p>
-                <a href="rabbitry.html" class="btn">Meet the Bunnies</a>
+                <a href="rabbitry.html" class="btn rabbitry-btn">Meet the Bunnies</a>
             </div>
             
             <!-- Farm Stand Card -->
@@ -260,20 +302,28 @@
                 <a href="farm-stand.html" class="btn farm-btn">Visit Farm Stand</a>
             </div>
             
-            <!-- Fantasy Ball Card -->
-            <div class="link-card coming-soon">
-                <h3>Fantasy Ball Specials</h3>
+            <!-- Fantasy Art Card - UPDATED NAME -->
+            <div class="link-card">
+                <h3>Fantasy Art Specials</h3>
                 <p>Dragon potholders, cosplay accessories, and magical creations for Fantasy Fairbanks events.</p>
-                <a href="fantasy-ball.html" class="btn">Now Live</a>
+                <a href="fantasy-art.html" class="btn fantasy-btn">View Fantasy Art</a>
             </div>
             
             <!-- Contact Card -->
             <div class="link-card">
                 <h3>Contact & Commissions</h3>
                 <p>Based in Fairbanks (winter) and Gustavus (summer). Available for custom commissions and local markets.</p>
-                <a href="contact.html" class="btn">Get in Touch</a>
+                <a href="contact.html" class="btn contact-btn">Get in Touch</a>
             </div>
         </div>
+        
+        <!-- Sunflower Image Section -->
+        <section class="sunflower-section">
+            <h2>From Our Garden</h2>
+            <p>A beautiful sunflower from our Gustavus farm stand</p>
+            <img src="images/Sunflower.jpg" alt="Sunflower from Gustavus Garden" class="sunflower-image">
+            <p><em>Growing beauty and bounty in the Alaskan summer</em></p>
+        </section>
     </main>
     
     <footer>
