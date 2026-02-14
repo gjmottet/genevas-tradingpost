@@ -16,10 +16,9 @@
             color: white;
             margin: 0;
             position: relative;
-            background: none; /* Remove solid background color */
+            background: none;
         }
         
-        /* NEW: Background banner image */
         .page-header::before {
             content: '';
             position: absolute;
@@ -34,7 +33,6 @@
             z-index: -1;
         }
         
-        /* Overlay for better text readability */
         .page-header::after {
             content: '';
             position: absolute;
@@ -42,7 +40,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0, 0, 0, 0.5); /* Dark overlay for text contrast */
+            background: rgba(0, 0, 0, 0.5);
             z-index: -1;
         }
         
@@ -55,10 +53,9 @@
         
         .page-header p {
             font-size: 1.2rem;
-            margin: 0.5rem 0 0 0;
+            margin: 0.5rem auto 0;
             color: white;
             max-width: 800px;
-            margin: 1rem auto;
             text-shadow: 0 2px 5px rgba(0,0,0,0.7);
         }
         
@@ -80,17 +77,13 @@
             transition: background 0.3s ease;
         }
         
-        nav a:hover {
-            background: #3498db;
-        }
-        
-        .current {
+        nav a:hover, .current {
             background: #3498db;
         }
         
         .rabbitry-intro {
             text-align: center;
-            padding: 3rem 2rem;
+            padding: 2rem 2rem 1rem;
             max-width: 900px;
             margin: 0 auto;
         }
@@ -98,14 +91,14 @@
         .rabbitry-intro h2 {
             color: #2c3e50;
             font-size: 2rem;
-            margin-bottom: 1.5rem;
+            margin-bottom: 0.5rem;
         }
         
         .rabbitry-intro p {
             font-size: 1.2rem;
-            line-height: 1.7;
+            line-height: 1.5;
             color: #34495e;
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
         }
         
         .section-divider {
@@ -113,7 +106,7 @@
             padding: 2rem;
             position: relative;
             max-width: 1000px;
-            margin: 3rem auto;
+            margin: 2rem auto;
         }
         
         .section-divider h3 {
@@ -136,10 +129,9 @@
             z-index: 1;
         }
         
-        /* NEW: Full-width divider bar */
         .full-divider {
             border-top: 4px solid #2c3e50;
-            margin: 4rem auto;
+            margin: 3rem auto;
             max-width: 1200px;
             position: relative;
         }
@@ -169,52 +161,31 @@
             border-radius: 12px;
             overflow: hidden;
             box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: transform 0.3s ease;
             border: 1px solid #e0e0e0;
             position: relative;
         }
         
-        /* Scrapbook effect */
-        .rabbit-card::before {
-            content: '';
+        .for-sale-tag, .price-tag {
             position: absolute;
-            top: -10px;
-            left: -10px;
-            right: -10px;
-            bottom: -10px;
-            background: linear-gradient(45deg, #f5f5f5 25%, transparent 25%, transparent 50%, #f5f5f5 50%, #f5f5f5 75%, transparent 75%);
-            background-size: 20px 20px;
-            z-index: -1;
-            border-radius: 15px;
-            opacity: 0.3;
+            top: 15px;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: bold;
+            z-index: 3;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
         }
         
         .for-sale-tag {
-            position: absolute;
-            top: 15px;
             right: 15px;
             background: #e74c3c;
             color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-weight: bold;
-            font-size: 0.9rem;
-            z-index: 3;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
         }
         
         .price-tag {
-            position: absolute;
-            top: 15px;
             left: 15px;
             background: #27ae60;
             color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-weight: bold;
-            font-size: 1rem;
-            z-index: 3;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
         }
         
         .rabbit-card:hover {
@@ -222,7 +193,6 @@
             box-shadow: 0 12px 25px rgba(0,0,0,0.15);
         }
         
-        /* UPDATED: Show full images, not cropped */
         .rabbit-image-container {
             width: 100%;
             height: 280px;
@@ -248,18 +218,16 @@
         }
         
         .rabbit-info h3 {
-            margin-top: 0;
+            margin: 0 0 0.5rem;
             color: #2c3e50;
             font-size: 1.5rem;
             border-bottom: 2px solid #3498db;
             padding-bottom: 0.5rem;
-            margin-bottom: 1rem;
         }
         
         .rabbit-info p {
             margin: 0.8rem 0;
             color: #34495e;
-            font-size: 1.1rem;
             line-height: 1.5;
         }
         
@@ -270,41 +238,23 @@
             margin-bottom: 1rem;
         }
         
-        .breed-tag {
-            display: inline-block;
-            background: #9b59b6;
-            color: white;
+        .breed-tag, .gender-tag, .age-tag {
             padding: 0.4rem 1rem;
             border-radius: 20px;
             font-size: 0.9rem;
             font-weight: bold;
+            color: white;
         }
         
-        .gender-tag {
-            display: inline-block;
-            background: #3498db;
-            color: white;
-            padding: 0.4rem 1rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: bold;
-        }
-        
-        .age-tag {
-            display: inline-block;
-            background: #2ecc71;
-            color: white;
-            padding: 0.4rem 1rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: bold;
-        }
+        .breed-tag { background: #9b59b6; }
+        .gender-tag { background: #3498db; }
+        .age-tag { background: #2ecc71; }
         
         .breeding-program {
             background: #f8f9fa;
-            padding: 3rem 2rem;
+            padding: 2rem;
             border-radius: 10px;
-            margin: 3rem auto;
+            margin: 2rem auto;
             max-width: 1000px;
             border-left: 5px solid #3498db;
         }
@@ -312,21 +262,104 @@
         .breeding-program h3 {
             color: #2c3e50;
             font-size: 1.8rem;
-            margin-top: 0;
+            margin: 0 0 1rem;
         }
         
         .breeding-program ul {
             font-size: 1.1rem;
-            line-height: 1.7;
+            line-height: 1.6;
             color: #34495e;
-            padding-left: 1.5rem;
+            margin: 0;
         }
         
-        .breeding-program li {
-            margin-bottom: 0.8rem;
+        .fun-section {
+            background: #f0f7e6;
+            padding: 3rem 2rem;
+            margin: 2rem auto;
+            border-top: 5px solid #7cb342;
+            border-bottom: 5px solid #7cb342;
         }
         
-        /* NEW: Rabbit Skins Banner */
+        .fun-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .fun-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .fun-item {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .fun-item h3 {
+            color: #2c3e50;
+            margin-top: 0;
+        }
+        
+        .fun-image-container {
+            width: 100%;
+            height: 280px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f5f5f5;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+        
+        .fun-image-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        
+        .donation-section {
+            background: #fff3e0;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        
+        .donation-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 1.5rem 0;
+        }
+        
+        .donate-btn {
+            background: #3498db;
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: transform 0.3s;
+        }
+        
+        .donate-btn:hover {
+            transform: scale(1.05);
+            background: #2980b9;
+        }
+        
+        .hay-fund-note {
+            font-style: italic;
+            color: #7f8c8d;
+            margin-top: 0.5rem;
+        }
+        
         .skins-banner {
             position: relative;
             width: 100%;
@@ -357,26 +390,10 @@
             padding: 2rem;
         }
         
-        .banner-overlay h3 {
-            font-size: 2.5rem;
-            margin: 0 0 1rem 0;
-            color: white;
-            text-shadow: 0 3px 10px rgba(0,0,0,0.5);
-        }
-        
-        .banner-overlay p {
-            font-size: 1.4rem;
-            max-width: 800px;
-            text-shadow: 0 2px 5px rgba(0,0,0,0.5);
-        }
-        
-        /* UPDATED: Tanning services with photos */
         .tanning-services {
             background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
             color: white;
             padding: 4rem 2rem;
-            margin: 0;
-            width: 100%;
             border-top: 5px solid #3498db;
             border-bottom: 5px solid #3498db;
         }
@@ -389,27 +406,18 @@
         .tanning-services h3 {
             color: white;
             font-size: 2.2rem;
-            margin-top: 0;
-            margin-bottom: 1.5rem;
+            margin: 0 0 1.5rem;
             text-align: center;
         }
         
-        .tanning-services p {
-            font-size: 1.3rem;
-            line-height: 1.8;
-            max-width: 800px;
-            margin: 0 auto 2rem;
-            text-align: center;
-        }
-        
-        .skins-grid {
+        .skins-grid, .hats-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 3rem;
             margin: 3rem 0;
         }
         
-        .skins-image-container {
+        .skins-image-container, .hat-image-container {
             background: rgba(255, 255, 255, 0.1);
             border-radius: 10px;
             padding: 1.5rem;
@@ -419,20 +427,10 @@
             height: 300px;
         }
         
-        .skins-image-container img {
+        .skins-image-container img, .hat-image-container img {
             max-width: 100%;
             max-height: 100%;
-            width: auto;
-            height: auto;
-            border-radius: 5px;
             object-fit: contain;
-        }
-        
-        .hats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 3rem;
-            margin: 3rem 0;
         }
         
         .hat-card {
@@ -442,33 +440,10 @@
             text-align: center;
         }
         
-        .hat-image-container {
-            height: 300px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1.5rem;
-        }
-        
-        .hat-image-container img {
-            max-width: 100%;
-            max-height: 100%;
-            width: auto;
-            height: auto;
-            border-radius: 5px;
-            object-fit: contain;
-        }
-        
         .hat-card h4 {
             color: white;
             font-size: 1.5rem;
-            margin: 0 0 0.5rem 0;
-        }
-        
-        .hat-card p {
-            font-size: 1.1rem;
-            margin: 0;
-            color: #ecf0f1;
+            margin: 0 0 0.5rem;
         }
         
         .price-highlight {
@@ -479,9 +454,19 @@
             border-radius: 30px;
             font-size: 1.4rem;
             font-weight: bold;
-            margin: 2rem auto;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            margin: 1rem auto;
             text-align: center;
+        }
+        
+        .litter-info {
+            text-align: center;
+            font-style: italic;
+            color: #7f8c8d;
+            padding: 0.5rem;
+            background: #f0f7ff;
+            border-radius: 5px;
+            max-width: 800px;
+            margin: 0 auto 1rem;
         }
         
         .back-btn {
@@ -492,25 +477,12 @@
             text-decoration: none;
             border-radius: 5px;
             font-weight: bold;
-            margin: 3rem auto;
-            text-align: center;
-            font-size: 1.1rem;
-            transition: background 0.3s ease;
+            margin: 2rem auto;
+            transition: background 0.3s;
         }
         
         .back-btn:hover {
             background: #95a5a6;
-        }
-        
-        .litter-info {
-            text-align: center;
-            font-style: italic;
-            color: #7f8c8d;
-            padding: 1rem;
-            background: #f0f7ff;
-            border-radius: 5px;
-            margin: 1rem auto;
-            max-width: 800px;
         }
         
         footer {
@@ -518,10 +490,13 @@
             padding: 2rem;
             background: #2c3e50;
             color: white;
-            margin-top: 3rem;
         }
         
         @media (max-width: 768px) {
+            .fun-grid {
+                grid-template-columns: 1fr;
+            }
+            
             .rabbit-grid {
                 grid-template-columns: 1fr;
                 padding: 1rem;
@@ -531,32 +506,15 @@
                 display: block;
                 margin: 0.5rem auto;
                 width: 80%;
-                max-width: 300px;
             }
             
-            .rabbit-image-container {
-                height: 250px;
+            .donation-buttons {
+                flex-direction: column;
+                align-items: center;
             }
             
-            .skins-banner {
-                height: 250px;
-            }
-            
-            .banner-overlay h3 {
-                font-size: 1.8rem;
-            }
-            
-            .banner-overlay p {
-                font-size: 1.1rem;
-            }
-            
-            .skins-grid, .hats-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-            
-            .skins-image-container, .hat-image-container {
-                height: 250px;
+            .donate-btn {
+                width: 80%;
             }
         }
     </style>
@@ -564,31 +522,30 @@
 <body>
     <header class="page-header">
         <h1>Geneva's Rabbitry</h1>
-        <p>Champagne d'Argent & Silver Fox Rabbits | Raised with Care in Alaska</p>
+        <p>Champagne d'Argent & Silver Fox | Fairbanks, AK</p>
     </header>
     
     <nav>
         <a href="index.html">Home</a>
-        <a href="alaska-textiles.html">Alaskan Textile Art</a>
-        <a href="rabbitry.html" class="current">My Rabbitry</a>
+        <a href="alaska-textiles.html">Textile Art</a>
+        <a href="rabbitry.html" class="current">Rabbitry</a>
         <a href="farm-stand.html">Farm Stand</a>
         <a href="fantasy-ball.html">Fantasy Ball</a>
         <a href="contact.html">Contact</a>
     </nav>
     
     <main>
-        <!-- Introduction -->
+        <!-- Condensed intro -->
         <section class="rabbitry-intro">
-            <h2>Our Alaskan Rabbit Family</h2>
-            <p>Welcome to our small rabbitry in Alaska! We raise Champagne d'Argent and Silver Fox rabbits for meat and fur, focusing on healthy, friendly rabbits with excellent conformation. All our rabbits are raised with individual attention and care.</p>
-            <p>Below you'll meet our rabbits available for adoption and our permanent breeding herd.</p>
+            <h2>Alaskan Rabbit Family</h2>
+            <p>Heritage meat & fur rabbits raised with care. Friendly, healthy stock for homesteaders.</p>
         </section>
         
         <!-- Rabbits for Sale -->
         <div class="section-divider">
             <div class="divider-line"></div>
-            <h3>Rabbits Available for Adoption</h3>
-            <p class="litter-info">All from the same litter born August 2, 2025 | Half Champagne d'Argent (Lucille's daughter) & half meat mutt (Peter Rabbit) | Excellent body confirmation for meat production</p>
+            <h3>Available</h3>
+            <p class="litter-info">Lucille x Peter Rabbit | Born Aug 2, 2025 | Meat mutt x Champagne</p>
         </div>
         
         <div class="rabbit-grid">
@@ -597,17 +554,16 @@
                 <div class="for-sale-tag">Available</div>
                 <div class="price-tag">$110</div>
                 <div class="rabbit-image-container">
-                    <img src="images/Porkins.jpg" alt="Porkins the Rabbit">
+                    <img src="images/Porkins.jpg" alt="Porkins">
                 </div>
                 <div class="rabbit-info">
                     <div class="rabbit-details">
-                        <span class="breed-tag">Champagne d'Argent Mix</span>
+                        <span class="breed-tag">Champagne Mix</span>
                         <span class="gender-tag">Doe</span>
-                        <span class="age-tag">Born Aug 2, 2025</span>
+                        <span class="age-tag">8/2/25</span>
                     </div>
                     <h3>Porkins</h3>
-                    <p><strong>The largest of her litter</strong> with the best commercial body type. She has excellent silvering and a very friendly, outgoing personality. Porkins would make an excellent foundation doe for a meat rabbit program.</p>
-                    <p><strong>Features:</strong> Superior size, excellent silvering, commercial body type, friendly temperament</p>
+                    <p>Largest litter, best body type. Friendly, silvering well. Excellent foundation doe.</p>
                 </div>
             </div>
             
@@ -616,17 +572,16 @@
                 <div class="for-sale-tag">Available</div>
                 <div class="price-tag">$100</div>
                 <div class="rabbit-image-container">
-                    <img src="images/Bacon.jpg" alt="Bacon the Rabbit">
+                    <img src="images/Bacon.jpg" alt="Bacon">
                 </div>
                 <div class="rabbit-info">
                     <div class="rabbit-details">
-                        <span class="breed-tag">Champagne d'Argent Mix</span>
+                        <span class="breed-tag">Champagne Mix</span>
                         <span class="gender-tag">Doe</span>
-                        <span class="age-tag">Born Aug 2, 2025</span>
+                        <span class="age-tag">8/2/25</span>
                     </div>
                     <h3>Bacon</h3>
-                    <p><strong>The sweetest personality</strong> and the best silvering of the sisters. She takes after her mother's petite size but makes up for it in charm. Bacon loves attention and would make a wonderful pet or breeding doe.</p>
-                    <p><strong>Features:</strong> Exceptional silvering, petite size, sweet temperament, loves human interaction</p>
+                    <p>Sweetest personality, best silvering. Petite like mom, loves attention.</p>
                 </div>
             </div>
             
@@ -635,110 +590,147 @@
                 <div class="for-sale-tag">Available</div>
                 <div class="price-tag">$70</div>
                 <div class="rabbit-image-container">
-                    <img src="images/MissPiggyLookingLeft.jpg" alt="Miss Piggy the Rabbit">
+                    <img src="images/MissPiggyLookingLeft.jpg" alt="Miss Piggy">
                 </div>
                 <div class="rabbit-info">
                     <div class="rabbit-details">
-                        <span class="breed-tag">Champagne d'Argent Mix</span>
+                        <span class="breed-tag">Champagne Mix</span>
                         <span class="gender-tag">Doe</span>
-                        <span class="age-tag">Born Aug 2, 2025</span>
+                        <span class="age-tag">8/2/25</span>
                     </div>
                     <h3>Miss Piggy</h3>
-                    <p><strong>Solid commercial body type</strong> with a sweet personality. While her silvering isn't as pronounced as her sisters, she has excellent meat conformation. Miss Piggy would be a good meat mama doe for someone starting a rabbitry.</p>
-                    <p><strong>Features:</strong> Commercial body type, sweet personality, good mother potential, healthy appetite</p>
+                    <p>Solid meat conformation, sweet. Great mother potential for starting rabbitry.</p>
                 </div>
             </div>
         </div>
         
-        <!-- Permanent Rabbits -->
+        <!-- Permanent Herd -->
         <div class="section-divider">
             <div class="divider-line"></div>
-            <h3>Our Permanent Breeding Herd & Family</h3>
+            <h3>Breeding Herd</h3>
         </div>
         
         <div class="rabbit-grid">
             <!-- Lucille -->
             <div class="rabbit-card">
                 <div class="rabbit-image-container">
-                    <img src="images/Lucille.jpg" alt="Lucille the Champagne d'Argent Rabbit">
+                    <img src="images/Lucille.jpg" alt="Lucille">
                 </div>
                 <div class="rabbit-info">
                     <div class="rabbit-details">
-                        <span class="breed-tag">Champagne d'Argent</span>
+                        <span class="breed-tag">Champagne</span>
                         <span class="gender-tag">Doe</span>
-                        <span class="age-tag">3 Years Old</span>
+                        <span class="age-tag">3 Yrs</span>
                     </div>
                     <h3>Lucille</h3>
-                    <p><strong>Matriarch of our herd</strong> from a breeder in Delta. This super sweet 3-year-old is an excellent mother who has produced several beautiful litters. Lucille is the foundation of our breeding program and loves attention.</p>
-                    <p><strong>Role:</strong> Foundation breeding doe, mother of available kits</p>
+                    <p>Matriarch from Delta. Excellent mother, foundation of our program.</p>
                 </div>
             </div>
             
             <!-- Dusty -->
             <div class="rabbit-card">
                 <div class="rabbit-image-container">
-                    <img src="images/DustyFurLookingRight.jpg" alt="Dusty the Rabbit">
+                    <img src="images/DustyFurLookingRight.jpg" alt="Dusty">
                 </div>
                 <div class="rabbit-info">
                     <div class="rabbit-details">
-                        <span class="breed-tag">Champagne/Silver Fox Mix</span>
+                        <span class="breed-tag">Champ/Silver Fox</span>
                         <span class="gender-tag">Buck</span>
-                        <span class="age-tag">Born May 27, 2025</span>
+                        <span class="age-tag">5/27/25</span>
                     </div>
                     <h3>Dusty</h3>
-                    <p><strong>Half Champagne d'Argent, half Silver Fox mix</strong> who weighed 11 lbs with good commercial body type. He has a thick coat that takes after his Silver Fox grandfather with extra silvering. Dusty is aloof but tolerates his humans well.</p>
-                    <p><strong>Features:</strong> Thick fur, large size, excellent breeder, growing into his role</p>
+                    <p>11 lbs, thick coat with silvering. Aloof but good breeder.</p>
                 </div>
             </div>
             
-            <!-- Pippy - USING WORKING IMAGE -->
+            <!-- Pippy -->
             <div class="rabbit-card">
                 <div class="rabbit-image-container">
-                    <img src="images/PippieLookingLeft.jpg" alt="Pippy the Holland Lop Rabbit">
+                    <img src="images/PippieLookingLeft.jpg" alt="Pippy">
                 </div>
                 <div class="rabbit-info">
                     <div class="rabbit-details">
                         <span class="breed-tag">Holland Lop</span>
                         <span class="gender-tag">Doe</span>
-                        <span class="age-tag">Shelter Rescue</span>
+                        <span class="age-tag">Rescue</span>
                     </div>
                     <h3>Pippy</h3>
-                    <p><strong>Our cute random pet rabbit</strong> (not part of the breeding program). She is a Holland Lop that came from the animal shelter. Pippy is pure pet who enjoys lounging and getting treats.</p>
-                    <p><strong>Role:</strong> Family pet, comic relief, professional napper</p>
+                    <p>Shelter rescue. Family pet, professional napper.</p>
                 </div>
             </div>
         </div>
         
-        <!-- Breeding Program Info -->
-        <section class="breeding-program">
-            <h3>Our Breeding Program</h3>
-            <p>We focus on two heritage breeds perfect for Alaska's climate:</p>
-            <ul>
-                <li><strong>Champagne d'Argent:</strong> Known for their beautiful silvered fur that develops with age and excellent meat production</li>
-                <li><strong>Silver Fox:</strong> A dual-purpose breed with remarkable fur quality and good size</li>
-                <li><strong>Goals:</strong> Produce healthy, friendly rabbits with excellent meat conformation and quality pelts</li>
-                <li><strong>Care:</strong> All rabbits receive individual attention, proper nutrition, and clean, spacious living conditions</li>
-                <li><strong>Location:</strong> Raised in Fairbanks, Alaska - acclimated to cold weather conditions</li>
-            </ul>
-        </section>
-        
-        <!-- NEW: Full-width divider bar -->
-        <div class="full-divider"></div>
-        
-        <!-- NEW: Rabbit Skins Banner -->
-        <div class="skins-banner">
-            <img src="images/TextureOfRabbitSkinInSnow.jpg" alt="Rabbit Skin Texture in Snow">
-            <div class="banner-overlay">
-                <h3>Rabbit & Snowshoe Hare Fur Tanning</h3>
-                <p>Traditional hand-tanning services for beautiful, usable fur</p>
+        <!-- FUN REASON TO KEEP RABBITS - New Section with Carrot Image -->
+        <div class="fun-section">
+            <div class="fun-content">
+                <div class="fun-grid">
+                    <div class="fun-item">
+                        <h3>🐰 Best Fertilizer Ever</h3>
+                        <div class="fun-image-container">
+                            <img src="images/CarrotsWithRabbitPoopvsNot.jpg" alt="Carrots with vs without rabbit manure - left side with rabbit poop has double sized carrots">
+                        </div>
+                        <p><strong>Rabbit poop = garden gold!</strong> Left bed: with rabbit manure. Right bed: without. See the difference? Cold composts directly, won't burn plants. One more reason to love your bunnies.</p>
+                        <p><em>May your garden grow great!</em> 🌱</p>
+                    </div>
+                    
+                    <div class="fun-item">
+                        <h3>Bunny Petting Zoo</h3>
+                        <div class="fun-image-container">
+                            <img src="images/BunnyPettingZoo1.jpg" alt="Lucille and litter at Harvest Festival petting zoo with kids' collected grass">
+                        </div>
+                        <p><strong>Last year's Harvest Festival</strong> - Lucille and her litter with grass local kids collected. Free petting zoo to socialize our bunnies!</p>
+                        
+                        <!-- Donation Section inside petting zoo area -->
+                        <div class="donation-section">
+                            <h4>💚 Support the Winter Hay Fund</h4>
+                            <p>Petting zoo is free, but donations welcome for hay when Alaska winter hits.</p>
+                            <div class="donation-buttons">
+                                <a href="http://venmo.com/u/GJMTradingPost" class="donate-btn" target="_blank">Venmo @GJMTradingPost</a>
+                                <a href="http://paypal.me/AlaskaPhysics" class="donate-btn" target="_blank">PayPal.me/AlaskaPhysics</a>
+                            </div>
+                            <p class="hay-fund-note">Every bale helps keep bellies full through the cold months 🥕</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Christmas Pippy - as extra fun -->
+                <div class="fun-item" style="margin-top: 2rem;">
+                    <h3>🎄 Annoy Your Pets As Much As They Annoy You</h3>
+                    <div class="fun-image-container" style="max-width: 500px; margin: 0 auto;">
+                        <img src="images/ChristmasPippy.jpg" alt="Pippy looking mad in Christmas sweater">
+                    </div>
+                    <p>Pippy in her Christmas sweater. She's judging us. (She gets extra treats for modeling.)</p>
+                </div>
             </div>
         </div>
         
-        <!-- UPDATED: Tanning Services with Photos -->
+        <!-- Breeding Program (condensed) -->
+        <section class="breeding-program">
+            <h3>Our Breeding Program</h3>
+            <ul>
+                <li><strong>Champagne d'Argent:</strong> Silvered fur, excellent meat production</li>
+                <li><strong>Silver Fox:</strong> Dual-purpose, remarkable fur quality</li>
+                <li><strong>Goals:</strong> Healthy, friendly rabbits with meat conformation & quality pelts</li>
+                <li><strong>Care:</strong> Individual attention, spacious living, Fairbanks climate-hardy</li>
+            </ul>
+        </section>
+        
+        <div class="full-divider"></div>
+        
+        <!-- Rabbit Skins Banner -->
+        <div class="skins-banner">
+            <img src="images/TextureOfRabbitSkinInSnow.jpg" alt="Rabbit Skin in Snow">
+            <div class="banner-overlay">
+                <h3>Rabbit & Snowshoe Hare Fur Tanning</h3>
+                <p>Traditional hand-tanning for beautiful, usable fur</p>
+            </div>
+        </div>
+        
+        <!-- Tanning Services with Snowshoe Hare Image -->
         <section class="tanning-services">
             <div class="tanning-content">
                 <h3>Hand-Tanned Rabbit & Snowshoe Hare Pelts</h3>
-                <p>I offer traditional hand-tanning services for rabbit and snowshoe hare pelts. Using time-honored methods, I transform raw hides into soft, usable fur perfect for crafts, clothing, and traditional Alaskan items.</p>
+                <p>Traditional hand-tanning transforms raw hides into soft, usable fur for crafts, clothing, and traditional Alaskan items.</p>
                 
                 <div class="skins-grid">
                     <div class="skins-image-container">
@@ -746,48 +738,54 @@
                     </div>
                 </div>
                 
-                <p>This service honors the full use of the animal, creating beautiful, warm fur items while practicing sustainable harvest traditions. Perfect for hunters, homesteaders, and crafters who want to utilize every part of their harvest.</p>
-                
-                <div class="price-highlight">
-                    $5–10 per skin (based on pelt size)
+                <!-- NEW: Snowshoe Hare image added here -->
+                <div style="text-align: center; margin: 3rem 0;">
+                    <h4>Snowshoe Hare Pelts Available</h4>
+                    <div class="skins-image-container" style="max-width: 600px; margin: 0 auto;">
+                        <img src="images/snowshoehare.jpg" alt="Snowshoe Hare pelt - excellent for traditional Alaskan crafts">
+                    </div>
+                    <p>Snowshoe hare pelts - light, warm, perfect for traditional crafts.</p>
                 </div>
                 
-                <h3 style="margin-top: 4rem;">Finished Rabbit Skin Hats</h3>
-                <p>See examples of finished products made from our hand-tanned rabbit skins:</p>
+                <p>This service honors full use of the animal. Perfect for hunters, homesteaders, and crafters.</p>
+                
+                <div class="price-highlight">
+                    $5–10 per skin (based on size)
+                </div>
+                
+                <h3 style="margin-top: 3rem;">Finished Rabbit Skin Hats</h3>
                 
                 <div class="hats-grid">
-                    <!-- Rabbit Skin Hat -->
                     <div class="hat-card">
                         <div class="hat-image-container">
                             <img src="images/RabbitSkinHat.jpg" alt="Rabbit Skin Hat">
                         </div>
                         <h4>Rabbit Skin Hat</h4>
-                        <p>Warm, handcrafted hat made from our tanned rabbit skins. Perfect for Alaska winters.</p>
+                        <p>Handcrafted, incredibly warm for Alaska winters.</p>
                     </div>
                     
-                    <!-- Modeling the Hat -->
                     <div class="hat-card">
                         <div class="hat-image-container">
                             <img src="images/RabbitHatOn.jpg" alt="Modeling Rabbit Skin Hat">
                         </div>
                         <h4>Warm & Cozy</h4>
-                        <p>Modeling one of our rabbit skin hats. Each hat is custom made and incredibly warm.</p>
+                        <p>Custom made to order.</p>
                     </div>
                 </div>
                 
-                <p style="margin-top: 2rem;">Custom fur items available upon request. Contact me to discuss your tanning needs or custom hat orders.</p>
+                <p style="margin-top: 2rem;">Custom fur items available. Contact me for tanning or hat orders.</p>
             </div>
         </section>
         
-        <!-- Back to Home Button -->
+        <!-- Back to Home -->
         <div style="text-align: center; padding: 2rem;">
             <a href="index.html" class="back-btn">← Back to Home</a>
         </div>
     </main>
     
     <footer>
-        <p>© 2024 Geneva's Trading Post | Rabbitry located in Fairbanks, Alaska</p>
-        <p>All rabbits raised with care and attention to health and temperament</p>
+        <p>© 2024 Geneva's Trading Post | Fairbanks, Alaska</p>
+        <p>Rabbits raised with care and attention</p>
     </footer>
 </body>
 </html>
