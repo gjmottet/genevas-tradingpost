@@ -81,6 +81,71 @@
             background: #3498db;
         }
         
+        /* Hero Carrot Section - NEW at top */
+        .carrot-hero {
+            background: linear-gradient(135deg, #2e7d32 0%, #1b5e20 100%);
+            padding: 3rem 2rem;
+            color: white;
+            text-align: center;
+            border-bottom: 5px solid #ffb74d;
+        }
+        
+        .carrot-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .carrot-text {
+            text-align: left;
+        }
+        
+        .carrot-text h2 {
+            font-size: 2.2rem;
+            margin: 0 0 1rem;
+            color: white;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        }
+        
+        .carrot-text p {
+            font-size: 1.3rem;
+            line-height: 1.6;
+            margin: 0 0 1rem;
+        }
+        
+        .carrot-highlight {
+            background: #ffb74d;
+            color: #1b5e20;
+            padding: 0.5rem 1rem;
+            border-radius: 30px;
+            display: inline-block;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .carrot-image-container {
+            background: rgba(255,255,255,0.2);
+            border-radius: 15px;
+            padding: 1.5rem;
+            height: 350px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .carrot-image-container img {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        
         .rabbitry-intro {
             text-align: center;
             padding: 2rem 2rem 1rem;
@@ -98,7 +163,6 @@
             font-size: 1.2rem;
             line-height: 1.5;
             color: #34495e;
-            margin-bottom: 0.5rem;
         }
         
         .section-divider {
@@ -272,62 +336,56 @@
             margin: 0;
         }
         
-        .fun-section {
-            background: #f0f7e6;
+        /* Petting Zoo Section - Separate */
+        .petting-zoo-section {
+            background: #fff3e0;
             padding: 3rem 2rem;
             margin: 2rem auto;
-            border-top: 5px solid #7cb342;
-            border-bottom: 5px solid #7cb342;
+            border-top: 5px solid #ff9800;
+            border-bottom: 5px solid #ff9800;
         }
         
-        .fun-content {
-            max-width: 1200px;
+        .petting-zoo-content {
+            max-width: 1000px;
             margin: 0 auto;
-        }
-        
-        .fun-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-        
-        .fun-item {
-            background: white;
-            border-radius: 10px;
-            padding: 1.5rem;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             text-align: center;
         }
         
-        .fun-item h3 {
+        .petting-zoo-content h3 {
+            font-size: 2rem;
             color: #2c3e50;
-            margin-top: 0;
+            margin: 0 0 1rem;
         }
         
-        .fun-image-container {
-            width: 100%;
-            height: 280px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: #f5f5f5;
-            border-radius: 8px;
-            margin: 1rem 0;
+        .petting-zoo-image {
+            max-width: 800px;
+            margin: 2rem auto;
+            background: white;
+            border-radius: 15px;
+            padding: 1.5rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
         
-        .fun-image-container img {
+        .petting-zoo-image img {
             max-width: 100%;
-            max-height: 100%;
+            max-height: 400px;
             object-fit: contain;
+            border-radius: 10px;
+        }
+        
+        .zoo-description {
+            font-size: 1.2rem;
+            color: #34495e;
+            max-width: 700px;
+            margin: 1rem auto;
         }
         
         .donation-section {
-            background: #fff3e0;
+            background: #e8f5e9;
             padding: 2rem;
-            border-radius: 10px;
-            margin: 2rem 0;
-            text-align: center;
+            border-radius: 15px;
+            margin: 2rem auto;
+            max-width: 700px;
         }
         
         .donation-buttons {
@@ -339,25 +397,67 @@
         }
         
         .donate-btn {
-            background: #3498db;
+            background: #4caf50;
             color: white;
             padding: 1rem 2rem;
             text-decoration: none;
             border-radius: 30px;
             font-weight: bold;
             font-size: 1.2rem;
-            transition: transform 0.3s;
+            transition: transform 0.3s, background 0.3s;
         }
         
         .donate-btn:hover {
             transform: scale(1.05);
-            background: #2980b9;
+            background: #388e3c;
+        }
+        
+        .venmo-btn {
+            background: #3f51b5;
+        }
+        
+        .venmo-btn:hover {
+            background: #303f9f;
+        }
+        
+        .paypal-btn {
+            background: #0070ba;
+        }
+        
+        .paypal-btn:hover {
+            background: #005ea6;
         }
         
         .hay-fund-note {
             font-style: italic;
-            color: #7f8c8d;
-            margin-top: 0.5rem;
+            color: #2e7d32;
+            font-size: 1.1rem;
+            margin-top: 1rem;
+        }
+        
+        /* Christmas Pippy separate */
+        .christmas-pippy {
+            max-width: 600px;
+            margin: 2rem auto;
+            padding: 1.5rem;
+            background: #fce4ec;
+            border-radius: 15px;
+            text-align: center;
+            border: 3px solid #c2185b;
+        }
+        
+        .christmas-pippy img {
+            max-width: 100%;
+            max-height: 300px;
+            object-fit: contain;
+            border-radius: 10px;
+        }
+        
+        .christmas-pippy p {
+            font-size: 1.3rem;
+            color: #880e4f;
+            font-weight: bold;
+            margin: 1rem 0 0;
         }
         
         .skins-banner {
@@ -431,6 +531,7 @@
             max-width: 100%;
             max-height: 100%;
             object-fit: contain;
+            border-radius: 5px;
         }
         
         .hat-card {
@@ -444,6 +545,11 @@
             color: white;
             font-size: 1.5rem;
             margin: 0 0 0.5rem;
+        }
+        
+        .hat-card p {
+            font-size: 1.1rem;
+            color: #ecf0f1;
         }
         
         .price-highlight {
@@ -493,8 +599,12 @@
         }
         
         @media (max-width: 768px) {
-            .fun-grid {
+            .carrot-content {
                 grid-template-columns: 1fr;
+            }
+            
+            .carrot-text {
+                text-align: center;
             }
             
             .rabbit-grid {
@@ -516,6 +626,14 @@
             .donate-btn {
                 width: 80%;
             }
+            
+            .skins-grid, .hats-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .skins-image-container, .hat-image-container {
+                height: 250px;
+            }
         }
     </style>
 </head>
@@ -535,10 +653,27 @@
     </nav>
     
     <main>
-        <!-- Condensed intro -->
+        <!-- CARROT HERO SECTION - Now at the very top -->
+        <div class="carrot-hero">
+            <div class="carrot-content">
+                <div class="carrot-text">
+                    <h2>🥕 Rabbit Poop = Garden Gold</h2>
+                    <p>See the difference? Same carrots, same soil, same water... but the bed on the <strong>LEFT got rabbit manure</strong>. Twice the size!</p>
+                    <p>Rabbit poop is the <strong>best fertilizer</strong> - cold composts directly, won't burn plants, and turns your garden into a powerhouse.</p>
+                    <div class="carrot-highlight">
+                        One more reason to keep rabbits! May your garden grow great 🌱
+                    </div>
+                </div>
+                <div class="carrot-image-container">
+                    <img src="images/CarrotsWithRabbitPoopvsNot.jpg" alt="Carrot comparison - left with rabbit poop, right without - left carrots are twice as big">
+                </div>
+            </div>
+        </div>
+        
+        <!-- Meet Our Family (condensed intro) -->
         <section class="rabbitry-intro">
-            <h2>Alaskan Rabbit Family</h2>
-            <p>Heritage meat & fur rabbits raised with care. Friendly, healthy stock for homesteaders.</p>
+            <h2>Meet Our Rabbit Family</h2>
+            <p>Heritage meat & fur rabbits raised with care in Fairbanks. Friendly, healthy stock for homesteaders and pet lovers.</p>
         </section>
         
         <!-- Rabbits for Sale -->
@@ -660,46 +795,33 @@
             </div>
         </div>
         
-        <!-- FUN REASON TO KEEP RABBITS - New Section with Carrot Image -->
-        <div class="fun-section">
-            <div class="fun-content">
-                <div class="fun-grid">
-                    <div class="fun-item">
-                        <h3>🐰 Best Fertilizer Ever</h3>
-                        <div class="fun-image-container">
-                            <img src="images/CarrotsWithRabbitPoopvsNot.jpg" alt="Carrots with vs without rabbit manure - left side with rabbit poop has double sized carrots">
-                        </div>
-                        <p><strong>Rabbit poop = garden gold!</strong> Left bed: with rabbit manure. Right bed: without. See the difference? Cold composts directly, won't burn plants. One more reason to love your bunnies.</p>
-                        <p><em>May your garden grow great!</em> 🌱</p>
+        <!-- PETTING ZOO SECTION - Separate from carrot stuff -->
+        <div class="petting-zoo-section">
+            <div class="petting-zoo-content">
+                <h3>🐰 Free Bunny Petting Zoo</h3>
+                <div class="petting-zoo-image">
+                    <img src="images/BunnyPettingZoo1.jpg" alt="Lucille and litter at Harvest Festival petting zoo with grass local kids collected">
+                </div>
+                <p class="zoo-description">
+                    Last year's Harvest Festival - Lucille and her litter with grass local kids collected. 
+                    Free petting zoo to socialize our bunnies (and spread the rabbit love!).
+                </p>
+                
+                <!-- Donation Section inside petting zoo -->
+                <div class="donation-section">
+                    <h4 style="color: #2e7d32; margin-top: 0;">💚 Support the Winter Hay Fund</h4>
+                    <p>Petting zoo is always free, but if you'd like to help keep bellies full when Alaska winter hits, donations are gratefully accepted.</p>
+                    <div class="donation-buttons">
+                        <a href="http://venmo.com/u/GJMTradingPost" class="donate-btn venmo-btn" target="_blank">Venmo @GJMTradingPost</a>
+                        <a href="http://paypal.me/AlaskaPhysics" class="donate-btn paypal-btn" target="_blank">PayPal.me/AlaskaPhysics</a>
                     </div>
-                    
-                    <div class="fun-item">
-                        <h3>Bunny Petting Zoo</h3>
-                        <div class="fun-image-container">
-                            <img src="images/BunnyPettingZoo1.jpg" alt="Lucille and litter at Harvest Festival petting zoo with kids' collected grass">
-                        </div>
-                        <p><strong>Last year's Harvest Festival</strong> - Lucille and her litter with grass local kids collected. Free petting zoo to socialize our bunnies!</p>
-                        
-                        <!-- Donation Section inside petting zoo area -->
-                        <div class="donation-section">
-                            <h4>💚 Support the Winter Hay Fund</h4>
-                            <p>Petting zoo is free, but donations welcome for hay when Alaska winter hits.</p>
-                            <div class="donation-buttons">
-                                <a href="http://venmo.com/u/GJMTradingPost" class="donate-btn" target="_blank">Venmo @GJMTradingPost</a>
-                                <a href="http://paypal.me/AlaskaPhysics" class="donate-btn" target="_blank">PayPal.me/AlaskaPhysics</a>
-                            </div>
-                            <p class="hay-fund-note">Every bale helps keep bellies full through the cold months 🥕</p>
-                        </div>
-                    </div>
+                    <p class="hay-fund-note">Every bale helps! All donations go to "the winter hay fund" 🥕</p>
                 </div>
                 
-                <!-- Christmas Pippy - as extra fun -->
-                <div class="fun-item" style="margin-top: 2rem;">
-                    <h3>🎄 Annoy Your Pets As Much As They Annoy You</h3>
-                    <div class="fun-image-container" style="max-width: 500px; margin: 0 auto;">
-                        <img src="images/ChristmasPippy.jpg" alt="Pippy looking mad in Christmas sweater">
-                    </div>
-                    <p>Pippy in her Christmas sweater. She's judging us. (She gets extra treats for modeling.)</p>
+                <!-- Christmas Pippy as bonus inside petting zoo section -->
+                <div class="christmas-pippy">
+                    <img src="images/ChristmasPippy.jpg" alt="Pippy looking mad in Christmas sweater">
+                    <p>🎄 "Annoy your pets as much as they annoy you" - Pippy, probably</p>
                 </div>
             </div>
         </div>
@@ -726,11 +848,11 @@
             </div>
         </div>
         
-        <!-- Tanning Services with Snowshoe Hare Image -->
+        <!-- ORIGINAL TANNING SERVICES - Restored without snowshoe hare image -->
         <section class="tanning-services">
             <div class="tanning-content">
                 <h3>Hand-Tanned Rabbit & Snowshoe Hare Pelts</h3>
-                <p>Traditional hand-tanning transforms raw hides into soft, usable fur for crafts, clothing, and traditional Alaskan items.</p>
+                <p>I offer traditional hand-tanning services for rabbit and snowshoe hare pelts. Using time-honored methods, I transform raw hides into soft, usable fur perfect for crafts, clothing, and traditional Alaskan items.</p>
                 
                 <div class="skins-grid">
                     <div class="skins-image-container">
@@ -738,42 +860,36 @@
                     </div>
                 </div>
                 
-                <!-- NEW: Snowshoe Hare image added here -->
-                <div style="text-align: center; margin: 3rem 0;">
-                    <h4>Snowshoe Hare Pelts Available</h4>
-                    <div class="skins-image-container" style="max-width: 600px; margin: 0 auto;">
-                        <img src="images/snowshoehare.jpg" alt="Snowshoe Hare pelt - excellent for traditional Alaskan crafts">
-                    </div>
-                    <p>Snowshoe hare pelts - light, warm, perfect for traditional crafts.</p>
-                </div>
-                
-                <p>This service honors full use of the animal. Perfect for hunters, homesteaders, and crafters.</p>
+                <p>This service honors the full use of the animal, creating beautiful, warm fur items while practicing sustainable harvest traditions. Perfect for hunters, homesteaders, and crafters who want to utilize every part of their harvest.</p>
                 
                 <div class="price-highlight">
-                    $5–10 per skin (based on size)
+                    $5–10 per skin (based on pelt size)
                 </div>
                 
-                <h3 style="margin-top: 3rem;">Finished Rabbit Skin Hats</h3>
+                <h3 style="margin-top: 4rem;">Finished Rabbit Skin Hats</h3>
+                <p>See examples of finished products made from our hand-tanned rabbit skins:</p>
                 
                 <div class="hats-grid">
+                    <!-- Rabbit Skin Hat -->
                     <div class="hat-card">
                         <div class="hat-image-container">
                             <img src="images/RabbitSkinHat.jpg" alt="Rabbit Skin Hat">
                         </div>
                         <h4>Rabbit Skin Hat</h4>
-                        <p>Handcrafted, incredibly warm for Alaska winters.</p>
+                        <p>Warm, handcrafted hat made from our tanned rabbit skins. Perfect for Alaska winters.</p>
                     </div>
                     
+                    <!-- Modeling the Hat -->
                     <div class="hat-card">
                         <div class="hat-image-container">
                             <img src="images/RabbitHatOn.jpg" alt="Modeling Rabbit Skin Hat">
                         </div>
                         <h4>Warm & Cozy</h4>
-                        <p>Custom made to order.</p>
+                        <p>Modeling one of our rabbit skin hats. Each hat is custom made and incredibly warm.</p>
                     </div>
                 </div>
                 
-                <p style="margin-top: 2rem;">Custom fur items available. Contact me for tanning or hat orders.</p>
+                <p style="margin-top: 2rem;">Custom fur items available upon request. Contact me to discuss your tanning needs or custom hat orders.</p>
             </div>
         </section>
         
