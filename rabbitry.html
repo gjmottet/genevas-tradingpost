@@ -81,12 +81,11 @@
             background: #3498db;
         }
         
-        /* Combined Intro Box - NO top border, only bottom border */
+        /* Combined Intro Box */
         .combined-intro {
             background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%);
             padding: 2.5rem 2rem;
             border-bottom: 5px solid #7cb342;
-            /* REMOVED border-top completely */
         }
         
         .intro-content {
@@ -423,6 +422,39 @@
             margin: 1rem auto;
         }
         
+        /* ARBA Convention Banner - NEW */
+        .arba-banner {
+            background: linear-gradient(135deg, #6a1b9a 0%, #4a148c 100%);
+            padding: 1.8rem;
+            text-align: center;
+            color: white;
+            border-radius: 10px;
+            max-width: 900px;
+            margin: 2rem auto;
+            box-shadow: 0 8px 20px rgba(106, 27, 154, 0.3);
+            border: 3px solid #ffd54f;
+        }
+        
+        .arba-banner h3 {
+            font-size: 2rem;
+            margin: 0 0 0.5rem;
+            color: #ffd54f;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        }
+        
+        .arba-banner p {
+            font-size: 1.3rem;
+            margin: 0;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        
+        .arba-banner .dates {
+            font-size: 1.5rem;
+            color: #ffd54f;
+            margin-top: 0.5rem;
+        }
+        
         .donation-section {
             background: #e8f5e9;
             padding: 2rem;
@@ -501,7 +533,7 @@
             margin: 1rem 0 0;
         }
         
-        /* UPDATED: Shorter fur banner with larger text */
+        /* Shorter fur banner with larger text */
         .skins-banner {
             position: relative;
             width: 100%;
@@ -699,6 +731,18 @@
             .skins-grid, .hats-grid {
                 grid-template-columns: 1fr;
             }
+            
+            .arba-banner h3 {
+                font-size: 1.5rem;
+            }
+            
+            .arba-banner p {
+                font-size: 1.1rem;
+            }
+            
+            .arba-banner .dates {
+                font-size: 1.2rem;
+            }
         }
     </style>
 </head>
@@ -708,17 +752,18 @@
         <p>Champagne d'Argent & Silver Fox | Fairbanks, AK</p>
     </header>
     
+    <!-- Navigation - FIXED order to match index and changed to Fantasy Art -->
     <nav>
         <a href="index.html">Home</a>
-        <a href="alaska-textiles.html">Textile Art</a>
-        <a href="rabbitry.html" class="current">Rabbitry</a>
+        <a href="alaska-textiles.html">Alaskan Textile Art</a>
+        <a href="rabbitry.html" class="current">My Rabbitry</a>
         <a href="farm-stand.html">Farm Stand</a>
-        <a href="fantasy-ball.html">Fantasy Ball</a>
+        <a href="fantasy-ball.html">Fantasy Art</a>
         <a href="contact.html">Contact</a>
     </nav>
     
     <main>
-        <!-- COMBINED INTRO BOX - No top border -->
+        <!-- COMBINED INTRO BOX -->
         <div class="combined-intro">
             <div class="intro-content">
                 <div class="intro-text">
@@ -727,13 +772,13 @@
                 </div>
                 
                 <div class="intro-grid">
-                    <!-- Left Card: Meet the Rabbits - SHORTENED -->
+                    <!-- Left Card: Meet the Rabbits -->
                     <div class="intro-card">
                         <h3><span>🐰</span> Meet the Bunnies</h3>
                         <p>Champagne d'Argent and Silver Fox rabbits with beautiful fur, excellent meat conformation, and friendly dispositions. Each gets individual attention in our Alaska setup.</p>
                     </div>
                     
-                    <!-- Right Card: Garden Gold - CONDENSED to match length -->
+                    <!-- Right Card: Garden Gold -->
                     <div class="intro-card">
                         <h3><span>🌱</span> Garden Gold</h3>
                         <p>Best reason to keep rabbits: their poop is the best fertilizer on the planet.</p>
@@ -898,6 +943,14 @@
                     <p class="hay-fund-note">Every bale helps! All donations go to "the winter hay fund" 🥕</p>
                 </div>
                 
+                <!-- ARBA CONVENTION BANNER - NEW: Placed between donation and Christmas Pippy -->
+                <div class="arba-banner">
+                    <h3>🐇 ARBA Convention 2026</h3>
+                    <p>We're planning to attend!</p>
+                    <div class="dates">103rd Annual ARBA Convention & Show</div>
+                    <p>October 24–28, 2026 • Reno, Nevada</p>
+                </div>
+                
                 <!-- Christmas Pippy -->
                 <div class="christmas-pippy">
                     <img src="images/ChristmasPippy.jpg" alt="Pippy looking mad in Christmas sweater">
@@ -919,7 +972,7 @@
         
         <div class="full-divider"></div>
         
-        <!-- Shorter Rabbit Skins Banner with Larger Text -->
+        <!-- Rabbit Skins Banner -->
         <div class="skins-banner">
             <img src="images/TextureOfRabbitSkinInSnow.jpg" alt="Rabbit Skin in Snow">
             <div class="banner-overlay">
