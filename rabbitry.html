@@ -81,12 +81,12 @@
             background: #3498db;
         }
         
-        /* Combined Intro Box - Rabbit Family + Garden Gold */
+        /* Combined Intro Box - NO top border, only bottom border */
         .combined-intro {
             background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%);
             padding: 2.5rem 2rem;
             border-bottom: 5px solid #7cb342;
-            border-top: 3px solid #7cb342;
+            /* REMOVED border-top completely */
         }
         
         .intro-content {
@@ -116,7 +116,7 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 2.5rem;
-            align-items: center;
+            align-items: stretch;
             margin-top: 1.5rem;
         }
         
@@ -127,6 +127,8 @@
             box-shadow: 0 8px 25px rgba(0,0,0,0.1);
             height: 100%;
             border-top: 4px solid #7cb342;
+            display: flex;
+            flex-direction: column;
         }
         
         .intro-card h3 {
@@ -144,22 +146,28 @@
         
         .intro-card p {
             font-size: 1.2rem;
-            line-height: 1.6;
+            line-height: 1.5;
             color: #34495e;
             margin: 0 0 1rem;
+            flex-grow: 1;
         }
         
         .garden-highlight {
             background: #e8f5e8;
             padding: 1rem;
             border-radius: 10px;
-            margin: 1rem 0 0;
+            margin: 0.5rem 0 0;
             border-left: 5px solid #7cb342;
+        }
+        
+        .garden-highlight p {
+            margin: 0.3rem 0;
+            font-size: 1.1rem;
         }
         
         .garden-highlight strong {
             color: #2e7d32;
-            font-size: 1.3rem;
+            font-size: 1.2rem;
         }
         
         .carrot-image-box {
@@ -497,7 +505,7 @@
         .skins-banner {
             position: relative;
             width: 100%;
-            height: 250px; /* SHORTER - reduced from 350px */
+            height: 250px;
             overflow: hidden;
             margin: 3rem 0;
         }
@@ -525,7 +533,7 @@
         }
         
         .banner-overlay h3 {
-            font-size: 3rem; /* LARGER */
+            font-size: 3rem;
             margin: 0 0 0.5rem;
             color: white;
             text-shadow: 0 3px 10px rgba(0,0,0,0.5);
@@ -533,7 +541,7 @@
         }
         
         .banner-overlay p {
-            font-size: 1.8rem; /* LARGER */
+            font-size: 1.8rem;
             max-width: 800px;
             text-shadow: 0 2px 5px rgba(0,0,0,0.5);
             margin: 0;
@@ -710,36 +718,35 @@
     </nav>
     
     <main>
-        <!-- COMBINED INTRO BOX - Rabbit Family + Garden Gold with Carrot Image Below -->
+        <!-- COMBINED INTRO BOX - No top border -->
         <div class="combined-intro">
             <div class="intro-content">
                 <div class="intro-text">
                     <h2>Our Alaskan Rabbit Family</h2>
-                    <p>Heritage meat & fur rabbits raised with care in Fairbanks. Friendly, healthy stock for homesteaders and pet lovers.</p>
+                    <p>Heritage rabbits raised with care in Fairbanks and Gustavus for meat and fur. Friendly, healthy stock for homesteaders.</p>
                 </div>
                 
                 <div class="intro-grid">
-                    <!-- Left Card: Meet the Rabbits -->
+                    <!-- Left Card: Meet the Rabbits - SHORTENED -->
                     <div class="intro-card">
                         <h3><span>🐰</span> Meet the Bunnies</h3>
-                        <p>Champagne d'Argent and Silver Fox rabbits known for their beautiful fur, excellent meat conformation, and friendly dispositions. Each rabbit gets individual attention and room to thrive in our Alaska setup.</p>
-                        <p><strong>Our herd:</strong> Lucille (matriarch), Dusty (buck), Pippy (pet), and this year's lovely litter.</p>
+                        <p>Champagne d'Argent and Silver Fox rabbits with beautiful fur, excellent meat conformation, and friendly dispositions. Each gets individual attention in our Alaska setup.</p>
                     </div>
                     
-                    <!-- Right Card: Garden Gold -->
+                    <!-- Right Card: Garden Gold - CONDENSED to match length -->
                     <div class="intro-card">
                         <h3><span>🌱</span> Garden Gold</h3>
-                        <p>Here's the best reason to keep rabbits (besides loving them): their poop is the <strong>best fertilizer on the planet</strong>.</p>
+                        <p>Best reason to keep rabbits: their poop is the best fertilizer on the planet.</p>
                         <div class="garden-highlight">
-                            <strong>✓ Cold composts directly</strong><br>
-                            <strong>✓ Won't burn plants</strong><br>
-                            <strong>✓ Doubles your carrot size!</strong>
+                            <p><strong>✓ Cold composts directly</strong></p>
+                            <p><strong>✓ Won't burn plants</strong></p>
+                            <p><strong>✓ Doubles your carrot size!</strong></p>
                         </div>
                     </div>
                     
                     <!-- Carrot Image spanning both cards below them -->
                     <div class="carrot-image-box">
-                        <p>🐇 See what rabbit manure did for these carrots (left side) vs. without (right side) ⬇️</p>
+                        <p>🐇 Rabbit manure made these carrots (left side) vs. without (right side) ⬇️</p>
                         <div class="carrot-image-container">
                             <img src="images/CarrotsWithRabbitPoopvsNot.jpg" alt="Carrot comparison - left with rabbit poop, right without - left carrots are twice as big">
                         </div>
@@ -912,7 +919,7 @@
         
         <div class="full-divider"></div>
         
-        <!-- UPDATED: Shorter Rabbit Skins Banner with Larger Text -->
+        <!-- Shorter Rabbit Skins Banner with Larger Text -->
         <div class="skins-banner">
             <img src="images/TextureOfRabbitSkinInSnow.jpg" alt="Rabbit Skin in Snow">
             <div class="banner-overlay">
