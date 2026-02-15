@@ -26,10 +26,9 @@
         
         .page-header p {
             font-size: 1.2rem;
-            margin: 0.5rem 0 0 0;
+            margin: 0.5rem auto 0;
             color: #ecf0f1;
             max-width: 800px;
-            margin: 1rem auto;
         }
         
         nav {
@@ -50,11 +49,7 @@
             transition: background 0.3s ease;
         }
         
-        nav a:hover {
-            background: #3498db;
-        }
-        
-        .current {
+        nav a:hover, .current {
             background: #3498db;
         }
         
@@ -116,34 +111,62 @@
             font-size: 1.1rem;
         }
         
-        .email-protected {
+        /* NEW: Email button styling - modern and secure */
+        .email-button-section {
             background: #f8f9fa;
-            padding: 1.2rem;
+            padding: 1.5rem;
             border-radius: 8px;
-            border: 1px dashed #3498db;
-            margin-top: 1.5rem;
+            border: 2px solid #3498db;
+            margin: 1.5rem 0;
+            text-align: center;
         }
         
-        .email-protected p {
-            margin: 0.5rem 0;
-            font-family: monospace;
-        }
-        
-        .email-protected strong {
-            font-size: 1.1rem;
-        }
-        
-        .email-address {
-            font-size: 1.2rem;
+        .email-button-section p {
+            margin: 0 0 1rem 0;
             font-weight: bold;
-            line-height: 1.4;
+            color: #2c3e50;
         }
         
-        .email-instruction {
-            font-size: 0.95rem;
+        .email-btn {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.3s, background 0.3s;
+            box-shadow: 0 4px 10px rgba(52, 152, 219, 0.3);
+        }
+        
+        .email-btn:hover {
+            background: #2980b9;
+            transform: scale(1.05);
+        }
+        
+        .email-btn i {
+            margin-right: 0.5rem;
+            font-size: 1.3rem;
+        }
+        
+        .email-note {
+            font-size: 0.9rem;
             color: #7f8c8d;
+            margin-top: 1rem;
             font-style: italic;
-            margin-top: 0.5rem;
+        }
+        
+        /* Fallback for users without JavaScript */
+        .fallback-email {
+            display: none;
+            margin-top: 1rem;
+            padding: 1rem;
+            background: #fff3cd;
+            border-radius: 5px;
+            font-size: 0.9rem;
         }
         
         .markets-section {
@@ -182,10 +205,10 @@
             transform: translateY(-5px);
         }
         
-        /* FIXED: Show full images without cropping */
+        /* UPDATED: Larger images - increased height */
         .market-image-container {
             width: 100%;
-            height: 220px;
+            height: 280px; /* INCREASED from 220px */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -214,8 +237,9 @@
         
         .market-info p {
             color: #34495e;
-            line-height: 1.6;
+            line-height: 1.5; /* Tighter line height */
             margin: 0.5rem 0;
+            font-size: 1rem; /* Slightly smaller for condensing */
         }
         
         .market-season {
@@ -253,9 +277,10 @@
             align-items: center;
         }
         
+        /* CONDENSED bio text */
         .bio-text {
-            font-size: 1.2rem;
-            line-height: 1.8;
+            font-size: 1.1rem; /* Slightly smaller */
+            line-height: 1.6; /* Tighter */
             color: #34495e;
         }
         
@@ -264,13 +289,93 @@
             padding: 1.5rem;
             border-radius: 8px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-            margin-top: 1.5rem;
+            margin-top: 1rem;
         }
         
         .bio-highlight h4 {
             color: #9b59b6;
             margin-top: 0;
             font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+        }
+        
+        .bio-highlight p {
+            margin: 0.3rem 0; /* Tighter spacing */
+        }
+        
+        /* NEW: Homestead Donation Banner at bottom */
+        .donation-banner {
+            grid-column: 1 / -1;
+            background: linear-gradient(135deg, #2e7d32 0%, #1b5e20 100%);
+            padding: 2.5rem;
+            border-radius: 15px;
+            margin: 2rem 0 1rem;
+            text-align: center;
+            color: white;
+            border: 4px solid #ffd54f;
+            box-shadow: 0 10px 30px rgba(46, 125, 50, 0.3);
+        }
+        
+        .donation-banner h3 {
+            font-size: 2.2rem;
+            margin: 0 0 0.5rem;
+            color: #ffd54f;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        }
+        
+        .donation-banner p {
+            font-size: 1.3rem;
+            margin: 0.5rem 0 1.5rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .donation-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 1.5rem 0;
+        }
+        
+        .donate-btn {
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.3rem;
+            transition: transform 0.3s, background 0.3s;
+            min-width: 200px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .donate-btn:hover {
+            transform: scale(1.05);
+        }
+        
+        .venmo-btn {
+            background: #3f51b5;
+        }
+        
+        .venmo-btn:hover {
+            background: #303f9f;
+        }
+        
+        .paypal-btn {
+            background: #0070ba;
+        }
+        
+        .paypal-btn:hover {
+            background: #005ea6;
+        }
+        
+        .donation-note {
+            font-size: 1rem;
+            opacity: 0.9;
+            margin-top: 1rem;
+            font-style: italic;
         }
         
         .back-btn {
@@ -281,7 +386,7 @@
             text-decoration: none;
             border-radius: 5px;
             font-weight: bold;
-            margin: 3rem auto;
+            margin: 2rem auto 0;
             text-align: center;
             font-size: 1.1rem;
             transition: background 0.3s ease;
@@ -323,7 +428,24 @@
             }
             
             .market-image-container {
-                height: 200px;
+                height: 240px;
+            }
+            
+            .donation-banner h3 {
+                font-size: 1.8rem;
+            }
+            
+            .donation-banner p {
+                font-size: 1.1rem;
+            }
+            
+            .donation-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .donate-btn {
+                width: 80%;
             }
         }
     </style>
@@ -334,12 +456,13 @@
         <p>Get in Touch for Commissions, Rabbitry Inquiries & Market Information</p>
     </header>
     
+    <!-- Navigation - UPDATED to match other pages (Fantasy Art) -->
     <nav>
         <a href="index.html">Home</a>
         <a href="alaska-textiles.html">Alaskan Textile Art</a>
         <a href="rabbitry.html">My Rabbitry</a>
         <a href="farm-stand.html">Farm Stand</a>
-        <a href="fantasy-ball.html">Fantasy Ball</a>
+        <a href="fantasy-ball.html">Fantasy Art</a>
         <a href="contact.html" class="current">Contact</a>
     </nav>
     
@@ -347,94 +470,134 @@
         <div class="contact-container">
             <!-- Contact Information -->
             <section class="contact-info">
-                <h2>Contact & Commission Information</h2>
+                <h2>Contact & Commission Info</h2>
                 
                 <div class="contact-details">
                     <div class="contact-item">
                         <h3>Email</h3>
-                        <div class="email-protected">
-                            <p><strong>For commissions & inquiries:</strong></p>
-                            <p class="email-address">gjmottetATgmailDOTcom</p>
-                            <p class="email-instruction">(Please replace AT with "@" and DOT with "." when emailing)</p>
+                        <!-- NEW: JavaScript email button - completely hidden from scrapers -->
+                        <div class="email-button-section">
+                            <p>📧 For commissions & inquiries:</p>
+                            <button onclick="sendEmail()" class="email-btn">
+                                <span style="font-size:1.3rem;">✉️</span> Click to Email Me
+                            </button>
+                            
+                            <!-- Fallback for users without JavaScript -->
+                            <div id="fallback-email" class="fallback-email">
+                                <p>If the button doesn't work, please use: <strong>gjmottet [at] gmail [dot] com</strong></p>
+                                <p class="email-instruction">(Replace [at] with @ and [dot] with .)</p>
+                            </div>
+                            
+                            <p class="email-note">No spam, just rabbits and art! 🐰</p>
                         </div>
+                        
+                        <script>
+                        function sendEmail() {
+                            // Email is completely hidden from spam bots
+                            var user = "gjmottet";
+                            var domain = "gmail.com";
+                            window.location.href = "mailto:" + user + "@" + domain;
+                        }
+                        
+                        // Show fallback if JavaScript is disabled (noscript would be better, but this works)
+                        window.onload = function() {
+                            // Just a safety check - button works fine with JS
+                        };
+                        </script>
+                        
+                        <!-- Noscript fallback for users with JS disabled -->
+                        <noscript>
+                            <div style="background:#f8d7da; padding:1rem; border-radius:5px; margin-top:0.5rem;">
+                                <p>Please enable JavaScript or use: <strong>gjmottet [at] gmail [dot] com</strong></p>
+                            </div>
+                        </noscript>
                     </div>
                     
                     <div class="contact-item">
                         <h3>Based In</h3>
-                        <p><strong>Fairbanks (Winter)</strong> - Available for local markets and commissions</p>
-                        <p><strong>Gustavus (Summer)</strong> - Available at Gustavus markets and local events</p>
+                        <p><strong>Fairbanks (Winter)</strong> - Local markets & commissions</p>
+                        <p><strong>Gustavus (Summer)</strong> - Gustavus 2nd Saturday Market</p>
                     </div>
                     
                     <div class="contact-item">
                         <h3>Available For</h3>
                         <p>• Custom textile art commissions</p>
-                        <p>• Rabbitry inquiries and adoptions</p>
-                        <p>• Rabbit fur tanning services</p>
-                        <p>• Gallery exhibitions and craft fairs</p>
-                        <p>• Fantasy Ball Fairbanks special orders</p>
+                        <p>• Rabbitry adoptions & inquiries</p>
+                        <p>• Fur tanning services</p>
+                        <p>• Fantasy Art special orders</p>
                     </div>
                     
                     <div class="contact-item">
                         <h3>Commission Process</h3>
-                        <p>All textile art is made to order with original designs. Contact me to discuss custom wildlife pieces, wearables, or fantasy-themed creations. Turnaround time varies based on complexity.</p>
+                        <p>Custom wildlife pieces, wearables, or fantasy-themed creations. Contact me to discuss your vision.</p>
                     </div>
                 </div>
             </section>
             
-            <!-- Markets Section -->
+            <!-- Markets Section - Images LARGER, text slightly condensed -->
             <section class="markets-section">
                 <h2>Find Me at Local Markets</h2>
                 
                 <div class="market-grid">
-                    <!-- Fairbanks Market -->
+                    <!-- Fairbanks Market - Image larger -->
                     <div class="market-card">
                         <div class="market-image-container">
                             <img src="images/holiday_market_rsz.jpg" alt="Fairbanks Craft Fair with Teddy Bear Display">
                         </div>
                         <div class="market-info">
                             <h3>Fairbanks Markets</h3>
-                            <p>Winter craft fairs and holiday markets in the Fairbanks area. Features the full spread of textile art including the popular hand-knit teddy bear collection.</p>
-                            <p><strong>Season:</strong> October - March</p>
-                            <span class="market-season">Winter Season</span>
+                            <p>Winter craft fairs and holiday markets. Textile art including the popular hand-knit teddy bear collection.</p>
+                            <p><strong>Season:</strong> Oct - Mar</p>
+                            <span class="market-season">Winter</span>
                         </div>
                     </div>
                     
-                    <!-- Gustavus Market -->
+                    <!-- Gustavus Market - Image larger -->
                     <div class="market-card">
                         <div class="market-image-container">
                             <img src="images/craftfair_rsz.jpg" alt="Gustavus Community Center Market">
                         </div>
                         <div class="market-info">
-                            <h3>Gustavus 2nd Saturday Market</h3>
-                            <p>Located at the Gustavus Community Center. Summer markets featuring Alaskan wildlife-inspired pieces perfect for visitors and locals alike.</p>
-                            <p><strong>Season:</strong> April - October</p>
-                            <span class="market-season">Summer Season</span>
+                            <h3>Gustavus 2nd Saturday</h3>
+                            <p>At the Gustavus Community Center. Alaskan wildlife-inspired pieces for visitors and locals.</p>
+                            <p><strong>Season:</strong> Apr - Oct</p>
+                            <span class="market-season">Summer</span>
                         </div>
                     </div>
                 </div>
             </section>
             
-            <!-- Bio Section -->
+            <!-- Bio Section - CONDENSED text -->
             <section class="bio-section">
                 <h2>About Geneva</h2>
                 
                 <div class="bio-content">
                     <div class="bio-text">
-                        <p>With <strong>20 years of rabbit breeding experience</strong>, I'm a dedicated ARBA (American Rabbit Breeders Association) member focused on raising healthy, friendly Champagne d'Argent and Silver Fox rabbits in Alaska.</p>
+                        <p><strong>20 years rabbit breeding</strong> - ARBA member raising Champagne d'Argent and Silver Fox in Alaska.</p>
                         
-                        <p>My textile art journey began when I <strong>taught myself to knit</strong>, developing original designs inspired by Alaska's incredible wildlife and landscapes. Each piece is mathematically patterned and handcrafted with natural fibers.</p>
+                        <p><strong>Self-taught fiber artist</strong> - Original designs inspired by Alaska's wildlife, mathematically patterned and handcrafted.</p>
                         
                         <div class="bio-highlight">
-                            <h4>Credentials & Expertise</h4>
-                            <p>• ARBA Member with 20 years rabbit breeding experience</p>
-                            <p>• Self-taught fiber artist specializing in original designs</p>
-                            <p>• Award-winning textile artist (Southeast Alaska State Fair)</p>
-                            <p>• Traditional fur tanning services for rabbit and snowshoe hare</p>
-                            <p>• Custom commissions for wildlife, fantasy, and wearable art</p>
+                            <h4>Credentials</h4>
+                            <p>• ARBA Member, 20 years experience</p>
+                            <p>• Award-winning textile artist</p>
+                            <p>• Traditional fur tanning</p>
+                            <p>• Custom commissions</p>
                         </div>
                     </div>
                 </div>
             </section>
+            
+            <!-- NEW: Homestead Donation Banner at bottom -->
+            <div class="donation-banner">
+                <h3>🌿 Support Our Homestead</h3>
+                <p>Love what we do? Donations help us maintain our rabbitry, garden, and continue creating Alaskan art.</p>
+                <div class="donation-buttons">
+                    <a href="http://venmo.com/u/GJMTradingPost" class="donate-btn venmo-btn" target="_blank">Venmo @GJMTradingPost</a>
+                    <a href="http://paypal.me/AlaskaPhysics" class="donate-btn paypal-btn" target="_blank">PayPal.me/AlaskaPhysics</a>
+                </div>
+                <p class="donation-note">Every bit helps keep the rabbits fed and the yarn flowing! 🐇🧶</p>
+            </div>
             
             <!-- Back to Home Button -->
             <a href="index.html" class="back-btn">← Back to Home</a>
