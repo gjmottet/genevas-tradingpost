@@ -159,16 +159,6 @@
             font-style: italic;
         }
         
-        /* Fallback for users without JavaScript */
-        .fallback-email {
-            display: none;
-            margin-top: 1rem;
-            padding: 1rem;
-            background: #fff3cd;
-            border-radius: 5px;
-            font-size: 0.9rem;
-        }
-        
         .markets-section {
             background: #f8f9fa;
             padding: 2.5rem;
@@ -205,7 +195,6 @@
             transform: translateY(-5px);
         }
         
-        /* Larger images */
         .market-image-container {
             width: 100%;
             height: 280px;
@@ -242,39 +231,50 @@
             font-size: 1rem;
         }
         
-        /* NEW: Date list styling for Gustavus */
-        .date-list {
-            margin: 1rem 0;
-            padding: 0.8rem;
+        /* SIMPLIFIED: Clean date section */
+        .gustavus-dates {
+            margin: 1.5rem 0 0.5rem;
+            padding: 1rem;
             background: #e8f5e9;
             border-radius: 8px;
             border-left: 4px solid #2ecc71;
         }
         
-        .date-list p {
-            margin: 0.3rem 0;
+        .gustavus-dates p {
+            margin: 0.5rem 0;
             font-weight: bold;
             color: #2c3e50;
         }
         
-        .date-list ul {
-            margin: 0.5rem 0;
-            padding-left: 1.5rem;
-            list-style-type: none;
+        .date-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem 1rem;
+            justify-content: center;
+            margin: 1rem 0;
         }
         
-        .date-list li {
-            margin: 0.3rem 0;
-            font-size: 1.1rem;
+        .date-item {
+            background: white;
+            padding: 0.3rem 1rem;
+            border-radius: 30px;
+            font-weight: bold;
+            color: #2e7d32;
+            border: 1px solid #2ecc71;
+            font-size: 1rem;
+        }
+        
+        .market-time {
+            font-size: 1.2rem;
             color: #2e7d32;
             font-weight: bold;
+            margin: 0.5rem 0;
         }
         
-        .date-list li span {
+        .market-location {
+            font-style: italic;
             color: #7f8c8d;
-            font-size: 0.9rem;
-            font-weight: normal;
-            margin-left: 0.5rem;
+            margin-top: 0.5rem;
         }
         
         .market-season {
@@ -305,39 +305,59 @@
             margin-bottom: 2rem;
         }
         
-        .bio-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            align-items: center;
+        /* EXPANDED BIO styling */
+        .bio-story {
+            font-size: 1.15rem;
+            line-height: 1.7;
+            color: #34495e;
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
         }
         
-        .bio-text {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            color: #34495e;
+        .bio-story p {
+            margin: 1rem 0;
+        }
+        
+        .bio-story p:first-child {
+            margin-top: 0;
+        }
+        
+        .bio-story p:last-child {
+            margin-bottom: 0;
         }
         
         .bio-highlight {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-            margin-top: 1rem;
+            background: #f0f7ff;
+            padding: 1rem 1.5rem;
+            border-radius: 50px;
+            display: inline-block;
+            margin: 1rem 0 0;
+            font-weight: bold;
+            color: #2c3e50;
+            border: 2px solid #9b59b6;
         }
         
-        .bio-highlight h4 {
-            color: #9b59b6;
-            margin-top: 0;
-            font-size: 1.3rem;
-            margin-bottom: 0.8rem;
+        .bio-credentials {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem 1rem;
+            justify-content: center;
+            margin: 1.5rem 0;
         }
         
-        .bio-highlight p {
-            margin: 0.3rem 0;
+        .credential-tag {
+            background: #9b59b6;
+            color: white;
+            padding: 0.4rem 1.2rem;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-weight: bold;
         }
         
-        /* Homestead Donation Banner */
         .donation-banner {
             grid-column: 1 / -1;
             background: linear-gradient(135deg, #2e7d32 0%, #1b5e20 100%);
@@ -453,8 +473,14 @@
                 max-width: 300px;
             }
             
-            .bio-content {
-                grid-template-columns: 1fr;
+            .bio-story {
+                padding: 1.5rem;
+                font-size: 1rem;
+            }
+            
+            .credential-tag {
+                font-size: 0.9rem;
+                padding: 0.3rem 1rem;
             }
             
             .contact-info, .markets-section {
@@ -482,12 +508,13 @@
                 width: 80%;
             }
             
-            .date-list ul {
-                padding-left: 1rem;
+            .date-grid {
+                gap: 0.3rem;
             }
             
-            .date-list li {
-                font-size: 1rem;
+            .date-item {
+                font-size: 0.9rem;
+                padding: 0.2rem 0.8rem;
             }
         }
     </style>
@@ -517,14 +544,12 @@
                 <div class="contact-details">
                     <div class="contact-item">
                         <h3>Email</h3>
-                        <!-- JavaScript email button -->
                         <div class="email-button-section">
                             <p>📧 For commissions & inquiries:</p>
                             <button onclick="sendEmail()" class="email-btn">
                                 <span style="font-size:1.3rem;">✉️</span> Click to Email Me
                             </button>
                             
-                            <!-- Fallback for users without JavaScript -->
                             <div id="fallback-email" class="fallback-email">
                                 <p>If the button doesn't work, please use: <strong>gjmottet [at] gmail [dot] com</strong></p>
                                 <p class="email-instruction">(Replace [at] with @ and [dot] with .)</p>
@@ -550,8 +575,8 @@
                     
                     <div class="contact-item">
                         <h3>Based In</h3>
-                        <p><strong>Gustavus (Summer)</strong> - Moving there soon! See market dates below.</p>
-                        <p><strong>Fairbanks (Winter)</strong> - Currently here, but heading to Gustavus shortly.</p>
+                        <p><strong>Gustavus (Summer)</strong> - At our homestead near Glacier Bay</p>
+                        <p><strong>Fairbanks (Winter)</strong> - Our original homestead, now seasonal</p>
                     </div>
                     
                     <div class="contact-item">
@@ -569,73 +594,77 @@
                 </div>
             </section>
             
-            <!-- Markets Section - GUSTAVUS PROMINENTLY FEATURED -->
+            <!-- Markets Section - SIMPLIFIED with Gustavus first -->
             <section class="markets-section">
-                <h2>📍 Now Featuring: Gustavus Summer Markets</h2>
+                <h2>Gustavus Markets</h2>
                 
                 <div class="market-grid">
-                    <!-- Gustavus Market - FEATURED FIRST with all dates -->
+                    <!-- Gustavus Market - SIMPLIFIED -->
                     <div class="market-card">
                         <div class="market-image-container">
                             <img src="images/craftfair_rsz.jpg" alt="Gustavus Community Center Market">
                         </div>
                         <div class="market-info">
                             <h3>Gustavus 2nd Saturday Market</h3>
-                            <p>At the Gustavus Community Center. Alaskan wildlife-inspired pieces for visitors and locals.</p>
+                            <p>Alaskan wildlife-inspired pieces, fiber art, and rabbitry information. Perfect for visitors and locals alike.</p>
                             
-                            <!-- NEW: Complete 2026 date list with times -->
-                            <div class="date-list">
-                                <p>📅 2026 Market Dates & Times:</p>
-                                <ul>
-                                    <li>April 11 • <span>noon–2:30pm</span></li>
-                                    <li>May 9 • <span>noon–2:30pm</span></li>
-                                    <li>June 13 • <span>noon–2:30pm</span></li>
-                                    <li>July 11 • <span>noon–2:30pm</span></li>
-                                    <li>August 8 • <span>noon–2:30pm</span></li>
-                                    <li>September 12 • <span>noon–2:30pm</span></li>
-                                    <li>October 10 • <span>noon–2:30pm</span></li>
-                                </ul>
-                                <p style="margin-top:0.5rem; font-size:0.9rem;">All markets at the Gustavus Community Center</p>
+                            <!-- SIMPLIFIED: Clean date display with times at bottom -->
+                            <div class="gustavus-dates">
+                                <p>📅 2026 Market Dates:</p>
+                                <div class="date-grid">
+                                    <span class="date-item">April 11</span>
+                                    <span class="date-item">May 9</span>
+                                    <span class="date-item">June 13</span>
+                                    <span class="date-item">July 11</span>
+                                    <span class="date-item">August 8</span>
+                                    <span class="date-item">September 12</span>
+                                    <span class="date-item">October 10</span>
+                                </div>
+                                <div class="market-time">All markets: 12:00–2:30pm</div>
+                                <div class="market-location">Gustavus Community Center</div>
                             </div>
                             
                             <p><strong>Season:</strong> April - October</p>
-                            <span class="market-season">Summer Season • See you there!</span>
+                            <span class="market-season">2nd Saturday • Join Us!</span>
                         </div>
                     </div>
                     
-                    <!-- Fairbanks Market - Now second -->
+                    <!-- Fairbanks Market -->
                     <div class="market-card">
                         <div class="market-image-container">
-                            <img src="images/holiday_market_rsz.jpg" alt="Fairbanks Craft Fair with Teddy Bear Display">
+                            <img src="images/holiday_market_rsz.jpg" alt="Fairbanks Craft Fair">
                         </div>
                         <div class="market-info">
                             <h3>Fairbanks Winter Markets</h3>
-                            <p>Winter craft fairs and holiday markets. Textile art including the popular hand-knit teddy bear collection.</p>
-                            <p><em>Heading to Gustavus for summer - see you in Fairbanks next winter!</em></p>
-                            <p><strong>Season:</strong> Oct - Mar</p>
+                            <p>Winter craft fairs and holiday markets featuring textile art and the popular hand-knit teddy bear collection.</p>
+                            <p><strong>Season:</strong> October - March</p>
                             <span class="market-season">Winter Season</span>
                         </div>
                     </div>
                 </div>
             </section>
             
-            <!-- Bio Section -->
+            <!-- Bio Section - CONDENSED to 2 paragraphs -->
             <section class="bio-section">
                 <h2>About Geneva</h2>
                 
-                <div class="bio-content">
-                    <div class="bio-text">
-                        <p><strong>20 years rabbit breeding</strong> - ARBA member raising Champagne d'Argent and Silver Fox in Alaska.</p>
-                        
-                        <p><strong>Self-taught fiber artist</strong> - Original designs inspired by Alaska's wildlife, mathematically patterned and handcrafted.</p>
-                        
-                        <div class="bio-highlight">
-                            <h4>Credentials</h4>
-                            <p>• ARBA Member, 20 years experience</p>
-                            <p>• Award-winning textile artist</p>
-                            <p>• Traditional fur tanning</p>
-                            <p>• Custom commissions</p>
-                        </div>
+                <div class="bio-story">
+                    <!-- Credentials tags at the top -->
+                    <div class="bio-credentials">
+                        <span class="credential-tag">ARBA Member</span>
+                        <span class="credential-tag">Certified Master Gardener</span>
+                        <span class="credential-tag">MS Physics, UAF</span>
+                        <span class="credential-tag">4-H Leader</span>
+                        <span class="credential-tag">Amateur Astronomer</span>
+                        <span class="credential-tag">Artist</span>
+                    </div>
+                    
+                    <p>I grew up between the misty shores of Sitka, Alaska and the rugged San Juan Islands—places that taught me to love the ocean, forests, and night sky. From age 10, I was in 4-H for astronomy and textile art, passions that have woven through my life. I started with meat rabbits at 17 and never stopped, carrying them through The Evergreen State College (dual degree physics/math, NSF-funded) and on to UAF, where I studied auroras as a teaching assistant and earned my MS in Physics.</p>
+                    
+                    <p>I bought my Fairbanks house during grad school—homesteading became my anchor. After graduating in 2019, I married my husband (a Glacier Bay park ranger) and we began building life between two homesteads. When COVID hit, my off-grid skills carried me through seven layoffs in twelve months; what started as hobby became survival. In 2021, we bought our Gustavus homestead near Glacier Bay, and I've since become a Certified Southeast Master Gardener (2024), active ARBA member, and 4-H leader passing on the skills I learned as a kid. Whether tending rabbits, teaching knitting, or stargazing (still an amateur astronomer), I'm living the life that 10-year-old me dreamed of.</p>
+                    
+                    <div class="bio-highlight">
+                        🌿 Physics-trained, homesteader-raised, Alaska-made.
                     </div>
                 </div>
             </section>
@@ -658,7 +687,7 @@
     
     <footer>
         <p>© 2024 Geneva's Trading Post | Fairbanks & Gustavus, Alaska</p>
-        <p>ARBA Member | Original Handcrafted Designs | Sustainable Practices</p>
+        <p>ARBA Member | Certified Master Gardener | Physics-trained, Homesteader-raised</p>
     </footer>
 </body>
 </html>
