@@ -68,6 +68,8 @@
             border-radius: 12px;
             box-shadow: 0 6px 20px rgba(0,0,0,0.1);
             border-left: 5px solid #3498db;
+            display: flex;
+            flex-direction: column;
         }
         
         .contact-info h2 {
@@ -81,6 +83,7 @@
         
         .contact-details {
             margin-bottom: 2rem;
+            flex: 1;
         }
         
         .contact-item {
@@ -147,6 +150,32 @@
             color: #7f8c8d;
             margin-top: 1rem;
             font-style: italic;
+        }
+        
+        /* NEW: Sunflower image styling to fill white space */
+        .sunflower-container {
+            margin-top: auto;
+            width: 100%;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            background: #f9f3e9;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+        }
+        
+        .sunflower-image {
+            width: 100%;
+            max-height: 300px;
+            object-fit: cover;
+            object-position: center 20%;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+        
+        .sunflower-image:hover {
+            transform: scale(1.02);
         }
         
         .markets-section {
@@ -514,6 +543,10 @@
                 font-size: 0.9rem;
                 padding: 0.2rem 0.8rem;
             }
+            
+            .sunflower-image {
+                max-height: 200px;
+            }
         }
     </style>
 </head>
@@ -535,7 +568,7 @@
     
     <main>
         <div class="contact-container">
-            <!-- Contact Information - EXACTLY as you specified -->
+            <!-- Contact Information - with sunflower image at bottom -->
             <section class="contact-info">
                 <h2>Contact & Commission Info</h2>
                 
@@ -583,6 +616,11 @@
                         <h3>Commission Process</h3>
                         <p>Contact me to discuss your vision. Prices based on time and material.</p>
                     </div>
+                </div>
+                
+                <!-- NEW: Sunflower image to fill white space -->
+                <div class="sunflower-container">
+                    <img src="images/Sunflower2.jpg" alt="Tall sunflower growing in front of our Gustavus home" class="sunflower-image">
                 </div>
             </section>
             
