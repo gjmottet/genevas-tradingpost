@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -152,7 +153,7 @@
             font-style: italic;
         }
         
-        /* NEW: Sunflower image styling to fill white space */
+        /* UPDATED: Sunflower image styling to show full height */
         .sunflower-container {
             margin-top: auto;
             width: 100%;
@@ -161,15 +162,16 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             background: #f9f3e9;
             display: flex;
-            align-items: flex-end;
+            align-items: center;
             justify-content: center;
+            max-height: 600px; /* Allow it to be taller */
         }
         
         .sunflower-image {
             width: 100%;
-            max-height: 300px;
-            object-fit: cover;
-            object-position: center 20%;
+            height: auto; /* Let height be automatic */
+            max-height: 600px;
+            object-fit: contain; /* Show full image, no cropping */
             display: block;
             transition: transform 0.3s ease;
         }
@@ -544,8 +546,12 @@
                 padding: 0.2rem 0.8rem;
             }
             
+            .sunflower-container {
+                max-height: 400px;
+            }
+            
             .sunflower-image {
-                max-height: 200px;
+                max-height: 400px;
             }
         }
     </style>
@@ -568,7 +574,7 @@
     
     <main>
         <div class="contact-container">
-            <!-- Contact Information - with sunflower image at bottom -->
+            <!-- Contact Information - with full sunflower image -->
             <section class="contact-info">
                 <h2>Contact & Commission Info</h2>
                 
@@ -618,7 +624,7 @@
                     </div>
                 </div>
                 
-                <!-- NEW: Sunflower image to fill white space -->
+                <!-- UPDATED: Sunflower image showing full height -->
                 <div class="sunflower-container">
                     <img src="images/Sunflower2.jpg" alt="Tall sunflower growing in front of our Gustavus home" class="sunflower-image">
                 </div>
