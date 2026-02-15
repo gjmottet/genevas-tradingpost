@@ -111,7 +111,7 @@
             font-size: 1.1rem;
         }
         
-        /* NEW: Email button styling - modern and secure */
+        /* Email button styling */
         .email-button-section {
             background: #f8f9fa;
             padding: 1.5rem;
@@ -205,10 +205,10 @@
             transform: translateY(-5px);
         }
         
-        /* UPDATED: Larger images - increased height */
+        /* Larger images */
         .market-image-container {
             width: 100%;
-            height: 280px; /* INCREASED from 220px */
+            height: 280px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -237,9 +237,44 @@
         
         .market-info p {
             color: #34495e;
-            line-height: 1.5; /* Tighter line height */
+            line-height: 1.5;
             margin: 0.5rem 0;
-            font-size: 1rem; /* Slightly smaller for condensing */
+            font-size: 1rem;
+        }
+        
+        /* NEW: Date list styling for Gustavus */
+        .date-list {
+            margin: 1rem 0;
+            padding: 0.8rem;
+            background: #e8f5e9;
+            border-radius: 8px;
+            border-left: 4px solid #2ecc71;
+        }
+        
+        .date-list p {
+            margin: 0.3rem 0;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        
+        .date-list ul {
+            margin: 0.5rem 0;
+            padding-left: 1.5rem;
+            list-style-type: none;
+        }
+        
+        .date-list li {
+            margin: 0.3rem 0;
+            font-size: 1.1rem;
+            color: #2e7d32;
+            font-weight: bold;
+        }
+        
+        .date-list li span {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            font-weight: normal;
+            margin-left: 0.5rem;
         }
         
         .market-season {
@@ -277,10 +312,9 @@
             align-items: center;
         }
         
-        /* CONDENSED bio text */
         .bio-text {
-            font-size: 1.1rem; /* Slightly smaller */
-            line-height: 1.6; /* Tighter */
+            font-size: 1.1rem;
+            line-height: 1.6;
             color: #34495e;
         }
         
@@ -300,10 +334,10 @@
         }
         
         .bio-highlight p {
-            margin: 0.3rem 0; /* Tighter spacing */
+            margin: 0.3rem 0;
         }
         
-        /* NEW: Homestead Donation Banner at bottom */
+        /* Homestead Donation Banner */
         .donation-banner {
             grid-column: 1 / -1;
             background: linear-gradient(135deg, #2e7d32 0%, #1b5e20 100%);
@@ -447,6 +481,14 @@
             .donate-btn {
                 width: 80%;
             }
+            
+            .date-list ul {
+                padding-left: 1rem;
+            }
+            
+            .date-list li {
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
@@ -456,7 +498,7 @@
         <p>Get in Touch for Commissions, Rabbitry Inquiries & Market Information</p>
     </header>
     
-    <!-- Navigation - UPDATED to match other pages (Fantasy Art) -->
+    <!-- Navigation -->
     <nav>
         <a href="index.html">Home</a>
         <a href="alaska-textiles.html">Alaskan Textile Art</a>
@@ -475,7 +517,7 @@
                 <div class="contact-details">
                     <div class="contact-item">
                         <h3>Email</h3>
-                        <!-- NEW: JavaScript email button - completely hidden from scrapers -->
+                        <!-- JavaScript email button -->
                         <div class="email-button-section">
                             <p>📧 For commissions & inquiries:</p>
                             <button onclick="sendEmail()" class="email-btn">
@@ -493,19 +535,12 @@
                         
                         <script>
                         function sendEmail() {
-                            // Email is completely hidden from spam bots
                             var user = "gjmottet";
                             var domain = "gmail.com";
                             window.location.href = "mailto:" + user + "@" + domain;
                         }
-                        
-                        // Show fallback if JavaScript is disabled (noscript would be better, but this works)
-                        window.onload = function() {
-                            // Just a safety check - button works fine with JS
-                        };
                         </script>
                         
-                        <!-- Noscript fallback for users with JS disabled -->
                         <noscript>
                             <div style="background:#f8d7da; padding:1rem; border-radius:5px; margin-top:0.5rem;">
                                 <p>Please enable JavaScript or use: <strong>gjmottet [at] gmail [dot] com</strong></p>
@@ -515,8 +550,8 @@
                     
                     <div class="contact-item">
                         <h3>Based In</h3>
-                        <p><strong>Fairbanks (Winter)</strong> - Local markets & commissions</p>
-                        <p><strong>Gustavus (Summer)</strong> - Gustavus 2nd Saturday Market</p>
+                        <p><strong>Gustavus (Summer)</strong> - Moving there soon! See market dates below.</p>
+                        <p><strong>Fairbanks (Winter)</strong> - Currently here, but heading to Gustavus shortly.</p>
                     </div>
                     
                     <div class="contact-item">
@@ -534,40 +569,57 @@
                 </div>
             </section>
             
-            <!-- Markets Section - Images LARGER, text slightly condensed -->
+            <!-- Markets Section - GUSTAVUS PROMINENTLY FEATURED -->
             <section class="markets-section">
-                <h2>Find Me at Local Markets</h2>
+                <h2>📍 Now Featuring: Gustavus Summer Markets</h2>
                 
                 <div class="market-grid">
-                    <!-- Fairbanks Market - Image larger -->
-                    <div class="market-card">
-                        <div class="market-image-container">
-                            <img src="images/holiday_market_rsz.jpg" alt="Fairbanks Craft Fair with Teddy Bear Display">
-                        </div>
-                        <div class="market-info">
-                            <h3>Fairbanks Markets</h3>
-                            <p>Winter craft fairs and holiday markets. Textile art including the popular hand-knit teddy bear collection.</p>
-                            <p><strong>Season:</strong> Oct - Mar</p>
-                            <span class="market-season">Winter</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Gustavus Market - Image larger -->
+                    <!-- Gustavus Market - FEATURED FIRST with all dates -->
                     <div class="market-card">
                         <div class="market-image-container">
                             <img src="images/craftfair_rsz.jpg" alt="Gustavus Community Center Market">
                         </div>
                         <div class="market-info">
-                            <h3>Gustavus 2nd Saturday</h3>
+                            <h3>Gustavus 2nd Saturday Market</h3>
                             <p>At the Gustavus Community Center. Alaskan wildlife-inspired pieces for visitors and locals.</p>
-                            <p><strong>Season:</strong> Apr - Oct</p>
-                            <span class="market-season">Summer</span>
+                            
+                            <!-- NEW: Complete 2026 date list with times -->
+                            <div class="date-list">
+                                <p>📅 2026 Market Dates & Times:</p>
+                                <ul>
+                                    <li>April 11 • <span>noon–2:30pm</span></li>
+                                    <li>May 9 • <span>noon–2:30pm</span></li>
+                                    <li>June 13 • <span>noon–2:30pm</span></li>
+                                    <li>July 11 • <span>noon–2:30pm</span></li>
+                                    <li>August 8 • <span>noon–2:30pm</span></li>
+                                    <li>September 12 • <span>noon–2:30pm</span></li>
+                                    <li>October 10 • <span>noon–2:30pm</span></li>
+                                </ul>
+                                <p style="margin-top:0.5rem; font-size:0.9rem;">All markets at the Gustavus Community Center</p>
+                            </div>
+                            
+                            <p><strong>Season:</strong> April - October</p>
+                            <span class="market-season">Summer Season • See you there!</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Fairbanks Market - Now second -->
+                    <div class="market-card">
+                        <div class="market-image-container">
+                            <img src="images/holiday_market_rsz.jpg" alt="Fairbanks Craft Fair with Teddy Bear Display">
+                        </div>
+                        <div class="market-info">
+                            <h3>Fairbanks Winter Markets</h3>
+                            <p>Winter craft fairs and holiday markets. Textile art including the popular hand-knit teddy bear collection.</p>
+                            <p><em>Heading to Gustavus for summer - see you in Fairbanks next winter!</em></p>
+                            <p><strong>Season:</strong> Oct - Mar</p>
+                            <span class="market-season">Winter Season</span>
                         </div>
                     </div>
                 </div>
             </section>
             
-            <!-- Bio Section - CONDENSED text -->
+            <!-- Bio Section -->
             <section class="bio-section">
                 <h2>About Geneva</h2>
                 
@@ -588,7 +640,7 @@
                 </div>
             </section>
             
-            <!-- NEW: Homestead Donation Banner at bottom -->
+            <!-- Homestead Donation Banner -->
             <div class="donation-banner">
                 <h3>🌿 Support Our Homestead</h3>
                 <p>Love what we do? Donations help us maintain our rabbitry, garden, and continue creating Alaskan art.</p>
