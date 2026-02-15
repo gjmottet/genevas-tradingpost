@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -83,8 +82,8 @@
         }
         
         .contact-details {
-            margin-bottom: 2rem;
-            flex: 1;
+            margin-bottom: 1rem; /* Reduced from 2rem to move image up */
+            flex: 0; /* Don't force it to expand */
         }
         
         .contact-item {
@@ -153,31 +152,45 @@
             font-style: italic;
         }
         
-        /* UPDATED: Sunflower image styling to show full height */
+        /* UPDATED: Sunflower image styling */
         .sunflower-container {
-            margin-top: auto;
+            margin-top: 1rem; /* Small gap from text */
             width: 100%;
             border-radius: 12px;
             overflow: hidden;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             background: #f9f3e9;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-            max-height: 600px; /* Allow it to be taller */
         }
         
         .sunflower-image {
             width: 100%;
-            height: auto; /* Let height be automatic */
-            max-height: 600px;
-            object-fit: contain; /* Show full image, no cropping */
+            height: auto;
+            max-height: 500px;
+            object-fit: contain;
             display: block;
             transition: transform 0.3s ease;
+            background: #f9f3e9;
         }
         
         .sunflower-image:hover {
             transform: scale(1.02);
+        }
+        
+        /* NEW: Caption styling */
+        .sunflower-caption {
+            width: 100%;
+            padding: 0.8rem;
+            text-align: center;
+            font-size: 1rem;
+            color: #5d4037;
+            background: #f0e0c0;
+            border-top: 1px solid #d4a373;
+            font-style: italic;
+            letter-spacing: 0.5px;
         }
         
         .markets-section {
@@ -546,12 +559,13 @@
                 padding: 0.2rem 0.8rem;
             }
             
-            .sunflower-container {
-                max-height: 400px;
+            .sunflower-image {
+                max-height: 350px;
             }
             
-            .sunflower-image {
-                max-height: 400px;
+            .sunflower-caption {
+                font-size: 0.9rem;
+                padding: 0.6rem;
             }
         }
     </style>
@@ -574,7 +588,7 @@
     
     <main>
         <div class="contact-container">
-            <!-- Contact Information - with full sunflower image -->
+            <!-- Contact Information - with sunflower image moved up -->
             <section class="contact-info">
                 <h2>Contact & Commission Info</h2>
                 
@@ -624,9 +638,10 @@
                     </div>
                 </div>
                 
-                <!-- UPDATED: Sunflower image showing full height -->
+                <!-- UPDATED: Sunflower image with caption - moved up -->
                 <div class="sunflower-container">
                     <img src="images/Sunflower2.jpg" alt="Tall sunflower growing in front of our Gustavus home" class="sunflower-image">
+                    <div class="sunflower-caption">🌻 Sunflower growing in front of our Gustavus house</div>
                 </div>
             </section>
             
