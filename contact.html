@@ -111,7 +111,7 @@
             font-size: 1.1rem;
         }
         
-        /* Email button styling */
+        /* SIMPLIFIED Email button styling - only button and note */
         .email-button-section {
             background: #f8f9fa;
             padding: 1.5rem;
@@ -119,12 +119,6 @@
             border: 2px solid #3498db;
             margin: 1.5rem 0;
             text-align: center;
-        }
-        
-        .email-button-section p {
-            margin: 0 0 1rem 0;
-            font-weight: bold;
-            color: #2c3e50;
         }
         
         .email-btn {
@@ -140,16 +134,12 @@
             cursor: pointer;
             transition: transform 0.3s, background 0.3s;
             box-shadow: 0 4px 10px rgba(52, 152, 219, 0.3);
+            margin: 0.5rem 0;
         }
         
         .email-btn:hover {
             background: #2980b9;
             transform: scale(1.05);
-        }
-        
-        .email-btn i {
-            margin-right: 0.5rem;
-            font-size: 1.3rem;
         }
         
         .email-note {
@@ -231,7 +221,7 @@
             font-size: 1rem;
         }
         
-        /* SIMPLIFIED: Clean date section */
+        /* Clean date section */
         .gustavus-dates {
             margin: 1.5rem 0 0.5rem;
             padding: 1rem;
@@ -288,6 +278,7 @@
             margin-top: 0.5rem;
         }
         
+        /* UPDATED Bio Section - Trading Post Story */
         .bio-section {
             grid-column: 1 / -1;
             background: linear-gradient(135deg, #e8f4f8 0%, #f0f7ff 100%);
@@ -305,13 +296,13 @@
             margin-bottom: 2rem;
         }
         
-        /* EXPANDED BIO styling */
+        /* Single paragraph story */
         .bio-story {
             font-size: 1.15rem;
             line-height: 1.7;
             color: #34495e;
             max-width: 1000px;
-            margin: 0 auto;
+            margin: 0 auto 2rem;
             background: white;
             padding: 2rem;
             border-radius: 12px;
@@ -319,15 +310,51 @@
         }
         
         .bio-story p {
-            margin: 1rem 0;
+            margin: 0;
         }
         
-        .bio-story p:first-child {
+        /* NEW: Credentials as bullet points */
+        .credentials-box {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            max-width: 800px;
+            margin: 0 auto;
+            border: 2px solid #9b59b6;
+        }
+        
+        .credentials-box h3 {
+            color: #9b59b6;
+            font-size: 1.5rem;
             margin-top: 0;
+            margin-bottom: 1.5rem;
+            text-align: center;
         }
         
-        .bio-story p:last-child {
-            margin-bottom: 0;
+        .credentials-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 0.8rem 2rem;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .credentials-list li {
+            color: #34495e;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            padding-left: 1.8rem;
+            position: relative;
+        }
+        
+        .credentials-list li::before {
+            content: "•";
+            color: #9b59b6;
+            font-size: 1.8rem;
+            position: absolute;
+            left: 0;
+            top: -8px;
         }
         
         .bio-highlight {
@@ -335,27 +362,11 @@
             padding: 1rem 1.5rem;
             border-radius: 50px;
             display: inline-block;
-            margin: 1rem 0 0;
+            margin: 2rem auto 0;
             font-weight: bold;
             color: #2c3e50;
             border: 2px solid #9b59b6;
-        }
-        
-        .bio-credentials {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem 1rem;
-            justify-content: center;
-            margin: 1.5rem 0;
-        }
-        
-        .credential-tag {
-            background: #9b59b6;
-            color: white;
-            padding: 0.4rem 1.2rem;
-            border-radius: 30px;
-            font-size: 1rem;
-            font-weight: bold;
+            text-align: center;
         }
         
         .donation-banner {
@@ -478,9 +489,8 @@
                 font-size: 1rem;
             }
             
-            .credential-tag {
-                font-size: 0.9rem;
-                padding: 0.3rem 1rem;
+            .credentials-list {
+                grid-template-columns: 1fr;
             }
             
             .contact-info, .markets-section {
@@ -544,18 +554,13 @@
                 <div class="contact-details">
                     <div class="contact-item">
                         <h3>Email</h3>
+                        <!-- SIMPLIFIED: Only button and note -->
                         <div class="email-button-section">
-                            <p>📧 For commissions & inquiries:</p>
                             <button onclick="sendEmail()" class="email-btn">
                                 <span style="font-size:1.3rem;">✉️</span> Click to Email Me
                             </button>
                             
-                            <div id="fallback-email" class="fallback-email">
-                                <p>If the button doesn't work, please use: <strong>gjmottet [at] gmail [dot] com</strong></p>
-                                <p class="email-instruction">(Replace [at] with @ and [dot] with .)</p>
-                            </div>
-                            
-                            <p class="email-note">No spam, just rabbits and art! 🐰</p>
+                            <div class="email-note">No spam, just rabbits and art! 🐰</div>
                         </div>
                         
                         <script>
@@ -568,7 +573,7 @@
                         
                         <noscript>
                             <div style="background:#f8d7da; padding:1rem; border-radius:5px; margin-top:0.5rem;">
-                                <p>Please enable JavaScript or use: <strong>gjmottet [at] gmail [dot] com</strong></p>
+                                <p>Please enable JavaScript to use the email button.</p>
                             </div>
                         </noscript>
                     </div>
@@ -594,12 +599,12 @@
                 </div>
             </section>
             
-            <!-- Markets Section - SIMPLIFIED with Gustavus first -->
+            <!-- Markets Section -->
             <section class="markets-section">
                 <h2>Gustavus Markets</h2>
                 
                 <div class="market-grid">
-                    <!-- Gustavus Market - SIMPLIFIED -->
+                    <!-- Gustavus Market -->
                     <div class="market-card">
                         <div class="market-image-container">
                             <img src="images/craftfair_rsz.jpg" alt="Gustavus Community Center Market">
@@ -608,7 +613,6 @@
                             <h3>Gustavus 2nd Saturday Market</h3>
                             <p>Alaskan wildlife-inspired pieces, fiber art, and rabbitry information. Perfect for visitors and locals alike.</p>
                             
-                            <!-- SIMPLIFIED: Clean date display with times at bottom -->
                             <div class="gustavus-dates">
                                 <p>📅 2026 Market Dates:</p>
                                 <div class="date-grid">
@@ -644,28 +648,32 @@
                 </div>
             </section>
             
-            <!-- Bio Section - CONDENSED to 2 paragraphs -->
+            <!-- UPDATED: The Story of Geneva's Trading Post -->
             <section class="bio-section">
-                <h2>About Geneva</h2>
+                <h2>The Story of Geneva's Trading Post</h2>
                 
+                <!-- Single paragraph story -->
                 <div class="bio-story">
-                    <!-- Credentials tags at the top -->
-                    <div class="bio-credentials">
-                        <span class="credential-tag">ARBA Member</span>
-                        <span class="credential-tag">Certified Master Gardener</span>
-                        <span class="credential-tag">MS Physics, UAF</span>
-                        <span class="credential-tag">4-H Leader</span>
-                        <span class="credential-tag">Amateur Astronomer</span>
-                        <span class="credential-tag">Artist</span>
-                    </div>
-                    
-                    <p>I grew up between the misty shores of Sitka, Alaska and the rugged San Juan Islands—places that taught me to love the ocean, forests, and night sky. From age 10, I was in 4-H for astronomy and textile art, passions that have woven through my life. I started with meat rabbits at 17 and never stopped, carrying them through The Evergreen State College (dual degree physics/math, NSF-funded) and on to UAF, where I studied auroras as a teaching assistant and earned my MS in Physics.</p>
-                    
-                    <p>I bought my Fairbanks house during grad school—homesteading became my anchor. After graduating in 2019, I married my husband (a Glacier Bay park ranger) and we began building life between two homesteads. When COVID hit, my off-grid skills carried me through seven layoffs in twelve months; what started as hobby became survival. In 2021, we bought our Gustavus homestead near Glacier Bay, and I've since become a Certified Southeast Master Gardener (2024), active ARBA member, and 4-H leader passing on the skills I learned as a kid. Whether tending rabbits, teaching knitting, or stargazing (still an amateur astronomer), I'm living the life that 10-year-old me dreamed of.</p>
-                    
-                    <div class="bio-highlight">
-                        🌿 Physics-trained, homesteader-raised, Alaska-made.
-                    </div>
+                    <p>I grew up between the misty shores of Sitka, Alaska and the rugged San Juan Islands—places that taught me to love the ocean, forests, and night sky. From age 10, I was in 4-H for astronomy and textile art, started with meat rabbits at 17, and carried those passions through The Evergreen State College (dual degree physics/math, NSF-funded) and on to UAF, where I studied auroras and earned my MS in Physics. I bought my Fairbanks house during grad school—homesteading became my anchor. After graduating in 2019, I married my husband (a Glacier Bay park ranger) and we began building life between two homesteads. When COVID hit, my off-grid skills carried me through seven layoffs in twelve months; what started as hobby became survival. In 2021, we bought our Gustavus homestead near Glacier Bay, where I now split my time between tending rabbits, creating textile art, teaching 4-H, and gazing at the stars—still an amateur astronomer after all these years.</p>
+                </div>
+                
+                <!-- NEW: Credentials as bullet points -->
+                <div class="credentials-box">
+                    <h3>Credentials & Experience</h3>
+                    <ul class="credentials-list">
+                        <li>Current ARBA Member</li>
+                        <li>Certified Southeast Master Gardener (2024)</li>
+                        <li>MS Physics, University of Alaska Fairbanks</li>
+                        <li>4-H Leader (Astronomy & Textile Art)</li>
+                        <li>Amateur Astronomer since age 10</li>
+                        <li>Award-winning Textile Artist</li>
+                        <li>Traditional Fur Tanning Specialist</li>
+                        <li>20+ Years Rabbit Breeding Experience</li>
+                    </ul>
+                </div>
+                
+                <div class="bio-highlight">
+                    🌿 Physics-trained, homesteader-raised, Alaska-made.
                 </div>
             </section>
             
