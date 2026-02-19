@@ -53,7 +53,7 @@
             padding: 0 1rem;
         }
         
-        /* NEW: Tan Quail Banner (moved down, replaces orange) */
+        /* NEW: Tan Quail Banner */
         .quail-tan-banner {
             position: relative;
             width: 100%;
@@ -66,7 +66,7 @@
             text-align: center;
             color: white;
             margin: 0;
-            border-bottom: 3px solid #8b5a2b; /* deeper tan accent */
+            border-bottom: 3px solid #8b5a2b;
             box-shadow: 0 4px 10px rgba(0,0,0,0.2);
         }
         
@@ -121,6 +121,13 @@
         
         .current {
             background: #2ecc71;
+        }
+
+        /* NEW: White gap between nav and tan banner */
+        .white-gap {
+            height: 25px;
+            background: white;
+            width: 100%;
         }
         
         /* Quail Section - Compact */
@@ -507,9 +514,9 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
         
-        /* NEW: Brown Plant Starts Block (replaces purple) */
+        /* Brown Plant Starts Block */
         .plant-starts-brown {
-            background: linear-gradient(135deg, #6b4f3c 0%, #8b5a2b 100%); /* rich brown */
+            background: linear-gradient(135deg, #6b4f3c 0%, #8b5a2b 100%);
             color: white;
             padding: 2rem 2rem;
             border-radius: 20px;
@@ -535,6 +542,7 @@
             margin: 0 0 0.5rem 0;
             color: #fbe9d2;
             text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+            white-space: nowrap; /* keeps it on one line */
         }
         
         .plant-starts-text p {
@@ -559,7 +567,7 @@
         
         .plant-starts-image {
             flex: 1;
-            min-width: 180px;
+            min-width: 260px; /* made larger */
             display: flex;
             justify-content: center;
         }
@@ -570,13 +578,16 @@
             border-radius: 16px;
             border: 4px solid #d9b382;
             box-shadow: 0 8px 18px rgba(0,0,0,0.3);
+            max-height: 220px; /* larger display */
+            width: auto;
         }
         
-        /* NEW: Quail chick image below the two cards */
+        /* Quail extra image with caption */
         .quail-extra-image {
             max-width: 1000px;
             margin: 2rem auto 1rem;
             padding: 0 2rem;
+            text-align: center;
         }
         
         .quail-extra-image img {
@@ -585,6 +596,19 @@
             border-radius: 20px;
             border: 4px solid #f0e0b0;
             box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        
+        .image-caption {
+            margin-top: 0.6rem;
+            font-size: 1.2rem;
+            color: #4a3b2c;
+            font-style: italic;
+            background: #fdf8f0;
+            display: inline-block;
+            padding: 0.3rem 1.5rem;
+            border-radius: 40px;
+            border-left: 4px solid #d4a76a;
+            font-weight: 500;
         }
         
         .back-btn {
@@ -703,6 +727,11 @@
             .plant-starts-text {
                 text-align: center;
             }
+            
+            .plant-starts-text h3 {
+                white-space: normal; /* allow wrap on mobile */
+                font-size: 1.8rem;
+            }
         }
     </style>
 </head>
@@ -725,8 +754,11 @@
         <a href="fantasy-ball.html">Fantasy Art</a>
         <a href="contact.html">Contact</a>
     </nav>
+
+    <!-- NEW: White gap between green nav and tan banner -->
+    <div class="white-gap"></div>
     
-    <!-- NEW: Tan Banner (moved down, with long quail chick image background) -->
+    <!-- Tan Banner (long quail chick image background) -->
     <div class="quail-tan-banner">
         <div class="overlay">
             <h2>We Have Coturnix Quail!</h2>
@@ -735,10 +767,9 @@
     </div>
     
     <main>
-        <!-- Quail Section - Compact - ORIGINAL images and structure -->
+        <!-- Quail Section - Compact - ORIGINAL images and structure, with date updated -->
         <section class="quail-section">
-            <h2>We Have Coturnix Quail!</h2>
-            <p class="quail-intro">Fresh eggs and chicks available from our Gustavus homestead</p>
+            <!-- Removed the h2 and intro that duplicated the banner -->
             
             <div class="quail-grid">
                 <div class="quail-card">
@@ -748,7 +779,8 @@
                     <h3>Fresh Quail Eggs</h3>
                     <div style="background: #e74c3c; color: white; padding: 0.6rem 1.5rem; border-radius: 30px; font-size: 1.3rem; font-weight: bold; margin: 0.5rem 0; display: inline-block;">$10/dozen</div>
                     <p>Fertile eggs - perfect for eating or hatching. Some eggs have rare celadon genetics for possible blue egg layers!</p>
-                    <p><strong>Hatching:</strong> Eggs in incubator Feb 1 → Hatch Feb 17 → Chicks available Mar 10</p>
+                    <!-- UPDATED: Hatch date March 18 -->
+                    <p><strong>Hatching:</strong> Eggs in incubator Feb 1 → Hatch Feb 18 → Chicks available Mar 11</p>
                     <span class="availability-tag">Year-Round Availability</span>
                 </div>
                 
@@ -775,14 +807,15 @@
                             <span><strong>$6 each</strong></span>
                         </div>
                     </div>
-                    <p><strong>Available:</strong> Chicks from March 10, Adults from last week of March 2026</p>
+                    <p><strong>Available:</strong> Chicks from March 11, Adults from last week of March 2026</p>
                     <span class="availability-tag">March Availability</span>
                 </div>
             </div>
 
-            <!-- NEW: Quail chick extra image (third image) -->
+            <!-- Quail chick extra image with caption (updated date) -->
             <div class="quail-extra-image">
                 <img src="images/QuailChicksIncubator.jpg" alt="Quail chicks just hatched in incubator">
+                <div class="image-caption">🐣 Cute chick just hatched March 18</div>
             </div>
         </section>
         
@@ -926,7 +959,7 @@
             </div>
         </section>
         
-        <!-- NEW: Brown Plant Starts Block (with onion image, updated wording) -->
+        <!-- Brown Plant Starts Block (onion image larger, heading one line) -->
         <div class="plant-starts-brown">
             <div class="plant-starts-text">
                 <h3>🌱 Plant Starts Coming in April! 🌱</h3>
