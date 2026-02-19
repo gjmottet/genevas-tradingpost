@@ -53,6 +53,32 @@
             padding: 0 1rem;
         }
         
+        /* NEW: Quail Sub-banner */
+        .quail-sub-banner {
+            background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin: 0;
+            border-bottom: 3px solid #d35400;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        
+        .quail-sub-banner h2 {
+            font-size: 2.5rem;
+            margin: 0;
+            color: white;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+            letter-spacing: 2px;
+        }
+        
+        .quail-sub-banner p {
+            font-size: 1.3rem;
+            margin: 0.5rem 0 0 0;
+            opacity: 0.95;
+            font-style: italic;
+        }
+        
         nav {
             background: #27ae60;
             padding: 1rem;
@@ -268,7 +294,7 @@
             border-left: 4px solid #f39c12;
         }
         
-        /* Carrot Tasting Workshop - UPDATED */
+        /* Carrot Tasting Workshop */
         .carrot-workshop {
             display: grid;
             grid-template-columns: 300px 1fr;
@@ -296,11 +322,10 @@
         
         .carrot-charts {
             margin-top: 2rem;
-            grid-column: 1 / -1; /* Makes it span full width */
+            grid-column: 1 / -1;
             width: 100%;
         }
         
-        /* NEW: Full-width charts container */
         .charts-full-width {
             background: white;
             border-radius: 12px;
@@ -311,7 +336,6 @@
             width: 100%;
         }
         
-        /* Side-by-side tables styling */
         .tasting-tables {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -326,7 +350,7 @@
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
             overflow-x: auto;
             border: 1px solid #e0e0e0;
-            max-height: 350px; /* CHANGED: Shows ~8 rows instead of 10 */
+            max-height: 350px;
             overflow-y: auto;
             width: 100%;
         }
@@ -466,6 +490,42 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
         
+        /* NEW: Plant Starts Announcement Card (below market banner) */
+        .plant-starts-announcement {
+            background: linear-gradient(135deg, #8e44ad 0%, #9b59b6 100%);
+            color: white;
+            padding: 1.8rem;
+            border-radius: 15px;
+            margin: 2rem auto 3rem;
+            max-width: 1000px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+            border: 3px solid #c39bd3;
+        }
+        
+        .plant-starts-announcement h3 {
+            font-size: 2rem;
+            margin: 0 0 0.5rem 0;
+            color: white;
+        }
+        
+        .plant-starts-announcement p {
+            font-size: 1.3rem;
+            margin: 0.5rem 0;
+            opacity: 0.95;
+        }
+        
+        .plant-starts-announcement .highlight {
+            background: rgba(255,255,255,0.2);
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            border-radius: 40px;
+            font-weight: bold;
+            font-size: 1.4rem;
+            margin-top: 0.8rem;
+            border: 2px solid white;
+        }
+        
         .back-btn {
             display: inline-block;
             background: #7f8c8d;
@@ -515,6 +575,14 @@
                 height: 250px;
             }
             
+            .quail-sub-banner h2 {
+                font-size: 1.8rem;
+            }
+            
+            .quail-sub-banner p {
+                font-size: 1rem;
+            }
+            
             nav a {
                 display: block;
                 margin: 0.5rem auto;
@@ -555,7 +623,7 @@
             
             .tasting-table {
                 overflow-x: scroll;
-                max-height: 400px; /* Slightly taller on mobile */
+                max-height: 400px;
             }
             
             .tasting-table table {
@@ -565,14 +633,20 @@
     </style>
 </head>
 <body>
-    <!-- Farm Stand Header with Banner - UPDATED with QuailChicksIncubatorlong1.jpg -->
+    <!-- Farm Stand Header with Banner - ORIGINAL SquashPlant.jpg -->
     <header class="farm-header">
-        <img src="images/QuailChicksIncubatorlong1.jpg" alt="Quail chicks in incubator - banner" class="farm-banner">
+        <img src="images/SquashPlant.jpg" alt="Squash Plant in Garden" class="farm-banner">
         <div class="banner-overlay">
             <h1>Farm Stand</h1>
             <p>Local Food, Quail Eggs & Sustainable Farming in Gustavus</p>
         </div>
     </header>
+    
+    <!-- NEW: Quail Sub-banner -->
+    <div class="quail-sub-banner">
+        <h2>We Have Coturnix Quail!</h2>
+        <p>Quail chicks available in Fairbanks in March • We restart our flock with hatching eggs in Gustavus — eggs available starting in June</p>
+    </div>
     
     <!-- Navigation Menu -->
     <nav>
@@ -585,11 +659,10 @@
     </nav>
     
     <main>
-        <!-- Quail Section - Compact - UPDATED text and images -->
+        <!-- Quail Section - Compact - ORIGINAL images and structure -->
         <section class="quail-section">
-            <!-- UPDATED heading and intro text -->
-            <h2>We Have Quail!</h2>
-            <p class="quail-intro">Quail chicks available in Fairbanks in March. We move to our summer home with hatching eggs — eggs available starting in June once we are down there.</p>
+            <h2>We Have Coturnix Quail!</h2>
+            <p class="quail-intro">Fresh eggs and chicks available from our Gustavus homestead</p>
             
             <div class="quail-grid">
                 <div class="quail-card">
@@ -599,15 +672,13 @@
                     <h3>Fresh Quail Eggs</h3>
                     <div style="background: #e74c3c; color: white; padding: 0.6rem 1.5rem; border-radius: 30px; font-size: 1.3rem; font-weight: bold; margin: 0.5rem 0; display: inline-block;">$10/dozen</div>
                     <p>Fertile eggs - perfect for eating or hatching. Some eggs have rare celadon genetics for possible blue egg layers!</p>
-                    <!-- UPDATED: Hatching schedule reflects move -->
-                    <p><strong>Hatching:</strong> Eggs in incubator (Fairbanks) Feb 1 → Hatch Feb 17 → Chicks available Mar (Fairbanks). Eggs available starting June (Gustavus).</p>
-                    <span class="availability-tag">Eggs Year-Round</span>
+                    <p><strong>Hatching:</strong> Eggs in incubator Feb 1 → Hatch Feb 17 → Chicks available Mar 10</p>
+                    <span class="availability-tag">Year-Round Availability</span>
                 </div>
                 
                 <div class="quail-card">
-                    <!-- UPDATED: New image of chicks in incubator -->
                     <div class="quail-image-container">
-                        <img src="images/QuailChicksIncubator.jpg" alt="Quail chicks just hatched in incubator">
+                        <img src="images/Quail1.jpg" alt="Coturnix Quail">
                     </div>
                     <h3>Quail Chicks & Adults</h3>
                     <div class="pricing-box">
@@ -628,9 +699,8 @@
                             <span><strong>$6 each</strong></span>
                         </div>
                     </div>
-                    <!-- UPDATED: Availability text -->
-                    <p><strong>Available:</strong> Chicks available in Fairbanks in March. We move to Gustavus late spring; hatching eggs and chicks available in Gustavus starting June.</p>
-                    <span class="availability-tag">March (Fairbanks) / June (Gustavus)</span>
+                    <p><strong>Available:</strong> Chicks from March 10, Adults from last week of March 2026</p>
+                    <span class="availability-tag">March Availability</span>
                 </div>
             </div>
         </section>
@@ -660,7 +730,7 @@
                 </div>
             </div>
             
-            <!-- Workshop 2: Carrot Tasting - UPDATED WITH FULL WIDTH CHARTS -->
+            <!-- Workshop 2: Carrot Tasting -->
             <div class="carrot-workshop">
                 <div class="workshop-image">
                     <img src="images/HarvestFestCarrots2024.jpg" alt="Carrots at Harvest Festival">
@@ -675,11 +745,10 @@
                     </div>
                 </div>
                 
-                <!-- FULL WIDTH CHARTS CONTAINER -->
                 <div class="carrot-charts">
                     <div class="charts-full-width">
                         <div class="tasting-tables">
-                            <!-- 2025 Results Table - FULL DATA -->
+                            <!-- 2025 Results Table -->
                             <div class="tasting-table">
                                 <h4>2025 Results - 17 Varieties</h4>
                                 <table>
@@ -714,7 +783,7 @@
                                 </table>
                             </div>
                             
-                            <!-- 2024 Results Table - FULL DATA -->
+                            <!-- 2024 Results Table -->
                             <div class="tasting-table">
                                 <h4>2024 Results - 6 Varieties</h4>
                                 <table>
@@ -761,23 +830,28 @@
             </div>
         </section>
         
-        <!-- Market Banner - UPDATED with new plant starts info and GerminatingOnions image -->
+        <!-- Market Banner - ORIGINAL GreenBeans.jpg -->
         <section class="market-banner">
             <div class="market-image">
-                <!-- NEW: GerminatingOnions.jpg placed here -->
-                <img src="images/GerminatingOnions.jpg" alt="Germinating onions - plant starts">
+                <img src="images/GreenBeans.jpg" alt="Fresh Green Beans from Gustavus">
             </div>
             <div class="market-info">
                 <h3>Second Saturday Markets</h3>
                 <p>Starting April 2026 at the Gustavus Second Saturday Markets.</p>
                 <p>Fresh seasonal produce, quail eggs, and homestead goods from our Gustavus garden.</p>
-                <!-- NEW: Plant starts announcement -->
-                <p><strong>Plant Starts:</strong> Available in Gustavus starting April 2026 (see germinating onions below!).</p>
                 <p><strong>Location:</strong> Gustavus Community Center</p>
                 <p><strong>Season:</strong> April through October</p>
                 <div class="season-date">Starting April 2026</div>
             </div>
         </section>
+        
+        <!-- NEW: Plant Starts Announcement (below market banner) -->
+        <div class="plant-starts-announcement">
+            <h3>🌱 Plant Starts Coming in April! 🌱</h3>
+            <p>Vegetable and herb starts will be available in Gustavus starting April 2026</p>
+            <p>Perfect for your home garden — grown locally with care</p>
+            <div class="highlight">Available at Second Saturday Markets & by appointment</div>
+        </div>
         
         <!-- Back to Home Button -->
         <div style="text-align: center; padding: 2rem;">
