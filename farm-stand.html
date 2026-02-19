@@ -53,30 +53,47 @@
             padding: 0 1rem;
         }
         
-        /* NEW: Quail Sub-banner */
-        .quail-sub-banner {
-            background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
-            color: white;
+        /* NEW: Tan Quail Banner (moved down, replaces orange) */
+        .quail-tan-banner {
+            position: relative;
+            width: 100%;
+            min-height: 220px;
+            background: url('images/QuailChicksIncubatorlong1.jpg') no-repeat center center;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             text-align: center;
-            padding: 1.5rem;
-            margin: 0;
-            border-bottom: 3px solid #d35400;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-        
-        .quail-sub-banner h2 {
-            font-size: 2.5rem;
-            margin: 0;
             color: white;
-            text-shadow: 0 2px 5px rgba(0,0,0,0.3);
-            letter-spacing: 2px;
+            margin: 0;
+            border-bottom: 3px solid #8b5a2b; /* deeper tan accent */
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
         }
         
-        .quail-sub-banner p {
-            font-size: 1.3rem;
-            margin: 0.5rem 0 0 0;
-            opacity: 0.95;
-            font-style: italic;
+        .quail-tan-banner .overlay {
+            background: rgba(139, 90, 43, 0.65); /* tan translucent overlay */
+            padding: 2rem 2.5rem;
+            border-radius: 12px;
+            width: 90%;
+            max-width: 900px;
+            margin: 2rem auto;
+            backdrop-filter: blur(2px);
+        }
+        
+        .quail-tan-banner h2 {
+            font-size: 2.8rem;
+            margin: 0 0 0.5rem 0;
+            color: white;
+            text-shadow: 0 3px 8px rgba(0,0,0,0.5);
+            letter-spacing: 1.5px;
+        }
+        
+        .quail-tan-banner p {
+            font-size: 1.4rem;
+            margin: 0;
+            opacity: 1;
+            font-weight: 500;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
         }
         
         nav {
@@ -109,7 +126,7 @@
         /* Quail Section - Compact */
         .quail-section {
             text-align: center;
-            padding: 3rem 2rem;
+            padding: 3rem 2rem 2rem;
             background: linear-gradient(135deg, #f9fff9 0%, #f0fff0 100%);
             margin: 0;
         }
@@ -490,40 +507,84 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
         
-        /* NEW: Plant Starts Announcement Card (below market banner) */
-        .plant-starts-announcement {
-            background: linear-gradient(135deg, #8e44ad 0%, #9b59b6 100%);
+        /* NEW: Brown Plant Starts Block (replaces purple) */
+        .plant-starts-brown {
+            background: linear-gradient(135deg, #6b4f3c 0%, #8b5a2b 100%); /* rich brown */
             color: white;
-            padding: 1.8rem;
-            border-radius: 15px;
+            padding: 2rem 2rem;
+            border-radius: 20px;
             margin: 2rem auto 3rem;
             max-width: 1000px;
-            text-align: center;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-            border: 3px solid #c39bd3;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+            border: 3px solid #b87c4b;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 2rem;
+            flex-wrap: wrap;
         }
         
-        .plant-starts-announcement h3 {
-            font-size: 2rem;
+        .plant-starts-text {
+            flex: 2;
+            min-width: 280px;
+            text-align: left;
+        }
+        
+        .plant-starts-text h3 {
+            font-size: 2.2rem;
             margin: 0 0 0.5rem 0;
-            color: white;
+            color: #fbe9d2;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.4);
         }
         
-        .plant-starts-announcement p {
-            font-size: 1.3rem;
+        .plant-starts-text p {
+            font-size: 1.2rem;
             margin: 0.5rem 0;
+            line-height: 1.5;
             opacity: 0.95;
         }
         
-        .plant-starts-announcement .highlight {
-            background: rgba(255,255,255,0.2);
+        .plant-starts-text .highlight-brown {
+            background: #d9b382;
+            color: #2c1e0e;
             display: inline-block;
-            padding: 0.5rem 1.5rem;
+            padding: 0.6rem 1.8rem;
             border-radius: 40px;
             font-weight: bold;
-            font-size: 1.4rem;
-            margin-top: 0.8rem;
-            border: 2px solid white;
+            font-size: 1.3rem;
+            margin-top: 1rem;
+            border: 2px solid #fbe9d2;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+        }
+        
+        .plant-starts-image {
+            flex: 1;
+            min-width: 180px;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .plant-starts-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 16px;
+            border: 4px solid #d9b382;
+            box-shadow: 0 8px 18px rgba(0,0,0,0.3);
+        }
+        
+        /* NEW: Quail chick image below the two cards */
+        .quail-extra-image {
+            max-width: 1000px;
+            margin: 2rem auto 1rem;
+            padding: 0 2rem;
+        }
+        
+        .quail-extra-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+            border: 4px solid #f0e0b0;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
         }
         
         .back-btn {
@@ -575,12 +636,16 @@
                 height: 250px;
             }
             
-            .quail-sub-banner h2 {
-                font-size: 1.8rem;
+            .quail-tan-banner h2 {
+                font-size: 2rem;
             }
             
-            .quail-sub-banner p {
-                font-size: 1rem;
+            .quail-tan-banner p {
+                font-size: 1.1rem;
+            }
+            
+            .quail-tan-banner .overlay {
+                padding: 1.5rem 1rem;
             }
             
             nav a {
@@ -629,6 +694,15 @@
             .tasting-table table {
                 min-width: 600px;
             }
+            
+            .plant-starts-brown {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+            
+            .plant-starts-text {
+                text-align: center;
+            }
         }
     </style>
 </head>
@@ -642,12 +716,6 @@
         </div>
     </header>
     
-    <!-- NEW: Quail Sub-banner -->
-    <div class="quail-sub-banner">
-        <h2>We Have Coturnix Quail!</h2>
-        <p>Quail chicks available in Fairbanks in March • We restart our flock with hatching eggs in Gustavus — eggs available starting in June</p>
-    </div>
-    
     <!-- Navigation Menu -->
     <nav>
         <a href="index.html">Home</a>
@@ -657,6 +725,14 @@
         <a href="fantasy-ball.html">Fantasy Art</a>
         <a href="contact.html">Contact</a>
     </nav>
+    
+    <!-- NEW: Tan Banner (moved down, with long quail chick image background) -->
+    <div class="quail-tan-banner">
+        <div class="overlay">
+            <h2>We Have Coturnix Quail!</h2>
+            <p>Quail chicks available in Fairbanks in March • We restart our flock with hatching eggs in Gustavus — eggs available starting in June</p>
+        </div>
+    </div>
     
     <main>
         <!-- Quail Section - Compact - ORIGINAL images and structure -->
@@ -702,6 +778,11 @@
                     <p><strong>Available:</strong> Chicks from March 10, Adults from last week of March 2026</p>
                     <span class="availability-tag">March Availability</span>
                 </div>
+            </div>
+
+            <!-- NEW: Quail chick extra image (third image) -->
+            <div class="quail-extra-image">
+                <img src="images/QuailChicksIncubator.jpg" alt="Quail chicks just hatched in incubator">
             </div>
         </section>
         
@@ -845,12 +926,17 @@
             </div>
         </section>
         
-        <!-- NEW: Plant Starts Announcement (below market banner) -->
-        <div class="plant-starts-announcement">
-            <h3>🌱 Plant Starts Coming in April! 🌱</h3>
-            <p>Vegetable and herb starts will be available in Gustavus starting April 2026</p>
-            <p>Perfect for your home garden — grown locally with care</p>
-            <div class="highlight">Available at Second Saturday Markets & by appointment</div>
+        <!-- NEW: Brown Plant Starts Block (with onion image, updated wording) -->
+        <div class="plant-starts-brown">
+            <div class="plant-starts-text">
+                <h3>🌱 Plant Starts Coming in April! 🌱</h3>
+                <p>Vegetable and herb starts will be available in Gustavus starting April 2026</p>
+                <p>Perfect for your home garden — grown locally with care</p>
+                <div class="highlight-brown">Available at Second Saturday Markets & by appointment at our greenhouse</div>
+            </div>
+            <div class="plant-starts-image">
+                <img src="images/GerminatingOnions.jpg" alt="Germinating onions">
+            </div>
         </div>
         
         <!-- Back to Home Button -->
