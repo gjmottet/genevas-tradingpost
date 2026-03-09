@@ -287,6 +287,35 @@
             color: white;
         }
         
+        .temp-tag {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: bold;
+            z-index: 3;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+            background: #f39c12;
+            color: white;
+        }
+        
+        .note-tag {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: bold;
+            z-index: 3;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+            background: #3498db;
+            color: white;
+            font-size: 0.9rem;
+            max-width: 200px;
+            text-align: center;
+        }
+        
         .price-tag {
             position: absolute;
             top: 15px;
@@ -695,6 +724,18 @@
             margin: 0 auto 0.5rem;
         }
         
+        .breeding-note {
+            text-align: center;
+            background: #e3f2fd;
+            padding: 0.5rem;
+            border-radius: 30px;
+            max-width: 600px;
+            margin: 0.5rem auto 1.5rem;
+            border: 2px solid #3498db;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        
         .back-btn {
             display: inline-block;
             background: #7f8c8d;
@@ -794,7 +835,7 @@
         <p>Champagne d'Argent & Silver Fox | Fairbanks, AK</p>
     </header>
     
-    <!-- Navigation - FIXED order to match index and changed to Fantasy Art -->
+    <!-- Navigation -->
     <nav>
         <a href="index.html">Home</a>
         <a href="alaska-textiles.html">Alaskan Textile Art</a>
@@ -805,7 +846,7 @@
     </nav>
     
     <main>
-        <!-- COMBINED INTRO BOX - CLEANED UP WHITE SPACE -->
+        <!-- COMBINED INTRO BOX -->
         <div class="combined-intro">
             <div class="intro-content">
                 <div class="intro-text">
@@ -814,13 +855,13 @@
                 </div>
                 
                 <div class="intro-grid">
-                    <!-- Left Card: Meet the Rabbits - TIGHTENED TEXT -->
+                    <!-- Left Card: Meet the Rabbits -->
                     <div class="intro-card">
                         <h3><span>🐰</span> Meet the Bunnies</h3>
                         <p>Champagne d'Argent and Silver Fox rabbits with beautiful fur, excellent meat conformation, and friendly dispositions. Each gets individual attention in our Alaska setup.</p>
                     </div>
                     
-                    <!-- Right Card: Garden Gold - TIGHTENED TEXT -->
+                    <!-- Right Card: Garden Gold -->
                     <div class="intro-card">
                         <h3><span>🌱</span> Garden Gold</h3>
                         <p>Best reason to keep rabbits: their poop is the best fertilizer on the planet.</p>
@@ -831,7 +872,7 @@
                         </div>
                     </div>
                     
-                    <!-- Carrot Image spanning both cards - ENLARGED -->
+                    <!-- Carrot Image spanning both cards -->
                     <div class="carrot-image-box">
                         <p>🐇 Rabbit manure made these carrots (left side) vs. without (right side) ⬇️</p>
                         <div class="carrot-image-container">
@@ -843,6 +884,11 @@
             </div>
         </div>
         
+        <!-- Breeding Announcement - NEW -->
+        <div class="breeding-note">
+            🐇 Planned breeding: Lucille & Porkins to Champagne Buck on March 22 - babies expected April 22! 🐇
+        </div>
+        
         <!-- Rabbits for Sale -->
         <div class="section-divider">
             <div class="divider-line"></div>
@@ -851,31 +897,7 @@
         </div>
         
         <div class="rabbit-grid">
-            <!-- Porkins - with more info -->
-            <div class="rabbit-card">
-                <div class="for-sale-tag">Available</div>
-                <div class="price-tag">$110</div>
-                <div class="rabbit-image-container">
-                    <img src="images/Porkins.jpg" alt="Porkins">
-                </div>
-                <div class="rabbit-info">
-                    <div class="rabbit-details">
-                        <span class="breed-tag">Champagne Mix</span>
-                        <span class="gender-tag">Doe</span>
-                        <span class="age-tag">DOB 8/2/25</span>
-                    </div>
-                    <h3>Porkins</h3>
-                    <div class="rabbit-traits">
-                        <span class="trait-badge">Largest litter</span>
-                        <span class="trait-badge">Best body type</span>
-                        <span class="trait-badge">Silvering well</span>
-                        <span class="trait-badge">Friendly</span>
-                    </div>
-                    <p>Largest of the litter with excellent meat conformation. Silvering coming in beautifully. Very friendly and curious. Would make an excellent foundation doe for a new rabbitry. Good mothering instincts already showing.</p>
-                </div>
-            </div>
-            
-            <!-- Bacon - with more info -->
+            <!-- Bacon - still available -->
             <div class="rabbit-card">
                 <div class="for-sale-tag">Available</div>
                 <div class="price-tag">$100</div>
@@ -898,29 +920,6 @@
                     <p>The sweetest of the litter - she'll hop right up to say hello. Beautiful silvering pattern coming in nicely. Takes after her mother Lucille in build but has her own unique personality. Perfect for someone wanting a friendly rabbit.</p>
                 </div>
             </div>
-            
-            <!-- Miss Piggy - with more info -->
-            <div class="rabbit-card">
-                <div class="for-sale-tag">Available</div>
-                <div class="price-tag">$70</div>
-                <div class="rabbit-image-container">
-                    <img src="images/MissPiggyLookingLeft.jpg" alt="Miss Piggy">
-                </div>
-                <div class="rabbit-info">
-                    <div class="rabbit-details">
-                        <span class="breed-tag">Champagne Mix</span>
-                        <span class="gender-tag">Doe</span>
-                        <span class="age-tag">DOB 8/2/25</span>
-                    </div>
-                    <h3>Miss Piggy</h3>
-                    <div class="rabbit-traits">
-                        <span class="trait-badge">Solid meat conformation</span>
-                        <span class="trait-badge">Sweet</span>
-                        <span class="trait-badge">Good mother potential</span>
-                    </div>
-                    <p>Solid, sturdy build with good meat conformation. Sweet disposition and calm temperament. Shows promise as a future mother - very nurturing with younger rabbits. Great starter rabbit for someone new to the breed.</p>
-                </div>
-            </div>
         </div>
         
         <!-- Permanent Herd -->
@@ -930,7 +929,31 @@
         </div>
         
         <div class="rabbit-grid">
-            <!-- Lucille -->
+            <!-- Porkins - MOVED from available, with temp trial note -->
+            <div class="rabbit-card">
+                <div class="temp-tag">Temp - Summer Trial</div>
+                <div class="note-tag">Available Sept in Gustavus as proven doe</div>
+                <div class="rabbit-image-container">
+                    <img src="images/Porkins.jpg" alt="Porkins">
+                </div>
+                <div class="rabbit-info">
+                    <div class="rabbit-details">
+                        <span class="breed-tag">Champagne Mix</span>
+                        <span class="gender-tag">Doe</span>
+                        <span class="age-tag">DOB 8/2/25</span>
+                    </div>
+                    <h3>Porkins</h3>
+                    <div class="rabbit-traits">
+                        <span class="trait-badge">Largest litter</span>
+                        <span class="trait-badge">Best body type</span>
+                        <span class="trait-badge">Silvering well</span>
+                        <span class="trait-badge">Friendly</span>
+                    </div>
+                    <p><strong>Keeping Porkins for summer trial as mother doe.</strong> Will be available September in Gustavus as proven doe with excellent mothering instincts. <strong>Being bred March 22 to Champagne Buck - babies expected April 22.</strong> Largest of her litter with excellent meat conformation.</p>
+                </div>
+            </div>
+            
+            <!-- Lucille - UPDATED with breeding info -->
             <div class="rabbit-card">
                 <div class="rabbit-image-container">
                     <img src="images/Lucille.jpg" alt="Lucille">
@@ -947,11 +970,11 @@
                         <span class="trait-badge">Excellent mother</span>
                         <span class="trait-badge">Foundation stock</span>
                     </div>
-                    <p>Matriarch from Delta. Excellent mother, foundation of our program. Produces consistently good litters with great temperament.</p>
+                    <p>Matriarch from Delta. Excellent mother, foundation of our program. Produces consistently good litters with great temperament. <strong>Being bred March 22 to Champagne Buck - babies expected April 22.</strong></p>
                 </div>
             </div>
             
-            <!-- Dusty - FIXED with DOB label -->
+            <!-- Dusty -->
             <div class="rabbit-card">
                 <div class="rabbit-image-container">
                     <img src="images/DustyFurLookingRight.jpg" alt="Dusty">
@@ -1011,105 +1034,4 @@
                 <div class="donation-section">
                     <h4 style="color: #2e7d32; margin-top: 0;">💚 Support the Winter Hay Fund</h4>
                     <p>Petting zoo is always free, but if you'd like to help keep bellies full when Alaska winter hits, donations are gratefully accepted.</p>
-                    <div class="donation-buttons">
-                        <a href="http://venmo.com/u/GJMTradingPost" class="donate-btn venmo-btn" target="_blank">Venmo @GJMTradingPost</a>
-                        <a href="http://paypal.me/AlaskaPhysics" class="donate-btn paypal-btn" target="_blank">PayPal.me/AlaskaPhysics</a>
-                    </div>
-                    <p class="hay-fund-note">Every bale helps! All donations go to "the winter hay fund" 🥕</p>
-                </div>
-                
-                <!-- ARBA CONVENTION BANNER -->
-                <div class="arba-banner">
-                    <h3>🐇 ARBA Convention 2026</h3>
-                    <p>We're planning to attend!</p>
-                    <div class="dates">103rd Annual ARBA Convention & Show</div>
-                    <p>October 24–28, 2026 • Reno, Nevada</p>
-                </div>
-                
-                <!-- Christmas Pippy -->
-                <div class="christmas-pippy">
-                    <img src="images/ChristmasPippy.jpg" alt="Pippy looking mad in Christmas sweater">
-                    <p>🎄 "Annoy your pets as much as they annoy you" - Pippy, probably</p>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Breeding Program -->
-        <section class="breeding-program">
-            <h3>Our Breeding Program</h3>
-            <ul>
-                <li><strong>Champagne d'Argent:</strong> Silvered fur, excellent meat production</li>
-                <li><strong>Silver Fox:</strong> Dual-purpose, remarkable fur quality</li>
-                <li><strong>Goals:</strong> Healthy, friendly rabbits with meat conformation & quality pelts</li>
-                <li><strong>Care:</strong> Individual attention, spacious living, Fairbanks climate-hardy</li>
-            </ul>
-        </section>
-        
-        <div class="full-divider"></div>
-        
-        <!-- Rabbit Skins Banner -->
-        <div class="skins-banner">
-            <img src="images/TextureOfRabbitSkinInSnow.jpg" alt="Rabbit Skin in Snow">
-            <div class="banner-overlay">
-                <h3>Rabbit & Snowshoe Hare Fur Tanning</h3>
-                <p>Traditional hand-tanning for beautiful, usable fur</p>
-            </div>
-        </div>
-        
-        <!-- Tanning Services -->
-        <section class="tanning-services">
-            <div class="tanning-content">
-                <h3>Hand-Tanned Rabbit & Snowshoe Hare Pelts</h3>
-                <p>I offer traditional hand-tanning services for rabbit and snowshoe hare pelts. Using time-honored methods, I transform raw hides into soft, usable fur perfect for crafts, clothing, and traditional Alaskan items.</p>
-                
-                <div class="skins-grid">
-                    <div class="skins-image-container">
-                        <img src="images/RabbitSkins.jpg" alt="Hand-Tanned Rabbit Skins">
-                    </div>
-                </div>
-                
-                <p>This service honors the full use of the animal, creating beautiful, warm fur items while practicing sustainable harvest traditions. Perfect for hunters, homesteaders, and crafters who want to utilize every part of their harvest.</p>
-                
-                <div class="price-highlight">
-                    $5–10 per skin (based on pelt size)
-                </div>
-                
-                <h3 style="margin-top: 3rem;">Finished Rabbit Skin Hats</h3>
-                <p>See examples of finished products made from our hand-tanned rabbit skins:</p>
-                
-                <div class="hats-grid">
-                    <!-- Rabbit Skin Hat -->
-                    <div class="hat-card">
-                        <div class="hat-image-container">
-                            <img src="images/RabbitSkinHat.jpg" alt="Rabbit Skin Hat">
-                        </div>
-                        <h4>Rabbit Skin Hat</h4>
-                        <p>Warm, handcrafted hat made from our tanned rabbit skins. Perfect for Alaska winters.</p>
-                    </div>
-                    
-                    <!-- Modeling the Hat -->
-                    <div class="hat-card">
-                        <div class="hat-image-container">
-                            <img src="images/RabbitHatOn.jpg" alt="Modeling Rabbit Skin Hat">
-                        </div>
-                        <h4>Warm & Cozy</h4>
-                        <p>Modeling one of our rabbit skin hats. Each hat is custom made and incredibly warm.</p>
-                    </div>
-                </div>
-                
-                <p style="margin-top: 1.5rem;">Custom fur items available upon request. Contact me to discuss your tanning needs or custom hat orders.</p>
-            </div>
-        </section>
-        
-        <!-- Back to Home -->
-        <div style="text-align: center; padding: 1.5rem;">
-            <a href="index.html" class="back-btn">← Back to Home</a>
-        </div>
-    </main>
-    
-    <footer>
-        <p>© 2024 Geneva's Trading Post | Fairbanks, Alaska</p>
-        <p>Rabbits raised with care and attention</p>
-    </footer>
-</body>
-</html>
+                    <div class="donation-butt
