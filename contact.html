@@ -82,8 +82,8 @@
         }
         
         .contact-details {
-            margin-bottom: 1rem; /* Reduced from 2rem to move image up */
-            flex: 0; /* Don't force it to expand */
+            margin-bottom: 1rem;
+            flex: 0;
         }
         
         .contact-item {
@@ -152,9 +152,54 @@
             font-style: italic;
         }
         
-        /* UPDATED: Sunflower image styling */
+        /* Shipping card styling */
+        .shipping-card {
+            background: #e8f4fd;
+            padding: 1.2rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+            border: 2px solid #3498db;
+            text-align: left;
+        }
+        
+        .shipping-card h4 {
+            color: #2c3e50;
+            margin: 0 0 0.8rem 0;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .shipping-card p {
+            margin: 0.5rem 0;
+            color: #2c3e50;
+        }
+        
+        .shipping-rate {
+            font-weight: bold;
+        }
+        
+        .shipping-international {
+            color: #34495e;
+            font-size: 0.95rem;
+        }
+        
+        .shipping-details {
+            margin: 0.8rem 0 0 0;
+            color: #34495e;
+            font-size: 0.95rem;
+            border-top: 1px dashed #3498db;
+            padding-top: 0.8rem;
+        }
+        
+        .shipping-bold {
+            font-weight: bold;
+        }
+        
+        /* Sunflower image styling */
         .sunflower-container {
-            margin-top: 1rem; /* Small gap from text */
+            margin-top: 1rem;
             width: 100%;
             border-radius: 12px;
             overflow: hidden;
@@ -180,7 +225,6 @@
             transform: scale(1.02);
         }
         
-        /* NEW: Caption styling */
         .sunflower-caption {
             width: 100%;
             padding: 0.8rem;
@@ -340,7 +384,7 @@
             margin-bottom: 2rem;
         }
         
-        /* Condensed single paragraph story */
+        /* Updated story with multiple paragraphs */
         .bio-story {
             font-size: 1.15rem;
             line-height: 1.7;
@@ -354,7 +398,11 @@
         }
         
         .bio-story p {
-            margin: 0;
+            margin: 0 0 1.2rem 0;
+        }
+        
+        .bio-story p:last-child {
+            margin-bottom: 0;
         }
         
         /* Credentials as bullet points */
@@ -588,7 +636,7 @@
     
     <main>
         <div class="contact-container">
-            <!-- Contact Information - with sunflower image moved up -->
+            <!-- Contact Information - with shipping card added -->
             <section class="contact-info">
                 <h2>Contact & Commission Info</h2>
                 
@@ -601,6 +649,16 @@
                             </button>
                             
                             <div class="email-note">No spam, just rabbits and art! 🐰</div>
+                        </div>
+                        
+                        <!-- NEW: Shipping Information Card -->
+                        <div class="shipping-card">
+                            <h4><span>📦</span> I Ship Anywhere!</h4>
+                            <p class="shipping-rate">$12 flat rate shipping in the US via USPS</p>
+                            <p class="shipping-international">International orders: please contact me for special arrangements</p>
+                            <p class="shipping-details">
+                                <span class="shipping-bold">📅 Shipping day:</span> Tuesdays, April–October, from Gustavus Post Office
+                            </p>
                         </div>
                         
                         <script>
@@ -638,7 +696,7 @@
                     </div>
                 </div>
                 
-                <!-- UPDATED: Sunflower image with caption - moved up -->
+                <!-- Sunflower image with caption -->
                 <div class="sunflower-container">
                     <img src="images/Sunflower2.jpg" alt="Tall sunflower growing in front of our Gustavus home" class="sunflower-image">
                     <div class="sunflower-caption">🌻 Sunflower growing in front of our Gustavus house</div>
@@ -694,13 +752,21 @@
                 </div>
             </section>
             
-            <!-- The Story of Geneva's Trading Post -->
+            <!-- The Story of Geneva's Trading Post - UPDATED with new bio -->
             <section class="bio-section">
                 <h2>The Story of Geneva's Trading Post</h2>
                 
-                <!-- Condensed single paragraph -->
+                <!-- NEW: Your updated story with multiple paragraphs -->
                 <div class="bio-story">
-                    <p>I grew up between Sitka, Alaska and the San Juan Islands, in 4-H from age 10 for astronomy and textile art. Started with meat rabbits at 17, earned dual degrees in physics/math from Evergreen (NSF-funded), then an MS in Physics from UAF studying auroras. Bought my Fairbanks house during grad school—homesteading became my anchor. Married my husband in 2019. When COVID hit, my off-grid skills carried me through seven layoffs in twelve months. In 2021, we bought our off-grid Gustavus homestead near Glacier Bay, while keeping our original on-grid Fairbanks home. I'm now a Certified Master Gardener (2024), active ARBA member, and retraining through UAF. Still an amateur astronomer after all these years.</p>
+                    <p>I grew up between Sitka, Alaska and the San Juan Islands. 4‑H was a constant through my childhood—nine years as a member, then five more as an adult leader before I left for college. That program taught me everything from textile arts to astronomy, and it's come full circle now: I'm currently becoming a leader for Gustavus Country Critters.</p>
+                    
+                    <p>By high school, I was already running a sole proprietorship, selling my art and animals at craft fairs. I started with meat rabbits at seventeen. From there, I went to Evergreen for dual degrees in physics and math, with my math degree focused on nonlinear modeling of biological complex systems—a thread that would carry forward.</p>
+                    
+                    <p>I came to Fairbanks to start a physics Ph.D. studying auroras. Along the way, I shifted gears and earned an MS in Physics with an emphasis in biological modeling and nonlinear dynamics—picking up right where my Evergreen work left off. During grad school, I bought my house in Fairbanks, and homesteading became my anchor. Through every twist and turn, the animals and the garden kept me grounded.</p>
+                    
+                    <p>I married my husband in 2019. When COVID hit the next year, my off‑grid skills weren't just hobbies anymore—they carried me through seven layoffs in twelve months. In 2021, instead of pulling back, we doubled down: we bought our off‑grid Gustavus homestead near Glacier Bay while keeping our original Fairbanks home.</p>
+                    
+                    <p>Today, I'm a Certified Master Gardener (2024) and an active ARBA member. I'm back at UAF for more training, and I still find time to be an amateur astronomer. The details have changed over the years, but the core of what I do hasn't: raising animals, growing food, and building something that lasts.</p>
                 </div>
                 
                 <!-- Credentials as bullet points -->
