@@ -11,8 +11,9 @@
     <style>
         /* Color Variables for easy theming */
         :root {
-            --valentine-red: #E74C3C;
-            --valentine-pink: #F1948A;
+            --summer-sun: #F39C12;
+            --summer-sky: #3498DB;
+            --summer-grass: #27AE60;
             --persephone-purple: #6C3483;
             --persephone-dark: #4A235A;
             --science-blue: #3498DB;
@@ -97,7 +98,7 @@
             box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
         
-        /* Seasonal Section */
+        /* Seasonal Section - Updated for Summer */
         .seasonal-section {
             max-width: 1200px;
             margin: 3rem auto;
@@ -110,7 +111,7 @@
         }
         
         .seasonal-header h2 {
-            color: var(--valentine-red);
+            color: var(--summer-sun);
             font-size: 2.2rem;
             margin-bottom: 0.5rem;
         }
@@ -134,7 +135,7 @@
             border-radius: 12px;
             overflow: hidden;
             box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-            border: 2px solid var(--valentine-pink);
+            border: 2px solid var(--summer-sun);
             transition: transform 0.3s ease;
         }
         
@@ -148,9 +149,9 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(135deg, #FFF0F5 0%, #FFE4E1 100%);
+            background: linear-gradient(135deg, #FFF9E6 0%, #FFF2D9 100%);
             padding: 1.5rem;
-            border-bottom: 3px solid var(--valentine-red);
+            border-bottom: 3px solid var(--summer-sun);
         }
         
         .seasonal-image img {
@@ -166,10 +167,10 @@
         }
         
         .seasonal-info h3 {
-            color: var(--valentine-red);
+            color: var(--summer-sun);
             margin-top: 0;
             font-size: 1.5rem;
-            border-bottom: 2px solid var(--valentine-pink);
+            border-bottom: 2px solid #FDE3A7;
             padding-bottom: 0.5rem;
             margin-bottom: 1rem;
         }
@@ -181,8 +182,17 @@
             margin: 1rem 0;
         }
         
-        .valentine-tag {
-            background: var(--valentine-red);
+        .summer-tag {
+            background: var(--summer-sun);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+        
+        .memory-tag {
+            background: var(--summer-grass);
             color: white;
             padding: 0.3rem 0.8rem;
             border-radius: 20px;
@@ -197,10 +207,10 @@
             border-radius: 8px;
             margin: 1rem 0;
             font-weight: bold;
-            border-left: 4px solid var(--valentine-red);
+            border-left: 4px solid var(--summer-sun);
         }
         
-        /* Science Art Section - UPDATED LAYOUT */
+        /* Science Art Section */
         .science-section {
             background: linear-gradient(135deg, #E8F4F8 0%, #F0F7FF 100%);
             padding: 3rem 2rem;
@@ -283,14 +293,14 @@
             margin: 1.5rem 0;
         }
         
-        /* Event Calendar */
+        /* Event Calendar - UPDATED */
         .events-section {
             background: linear-gradient(135deg, var(--persephone-dark) 0%, var(--persephone-purple) 100%);
             color: white;
             padding: 3rem 2rem;
             border-radius: 15px;
             margin: 3rem auto;
-            max-width: 1000px;
+            max-width: 1200px;
             text-align: center;
             border: 3px solid var(--fantasy-gold);
         }
@@ -304,9 +314,9 @@
         
         .event-calendar {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
-            max-width: 800px;
+            max-width: 1100px;
             margin: 0 auto;
         }
         
@@ -315,6 +325,12 @@
             padding: 1.5rem;
             border-radius: 10px;
             border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease;
+        }
+        
+        .event-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
         }
         
         .event-card h3 {
@@ -331,6 +347,12 @@
             border-radius: 20px;
             font-weight: bold;
             margin: 0.5rem 0;
+        }
+        
+        .event-description {
+            font-size: 0.95rem;
+            margin-top: 0.8rem;
+            color: rgba(255, 255, 255, 0.9);
         }
         
         /* Fantasy Creations */
@@ -572,6 +594,52 @@
             margin-bottom: 1.5rem;
         }
         
+        /* Summer Memory Card */
+        .summer-memory-section {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+        
+        .summer-card {
+            background: linear-gradient(135deg, #FFF9E6 0%, #FFF2D9 100%);
+            border-radius: 15px;
+            padding: 2.5rem;
+            border: 3px solid var(--summer-sun);
+            text-align: center;
+        }
+        
+        .summer-card h3 {
+            color: var(--summer-sun);
+            font-size: 2rem;
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+        
+        .summer-card p {
+            font-size: 1.2rem;
+            color: var(--text-medium);
+            max-width: 800px;
+            margin: 0 auto 1.5rem;
+        }
+        
+        .memory-ideas {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .memory-idea {
+            background: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 40px;
+            border: 2px solid var(--summer-grass);
+            color: var(--summer-grass);
+            font-weight: bold;
+        }
+        
         /* Buttons */
         .back-btn {
             display: inline-block;
@@ -656,6 +724,11 @@
                 font-size: 0.9rem;
                 padding: 0.4rem 0.8rem;
             }
+            
+            .memory-ideas {
+                flex-direction: column;
+                align-items: center;
+            }
         }
     </style>
 </head>
@@ -679,15 +752,37 @@
     </nav>
     
     <main>
-        <!-- Seasonal Valentine's Section -->
+        <!-- Summer Memory & Memento Section - NEW -->
+        <section class="summer-memory-section">
+            <div class="summer-card">
+                <h3>☀️ Summer Memories & Travel Mementos</h3>
+                <p>Planning your Alaska summer vacation or looking for a meaningful souvenir? I create custom pieces that capture your special moments—whether it's a wildlife sighting, a favorite trail, or a beloved pet.</p>
+                
+                <div class="memory-ideas">
+                    <span class="memory-idea">Alaska wildlife</span>
+                    <span class="memory-idea">Glacier Bay</span>
+                    <span class="memory-idea">Family vacation</span>
+                    <span class="memory-idea">Hiking memories</span>
+                    <span class="memory-idea">Pet portraits</span>
+                    <span class="memory-idea">Wedding keepsakes</span>
+                </div>
+                
+                <p>Custom embroidered pieces, hand-knit mementos, and personalized creations made to order. Perfect for tourists, anniversary gifts, or commemorating your Alaska adventure.</p>
+                <div class="embroidery-offer" style="margin-top: 1.5rem;">
+                    ✨ Custom orders welcome! Contact me to discuss your vision.
+                </div>
+            </div>
+        </section>
+        
+        <!-- Seasonal Section - Updated for Summer -->
         <section class="seasonal-section">
             <div class="seasonal-header">
                 <h2>Seasonal Specialties</h2>
-                <p>Thoughtful handmade gifts perfect for Valentine's Day or any special occasion</p>
+                <p>Handmade gifts perfect for summer visitors, Alaska souvenirs, or special occasions year-round</p>
             </div>
             
             <div class="seasonal-grid">
-                <!-- Folk Hearts -->
+                <!-- Folk Hearts - Updated tags -->
                 <div class="seasonal-card">
                     <div class="seasonal-image">
                         <img src="images/FolkHeartBasket.jpg" alt="Folk Hearts">
@@ -695,18 +790,19 @@
                     <div class="seasonal-info">
                         <h3>Folk Hearts</h3>
                         <div class="seasonal-tags">
-                            <span class="valentine-tag">Valentine's Special</span>
+                            <span class="memory-tag">Keepsake</span>
+                            <span class="summer-tag">Tourist Favorite</span>
                         </div>
-                        <p>Charming folk art hearts, perfect for Valentine's Day gifts or home decorations. Made with natural fibers and traditional patterns.</p>
+                        <p>Charming folk art hearts, perfect for Alaska souvenirs or home decorations. Made with natural fibers and traditional patterns.</p>
                         <div class="embroidery-offer">
-                            ✨ FREE embroidery of initials or dates!
+                            ✨ FREE embroidery of names, dates, or places!
                         </div>
                         <p><strong>Price:</strong> $6 each | <strong>Special:</strong> 4 for $20</p>
-                        <p><em>Order by February 13th for Valentine's delivery!</em></p>
+                        <p><em>Great for commemorating your Alaska visit</em></p>
                     </div>
                 </div>
                 
-                <!-- Hand-Knit Teddy Bears -->
+                <!-- Hand-Knit Teddy Bears - Updated tags -->
                 <div class="seasonal-card">
                     <div class="seasonal-image">
                         <img src="images/YellowBearWithScarf.jpg" alt="Hand-Knit Teddy Bear">
@@ -714,20 +810,21 @@
                     <div class="seasonal-info">
                         <h3>Hand-Knit Teddy Bears</h3>
                         <div class="seasonal-tags">
-                            <span class="valentine-tag">Valentine's Gift</span>
+                            <span class="memory-tag">Keepsake</span>
+                            <span class="memory-tag">Children's Gift</span>
                         </div>
-                        <p>Adorable hand-knit teddy bears, each with unique details like scarves, bows, or special outfits. Perfect cuddly companions for Valentine's Day or any occasion.</p>
+                        <p>Adorable hand-knit teddy bears, each with unique details like scarves, bows, or special outfits. Perfect cuddly companions and lasting mementos.</p>
                         <div class="embroidery-offer">
-                            ✨ FREE embroidery available! Choose a bear and I'll add the details you want.
+                            ✨ FREE embroidery available! Add names, dates, or special messages.
                         </div>
                         <p><strong>Features:</strong> Soft natural fibers, detailed accessories, embroidered faces</p>
-                        <p><em>Makes a heartfelt personalized gift</em></p>
+                        <p><em>Makes a heartfelt personalized gift for any age</em></p>
                     </div>
                 </div>
             </div>
         </section>
         
-        <!-- Science Art Section - UPDATED LAYOUT -->
+        <!-- Science Art Section -->
         <section class="science-section">
             <h2>A Dynamics Yarn: Mathematical Potholders</h2>
             
@@ -756,26 +853,56 @@
             </div>
         </section>
         
-        <!-- Event Calendar - REORDERED -->
+        <!-- Event Calendar - UPDATED with all events -->
         <section class="events-section">
             <h2>Upcoming Events & Exhibitions</h2>
             <div class="event-calendar">
+                <!-- PopCon first -->
                 <div class="event-card">
                     <h3>PopCon Fairbanks</h3>
                     <div class="event-date">November 2026</div>
                     <p>University gaming & pop culture convention. Perfect venue for dice bags, fantasy accessories, and unique creations.</p>
+                    <div class="event-description">Featuring D&D dice bags, dragon potholders, and fantasy-themed art</div>
                 </div>
                 
+                <!-- LARS Holiday Bazaar - NEW -->
+                <div class="event-card">
+                    <h3>LARS Holiday Bazaar</h3>
+                    <div class="event-date">November 2026</div>
+                    <p>Large Animal Research Station, UAF. Focus on handmade textile and rabbit products.</p>
+                    <div class="event-description">Featuring rabbit-related crafts, fiber art, and cozy winter textiles</div>
+                </div>
+                
+                <!-- Calypso Farm Holiday Craft Fair - NEW -->
+                <div class="event-card">
+                    <h3>Calypso Farm Holiday Craft Fair</h3>
+                    <div class="event-date">November 2026</div>
+                    <p>Calypso Farm and Ecology Center. Local artists featuring handmade, sustainable textile art.</p>
+                    <div class="event-description">Eco-friendly creations, natural fibers, and sustainable handmade gifts</div>
+                </div>
+                
+                <!-- Morris Thompson Holiday Bazaar - NEW -->
+                <div class="event-card">
+                    <h3>Holiday Bazaar</h3>
+                    <div class="event-date">December 2026</div>
+                    <p>Morris Thompson Cultural & Visitors Center. Holiday gift craft fair featuring local artisans.</p>
+                    <div class="event-description">Perfect for holiday shopping: Alaskan-made gifts for art appreciators</div>
+                </div>
+                
+                <!-- First Friday (moved down) -->
                 <div class="event-card">
                     <h3>First Friday Art Show</h3>
                     <div class="event-date">Nov/Dec 2026</div>
                     <p>Keith B. Mather Library at the Geophysical Institute, UAF. Featuring scientific and mathematical art creations.</p>
+                    <div class="event-description">Mathematical potholders and science-inspired textile art</div>
                 </div>
                 
+                <!-- Persephone's Lair - corrected date -->
                 <div class="event-card">
                     <h3>Persephone's Lair</h3>
-                    <div class="event-date">Fall 2027</div>
-                    <p>Fantasy Ball featuring Greek underworld themes. Planning custom mythologically-inspired creations!</p>
+                    <div class="event-date">February 2027</div>
+                    <p>Fantasy Ball featuring Greek underworld themes. Custom mythologically-inspired creations!</p>
+                    <div class="event-description">Planning underworld-themed accessories and costume pieces</div>
                 </div>
             </div>
         </section>
@@ -847,7 +974,7 @@
                     </div>
                 </div>
                 
-                <!-- Dust Sprites - WITH PRICE TAG ON IMAGE -->
+                <!-- Dust Sprites -->
                 <div class="fantasy-card">
                     <div class="fantasy-image">
                         <img src="images/DustSprites.jpg" alt="Dust Sprites">
@@ -903,7 +1030,7 @@
             <p>Looking for something specific for an event, gift, or collection? I accept custom commissions for:</p>
             <p><strong>• Fantasy themes</strong> (Persephone's Lair, dragons, mythology)<br>
                <strong>• Science/Math concepts</strong> (like the mathematical potholders)<br>
-               <strong>• Seasonal specialties</strong> (Valentine's, holidays)<br>
+               <strong>• Alaska memories</strong> (wildlife, landscapes, vacation keepsakes)<br>
                <strong>• Gaming accessories</strong> (custom dice bags, character-themed items)</p>
             <p><strong>Fast Turnaround:</strong> Most pieces completed in less than a week. Embroidery at shows often takes less than an hour for names or dates!</p>
             <p><strong>Materials:</strong> Natural fibers with detailed embroidery and embellishments</p>
@@ -922,7 +1049,7 @@
     
     <footer>
         <p>© 2024 Geneva's Trading Post | Fantasy, Science & Seasonal Creations</p>
-        <p>Handmade in Fairbanks, Alaska | Perfect for Fantasy Ball, PopCon, and Special Occasions</p>
+        <p>Handmade in Fairbanks, Alaska | Perfect for PopCon, Holiday Bazaars, and Special Occasions</p>
     </footer>
 </body>
 </html>
