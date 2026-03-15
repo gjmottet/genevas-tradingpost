@@ -123,7 +123,7 @@
             background: #2ecc71;
         }
 
-        /* NEW: White gap between nav and tan banner */
+        /* White gap between nav and tan banner */
         .white-gap {
             height: 25px;
             background: white;
@@ -542,7 +542,7 @@
             margin: 0 0 0.5rem 0;
             color: #fbe9d2;
             text-shadow: 0 2px 4px rgba(0,0,0,0.4);
-            white-space: nowrap; /* keeps it on one line */
+            white-space: nowrap;
         }
         
         .plant-starts-text p {
@@ -567,7 +567,7 @@
         
         .plant-starts-image {
             flex: 1;
-            min-width: 260px; /* made larger */
+            min-width: 260px;
             display: flex;
             justify-content: center;
         }
@@ -578,7 +578,7 @@
             border-radius: 16px;
             border: 4px solid #d9b382;
             box-shadow: 0 8px 18px rgba(0,0,0,0.3);
-            max-height: 220px; /* larger display */
+            max-height: 220px;
             width: auto;
         }
         
@@ -635,6 +635,24 @@
             background: #2c3e50;
             color: white;
             margin-top: 3rem;
+        }
+        
+        /* Special requests note */
+        .special-requests {
+            margin-top: 1rem;
+            font-style: italic;
+            background: rgba(255,255,255,0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 30px;
+            display: inline-block;
+        }
+        
+        /* Craigslist note */
+        .craigslist-note {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+            margin-bottom: 1rem;
+            font-style: italic;
         }
         
         @media (max-width: 1100px) {
@@ -729,14 +747,14 @@
             }
             
             .plant-starts-text h3 {
-                white-space: normal; /* allow wrap on mobile */
+                white-space: normal;
                 font-size: 1.8rem;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Farm Stand Header with Banner - ORIGINAL SquashPlant.jpg -->
+    <!-- Farm Stand Header with Banner -->
     <header class="farm-header">
         <img src="images/SquashPlant.jpg" alt="Squash Plant in Garden" class="farm-banner">
         <div class="banner-overlay">
@@ -755,77 +773,25 @@
         <a href="contact.html">Contact</a>
     </nav>
 
-    <!-- NEW: White gap between green nav and tan banner -->
+    <!-- White gap between green nav and tan banner -->
     <div class="white-gap"></div>
     
     <!-- Tan Banner (long quail chick image background) -->
     <div class="quail-tan-banner">
         <div class="overlay">
             <h2>We Have Coturnix Quail!</h2>
-            <p>Quail chicks available in Fairbanks in March • We restart our flock with hatching eggs in Gustavus — eggs available starting in June</p>
+            <p>Our flock will restart in Gustavus with hatching eggs — eggs available starting in June</p>
         </div>
     </div>
     
     <main>
-        <!-- Quail Section - Compact - ORIGINAL images and structure, with date updated -->
-        <section class="quail-section">
-            <!-- Removed the h2 and intro that duplicated the banner -->
-            
-            <div class="quail-grid">
-                <div class="quail-card">
-                    <div class="quail-image-container">
-                        <img src="images/QuailEggs.jpg" alt="Fresh Quail Eggs">
-                    </div>
-                    <h3>Fresh Quail Eggs</h3>
-                    <div style="background: #e74c3c; color: white; padding: 0.6rem 1.5rem; border-radius: 30px; font-size: 1.3rem; font-weight: bold; margin: 0.5rem 0; display: inline-block;">$10/dozen</div>
-                    <p>Fertile eggs - perfect for eating or hatching. Some eggs have rare celadon genetics for possible blue egg layers!</p>
-                    <!-- UPDATED: Hatch date February 19 -->
-                    <p><strong>Hatching:</strong> Eggs in incubator Feb 1 → Hatch Feb 19 → Chicks available Mar 12</p>
-                    <span class="availability-tag">Year-Round Availability</span>
-                </div>
-                
-                <div class="quail-card">
-                    <div class="quail-image-container">
-                        <img src="images/Quail1.jpg" alt="Coturnix Quail">
-                    </div>
-                    <h3>Quail Chicks & Adults</h3>
-                    <div class="pricing-box">
-                        <div class="pricing-item">
-                            <span>3-week-old chicks (straight run):</span>
-                            <span><strong>$5.50 each</strong></span>
-                        </div>
-                        <div class="pricing-item">
-                            <span>Special: 5 chicks:</span>
-                            <span><strong>$25</strong></span>
-                        </div>
-                        <div class="pricing-item">
-                            <span>Young laying hens:</span>
-                            <span><strong>$10 each</strong></span>
-                        </div>
-                        <div class="pricing-item">
-                            <span>Adult roosters:</span>
-                            <span><strong>$6 each</strong></span>
-                        </div>
-                    </div>
-                    <p><strong>Available:</strong> Chicks from March 12, Adults from last week of March 2026</p>
-                    <span class="availability-tag">March Availability</span>
-                </div>
-            </div>
-
-            <!-- Quail chick extra image with caption (updated date) -->
-            <div class="quail-extra-image">
-                <img src="images/QuailChicksIncubator.jpg" alt="Quail chicks just hatched in incubator">
-                <div class="image-caption">🐣 Cute chick just hatched February 19</div>
-            </div>
-        </section>
-        
-        <!-- Announcement Card -->
+        <!-- ANNOUNCEMENT CARD - MOVED TO TOP -->
         <div class="announcement-card">
             <h2>Announcing</h2>
             <p>Cultivating Food Sovereignty for Gustavus</p>
         </div>
         
-        <!-- Workshop Section -->
+        <!-- WORKSHOP SECTION - MOVED SECOND -->
         <section class="workshop-section">
             <h2>2026 Workshop Series</h2>
             
@@ -944,7 +910,21 @@
             </div>
         </section>
         
-        <!-- Market Banner - ORIGINAL GreenBeans.jpg -->
+        <!-- BROWN PLANT STARTS BLOCK - MOVED THIRD with special requests note -->
+        <div class="plant-starts-brown">
+            <div class="plant-starts-text">
+                <h3>🌱 Plant Starts Coming in April! 🌱</h3>
+                <p>Vegetable and herb starts will be available in Gustavus starting April 2026</p>
+                <p>Perfect for your home garden — grown locally with care</p>
+                <div class="highlight-brown">Available at Second Saturday Markets & by appointment at our greenhouse</div>
+                <div class="special-requests">📝 Taking special requests! Contact me for specific plants you'd like me to start for you.</div>
+            </div>
+            <div class="plant-starts-image">
+                <img src="images/GerminatingOnions.jpg" alt="Germinating onions">
+            </div>
+        </div>
+        
+        <!-- MARKET BANNER - MOVED FOURTH -->
         <section class="market-banner">
             <div class="market-image">
                 <img src="images/GreenBeans.jpg" alt="Fresh Green Beans from Gustavus">
@@ -959,18 +939,59 @@
             </div>
         </section>
         
-        <!-- Brown Plant Starts Block (onion image larger, heading one line) -->
-        <div class="plant-starts-brown">
-            <div class="plant-starts-text">
-                <h3>🌱 Plant Starts Coming in April! 🌱</h3>
-                <p>Vegetable and herb starts will be available in Gustavus starting April 2026</p>
-                <p>Perfect for your home garden — grown locally with care</p>
-                <div class="highlight-brown">Available at Second Saturday Markets & by appointment at our greenhouse</div>
+        <!-- QUAIL SECTION - MOVED TO BOTTOM (all images and formatting preserved) -->
+        <section class="quail-section">
+            <!-- Removed the h2 and intro that duplicated the banner -->
+            
+            <div class="craigslist-note">⚠️ Pricing below reflects our current Craigslist ad in Fairbanks. Our Gustavus flock will restart in June 2026.</div>
+            
+            <div class="quail-grid">
+                <div class="quail-card">
+                    <div class="quail-image-container">
+                        <img src="images/QuailEggs.jpg" alt="Fresh Quail Eggs">
+                    </div>
+                    <h3>Fresh Quail Eggs</h3>
+                    <div style="background: #e74c3c; color: white; padding: 0.6rem 1.5rem; border-radius: 30px; font-size: 1.3rem; font-weight: bold; margin: 0.5rem 0; display: inline-block;">$10/dozen</div>
+                    <p>Fertile eggs - perfect for eating or hatching. Some eggs have rare celadon genetics for possible blue egg layers!</p>
+                    <!-- UPDATED: Gustavus timing -->
+                    <p><strong>Available in Gustavus:</strong> Eggs available starting June 2026</p>
+                    <span class="availability-tag">June Availability</span>
+                </div>
+                
+                <div class="quail-card">
+                    <div class="quail-image-container">
+                        <img src="images/Quail1.jpg" alt="Coturnix Quail">
+                    </div>
+                    <h3>Quail Chicks & Adults</h3>
+                    <div class="pricing-box">
+                        <div class="pricing-item">
+                            <span>3-week-old chicks (straight run):</span>
+                            <span><strong>$5.50 each</strong></span>
+                        </div>
+                        <div class="pricing-item">
+                            <span>Special: 5 chicks:</span>
+                            <span><strong>$25</strong></span>
+                        </div>
+                        <div class="pricing-item">
+                            <span>Young laying hens:</span>
+                            <span><strong>$10 each</strong></span>
+                        </div>
+                        <div class="pricing-item">
+                            <span>Adult roosters:</span>
+                            <span><strong>$6 each</strong></span>
+                        </div>
+                    </div>
+                    <p><strong>Available in Gustavus:</strong> Flock restarting June 2026 — chicks and adults available later in summer</p>
+                    <span class="availability-tag">Summer 2026</span>
+                </div>
             </div>
-            <div class="plant-starts-image">
-                <img src="images/GerminatingOnions.jpg" alt="Germinating onions">
+
+            <!-- Quail chick extra image with caption (updated date) -->
+            <div class="quail-extra-image">
+                <img src="images/QuailChicksIncubator.jpg" alt="Quail chicks just hatched in incubator">
+                <div class="image-caption">🐣 Our Gustavus flock will restart with hatching eggs in June</div>
             </div>
-        </div>
+        </section>
         
         <!-- Back to Home Button -->
         <div style="text-align: center; padding: 2rem;">
