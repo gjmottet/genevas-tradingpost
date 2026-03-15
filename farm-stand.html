@@ -53,7 +53,7 @@
             padding: 0 1rem;
         }
         
-        /* NEW: Tan Quail Banner */
+        /* Quail Banner - MOVED to quail section */
         .quail-tan-banner {
             position: relative;
             width: 100%;
@@ -65,9 +65,10 @@
             justify-content: center;
             text-align: center;
             color: white;
-            margin: 0;
+            margin: 0 0 2rem 0;
             border-bottom: 3px solid #8b5a2b;
             box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            border-radius: 12px;
         }
         
         .quail-tan-banner .overlay {
@@ -123,19 +124,19 @@
             background: #2ecc71;
         }
 
-        /* White gap between nav and tan banner */
+        /* White gap between nav and content */
         .white-gap {
             height: 25px;
             background: white;
             width: 100%;
         }
         
-        /* Quail Section - Compact */
+        /* Quail Section */
         .quail-section {
             text-align: center;
             padding: 3rem 2rem 2rem;
             background: linear-gradient(135deg, #f9fff9 0%, #f0fff0 100%);
-            margin: 0;
+            margin: 2rem 0 0 0;
         }
         
         .quail-section h2 {
@@ -158,7 +159,7 @@
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
             max-width: 1000px;
-            margin: 0 auto;
+            margin: 2rem auto 0;
         }
         
         .quail-card {
@@ -195,23 +196,38 @@
             margin-bottom: 1rem;
         }
         
-        .pricing-box {
+        /* NEW: Stewardship pricing box */
+        .stewardship-box {
             background: #f8f9fa;
-            padding: 1rem;
+            padding: 1.5rem;
             border-radius: 8px;
             margin: 1rem 0;
-            border: 1px solid #e0e0e0;
+            border: 2px solid #27ae60;
+            text-align: left;
         }
         
-        .pricing-item {
-            display: flex;
-            justify-content: space-between;
-            padding: 0.4rem 0;
-            border-bottom: 1px solid #e0e0e0;
+        .stewardship-option {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px dashed #27ae60;
         }
         
-        .pricing-item:last-child {
+        .stewardship-option:last-child {
             border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .stewardship-title {
+            font-weight: bold;
+            color: #27ae60;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stewardship-desc {
+            margin-left: 1rem;
+            color: #34495e;
         }
         
         .availability-tag {
@@ -225,41 +241,41 @@
             margin: 0.5rem 0;
         }
         
-        /* Announcement Card */
+        /* Announcement Card - UPDATED to dark blue */
         .announcement-card {
-            background: linear-gradient(135deg, #145A32 0%, #27ae60 100%);
-            color: white;
+            background: linear-gradient(135deg, #1a3e6f 0%, #2c5282 100%);
+            color: #e6f0ff;
             padding: 2.5rem;
             border-radius: 15px;
             margin: 2rem auto;
             max-width: 1000px;
             text-align: center;
             box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-            border: 3px solid #2ecc71;
+            border: 3px solid #4299e1;
         }
         
         .announcement-card h2 {
             font-size: 2.5rem;
             margin-top: 0;
             margin-bottom: 0.5rem;
-            color: white;
+            color: #e6f0ff;
         }
         
         .announcement-card p {
             font-size: 1.4rem;
             line-height: 1.6;
             margin: 0;
-            opacity: 0.9;
+            opacity: 0.95;
         }
         
-        /* Workshop Section */
+        /* Workshop Section - with updated colors */
         .workshop-section {
             padding: 3rem 2rem;
             background: white;
         }
         
         .workshop-section h2 {
-            color: #9b59b6;
+            color: #1a3e6f;
             text-align: center;
             font-size: 2.2rem;
             margin-bottom: 2rem;
@@ -287,8 +303,9 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
         
+        /* Meat Rabbit Workshop - Blue theme */
         .workshop-details h3 {
-            color: #9b59b6;
+            color: #2c5282;
             margin-top: 0;
             font-size: 1.6rem;
             text-align: left;
@@ -311,14 +328,14 @@
         }
         
         .starter-kit {
-            background: #fef9e7;
+            background: #e8f0fe;
             padding: 1rem;
             border-radius: 8px;
             margin: 1rem 0;
-            border-left: 4px solid #f39c12;
+            border-left: 4px solid #2c5282;
         }
         
-        /* Carrot Tasting Workshop */
+        /* Carrot Tasting Workshop - ORANGE theme (unchanged) */
         .carrot-workshop {
             display: grid;
             grid-template-columns: 300px 1fr;
@@ -342,6 +359,25 @@
             border-radius: 8px;
             margin: 1rem 0;
             border-left: 4px solid #27ae60;
+        }
+        
+        /* Harvest Festival Workshop - Blue theme */
+        .harvest-workshop {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+            align-items: start;
+        }
+        
+        .harvest-workshop .workshop-details h3 {
+            color: #2c5282;
+        }
+        
+        .harvest-workshop .workshop-details p {
+            font-size: 1rem;
+            line-height: 1.5;
         }
         
         .carrot-charts {
@@ -429,28 +465,13 @@
             background: #f4ecf7;
         }
         
-        /* Harvest Festival Workshop */
-        .harvest-workshop {
-            display: grid;
-            grid-template-columns: 300px 1fr;
-            gap: 2rem;
-            max-width: 1000px;
-            margin: 0 auto;
-            align-items: start;
-        }
-        
-        .harvest-workshop .workshop-details p {
-            font-size: 1rem;
-            line-height: 1.5;
-        }
-        
         .grant-note {
-            background: #f4ecf7;
+            background: #e8f0fe;
             padding: 1.5rem;
             border-radius: 8px;
             margin: 3rem auto 0;
             max-width: 1000px;
-            border-left: 4px solid #9b59b6;
+            border-left: 4px solid #2c5282;
             text-align: center;
         }
         
@@ -647,14 +668,6 @@
             display: inline-block;
         }
         
-        /* Craigslist note */
-        .craigslist-note {
-            font-size: 0.9rem;
-            color: #7f8c8d;
-            margin-bottom: 1rem;
-            font-style: italic;
-        }
-        
         @media (max-width: 1100px) {
             .tasting-tables {
                 grid-template-columns: 1fr;
@@ -773,29 +786,21 @@
         <a href="contact.html">Contact</a>
     </nav>
 
-    <!-- White gap between green nav and tan banner -->
+    <!-- White gap between green nav and content -->
     <div class="white-gap"></div>
     
-    <!-- Tan Banner (long quail chick image background) -->
-    <div class="quail-tan-banner">
-        <div class="overlay">
-            <h2>We Have Coturnix Quail!</h2>
-            <p>Our flock will restart in Gustavus with hatching eggs — eggs available starting in June</p>
-        </div>
-    </div>
-    
     <main>
-        <!-- ANNOUNCEMENT CARD - MOVED TO TOP -->
+        <!-- ANNOUNCEMENT CARD - Dark blue with matching text -->
         <div class="announcement-card">
             <h2>Announcing</h2>
             <p>Cultivating Food Sovereignty for Gustavus</p>
         </div>
         
-        <!-- WORKSHOP SECTION - MOVED SECOND -->
+        <!-- WORKSHOP SECTION -->
         <section class="workshop-section">
             <h2>2026 Workshop Series</h2>
             
-            <!-- Workshop 1: Meat Rabbits -->
+            <!-- Workshop 1: Meat Rabbits - BLUE theme -->
             <div class="workshop-content">
                 <div class="workshop-image">
                     <img src="images/BabyRabbits1.jpg" alt="Baby Rabbits from Gustavus" width="300">
@@ -810,7 +815,7 @@
                 </div>
             </div>
             
-            <!-- Workshop 2: Carrot Tasting -->
+            <!-- Workshop 2: Carrot Tasting - ORANGE theme (unchanged) -->
             <div class="carrot-workshop">
                 <div class="workshop-image">
                     <img src="images/HarvestFestCarrots2024.jpg" alt="Carrots at Harvest Festival">
@@ -891,7 +896,7 @@
                 </div>
             </div>
             
-            <!-- Workshop 3: Harvest Festival -->
+            <!-- Workshop 3: Harvest Festival - BLUE theme -->
             <div class="harvest-workshop">
                 <div class="workshop-image">
                     <img src="images/WinningBasketHarvestFestival2025.jpg" alt="Winning Basket at Harvest Festival">
@@ -904,13 +909,13 @@
                 </div>
             </div>
             
-            <!-- Grant Note at Bottom -->
+            <!-- Grant Note - Updated to blue -->
             <div class="grant-note">
                 <p><strong>Community Support:</strong> This workshop series receives financial support from the RurAL CAP Foundation.</p>
             </div>
         </section>
         
-        <!-- BROWN PLANT STARTS BLOCK - MOVED THIRD with special requests note -->
+        <!-- BROWN PLANT STARTS BLOCK with special requests -->
         <div class="plant-starts-brown">
             <div class="plant-starts-text">
                 <h3>🌱 Plant Starts Coming in April! 🌱</h3>
@@ -924,7 +929,7 @@
             </div>
         </div>
         
-        <!-- MARKET BANNER - MOVED FOURTH -->
+        <!-- MARKET BANNER -->
         <section class="market-banner">
             <div class="market-image">
                 <img src="images/GreenBeans.jpg" alt="Fresh Green Beans from Gustavus">
@@ -939,11 +944,15 @@
             </div>
         </section>
         
-        <!-- QUAIL SECTION - MOVED TO BOTTOM (all images and formatting preserved) -->
+        <!-- QUAIL SECTION - With banner moved here as header -->
         <section class="quail-section">
-            <!-- Removed the h2 and intro that duplicated the banner -->
-            
-            <div class="craigslist-note">⚠️ Pricing below reflects our current Craigslist ad in Fairbanks. Our Gustavus flock will restart in June 2026.</div>
+            <!-- Quail Banner - MOVED from top of page -->
+            <div class="quail-tan-banner">
+                <div class="overlay">
+                    <h2>We Have Coturnix Quail!</h2>
+                    <p>Our flock will restart in Gustavus with hatching eggs — eggs available starting in June</p>
+                </div>
+            </div>
             
             <div class="quail-grid">
                 <div class="quail-card">
@@ -953,7 +962,6 @@
                     <h3>Fresh Quail Eggs</h3>
                     <div style="background: #e74c3c; color: white; padding: 0.6rem 1.5rem; border-radius: 30px; font-size: 1.3rem; font-weight: bold; margin: 0.5rem 0; display: inline-block;">$10/dozen</div>
                     <p>Fertile eggs - perfect for eating or hatching. Some eggs have rare celadon genetics for possible blue egg layers!</p>
-                    <!-- UPDATED: Gustavus timing -->
                     <p><strong>Available in Gustavus:</strong> Eggs available starting June 2026</p>
                     <span class="availability-tag">June Availability</span>
                 </div>
@@ -963,22 +971,14 @@
                         <img src="images/Quail1.jpg" alt="Coturnix Quail">
                     </div>
                     <h3>Quail Chicks & Adults</h3>
-                    <div class="pricing-box">
-                        <div class="pricing-item">
-                            <span>3-week-old chicks (straight run):</span>
-                            <span><strong>$5.50 each</strong></span>
+                    <div class="stewardship-box">
+                        <div class="stewardship-option">
+                            <div class="stewardship-title">✨ Summer Stewardship (Free Lease)</div>
+                            <div class="stewardship-desc">Take the flock for the summer (April-October) at no cost. Return my banded breeding birds in the winter. Older hens (44 weeks) are yours to keep or return.</div>
                         </div>
-                        <div class="pricing-item">
-                            <span>Special: 5 chicks:</span>
-                            <span><strong>$25</strong></span>
-                        </div>
-                        <div class="pricing-item">
-                            <span>Young laying hens:</span>
-                            <span><strong>$10 each</strong></span>
-                        </div>
-                        <div class="pricing-item">
-                            <span>Adult roosters:</span>
-                            <span><strong>$6 each</strong></span>
+                        <div class="stewardship-option">
+                            <div class="stewardship-title">💰 Outright Purchase</div>
+                            <div class="stewardship-desc">$120 for the entire flock (cages not included) — proven breeding flock with rare blue egg genetics. See current Craigslist ad in Fairbanks for details.</div>
                         </div>
                     </div>
                     <p><strong>Available in Gustavus:</strong> Flock restarting June 2026 — chicks and adults available later in summer</p>
@@ -986,7 +986,7 @@
                 </div>
             </div>
 
-            <!-- Quail chick extra image with caption (updated date) -->
+            <!-- Quail chick extra image with caption -->
             <div class="quail-extra-image">
                 <img src="images/QuailChicksIncubator.jpg" alt="Quail chicks just hatched in incubator">
                 <div class="image-caption">🐣 Our Gustavus flock will restart with hatching eggs in June</div>
