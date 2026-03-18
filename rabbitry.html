@@ -336,6 +336,41 @@
             background: #2ecc71;
         }
         
+        /* New style for upcoming litters message */
+        .coming-soon-message {
+            grid-column: 1 / -1;
+            background: linear-gradient(135deg, #f9f9f9, #ffffff);
+            border: 3px dashed #3498db;
+            border-radius: 20px;
+            padding: 3rem 2rem;
+            text-align: center;
+            margin: 1rem 0;
+        }
+        
+        .coming-soon-message h3 {
+            font-size: 2.2rem;
+            color: #2c3e50;
+            margin: 0 0 1rem;
+        }
+        
+        .coming-soon-message p {
+            font-size: 1.3rem;
+            color: #34495e;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .coming-soon-message .bunny-hop {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            animation: hop 2s infinite ease-in-out;
+        }
+        
+        @keyframes hop {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+        
         .rabbit-card:hover {
             transform: translateY(-8px) rotate(1deg);
             box-shadow: 0 12px 25px rgba(0,0,0,0.15);
@@ -884,41 +919,24 @@
             </div>
         </div>
         
-        <!-- Breeding Announcement - NEW -->
+        <!-- Breeding Announcement - UPDATED -->
         <div class="breeding-note">
             🐇 Planned breeding: Lucille & Porkins to Champagne Buck on March 22 - babies expected April 22! 🐇
         </div>
         
-        <!-- Rabbits for Sale -->
+        <!-- Available Section - UPDATED with coming soon message instead of Bacon -->
         <div class="section-divider">
             <div class="divider-line"></div>
             <h3>Available</h3>
-            <p class="litter-info">Lucille x Peter Rabbit | Born Aug 2, 2025 | Meat mutt x Champagne</p>
         </div>
         
         <div class="rabbit-grid">
-            <!-- Bacon - still available -->
-            <div class="rabbit-card">
-                <div class="for-sale-tag">Available</div>
-                <div class="price-tag">$100</div>
-                <div class="rabbit-image-container">
-                    <img src="images/Bacon.jpg" alt="Bacon">
-                </div>
-                <div class="rabbit-info">
-                    <div class="rabbit-details">
-                        <span class="breed-tag">Champagne Mix</span>
-                        <span class="gender-tag">Doe</span>
-                        <span class="age-tag">DOB 8/2/25</span>
-                    </div>
-                    <h3>Bacon</h3>
-                    <div class="rabbit-traits">
-                        <span class="trait-badge">Sweetest personality</span>
-                        <span class="trait-badge">Best silvering</span>
-                        <span class="trait-badge">Petite</span>
-                        <span class="trait-badge">Loves attention</span>
-                    </div>
-                    <p>The sweetest of the litter - she'll hop right up to say hello. Beautiful silvering pattern coming in nicely. Takes after her mother Lucille in build but has her own unique personality. Perfect for someone wanting a friendly rabbit.</p>
-                </div>
+            <!-- Coming Soon Message - Replaces Bacon's card -->
+            <div class="coming-soon-message">
+                <div class="bunny-hop">🐇 🐰 🐇</div>
+                <h3>Check Back Soon!</h3>
+                <p>New litters expected April 22nd. We'll have adorable Champagne mixes available in late spring. Follow along for updates!</p>
+                <p style="font-size: 1.1rem; margin-top: 1.5rem; color: #7f8c8d;">Breeding stock: Lucille (Champagne) & Porkins (Champagne Mix) bred to Champagne Buck</p>
             </div>
         </div>
         
@@ -929,9 +947,7 @@
         </div>
         
         <div class="rabbit-grid">
-           
-            
-            <!-- Lucille - UPDATED with breeding info -->
+            <!-- Lucille -->
             <div class="rabbit-card">
                 <div class="rabbit-image-container">
                     <img src="images/Lucille.jpg" alt="Lucille">
@@ -951,7 +967,8 @@
                     <p>Matriarch from Delta. Excellent mother, foundation of our program. Produces consistently good litters with great temperament. <strong>Being bred March 22 to Champagne Buck - babies expected April 22.</strong></p>
                 </div>
             </div>
-             <!-- Porkins - MOVED from available, with temp trial note -->
+            
+            <!-- Porkins -->
             <div class="rabbit-card">
                 <div class="temp-tag">Temp - Summer Trial</div>
                 <div class="note-tag">Available Sept in Gustavus as proven doe</div>
@@ -974,28 +991,29 @@
                     <p><strong>Keeping Porkins for summer trial as mother doe.</strong> Will be available September in Gustavus as proven doe with excellent mothering instincts. <strong>Being bred March 22 to Champagne Buck - babies expected April 22.</strong> Largest of her litter with excellent meat conformation.</p>
                 </div>
             </div>
-           <!-- Dusty - WITH FREE STUD TAG -->
-<div class="rabbit-card">
-    <div class="price-tag" style="background: #9b59b6; left: 15px; right: auto;">🐾 Free Stud</div>
-    <div class="rabbit-image-container">
-        <img src="images/DustyFurLookingRight.jpg" alt="Dusty">
-    </div>
-    <div class="rabbit-info">
-        <div class="rabbit-details">
-            <span class="breed-tag">Champ/Silver Fox</span>
-            <span class="gender-tag">Buck</span>
-            <span class="age-tag">DOB 5/27/25</span>
-        </div>
-        <h3>Dusty</h3>
-        <div class="rabbit-traits">
-            <span class="trait-badge">11 lbs</span>
-            <span class="trait-badge">Thick coat</span>
-            <span class="trait-badge">Silvering</span>
-            <span class="trait-badge">Good breeder</span>
-        </div>
-        <p>11 lbs, thick coat with silvering. Aloof but good breeder. Excellent genetics for meat and fur production. <strong>Free stud services to approved does</strong> - contact to discuss breeding.</p>
-    </div>
-</div>
+            
+            <!-- Dusty - Free Stud -->
+            <div class="rabbit-card">
+                <div class="price-tag" style="background: #9b59b6; left: 15px; right: auto;">🐾 Free Stud</div>
+                <div class="rabbit-image-container">
+                    <img src="images/DustyFurLookingRight.jpg" alt="Dusty">
+                </div>
+                <div class="rabbit-info">
+                    <div class="rabbit-details">
+                        <span class="breed-tag">Champ/Silver Fox</span>
+                        <span class="gender-tag">Buck</span>
+                        <span class="age-tag">DOB 5/27/25</span>
+                    </div>
+                    <h3>Dusty</h3>
+                    <div class="rabbit-traits">
+                        <span class="trait-badge">11 lbs</span>
+                        <span class="trait-badge">Thick coat</span>
+                        <span class="trait-badge">Silvering</span>
+                        <span class="trait-badge">Good breeder</span>
+                    </div>
+                    <p>11 lbs, thick coat with silvering. Aloof but good breeder. Excellent genetics for meat and fur production. <strong>Free stud services to approved does</strong> - contact to discuss breeding.</p>
+                </div>
+            </div>
             
             <!-- Pippy -->
             <div class="rabbit-card">
@@ -1137,7 +1155,6 @@
     </footer>
 </body>
 </html>
-
 
 
 
