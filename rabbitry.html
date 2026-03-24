@@ -716,42 +716,59 @@
             padding: 0 2rem;
         }
         
-        /* Full Width Card Stack (like breeding herd) */
+        /* Full Width Card Stack (like breeding herd) - Darker Brown */
         .full-width-card {
             max-width: 1200px;
             margin: 2rem auto;
-            background: #F5EBD8;
+            background: #8B5A2B;
             border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.25);
         }
         
         .full-width-card .card-content {
             padding: 2rem;
+            background: #8B5A2B;
+            color: #f5f0e0;
         }
         
-        .full-width-card h3 {
+        .full-width-card .card-content h3 {
             font-size: 2rem;
             margin: 0 0 1rem;
-            color: #2c3e50;
-            border-bottom: 3px solid #3498db;
+            color: #f5e6d3;
+            border-bottom: 3px solid #D4A373;
             display: inline-block;
             padding-bottom: 0.3rem;
         }
         
-        /* Section Title Banner */
+        .full-width-card .card-content p {
+            color: #f5e6d3;
+        }
+        
+        .full-width-card .custom-note {
+            border-left-color: #D4A373;
+            color: #f5e6d3;
+        }
+        
+        .full-width-card .card-email a {
+            color: #FFD966;
+        }
+        
+        /* Section Title Banner - Dark Brown */
         .section-title-banner {
             text-align: center;
             padding: 1rem;
-            background: #2c3e50;
-            color: white;
+            background: #5A3A1A;
+            color: #f5e6d3;
             margin: 0;
+            border-radius: 10px 10px 0 0;
         }
         
         .section-title-banner h2 {
             font-size: 1.8rem;
             margin: 0;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
+            font-weight: bold;
         }
         
         /* Card color - Medium Tan for both */
@@ -854,9 +871,10 @@
         .custom-note {
             margin-top: 0.75rem;
             font-style: italic;
-            font-size: 0.85rem;
-            border-left: 3px solid #3498db;
+            font-size: 0.9rem;
+            border-left: 3px solid #D4A373;
             padding-left: 0.75rem;
+            color: #f5e6d3;
         }
         
         /* Slideshow Styles */
@@ -929,25 +947,26 @@
             background: #7f8c8d;
         }
         
-        /* Hover Image Gallery */
-        .hover-gallery {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1.5rem;
+        /* Single Hover Image - Centered */
+        .single-hover {
+            display: flex;
+            justify-content: center;
             margin: 1.5rem 0;
         }
         
-        .hover-image {
+        .hover-image-single {
             position: relative;
             width: 100%;
-            height: 250px;
+            max-width: 500px;
+            height: 300px;
             overflow: hidden;
             border-radius: 15px;
             cursor: pointer;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            margin: 0 auto;
         }
         
-        .hover-image img {
+        .hover-image-single img {
             position: absolute;
             top: 0;
             left: 0;
@@ -957,21 +976,21 @@
             transition: opacity 0.5s ease-in-out;
         }
         
-        .hover-image .img-front {
+        .hover-image-single .img-front {
             opacity: 1;
             z-index: 2;
         }
         
-        .hover-image .img-back {
+        .hover-image-single .img-back {
             opacity: 0;
             z-index: 1;
         }
         
-        .hover-image:hover .img-front {
+        .hover-image-single:hover .img-front {
             opacity: 0;
         }
         
-        .hover-image:hover .img-back {
+        .hover-image-single:hover .img-back {
             opacity: 1;
         }
         
@@ -984,7 +1003,7 @@
         }
         
         .slipper-image {
-            background: rgba(0,0,0,0.05);
+            background: rgba(0,0,0,0.2);
             border-radius: 15px;
             overflow: hidden;
             text-align: center;
@@ -994,26 +1013,26 @@
             width: 100%;
             height: 280px;
             object-fit: contain;
-            background: #f5f0e8;
+            background: #f5e6d3;
         }
         
         .slipper-image p {
             padding: 0.75rem;
             margin: 0;
-            background: rgba(0,0,0,0.05);
+            background: rgba(0,0,0,0.3);
             font-weight: bold;
-            color: #2c3e50;
+            color: #f5e6d3;
         }
         
         .card-email {
             text-align: center;
             margin-top: 1rem;
             padding-top: 0.75rem;
-            border-top: 1px solid rgba(0,0,0,0.1);
+            border-top: 1px solid rgba(255,255,255,0.2);
         }
         
         .card-email a {
-            color: #3498db;
+            color: #FFD966;
             text-decoration: none;
             font-weight: bold;
         }
@@ -1105,11 +1124,8 @@
                 margin: 1rem;
             }
             
-            .hover-gallery, .slipper-gallery {
-                grid-template-columns: 1fr;
-            }
-            
             .slipper-gallery {
+                grid-template-columns: 1fr;
                 margin: 1rem;
             }
             
@@ -1131,6 +1147,11 @@
             
             .slide img {
                 height: 220px;
+            }
+            
+            .hover-image-single {
+                max-width: 100%;
+                height: 250px;
             }
         }
     </style>
@@ -1427,9 +1448,9 @@
             </div>
         </div>
         
-        <!-- FULL WIDTH CARD: Hats with Title Banner -->
+        <!-- FULL WIDTH CARD: Hats with Title Banner - Dark Brown -->
         <div class="section-title-banner">
-            <h2>🐇 Rabbit Skin Hats 🐇</h2>
+            <h2>Rabbit Skin Hats</h2>
         </div>
         <div class="full-width-card">
             <div class="slideshow-container" id="hatSlideshow">
@@ -1457,23 +1478,20 @@
                 <span class="nav-dot"></span>
             </div>
             <div class="card-content">
-                <h3>Rabbit Fur Hats</h3>
-                <p><strong>Ready-Made Hats – $220 each</strong><br>I currently have a few finished hats available.</p>
+                <h3>Warm, Handcrafted Rabbit Fur Hats</h3>
+                <p><strong>Ready-Made Hats – $220 each</strong><br>I currently have a few finished hats available, each made from my own hand-tanned pelts. These hats feature silk or cotton/linen linings and are perfect for Alaska winters.</p>
                 
-                <!-- Hover Gallery - Using Original Hat Images -->
-                <div class="hover-gallery">
-                    <div class="hover-image">
+                <!-- Single Centered Hover Image -->
+                <div class="single-hover">
+                    <div class="hover-image-single">
                         <img src="images/RabbitSkinHat.jpg" alt="Rabbit Skin Hat" class="img-front">
                         <img src="images/RabbitHatOn.jpg" alt="Modeling Rabbit Skin Hat" class="img-back">
                     </div>
-                    <div class="hover-image">
-                        <img src="images/RabbitHatOn.jpg" alt="Modeling Rabbit Skin Hat" class="img-front">
-                        <img src="images/RabbitSkinHat.jpg" alt="Rabbit Skin Hat" class="img-back">
-                    </div>
                 </div>
+                <p style="text-align: center; font-size: 0.85rem; margin-top: -0.5rem;"><em>Hover over image to see hat being worn</em></p>
                 
                 <div class="custom-note">
-                    <strong>Custom Hats:</strong> Materials deposit + $160 labor. 8-week turnaround. Rush orders +$25 (1 week).
+                    <strong>Custom Hats:</strong> Materials deposit + $160 labor. 8-week turnaround. Rush orders +$25 (1 week). Local customers can try on my basic pattern to adjust fit, ear flaps, and fur selection.
                 </div>
                 <div class="card-email">
                     📧 <a href="contact.html">Visit Contact Page to Purchase or Start a Custom Order</a>
@@ -1481,29 +1499,29 @@
             </div>
         </div>
         
-        <!-- FULL WIDTH CARD: Slippers with Title Banner -->
+        <!-- FULL WIDTH CARD: Slippers with Title Banner - Dark Brown -->
         <div class="section-title-banner">
-            <h2>🐇 Custom Rabbit Skin Slippers 🐇</h2>
+            <h2>Custom Rabbit Skin Slippers</h2>
         </div>
         <div class="full-width-card">
             <div class="slipper-gallery">
                 <div class="slipper-image">
                     <img src="images/FurSlipperMakingStillLife.jpg" alt="Slipper making process">
-                    <p>Handcrafted with care</p>
+                    <p>Handcrafted with care from your foot tracing</p>
                 </div>
                 <div class="slipper-image">
                     <img src="images/RabbitFurSlipperAdultSize.jpg" alt="Adult size rabbit fur slippers">
-                    <p>Adult Size Slippers</p>
+                    <p>Adult size slippers with fur ruff</p>
                 </div>
             </div>
             <div class="card-content">
-                <h3>Rabbit Fur Slippers</h3>
+                <h3>Cozy, Custom-Fit Fur Slippers</h3>
                 <p><strong>Ready-Made Slippers</strong> – Occasionally available at craft fairs in various sizes. Stop by to try on!</p>
                 <div class="custom-note">
                     <strong>Custom Slippers – Made to Order</strong><br>
-                    Made from a tracing of your feet. One pelt for the fur ruff, sewn with canvas or leather—your choice.<br><br>
+                    Made from a tracing of your feet—perfect fit every time. One pelt for the fur ruff, sewn with canvas or leather (your choice).<br><br>
                     <strong>Turnaround:</strong> 8 weeks<br>
-                    <strong>Rush orders:</strong> Add $25 (1 week)<br>
+                    <strong>Rush orders:</strong> Add $25 for 1-week completion (contact first to confirm)<br>
                     <strong>Pricing:</strong> Materials deposit + labor (varies by size: baby to large adult). <strong>Visit contact page for a quote.</strong>
                 </div>
                 <div class="card-email">
