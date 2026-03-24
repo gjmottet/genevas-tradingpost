@@ -336,7 +336,7 @@
             background: #2ecc71;
         }
         
-        /* Breeding Announcement Card */
+        /* Breeding Announcement Card - FIXED FOR FULL IMAGE */
         .breeding-announcement {
             max-width: 900px;
             margin: 1.5rem auto;
@@ -349,14 +349,19 @@
         
         .breeding-image {
             width: 100%;
-            max-height: 400px;
+            max-height: auto;
             overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #fff0e0;
         }
         
         .breeding-image img {
             width: 100%;
             height: auto;
-            object-fit: cover;
+            object-fit: contain;
+            display: block;
         }
         
         .breeding-caption {
@@ -382,39 +387,21 @@
             margin-top: 0.5rem;
         }
         
-        /* New style for upcoming litters message */
-        .coming-soon-message {
-            grid-column: 1 / -1;
-            background: linear-gradient(135deg, #f9f9f9, #ffffff);
-            border: 3px dashed #3498db;
-            border-radius: 20px;
-            padding: 3rem 2rem;
+        /* Check Back Soon Message - SIMPLIFIED */
+        .check-back-soon {
             text-align: center;
-            margin: 1rem 0;
-        }
-        
-        .coming-soon-message h3 {
-            font-size: 2.2rem;
-            color: #2c3e50;
-            margin: 0 0 1rem;
-        }
-        
-        .coming-soon-message p {
-            font-size: 1.3rem;
-            color: #34495e;
+            padding: 2rem;
+            background: #f9f9f9;
+            border-radius: 15px;
             max-width: 600px;
-            margin: 0 auto;
+            margin: 1rem auto;
+            border: 2px dashed #3498db;
         }
         
-        .coming-soon-message .bunny-hop {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            animation: hop 2s infinite ease-in-out;
-        }
-        
-        @keyframes hop {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-15px); }
+        .check-back-soon h3 {
+            font-size: 1.8rem;
+            color: #2c3e50;
+            margin: 0;
         }
         
         .rabbit-card:hover {
@@ -673,150 +660,259 @@
             margin: 0.5rem 0 0;
         }
         
-        /* Fur Section Styles */
-        .fur-section {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-        
-        .pricing-table {
-            background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            margin: 1.5rem 0;
-        }
-        
-        .pricing-table table {
+        /* ========== NEW FUR CARD STYLES ========== */
+        .fur-banner {
+            position: relative;
             width: 100%;
-            border-collapse: collapse;
-        }
-        
-        .pricing-table th, .pricing-table td {
-            padding: 1rem;
-            text-align: left;
-            border-bottom: 1px solid #e0e0e0;
-        }
-        
-        .pricing-table th {
-            background: #2c3e50;
-            color: white;
-            font-weight: bold;
-        }
-        
-        .pricing-table tr:hover {
-            background: #f5f5f5;
-        }
-        
-        .scrap-offer {
-            background: #e8f5e9;
-            padding: 1rem;
-            border-radius: 10px;
-            margin: 1rem 0;
-            text-align: center;
-        }
-        
-        .scrap-offer strong {
-            color: #2e7d32;
-            font-size: 1.2rem;
-        }
-        
-        .hat-slideshow {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
+            height: 250px;
+            overflow: hidden;
             margin: 2rem 0;
         }
         
-        .hat-slide {
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            text-align: center;
-        }
-        
-        .hat-slide img {
+        .fur-banner img {
             width: 100%;
-            height: 250px;
+            height: 100%;
             object-fit: cover;
         }
         
-        .hat-slide p {
-            padding: 0.75rem;
+        .banner-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .banner-overlay h3 {
+            font-size: 3rem;
+            margin: 0 0 0.5rem;
+            color: white;
+            text-shadow: 0 3px 10px rgba(0,0,0,0.5);
+            letter-spacing: 1px;
+        }
+        
+        .banner-overlay p {
+            font-size: 1.8rem;
+            max-width: 800px;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.5);
             margin: 0;
-            background: #f8f9fa;
+        }
+        
+        /* Four Cards Grid */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+        
+        /* Card Color Palette - Light to Dark */
+        .card {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+        
+        .card:nth-child(1) { background: #FDF8EC; } /* Light Tan */
+        .card:nth-child(2) { background: #F5EBD8; } /* Medium Light Tan */
+        .card:nth-child(3) { background: #E8DCC8; } /* Medium Dark Tan */
+        .card:nth-child(4) { background: #DACCB5; } /* Dark Tan */
+        
+        .card-image {
+            width: 100%;
+            height: 280px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0,0,0,0.05);
+        }
+        
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        /* Special handling for slipper image (portrait orientation) */
+        .card-image.portrait img {
+            object-fit: contain;
+            background: #f5f0e8;
+        }
+        
+        .card-content {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .card-content h3 {
+            font-size: 1.8rem;
+            margin: 0 0 0.5rem;
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            display: inline-block;
+            padding-bottom: 0.3rem;
+        }
+        
+        .card-content h4 {
+            font-size: 1.2rem;
+            margin: 0.75rem 0 0.25rem;
+            color: #34495e;
+        }
+        
+        .card-content p {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #4a5b6e;
+            margin: 0.5rem 0;
+        }
+        
+        .price-table {
+            width: 100%;
+            margin: 0.75rem 0;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+        }
+        
+        .price-table td {
+            padding: 0.4rem 0;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+        
+        .price-table td:last-child {
+            text-align: right;
             font-weight: bold;
             color: #2c3e50;
         }
         
-        .custom-info {
-            background: #f0f7ff;
-            padding: 1.5rem;
-            border-radius: 15px;
-            margin: 1.5rem 0;
-            border-left: 5px solid #3498db;
-        }
-        
-        .slipper-photos {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-            margin: 1.5rem 0;
-        }
-        
-        .slipper-photo {
-            background: white;
+        .scrap-offer-card {
+            background: #e8e0d0;
             border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            padding: 0.75rem;
+            margin: 0.75rem 0;
             text-align: center;
         }
         
-        .slipper-photo img {
+        .batch-info, .policy-info {
+            background: rgba(0,0,0,0.05);
+            border-radius: 10px;
+            padding: 0.75rem;
+            margin: 0.75rem 0;
+            font-size: 0.85rem;
+        }
+        
+        .custom-note {
+            margin-top: 0.75rem;
+            font-style: italic;
+            font-size: 0.85rem;
+            border-left: 3px solid #3498db;
+            padding-left: 0.75rem;
+        }
+        
+        /* Slideshow Styles */
+        .slideshow-container {
+            position: relative;
             width: 100%;
-            height: 250px;
+            height: 280px;
+            overflow: hidden;
+        }
+        
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.8s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: #f8f5ef;
+        }
+        
+        .slide.active {
+            opacity: 1;
+        }
+        
+        .slide img {
+            width: 100%;
+            height: 220px;
             object-fit: cover;
         }
         
-        .slipper-photo p {
-            padding: 0.75rem;
-            margin: 0;
-            background: #f8f9fa;
-        }
-        
-        .batch-options {
-            background: #f8f9fa;
-            padding: 1rem 1.5rem;
-            border-radius: 10px;
-            margin: 1rem 0;
-        }
-        
-        .policy-note {
-            background: #fff3e0;
-            padding: 1rem 1.5rem;
-            border-radius: 10px;
-            margin: 1rem 0;
-            border-left: 5px solid #ff9800;
-        }
-        
-        .contact-email {
+        .slide-caption {
+            padding: 0.5rem;
             text-align: center;
-            background: #2c3e50;
-            color: white;
-            padding: 1rem;
-            border-radius: 10px;
-            margin: 1.5rem 0;
+            font-size: 0.9rem;
+            font-weight: bold;
+            color: #2c3e50;
+            background: rgba(255,255,255,0.9);
+            width: 100%;
         }
         
-        .contact-email a {
+        .slide-nav {
+            display: flex;
+            justify-content: center;
+            gap: 0.75rem;
+            padding: 0.75rem;
+            background: rgba(0,0,0,0.05);
+        }
+        
+        .nav-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #bdc3c7;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        
+        .nav-dot.active {
+            background: #3498db;
+            transform: scale(1.2);
+        }
+        
+        .nav-dot:hover {
+            background: #7f8c8d;
+        }
+        
+        .card-email {
+            text-align: center;
+            margin-top: 1rem;
+            padding-top: 0.75rem;
+            border-top: 1px solid rgba(0,0,0,0.1);
+        }
+        
+        .card-email a {
             color: #3498db;
             text-decoration: none;
             font-weight: bold;
         }
         
-        .contact-email a:hover {
+        .card-email a:hover {
             text-decoration: underline;
         }
         
@@ -894,17 +990,21 @@
                 font-size: 1.1rem;
             }
             
-            .hat-slideshow {
+            .cards-grid {
                 grid-template-columns: 1fr;
+                padding: 0 1rem;
             }
             
-            .slipper-photos {
-                grid-template-columns: 1fr;
+            .banner-overlay h3 {
+                font-size: 1.8rem;
             }
             
-            .pricing-table th, .pricing-table td {
-                padding: 0.75rem;
-                font-size: 0.9rem;
+            .banner-overlay p {
+                font-size: 1.2rem;
+            }
+            
+            .fur-banner {
+                height: 180px;
             }
         }
     </style>
@@ -964,7 +1064,7 @@
             </div>
         </div>
         
-        <!-- Breeding Announcement - SIMPLIFIED WITH IMAGE -->
+        <!-- Breeding Announcement - WITH FULL IMAGE VISIBLE -->
         <div class="breeding-announcement">
             <div class="breeding-image">
                 <img src="images/SwamperAndLucille.jpg" alt="Lucille and Swamper after breeding">
@@ -972,25 +1072,20 @@
             <div class="breeding-caption">
                 <h3>🐇 New Litters Coming Soon! 🐇</h3>
                 <p>Lucille was bred to Swamper on March 22nd</p>
-                <p>Porkins was bred to a Champagne Buck on March 23rd</p>
+                <p>Porkins was bred to Swamper on March 23rd</p>
                 <p class="dates">Babies expected April 22nd & 23rd!</p>
+                <p style="margin-top: 0.5rem; font-size: 1rem;"><em>Swamper is a purebred Champagne d'Argent Buck (no pedigree)</em></p>
             </div>
         </div>
         
-        <!-- Available Section -->
+        <!-- Available Section - SIMPLIFIED -->
         <div class="section-divider">
             <div class="divider-line"></div>
             <h3>Available</h3>
         </div>
         
-        <div class="rabbit-grid">
-            <!-- Coming Soon Message -->
-            <div class="coming-soon-message">
-                <div class="bunny-hop">🐇 🐰 🐇</div>
-                <h3>Check Back Soon!</h3>
-                <p>New litters expected April 22nd & 23rd. We'll have adorable Champagne mixes available in late spring. Follow along for updates!</p>
-                <p style="font-size: 1.1rem; margin-top: 1.5rem; color: #7f8c8d;">Breeding stock: Lucille (Champagne) & Porkins (Champagne Mix)</p>
-            </div>
+        <div class="check-back-soon">
+            <h3>🐇 Check Back Soon! 🐇</h3>
         </div>
         
         <!-- Permanent Herd -->
@@ -1041,7 +1136,7 @@
                         <span class="trait-badge">Silvering well</span>
                         <span class="trait-badge">Friendly</span>
                     </div>
-                    <p><strong>Keeping Porkins for summer trial as mother doe.</strong> Will be available September in Gustavus as proven doe with excellent mothering instincts. <strong>Bred March 23 to Champagne Buck - babies expected April 23.</strong> Largest of her litter with excellent meat conformation.</p>
+                    <p><strong>Keeping Porkins for summer trial as mother doe.</strong> Will be available September in Gustavus as proven doe with excellent mothering instincts. <strong>Bred March 23 to Swamper - babies expected April 23.</strong> Largest of her litter with excellent meat conformation.</p>
                 </div>
             </div>
             
@@ -1142,120 +1237,126 @@
         
         <div class="full-divider"></div>
         
-        <!-- ========== NEW FUR SECTION ========== -->
-        <div class="fur-section">
-            
-            <!-- Hand-Tanned Rabbit Pelts -->
-            <h2 style="color: #2c3e50; text-align: center;">Hand-Tanned Rabbit Pelts</h2>
-            <p style="text-align: center; max-width: 800px; margin: 0 auto 1.5rem;">I raise Champagne d'Argent, Silver Fox, and meat mutt rabbits, and hand-tan all my pelts in small batches using the traditional salt/alum method. Every pelt is individually graded for size, fur quality, and softness.</p>
-            
-            <div class="pricing-table">
-                <table>
-                    <thead>
-                        <tr><th>Grade</th><th>Description</th><th>Price</th></tr>
-                    </thead>
-                    <tbody>
-                        <tr><td><strong>Grade A – Premium</strong></td><td>Large, fully soft, dense fur with strong breed characteristics. Display quality.</td><td><strong>$35–50</strong></td></tr>
-                        <tr><td><strong>Grade B – Standard</strong></td><td>Medium, good fur, may have minor unevenness or slight stiffness. Great for crafts.</td><td><strong>$18–28</strong></td></tr>
-                        <tr><td><strong>Grade C – Utility</strong></td><td>Smaller or with minor flaws (thin spots, repaired tears, some stiffness). Perfect for fly tying or patchwork.</td><td><strong>$8–15</strong></td></tr>
-                    </tbody>
-                </table>
+        <!-- FUR BANNER (Re-added) -->
+        <div class="fur-banner">
+            <img src="images/TextureOfRabbitSkinInSnow.jpg" alt="Rabbit Skin in Snow">
+            <div class="banner-overlay">
+                <h3>Rabbit & Snowshoe Hare Fur</h3>
+                <p>Hand-tanned pelts • Custom hats & slippers • Tanning services</p>
+            </div>
+        </div>
+        
+        <!-- FOUR CARDS SECTION -->
+        <div class="cards-grid">
+            <!-- Card 1: Pelts - Light Tan -->
+            <div class="card">
+                <div class="card-image">
+                    <img src="images/RabbitSkins.jpg" alt="Hand-tanned rabbit pelts">
+                </div>
+                <div class="card-content">
+                    <h3>Hand-Tanned Pelts</h3>
+                    <p>I raise Champagne d'Argent, Silver Fox, and meat mutt rabbits, hand-tanning in small batches using the traditional salt/alum method.</p>
+                    <table class="price-table">
+                        <tr><td>Grade A (Premium)</td><td>$35–50</td></tr>
+                        <tr><td>Grade B (Standard)</td><td>$18–28</td></tr>
+                        <tr><td>Grade C (Utility)</td><td>$8–15</td></tr>
+                    </table>
+                    <div class="scrap-offer-card">
+                        <strong>Fur Scrap Grab Bags – $12 each or 5 for $50</strong><br>
+                        Quart bags (6"×8") of assorted scraps. Great for fly tying, jewelry, and small crafts.
+                    </div>
+                    <div class="card-email">
+                        📧 <a href="contact.html">Visit Contact Page to Inquire About Availability</a>
+                    </div>
+                </div>
             </div>
             
-            <div class="scrap-offer">
-                <img src="images/FurScrapBags.jpg" alt="Fur Scrap Bags" style="max-width: 100%; max-height: 250px; object-fit: contain; margin-bottom: 1rem; border-radius: 10px;">
-                <p><strong>Fur Scrap Grab Bags – $12 each or 5 for $50</strong></p>
-                <p>Quart-sized bags (6"×8") filled with assorted scraps from my hand-tanned pelts. Great for fly tying, jewelry, and small craft projects.<br>
-                <em>Want a larger quantity? 5 bags combined into one larger bag for $50.</em></p>
+            <!-- Card 2: Tanning Services - Medium Light Tan -->
+            <div class="card">
+                <div class="card-image">
+                    <img src="images/RabbitSkinsLong.jpg" alt="Tanning services">
+                </div>
+                <div class="card-content">
+                    <h3>Tanning Services</h3>
+                    <p>Salt/alum tanning for domestic rabbit, snowshoe hare, and squirrel hides. Small batches of 10–12 pelts.</p>
+                    <table class="price-table">
+                        <tr><td>Baby rabbit, squirrel, hare (fresh/frozen)</td><td>$6</td></tr>
+                        <tr><td>Adult prime rabbit (fresh/frozen)</td><td>$12</td></tr>
+                        <tr><td>Problem pelts*</td><td>$20</td></tr>
+                    </table>
+                    <p style="font-size: 0.75rem; margin-top: -0.5rem;">*Freezer-burned, dried out, or heavy fleshing required</p>
+                    <div class="batch-info">
+                        <strong>Batch Options:</strong><br>
+                        Add to my next batch: 3–6 weeks<br>
+                        On-demand (10–12 pelts): 3 weeks
+                    </div>
+                    <div class="policy-info">
+                        <strong>Policy:</strong> Free assessment upfront. 50% refund on good pelts if damaged. No refund on problem pelts (risk disclosed).
+                    </div>
+                    <div class="card-email">
+                        📧 <a href="contact.html">Visit Contact Page to Discuss Your Batch</a>
+                    </div>
+                </div>
             </div>
             
-            <div class="contact-email">
-                <p>📧 <strong>Email me to inquire about current availability and request photos:</strong> <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+            <!-- Card 3: Hats - Medium Dark Tan with Slideshow -->
+            <div class="card">
+                <div class="slideshow-container" id="hatSlideshow">
+                    <div class="slide active">
+                        <img src="images/RabbitSkinHatWornGreenAndOrangeFur.jpg" alt="Rabbit fur hat worn">
+                        <div class="slide-caption">One size fits most</div>
+                    </div>
+                    <div class="slide">
+                        <img src="images/FourRabbitFurHatOnSide.jpg" alt="Four rabbit fur hats">
+                        <div class="slide-caption">Unique plaid patterns, no two the same</div>
+                    </div>
+                    <div class="slide">
+                        <img src="images/RabbitSkinCloseUpOnSilkLiningOfHat.jpg" alt="Silk lining detail">
+                        <div class="slide-caption">Close up on hand-sewn silk liner</div>
+                    </div>
+                    <div class="slide">
+                        <img src="images/ThreeRabbitSkinHatsFront.jpg" alt="Three rabbit skin hats front view">
+                        <div class="slide-caption">Hand-selected furs</div>
+                    </div>
+                </div>
+                <div class="slide-nav" id="hatNav">
+                    <span class="nav-dot active"></span>
+                    <span class="nav-dot"></span>
+                    <span class="nav-dot"></span>
+                    <span class="nav-dot"></span>
+                </div>
+                <div class="card-content">
+                    <h3>Rabbit Fur Hats</h3>
+                    <p><strong>Ready-Made Hats – $220 each</strong><br>I currently have a few finished hats available.</p>
+                    <div class="custom-note">
+                        <strong>Custom Hats:</strong> Materials deposit + $160 labor. 8-week turnaround. Rush orders +$25 (1 week).
+                    </div>
+                    <div class="card-email">
+                        📧 <a href="contact.html">Visit Contact Page to Purchase or Start a Custom Order</a>
+                    </div>
+                </div>
             </div>
             
-            <!-- Hand Tanning Services -->
-            <h2 style="color: #2c3e50; text-align: center; margin-top: 3rem;">Hand Tanning Services</h2>
-            <p style="text-align: center; max-width: 800px; margin: 0 auto 1rem;">I offer hand tanning for domestic rabbit, snowshoe hare, and squirrel hides using the traditional salt/alum method. I tan in small batches of 10–12 pelts, the same way I tan my own.</p>
-            
-            <div class="pricing-table">
-                <table>
-                    <thead>
-                        <tr><th>Hide Type</th><th>Fresh or Properly Frozen</th><th>Problem Pelts*</th></tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>Baby rabbit, squirrel, snowshoe hare</td><td><strong>$6</strong></td><td><strong>$20</strong></td></tr>
-                        <tr><td>Adult prime rabbit</td><td><strong>$12</strong></td><td><strong>$20</strong></td></tr>
-                    </tbody>
-                </table>
-                <p style="padding: 0.5rem 1rem; font-size: 0.9rem; background: #f8f9fa; margin: 0;">*Problem pelts include freezer-burned, dried out, or any hide requiring significant extra fleshing time.</p>
+            <!-- Card 4: Slippers - Dark Tan -->
+            <div class="card">
+                <div class="card-image portrait">
+                    <img src="images/FurSlipperMakingStillLife.jpg" alt="Slipper making process">
+                </div>
+                <div class="card-content">
+                    <h3>Rabbit Fur Slippers</h3>
+                    <p><strong>Ready-Made Slippers</strong> – Occasionally available at craft fairs in various sizes. Stop by to try on!</p>
+                    <div class="custom-note">
+                        <strong>Custom Slippers – Made to Order</strong><br>
+                        Made from a tracing of your feet. One pelt for the fur ruff, sewn with canvas or leather—your choice.<br><br>
+                        <strong>Turnaround:</strong> 8 weeks<br>
+                        <strong>Rush orders:</strong> Add $25 (1 week)<br>
+                        <strong>Pricing:</strong> Materials deposit + labor (varies by size: baby to large adult). <strong>Visit contact page for a quote.</strong>
+                    </div>
+                    <div class="card-email">
+                        📧 <a href="contact.html">Visit Contact Page to Order a Custom Pair</a>
+                    </div>
+                </div>
             </div>
-            
-            <div class="batch-options">
-                <h3>Batch Options</h3>
-                <p><strong>Add to my next batch</strong> – I add your pelts to my own and tan when I have 10–12 total ready. Turnaround: 3–6 weeks.</p>
-                <p><strong>On-demand batch</strong> – You provide 10–12 pelts and I run a dedicated batch. Turnaround: <strong>3 weeks</strong> from receipt.</p>
-            </div>
-            
-            <div class="policy-note">
-                <h3>Tanning Policies</h3>
-                <p><strong>Before I start:</strong> I'll assess your pelts and let you know if any fall into the "problem pelt" category. You can decide whether to proceed or opt out.</p>
-                <p><strong>If something goes wrong:</strong></p>
-                <ul>
-                    <li><strong>Good condition pelts</strong> (fresh or properly frozen): If I damage a pelt during tanning (tear, slip, etc.), I'll offer a <strong>50% refund</strong> on that hide.</li>
-                    <li><strong>Problem pelts:</strong> Because these carry higher risk from the start, I cannot offer refunds if they fail during tanning. You'll know their condition before we begin.</li>
-                </ul>
-                <p>I'll communicate along the way if anything unexpected comes up. My goal is to return the best possible pelts to you.</p>
-            </div>
-            
-            <!-- Rabbit Fur Hats -->
-            <h2 style="color: #2c3e50; text-align: center; margin-top: 3rem;">Rabbit Fur Hats</h2>
-            
-            <div class="hat-slideshow">
-                <div class="hat-slide"><img src="images/RabbitSkinHatWornGreenAndOrangeFur.jpg" alt="Rabbit fur hat worn"><p>Ready-Made Hat</p></div>
-                <div class="hat-slide"><img src="images/FourRabbitFurHatOnSide.jpg" alt="Four rabbit fur hats"><p>Ready-Made Hats</p></div>
-                <div class="hat-slide"><img src="images/RabbitSkinCloseUpOnSilkLiningOfHat.jpg" alt="Silk lining detail"><p>Silk Lining Detail</p></div>
-                <div class="hat-slide"><img src="images/ThreeRabbitSkinHatsFront.jpg" alt="Three rabbit skin hats front view"><p>Ready-Made Hats – $220 each</p></div>
-            </div>
-            
-            <p style="text-align: center; font-weight: bold; font-size: 1.2rem;">Ready-Made Hats – $220 each</p>
-            <p style="text-align: center;">I currently have a few finished hats available. Email me to purchase or ask about what's in stock.</p>
-            
-            <div class="custom-info">
-                <h3>✂️ Want a Custom Hat?</h3>
-                <p>Custom hats are made to order from my basic pattern. We'll start with your head circumference—local customers are welcome to try on my pattern to adjust fit, ear flaps, and fur selection.</p>
-                <p><strong>Turnaround:</strong> 8 weeks<br>
-                <strong>Rush orders:</strong> Add $25 for completion within 1 week (contact me first to confirm)</p>
-                <p><strong>Pricing:</strong><br>
-                - <strong>Materials deposit</strong> – due at time of order (covers pelts, lining, etc.)<br>
-                - <strong>$160 labor</strong> – paid when the hat is finished and ready for pickup or shipping</p>
-                <p>I'll give you a firm total once we've discussed materials and customizations.</p>
-            </div>
-            
-            <!-- Rabbit Fur Slippers -->
-            <h2 style="color: #2c3e50; text-align: center; margin-top: 3rem;">Rabbit Fur Slippers</h2>
-            
-            <div class="slipper-photos">
-                <div class="slipper-photo"><img src="images/FurSlipperMakingStillLife.jpg" alt="Slipper making process"><p>Handcrafted with care</p></div>
-                <div class="slipper-photo"><img src="images/RabbitFurSlipperAdultSize.jpg" alt="Adult size rabbit fur slippers"><p>Adult Size Slippers</p></div>
-            </div>
-            
-            <p style="text-align: center;"><strong>Ready-Made Slippers</strong> – I occasionally have finished slippers available at craft fairs in various sizes. Stop by my booth to see what's on hand and try them on.</p>
-            
-            <div class="custom-info">
-                <h3>✂️ Custom Slippers – Made to Order</h3>
-                <p>Slippers are made to order from a <strong>tracing of your feet</strong>. Each pair uses one pelt for the fur ruff, and I sew the rest from <strong>canvas or leather</strong>—whichever you prefer.</p>
-                <p><strong>Turnaround:</strong> 8 weeks<br>
-                <strong>Rush orders:</strong> Add $25 for completion within 1 week (contact me first to confirm)</p>
-                <p><strong>Pricing:</strong><br>
-                - <strong>Materials deposit</strong> – due at time of order<br>
-                - <strong>Labor</strong> – paid when slippers are finished. Labor varies significantly by size (baby to large adult). <strong>Email me for a quote</strong> based on what you're looking for.</p>
-            </div>
-            
-            <div class="contact-email">
-                <p>📧 <strong>Email me to purchase ready-made items or start a custom order:</strong> <a href="mailto:your-email@example.com">your-email@example.com</a></p>
-            </div>
-            
-            <p style="text-align: center; font-style: italic; color: #7f8c8d; margin-top: 2rem;">Pelts and finished goods can be picked up locally or shipped. Contact me for details.</p>
         </div>
         
         <!-- Back to Home -->
@@ -1268,6 +1369,57 @@
         <p>© 2024 Geneva's Trading Post | Fairbanks, Alaska</p>
         <p>Rabbits raised with care and attention</p>
     </footer>
+    
+    <script>
+        // Hat Slideshow Functionality
+        const slides = document.querySelectorAll('#hatSlideshow .slide');
+        const dots = document.querySelectorAll('#hatNav .nav-dot');
+        let currentIndex = 0;
+        let slideInterval;
+        
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === index);
+            });
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
+            currentIndex = index;
+        }
+        
+        function nextSlide() {
+            let newIndex = currentIndex + 1;
+            if (newIndex >= slides.length) newIndex = 0;
+            showSlide(newIndex);
+        }
+        
+        function startSlideshow() {
+            slideInterval = setInterval(nextSlide, 10000);
+        }
+        
+        function stopSlideshow() {
+            if (slideInterval) clearInterval(slideInterval);
+        }
+        
+        // Add click handlers to dots
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                stopSlideshow();
+                showSlide(index);
+                startSlideshow();
+            });
+        });
+        
+        // Start the slideshow
+        startSlideshow();
+        
+        // Pause on hover
+        const slideshowContainer = document.getElementById('hatSlideshow');
+        if (slideshowContainer) {
+            slideshowContainer.addEventListener('mouseenter', stopSlideshow);
+            slideshowContainer.addEventListener('mouseleave', startSlideshow);
+        }
+    </script>
 </body>
 </html>
 
