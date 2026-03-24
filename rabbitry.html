@@ -739,6 +739,21 @@
             padding-bottom: 0.3rem;
         }
         
+        /* Section Title Banner */
+        .section-title-banner {
+            text-align: center;
+            padding: 1rem;
+            background: #2c3e50;
+            color: white;
+            margin: 0;
+        }
+        
+        .section-title-banner h2 {
+            font-size: 1.8rem;
+            margin: 0;
+            letter-spacing: 1px;
+        }
+        
         /* Card color - Medium Tan for both */
         .card-medium-tan {
             background: #F5EBD8;
@@ -769,6 +784,11 @@
         .card-image-container img {
             width: 100%;
             height: 100%;
+            object-fit: cover;
+        }
+        
+        /* Special handling for pelts image to show full edges */
+        .card-image-container.pelts-img img {
             object-fit: contain;
             background: #f5f0e8;
         }
@@ -960,7 +980,7 @@
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 1.5rem;
-            margin: 1.5rem 0;
+            margin: 1.5rem;
         }
         
         .slipper-image {
@@ -1087,6 +1107,10 @@
             
             .hover-gallery, .slipper-gallery {
                 grid-template-columns: 1fr;
+            }
+            
+            .slipper-gallery {
+                margin: 1rem;
             }
             
             .banner-overlay h3 {
@@ -1352,7 +1376,7 @@
         <div class="two-cards-grid">
             <!-- Card 1: Pelts -->
             <div class="card-medium-tan">
-                <div class="card-image-container">
+                <div class="card-image-container pelts-img">
                     <img src="images/RabbitSkins.jpg" alt="Hand-tanned rabbit pelts">
                 </div>
                 <div class="card-content-inner">
@@ -1374,7 +1398,7 @@
                 </div>
             </div>
             
-            <!-- Card 2: Tanning Services -->
+            <!-- Card 2: Tanning Services - Image uses cover (original look) -->
             <div class="card-medium-tan">
                 <div class="card-image-container">
                     <img src="images/RabbitSkinsLong.jpg" alt="Tanning services">
@@ -1403,7 +1427,10 @@
             </div>
         </div>
         
-        <!-- FULL WIDTH CARD: Hats -->
+        <!-- FULL WIDTH CARD: Hats with Title Banner -->
+        <div class="section-title-banner">
+            <h2>🐇 Rabbit Skin Hats 🐇</h2>
+        </div>
         <div class="full-width-card">
             <div class="slideshow-container" id="hatSlideshow">
                 <div class="slide active">
@@ -1433,15 +1460,15 @@
                 <h3>Rabbit Fur Hats</h3>
                 <p><strong>Ready-Made Hats – $220 each</strong><br>I currently have a few finished hats available.</p>
                 
-                <!-- Hover Gallery - Original Hat Images -->
+                <!-- Hover Gallery - Using Original Hat Images -->
                 <div class="hover-gallery">
                     <div class="hover-image">
-                        <img src="images/RabbitSkinHatWornGreenAndOrangeFur.jpg" alt="Hat front" class="img-front">
-                        <img src="images/FourRabbitFurHatOnSide.jpg" alt="Hat side" class="img-back">
+                        <img src="images/RabbitSkinHat.jpg" alt="Rabbit Skin Hat" class="img-front">
+                        <img src="images/RabbitHatOn.jpg" alt="Modeling Rabbit Skin Hat" class="img-back">
                     </div>
                     <div class="hover-image">
-                        <img src="images/ThreeRabbitSkinHatsFront.jpg" alt="Three hats" class="img-front">
-                        <img src="images/RabbitSkinCloseUpOnSilkLiningOfHat.jpg" alt="Silk lining" class="img-back">
+                        <img src="images/RabbitHatOn.jpg" alt="Modeling Rabbit Skin Hat" class="img-front">
+                        <img src="images/RabbitSkinHat.jpg" alt="Rabbit Skin Hat" class="img-back">
                     </div>
                 </div>
                 
@@ -1454,7 +1481,10 @@
             </div>
         </div>
         
-        <!-- FULL WIDTH CARD: Slippers -->
+        <!-- FULL WIDTH CARD: Slippers with Title Banner -->
+        <div class="section-title-banner">
+            <h2>🐇 Custom Rabbit Skin Slippers 🐇</h2>
+        </div>
         <div class="full-width-card">
             <div class="slipper-gallery">
                 <div class="slipper-image">
@@ -1545,7 +1575,3 @@
     </script>
 </body>
 </html>
-
-
-
-                        
