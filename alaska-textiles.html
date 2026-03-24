@@ -171,6 +171,143 @@
             z-index: 1;
         }
         
+        /* Slideshow Gallery Styles */
+        .slideshow-section {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+        }
+        
+        .slideshow-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+            margin-bottom: 2.5rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .slideshow-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+        }
+        
+        .slideshow-container {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            overflow: hidden;
+            background: #f8f9fa;
+        }
+        
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.8s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .slide.active {
+            opacity: 1;
+        }
+        
+        .slide img {
+            width: 100%;
+            height: 320px;
+            object-fit: contain;
+            background: #f8f9fa;
+            padding: 1rem;
+        }
+        
+        .slide-caption {
+            padding: 0.75rem;
+            text-align: center;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: #2c3e50;
+            background: rgba(255,255,255,0.95);
+            width: 100%;
+            border-top: 1px solid #e0e0e0;
+        }
+        
+        .slide-nav {
+            display: flex;
+            justify-content: center;
+            gap: 0.75rem;
+            padding: 0.75rem;
+            background: #f5f5f5;
+        }
+        
+        .nav-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #bdc3c7;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+        
+        .nav-dot.active {
+            background: #3498db;
+            transform: scale(1.2);
+        }
+        
+        .nav-dot:hover {
+            background: #7f8c8d;
+        }
+        
+        .slideshow-info {
+            padding: 1.8rem;
+            background: linear-gradient(to bottom, white, #f9f9f9);
+        }
+        
+        .slideshow-info h3 {
+            margin-top: 0;
+            color: #2c3e50;
+            font-size: 1.6rem;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .slideshow-info p {
+            margin: 0.8rem 0;
+            color: #34495e;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+        
+        .material-badge {
+            display: inline-block;
+            background: #2c3e50;
+            color: white;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-right: 0.5rem;
+            margin-bottom: 0.8rem;
+        }
+        
+        .location-badge {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-right: 0.5rem;
+            margin-bottom: 0.8rem;
+        }
+        
+        /* Regular gallery grid for non-slideshow items */
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
@@ -223,28 +360,6 @@
             color: #34495e;
             font-size: 1.1rem;
             line-height: 1.5;
-        }
-        
-        .material-badge {
-            display: inline-block;
-            background: #2c3e50;
-            color: white;
-            padding: 0.4rem 1rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            margin-right: 0.5rem;
-            margin-bottom: 0.8rem;
-        }
-        
-        .location-badge {
-            display: inline-block;
-            background: #3498db;
-            color: white;
-            padding: 0.4rem 1rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            margin-right: 0.5rem;
-            margin-bottom: 0.8rem;
         }
         
         .process-section {
@@ -339,6 +454,18 @@
                 padding: 1rem;
             }
             
+            .slideshow-section {
+                padding: 1rem;
+            }
+            
+            .slideshow-container {
+                height: 320px;
+            }
+            
+            .slide img {
+                height: 250px;
+            }
+            
             nav a {
                 display: block;
                 margin: 0.5rem auto;
@@ -379,13 +506,13 @@
         </div>
     </header>
     
-    <!-- Navigation Menu - UPDATED: Fantasy Ball → Fantasy Art -->
+    <!-- Navigation Menu -->
     <nav>
         <a href="index.html">Home</a>
         <a href="alaska-textiles.html" class="current">Alaskan Textile Art</a>
         <a href="rabbitry.html">My Rabbitry</a>
         <a href="farm-stand.html">Farm Stand</a>
-        <a href="fantasy-ball.html">Fantasy Art</a> <!-- CHANGED HERE -->
+        <a href="fantasy-ball.html">Fantasy Art</a>
         <a href="contact.html">Contact</a>
     </nav>
     
@@ -409,50 +536,113 @@
             </div>
         </section>
         
-        <!-- Potholders Section -->
+        <!-- Potholders Section with Slideshows -->
         <div class="section-divider">
             <div class="divider-line"></div>
             <h3>Alaskan Wildlife Potholders</h3>
             <p>Functional kitchen art featuring creatures from our local ecosystems</p>
         </div>
         
-        <div class="gallery-grid">
-            <!-- Mushroom Potholder -->
-            <div class="artwork-card">
-                <img src="images/Mushroom_potholder_Jan.jpg" alt="Winter Chanterelle Mushroom Potholder" class="artwork-image">
-                <div class="artwork-info">
+        <div class="slideshow-section">
+            <!-- Slideshow 1: Flora of Glacier Bay (Mushrooms & Berries) -->
+            <div class="slideshow-card">
+                <div class="slideshow-container" id="floraSlideshow">
+                    <div class="slide active">
+                        <img src="images/FlyAmanitaPotholder.jpg" alt="Fly Amanita Mushroom Potholder">
+                        <div class="slide-caption">🍄 Fly Amanita (Amanita muscaria) – Alaska's iconic red-and-white mushroom, a favorite of fairytales and forest floors alike.</div>
+                    </div>
+                    <div class="slide">
+                        <img src="images/SalmonBerryPotholder.jpg" alt="Salmonberry Potholder">
+                        <div class="slide-caption">🍇 Salmonberry (Rubus spectabilis) – A sweet-tart berry that ripens alongside salmon runs. A favorite food of bears and foragers!</div>
+                    </div>
+                    <div class="slide">
+                        <img src="images/WinterChanterellesInSnow.jpg" alt="Winter Chanterelle Mushroom Potholder">
+                        <div class="slide-caption">🍄 Winter Chanterelle (Craterellus tubaeformis) – A golden treasure found in Southeast Alaska forests, even under snow in late winter!</div>
+                    </div>
+                </div>
+                <div class="slide-nav" id="floraNav">
+                    <span class="nav-dot active"></span>
+                    <span class="nav-dot"></span>
+                    <span class="nav-dot"></span>
+                </div>
+                <div class="slideshow-info">
                     <span class="material-badge">All Natural Fiber</span>
                     <span class="location-badge">Glacier Bay National Park</span>
-                    <h3>Winter Chanterelle</h3>
-                    <p>Edible mushroom potholder inspired by the Winter Chanterelles that grow throughout Glacier Bay National Park. These golden mushrooms are a favorite forager's find in Southeast Alaska.</p>
-                    <p>Hand-knit with intricate embroidery, capturing the distinctive funnel shape and gills of this prized edible fungus.</p>
+                    <h3>Flora of Glacier Bay</h3>
+                    <p>A collection celebrating the edible and iconic plants of Southeast Alaska. Each potholder captures the unique colors and shapes of our local mushrooms and berries.</p>
+                    <p><strong>Fly Amanita:</strong> Despite its striking appearance, this mushroom is toxic. It forms symbiotic relationships with spruce and birch trees.</p>
+                    <p><strong>Salmonberry:</strong> Named for its salmon-colored berries that appear when the salmon run. Both berries and young shoots are edible.</p>
+                    <p><strong>Winter Chanterelle:</strong> One of Alaska's most prized edible mushrooms, found from late summer through winter in coastal rainforests.</p>
                 </div>
             </div>
             
-            <!-- Octopus Potholder -->
-            <div class="artwork-card">
-                <img src="images/Octopus_potholder_Jan.jpg" alt="Giant Pacific Octopus Potholder" class="artwork-image">
-                <div class="artwork-info">
+            <!-- Slideshow 2: Sea Life (Orca, Octopus, Humpback Whale, Sea Otter) -->
+            <div class="slideshow-card">
+                <div class="slideshow-container" id="seaLifeSlideshow">
+                    <div class="slide active">
+                        <img src="images/OrcaPotholderCollection.jpg" alt="Orca Potholder Collection">
+                        <div class="slide-caption">🐋 Orca (Killer Whale) – Apex predators of Alaska's waters, orcas hunt in family pods and communicate with complex vocalizations.</div>
+                    </div>
+                    <div class="slide">
+                        <img src="images/Octopus_potholder_Jan.jpg" alt="Giant Pacific Octopus Potholder">
+                        <div class="slide-caption">🐙 Giant Pacific Octopus – The largest octopus species, with an arm span up to 20 feet. They have three hearts and blue blood!</div>
+                    </div>
+                    <div class="slide">
+                        <img src="images/whale_potholder_Jan.jpg" alt="Humpback Whale Potholder">
+                        <div class="slide-caption">🐋 Humpback Whale – Known for their haunting songs and acrobatic breaches. They travel 3,000+ miles to feed in Alaska's waters.</div>
+                    </div>
+                    <div class="slide">
+                        <img src="images/SeaOtterPotholder.jpg" alt="Sea Otter Potholder">
+                        <div class="slide-caption">🦦 Sea Otter – The smallest marine mammal, with the densest fur of any animal. They hold hands while sleeping to stay together!</div>
+                    </div>
+                </div>
+                <div class="slide-nav" id="seaLifeNav">
+                    <span class="nav-dot active"></span>
+                    <span class="nav-dot"></span>
+                    <span class="nav-dot"></span>
+                    <span class="nav-dot"></span>
+                </div>
+                <div class="slideshow-info">
                     <span class="material-badge">All Natural Fiber</span>
                     <span class="location-badge">Pacific Northwest Waters</span>
-                    <h3>Giant Pacific Octopus</h3>
-                    <p>Knit and embroidered octopus potholder featuring Alaska's largest octopus species. The Giant Pacific Octopus is an intelligent, captivating creature of our coastal waters.</p>
-                    <p>Intricate tentacle detailing with suction cup embroidery, created with mathematically precise patterning.</p>
+                    <h3>Sea Life of Alaska</h3>
+                    <p>A celebration of the incredible marine creatures that inhabit Alaska's coastal waters. Each piece captures the unique characteristics of these beloved animals.</p>
+                    <p><strong>Orca:</strong> Resident orcas eat fish; transient orcas hunt marine mammals. Each pod has its own unique dialect.</p>
+                    <p><strong>Octopus:</strong> Highly intelligent, with problem-solving abilities and camouflage skills. They can squeeze through any opening larger than their beak.</p>
+                    <p><strong>Humpback Whale:</strong> Males sing complex songs that can travel for miles underwater. Each population has its own unique song that evolves over time.</p>
+                    <p><strong>Sea Otter:</strong> Crucial to kelp forest ecosystems. They eat 25% of their body weight daily to stay warm.</p>
                 </div>
             </div>
             
-            <!-- Whale Potholder -->
-            <div class="artwork-card">
-                <img src="images/whale_potholder_Jan.jpg" alt="Humpback Whale Potholder" class="artwork-image">
-                <div class="artwork-info">
+            <!-- Slideshow 3: Land Mammals (Marmot & Bear) -->
+            <div class="slideshow-card">
+                <div class="slideshow-container" id="landMammalsSlideshow">
+                    <div class="slide active">
+                        <img src="images/MarmotPotholder.jpg" alt="Marmot Potholder">
+                        <div class="slide-caption">🐿️ Hoary Marmot – These alpine dwellers whistle to warn of danger. They hibernate 7-8 months each year!</div>
+                    </div>
+                    <div class="slide">
+                        <img src="images/BearPotholder.jpg" alt="Bear Potholder">
+                        <div class="slide-caption">🐻 Brown Bear (Grizzly) – Alaska's iconic bears. A coastal brown bear can eat 80-90 salmon per day during the salmon run!</div>
+                    </div>
+                </div>
+                <div class="slide-nav" id="landMammalsNav">
+                    <span class="nav-dot active"></span>
+                    <span class="nav-dot"></span>
+                </div>
+                <div class="slideshow-info">
                     <span class="material-badge">All Natural Fiber</span>
-                    <span class="location-badge">Glacier Bay Feeding Grounds</span>
-                    <h3>Humpback Whale</h3>
-                    <p>Humpback whale potholder inspired by the majestic whales that feed in Glacier Bay's summer waters. These whales migrate thousands of miles to feast in Alaska's rich seas.</p>
-                    <p>Features the distinctive pectoral fins and knobby head of the humpback, with embroidery highlighting baleen plates.</p>
+                    <span class="location-badge">Alaska's Mountains & Forests</span>
+                    <h3>Land Mammals of Alaska</h3>
+                    <p>Honoring the creatures that roam Alaska's diverse landscapes, from alpine meadows to coastal forests.</p>
+                    <p><strong>Hoary Marmot:</strong> Found in Alaska's mountain ranges, these large ground squirrels live in colonies and use distinct alarm calls for different predators.</p>
+                    <p><strong>Brown Bear:</strong> Alaska is home to an estimated 30,000 brown bears. They can run 35 mph and have an incredible sense of smell—far better than a bloodhound's.</p>
                 </div>
             </div>
-            
+        </div>
+        
+        <!-- Remaining Potholders (Halibut, School of Flat Fish, and any others) -->
+        <div class="gallery-grid">
             <!-- Halibut Collection -->
             <div class="artwork-card">
                 <img src="images/halibuts3left_Jan.jpg" alt="Three Halibut Hot Pads in Different Colors" class="artwork-image">
@@ -540,7 +730,7 @@
                     </div>
                 </div>
                 
-                <!-- NEW: Blue Owl Hat -->
+                <!-- Blue Owl Hat -->
                 <div class="artwork-card">
                     <img src="images/BlueOwlHat.jpg" alt="Blue Owl Hat" class="artwork-image">
                     <div class="artwork-info">
@@ -574,5 +764,139 @@
         <p>© 2024 Geneva's Trading Post | Handcrafted in Alaska with Natural Fibers</p>
         <p>Inspired by the wildlife and landscapes of the Last Frontier</p>
     </footer>
+    
+    <script>
+        // Flora Slideshow
+        const floraSlides = document.querySelectorAll('#floraSlideshow .slide');
+        const floraDots = document.querySelectorAll('#floraNav .nav-dot');
+        let floraIndex = 0;
+        let floraInterval;
+        
+        function showFloraSlide(index) {
+            floraSlides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === index);
+            });
+            floraDots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
+            floraIndex = index;
+        }
+        
+        function nextFloraSlide() {
+            let newIndex = floraIndex + 1;
+            if (newIndex >= floraSlides.length) newIndex = 0;
+            showFloraSlide(newIndex);
+        }
+        
+        function startFloraSlideshow() {
+            floraInterval = setInterval(nextFloraSlide, 10000);
+        }
+        
+        function stopFloraSlideshow() {
+            if (floraInterval) clearInterval(floraInterval);
+        }
+        
+        floraDots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                stopFloraSlideshow();
+                showFloraSlide(index);
+                startFloraSlideshow();
+            });
+        });
+        startFloraSlideshow();
+        const floraContainer = document.getElementById('floraSlideshow');
+        if (floraContainer) {
+            floraContainer.addEventListener('mouseenter', stopFloraSlideshow);
+            floraContainer.addEventListener('mouseleave', startFloraSlideshow);
+        }
+        
+        // Sea Life Slideshow
+        const seaLifeSlides = document.querySelectorAll('#seaLifeSlideshow .slide');
+        const seaLifeDots = document.querySelectorAll('#seaLifeNav .nav-dot');
+        let seaLifeIndex = 0;
+        let seaLifeInterval;
+        
+        function showSeaLifeSlide(index) {
+            seaLifeSlides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === index);
+            });
+            seaLifeDots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
+            seaLifeIndex = index;
+        }
+        
+        function nextSeaLifeSlide() {
+            let newIndex = seaLifeIndex + 1;
+            if (newIndex >= seaLifeSlides.length) newIndex = 0;
+            showSeaLifeSlide(newIndex);
+        }
+        
+        function startSeaLifeSlideshow() {
+            seaLifeInterval = setInterval(nextSeaLifeSlide, 10000);
+        }
+        
+        function stopSeaLifeSlideshow() {
+            if (seaLifeInterval) clearInterval(seaLifeInterval);
+        }
+        
+        seaLifeDots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                stopSeaLifeSlideshow();
+                showSeaLifeSlide(index);
+                startSeaLifeSlideshow();
+            });
+        });
+        startSeaLifeSlideshow();
+        const seaLifeContainer = document.getElementById('seaLifeSlideshow');
+        if (seaLifeContainer) {
+            seaLifeContainer.addEventListener('mouseenter', stopSeaLifeSlideshow);
+            seaLifeContainer.addEventListener('mouseleave', startSeaLifeSlideshow);
+        }
+        
+        // Land Mammals Slideshow
+        const landSlides = document.querySelectorAll('#landMammalsSlideshow .slide');
+        const landDots = document.querySelectorAll('#landMammalsNav .nav-dot');
+        let landIndex = 0;
+        let landInterval;
+        
+        function showLandSlide(index) {
+            landSlides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === index);
+            });
+            landDots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
+            landIndex = index;
+        }
+        
+        function nextLandSlide() {
+            let newIndex = landIndex + 1;
+            if (newIndex >= landSlides.length) newIndex = 0;
+            showLandSlide(newIndex);
+        }
+        
+        function startLandSlideshow() {
+            landInterval = setInterval(nextLandSlide, 10000);
+        }
+        
+        function stopLandSlideshow() {
+            if (landInterval) clearInterval(landInterval);
+        }
+        
+        landDots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                stopLandSlideshow();
+                showLandSlide(index);
+                startLandSlideshow();
+            });
+        });
+        startLandSlideshow();
+        const landContainer = document.getElementById('landMammalsSlideshow');
+        if (landContainer) {
+            landContainer.addEventListener('mouseenter', stopLandSlideshow);
+            landContainer.addEventListener('mouseleave', startLandSlideshow);
+        }
+    </script>
 </body>
 </html>
