@@ -384,6 +384,34 @@
             margin-bottom: 2rem;
         }
         
+        /* Story intro image styling */
+        .story-intro-image {
+            text-align: center;
+            margin: 0 auto 2rem auto;
+            max-width: 500px;
+        }
+        
+        .story-intro-image img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            border: 3px solid #9b59b6;
+            transition: transform 0.3s ease;
+        }
+        
+        .story-intro-image img:hover {
+            transform: scale(1.02);
+        }
+        
+        .story-intro-image .image-caption {
+            font-size: 0.85rem;
+            color: #7f8c8d;
+            margin-top: 0.5rem;
+            font-style: italic;
+        }
+        
         /* Updated story with multiple paragraphs */
         .bio-story {
             font-size: 1.15rem;
@@ -615,6 +643,14 @@
                 font-size: 0.9rem;
                 padding: 0.6rem;
             }
+            
+            .story-intro-image {
+                max-width: 300px;
+            }
+            
+            .story-intro-image img {
+                max-width: 100%;
+            }
         }
     </style>
 </head>
@@ -752,11 +788,17 @@
                 </div>
             </section>
             
-            <!-- The Story of Geneva's Trading Post - UPDATED with new bio -->
+            <!-- The Story of Geneva's Trading Post - with new image -->
             <section class="bio-section">
                 <h2>The Story of Geneva's Trading Post</h2>
                 
-                <!-- NEW: Your updated story with multiple paragraphs -->
+                <!-- NEW: Black Rabbit Fur Hat Image below title -->
+                <div class="story-intro-image">
+                    <img src="images/BlackRabbitFurHat.jpg" alt="Black Rabbit Fur Hat - Handcrafted Alaskan Art">
+                    <div class="image-caption">Handcrafted rabbit fur hat from our own hand-tanned pelts</div>
+                </div>
+                
+                <!-- Your updated story with multiple paragraphs -->
                 <div class="bio-story">
                     <p>I grew up between Sitka, Alaska and the San Juan Islands. 4‑H was a constant through my childhood—nine years as a member, then five more as an adult leader before I left for college. That program taught me everything from textile arts to astronomy, and it's come full circle now: I'm currently becoming a leader for Gustavus Country Critters.</p>
                     
