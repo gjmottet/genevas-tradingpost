@@ -232,24 +232,46 @@
             margin-top: 0.5rem;
         }
         
-        /* Announcement Card - Dark blue */
+        /* Announcement Card - Now with image background */
         .announcement-card {
-            background: linear-gradient(135deg, #1a3e6f 0%, #2c5282 100%);
-            color: #e6f0ff;
+            position: relative;
+            background-image: url('images/Carrot Tasting 2025 Geneva.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
             padding: 2.5rem;
             border-radius: 15px;
             margin: 2rem auto;
             max-width: 1000px;
             text-align: center;
             box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-            border: 3px solid #4299e1;
+            border: 3px solid #ffd700;
+            overflow: hidden;
+        }
+        
+        .announcement-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+        
+        .announcement-card h2,
+        .announcement-card p {
+            position: relative;
+            z-index: 2;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.7);
         }
         
         .announcement-card h2 {
             font-size: 2.5rem;
             margin-top: 0;
             margin-bottom: 0.5rem;
-            color: #e6f0ff;
+            color: #ffd700;
         }
         
         .announcement-card p {
@@ -257,6 +279,7 @@
             line-height: 1.6;
             margin: 0;
             opacity: 0.95;
+            color: white;
         }
         
         /* Workshop Section */
@@ -802,6 +825,14 @@
                 white-space: normal;
                 font-size: 1.8rem;
             }
+            
+            .announcement-card h2 {
+                font-size: 1.8rem;
+            }
+            
+            .announcement-card p {
+                font-size: 1.1rem;
+            }
         }
     </style>
 </head>
@@ -829,7 +860,7 @@
     <div class="white-gap"></div>
     
     <main>
-        <!-- ANNOUNCEMENT CARD - Dark blue with matching text -->
+        <!-- ANNOUNCEMENT CARD - Now with Carrot Tasting image background -->
         <div class="announcement-card">
             <h2>Announcing</h2>
             <p>Cultivating Food Sovereignty for Gustavus</p>
