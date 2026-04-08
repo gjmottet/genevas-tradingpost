@@ -283,15 +283,25 @@
         
         .workshop-image {
             display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: center;
+            gap: 0.75rem;
         }
         
-        .workshop-image img {
+        .workshop-image img:first-child {
             max-width: 100%;
             height: auto;
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .library-logo {
+            max-width: 120px;
+            height: auto;
+            border-radius: 8px;
+            background: white;
+            padding: 4px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
         
         /* Meat Rabbit Workshop - Blue theme */
@@ -350,6 +360,13 @@
             align-items: start;
         }
         
+        .carrot-workshop .workshop-image {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
         .carrot-data h3 {
             color: #e67e22;
             margin-top: 0;
@@ -374,6 +391,13 @@
             max-width: 1000px;
             margin: 0 auto;
             align-items: start;
+        }
+        
+        .harvest-workshop .workshop-image {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.75rem;
         }
         
         .harvest-workshop .workshop-details h3 {
@@ -819,6 +843,7 @@
             <div class="workshop-content">
                 <div class="workshop-image">
                     <img src="images/BabyRabbits1.jpg" alt="Baby Rabbits from Gustavus" width="300">
+                    <img src="images/FINAL library logo transparent.png" alt="Library Logo" class="library-logo">
                 </div>
                 <div class="workshop-details">
                     <h3>Meat Rabbit Husbandry & Cage Building <span class="free-tag">FREE</span></h3>
@@ -834,7 +859,8 @@
             <!-- Workshop 2: Carrot Tasting - FREE tag -->
             <div class="carrot-workshop">
                 <div class="workshop-image">
-                    <img src="images/HarvestFestCarrots2024.jpg" alt="Carrots at Harvest Festival">
+                    <img src="images/Carrot Tasting 2025.jpg" alt="Carrot Tasting 2025">
+                    <img src="images/FINAL library logo transparent.png" alt="Library Logo" class="library-logo">
                 </div>
                 <div class="carrot-data">
                     <h3>Carrot Tasting <span class="free-tag">FREE</span></h3>
@@ -904,6 +930,7 @@
             <div class="harvest-workshop">
                 <div class="workshop-image">
                     <img src="images/WinningBasketHarvestFestival2025.jpg" alt="Winning Basket at Harvest Festival">
+                    <img src="images/FINAL library logo transparent.png" alt="Library Logo" class="library-logo">
                 </div>
                 <div class="workshop-details">
                     <h3>Rabbit & Poultry Show <span class="free-tag">FREE</span></h3>
