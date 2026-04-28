@@ -655,95 +655,81 @@
             width: auto;
         }
         
-        /* NEW: Strawberry Plants Blurb */
-        .strawberry-blurb {
-            background: linear-gradient(135deg, #fff5e6 0%, #ffe6d5 100%);
-            border: 3px solid #e67e22;
-            border-radius: 24px;
-            padding: 1.8rem 2rem;
+        /* NEW: Strawberry Header Card - using image as background */
+        .strawberry-header-card {
+            position: relative;
+            background-image: url('images/StrawberryPlantsApril2026.jpg');
+            background-size: cover;
+            background-position: center 40%;
+            border-radius: 28px;
             margin: 2rem auto 3rem;
             max-width: 1000px;
+            min-height: 280px;
             display: flex;
-            flex-direction: row;
             align-items: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-            transition: transform 0.2s ease;
-        }
-        
-        .strawberry-blurb:hover {
-            transform: scale(1.01);
-        }
-        
-        .strawberry-image {
-            flex: 1.2;
-            min-width: 220px;
+            justify-content: center;
             text-align: center;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            border: 3px solid #e67e22;
+            overflow: hidden;
         }
         
-        .strawberry-image img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 20px;
-            border: 4px solid #e67e22;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-            max-height: 240px;
-            width: auto;
-            object-fit: cover;
+        .strawberry-header-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+            backdrop-filter: blur(2px);
         }
         
-        .strawberry-text {
-            flex: 2;
-            min-width: 260px;
-            text-align: left;
+        .strawberry-content {
+            position: relative;
+            z-index: 2;
+            color: white;
+            padding: 2rem 2rem;
+            max-width: 85%;
+            text-shadow: 0 2px 12px rgba(0,0,0,0.8);
         }
         
-        .strawberry-text h3 {
-            color: #c0392b;
-            font-size: 2rem;
-            margin: 0 0 0.5rem 0;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            flex-wrap: wrap;
+        .strawberry-content h3 {
+            font-size: 2.8rem;
+            margin: 0 0 0.5rem;
+            color: #fff5e6;
+            letter-spacing: 1px;
+            font-weight: bold;
         }
         
         .strawberry-price {
             background: #e67e22;
             color: white;
             display: inline-block;
-            padding: 0.4rem 1.2rem;
+            padding: 0.5rem 1.8rem;
             border-radius: 60px;
-            font-size: 1.2rem;
+            font-size: 1.4rem;
             font-weight: bold;
-            margin: 0.5rem 0;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            margin: 0.75rem 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            border: 1px solid #ffd966;
         }
         
         .strawberry-varieties {
-            background: #fdf2e9;
-            padding: 0.8rem 1.2rem;
-            border-radius: 16px;
-            margin: 1rem 0;
-            border-left: 6px solid #e67e22;
-            font-size: 1rem;
-        }
-        
-        .strawberry-varieties p {
-            margin: 0.3rem 0;
+            background: rgba(0, 0, 0, 0.65);
+            backdrop-filter: blur(4px);
+            padding: 0.8rem 1.5rem;
+            border-radius: 40px;
+            margin: 1rem auto;
+            display: inline-block;
+            font-size: 1.1rem;
+            border-left: 4px solid #e67e22;
             font-weight: 500;
         }
         
-        .strawberry-note {
-            color: #2c3e50;
-            font-style: italic;
-            background: #fff0e0;
-            display: inline-block;
-            padding: 0.4rem 1rem;
-            border-radius: 40px;
-            font-size: 0.95rem;
-            margin-top: 0.6rem;
+        .strawberry-varieties p {
+            margin: 0.2rem 0;
         }
         
         /* Quail extra image with caption */
@@ -917,13 +903,24 @@
                 font-size: 1.8rem;
             }
             
-            .strawberry-blurb {
-                flex-direction: column;
-                text-align: center;
+            .strawberry-header-card {
+                min-height: 240px;
+                margin: 1.5rem 1rem;
+                border-radius: 20px;
             }
             
-            .strawberry-text {
-                text-align: center;
+            .strawberry-content h3 {
+                font-size: 1.8rem;
+            }
+            
+            .strawberry-price {
+                font-size: 1.2rem;
+                padding: 0.4rem 1.2rem;
+            }
+            
+            .strawberry-varieties {
+                font-size: 0.9rem;
+                padding: 0.5rem 1rem;
             }
             
             .announcement-card h2 {
@@ -1028,9 +1025,9 @@
                                         <tr><td>12</td><td>Seedra Scarlet Nantes</td><td>24</td><td>56</td><td>2.33</td></tr>
                                         <tr><td>13</td><td>Scarlet Nantes</td><td>26</td><td>52</td><td>2.00</td></tr>
                                         <tr><td>14</td><td>Lunar White</td><td>25</td><td>48</td><td>1.92</td></tr>
-                                        <tr><td>15</td><td>Solar Yellow</td><td>22</td><td>41</td><td>1.86</td></tr>
-                                        <tr><td>16</td><td>Black Nebula</td><td>26</td><td>48</td><td>1.85</td></tr>
-                                        <tr><td>17</td><td>Pusa Asita Black</td><td>24</td><td>36</td><td>1.50</td></tr>
+                                        <tr class="rank-15"><td>15</td><td>Solar Yellow</td><td>22</td><td>41</td><td>1.86</td></tr>
+                                        <tr class="rank-16"><td>16</td><td>Black Nebula</td><td>26</td><td>48</td><td>1.85</td></tr>
+                                        <tr class="rank-17"><td>17</td><td>Pusa Asita Black</td><td>24</td><td>36</td><td>1.50</td></tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -1095,12 +1092,9 @@
             </div>
         </div>
         
-        <!-- NEW: STRAWBERRY BLURB (Added exactly between plant starts and second saturday market) -->
-        <div class="strawberry-blurb">
-            <div class="strawberry-image">
-                <img src="images/StrawberryPlantsApril2026.jpg" alt="Strawberry plants ready for your garden - Geneva's Trading Post">
-            </div>
-            <div class="strawberry-text">
+        <!-- NEW: STRAWBERRY HEADER CARD - Full width image background with info overlay (removed "Limited quantities" line) -->
+        <div class="strawberry-header-card">
+            <div class="strawberry-content">
                 <h3>🍓 Garden Strawberry Plants 🍓</h3>
                 <div class="strawberry-price">$3.50 each • 3 for $10</div>
                 <div class="strawberry-varieties">
@@ -1108,7 +1102,6 @@
                     <p>🍓 June-bearing • 🍓 Everbearing</p>
                     <p><em>Respectable harvest from parent plants last year — strong, proven performers for Gustavus gardens!</em></p>
                 </div>
-                <div class="strawberry-note">✨ Limited quantities • Available starting April 2026 at Second Saturday Markets or by appointment</div>
             </div>
         </div>
         
