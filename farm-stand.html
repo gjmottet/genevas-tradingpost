@@ -207,7 +207,7 @@
             margin: 0.5rem 0;
         }
         
-        /* Feather bag offer styling */
+        /* Feather bag offer styling - Updated for new pricing */
         .feather-offer {
             background: #fef5e6;
             border: 2px solid #d4a373;
@@ -230,6 +230,21 @@
             border-radius: 30px;
             font-weight: bold;
             margin-top: 0.5rem;
+            font-size: 0.95rem;
+        }
+        
+        .impulse-card {
+            background: #f9f3e0;
+            border: 1px solid #e6c8a0;
+            border-radius: 8px;
+            padding: 0.6rem;
+            margin: 0.8rem 0 0;
+            text-align: center;
+        }
+        
+        .impulse-card span {
+            font-weight: bold;
+            color: #8b5a2b;
         }
         
         /* Announcement Card - Now with image background */
@@ -655,7 +670,74 @@
             width: auto;
         }
         
-        /* NEW: Strawberry Header Card - using image as background */
+        /* NEW: Rhubarb Card (placed under strawberries) */
+        .rhubarb-card {
+            background: linear-gradient(135deg, #5a3e2b 0%, #7a5a3a 100%);
+            border-radius: 28px;
+            margin: 2rem auto 3rem;
+            max-width: 1000px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+            border: 2px solid #c59a6b;
+            overflow: hidden;
+        }
+        
+        .rhubarb-text {
+            flex: 2;
+            padding: 2rem;
+            color: #fff5e6;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+        }
+        
+        .rhubarb-text h3 {
+            font-size: 2.2rem;
+            margin: 0 0 0.5rem;
+            color: #ffdd99;
+            letter-spacing: 1px;
+        }
+        
+        .rhubarb-price {
+            background: #b35f1a;
+            display: inline-block;
+            padding: 0.4rem 1.5rem;
+            border-radius: 40px;
+            font-weight: bold;
+            font-size: 1.3rem;
+            margin: 0.5rem 0;
+            border: 1px solid #ffcd94;
+        }
+        
+        .rhubarb-note {
+            background: rgba(0,0,0,0.4);
+            backdrop-filter: blur(3px);
+            padding: 0.5rem 1rem;
+            border-radius: 30px;
+            display: inline-block;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+        
+        .rhubarb-image {
+            flex: 1;
+            padding: 1rem;
+            min-width: 180px;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .rhubarb-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 20px;
+            border: 3px solid #e6b87e;
+            max-height: 180px;
+            object-fit: cover;
+        }
+        
+        /* Strawberry Header Card - unchanged but kept */
         .strawberry-header-card {
             position: relative;
             background-image: url('images/StrawberryPlantsApril2026.jpg');
@@ -732,7 +814,27 @@
             margin: 0.2rem 0;
         }
         
-        /* Quail extra image with caption */
+        /* Email Button */
+        .email-btn {
+            display: inline-block;
+            background: #2c5282;
+            color: white;
+            text-decoration: none;
+            padding: 0.8rem 1.8rem;
+            border-radius: 50px;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: background 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        
+        .email-btn:hover {
+            background: #1d3f62;
+            transform: translateY(-2px);
+        }
+        
         .quail-extra-image {
             max-width: 1000px;
             margin: 2rem auto 1rem;
@@ -787,7 +889,6 @@
             margin-top: 3rem;
         }
         
-        /* Special requests note */
         .special-requests {
             margin-top: 1rem;
             font-style: italic;
@@ -797,7 +898,6 @@
             display: inline-block;
         }
 
-        /* Additional styling for registration calls */
         .register-highlight {
             background: #fef9e0;
             border-left: 4px solid #e67e22;
@@ -811,130 +911,41 @@
             .tasting-tables {
                 grid-template-columns: 1fr;
             }
-            
             .tasting-table {
                 min-width: 300px;
             }
         }
         
         @media (max-width: 768px) {
-            .farm-header h1 {
-                font-size: 2.5rem;
-            }
-            
-            .farm-header p {
-                font-size: 1.2rem;
-            }
-            
-            .farm-banner {
-                height: 250px;
-            }
-            
-            .quail-tan-banner h2 {
-                font-size: 2rem;
-            }
-            
-            .quail-tan-banner p {
-                font-size: 1.1rem;
-            }
-            
-            .quail-tan-banner .overlay {
-                padding: 1.5rem 1rem;
-            }
-            
-            nav a {
-                display: block;
-                margin: 0.5rem auto;
-                width: 80%;
-                max-width: 250px;
-            }
-            
-            .workshop-content,
-            .carrot-workshop,
-            .harvest-workshop {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-            
-            .workshop-details h3,
-            .workshop-details p,
-            .carrot-data h3,
-            .carrot-data p {
-                text-align: center;
-            }
-            
-            .quail-grid {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-            
-            .market-banner {
-                grid-template-columns: 1fr;
-            }
-            
-            .market-image {
-                min-height: 250px;
-            }
-            
-            .tasting-tables {
-                grid-template-columns: 1fr;
-            }
-            
-            .tasting-table {
-                overflow-x: scroll;
-                max-height: 400px;
-            }
-            
-            .tasting-table table {
-                min-width: 600px;
-            }
-            
-            .plant-starts-brown {
-                flex-direction: column-reverse;
-                text-align: center;
-            }
-            
-            .plant-starts-text {
-                text-align: center;
-            }
-            
-            .plant-starts-text h3 {
-                white-space: normal;
-                font-size: 1.8rem;
-            }
-            
-            .strawberry-header-card {
-                min-height: 240px;
-                margin: 1.5rem 1rem;
-                border-radius: 20px;
-            }
-            
-            .strawberry-content h3 {
-                font-size: 1.8rem;
-            }
-            
-            .strawberry-price {
-                font-size: 1.2rem;
-                padding: 0.4rem 1.2rem;
-            }
-            
-            .strawberry-varieties {
-                font-size: 0.9rem;
-                padding: 0.5rem 1rem;
-            }
-            
-            .announcement-card h2 {
-                font-size: 1.8rem;
-            }
-            
-            .announcement-card p {
-                font-size: 1.1rem;
-            }
+            .farm-header h1 { font-size: 2.5rem; }
+            .farm-header p { font-size: 1.2rem; }
+            .farm-banner { height: 250px; }
+            .quail-tan-banner h2 { font-size: 2rem; }
+            .quail-tan-banner p { font-size: 1.1rem; }
+            .quail-tan-banner .overlay { padding: 1.5rem 1rem; }
+            nav a { display: block; margin: 0.5rem auto; width: 80%; max-width: 250px; }
+            .workshop-content, .carrot-workshop, .harvest-workshop { grid-template-columns: 1fr; text-align: center; }
+            .workshop-details h3, .workshop-details p, .carrot-data h3, .carrot-data p { text-align: center; }
+            .quail-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+            .market-banner { grid-template-columns: 1fr; }
+            .market-image { min-height: 250px; }
+            .tasting-tables { grid-template-columns: 1fr; }
+            .tasting-table { overflow-x: scroll; max-height: 400px; }
+            .tasting-table table { min-width: 600px; }
+            .plant-starts-brown { flex-direction: column-reverse; text-align: center; }
+            .plant-starts-text { text-align: center; }
+            .plant-starts-text h3 { white-space: normal; font-size: 1.8rem; }
+            .strawberry-header-card { min-height: 240px; margin: 1.5rem 1rem; border-radius: 20px; }
+            .strawberry-content h3 { font-size: 1.8rem; }
+            .strawberry-price { font-size: 1.2rem; }
+            .announcement-card h2 { font-size: 1.8rem; }
+            .announcement-card p { font-size: 1.1rem; }
+            .rhubarb-card { flex-direction: column-reverse; text-align: center; margin: 1.5rem 1rem; }
+            .rhubarb-text { padding: 1.5rem; text-align: center; }
         }
     </style>
 </head>
 <body>
-    <!-- Farm Stand Header with Banner -->
     <header class="farm-header">
         <img src="images/SquashPlant.jpg" alt="Squash Plant in Garden" class="farm-banner">
         <div class="banner-overlay">
@@ -943,7 +954,6 @@
         </div>
     </header>
     
-    <!-- Navigation Menu -->
     <nav>
         <a href="index.html">Home</a>
         <a href="alaska-textiles.html">Alaskan Textile Art</a>
@@ -953,21 +963,19 @@
         <a href="contact.html">Contact</a>
     </nav>
 
-    <!-- White gap between green nav and content -->
     <div class="white-gap"></div>
     
     <main>
-        <!-- ANNOUNCEMENT CARD - Now with Carrot Tasting image background -->
         <div class="announcement-card">
             <h2>Announcing</h2>
             <p>Cultivating Food Sovereignty for Gustavus</p>
         </div>
         
-        <!-- WORKSHOP SECTION - All three workshops are FREE -->
+        <!-- WORKSHOP SECTION -->
         <section class="workshop-section">
             <h2>2026 Workshop Series</h2>
             
-            <!-- Workshop 1: Meat Rabbits - FREE tag -->
+            <!-- Workshop 1: Meat Rabbits - with email button -->
             <div class="workshop-content">
                 <div class="workshop-image">
                     <img src="images/BabyRabbits1.jpg" alt="Baby Rabbits from Gustavus" width="300">
@@ -979,12 +987,14 @@
                     <p>Join us for a hands-on workshop! We'll have <strong>two litters of nine-week-old babies</strong> plus nest box babies to demonstrate proper handling and growth stages. Learn how to construct a large grow-out cage for fryers, perform a basic health check on rabbits, and identify good commercial body type.</p>
                     <p>Open to all skill levels — ARBA member with 20 years experience leading the session.</p>
                     <div class="starter-kit">
-                        <strong>🎁 Bonus:</strong> The first 6 participants receive a Rabbit Starter Kit with essential supplies! <strong>Reach out to the library to sign up now.</strong>
+                        <strong>🎁 Bonus:</strong> The first 6 participants receive a Rabbit Starter Kit with essential supplies!
                     </div>
+                    <!-- Email registration button -->
+                    <a href="mailto:gjmottet@alaska.edu?subject=Rabbit%20Husbandry%20Workshop%20Registration&body=Hello%2C%20I%27d%20like%20to%20register%20for%20the%20Meat%20Rabbit%20Workshop%20on%20June%2020%2C%202026.%20Please%20include%20my%20name%20and%20contact%20information%3A" class="email-btn">📧 Email to Register for Workshop</a>
                 </div>
             </div>
             
-            <!-- Workshop 2: Carrot Tasting - FREE tag -->
+            <!-- Workshop 2: Carrot Tasting -->
             <div class="carrot-workshop">
                 <div class="workshop-image">
                     <img src="images/Carrot Tasting 2025.jpg" alt="Carrot Tasting 2025">
@@ -994,67 +1004,52 @@
                     <h3>Carrot Tasting <span class="free-tag">FREE</span></h3>
                     <span class="workshop-date">📅 September 14, 2026 · 5:30–8:00 PM · Gustavus Community Center</span>
                     <p>Third annual community carrot tasting. Past tastings: 2024 (6 varieties) → 2025 (17 varieties) → 2026 (14 varieties planned). Sample unique carrots, vote for your favorites, and celebrate local growing.</p>
-                    
                     <div class="seed-bank-note">
                         <strong>🌱 Seed Bank Update:</strong> <strong>Bolero</strong> and <strong>Purple Dragon</strong> carrot seeds are now available at the free Gustavus Library Seed Bank — pick them up for your garden!
                     </div>
                 </div>
-                
                 <div class="carrot-charts">
                     <div class="charts-full-width">
                         <div class="tasting-tables">
-                            <!-- 2025 Results Table - FULL original (all 17 varieties) -->
                             <div class="tasting-table">
                                 <h4>2025 Results - 17 Varieties</h4>
-                                <table>
-                                    <thead>
-                                        <tr><th>Rank</th><th>Variety</th><th>Total</th><th>Score</th><th>Norm</th></tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr class="rank-1"><td>1</td><td>Royal Chantenay</td><td>24</td><td>94</td><td>3.92</td></tr>
-                                        <tr class="rank-2"><td>2</td><td>St. Valery</td><td>25</td><td>95</td><td>3.80</td></tr>
-                                        <tr class="rank-3"><td>3</td><td>Purple Dragon</td><td>23</td><td>82</td><td>3.57</td></tr>
-                                        <tr><td>4</td><td>Gniff</td><td>24</td><td>84</td><td>3.50</td></tr>
-                                        <tr><td>5</td><td>Little Fingers</td><td>25</td><td>87</td><td>3.48</td></tr>
-                                        <tr><td>6</td><td>Bolero Nantes</td><td>24</td><td>79</td><td>3.29</td></tr>
-                                        <tr><td>7</td><td>Oxheart</td><td>26</td><td>79</td><td>3.04</td></tr>
-                                        <tr><td>8</td><td>Giant Red</td><td>25</td><td>74</td><td>2.96</td></tr>
-                                        <tr><td>9</td><td>Chantenay Red Core</td><td>24</td><td>75</td><td>3.13</td></tr>
-                                        <tr><td>10</td><td>Bambino</td><td>22</td><td>60</td><td>2.73</td></tr>
-                                        <tr><td>11</td><td>Imperator 58</td><td>25</td><td>62</td><td>2.48</td></tr>
-                                        <tr><td>12</td><td>Seedra Scarlet Nantes</td><td>24</td><td>56</td><td>2.33</td></tr>
-                                        <tr><td>13</td><td>Scarlet Nantes</td><td>26</td><td>52</td><td>2.00</td></tr>
-                                        <tr><td>14</td><td>Lunar White</td><td>25</td><td>48</td><td>1.92</td></tr>
-                                        <tr class="rank-15"><td>15</td><td>Solar Yellow</td><td>22</td><td>41</td><td>1.86</td></tr>
-                                        <tr class="rank-16"><td>16</td><td>Black Nebula</td><td>26</td><td>48</td><td>1.85</td></tr>
-                                        <tr class="rank-17"><td>17</td><td>Pusa Asita Black</td><td>24</td><td>36</td><td>1.50</td></tr>
-                                    </tbody>
-                                </table>
+                                <table><thead><tr><th>Rank</th><th>Variety</th><th>Total</th><th>Score</th><th>Norm</th></tr></thead>
+                                <tbody><tr class="rank-1"><td>1</td><td>Royal Chantenay</td><td>24</td><td>94</td><td>3.92</td></tr>
+                                <tr class="rank-2"><td>2</td><td>St. Valery</td><td>25</td><td>95</td><td>3.80</td></tr>
+                                <tr class="rank-3"><td>3</td><td>Purple Dragon</td><td>23</td><td>82</td><td>3.57</td></tr>
+                                <tr><td>4</td><td>Gniff</td><td>24</td><td>84</td><td>3.50</td></tr>
+                                <tr><td>5</td><td>Little Fingers</td><td>25</td><td>87</td><td>3.48</td></tr>
+                                <tr><td>6</td><td>Bolero Nantes</td><td>24</td><td>79</td><td>3.29</td></tr>
+                                <tr><td>7</td><td>Oxheart</td><td>26</td><td>79</td><td>3.04</td></tr>
+                                <tr><td>8</td><td>Giant Red</td><td>25</td><td>74</td><td>2.96</td></tr>
+                                <tr><td>9</td><td>Chantenay Red Core</td><td>24</td><td>75</td><td>3.13</td></tr>
+                                <tr><td>10</td><td>Bambino</td><td>22</td><td>60</td><td>2.73</td></tr>
+                                <tr><td>11</td><td>Imperator 58</td><td>25</td><td>62</td><td>2.48</td></tr>
+                                <tr><td>12</td><td>Seedra Scarlet Nantes</td><td>24</td><td>56</td><td>2.33</td></tr>
+                                <tr><td>13</td><td>Scarlet Nantes</td><td>26</td><td>52</td><td>2.00</td></tr>
+                                <tr><td>14</td><td>Lunar White</td><td>25</td><td>48</td><td>1.92</td></tr>
+                                <tr><td>15</td><td>Solar Yellow</td><td>22</td><td>41</td><td>1.86</td></tr>
+                                <tr><td>16</td><td>Black Nebula</td><td>26</td><td>48</td><td>1.85</td></tr>
+                                <tr><td>17</td><td>Pusa Asita Black</td><td>24</td><td>36</td><td>1.50</td></tr>
+                                </tbody></table>
                             </div>
-                            
-                            <!-- 2024 Results Table - FULL original (6 varieties) -->
                             <div class="tasting-table">
                                 <h4>2024 Results - 6 Varieties</h4>
-                                <table>
-                                    <thead>
-                                        <tr><th>Rank</th><th>Variety</th><th>Total</th><th>Score</th><th>Norm</th></tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr class="rank-1"><td>1</td><td>Royal Chantenay</td><td>10</td><td>41</td><td>4.10</td></tr>
-                                        <tr class="rank-2"><td>2</td><td>Bolero Nantes</td><td>10</td><td>31</td><td>3.10</td></tr>
-                                        <tr class="rank-3"><td>3</td><td>Bambino</td><td>10</td><td>31</td><td>3.10</td></tr>
-                                        <tr><td>4</td><td>Scarlet Nantes</td><td>11</td><td>33</td><td>3.00</td></tr>
-                                        <tr><td>5</td><td>Yellow</td><td>10</td><td>30</td><td>3.00</td></tr>
-                                        <tr><td>6</td><td>Imperator 58</td><td>10</td><td>29</td><td>2.90</td></tr>
-                                    </tbody>
-                                </table>
+                                <table><thead><tr><th>Rank</th><th>Variety</th><th>Total</th><th>Score</th><th>Norm</th></tr></thead>
+                                <tbody><tr class="rank-1"><td>1</td><td>Royal Chantenay</td><td>10</td><td>41</td><td>4.10</td></tr>
+                                <tr class="rank-2"><td>2</td><td>Bolero Nantes</td><td>10</td><td>31</td><td>3.10</td></tr>
+                                <tr class="rank-3"><td>3</td><td>Bambino</td><td>10</td><td>31</td><td>3.10</td></tr>
+                                <tr><td>4</td><td>Scarlet Nantes</td><td>11</td><td>33</td><td>3.00</td></tr>
+                                <tr><td>5</td><td>Yellow</td><td>10</td><td>30</td><td>3.00</td></tr>
+                                <tr><td>6</td><td>Imperator 58</td><td>10</td><td>29</td><td>2.90</td></tr>
+                                </tbody></table>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             
-            <!-- Workshop 3: Harvest Festival Rabbit & Poultry Show - FREE tag -->
+            <!-- Workshop 3: Harvest Festival -->
             <div class="harvest-workshop">
                 <div class="workshop-image">
                     <img src="images/WinningBasketHarvestFestival2025.jpg" alt="Winning Basket at Harvest Festival">
@@ -1072,13 +1067,12 @@
                 </div>
             </div>
             
-            <!-- Grant Note - RurAL CAP Foundation -->
             <div class="grant-note">
                 <p><strong>Community Support:</strong> This workshop series receives financial support from the RurAL CAP Foundation. <strong>All workshops are free and open to the public!</strong></p>
             </div>
         </section>
         
-        <!-- BROWN PLANT STARTS BLOCK with special requests -->
+        <!-- Plant starts block -->
         <div class="plant-starts-brown">
             <div class="plant-starts-text">
                 <h3>🌱 Plant Starts Coming in April! 🌱</h3>
@@ -1092,7 +1086,7 @@
             </div>
         </div>
         
-        <!-- NEW: STRAWBERRY HEADER CARD - Full width image background with info overlay (removed "Limited quantities" line) -->
+        <!-- Strawberry header card -->
         <div class="strawberry-header-card">
             <div class="strawberry-content">
                 <h3>🍓 Garden Strawberry Plants 🍓</h3>
@@ -1105,7 +1099,21 @@
             </div>
         </div>
         
-        <!-- MARKET BANNER (Second Saturday Markets) -->
+        <!-- NEW: Rhubarb Plant Card (placed under strawberries) -->
+        <div class="rhubarb-card">
+            <div class="rhubarb-text">
+                <h3>🌿 Gustavus Red Rhubarb</h3>
+                <div class="rhubarb-price">$7 per pot (1 plant)</div>
+                <p><strong>From a 20+ year parent plant</strong> — proven hardy in Gustavus gardens. Grown in premium seed-starting mix, ready for your garden.</p>
+                <p>Deep red stalks, reliable producer, excellent for pies and preserves.</p>
+                <div class="rhubarb-note">🌱 Limited quantity — split from my own long-lived patch</div>
+            </div>
+            <div class="rhubarb-image">
+                <img src="images/RhubarbPlant.jpg" alt="Red Rhubarb Plant" onerror="this.src='https://placehold.co/400x300/6b4f3c/ffdd99?text=Red+Rhubarb'">
+            </div>
+        </div>
+        
+        <!-- Market Banner -->
         <section class="market-banner">
             <div class="market-image">
                 <img src="images/GreenBeans.jpg" alt="Fresh Green Beans from Gustavus">
@@ -1120,7 +1128,7 @@
             </div>
         </section>
         
-        <!-- QUAIL SECTION - With banner as header -->
+        <!-- QUAIL SECTION Updated prices -->
         <section class="quail-section">
             <div class="quail-tan-banner">
                 <div class="overlay">
@@ -1149,8 +1157,9 @@
                     <p>Our Gustavus flock will restart in June 2026. Chicks and adults will be available later in the summer.</p>
                     <div class="feather-offer">
                         <strong>🪶 Quail Feathers for Fly Tying</strong>
-                        <p>Small bags of assorted quail feathers — perfect for making fishing flies!</p>
-                        <span class="feather-price">$5 per bag</span>
+                        <p>Assorted Coturnix feathers — many colors. Perfect for salmon and Dolly Varden flies.</p>
+                        <span class="feather-price">$3 per card (15+ feathers)</span>
+                        <div class="impulse-card"><span>🐟 Bulk bag:</span> 40-50 feathers for $6 — great value for serious tyers</div>
                     </div>
                     <p><strong>Available in Gustavus:</strong> Flock restarting June 2026 — chicks, adults, and feathers available later in summer</p>
                     <span class="availability-tag">Summer 2026</span>
@@ -1163,7 +1172,6 @@
             </div>
         </section>
         
-        <!-- Back to Home Button -->
         <div style="text-align: center; padding: 2rem;">
             <a href="index.html" class="back-btn">← Back to Home</a>
         </div>
