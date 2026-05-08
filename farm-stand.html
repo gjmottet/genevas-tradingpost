@@ -670,7 +670,7 @@
             width: auto;
         }
         
-        /* NEW: Rhubarb Card (placed under strawberries) */
+        /* NEW: Rhubarb Card (placed under strawberries) - image square removed */
         .rhubarb-card {
             background: linear-gradient(135deg, #5a3e2b 0%, #7a5a3a 100%);
             border-radius: 28px;
@@ -720,24 +720,9 @@
             margin-top: 0.5rem;
         }
         
-        .rhubarb-image {
-            flex: 1;
-            padding: 1rem;
-            min-width: 180px;
-            display: flex;
-            justify-content: center;
-        }
+        /* Image side completely removed from rhubarb card per request */
         
-        .rhubarb-image img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 20px;
-            border: 3px solid #e6b87e;
-            max-height: 180px;
-            object-fit: cover;
-        }
-        
-        /* Strawberry Header Card - unchanged but kept */
+        /* Strawberry Header Card */
         .strawberry-header-card {
             position: relative;
             background-image: url('images/StrawberryPlantsApril2026.jpg');
@@ -940,7 +925,7 @@
             .strawberry-price { font-size: 1.2rem; }
             .announcement-card h2 { font-size: 1.8rem; }
             .announcement-card p { font-size: 1.1rem; }
-            .rhubarb-card { flex-direction: column-reverse; text-align: center; margin: 1.5rem 1rem; }
+            .rhubarb-card { flex-direction: column; text-align: center; margin: 1.5rem 1rem; }
             .rhubarb-text { padding: 1.5rem; text-align: center; }
         }
     </style>
@@ -971,6 +956,43 @@
             <p>Cultivating Food Sovereignty for Gustavus</p>
         </div>
         
+        <!-- PLANT START SALE - MOVED UP (below header bar, above workshops) -->
+        <div class="plant-starts-brown">
+            <div class="plant-starts-text">
+                <h3>🌱 Plant Starts Available Now! 🌱</h3>
+                <p>Lettuce, bok choy, beets, chard, cabbage, spaghetti squash, zucchini, tomatoes, cucumbers, spinach, and sunflowers.</p>
+                <div class="highlight-brown">Available at Second Saturday Markets & by appointment</div>
+            </div>
+            <div class="plant-starts-image">
+                <img src="images/GerminatingOnions.jpg" alt="Germinating onions">
+            </div>
+        </div>
+        
+        <!-- Strawberry header card -->
+        <div class="strawberry-header-card">
+            <div class="strawberry-content">
+                <h3>🍓 Garden Strawberry Plants 🍓</h3>
+                <div class="strawberry-price">$3.50 each • 3 for $10</div>
+                <div class="strawberry-varieties">
+                    <p><strong>🌸 Two domestic varieties available:</strong></p>
+                    <p>🍓 June-bearing • 🍓 Everbearing</p>
+                    <p><em>Respectable harvest from parent plants last year — strong, proven performers for Gustavus gardens!</em></p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Rhubarb Plant Card - image square removed per request -->
+        <div class="rhubarb-card">
+            <div class="rhubarb-text">
+                <h3>🌿 Gustavus Red Rhubarb</h3>
+                <div class="rhubarb-price">$7 per pot (1 plant)</div>
+                <p><strong>From a 20+ year parent plant</strong> — proven hardy in Gustavus gardens. Grown in premium seed-starting mix, ready for your garden.</p>
+                <p>Deep red stalks, reliable producer, excellent for pies and preserves.</p>
+                <div class="rhubarb-note">🌱 Limited quantity — split from my own long-lived patch</div>
+            </div>
+            <!-- Image div removed entirely -->
+        </div>
+        
         <!-- WORKSHOP SECTION -->
         <section class="workshop-section">
             <h2>2026 Workshop Series</h2>
@@ -994,7 +1016,7 @@
                 </div>
             </div>
             
-            <!-- Workshop 2: Carrot Tasting -->
+            <!-- Workshop 2: Carrot Tasting - UPDATED with planting date and 18 varieties -->
             <div class="carrot-workshop">
                 <div class="workshop-image">
                     <img src="images/Carrot Tasting 2025.jpg" alt="Carrot Tasting 2025">
@@ -1003,7 +1025,9 @@
                 <div class="carrot-data">
                     <h3>Carrot Tasting <span class="free-tag">FREE</span></h3>
                     <span class="workshop-date">📅 September 14, 2026 · 5:30–8:00 PM · Gustavus Community Center</span>
-                    <p>Third annual community carrot tasting. Past tastings: 2024 (6 varieties) → 2025 (17 varieties) → 2026 (14 varieties planned). Sample unique carrots, vote for your favorites, and celebrate local growing.</p>
+                    <p>The carrots were planted <strong>May 7</strong>. There are <strong>18 varieties</strong> this year!</p>
+                    <p><strong>Varieties:</strong> Bolero, Candy, Orange Fancy, Napoli, Mokum, Romance, Shin Kuroda, Sugarsnax 54, Rubypak, Deep Purple, Purple Elite, Dragon, Gold Nugget, Rainbow (donated by Rural CAP Foundation from Johnny's Selected Seeds), Atomic Red (donated by an online follower), Cosmic Purple (donated by an online follower), St. Valery (leftover from last year, used as control), Little Fingers (leftover from last year, used as control).</p>
+                    <p><em>📱 Will update photos as they grow, so check back!</em></p>
                     <div class="seed-bank-note">
                         <strong>🌱 Seed Bank Update:</strong> <strong>Bolero</strong> and <strong>Purple Dragon</strong> carrot seeds are now available at the free Gustavus Library Seed Bank — pick them up for your garden!
                     </div>
@@ -1013,36 +1037,40 @@
                         <div class="tasting-tables">
                             <div class="tasting-table">
                                 <h4>2025 Results - 17 Varieties</h4>
-                                <table><thead><tr><th>Rank</th><th>Variety</th><th>Total</th><th>Score</th><th>Norm</th></tr></thead>
-                                <tbody><tr class="rank-1"><td>1</td><td>Royal Chantenay</td><td>24</td><td>94</td><td>3.92</td></tr>
-                                <tr class="rank-2"><td>2</td><td>St. Valery</td><td>25</td><td>95</td><td>3.80</td></tr>
-                                <tr class="rank-3"><td>3</td><td>Purple Dragon</td><td>23</td><td>82</td><td>3.57</td></tr>
-                                <tr><td>4</td><td>Gniff</td><td>24</td><td>84</td><td>3.50</td></tr>
-                                <tr><td>5</td><td>Little Fingers</td><td>25</td><td>87</td><td>3.48</td></tr>
-                                <tr><td>6</td><td>Bolero Nantes</td><td>24</td><td>79</td><td>3.29</td></tr>
-                                <tr><td>7</td><td>Oxheart</td><td>26</td><td>79</td><td>3.04</td></tr>
-                                <tr><td>8</td><td>Giant Red</td><td>25</td><td>74</td><td>2.96</td></tr>
-                                <tr><td>9</td><td>Chantenay Red Core</td><td>24</td><td>75</td><td>3.13</td></tr>
-                                <tr><td>10</td><td>Bambino</td><td>22</td><td>60</td><td>2.73</td></tr>
-                                <tr><td>11</td><td>Imperator 58</td><td>25</td><td>62</td><td>2.48</td></tr>
-                                <tr><td>12</td><td>Seedra Scarlet Nantes</td><td>24</td><td>56</td><td>2.33</td></tr>
-                                <tr><td>13</td><td>Scarlet Nantes</td><td>26</td><td>52</td><td>2.00</td></tr>
-                                <tr><td>14</td><td>Lunar White</td><td>25</td><td>48</td><td>1.92</td></tr>
-                                <tr><td>15</td><td>Solar Yellow</td><td>22</td><td>41</td><td>1.86</td></tr>
-                                <tr><td>16</td><td>Black Nebula</td><td>26</td><td>48</td><td>1.85</td></tr>
-                                <tr><td>17</td><td>Pusa Asita Black</td><td>24</td><td>36</td><td>1.50</td></tr>
-                                </tbody></table>
+                                <table>
+                                    <thead><tr><th>Rank</th><th>Variety</th><th>Total</th><th>Score</th><th>Norm</th></tr></thead>
+                                    <tbody><tr class="rank-1"><td>1</td><td>Royal Chantenay</td><td>24</td><td>94</td><td>3.92</td></tr>
+                                    <tr class="rank-2"><td>2</td><td>St. Valery</td><td>25</td><td>95</td><td>3.80</td></tr>
+                                    <tr class="rank-3"><td>3</td><td>Purple Dragon</td><td>23</td><td>82</td><td>3.57</td></tr>
+                                    <tr><td>4</td><td>Gniff</td><td>24</td><td>84</td><td>3.50</td></tr>
+                                    <tr><td>5</td><td>Little Fingers</td><td>25</td><td>87</td><td>3.48</td></tr>
+                                    <tr><td>6</td><td>Bolero Nantes</td><td>24</td><td>79</td><td>3.29</td></tr>
+                                    <tr><td>7</td><td>Oxheart</td><td>26</td><td>79</td><td>3.04</td></tr>
+                                    <tr><td>8</td><td>Giant Red</td><td>25</td><td>74</td><td>2.96</td></tr>
+                                    <tr><td>9</td><td>Chantenay Red Core</td><td>24</td><td>75</td><td>3.13</td></tr>
+                                    <tr><td>10</td><td>Bambino</td><td>22</td><td>60</td><td>2.73</td></tr>
+                                    <tr><td>11</td><td>Imperator 58</td><td>25</td><td>62</td><td>2.48</td></tr>
+                                    <tr><td>12</td><td>Seedra Scarlet Nantes</td><td>24</td><td>56</td><td>2.33</td></tr>
+                                    <tr><td>13</td><td>Scarlet Nantes</td><td>26</td><td>52</td><td>2.00</td></tr>
+                                    <tr><td>14</td><td>Lunar White</td><td>25</td><td>48</td><td>1.92</td></tr>
+                                    <tr><td>15</td><td>Solar Yellow</td><td>22</td><td>41</td><td>1.86</td></tr>
+                                    <tr><td>16</td><td>Black Nebula</td><td>26</td><td>48</td><td>1.85</td></tr>
+                                    <tr><td>17</td><td>Pusa Asita Black</td><td>24</td><td>36</td><td>1.50</td></tr>
+                                    </tbody>
+                                </table>
                             </div>
                             <div class="tasting-table">
                                 <h4>2024 Results - 6 Varieties</h4>
-                                <table><thead><tr><th>Rank</th><th>Variety</th><th>Total</th><th>Score</th><th>Norm</th></tr></thead>
-                                <tbody><tr class="rank-1"><td>1</td><td>Royal Chantenay</td><td>10</td><td>41</td><td>4.10</td></tr>
-                                <tr class="rank-2"><td>2</td><td>Bolero Nantes</td><td>10</td><td>31</td><td>3.10</td></tr>
-                                <tr class="rank-3"><td>3</td><td>Bambino</td><td>10</td><td>31</td><td>3.10</td></tr>
-                                <tr><td>4</td><td>Scarlet Nantes</td><td>11</td><td>33</td><td>3.00</td></tr>
-                                <tr><td>5</td><td>Yellow</td><td>10</td><td>30</td><td>3.00</td></tr>
-                                <tr><td>6</td><td>Imperator 58</td><td>10</td><td>29</td><td>2.90</td></tr>
-                                </tbody></table>
+                                <table>
+                                    <thead><tr><th>Rank</th><th>Variety</th><th>Total</th><th>Score</th><th>Norm</th></tr></thead>
+                                    <tbody><tr class="rank-1"><td>1</td><td>Royal Chantenay</td><td>10</td><td>41</td><td>4.10</td></tr>
+                                    <tr class="rank-2"><td>2</td><td>Bolero Nantes</td><td>10</td><td>31</td><td>3.10</td></tr>
+                                    <tr class="rank-3"><td>3</td><td>Bambino</td><td>10</td><td>31</td><td>3.10</td></tr>
+                                    <tr><td>4</td><td>Scarlet Nantes</td><td>11</td><td>33</td><td>3.00</td></tr>
+                                    <tr><td>5</td><td>Yellow</td><td>10</td><td>30</td><td>3.00</td></tr>
+                                    <tr><td>6</td><td>Imperator 58</td><td>10</td><td>29</td><td>2.90</td></tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
@@ -1072,59 +1100,17 @@
             </div>
         </section>
         
-        <!-- Plant starts block -->
-        <div class="plant-starts-brown">
-            <div class="plant-starts-text">
-                <h3>🌱 Plant Starts Coming in April! 🌱</h3>
-                <p>Vegetable and herb starts will be available in Gustavus starting April 2026</p>
-                <p>Perfect for your home garden — grown locally with care</p>
-                <div class="highlight-brown">Available at Second Saturday Markets & by appointment at our greenhouse</div>
-                <div class="special-requests">📝 Taking special requests! Contact me for specific plants you'd like me to start for you.</div>
-            </div>
-            <div class="plant-starts-image">
-                <img src="images/GerminatingOnions.jpg" alt="Germinating onions">
-            </div>
-        </div>
-        
-        <!-- Strawberry header card -->
-        <div class="strawberry-header-card">
-            <div class="strawberry-content">
-                <h3>🍓 Garden Strawberry Plants 🍓</h3>
-                <div class="strawberry-price">$3.50 each • 3 for $10</div>
-                <div class="strawberry-varieties">
-                    <p><strong>🌸 Two domestic varieties available:</strong></p>
-                    <p>🍓 June-bearing • 🍓 Everbearing</p>
-                    <p><em>Respectable harvest from parent plants last year — strong, proven performers for Gustavus gardens!</em></p>
-                </div>
-            </div>
-        </div>
-        
-        <!-- NEW: Rhubarb Plant Card (placed under strawberries) -->
-        <div class="rhubarb-card">
-            <div class="rhubarb-text">
-                <h3>🌿 Gustavus Red Rhubarb</h3>
-                <div class="rhubarb-price">$7 per pot (1 plant)</div>
-                <p><strong>From a 20+ year parent plant</strong> — proven hardy in Gustavus gardens. Grown in premium seed-starting mix, ready for your garden.</p>
-                <p>Deep red stalks, reliable producer, excellent for pies and preserves.</p>
-                <div class="rhubarb-note">🌱 Limited quantity — split from my own long-lived patch</div>
-            </div>
-            <div class="rhubarb-image">
-                <img src="images/RhubarbPlant.jpg" alt="Red Rhubarb Plant" onerror="this.src='https://placehold.co/400x300/6b4f3c/ffdd99?text=Red+Rhubarb'">
-            </div>
-        </div>
-        
-        <!-- Market Banner -->
+        <!-- Market Banner - UPDATED with May 9 date and chives message -->
         <section class="market-banner">
             <div class="market-image">
                 <img src="images/GreenBeans.jpg" alt="Fresh Green Beans from Gustavus">
             </div>
             <div class="market-info">
-                <h3>Second Saturday Markets</h3>
-                <p>Starting April 2026 at the Gustavus Second Saturday Markets.</p>
+                <h3>Second Saturday Market</h3>
+                <p><strong>Check us out May 9 — will sell out of fresh chives fast!</strong></p>
+                <p><strong>Saturday, noon–2:30pm</strong> at the Gustavus Community Center.</p>
                 <p>Fresh seasonal produce, quail eggs, and homestead goods from our Gustavus garden.</p>
-                <p><strong>Location:</strong> Gustavus Community Center</p>
-                <p><strong>Season:</strong> April through October</p>
-                <div class="season-date">Starting April 2026</div>
+                <div class="season-date">May 9 · Noon–2:30pm</div>
             </div>
         </section>
         
