@@ -602,7 +602,7 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
         
-        /* Brown Plant Starts Block */
+        /* COMBINED PLANT STARTS CARD - with strawberry & rhubarb merged in */
         .plant-starts-brown {
             background: linear-gradient(135deg, #6b4f3c 0%, #8b5a2b 100%);
             color: white;
@@ -612,191 +612,68 @@
             max-width: 1000px;
             box-shadow: 0 8px 25px rgba(0,0,0,0.3);
             border: 3px solid #b87c4b;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-        }
-        
-        .plant-starts-text {
-            flex: 2;
-            min-width: 280px;
-            text-align: left;
         }
         
         .plant-starts-text h3 {
-            font-size: 2.2rem;
-            margin: 0 0 0.5rem 0;
+            font-size: 2rem;
+            margin: 0 0 1rem 0;
             color: #fbe9d2;
             text-shadow: 0 2px 4px rgba(0,0,0,0.4);
-            white-space: nowrap;
+            text-align: center;
         }
         
         .plant-starts-text p {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             margin: 0.5rem 0;
             line-height: 1.5;
             opacity: 0.95;
+            text-align: center;
         }
         
-        .plant-starts-text .highlight-brown {
+        .plant-list {
+            text-align: center;
+            font-size: 1rem;
+            margin: 1rem 0;
+            line-height: 1.6;
+        }
+        
+        .divider {
+            height: 2px;
             background: #d9b382;
-            color: #2c1e0e;
-            display: inline-block;
-            padding: 0.6rem 1.8rem;
-            border-radius: 40px;
-            font-weight: bold;
-            font-size: 1.3rem;
-            margin-top: 1rem;
-            border: 2px solid #fbe9d2;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+            margin: 1.5rem 0;
+            opacity: 0.5;
         }
         
-        .plant-starts-image {
-            flex: 1;
-            min-width: 260px;
-            display: flex;
-            justify-content: center;
+        .strawberry-section, .rhubarb-section {
+            text-align: center;
+            margin: 1.5rem 0 0.5rem;
         }
         
-        .plant-starts-image img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 16px;
-            border: 4px solid #d9b382;
-            box-shadow: 0 8px 18px rgba(0,0,0,0.3);
-            max-height: 220px;
-            width: auto;
-        }
-        
-        /* NEW: Rhubarb Card (placed under strawberries) - image square removed */
-        .rhubarb-card {
-            background: linear-gradient(135deg, #5a3e2b 0%, #7a5a3a 100%);
-            border-radius: 28px;
-            margin: 2rem auto 3rem;
-            max-width: 1000px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
-            border: 2px solid #c59a6b;
-            overflow: hidden;
-        }
-        
-        .rhubarb-text {
-            flex: 2;
-            padding: 2rem;
-            color: #fff5e6;
-            text-shadow: 0 1px 3px rgba(0,0,0,0.5);
-        }
-        
-        .rhubarb-text h3 {
-            font-size: 2.2rem;
+        .strawberry-section h4, .rhubarb-section h4 {
+            font-size: 1.5rem;
             margin: 0 0 0.5rem;
             color: #ffdd99;
-            letter-spacing: 1px;
         }
         
-        .rhubarb-price {
+        .price {
             background: #b35f1a;
             display: inline-block;
-            padding: 0.4rem 1.5rem;
+            padding: 0.3rem 1.2rem;
             border-radius: 40px;
             font-weight: bold;
-            font-size: 1.3rem;
+            font-size: 1.1rem;
             margin: 0.5rem 0;
             border: 1px solid #ffcd94;
         }
         
-        .rhubarb-note {
-            background: rgba(0,0,0,0.4);
+        .variety-note {
+            background: rgba(0,0,0,0.3);
             backdrop-filter: blur(3px);
-            padding: 0.5rem 1rem;
+            padding: 0.4rem 1rem;
             border-radius: 30px;
             display: inline-block;
-            font-size: 0.9rem;
-            margin-top: 0.5rem;
-        }
-        
-        /* Image side completely removed from rhubarb card per request */
-        
-        /* Strawberry Header Card */
-        .strawberry-header-card {
-            position: relative;
-            background-image: url('images/StrawberryPlantsApril2026.jpg');
-            background-size: cover;
-            background-position: center 40%;
-            border-radius: 28px;
-            margin: 2rem auto 3rem;
-            max-width: 1000px;
-            min-height: 280px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
-            border: 3px solid #e67e22;
-            overflow: hidden;
-        }
-        
-        .strawberry-header-card::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 1;
-            backdrop-filter: blur(2px);
-        }
-        
-        .strawberry-content {
-            position: relative;
-            z-index: 2;
-            color: white;
-            padding: 2rem 2rem;
-            max-width: 85%;
-            text-shadow: 0 2px 12px rgba(0,0,0,0.8);
-        }
-        
-        .strawberry-content h3 {
-            font-size: 2.8rem;
-            margin: 0 0 0.5rem;
-            color: #fff5e6;
-            letter-spacing: 1px;
-            font-weight: bold;
-        }
-        
-        .strawberry-price {
-            background: #e67e22;
-            color: white;
-            display: inline-block;
-            padding: 0.5rem 1.8rem;
-            border-radius: 60px;
-            font-size: 1.4rem;
-            font-weight: bold;
-            margin: 0.75rem 0;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-            border: 1px solid #ffd966;
-        }
-        
-        .strawberry-varieties {
-            background: rgba(0, 0, 0, 0.65);
-            backdrop-filter: blur(4px);
-            padding: 0.8rem 1.5rem;
-            border-radius: 40px;
-            margin: 1rem auto;
-            display: inline-block;
-            font-size: 1.1rem;
-            border-left: 4px solid #e67e22;
-            font-weight: 500;
-        }
-        
-        .strawberry-varieties p {
-            margin: 0.2rem 0;
+            font-size: 0.85rem;
+            margin-top: 0.3rem;
         }
         
         /* Email Button */
@@ -917,16 +794,11 @@
             .tasting-tables { grid-template-columns: 1fr; }
             .tasting-table { overflow-x: scroll; max-height: 400px; }
             .tasting-table table { min-width: 600px; }
-            .plant-starts-brown { flex-direction: column-reverse; text-align: center; }
-            .plant-starts-text { text-align: center; }
-            .plant-starts-text h3 { white-space: normal; font-size: 1.8rem; }
-            .strawberry-header-card { min-height: 240px; margin: 1.5rem 1rem; border-radius: 20px; }
-            .strawberry-content h3 { font-size: 1.8rem; }
-            .strawberry-price { font-size: 1.2rem; }
+            .plant-starts-brown { text-align: center; }
+            .plant-starts-text h3 { font-size: 1.6rem; }
+            .strawberry-section h4, .rhubarb-section h4 { font-size: 1.3rem; }
             .announcement-card h2 { font-size: 1.8rem; }
             .announcement-card p { font-size: 1.1rem; }
-            .rhubarb-card { flex-direction: column; text-align: center; margin: 1.5rem 1rem; }
-            .rhubarb-text { padding: 1.5rem; text-align: center; }
         }
     </style>
 </head>
@@ -951,46 +823,38 @@
     <div class="white-gap"></div>
     
     <main>
-        <div class="announcement-card">
-            <h2>Announcing</h2>
-            <p>Cultivating Food Sovereignty for Gustavus</p>
-        </div>
-        
-        <!-- PLANT START SALE - MOVED UP (below header bar, above workshops) -->
+        <!-- COMBINED PLANT START CARD (with strawberry & rhubarb merged in, no mention of Second Saturday Markets) -->
         <div class="plant-starts-brown">
             <div class="plant-starts-text">
                 <h3>🌱 Plant Starts Available Now! 🌱</h3>
-                <p>Lettuce, bok choy, beets, chard, cabbage, spaghetti squash, zucchini, tomatoes, cucumbers, spinach, and sunflowers.</p>
-                <div class="highlight-brown">Available at Second Saturday Markets & by appointment</div>
-            </div>
-            <div class="plant-starts-image">
-                <img src="images/GerminatingOnions.jpg" alt="Germinating onions">
-            </div>
-        </div>
-        
-        <!-- Strawberry header card -->
-        <div class="strawberry-header-card">
-            <div class="strawberry-content">
-                <h3>🍓 Garden Strawberry Plants 🍓</h3>
-                <div class="strawberry-price">$3.50 each • 3 for $10</div>
-                <div class="strawberry-varieties">
-                    <p><strong>🌸 Two domestic varieties available:</strong></p>
-                    <p>🍓 June-bearing • 🍓 Everbearing</p>
-                    <p><em>Respectable harvest from parent plants last year — strong, proven performers for Gustavus gardens!</em></p>
+                <div class="plant-list">
+                    <strong>Vegetable starts:</strong> Lettuce, bok choy, beets, chard, cabbage, spaghetti squash, zucchini, tomatoes, cucumbers, spinach, and sunflowers.
+                </div>
+                
+                <div class="divider"></div>
+                
+                <div class="strawberry-section">
+                    <h4>🍓 Garden Strawberry Plants 🍓</h4>
+                    <div class="price">$3.50 each • 3 for $10</div>
+                    <div class="variety-note">
+                        June-bearing & Everbearing — respectable harvest from parent plants last year, proven performers for Gustavus gardens!
+                    </div>
+                </div>
+                
+                <div class="rhubarb-section">
+                    <h4>🌿 Gustavus Red Rhubarb</h4>
+                    <div class="price">$7 per pot (1 plant)</div>
+                    <div class="variety-note">
+                        From a 20+ year parent plant — proven hardy in Gustavus gardens. Deep red stalks, excellent for pies and preserves. Limited quantity.
+                    </div>
                 </div>
             </div>
         </div>
         
-        <!-- Rhubarb Plant Card - image square removed per request -->
-        <div class="rhubarb-card">
-            <div class="rhubarb-text">
-                <h3>🌿 Gustavus Red Rhubarb</h3>
-                <div class="rhubarb-price">$7 per pot (1 plant)</div>
-                <p><strong>From a 20+ year parent plant</strong> — proven hardy in Gustavus gardens. Grown in premium seed-starting mix, ready for your garden.</p>
-                <p>Deep red stalks, reliable producer, excellent for pies and preserves.</p>
-                <div class="rhubarb-note">🌱 Limited quantity — split from my own long-lived patch</div>
-            </div>
-            <!-- Image div removed entirely -->
+        <!-- ANNOUNCEMENT CARD - moved above Workshop Series -->
+        <div class="announcement-card">
+            <h2>Announcing</h2>
+            <p>Cultivating Food Sovereignty for Gustavus</p>
         </div>
         
         <!-- WORKSHOP SECTION -->
@@ -1016,7 +880,7 @@
                 </div>
             </div>
             
-            <!-- Workshop 2: Carrot Tasting - UPDATED with planting date and 18 varieties -->
+            <!-- Workshop 2: Carrot Tasting - UPDATED with cleaned varieties (no duplication) -->
             <div class="carrot-workshop">
                 <div class="workshop-image">
                     <img src="images/Carrot Tasting 2025.jpg" alt="Carrot Tasting 2025">
@@ -1056,8 +920,8 @@
                                     <tr><td>15</td><td>Solar Yellow</td><td>22</td><td>41</td><td>1.86</td></tr>
                                     <tr><td>16</td><td>Black Nebula</td><td>26</td><td>48</td><td>1.85</td></tr>
                                     <tr><td>17</td><td>Pusa Asita Black</td><td>24</td><td>36</td><td>1.50</td></tr>
-                                    </tbody>
-                                </table>
+                                </tbody>
+                            </table>
                             </div>
                             <div class="tasting-table">
                                 <h4>2024 Results - 6 Varieties</h4>
@@ -1069,8 +933,8 @@
                                     <tr><td>4</td><td>Scarlet Nantes</td><td>11</td><td>33</td><td>3.00</td></tr>
                                     <tr><td>5</td><td>Yellow</td><td>10</td><td>30</td><td>3.00</td></tr>
                                     <tr><td>6</td><td>Imperator 58</td><td>10</td><td>29</td><td>2.90</td></tr>
-                                    </tbody>
-                                </table>
+                                </tbody>
+                            </table>
                             </div>
                         </div>
                     </div>
@@ -1100,14 +964,15 @@
             </div>
         </section>
         
-        <!-- Market Banner - UPDATED with May 9 date and chives message -->
+        <!-- Market Banner - UPDATED with two-line format -->
         <section class="market-banner">
             <div class="market-image">
                 <img src="images/GreenBeans.jpg" alt="Fresh Green Beans from Gustavus">
             </div>
             <div class="market-info">
                 <h3>Second Saturday Market</h3>
-                <p><strong>Check us out May 9 — will sell out of fresh chives fast!</strong></p>
+                <p><strong>Check us out May 9</strong></p>
+                <p><strong>We will have fresh chives that will sell out fast!</strong></p>
                 <p><strong>Saturday, noon–2:30pm</strong> at the Gustavus Community Center.</p>
                 <p>Fresh seasonal produce, quail eggs, and homestead goods from our Gustavus garden.</p>
                 <div class="season-date">May 9 · Noon–2:30pm</div>
