@@ -676,6 +676,83 @@
             margin-top: 0.3rem;
         }
         
+        /* Strawberry Header Card - RESTORED with image */
+        .strawberry-header-card {
+            position: relative;
+            background-image: url('images/StrawberryPlantsApril2026.jpg');
+            background-size: cover;
+            background-position: center 40%;
+            border-radius: 28px;
+            margin: 2rem auto 3rem;
+            max-width: 1000px;
+            min-height: 280px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            border: 3px solid #e67e22;
+            overflow: hidden;
+        }
+        
+        .strawberry-header-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+            backdrop-filter: blur(2px);
+        }
+        
+        .strawberry-content {
+            position: relative;
+            z-index: 2;
+            color: white;
+            padding: 2rem 2rem;
+            max-width: 85%;
+            text-shadow: 0 2px 12px rgba(0,0,0,0.8);
+        }
+        
+        .strawberry-content h3 {
+            font-size: 2.8rem;
+            margin: 0 0 0.5rem;
+            color: #fff5e6;
+            letter-spacing: 1px;
+            font-weight: bold;
+        }
+        
+        .strawberry-price {
+            background: #e67e22;
+            color: white;
+            display: inline-block;
+            padding: 0.5rem 1.8rem;
+            border-radius: 60px;
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin: 0.75rem 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            border: 1px solid #ffd966;
+        }
+        
+        .strawberry-varieties {
+            background: rgba(0, 0, 0, 0.65);
+            backdrop-filter: blur(4px);
+            padding: 0.8rem 1.5rem;
+            border-radius: 40px;
+            margin: 1rem auto;
+            display: inline-block;
+            font-size: 1.1rem;
+            border-left: 4px solid #e67e22;
+            font-weight: 500;
+        }
+        
+        .strawberry-varieties p {
+            margin: 0.2rem 0;
+        }
+        
         /* Email Button */
         .email-btn {
             display: inline-block;
@@ -797,6 +874,9 @@
             .plant-starts-brown { text-align: center; }
             .plant-starts-text h3 { font-size: 1.6rem; }
             .strawberry-section h4, .rhubarb-section h4 { font-size: 1.3rem; }
+            .strawberry-header-card { min-height: 240px; margin: 1.5rem 1rem; border-radius: 20px; }
+            .strawberry-content h3 { font-size: 1.8rem; }
+            .strawberry-price { font-size: 1.2rem; }
             .announcement-card h2 { font-size: 1.8rem; }
             .announcement-card p { font-size: 1.1rem; }
         }
@@ -823,32 +903,34 @@
     <div class="white-gap"></div>
     
     <main>
-        <!-- COMBINED PLANT START CARD (with strawberry & rhubarb merged in, no mention of Second Saturday Markets) -->
+        <!-- COMBINED PLANT START CARD (without strawberry/rhubarb now, just veggies) -->
         <div class="plant-starts-brown">
             <div class="plant-starts-text">
                 <h3>🌱 Plant Starts Available Now! 🌱</h3>
                 <div class="plant-list">
                     <strong>Vegetable starts:</strong> Lettuce, bok choy, beets, chard, cabbage, spaghetti squash, zucchini, tomatoes, cucumbers, spinach, and sunflowers.
                 </div>
-                
-                <div class="divider"></div>
-                
-                <div class="strawberry-section">
-                    <h4>🍓 Garden Strawberry Plants 🍓</h4>
-                    <div class="price">$3.50 each • 3 for $10</div>
-                    <div class="variety-note">
-                        June-bearing & Everbearing — respectable harvest from parent plants last year, proven performers for Gustavus gardens!
-                    </div>
-                </div>
-                
-                <div class="rhubarb-section">
-                    <h4>🌿 Gustavus Red Rhubarb</h4>
-                    <div class="price">$7 per pot (1 plant)</div>
-                    <div class="variety-note">
-                        From a 20+ year parent plant — proven hardy in Gustavus gardens. Deep red stalks, excellent for pies and preserves. Limited quantity.
-                    </div>
+            </div>
+        </div>
+        
+        <!-- STRAWBERRY CARD - RESTORED with image -->
+        <div class="strawberry-header-card">
+            <div class="strawberry-content">
+                <h3>🍓 Garden Strawberry Plants 🍓</h3>
+                <div class="strawberry-price">$3.50 each • 3 for $10</div>
+                <div class="strawberry-varieties">
+                    <p><strong>🌸 Two domestic varieties available:</strong></p>
+                    <p>🍓 June-bearing • 🍓 Everbearing</p>
+                    <p><em>Respectable harvest from parent plants last year — strong, proven performers for Gustavus gardens!</em></p>
                 </div>
             </div>
+        </div>
+        
+        <!-- RHUBARB CARD - separate -->
+        <div class="rhubarb-card" style="background: linear-gradient(135deg, #5a3e2b 0%, #7a5a3a 100%); border-radius: 28px; margin: 2rem auto 3rem; max-width: 1000px; padding: 2rem; text-align: center; color: white; border: 2px solid #c59a6b;">
+            <h3 style="color: #ffdd99; font-size: 2rem; margin: 0 0 0.5rem;">🌿 Gustavus Red Rhubarb</h3>
+            <div style="background: #b35f1a; display: inline-block; padding: 0.3rem 1.5rem; border-radius: 40px; font-weight: bold; font-size: 1.3rem; margin: 0.5rem 0; border: 1px solid #ffcd94;">$7 per pot (1 plant)</div>
+            <p>From a 20+ year parent plant — proven hardy in Gustavus gardens. Deep red stalks, excellent for pies and preserves. Limited quantity.</p>
         </div>
         
         <!-- ANNOUNCEMENT CARD - moved above Workshop Series -->
@@ -890,7 +972,7 @@
                     <h3>Carrot Tasting <span class="free-tag">FREE</span></h3>
                     <span class="workshop-date">📅 September 14, 2026 · 5:30–8:00 PM · Gustavus Community Center</span>
                     <p>The carrots were planted <strong>May 7</strong>. There are <strong>18 varieties</strong> this year!</p>
-                    <p><strong>Varieties:</strong> Bolero, Candy, Orange Fancy, Napoli, Mokum, Romance, Shin Kuroda, Sugarsnax 54, Rubypak, Deep Purple, Purple Elite, Dragon, Gold Nugget, Rainbow (donated by Rural CAP Foundation from Johnny's Selected Seeds), Atomic Red (donated by an online follower), Cosmic Purple (donated by an online follower), St. Valery (leftover from last year, used as control), Little Fingers (leftover from last year, used as control).</p>
+                    <p><strong>Varieties:</strong> Bolero, Candy, Orange Fancy, Napoli, Mokum, Romance, Shin Kuroda, Sugarsnax 54, Rubypak, Deep Purple, Purple Elite, Dragon, Gold Nugget, Rainbow (donated by Rural CAP Foundation from Johnny's Selected Seeds), Atomic Red and Cosmic Purple (donated by an online follower), St. Valery and Little Fingers (leftover from last year, used as controls).</p>
                     <p><em>📱 Will update photos as they grow, so check back!</em></p>
                     <div class="seed-bank-note">
                         <strong>🌱 Seed Bank Update:</strong> <strong>Bolero</strong> and <strong>Purple Dragon</strong> carrot seeds are now available at the free Gustavus Library Seed Bank — pick them up for your garden!
@@ -901,7 +983,7 @@
                         <div class="tasting-tables">
                             <div class="tasting-table">
                                 <h4>2025 Results - 17 Varieties</h4>
-                                <table>
+                                60
                                     <thead><tr><th>Rank</th><th>Variety</th><th>Total</th><th>Score</th><th>Norm</th></tr></thead>
                                     <tbody><tr class="rank-1"><td>1</td><td>Royal Chantenay</td><td>24</td><td>94</td><td>3.92</td></tr>
                                     <tr class="rank-2"><td>2</td><td>St. Valery</td><td>25</td><td>95</td><td>3.80</td></tr>
@@ -925,7 +1007,7 @@
                             </div>
                             <div class="tasting-table">
                                 <h4>2024 Results - 6 Varieties</h4>
-                                <table>
+                                88
                                     <thead><tr><th>Rank</th><th>Variety</th><th>Total</th><th>Score</th><th>Norm</th></tr></thead>
                                     <tbody><tr class="rank-1"><td>1</td><td>Royal Chantenay</td><td>10</td><td>41</td><td>4.10</td></tr>
                                     <tr class="rank-2"><td>2</td><td>Bolero Nantes</td><td>10</td><td>31</td><td>3.10</td></tr>
