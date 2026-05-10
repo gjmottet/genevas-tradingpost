@@ -638,6 +638,7 @@
             max-width: 1000px;
             min-height: 280px;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             text-align: center;
@@ -688,6 +689,22 @@
             border: 1px solid #ffd966;
         }
         
+        /* New strawberry image between price and varieties */
+        .strawberry-inline-image {
+            margin: 1rem auto;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .strawberry-inline-image img {
+            max-width: 200px;
+            width: 100%;
+            height: auto;
+            border-radius: 16px;
+            border: 4px solid #8b0000;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+        
         .strawberry-varieties {
             background: rgba(0, 0, 0, 0.65);
             backdrop-filter: blur(4px);
@@ -700,19 +717,28 @@
             font-weight: 500;
         }
         
-        /* Rhubarb card */
+        /* Rhubarb card - with image to the right */
         .rhubarb-card {
             background: linear-gradient(135deg, #5a3e2b 0%, #7a5a3a 100%);
             border-radius: 28px;
             margin: 2rem auto 3rem;
             max-width: 1000px;
-            padding: 2rem;
-            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
             color: white;
             border: 2px solid #c59a6b;
+            overflow: hidden;
         }
         
-        .rhubarb-card h3 {
+        .rhubarb-text {
+            flex: 2;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .rhubarb-text h3 {
             color: #ffdd99;
             font-size: 2rem;
             margin: 0 0 0.5rem;
@@ -727,6 +753,23 @@
             font-size: 1.3rem;
             margin: 0.5rem 0;
             border: 1px solid #ffcd94;
+        }
+        
+        .rhubarb-image {
+            flex: 1;
+            padding: 1rem;
+            min-width: 180px;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .rhubarb-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 20px;
+            border: 3px solid #e6b87e;
+            max-height: 180px;
+            object-fit: cover;
         }
         
         /* Email Button */
@@ -843,6 +886,8 @@
             .strawberry-price { font-size: 1.2rem; }
             .announcement-card h2 { font-size: 1.8rem; }
             .announcement-card p { font-size: 1.1rem; }
+            .rhubarb-card { flex-direction: column; text-align: center; }
+            .rhubarb-text { padding: 1.5rem; }
         }
     </style>
 </head>
@@ -880,6 +925,10 @@
             <div class="strawberry-content">
                 <h3>🍓 Garden Strawberry Plants 🍓</h3>
                 <div class="strawberry-price">$3.50 each • 3 for $10</div>
+                <!-- New strawberry image centered with dark red border -->
+                <div class="strawberry-inline-image">
+                    <img src="images/Strawberry.jpg" alt="Fresh Strawberries">
+                </div>
                 <div class="strawberry-varieties">
                     <p><strong>🌸 Two domestic varieties available:</strong></p>
                     <p>🍓 June-bearing • 🍓 Everbearing</p>
@@ -888,11 +937,16 @@
             </div>
         </div>
         
-        <!-- RHUBARB CARD -->
+        <!-- RHUBARB CARD with image to the right -->
         <div class="rhubarb-card">
-            <h3>🌿 Gustavus Red Rhubarb</h3>
-            <div class="rhubarb-price">$7 per pot (1 plant)</div>
-            <p>From a 20+ year parent plant — proven hardy in Gustavus gardens. Deep red stalks, excellent for pies and preserves. Limited quantity.</p>
+            <div class="rhubarb-text">
+                <h3>🌿 Gustavus Red Rhubarb</h3>
+                <div class="rhubarb-price">$7 per pot (1 plant)</div>
+                <p>From a 20+ year parent plant — proven hardy in Gustavus gardens. Deep red stalks, excellent for pies and preserves. Limited quantity.</p>
+            </div>
+            <div class="rhubarb-image">
+                <img src="images/RhubarbStart2026.jpg" alt="Rhubarb Start">
+            </div>
         </div>
         
         <!-- ANNOUNCEMENT CARD -->
@@ -953,8 +1007,7 @@
                                         <tr class="rank-1"><td>1</td><td>Royal Chantenay</td><td>24</td><td>94</td><td>3.92</td></tr>
                                         <tr class="rank-2"><td>2</td><td>St. Valery</td><td>25</td><td>95</td><td>3.80</td></tr>
                                         <tr class="rank-3"><td>3</td><td>Purple Dragon</td><td>23</td><td>82</td><td>3.57</td></tr>
-                                        <tr><td>4</td><td>Gniff</td><td>24</td><td>84</td><td>3.50</td>
-                                        <tr>
+                                        <tr><td>4</td><td>Gniff</td><td>24</td><td>84</td><td>3.50</td></tr>
                                         <tr><td>5</td><td>Little Fingers</td><td>25</td><td>87</td><td>3.48</td></tr>
                                         <tr><td>6</td><td>Bolero Nantes</td><td>24</td><td>79</td><td>3.29</td></tr>
                                         <tr><td>7</td><td>Oxheart</td><td>26</td><td>79</td><td>3.04</td></tr>
@@ -1015,18 +1068,17 @@
             </div>
         </section>
         
-        <!-- Market Banner -->
+        <!-- Market Banner - UPDATED with new image and June 13 text -->
         <section class="market-banner">
             <div class="market-image">
-                <img src="images/GreenBeans.jpg" alt="Fresh Green Beans from Gustavus">
+                <img src="images/May9SecondSaturdayMarket2026.jpg" alt="Second Saturday Market">
             </div>
             <div class="market-info">
                 <h3>Second Saturday Market</h3>
-                <p><strong>Check us out May 9</strong></p>
-                <p><strong>We will have fresh chives that will sell out fast!</strong></p>
-                <p><strong>Saturday, noon–2:30pm</strong> at the Gustavus Community Center.</p>
-                <p>Fresh seasonal produce, quail eggs, and homestead goods from our Gustavus garden.</p>
-                <div class="season-date">May 9 · Noon–2:30pm</div>
+                <p><strong>Check us out at the next Second Saturday Market on June 13</strong></p>
+                <p><strong>Noon – 2:30pm at the Gustavus Community Center</strong></p>
+                <p>We will have plant starts, fresh picked chives, rabbit skins, art, and much much more!</p>
+                <div class="season-date">June 13 · Noon–2:30pm</div>
             </div>
         </section>
         
