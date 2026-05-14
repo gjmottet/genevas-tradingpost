@@ -142,12 +142,18 @@
             background-color: #f0f7e8;
         }
         
-        .mySlides {
+        .mySlides, .mySlides2 {
             display: none;
             text-align: center;
+            animation: fadeEffect 1s;
         }
         
-        .mySlides img {
+        @keyframes fadeEffect {
+            from {opacity: 0.4;}
+            to {opacity: 1;}
+        }
+        
+        .mySlides img, .mySlides2 img {
             width: 100%;
             max-height: 380px;
             object-fit: cover;
@@ -330,7 +336,7 @@
             margin: 0.5rem 0;
         }
         
-        /* Feather bag offer styling - Updated for new pricing */
+        /* Feather bag offer styling */
         .feather-offer {
             background: #fef5e6;
             border: 2px solid #d4a373;
@@ -370,7 +376,7 @@
             color: #8b5a2b;
         }
         
-        /* Announcement Card - Now with image background */
+        /* Announcement Card - With image background */
         .announcement-card {
             position: relative;
             background-image: url('images/Carrot Tasting 2025 Geneva.jpg');
@@ -465,7 +471,6 @@
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
         
-        /* Meat Rabbit Workshop - Blue theme */
         .workshop-details h3 {
             color: #2c5282;
             margin-top: 0;
@@ -511,7 +516,6 @@
             border-left: 4px solid #2c5282;
         }
         
-        /* Carrot Tasting Workshop - Orange theme */
         .carrot-workshop {
             display: grid;
             grid-template-columns: 300px 1fr;
@@ -544,7 +548,6 @@
             border-left: 4px solid #27ae60;
         }
         
-        /* Harvest Festival Workshop - Blue theme */
         .harvest-workshop {
             display: grid;
             grid-template-columns: 300px 1fr;
@@ -663,6 +666,29 @@
             max-width: 1000px;
             border-left: 4px solid #2c5282;
             text-align: center;
+        }
+        
+        /* Harvest Festival Button */
+        .festival-btn {
+            display: inline-block;
+            background: #e67e22;
+            color: white;
+            text-decoration: none;
+            padding: 0.8rem 1.8rem;
+            border-radius: 50px;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+        
+        .festival-btn:hover {
+            background: #d35400;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.25);
         }
         
         /* Market Banner */
@@ -812,7 +838,6 @@
             border: 1px solid #ffd966;
         }
         
-        /* New strawberry image between price and varieties */
         .strawberry-inline-image {
             margin: 1rem auto;
             display: flex;
@@ -840,62 +865,6 @@
             font-weight: 500;
         }
         
-        /* Rhubarb card - with image to the right */
-        .rhubarb-card {
-            background: linear-gradient(135deg, #5a3e2b 0%, #7a5a3a 100%);
-            border-radius: 28px;
-            margin: 2rem auto 3rem;
-            max-width: 1000px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            color: white;
-            border: 2px solid #c59a6b;
-            overflow: hidden;
-        }
-        
-        .rhubarb-text {
-            flex: 2;
-            padding: 2rem;
-            text-align: center;
-        }
-        
-        .rhubarb-text h3 {
-            color: #ffdd99;
-            font-size: 2rem;
-            margin: 0 0 0.5rem;
-        }
-        
-        .rhubarb-price {
-            background: #b35f1a;
-            display: inline-block;
-            padding: 0.3rem 1.5rem;
-            border-radius: 40px;
-            font-weight: bold;
-            font-size: 1.3rem;
-            margin: 0.5rem 0;
-            border: 1px solid #ffcd94;
-        }
-        
-        .rhubarb-image {
-            flex: 1;
-            padding: 1rem;
-            min-width: 180px;
-            display: flex;
-            justify-content: center;
-        }
-        
-        .rhubarb-image img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 20px;
-            border: 3px solid #e6b87e;
-            max-height: 180px;
-            object-fit: cover;
-        }
-        
-        /* Email Button */
         .email-btn {
             display: inline-block;
             background: #2c5282;
@@ -914,26 +883,6 @@
         .email-btn:hover {
             background: #1d3f62;
             transform: translateY(-2px);
-        }
-        
-        .quail-extra-image {
-            max-width: 1000px;
-            margin: 2rem auto 1rem;
-            padding: 0 2rem;
-            text-align: center;
-        }
-        
-        .image-caption {
-            margin-top: 0.6rem;
-            font-size: 1.2rem;
-            color: #4a3b2c;
-            font-style: italic;
-            background: #fdf8f0;
-            display: inline-block;
-            padding: 0.3rem 1.5rem;
-            border-radius: 40px;
-            border-left: 4px solid #d4a76a;
-            font-weight: 500;
         }
         
         .back-btn {
@@ -1001,8 +950,6 @@
             .strawberry-price { font-size: 1.2rem; }
             .announcement-card h2 { font-size: 1.8rem; }
             .announcement-card p { font-size: 1.1rem; }
-            .rhubarb-card { flex-direction: column; text-align: center; }
-            .rhubarb-text { padding: 1.5rem; }
         }
     </style>
 </head>
@@ -1027,31 +974,21 @@
     <div class="white-gap"></div>
     
     <main>
-        <!-- PLANT STARTS CARD (text updated per request) -->
         <div class="plant-starts-brown">
             <h3>🌱 Assorted Plant Starts Available 🌱</h3>
-            <div class="plant-list">
-                Lettuce, bok choy, beets, chard, cabbage, spaghetti squash, zucchini, tomatoes, cucumbers, spinach, and sunflowers.
-            </div>
+            <div class="plant-list">Lettuce, bok choy, beets, chard, cabbage, spaghetti squash, zucchini, tomatoes, cucumbers, spinach, and sunflowers.</div>
         </div>
         
-        <!-- STRAWBERRY CARD with image -->
         <div class="strawberry-header-card">
             <div class="strawberry-content">
                 <h3>🍓 Garden Strawberry Plants 🍓</h3>
                 <div class="strawberry-price">$3.50 each • 3 for $10</div>
-                <div class="strawberry-inline-image">
-                    <img src="images/Strawberry.jpg" alt="Fresh Strawberries">
-                </div>
-                <div class="strawberry-varieties">
-                    <p><strong>🌸 Two domestic varieties available:</strong></p>
-                    <p>🍓 June-bearing • 🍓 Everbearing</p>
-                    <p><em>Respectable harvest from parent plants last year — strong, proven performers for Gustavus gardens!</em></p>
-                </div>
+                <div class="strawberry-inline-image"><img src="images/Strawberry.jpg" alt="Fresh Strawberries"></div>
+                <div class="strawberry-varieties"><p><strong>🌸 Two domestic varieties available:</strong></p><p>🍓 June-bearing • 🍓 Everbearing</p><p><em>Respectable harvest from parent plants last year — strong, proven performers for Gustavus gardens!</em></p></div>
             </div>
         </div>
         
-        <!-- RHUBARB CARD (original structure preserved) -->
+        <!-- Rhubarb Card -->
         <div style="background: linear-gradient(135deg, #5a3e2b 0%, #7a5a3a 100%); border-radius: 28px; margin: 2rem auto; max-width: 1000px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; padding: 1.5rem;">
             <div style="flex: 2; padding: 1rem; text-align: center; color: white;">
                 <h3 style="color: #ffdd99; font-size: 2rem; margin: 0 0 0.5rem;">🌿 Gustavus Red Rhubarb</h3>
@@ -1063,197 +1000,67 @@
             </div>
         </div>
         
-        <!-- NEW: May Planting Highlights Light Green Card with Slideshow (between rhubarb and announcement card) -->
+        <!-- May Planting Highlights Card with auto slideshow -->
         <div class="may-highlights-card">
             <h3>🌿 May Planting Highlights 🌱</h3>
             <div class="slideshow-container" id="maySlideshow">
-                <div class="mySlides fade">
-                    <img src="images/PlantingPotatoes2026.jpg" style="width:100%">
-                    <div class="caption-text">Planting potatoes in the garden with well rotted seaweed that sat in the raised bed over the winter.</div>
-                </div>
-                <div class="mySlides fade">
-                    <img src="images/GarlicandChivesMay2026.jpg" style="width:100%">
-                    <div class="caption-text">Garlic, Chives and Onion sets are quickly coming up in early spring!</div>
-                </div>
-                <div class="mySlides fade">
-                    <img src="images/RhubarbParentPlants2026.jpg" style="width:100%">
-                    <div class="caption-text">20 year old rhubarb plant that is still coming up strong!</div>
-                </div>
-                <div class="mySlides fade">
-                    <img src="images/GardenBedsInBattingCageMay2026.jpg" style="width:100%">
-                    <div class="caption-text">Soil preparation is in progress with the raised beds in the batting cage that keep porcupines out.</div>
-                </div>
-                <div class="mySlides fade">
-                    <img src="images/BokChoyAndRaddishes2026.jpg" style="width:100%">
-                    <div class="caption-text">The high tunnel is growing bok choy and radishes quickly.</div>
-                </div>
+                <div class="mySlides fade"><img src="images/PlantingPotatoes2026.jpg" style="width:100%"><div class="caption-text">Planting potatoes in the garden with well rotted seaweed that sat in the raised bed over the winter.</div></div>
+                <div class="mySlides fade"><img src="images/GarlicandChivesMay2026.jpg" style="width:100%"><div class="caption-text">Garlic, Chives and Onion sets are quickly coming up in early spring!</div></div>
+                <div class="mySlides fade"><img src="images/RhubarbParentPlants2026.jpg" style="width:100%"><div class="caption-text">20 year old rhubarb plant that is still coming up strong!</div></div>
+                <div class="mySlides fade"><img src="images/GardenBedsInBattingCageMay2026.jpg" style="width:100%"><div class="caption-text">Soil preparation is in progress with the raised beds in the batting cage that keep porcupines out.</div></div>
+                <div class="mySlides fade"><img src="images/BokChoyAndRaddishes2026.jpg" style="width:100%"><div class="caption-text">The high tunnel is growing bok choy and radishes quickly.</div></div>
                 <a class="prev" onclick="changeSlide(-1, 'may')">&#10094;</a>
                 <a class="next" onclick="changeSlide(1, 'may')">&#10095;</a>
             </div>
             <div class="dot-group" id="mayDots"></div>
         </div>
         
-        <!-- ANNOUNCEMENT CARD -->
-        <div class="announcement-card">
-            <h2>Announcing</h2>
-            <p>Cultivating Food Sovereignty for Gustavus</p>
-        </div>
+        <!-- Announcement Card -->
+        <div class="announcement-card"><h2>Announcing</h2><p>Cultivating Food Sovereignty for Gustavus</p></div>
         
-        <!-- WORKSHOP SECTION (unchanged) -->
+        <!-- Workshop Section -->
         <section class="workshop-section">
             <h2>2026 Workshop Series</h2>
-            <div class="workshop-content">
-                <div class="workshop-image">
-                    <img src="images/BabyRabbits1.jpg" alt="Baby Rabbits from Gustavus" width="300">
-                    <img src="images/FINAL library logo transparent.png" alt="Library Logo" class="library-logo">
-                </div>
-                <div class="workshop-details">
-                    <h3>Meat Rabbit Husbandry & Cage Building <span class="free-tag">FREE</span></h3>
-                    <span class="workshop-date">📅 June 20, 2026 · 1:30–4:30 PM · Gustavus Library Conference Room</span>
-                    <p>Join us for a hands-on workshop! We'll have <strong>two litters of nine-week-old babies</strong> plus nest box babies to demonstrate proper handling and growth stages. Learn how to construct a large grow-out cage for fryers, perform a basic health check on rabbits, and identify good commercial body type.</p>
-                    <p>Open to all skill levels — ARBA member with 20 years experience leading the session.</p>
-                    <div class="starter-kit">
-                        <strong>🎁 Bonus:</strong> The first 6 participants receive a Rabbit Starter Kit with essential supplies!
-                    </div>
-                    <a href="mailto:gjmottet@alaska.edu?subject=Rabbit%20Husbandry%20Workshop%20Registration&body=Hello%2C%20I%27d%20like%20to%20register%20for%20the%20Meat%20Rabbit%20Workshop%20on%20June%2020%2C%202026.%20Please%20include%20my%20name%20and%20contact%20information%3A" class="email-btn">📧 Email to Register for Workshop</a>
-                </div>
-            </div>
-            <div class="carrot-workshop">
-                <div class="workshop-image">
-                    <img src="images/Carrot Tasting 2025.jpg" alt="Carrot Tasting 2025">
-                    <img src="images/FINAL library logo transparent.png" alt="Library Logo" class="library-logo">
-                </div>
-                <div class="carrot-data">
-                    <h3>Carrot Tasting <span class="free-tag">FREE</span></h3>
-                    <span class="workshop-date">📅 September 14, 2026 · 5:30–8:00 PM · Gustavus Community Center</span>
-                    <p>The carrots were planted <strong>May 7</strong>. There are <strong>18 varieties</strong> this year!</p>
-                    <p><strong>Varieties:</strong> Bolero, Candy, Orange Fancy, Napoli, Mokum, Romance, Shin Kuroda, Sugarsnax 54, Rubypak, Deep Purple, Purple Elite, Dragon, Gold Nugget, Rainbow (donated by Rural CAP Foundation from Johnny's Selected Seeds), Atomic Red and Cosmic Purple (donated by an online follower), St. Valery and Little Fingers (leftover from last year, used as controls).</p>
-                    <p><em>📱 Will update photos as they grow, so check back!</em></p>
-                    <div class="seed-bank-note">
-                        <strong>🌱 Seed Bank Update:</strong> <strong>Bolero</strong> and <strong>Purple Dragon</strong> carrot seeds are now available at the free Gustavus Library Seed Bank — pick them up for your garden!
-                    </div>
-                </div>
-                <div class="carrot-charts">
-                    <div class="charts-full-width">
-                        <div class="tasting-tables">
-                            <div class="tasting-table"><h4>2025 Results - 17 Varieties</h4></table>...
-                                </div>
-                            <div class="tasting-table"><h4>2024 Results - 6 Varieties</h4>...
-                                </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="harvest-workshop">
-                <div class="workshop-image">
-                    <img src="images/WinningBasketHarvestFestival2025.jpg" alt="Winning Basket at Harvest Festival">
-                    <img src="images/FINAL library logo transparent.png" alt="Library Logo" class="library-logo">
-                </div>
-                <div class="workshop-details">
-                    <h3>Rabbit & Poultry Show <span class="free-tag">FREE</span></h3>
-                    <span class="workshop-date">📅 September 19, 2026 · Time TBA · Gustavus Harvest Festival</span>
-                    <p>Educational judged show with ribbons and family-friendly activities. Featuring rabbits, poultry, and community celebration of local livestock. Part of the free annual Gustavus Harvest Festival.</p>
-                    <p><strong>📍 Location:</strong> Gustavus Community Center — the show will be held in the grassy area behind the center if weather cooperates.</p>
-                    <p><strong>🐇🐓 Register at the library by September 18</strong> to enter your rabbits or poultry — we'll arrange the tent for the critters.</p>
-                    <div class="register-highlight"><strong>🏆 Show Cages Available:</strong> 16 show cages provided. If you have your own cage, we can accept additional critters beyond that!</div>
-                </div>
-            </div>
-            <div class="grant-note">
-                <p><strong>Community Support:</strong> This workshop series receives financial support from the RurAL CAP Foundation. <strong>All workshops are free and open to the public!</strong></p>
-            </div>
-        </section>
-        
-        <section class="market-banner">
-            <div class="market-image"><img src="images/May9SecondSaturdayMarket2026.jpg" alt="Second Saturday Market"></div>
-            <div class="market-info"><h3>Second Saturday Market</h3><p><strong>Check us out at the next Second Saturday Market on June 13</strong></p><p><strong>Noon – 2:30pm at the Gustavus Community Center</strong></p><p>We will have plant starts, fresh picked chives, rabbit skins, art, and much much more!</p><div class="season-date">June 13 · Noon–2:30pm</div></div>
-        </section>
-        
-        <!-- QUAIL SECTION unchanged -->
-        <section class="quail-section">
-            <div class="quail-tan-banner"><div class="overlay"><h2>We Have Coturnix Quail!</h2><p>Our flock restarted in Gustavus with hatching eggs — eggs available starting in June</p></div></div>
-            <div class="quail-grid">
-                <div class="quail-card"><div class="quail-image-container"><img src="images/QuailEggs.jpg" alt="Fresh Quail Eggs"></div><h3>Fresh Quail Eggs</h3><div style="background: #e74c3c; color: white; padding: 0.6rem 1.5rem; border-radius: 30px; font-size: 1.3rem; font-weight: bold; margin: 0.5rem 0; display: inline-block;">$10/dozen</div><p>Fertile eggs - perfect for eating or hatching. Some eggs have rare celadon genetics for possible blue egg layers!</p><p><strong>Available in Gustavus:</strong> Eggs available starting June 2026</p><span class="availability-tag">June Availability</span></div>
-                <div class="quail-card"><div class="quail-image-container"><img src="images/Quail1.jpg" alt="Coturnix Quail"></div><h3>Quail Chicks & Adults</h3><p>We have about 30 Coturnix Quail.</p><div class="feather-offer"><strong>🪶 Quail Feathers for Fly Tying</strong><p>Assorted Coturnix feathers — many colors. Perfect for salmon and Dolly Varden flies.</p><span class="feather-price">$3 per card (15+ feathers)</span><div class="impulse-card"><span>🐟 Bulk bag:</span> 40-50 feathers for $6 — great value for serious tyers</div></div></div>
-            </div>
+            <div class="workshop-content"><div class="workshop-image"><img src="images/BabyRabbits1.jpg" alt="Baby Rabbits" width="300"><img src="images/FINAL library logo transparent.png" alt="Library Logo" class="library-logo"></div><div class="workshop-details"><h3>Meat Rabbit Husbandry & Cage Building <span class="free-tag">FREE</span></h3><span class="workshop-date">📅 June 20, 2026 · 1:30–4:30 PM · Gustavus Library Conference Room</span><p>Join us for a hands-on workshop! We'll have <strong>two litters of nine-week-old babies</strong> plus nest box babies to demonstrate proper handling and growth stages. Learn how to construct a large grow-out cage for fryers, perform a basic health check on rabbits, and identify good commercial body type.</p><p>Open to all skill levels — ARBA member with 20 years experience leading the session.</p><div class="starter-kit"><strong>🎁 Bonus:</strong> The first 6 participants receive a Rabbit Starter Kit with essential supplies!</div><a href="mailto:gjmottet@alaska.edu?subject=Rabbit%20Husbandry%20Workshop%20Registration" class="email-btn">📧 Email to Register for Workshop</a></div></div>
             
-            <!-- Converted quail image into slideshow (keeping original image and adding new ones) -->
-            <div class="quail-slideshow-wrapper">
-                <div class="slideshow-container" id="quailSlideshow">
-                    <div class="mySlides2 fade">
-                        <img src="images/QuailChicksIncubator.jpg" style="width:100%">
-                        <div class="caption-text">🐣 Our Gustavus flock restarted with hatching eggs April 20</div>
-                    </div>
-                    <div class="mySlides2 fade">
-                        <img src="images/QuailDotWith4DayOldChicks.jpg" style="width:100%">
-                        <div class="caption-text">Dot protecting her 4 day old chicks, dice in the water dish keep chicks from swimming in the water dish.</div>
-                    </div>
-                    <div class="mySlides2 fade">
-                        <img src="images/QuailMarshmellowMama2WeeksOld2026.jpg" style="width:100%">
-                        <div class="caption-text">Marshmellow trying to parent 34 2 week old chicks.</div>
-                    </div>
-                    <div class="mySlides2 fade">
-                        <img src="images/QuailFeedingFrenzy.jpg" style="width:100%">
-                        <div class="caption-text">Marshmellow with 4 week old chicks getting a handful of mealworms.</div>
-                    </div>
-                    <a class="prev" onclick="changeSlide(-1, 'quail')">&#10094;</a>
-                    <a class="next" onclick="changeSlide(1, 'quail')">&#10095;</a>
-                </div>
-                <div class="dot-group" id="quailDots"></div>
-            </div>
+            <div class="carrot-workshop"><div class="workshop-image"><img src="images/Carrot Tasting 2025.jpg" alt="Carrot Tasting 2025"><img src="images/FINAL library logo transparent.png" alt="Library Logo" class="library-logo"></div><div class="carrot-data"><h3>Carrot Tasting <span class="free-tag">FREE</span></h3><span class="workshop-date">📅 September 14, 2026 · 5:30–8:00 PM · Gustavus Community Center</span><p>The carrots were planted <strong>May 7</strong>. There are <strong>18 varieties</strong> this year!</p><p><strong>Varieties:</strong> Bolero, Candy, Orange Fancy, Napoli, Mokum, Romance, Shin Kuroda, Sugarsnax 54, Rubypak, Deep Purple, Purple Elite, Dragon, Gold Nugget, Rainbow (donated by Rural CAP Foundation from Johnny's Selected Seeds), Atomic Red and Cosmic Purple (donated by an online follower), St. Valery and Little Fingers (leftover from last year, used as controls).</p><p><em>📱 Will update photos as they grow, so check back!</em></p><div class="seed-bank-note"><strong>🌱 Seed Bank Update:</strong> <strong>Bolero</strong> and <strong>Purple Dragon</strong> carrot seeds are now available at the free Gustavus Library Seed Bank — pick them up for your garden!</div></div><div class="carrot-charts"><div class="charts-full-width"><div class="tasting-tables"><div class="tasting-table"><h4>2025 Results - 17 Varieties</h4><table><thead><tr><th>Rank</th><th>Variety</th><th>Total</th><th>Score</th><th>Norm</th></tr></thead><tbody><tr class="rank-1"><td>1</td><td>Royal Chantenay</td><td>24</td><td>94</td><td>3.92</td></tr><tr class="rank-2"><td>2</td><td>St. Valery</td><td>25</td><td>95</td><td>3.80</td></tr><tr class="rank-3"><td>3</td><td>Purple Dragon</td><td>23</td><td>82</td><td>3.57</td></tr><tr><td>4</td><td>Gniff</td><td>24</td><td>84</td><td>3.50</td></tr><tr><td>5</td><td>Little Fingers</td><td>25</td><td>87</td><td>3.48</td></tr><tr><td>6</td><td>Bolero Nantes</td><td>24</td><td>79</td><td>3.29</td></tr><tr><td>7</td><td>Oxheart</td><td>26</td><td>79</td><td>3.04</td></tr><tr><td>8</td><td>Giant Red</td><td>25</td><td>74</td><td>2.96</td></tr><tr><td>9</td><td>Chantenay Red Core</td><td>24</td><td>75</td><td>3.13</td></tr><tr><td>10</td><td>Bambino</td><td>22</td><td>60</td><td>2.73</td></tr><tr><td>11</td><td>Imperator 58</td><td>25</td><td>62</td><td>2.48</td></tr><tr><td>12</td><td>Seedra Scarlet Nantes</td><td>24</td><td>56</td><td>2.33</td></tr><tr><td>13</td><td>Scarlet Nantes</td><td>26</td><td>52</td><td>2.00</td></tr><tr><td>14</td><td>Lunar White</td><td>25</td><td>48</td><td>1.92</td></tr><tr><td>15</td><td>Solar Yellow</td><td>22</td><td>41</td><td>1.86</td></tr><tr><td>16</td><td>Black Nebula</td><td>26</td><td>48</td><td>1.85</td></tr><tr><td>17</td><td>Pusa Asita Black</td><td>24</td><td>36</td><td>1.50</td></tr></tbody></table></div><div class="tasting-table"><h4>2024 Results - 6 Varieties</h4><table><thead><tr><th>Rank</th><th>Variety</th><th>Total</th><th>Score</th><th>Norm</th></tr></thead><tbody><tr class="rank-1"><td>1</td><td>Royal Chantenay</td><td>10</td><td>41</td><td>4.10</td></tr><tr class="rank-2"><td>2</td><td>Bolero Nantes</td><td>10</td><td>31</td><td>3.10</td></tr><tr class="rank-3"><td>3</td><td>Bambino</td><td>10</td><td>31</td><td>3.10</td></tr><tr><td>4</td><td>Scarlet Nantes</td><td>11</td><td>33</td><td>3.00</td></tr><tr><td>5</td><td>Yellow</td><td>10</td><td>30</td><td>3.00</td></tr><tr><td>6</td><td>Imperator 58</td><td>10</td><td>29</td><td>2.90</td></tr></tbody></table></div></div></div></div></div>
+            
+            <div class="harvest-workshop"><div class="workshop-image"><img src="images/WinningBasketHarvestFestival2025.jpg" alt="Winning Basket"><img src="images/FINAL library logo transparent.png" alt="Library Logo" class="library-logo"></div><div class="workshop-details"><h3>Rabbit & Poultry Show <span class="free-tag">FREE</span></h3><span class="workshop-date">📅 September 19, 2026 · Time TBA · Gustavus Harvest Festival</span><p>Educational judged show with ribbons and family-friendly activities. Featuring rabbits, poultry, and community celebration of local livestock. Part of the free annual Gustavus Harvest Festival.</p><p><strong>📍 Location:</strong> Gustavus Community Center — the show will be held in the grassy area behind the center if weather cooperates.</p><p><strong>🐇🐓 Register at the library by September 18</strong> to enter your rabbits or poultry — we'll arrange the tent for the critters.</p><div class="register-highlight"><strong>🏆 Show Cages Available:</strong> 16 show cages provided. If you have your own cage, we can accept additional critters beyond that!</div><a href="https://gjmottet.github.io/gustavus-harvest-festival/" target="_blank" class="festival-btn">🎪 Visit Gustavus Harvest Festival Website →</a></div></div>
+            <div class="grant-note"><p><strong>Community Support:</strong> This workshop series receives financial support from the RurAL CAP Foundation. <strong>All workshops are free and open to the public!</strong></p></div>
         </section>
         
-        <div style="text-align: center; padding: 2rem;">
-            <a href="index.html" class="back-btn">← Back to Home</a>
-        </div>
+        <section class="market-banner"><div class="market-image"><img src="images/May9SecondSaturdayMarket2026.jpg" alt="Second Saturday Market"></div><div class="market-info"><h3>Second Saturday Market</h3><p><strong>Check us out at the next Second Saturday Market on June 13</strong></p><p><strong>Noon – 2:30pm at the Gustavus Community Center</strong></p><p>We will have plant starts, fresh picked chives, rabbit skins, art, and much much more!</p><div class="season-date">June 13 · Noon–2:30pm</div></div></section>
+        
+        <section class="quail-section"><div class="quail-tan-banner"><div class="overlay"><h2>We Have Coturnix Quail!</h2><p>Our flock restarted in Gustavus with hatching eggs — eggs available starting in June</p></div></div><div class="quail-grid"><div class="quail-card"><div class="quail-image-container"><img src="images/QuailEggs.jpg" alt="Fresh Quail Eggs"></div><h3>Fresh Quail Eggs</h3><div style="background: #e74c3c; color: white; padding: 0.6rem 1.5rem; border-radius: 30px; font-size: 1.3rem; font-weight: bold; margin: 0.5rem 0; display: inline-block;">$10/dozen</div><p>Fertile eggs - perfect for eating or hatching. Some eggs have rare celadon genetics for possible blue egg layers!</p><p><strong>Available in Gustavus:</strong> Eggs available starting June 2026</p><span class="availability-tag">June Availability</span></div><div class="quail-card"><div class="quail-image-container"><img src="images/Quail1.jpg" alt="Coturnix Quail"></div><h3>Quail Chicks & Adults</h3><p>We have about 30 Coturnix Quail.</p><div class="feather-offer"><strong>🪶 Quail Feathers for Fly Tying</strong><p>Assorted Coturnix feathers — many colors. Perfect for salmon and Dolly Varden flies.</p><span class="feather-price">$3 per card (15+ feathers)</span><div class="impulse-card"><span>🐟 Bulk bag:</span> 40-50 feathers for $6 — great value for serious tyers</div></div></div></div>
+        
+        <div class="quail-slideshow-wrapper"><div class="slideshow-container" id="quailSlideshow"><div class="mySlides2 fade"><img src="images/QuailChicksIncubator.jpg" style="width:100%"><div class="caption-text">🐣 Our Gustavus flock restarted with hatching eggs April 20</div></div><div class="mySlides2 fade"><img src="images/QuailDotWith4DayOldChicks.jpg" style="width:100%"><div class="caption-text">Dot protecting her 4 day old chicks, dice in the water dish keep chicks from swimming in the water dish.</div></div><div class="mySlides2 fade"><img src="images/QuailMarshmellowMama2WeeksOld2026.jpg" style="width:100%"><div class="caption-text">Marshmellow trying to parent 34 2 week old chicks.</div></div><div class="mySlides2 fade"><img src="images/QuailFeedingFrenzy.jpg" style="width:100%"><div class="caption-text">Marshmellow with 4 week old chicks getting a handful of mealworms.</div></div><a class="prev" onclick="changeSlide(-1, 'quail')">&#10094;</a><a class="next" onclick="changeSlide(1, 'quail')">&#10095;</a></div><div class="dot-group" id="quailDots"></div></div></section>
+        
+        <div style="text-align: center; padding: 2rem;"><a href="index.html" class="back-btn">← Back to Home</a></div>
     </main>
     
-    <footer>
-        <p>© 2026 Geneva's Trading Post | Farm Stand in Gustavus, Alaska</p>
-        <p>Supporting local food sovereignty through education and community resources</p>
-    </footer>
+    <footer><p>© 2026 Geneva's Trading Post | Farm Stand in Gustavus, Alaska</p><p>Supporting local food sovereignty through education and community resources</p></footer>
 
     <script>
-        // slideshow data handler for two independent slideshows
-        let slideIndexMay = 1;
-        let slideIndexQuail = 1;
+        let slideIndexMay = 1, slideIndexQuail = 1;
         let maySlides, mayDots, quailSlides, quailDots;
-        
-        function initSlideshows() {
-            // May slideshow
-            maySlides = document.querySelectorAll("#maySlideshow .mySlides");
-            mayDots = document.querySelectorAll("#mayDots .dot");
-            if (maySlides.length) showSlidesMay(slideIndexMay);
-            
-            // Quail slideshow
-            quailSlides = document.querySelectorAll("#quailSlideshow .mySlides2");
-            quailDots = document.querySelectorAll("#quailDots .dot");
-            if (quailSlides.length) showSlidesQuail(slideIndexQuail);
-        }
+        let mayInterval, quailInterval;
         
         function showSlidesMay(n) {
-            if (!maySlides.length) return;
+            if (!maySlides || !maySlides.length) return;
             if (n > maySlides.length) slideIndexMay = 1;
             if (n < 1) slideIndexMay = maySlides.length;
-            for (let i = 0; i < maySlides.length; i++) {
-                maySlides[i].style.display = "none";
-            }
-            for (let i = 0; i < mayDots.length; i++) {
-                mayDots[i].className = mayDots[i].className.replace(" active-dot", "");
-            }
+            for (let i = 0; i < maySlides.length; i++) maySlides[i].style.display = "none";
+            for (let i = 0; i < mayDots.length; i++) mayDots[i].className = mayDots[i].className.replace(" active-dot", "");
             maySlides[slideIndexMay-1].style.display = "block";
             if (mayDots[slideIndexMay-1]) mayDots[slideIndexMay-1].className += " active-dot";
         }
         
         function showSlidesQuail(n) {
-            if (!quailSlides.length) return;
+            if (!quailSlides || !quailSlides.length) return;
             if (n > quailSlides.length) slideIndexQuail = 1;
             if (n < 1) slideIndexQuail = quailSlides.length;
-            for (let i = 0; i < quailSlides.length; i++) {
-                quailSlides[i].style.display = "none";
-            }
-            for (let i = 0; i < quailDots.length; i++) {
-                quailDots[i].className = quailDots[i].className.replace(" active-dot", "");
-            }
+            for (let i = 0; i < quailSlides.length; i++) quailSlides[i].style.display = "none";
+            for (let i = 0; i < quailDots.length; i++) quailDots[i].className = quailDots[i].className.replace(" active-dot", "");
             quailSlides[slideIndexQuail-1].style.display = "block";
             if (quailDots[slideIndexQuail-1]) quailDots[slideIndexQuail-1].className += " active-dot";
         }
@@ -1262,11 +1069,18 @@
             if (type === 'may') {
                 slideIndexMay += step;
                 showSlidesMay(slideIndexMay);
+                resetMayTimer();
             } else if (type === 'quail') {
                 slideIndexQuail += step;
                 showSlidesQuail(slideIndexQuail);
+                resetQuailTimer();
             }
         };
+        
+        function startMayAuto() { if (mayInterval) clearInterval(mayInterval); mayInterval = setInterval(() => { slideIndexMay++; showSlidesMay(slideIndexMay); }, 10000); }
+        function startQuailAuto() { if (quailInterval) clearInterval(quailInterval); quailInterval = setInterval(() => { slideIndexQuail++; showSlidesQuail(slideIndexQuail); }, 10000); }
+        function resetMayTimer() { if (mayInterval) { clearInterval(mayInterval); startMayAuto(); } }
+        function resetQuailTimer() { if (quailInterval) { clearInterval(quailInterval); startQuailAuto(); } }
         
         function buildDots() {
             const mayContainer = document.getElementById("maySlideshow");
@@ -1274,12 +1088,7 @@
             if (mayContainer && mayDotArea) {
                 const mayCount = document.querySelectorAll("#maySlideshow .mySlides").length;
                 mayDotArea.innerHTML = "";
-                for (let i = 0; i < mayCount; i++) {
-                    let dotSpan = document.createElement("span");
-                    dotSpan.className = "dot";
-                    dotSpan.onclick = (function(idx) { return function() { slideIndexMay = idx+1; showSlidesMay(slideIndexMay); }; })(i);
-                    mayDotArea.appendChild(dotSpan);
-                }
+                for (let i = 0; i < mayCount; i++) { let d = document.createElement("span"); d.className = "dot"; d.onclick = (function(idx) { return function() { slideIndexMay = idx+1; showSlidesMay(slideIndexMay); resetMayTimer(); }; })(i); mayDotArea.appendChild(d); }
                 mayDots = document.querySelectorAll("#mayDots .dot");
             }
             const quailContainer = document.getElementById("quailSlideshow");
@@ -1287,19 +1096,17 @@
             if (quailContainer && quailDotArea) {
                 const quailCount = document.querySelectorAll("#quailSlideshow .mySlides2").length;
                 quailDotArea.innerHTML = "";
-                for (let i = 0; i < quailCount; i++) {
-                    let dotSpan = document.createElement("span");
-                    dotSpan.className = "dot";
-                    dotSpan.onclick = (function(idx) { return function() { slideIndexQuail = idx+1; showSlidesQuail(slideIndexQuail); }; })(i);
-                    quailDotArea.appendChild(dotSpan);
-                }
+                for (let i = 0; i < quailCount; i++) { let d = document.createElement("span"); d.className = "dot"; d.onclick = (function(idx) { return function() { slideIndexQuail = idx+1; showSlidesQuail(slideIndexQuail); resetQuailTimer(); }; })(i); quailDotArea.appendChild(d); }
                 quailDots = document.querySelectorAll("#quailDots .dot");
             }
         }
         
         window.addEventListener("DOMContentLoaded", function() {
             buildDots();
-            initSlideshows();
+            maySlides = document.querySelectorAll("#maySlideshow .mySlides");
+            quailSlides = document.querySelectorAll("#quailSlideshow .mySlides2");
+            if (maySlides.length) { showSlidesMay(1); startMayAuto(); }
+            if (quailSlides.length) { showSlidesQuail(1); startQuailAuto(); }
         });
     </script>
 </body>
