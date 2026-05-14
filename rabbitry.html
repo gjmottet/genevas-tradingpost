@@ -437,6 +437,121 @@
             color: #e67e22;
         }
         
+        /* SPRING LITTER HIGHLIGHTS SLIDESHOW - New Section */
+        .spring-litter-card {
+            background: linear-gradient(135deg, #fef9e6 0%, #fff5e0 100%);
+            border-radius: 28px;
+            margin: 1.5rem auto;
+            max-width: 900px;
+            padding: 1.8rem 2rem 2rem 2rem;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            border-left: 8px solid #ff9800;
+            transition: transform 0.2s;
+        }
+        
+        .spring-litter-card h3 {
+            font-size: 2rem;
+            color: #d35400;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            text-shadow: 1px 1px 0 rgba(255,220,150,0.8);
+        }
+        
+        /* Reuse slideshow styles for rabbit slideshow */
+        .rabbit-slideshow-container {
+            position: relative;
+            max-width: 100%;
+            margin: 0 auto;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            background-color: #fef5e6;
+        }
+        
+        .rabbit-slide {
+            display: none;
+            text-align: center;
+            animation: fadeEffect 1s;
+        }
+        
+        .rabbit-slide img {
+            width: 100%;
+            max-height: 420px;
+            object-fit: contain;
+            background: #fff5e6;
+            border-bottom: 2px solid #ffcc80;
+        }
+        
+        .rabbit-caption-text {
+            padding: 12px 16px;
+            background: rgba(210, 105, 30, 0.85);
+            color: white;
+            font-size: 1rem;
+            text-align: center;
+            font-style: italic;
+            font-weight: 500;
+            backdrop-filter: blur(3px);
+        }
+        
+        .rabbit-prev, .rabbit-next {
+            cursor: pointer;
+            position: absolute;
+            top: 45%;
+            width: 44px;
+            padding: 14px 0;
+            margin-top: -28px;
+            color: white;
+            font-weight: bold;
+            font-size: 22px;
+            transition: 0.3s;
+            user-select: none;
+            background-color: rgba(0, 0, 0, 0.5);
+            text-decoration: none;
+            z-index: 10;
+            text-align: center;
+            border-radius: 0;
+            backdrop-filter: blur(2px);
+        }
+        
+        .rabbit-prev {
+            left: 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .rabbit-next {
+            right: 0;
+            border-radius: 8px 0 0 8px;
+        }
+        
+        .rabbit-prev:hover, .rabbit-next:hover {
+            background-color: rgba(0, 0, 0, 0.85);
+            transform: scale(1.02);
+        }
+        
+        .rabbit-dot-group {
+            text-align: center;
+            padding: 12px 0;
+            background: #fff0e0;
+        }
+        
+        .rabbit-dot {
+            cursor: pointer;
+            height: 12px;
+            width: 12px;
+            margin: 0 4px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+        
+        .rabbit-dot-active, .rabbit-dot:hover {
+            background-color: #e67e22;
+        }
+        
         /* Check Back Soon Message - SIMPLIFIED */
         .check-back-soon {
             text-align: center;
@@ -1224,6 +1339,16 @@
             .hover-image-single {
                 min-height: 250px;
             }
+            
+            .rabbit-prev, .rabbit-next {
+                width: 36px;
+                padding: 10px 0;
+                font-size: 18px;
+            }
+            
+            .rabbit-slide img {
+                max-height: 280px;
+            }
         }
     </style>
 </head>
@@ -1307,6 +1432,32 @@
                 </div>
                 <p>Healthy, wiggly kits! Check back for updates as they grow.</p>
             </div>
+        </div>
+        
+        <!-- NEW: Spring Litter Highlights Slideshow - Combines Swamper+Lucille and baby bunny images -->
+        <div class="spring-litter-card">
+            <h3>🌸 Spring Litter Highlights 🐇</h3>
+            <div class="rabbit-slideshow-container" id="rabbitSlideshow">
+                <div class="rabbit-slide fade">
+                    <img src="images/SwamperAndLucille.jpg" alt="Swamper and Lucille">
+                    <div class="rabbit-caption-text">Swamper & Lucille — proud parents of 9 healthy babies!</div>
+                </div>
+                <div class="rabbit-slide fade">
+                    <img src="images/BabyBunny3WeeksOldLitterof9May2026.jpg" alt="Lucille's 9 purebred babies at 3 weeks old">
+                    <div class="rabbit-caption-text">Lucille's 9 purebred Champagne d'Argent babies at 3 weeks old</div>
+                </div>
+                <div class="rabbit-slide fade">
+                    <img src="images/BabyBunny3WeeksOldSleepingMay2026.jpg" alt="Porkins baby sleeping">
+                    <div class="rabbit-caption-text">Porkins' baby catching some zzz's — pure sweetness</div>
+                </div>
+                <div class="rabbit-slide fade">
+                    <img src="images/BabyBunny3WeeksOldMay2026.jpg" alt="Porkins baby being cute">
+                    <div class="rabbit-caption-text">Porkins' baby showing off that adorable face!</div>
+                </div>
+                <a class="rabbit-prev" onclick="changeRabbitSlide(-1)">&#10094;</a>
+                <a class="rabbit-next" onclick="changeRabbitSlide(1)">&#10095;</a>
+            </div>
+            <div class="rabbit-dot-group" id="rabbitDots"></div>
         </div>
         
         <!-- Available Section - SIMPLIFIED -->
@@ -1673,6 +1824,83 @@
         if (slideshowContainer) {
             slideshowContainer.addEventListener('mouseenter', stopSlideshow);
             slideshowContainer.addEventListener('mouseleave', startSlideshow);
+        }
+        
+        // NEW: Rabbit Spring Litter Slideshow
+        let rabbitSlideIndex = 1;
+        let rabbitSlides, rabbitDots;
+        let rabbitInterval;
+        
+        function showRabbitSlides(n) {
+            if (!rabbitSlides || !rabbitSlides.length) return;
+            if (n > rabbitSlides.length) rabbitSlideIndex = 1;
+            if (n < 1) rabbitSlideIndex = rabbitSlides.length;
+            for (let i = 0; i < rabbitSlides.length; i++) {
+                rabbitSlides[i].style.display = "none";
+            }
+            for (let i = 0; i < rabbitDots.length; i++) {
+                rabbitDots[i].className = rabbitDots[i].className.replace(" rabbit-dot-active", "");
+            }
+            rabbitSlides[rabbitSlideIndex-1].style.display = "block";
+            if (rabbitDots[rabbitSlideIndex-1]) rabbitDots[rabbitSlideIndex-1].className += " rabbit-dot-active";
+        }
+        
+        window.changeRabbitSlide = function(step) {
+            rabbitSlideIndex += step;
+            showRabbitSlides(rabbitSlideIndex);
+            resetRabbitTimer();
+        };
+        
+        function startRabbitAuto() {
+            if (rabbitInterval) clearInterval(rabbitInterval);
+            rabbitInterval = setInterval(() => {
+                rabbitSlideIndex++;
+                showRabbitSlides(rabbitSlideIndex);
+            }, 10000);
+        }
+        
+        function resetRabbitTimer() {
+            if (rabbitInterval) {
+                clearInterval(rabbitInterval);
+                startRabbitAuto();
+            }
+        }
+        
+        function buildRabbitDots() {
+            const rabbitContainer = document.getElementById("rabbitSlideshow");
+            const rabbitDotArea = document.getElementById("rabbitDots");
+            if (rabbitContainer && rabbitDotArea) {
+                const rabbitCount = document.querySelectorAll("#rabbitSlideshow .rabbit-slide").length;
+                rabbitDotArea.innerHTML = "";
+                for (let i = 0; i < rabbitCount; i++) {
+                    let d = document.createElement("span");
+                    d.className = "rabbit-dot";
+                    d.onclick = (function(idx) {
+                        return function() {
+                            rabbitSlideIndex = idx + 1;
+                            showRabbitSlides(rabbitSlideIndex);
+                            resetRabbitTimer();
+                        };
+                    })(i);
+                    rabbitDotArea.appendChild(d);
+                }
+                rabbitDots = document.querySelectorAll("#rabbitDots .rabbit-dot");
+            }
+        }
+        
+        // Initialize rabbit slideshow
+        buildRabbitDots();
+        rabbitSlides = document.querySelectorAll("#rabbitSlideshow .rabbit-slide");
+        if (rabbitSlides.length) {
+            showRabbitSlides(1);
+            startRabbitAuto();
+            const rabbitContainerDiv = document.getElementById("rabbitSlideshow");
+            if (rabbitContainerDiv) {
+                rabbitContainerDiv.addEventListener('mouseenter', () => {
+                    if (rabbitInterval) clearInterval(rabbitInterval);
+                });
+                rabbitContainerDiv.addEventListener('mouseleave', startRabbitAuto);
+            }
         }
     </script>
 </body>
