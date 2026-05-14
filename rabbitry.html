@@ -336,108 +336,7 @@
             background: #2ecc71;
         }
         
-        /* Breeding Announcement Card - FIXED FOR FULL IMAGE */
-        .breeding-announcement {
-            max-width: 900px;
-            margin: 1.5rem auto;
-            background: linear-gradient(135deg, #fff5e6, #fff0e0);
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            border: 2px solid #ff9800;
-        }
-        
-        .breeding-image {
-            width: 100%;
-            max-height: auto;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: #fff0e0;
-        }
-        
-        .breeding-image img {
-            width: 100%;
-            height: auto;
-            object-fit: contain;
-            display: block;
-        }
-        
-        .breeding-caption {
-            padding: 1.5rem;
-            text-align: center;
-        }
-        
-        .breeding-caption h3 {
-            font-size: 1.8rem;
-            color: #2c3e50;
-            margin: 0 0 0.5rem;
-        }
-        
-        .breeding-caption p {
-            font-size: 1.2rem;
-            color: #34495e;
-            margin: 0.25rem 0;
-        }
-        
-        .breeding-caption .dates {
-            font-weight: bold;
-            color: #e67e22;
-            margin-top: 0.5rem;
-        }
-        
-        /* New Baby Bunnies Gallery - added for the new litters */
-        .baby-bunnies-gallery {
-            max-width: 900px;
-            margin: 1.5rem auto;
-            background: #fffaf0;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            border: 2px solid #ff9800;
-            text-align: center;
-        }
-        
-        .baby-bunnies-gallery img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-        
-        .baby-caption {
-            padding: 1rem 1.5rem 1.5rem;
-        }
-        
-        .baby-caption h3 {
-            font-size: 1.6rem;
-            color: #2c3e50;
-            margin: 0 0 0.5rem;
-        }
-        
-        .baby-caption p {
-            font-size: 1.1rem;
-            margin: 0.25rem 0;
-            color: #34495e;
-        }
-        
-        .baby-stats {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-            margin-top: 0.75rem;
-        }
-        
-        .baby-stat {
-            background: #fff0e0;
-            padding: 0.3rem 1rem;
-            border-radius: 30px;
-            font-weight: bold;
-            color: #e67e22;
-        }
-        
-        /* SPRING LITTER HIGHLIGHTS SLIDESHOW - New Section */
+        /* SPRING LITTER HIGHLIGHTS SLIDESHOW - Consolidated */
         .spring-litter-card {
             background: linear-gradient(135deg, #fef9e6 0%, #fff5e0 100%);
             border-radius: 28px;
@@ -550,6 +449,11 @@
         
         .rabbit-dot-active, .rabbit-dot:hover {
             background-color: #e67e22;
+        }
+        
+        @keyframes fadeEffect {
+            from {opacity: 0.4;}
+            to {opacity: 1;}
         }
         
         /* Check Back Soon Message - SIMPLIFIED */
@@ -1407,40 +1311,17 @@
             </div>
         </div>
         
-        <!-- BREEDING ANNOUNCEMENT - UPDATED: New litters are here! -->
-        <div class="breeding-announcement">
-            <div class="breeding-image">
-                <img src="images/SwamperAndLucille.jpg" alt="Lucille and Swamper after breeding">
-            </div>
-            <div class="breeding-caption">
-                <h3>🐇 New Litters Are Here! 🐇</h3>
-                <p><strong>Lucille had 9 healthy babies — Porkins had 8 healthy babies!</strong></p>
-                <p>Both litters born April 23rd. Mamas and babies are doing wonderfully.</p>
-                <p class="dates">📅 Born April 23, 2026 — 17 total bunnies!</p>
-            </div>
-        </div>
-        
-        <!-- NEW: Baby Bunnies Gallery Photo - One day old -->
-        <div class="baby-bunnies-gallery">
-            <img src="images/Bunnies1DayOldApril2026.jpg" alt="Newborn bunnies at 1 day old - Lucille and Porkins litters">
-            <div class="baby-caption">
-                <h3>🐣 1 Day Old</h3>
-                <div class="baby-stats">
-                    <span class="baby-stat">Lucille's litter: 9</span>
-                    <span class="baby-stat">Porkins' litter: 8</span>
-                    <span class="baby-stat">Both born April 23</span>
-                </div>
-                <p>Healthy, wiggly kits! Check back for updates as they grow.</p>
-            </div>
-        </div>
-        
-        <!-- NEW: Spring Litter Highlights Slideshow - Combines Swamper+Lucille and baby bunny images -->
+        <!-- SPRING LITTER HIGHLIGHTS SLIDESHOW - Consolidated (removed separate breeding announcement and 1-day-old section) -->
         <div class="spring-litter-card">
             <h3>🌸 Spring Litter Highlights 🐇</h3>
             <div class="rabbit-slideshow-container" id="rabbitSlideshow">
                 <div class="rabbit-slide fade">
                     <img src="images/SwamperAndLucille.jpg" alt="Swamper and Lucille">
                     <div class="rabbit-caption-text">Swamper & Lucille — proud parents of 9 healthy babies!</div>
+                </div>
+                <div class="rabbit-slide fade">
+                    <img src="images/Bunnies1DayOldApril2026.jpg" alt="Newborn bunnies at 1 day old - Lucille and Porkins litters">
+                    <div class="rabbit-caption-text">Newborn kits — Lucille's 9 + Porkins' 8 = 17 total bunnies born April 23!</div>
                 </div>
                 <div class="rabbit-slide fade">
                     <img src="images/BabyBunny3WeeksOldLitterof9May2026.jpg" alt="Lucille's 9 purebred babies at 3 weeks old">
@@ -1826,7 +1707,7 @@
             slideshowContainer.addEventListener('mouseleave', startSlideshow);
         }
         
-        // NEW: Rabbit Spring Litter Slideshow
+        // Rabbit Spring Litter Slideshow
         let rabbitSlideIndex = 1;
         let rabbitSlides, rabbitDots;
         let rabbitInterval;
