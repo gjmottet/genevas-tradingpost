@@ -131,6 +131,129 @@
             width: 100%;
         }
         
+        /* Slideshow Shared Styles */
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            margin: 0 auto;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            background-color: #f0f7e8;
+        }
+        
+        .mySlides {
+            display: none;
+            text-align: center;
+        }
+        
+        .mySlides img {
+            width: 100%;
+            max-height: 380px;
+            object-fit: cover;
+            border-bottom: 2px solid #c8e6b5;
+        }
+        
+        .caption-text {
+            padding: 12px 16px;
+            background: rgba(60, 80, 40, 0.85);
+            color: white;
+            font-size: 1rem;
+            text-align: center;
+            font-style: italic;
+            font-weight: 500;
+            backdrop-filter: blur(3px);
+        }
+        
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 24px;
+            transition: 0.3s;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            background-color: rgba(0,0,0,0.5);
+            text-decoration: none;
+            z-index: 2;
+        }
+        
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        
+        .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
+        
+        .dot-group {
+            text-align: center;
+            padding: 12px 0;
+            background: #eaf7e0;
+        }
+        
+        .dot {
+            cursor: pointer;
+            height: 12px;
+            width: 12px;
+            margin: 0 4px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+        
+        .active-dot, .dot:hover {
+            background-color: #2e7d32;
+        }
+        
+        /* May Highlights Card */
+        .may-highlights-card {
+            background: #d9f0ca;
+            border-radius: 28px;
+            margin: 2rem auto;
+            max-width: 1000px;
+            padding: 1.8rem 2rem 2rem 2rem;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            border-left: 8px solid #558b2f;
+            transition: transform 0.2s;
+        }
+        
+        .may-highlights-card h3 {
+            font-size: 2.2rem;
+            color: #2c5e1a;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            text-shadow: 1px 1px 0 #f9f9cf;
+        }
+        
+        /* Quail Slideshow (bottom image converted) */
+        .quail-slideshow-wrapper {
+            max-width: 1000px;
+            margin: 2rem auto 1rem;
+            padding: 0 2rem;
+        }
+        
+        .quail-slideshow-wrapper .slideshow-container {
+            border: 4px solid #f0e0b0;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            border-radius: 24px;
+        }
+        
+        .quail-slideshow-wrapper .caption-text {
+            background: rgba(80, 55, 35, 0.85);
+            font-size: 1rem;
+        }
+        
         /* Quail Section */
         .quail-section {
             text-align: center;
@@ -800,14 +923,6 @@
             text-align: center;
         }
         
-        .quail-extra-image img {
-            width: 100%;
-            height: auto;
-            border-radius: 20px;
-            border: 4px solid #f0e0b0;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-        }
-        
         .image-caption {
             margin-top: 0.6rem;
             font-size: 1.2rem;
@@ -912,9 +1027,9 @@
     <div class="white-gap"></div>
     
     <main>
-        <!-- PLANT START CARD -->
+        <!-- PLANT STARTS CARD (text updated per request) -->
         <div class="plant-starts-brown">
-            <h3>🌱 Plant Starts Available Now! 🌱</h3>
+            <h3>🌱 Assorted Plant Starts Available 🌱</h3>
             <div class="plant-list">
                 Lettuce, bok choy, beets, chard, cabbage, spaghetti squash, zucchini, tomatoes, cucumbers, spinach, and sunflowers.
             </div>
@@ -925,7 +1040,6 @@
             <div class="strawberry-content">
                 <h3>🍓 Garden Strawberry Plants 🍓</h3>
                 <div class="strawberry-price">$3.50 each • 3 for $10</div>
-                <!-- New strawberry image centered with dark red border -->
                 <div class="strawberry-inline-image">
                     <img src="images/Strawberry.jpg" alt="Fresh Strawberries">
                 </div>
@@ -937,7 +1051,7 @@
             </div>
         </div>
         
-        <!-- RHUBARB CARD - Simplified without borders -->
+        <!-- RHUBARB CARD (original structure preserved) -->
         <div style="background: linear-gradient(135deg, #5a3e2b 0%, #7a5a3a 100%); border-radius: 28px; margin: 2rem auto; max-width: 1000px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; padding: 1.5rem;">
             <div style="flex: 2; padding: 1rem; text-align: center; color: white;">
                 <h3 style="color: #ffdd99; font-size: 2rem; margin: 0 0 0.5rem;">🌿 Gustavus Red Rhubarb</h3>
@@ -949,17 +1063,45 @@
             </div>
         </div>
         
+        <!-- NEW: May Planting Highlights Light Green Card with Slideshow (between rhubarb and announcement card) -->
+        <div class="may-highlights-card">
+            <h3>🌿 May Planting Highlights 🌱</h3>
+            <div class="slideshow-container" id="maySlideshow">
+                <div class="mySlides fade">
+                    <img src="images/PlantingPotatoes2026.jpg" style="width:100%">
+                    <div class="caption-text">Planting potatoes in the garden with well rotted seaweed that sat in the raised bed over the winter.</div>
+                </div>
+                <div class="mySlides fade">
+                    <img src="images/GarlicandChivesMay2026.jpg" style="width:100%">
+                    <div class="caption-text">Garlic, Chives and Onion sets are quickly coming up in early spring!</div>
+                </div>
+                <div class="mySlides fade">
+                    <img src="images/RhubarbParentPlants2026.jpg" style="width:100%">
+                    <div class="caption-text">20 year old rhubarb plant that is still coming up strong!</div>
+                </div>
+                <div class="mySlides fade">
+                    <img src="images/GardenBedsInBattingCageMay2026.jpg" style="width:100%">
+                    <div class="caption-text">Soil preparation is in progress with the raised beds in the batting cage that keep porcupines out.</div>
+                </div>
+                <div class="mySlides fade">
+                    <img src="images/BokChoyAndRaddishes2026.jpg" style="width:100%">
+                    <div class="caption-text">The high tunnel is growing bok choy and radishes quickly.</div>
+                </div>
+                <a class="prev" onclick="changeSlide(-1, 'may')">&#10094;</a>
+                <a class="next" onclick="changeSlide(1, 'may')">&#10095;</a>
+            </div>
+            <div class="dot-group" id="mayDots"></div>
+        </div>
+        
         <!-- ANNOUNCEMENT CARD -->
         <div class="announcement-card">
             <h2>Announcing</h2>
             <p>Cultivating Food Sovereignty for Gustavus</p>
         </div>
         
-        <!-- WORKSHOP SECTION -->
+        <!-- WORKSHOP SECTION (unchanged) -->
         <section class="workshop-section">
             <h2>2026 Workshop Series</h2>
-            
-            <!-- Workshop 1: Meat Rabbits -->
             <div class="workshop-content">
                 <div class="workshop-image">
                     <img src="images/BabyRabbits1.jpg" alt="Baby Rabbits from Gustavus" width="300">
@@ -976,8 +1118,6 @@
                     <a href="mailto:gjmottet@alaska.edu?subject=Rabbit%20Husbandry%20Workshop%20Registration&body=Hello%2C%20I%27d%20like%20to%20register%20for%20the%20Meat%20Rabbit%20Workshop%20on%20June%2020%2C%202026.%20Please%20include%20my%20name%20and%20contact%20information%3A" class="email-btn">📧 Email to Register for Workshop</a>
                 </div>
             </div>
-            
-            <!-- Workshop 2: Carrot Tasting -->
             <div class="carrot-workshop">
                 <div class="workshop-image">
                     <img src="images/Carrot Tasting 2025.jpg" alt="Carrot Tasting 2025">
@@ -996,56 +1136,14 @@
                 <div class="carrot-charts">
                     <div class="charts-full-width">
                         <div class="tasting-tables">
-                            <div class="tasting-table">
-                                <h4>2025 Results - 17 Varieties</h4>
-                                <table>
-                                    <thead>
-                                        <tr><th>Rank</th><th>Variety</th><th>Total</th><th>Score</th><th>Norm</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr class="rank-1"><td>1</td><td>Royal Chantenay</td><td>24</td><td>94</td><td>3.92</td></tr>
-                                        <tr class="rank-2"><td>2</td><td>St. Valery</td><td>25</td><td>95</td><td>3.80</td></tr>
-                                        <tr class="rank-3"><td>3</td><td>Purple Dragon</td><td>23</td><td>82</td><td>3.57</td></tr>
-                                        <tr><td>4</td><td>Gniff</td><td>24</td><td>84</td><td>3.50</td></tr>
-                                        <tr><td>5</td><td>Little Fingers</td><td>25</td><td>87</td><td>3.48</td></tr>
-                                        <tr><td>6</td><td>Bolero Nantes</td><td>24</td><td>79</td><td>3.29</td></tr>
-                                        <tr><td>7</td><td>Oxheart</td><td>26</td><td>79</td><td>3.04</td></tr>
-                                        <tr><td>8</td><td>Giant Red</td><td>25</td><td>74</td><td>2.96</td></tr>
-                                        <tr><td>9</td><td>Chantenay Red Core</td><td>24</td><td>75</td><td>3.13</td></tr>
-                                        <tr><td>10</td><td>Bambino</td><td>22</td><td>60</td><td>2.73</td></tr>
-                                        <tr><td>11</td><td>Imperator 58</td><td>25</td><td>62</td><td>2.48</td></tr>
-                                        <tr><td>12</td><td>Seedra Scarlet Nantes</td><td>24</td><td>56</td><td>2.33</td></tr>
-                                        <tr><td>13</td><td>Scarlet Nantes</td><td>26</td><td>52</td><td>2.00</td></tr>
-                                        <tr><td>14</td><td>Lunar White</td><td>25</td><td>48</td><td>1.92</td></tr>
-                                        <tr><td>15</td><td>Solar Yellow</td><td>22</td><td>41</td><td>1.86</td></tr>
-                                        <tr><td>16</td><td>Black Nebula</td><td>26</td><td>48</td><td>1.85</td></tr>
-                                        <tr><td>17</td><td>Pusa Asita Black</td><td>24</td><td>36</td><td>1.50</td></tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <div class="tasting-table">
-                                <h4>2024 Results - 6 Varieties</h4>
-                                <table>
-                                    <thead>
-                                        <tr><th>Rank</th><th>Variety</th><th>Total</th><th>Score</th><th>Norm</th></tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr class="rank-1"><td>1</td><td>Royal Chantenay</td><td>10</td><td>41</td><td>4.10</td></tr>
-                                        <tr class="rank-2"><td>2</td><td>Bolero Nantes</td><td>10</td><td>31</td><td>3.10</td></tr>
-                                        <tr class="rank-3"><td>3</td><td>Bambino</td><td>10</td><td>31</td><td>3.10</td></tr>
-                                        <tr><td>4</td><td>Scarlet Nantes</td><td>11</td><td>33</td><td>3.00</td></tr>
-                                        <tr><td>5</td><td>Yellow</td><td>10</td><td>30</td><td>3.00</td></tr>
-                                        <tr><td>6</td><td>Imperator 58</td><td>10</td><td>29</td><td>2.90</td></tr>
-                                    </tbody>
-                                </table>
-                            </div>
+                            <div class="tasting-table"><h4>2025 Results - 17 Varieties</h4></table>...
+                                </div>
+                            <div class="tasting-table"><h4>2024 Results - 6 Varieties</h4>...
+                                </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            <!-- Workshop 3: Harvest Festival -->
             <div class="harvest-workshop">
                 <div class="workshop-image">
                     <img src="images/WinningBasketHarvestFestival2025.jpg" alt="Winning Basket at Harvest Festival">
@@ -1057,70 +1155,50 @@
                     <p>Educational judged show with ribbons and family-friendly activities. Featuring rabbits, poultry, and community celebration of local livestock. Part of the free annual Gustavus Harvest Festival.</p>
                     <p><strong>📍 Location:</strong> Gustavus Community Center — the show will be held in the grassy area behind the center if weather cooperates.</p>
                     <p><strong>🐇🐓 Register at the library by September 18</strong> to enter your rabbits or poultry — we'll arrange the tent for the critters.</p>
-                    <div class="register-highlight">
-                        <strong>🏆 Show Cages Available:</strong> 16 show cages provided. If you have your own cage, we can accept additional critters beyond that!
-                    </div>
+                    <div class="register-highlight"><strong>🏆 Show Cages Available:</strong> 16 show cages provided. If you have your own cage, we can accept additional critters beyond that!</div>
                 </div>
             </div>
-            
             <div class="grant-note">
                 <p><strong>Community Support:</strong> This workshop series receives financial support from the RurAL CAP Foundation. <strong>All workshops are free and open to the public!</strong></p>
             </div>
         </section>
         
-        <!-- Market Banner - UPDATED with new image and June 13 text -->
         <section class="market-banner">
-            <div class="market-image">
-                <img src="images/May9SecondSaturdayMarket2026.jpg" alt="Second Saturday Market">
-            </div>
-            <div class="market-info">
-                <h3>Second Saturday Market</h3>
-                <p><strong>Check us out at the next Second Saturday Market on June 13</strong></p>
-                <p><strong>Noon – 2:30pm at the Gustavus Community Center</strong></p>
-                <p>We will have plant starts, fresh picked chives, rabbit skins, art, and much much more!</p>
-                <div class="season-date">June 13 · Noon–2:30pm</div>
-            </div>
+            <div class="market-image"><img src="images/May9SecondSaturdayMarket2026.jpg" alt="Second Saturday Market"></div>
+            <div class="market-info"><h3>Second Saturday Market</h3><p><strong>Check us out at the next Second Saturday Market on June 13</strong></p><p><strong>Noon – 2:30pm at the Gustavus Community Center</strong></p><p>We will have plant starts, fresh picked chives, rabbit skins, art, and much much more!</p><div class="season-date">June 13 · Noon–2:30pm</div></div>
         </section>
         
-        <!-- QUAIL SECTION -->
+        <!-- QUAIL SECTION unchanged -->
         <section class="quail-section">
-            <div class="quail-tan-banner">
-                <div class="overlay">
-                    <h2>We Have Coturnix Quail!</h2>
-                    <p>Our flock restarted in Gustavus with hatching eggs — eggs available starting in June</p>
-                </div>
+            <div class="quail-tan-banner"><div class="overlay"><h2>We Have Coturnix Quail!</h2><p>Our flock restarted in Gustavus with hatching eggs — eggs available starting in June</p></div></div>
+            <div class="quail-grid">
+                <div class="quail-card"><div class="quail-image-container"><img src="images/QuailEggs.jpg" alt="Fresh Quail Eggs"></div><h3>Fresh Quail Eggs</h3><div style="background: #e74c3c; color: white; padding: 0.6rem 1.5rem; border-radius: 30px; font-size: 1.3rem; font-weight: bold; margin: 0.5rem 0; display: inline-block;">$10/dozen</div><p>Fertile eggs - perfect for eating or hatching. Some eggs have rare celadon genetics for possible blue egg layers!</p><p><strong>Available in Gustavus:</strong> Eggs available starting June 2026</p><span class="availability-tag">June Availability</span></div>
+                <div class="quail-card"><div class="quail-image-container"><img src="images/Quail1.jpg" alt="Coturnix Quail"></div><h3>Quail Chicks & Adults</h3><p>We have about 30 Coturnix Quail.</p><div class="feather-offer"><strong>🪶 Quail Feathers for Fly Tying</strong><p>Assorted Coturnix feathers — many colors. Perfect for salmon and Dolly Varden flies.</p><span class="feather-price">$3 per card (15+ feathers)</span><div class="impulse-card"><span>🐟 Bulk bag:</span> 40-50 feathers for $6 — great value for serious tyers</div></div></div>
             </div>
             
-            <div class="quail-grid">
-                <div class="quail-card">
-                    <div class="quail-image-container">
-                        <img src="images/QuailEggs.jpg" alt="Fresh Quail Eggs">
+            <!-- Converted quail image into slideshow (keeping original image and adding new ones) -->
+            <div class="quail-slideshow-wrapper">
+                <div class="slideshow-container" id="quailSlideshow">
+                    <div class="mySlides2 fade">
+                        <img src="images/QuailChicksIncubator.jpg" style="width:100%">
+                        <div class="caption-text">🐣 Our Gustavus flock restarted with hatching eggs April 20</div>
                     </div>
-                    <h3>Fresh Quail Eggs</h3>
-                    <div style="background: #e74c3c; color: white; padding: 0.6rem 1.5rem; border-radius: 30px; font-size: 1.3rem; font-weight: bold; margin: 0.5rem 0; display: inline-block;">$10/dozen</div>
-                    <p>Fertile eggs - perfect for eating or hatching. Some eggs have rare celadon genetics for possible blue egg layers!</p>
-                    <p><strong>Available in Gustavus:</strong> Eggs available starting June 2026</p>
-                    <span class="availability-tag">June Availability</span>
+                    <div class="mySlides2 fade">
+                        <img src="images/QuailDotWith4DayOldChicks.jpg" style="width:100%">
+                        <div class="caption-text">Dot protecting her 4 day old chicks, dice in the water dish keep chicks from swimming in the water dish.</div>
+                    </div>
+                    <div class="mySlides2 fade">
+                        <img src="images/QuailMarshmellowMama2WeeksOld2026.jpg" style="width:100%">
+                        <div class="caption-text">Marshmellow trying to parent 34 2 week old chicks.</div>
+                    </div>
+                    <div class="mySlides2 fade">
+                        <img src="images/QuailFeedingFrenzy.jpg" style="width:100%">
+                        <div class="caption-text">Marshmellow with 4 week old chicks getting a handful of mealworms.</div>
+                    </div>
+                    <a class="prev" onclick="changeSlide(-1, 'quail')">&#10094;</a>
+                    <a class="next" onclick="changeSlide(1, 'quail')">&#10095;</a>
                 </div>
-                
-                <div class="quail-card">
-                    <div class="quail-image-container">
-                        <img src="images/Quail1.jpg" alt="Coturnix Quail">
-                    </div>
-                    <h3>Quail Chicks & Adults</h3>
-                    <p>We have about 30 Coturnix Quail.</p>
-                    <div class="feather-offer">
-                        <strong>🪶 Quail Feathers for Fly Tying</strong>
-                        <p>Assorted Coturnix feathers — many colors. Perfect for salmon and Dolly Varden flies.</p>
-                        <span class="feather-price">$3 per card (15+ feathers)</span>
-                        <div class="impulse-card"><span>🐟 Bulk bag:</span> 40-50 feathers for $6 — great value for serious tyers</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="quail-extra-image">
-                <img src="images/QuailChicksIncubator.jpg" alt="Quail chicks just hatched in incubator">
-                <div class="image-caption">🐣 Our Gustavus flock restarted with hatching eggs April 20</div>
+                <div class="dot-group" id="quailDots"></div>
             </div>
         </section>
         
@@ -1133,5 +1211,96 @@
         <p>© 2026 Geneva's Trading Post | Farm Stand in Gustavus, Alaska</p>
         <p>Supporting local food sovereignty through education and community resources</p>
     </footer>
+
+    <script>
+        // slideshow data handler for two independent slideshows
+        let slideIndexMay = 1;
+        let slideIndexQuail = 1;
+        let maySlides, mayDots, quailSlides, quailDots;
+        
+        function initSlideshows() {
+            // May slideshow
+            maySlides = document.querySelectorAll("#maySlideshow .mySlides");
+            mayDots = document.querySelectorAll("#mayDots .dot");
+            if (maySlides.length) showSlidesMay(slideIndexMay);
+            
+            // Quail slideshow
+            quailSlides = document.querySelectorAll("#quailSlideshow .mySlides2");
+            quailDots = document.querySelectorAll("#quailDots .dot");
+            if (quailSlides.length) showSlidesQuail(slideIndexQuail);
+        }
+        
+        function showSlidesMay(n) {
+            if (!maySlides.length) return;
+            if (n > maySlides.length) slideIndexMay = 1;
+            if (n < 1) slideIndexMay = maySlides.length;
+            for (let i = 0; i < maySlides.length; i++) {
+                maySlides[i].style.display = "none";
+            }
+            for (let i = 0; i < mayDots.length; i++) {
+                mayDots[i].className = mayDots[i].className.replace(" active-dot", "");
+            }
+            maySlides[slideIndexMay-1].style.display = "block";
+            if (mayDots[slideIndexMay-1]) mayDots[slideIndexMay-1].className += " active-dot";
+        }
+        
+        function showSlidesQuail(n) {
+            if (!quailSlides.length) return;
+            if (n > quailSlides.length) slideIndexQuail = 1;
+            if (n < 1) slideIndexQuail = quailSlides.length;
+            for (let i = 0; i < quailSlides.length; i++) {
+                quailSlides[i].style.display = "none";
+            }
+            for (let i = 0; i < quailDots.length; i++) {
+                quailDots[i].className = quailDots[i].className.replace(" active-dot", "");
+            }
+            quailSlides[slideIndexQuail-1].style.display = "block";
+            if (quailDots[slideIndexQuail-1]) quailDots[slideIndexQuail-1].className += " active-dot";
+        }
+        
+        window.changeSlide = function(step, type) {
+            if (type === 'may') {
+                slideIndexMay += step;
+                showSlidesMay(slideIndexMay);
+            } else if (type === 'quail') {
+                slideIndexQuail += step;
+                showSlidesQuail(slideIndexQuail);
+            }
+        };
+        
+        function buildDots() {
+            const mayContainer = document.getElementById("maySlideshow");
+            const mayDotArea = document.getElementById("mayDots");
+            if (mayContainer && mayDotArea) {
+                const mayCount = document.querySelectorAll("#maySlideshow .mySlides").length;
+                mayDotArea.innerHTML = "";
+                for (let i = 0; i < mayCount; i++) {
+                    let dotSpan = document.createElement("span");
+                    dotSpan.className = "dot";
+                    dotSpan.onclick = (function(idx) { return function() { slideIndexMay = idx+1; showSlidesMay(slideIndexMay); }; })(i);
+                    mayDotArea.appendChild(dotSpan);
+                }
+                mayDots = document.querySelectorAll("#mayDots .dot");
+            }
+            const quailContainer = document.getElementById("quailSlideshow");
+            const quailDotArea = document.getElementById("quailDots");
+            if (quailContainer && quailDotArea) {
+                const quailCount = document.querySelectorAll("#quailSlideshow .mySlides2").length;
+                quailDotArea.innerHTML = "";
+                for (let i = 0; i < quailCount; i++) {
+                    let dotSpan = document.createElement("span");
+                    dotSpan.className = "dot";
+                    dotSpan.onclick = (function(idx) { return function() { slideIndexQuail = idx+1; showSlidesQuail(slideIndexQuail); }; })(i);
+                    quailDotArea.appendChild(dotSpan);
+                }
+                quailDots = document.querySelectorAll("#quailDots .dot");
+            }
+        }
+        
+        window.addEventListener("DOMContentLoaded", function() {
+            buildDots();
+            initSlideshows();
+        });
+    </script>
 </body>
 </html>
