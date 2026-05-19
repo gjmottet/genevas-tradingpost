@@ -930,7 +930,7 @@
             font-weight: 500;
         }
         
-        /* New card styles for Sunday Market and Strawberry Festival */
+        /* New card styles */
         .sunday-market-card {
             background: #5d4037;
             border-radius: 28px;
@@ -980,6 +980,14 @@
             color: #8b0000;
             font-weight: bold;
             margin: 0.75rem 0;
+        }
+        .show-schedule {
+            background: rgba(255,255,240,0.15);
+            border-radius: 20px;
+            padding: 1rem;
+            margin: 1rem 0;
+            text-align: left;
+            font-size: 0.95rem;
         }
         @media (max-width: 1100px) {
             .tasting-tables {
@@ -1036,7 +1044,6 @@
     <div class="white-gap"></div>
     
     <main>
-        <!-- Rearranged: May Planting Highlights now at top between sitemap and Assorted Plant Starts -->
         <div class="may-highlights-card">
             <h3>🌿 May Planting Highlights 🌱</h3>
             <div class="slideshow-container" id="maySlideshow">
@@ -1051,40 +1058,12 @@
             <div class="dot-group" id="mayDots"></div>
         </div>
         
-        <!-- Assorted Plant Starts Available (brown card) -->
         <div class="plant-starts-brown">
             <h3>🌱 Assorted Plant Starts Available 🌱</h3>
             <div class="plant-list">Lettuce, bok choy, beets, chard, cabbage, spaghetti squash, zucchini, tomatoes, cucumbers, spinach, and sunflowers.</div>
         </div>
         
-        <!-- NEW: Sunday Market Card (dark brown) -->
-        <div class="sunday-market-card">
-            <h2>📅 Announcing Sunday Market</h2>
-            <div class="market-dates">Sundays: May 24 – August 30 (weather permitting)</div>
-            <div class="market-detail">📍 Location: A&E Trading Company, near the Community Garden</div>
-            <div class="market-detail">🍓 What we bring: Lettuce, bok choy, beet, strawberry & rhubarb starts, art, and the free bunny petting zoo!</div>
-            <div class="market-detail"><strong>✨ Plus:</strong> Homemade wild strawberry jelly & strawberry rhubarb pie filling (just look for the bunny petting zoo)</div>
-        </div>
-        
-        <!-- Existing Second Saturday Market card kept below (unchanged except positioning) -->
-        <section class="market-banner">
-            <div class="market-image"><img src="images/May9SecondSaturdayMarket2026.jpg" alt="Second Saturday Market"></div>
-            <div class="market-info"><h3>Second Saturday Market</h3><p><strong>Check us out at the next Second Saturday Market on June 13</strong></p><p><strong>Noon – 2:30pm at the Gustavus Community Center</strong></p><p>We will have plant starts, fresh picked chives, rabbit skins, art, and much much more!</p><div class="season-date">June 13 · Noon–2:30pm</div></div>
-        </section>
-        
-        <!-- Announcement Card (Cultivating Food Sovereignty) placed below Second Saturday per request -->
-        <div class="announcement-card"><h2>Announcing</h2><p>Cultivating Food Sovereignty for Gustavus</p></div>
-        
-        <!-- NEW: Strawberry Festival Card (red background) -->
-        <div class="strawberry-festival-card">
-            <h2>🍓 Strawberry Festival 🍓</h2>
-            <div class="festival-highlight">August 15–16 | Salmon River Park</div>
-            <p>🎶 Live music, games, and a special strawberry recipe contest — share and judge your favorite treats!</p>
-            <p>🧸 Find me near the bunny petting zoo: homemade wild strawberry jelly & strawberry rhubarb pie filling jars for sale.</p>
-            <p><em>Come celebrate summer's sweetest berry!</em></p>
-        </div>
-        
-        <!-- Remaining content unchanged (strawberry-header-card, rhubarb, workshops, quail, footer) -->
+        <!-- Garden Strawberry Plants card moved here (below Assorted Starts) -->
         <div class="strawberry-header-card">
             <div class="strawberry-content">
                 <h3>🍓 Garden Strawberry Plants 🍓</h3>
@@ -1094,6 +1073,7 @@
             </div>
         </div>
         
+        <!-- Rhubarb Card -->
         <div style="background: linear-gradient(135deg, #5a3e2b 0%, #7a5a3a 100%); border-radius: 28px; margin: 2rem auto; max-width: 1000px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; padding: 1.5rem;">
             <div style="flex: 2; padding: 1rem; text-align: center; color: white;">
                 <h3 style="color: #ffdd99; font-size: 2rem; margin: 0 0 0.5rem;">🌿 Gustavus Red Rhubarb</h3>
@@ -1105,15 +1085,39 @@
             </div>
         </div>
         
+        <div class="sunday-market-card">
+            <h2>📅 Announcing Sunday Market</h2>
+            <div class="market-dates">Sundays: May 24 – August 30 (weather permitting)</div>
+            <div class="market-detail">📍 Location: A&E Trading Company, near the Community Garden</div>
+            <div class="market-detail">🍓 What we bring: Lettuce, bok choy, beet, strawberry & rhubarb starts, art, and the free bunny petting zoo!</div>
+        </div>
+        
+        <section class="market-banner">
+            <div class="market-image"><img src="images/May9SecondSaturdayMarket2026.jpg" alt="Second Saturday Market"></div>
+            <div class="market-info"><h3>Second Saturday Market</h3><p><strong>Check us out at the next Second Saturday Market on June 13</strong></p><p><strong>Noon – 2:30pm at the Gustavus Community Center</strong></p><p>We will have plant starts, fresh picked chives, rabbit skins, art, and much much more!</p><div class="season-date">June 13 · Noon–2:30pm</div></div>
+        </section>
+        
+        <div class="announcement-card"><h2>Announcing</h2><p>Cultivating Food Sovereignty for Gustavus</p></div>
+        
         <section class="workshop-section">
             <h2>2026 Workshop Series</h2>
             <div class="workshop-content"><div class="workshop-image"><img src="images/BabyRabbits1.jpg" alt="Baby Rabbits" width="300"><img src="images/FINAL library logo transparent.png" alt="Library Logo" class="library-logo"></div><div class="workshop-details"><h3>Meat Rabbit Husbandry & Cage Building <span class="free-tag">FREE</span></h3><span class="workshop-date">📅 June 20, 2026 · 1:30–4:30 PM · Gustavus Library Conference Room</span><p>Join us for a hands-on workshop! We'll have <strong>two litters of nine-week-old babies</strong> plus nest box babies to demonstrate proper handling and growth stages. Learn how to construct a large grow-out cage for fryers, perform a basic health check on rabbits, and identify good commercial body type.</p><p>Open to all skill levels — ARBA member with 20 years experience leading the session.</p><div class="starter-kit"><strong>🎁 Bonus:</strong> The first 6 participants receive a Rabbit Starter Kit with essential supplies!</div><a href="mailto:gjmottet@alaska.edu?subject=Rabbit%20Husbandry%20Workshop%20Registration" class="email-btn">📧 Email to Register for Workshop</a></div></div>
             
-            <div class="carrot-workshop"><div class="workshop-image"><img src="images/Carrot Tasting 2025.jpg" alt="Carrot Tasting 2025"><img src="images/FINAL library logo transparent.png" alt="Library Logo" class="library-logo"></div><div class="carrot-data"><h3>Carrot Tasting <span class="free-tag">FREE</span></h3><span class="workshop-date">📅 September 14, 2026 · 5:30–8:00 PM · Gustavus Community Center</span><p>The carrots were planted <strong>May 7</strong>. There are <strong>18 varieties</strong> this year!</p><p><strong>Varieties:</strong> Bolero, Candy, Orange Fancy, Napoli, Mokum, Romance, Shin Kuroda, Sugarsnax 54, Rubypak, Deep Purple, Purple Elite, Dragon, Gold Nugget, Rainbow (donated by Rural CAP Foundation from Johnny's Selected Seeds), Atomic Red and Cosmic Purple (donated by an online follower), St. Valery and Little Fingers (leftover from last year, used as controls).</p><p><em>📱 Will update photos as they grow, so check back!</em></p><div class="seed-bank-note"><strong>🌱 Seed Bank Update:</strong> <strong>Bolero</strong> and <strong>Purple Dragon</strong> carrot seeds are now available at the free Gustavus Library Seed Bank — pick them up for your garden!</div></div><div class="carrot-charts"><div class="charts-full-width"><div class="tasting-tables"><div class="tasting-table"><h4>2025 Results - 17 Varieties</h4><table><thead><tr><th>Rank</th><th>Variety</th><th>Total</th><th>Score</th><th>Norm</th></tr></thead><tbody><tr class="rank-1"><td>1</td><td>Royal Chantenay</td><td>24</td><td>94</td><td>3.92</td></tr><tr class="rank-2"><td>2</td><td>St. Valery</td><td>25</td><td>95</td><td>3.80</td></tr><tr class="rank-3"><td>3</td><td>Purple Dragon</td><td>23</td><td>82</td><td>3.57</td></tr><tr><td>4</td><td>Gniff</td><td>24</td><td>84</td><td>3.50</td></tr><tr><td>5</td><td>Little Fingers</td><td>25</td><td>87</td><td>3.48</td></tr><tr><td>6</td><td>Bolero Nantes</td><td>24</td><td>79</td><td>3.29</td></tr><tr><td>7</td><td>Oxheart</td><td>26</td><td>79</td><td>3.04</td></tr><tr><td>8</td><td>Giant Red</td><td>25</td><td>74</td><td>2.96</td></tr><tr><td>9</td><td>Chantenay Red Core</td><td>24</td><td>75</td><td>3.13</td></tr><tr><td>10</td><td>Bambino</td><td>22</td><td>60</td><td>2.73</td></tr><tr><td>11</td><td>Imperator 58</td><td>25</td><td>62</td><td>2.48</td></tr><tr><td>12</td><td>Seedra Scarlet Nantes</td><td>24</td><td>56</td><td>2.33</td></tr><tr><td>13</td><td>Scarlet Nantes</td><td>26</td><td>52</td><td>2.00</td></tr><tr><td>14</td><td>Lunar White</td><td>25</td><td>48</td><td>1.92</td></tr><tr><td>15</td><td>Solar Yellow</td><td>22</td><td>41</td><td>1.86</td></tr><tr><td>16</td><td>Black Nebula</td><td>26</td><td>48</td><td>1.85</td></tr><tr><td>17</td><td>Pusa Asita Black</td><td>24</td><td>36</td><td>1.50</td></tr></tbody></table></div><div class="tasting-table"><h4>2024 Results - 6 Varieties</h4><table><thead><tr><th>Rank</th><th>Variety</th><th>Total</th><th>Score</th><th>Norm</th></tr></thead><tbody><tr class="rank-1"><td>1</td><td>Royal Chantenay</td><td>10</td><td>41</td><td>4.10</td></tr><tr class="rank-2"><td>2</td><td>Bolero Nantes</td><td>10</td><td>31</td><td>3.10</td></tr><tr class="rank-3"><td>3</td><td>Bambino</td><td>10</td><td>31</td><td>3.10</td></tr><tr><td>4</td><td>Scarlet Nantes</td><td>11</td><td>33</td><td>3.00</td></tr><tr><td>5</td><td>Yellow</td><td>10</td><td>30</td><td>3.00</td></tr><tr><td>6</td><td>Imperator 58</td><td>10</td><td>29</td><td>2.90</td></tr></tbody></table></div></div></div></div></div>
+            <div class="carrot-workshop"><div class="workshop-image"><img src="images/Carrot Tasting 2025.jpg" alt="Carrot Tasting 2025"><img src="images/FINAL library logo transparent.png" alt="Library Logo" class="library-logo"></div><div class="carrot-data"><h3>Carrot Tasting <span class="free-tag">FREE</span></h3><span class="workshop-date">📅 September 14, 2026 · 5:30–8:00 PM · Gustavus Community Center</span><p>The carrots were planted <strong>May 7</strong>. There are <strong>18 varieties</strong> this year!</p><p><strong>Varieties:</strong> Bolero, Candy, Orange Fancy, Napoli, Mokum, Romance, Shin Kuroda, Sugarsnax 54, Rubypak, Deep Purple, Purple Elite, Dragon, Gold Nugget, Rainbow (donated by Rural CAP Foundation from Johnny's Selected Seeds), Atomic Red and Cosmic Purple (donated by an online follower), St. Valery and Little Fingers (leftover from last year, used as controls).</p><p><em>📱 Will update photos as they grow, so check back!</em></p><div class="seed-bank-note"><strong>🌱 Seed Bank Update:</strong> <strong>Bolero</strong> and <strong>Purple Dragon</strong> carrot seeds are now available at the free Gustavus Library Seed Bank — pick them up for your garden!</div></div><div class="carrot-charts"><div class="charts-full-width"><div class="tasting-tables"><div class="tasting-table"><h4>2025 Results - 17 Varieties</h4><table><thead><tr><th>Rank</th><th>Variety</th><th>Total</th><th>Score</th><th>Norm</th></tr></thead><tbody><tr class="rank-1"><td>1</td><td>Royal Chantenay</td><td>24</td><td>94</td><td>3.92</td></tr><tr class="rank-2"><td>2</td><td>St. Valery</td><td>25</td><td>95</td><td>3.80</td></tr><tr class="rank-3"><td>3</td><td>Purple Dragon</td><td>23</td><td>82</td><td>3.57</td></tr><tr><td>4</td><td>Gniff</td><td>24</td><td>84</td><td>3.50</td></tr><tr><td>5</td><td>Little Fingers</td><td>25</td><td>87</td><td>3.48</td></tr></tbody></table></div><div class="tasting-table"><h4>2024 Results - 6 Varieties</h4><table><thead><tr><th>Rank</th><th>Variety</th><th>Total</th><th>Score</th><th>Norm</th></tr></thead><tbody><tr class="rank-1"><td>1</td><td>Royal Chantenay</td><td>10</td><td>41</td><td>4.10</td></tr><tr class="rank-2"><td>2</td><td>Bolero Nantes</td><td>10</td><td>31</td><td>3.10</td></tr></tbody></table></div></div></div></div></div>
             
-            <div class="harvest-workshop"><div class="workshop-image"><img src="images/WinningBasketHarvestFestival2025.jpg" alt="Winning Basket"><img src="images/FINAL library logo transparent.png" alt="Library Logo" class="library-logo"></div><div class="workshop-details"><h3>Rabbit & Poultry Show <span class="free-tag">FREE</span></h3><span class="workshop-date">📅 September 19, 2026 · Time TBA · Gustavus Harvest Festival</span><p>Educational judged show with ribbons and family-friendly activities. Featuring rabbits, poultry, and community celebration of local livestock. Part of the free annual Gustavus Harvest Festival.</p><p><strong>📍 Location:</strong> Gustavus Community Center — the show will be held in the grassy area behind the center if weather cooperates.</p><p><strong>🐇🐓 Register at the library by September 18</strong> to enter your rabbits or poultry — we'll arrange the tent for the critters.</p><div class="register-highlight"><strong>🏆 Show Cages Available:</strong> 16 show cages provided. If you have your own cage, we can accept additional critters beyond that!</div><a href="https://gjmottet.github.io/gustavus-harvest-festival/" target="_blank" class="festival-btn">🎪 Visit Gustavus Harvest Festival Website →</a></div></div>
+            <!-- Updated Rabbit & Poultry Show with full schedule and registration -->
+            <div class="harvest-workshop"><div class="workshop-image"><img src="images/WinningBasketHarvestFestival2025.jpg" alt="Winning Basket"><img src="images/FINAL library logo transparent.png" alt="Library Logo" class="library-logo"></div><div class="workshop-details"><h3>Rabbit & Poultry Show <span class="free-tag">FREE</span></h3><span class="workshop-date">📅 Saturday, September 19, 2026 · Gustavus Community Center (Outdoor Barn Tent)</span><div class="show-schedule"><strong>📋 Show Schedule:</strong><br>🐇 Drop-off & Health Check: 8:00 – 9:00 AM<br>🏆 Judging: 10:00 – 11:00 AM<br>✨ Showmanship: 11:00 AM – 1:00 PM<br>🎨 Cage Decor Setup: 8:00 – 10:00 AM<br>🐔 Chicken & Rabbit Race: 1:00 PM<br><br><strong>📍 The show runs concurrently with the Harvest Festival in the outdoor tent.</strong><br><strong>📌 Important Rules:</strong> Pregnant or sick animals will be turned away at health check. Borrow a show cage from the library (16 available, 2 per person guaranteed).</div><p><strong>To register live animals (by Sept 17, 5pm):</strong> Contact Geneva Mottet — early registration helps us arrange cages for critter comfort.</p><a href="mailto:gjmottet@alaska.edu?subject=Rabbit%20%26%20Poultry%20Show%20Registration" class="email-btn">📧 Register Animals Now</a><div class="register-highlight"><strong>🏆 Show Cages Available:</strong> 16 show cages provided. If you have your own cage, we can accept additional critters beyond that!</div><a href="https://gjmottet.github.io/gustavus-harvest-festival/" target="_blank" class="festival-btn">🎪 Visit Gustavus Harvest Festival Website →</a></div></div>
             <div class="grant-note"><p><strong>Community Support:</strong> This workshop series receives financial support from the RurAL CAP Foundation. <strong>All workshops are free and open to the public!</strong></p></div>
         </section>
+        
+        <!-- Strawberry Festival Card moved below grant note, above quail section -->
+        <div class="strawberry-festival-card">
+            <h2>🍓 Strawberry Festival 🍓</h2>
+            <div class="festival-highlight">August 15–16 | Salmon River Park</div>
+            <p>🎶 Live music, games, and a special strawberry recipe contest — share and judge your favorite treats!</p>
+            <p>🧸 Find me near the bunny petting zoo: homemade wild strawberry jelly & strawberry rhubarb pie filling jars for sale. Original art also available.</p>
+            <p><em>Come celebrate summer's sweetest berry!</em></p>
+        </div>
         
         <section class="quail-section"><div class="quail-tan-banner"><div class="overlay"><h2>We Have Coturnix Quail!</h2><p>Our flock restarted in Gustavus with hatching eggs — eggs available starting in June</p></div></div><div class="quail-grid"><div class="quail-card"><div class="quail-image-container"><img src="images/QuailEggs.jpg" alt="Fresh Quail Eggs"></div><h3>Fresh Quail Eggs</h3><div style="background: #e74c3c; color: white; padding: 0.6rem 1.5rem; border-radius: 30px; font-size: 1.3rem; font-weight: bold; margin: 0.5rem 0; display: inline-block;">$10/dozen</div><p>Fertile eggs - perfect for eating or hatching. Some eggs have rare celadon genetics for possible blue egg layers!</p><p><strong>Available in Gustavus:</strong> Eggs available starting June 2026</p><span class="availability-tag">June Availability</span></div><div class="quail-card"><div class="quail-image-container"><img src="images/Quail1.jpg" alt="Coturnix Quail"></div><h3>Quail Chicks & Adults</h3><p>We have about 30 Coturnix Quail.</p><div class="feather-offer"><strong>🪶 Quail Feathers for Fly Tying</strong><p>Assorted Coturnix feathers — many colors. Perfect for salmon and Dolly Varden flies.</p><span class="feather-price">$3 per card (15+ feathers)</span><div class="impulse-card"><span>🐟 Bulk bag:</span> 40-50 feathers for $6 — great value for serious tyers</div></div></div></div>
         
