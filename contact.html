@@ -391,7 +391,7 @@
         .strawberry-festival-card {
             background: #b71c1c;
             border-radius: 20px;
-            margin-top: 1.5rem;
+            margin-top: 1rem;
             padding: 1.2rem;
             text-align: center;
             color: white;
@@ -419,6 +419,13 @@
         .strawberry-festival-card p {
             margin: 0.4rem 0;
             font-size: 0.95rem;
+        }
+        
+        /* Two-card wrapper for Gustavus card + extras */
+        .gustavus-card-wrapper {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
         }
         
         /* Bio Section - Trading Post Story */
@@ -819,7 +826,7 @@
                             <div class="email-note">No spam, just rabbits and art! 🐰</div>
                         </div>
                         
-                        <!-- NEW: Shipping Information Card -->
+                        <!-- Shipping Information Card -->
                         <div class="shipping-card">
                             <h4><span>📦</span> I Ship Anywhere!</h4>
                             <p class="shipping-rate">$15 flat rate shipping in the US via USPS</p>
@@ -876,31 +883,49 @@
                 <h2>Gustavus Markets</h2>
                 
                 <div class="market-grid">
-                    <!-- Gustavus Market -->
-                    <div class="market-card">
-                        <div class="market-image-container">
-                            <img src="images/craftfair_rsz.jpg" alt="Gustavus Community Center Market">
-                        </div>
-                        <div class="market-info">
-                            <h3>Gustavus 2nd Saturday Market</h3>
-                            <p>Alaskan wildlife-inspired pieces, fiber art, and rabbitry information. Perfect for visitors and locals alike.</p>
-                            
-                            <div class="gustavus-dates">
-                                <p>📅 2026 Market Dates:</p>
-                                <div class="date-grid">
-                                    <!-- Removed April 11 and May 9 as requested -->
-                                    <span class="date-item">June 13</span>
-                                    <span class="date-item">July 11</span>
-                                    <span class="date-item">August 8</span>
-                                    <span class="date-item">September 12</span>
-                                    <span class="date-item">October 10</span>
-                                </div>
-                                <div class="market-time">All markets: 12:00–2:30pm</div>
-                                <div class="market-location">Gustavus Community Center</div>
+                    <!-- Gustavus Market Card with wrapper to contain extra cards below it -->
+                    <div class="gustavus-card-wrapper">
+                        <div class="market-card">
+                            <div class="market-image-container">
+                                <img src="images/craftfair_rsz.jpg" alt="Gustavus Community Center Market">
                             </div>
-                            
-                            <p><strong>Season:</strong> June - October</p>
-                            <span class="market-season">2nd Saturday • Join Us!</span>
+                            <div class="market-info">
+                                <h3>Gustavus 2nd Saturday Market</h3>
+                                <p>Alaskan wildlife-inspired pieces, fiber art, and rabbitry information. Perfect for visitors and locals alike.</p>
+                                
+                                <div class="gustavus-dates">
+                                    <p>📅 2026 Market Dates:</p>
+                                    <div class="date-grid">
+                                        <span class="date-item">June 13</span>
+                                        <span class="date-item">July 11</span>
+                                        <span class="date-item">August 8</span>
+                                        <span class="date-item">September 12</span>
+                                        <span class="date-item">October 10</span>
+                                    </div>
+                                    <div class="market-time">All markets: 12:00–2:30pm</div>
+                                    <div class="market-location">Gustavus Community Center</div>
+                                </div>
+                                
+                                <p><strong>Season:</strong> June - October</p>
+                                <span class="market-season">2nd Saturday • Join Us!</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Sunday Market Blurb - directly below Gustavus card -->
+                        <div class="sunday-market-blurb">
+                            <p><strong>🐇 Sunday Market at A&E Trading Company</strong></p>
+                            <p>Sundays, Noon – 4pm (weather permitting) • May 24 – August 30</p>
+                            <p>📍 Near the Community Garden • Free bunny petting zoo, plant starts, and art!</p>
+                            <p><em>Come watch our bunnies grow up!</em></p>
+                        </div>
+                        
+                        <!-- Strawberry Festival Card - directly below Sunday Market blurb -->
+                        <div class="strawberry-festival-card">
+                            <h3>🍓 Strawberry Festival 🍓</h3>
+                            <div class="festival-highlight">August 15–16 | Salmon River Park</div>
+                            <p>🎶 Live music, games, and a special strawberry recipe contest</p>
+                            <p>🧸 Find Geneva near the bunny petting zoo.</p>
+                            <p><em>Come celebrate summer's sweetest berry!</em></p>
                         </div>
                     </div>
                     
@@ -917,30 +942,13 @@
                         </div>
                     </div>
                 </div>
-                
-                <!-- Sunday Market Blurb - NEW (below 2nd Saturday card) -->
-                <div class="sunday-market-blurb">
-                    <p><strong>🐇 Sunday Market at A&E Trading Company</strong></p>
-                    <p>Sundays, Noon – 4pm (weather permitting) • May 24 – August 30</p>
-                    <p>📍 Near the Community Garden • Free bunny petting zoo, plant starts, and art!</p>
-                    <p><em>Come watch our bunnies grow up!</em></p>
-                </div>
-                
-                <!-- Strawberry Festival Card - NEW -->
-                <div class="strawberry-festival-card">
-                    <h3>🍓 Strawberry Festival 🍓</h3>
-                    <div class="festival-highlight">August 15–16 | Salmon River Park</div>
-                    <p>🎶 Live music, games, and a special strawberry recipe contest</p>
-                    <p>🧸 Find Geneva near the bunny petting zoo: homemade wild strawberry jelly & strawberry rhubarb pie filling jars for sale. Original art also available.</p>
-                    <p><em>Come celebrate summer's sweetest berry!</em></p>
-                </div>
             </section>
             
             <!-- The Story of Geneva's Trading Post - with new image -->
             <section class="bio-section">
                 <h2>The Story of Geneva's Trading Post</h2>
                 
-                <!-- NEW: Black Rabbit Fur Hat Image below title -->
+                <!-- Black Rabbit Fur Hat Image below title -->
                 <div class="story-intro-image">
                     <img src="images/BlackRabbitFurHat.jpg" alt="Black Rabbit Fur Hat - Handcrafted Alaskan Art">
                     <div class="image-caption">Handcrafted rabbit fur hat from our own hand-tanned pelts</div>
@@ -972,7 +980,7 @@
                 </div>
             </section>
             
-            <!-- NEW: Homestead Tour Card -->
+            <!-- Homestead Tour Card -->
             <div class="homestead-tour-card">
                 <div class="homestead-image">
                     <img src="images/2025GardenInSept.jpg" alt="Our 1-acre homestead garden in September">
