@@ -9,1297 +9,205 @@
     <meta name="author" content="Geneva's Trading Post">
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* Rabbitry-specific styles - UPDATED FOR FULL IMAGES */
-        .page-header {
-            text-align: center;
-            padding: 2rem 1rem;
-            color: white;
-            margin: 0;
-            position: relative;
-            background: none;
-        }
-        
-        .page-header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-image: url('images/RabbitSkinsLong.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            z-index: -1;
-        }
-        
-        .page-header::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: -1;
-        }
-        
-        .page-header h1 {
-            font-size: 2.5rem;
-            margin: 0;
-            color: white;
-            text-shadow: 0 3px 10px rgba(0,0,0,0.7);
-        }
-        
-        .page-header p {
-            font-size: 1.2rem;
-            margin: 0.5rem auto 0;
-            color: white;
-            max-width: 800px;
-            text-shadow: 0 2px 5px rgba(0,0,0,0.7);
-        }
-        
-        nav {
-            background: #34495e;
-            padding: 1rem;
-            text-align: center;
-            border-bottom: 3px solid #3498db;
-        }
-        
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 1rem;
-            font-weight: bold;
-            padding: 0.7rem 1.3rem;
-            border-radius: 5px;
-            display: inline-block;
-            transition: background 0.3s ease;
-        }
-        
-        nav a:hover, .current {
-            background: #3498db;
-        }
-        
-        /* Combined Intro Box - FIXED WHITE SPACE */
-        .combined-intro {
-            background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%);
-            padding: 2rem 2rem 1.5rem 2rem;
-            border-bottom: none;
-        }
-        
-        .intro-content {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .intro-text {
-            text-align: center;
-            margin-bottom: 1rem;
-        }
-        
-        .intro-text h2 {
-            color: #2c3e50;
-            font-size: 2.2rem;
-            margin: 0 0 0.5rem;
-        }
-        
-        .intro-text p {
-            font-size: 1.2rem;
-            color: #34495e;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .intro-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            align-items: stretch;
-            margin-top: 0.5rem;
-        }
-        
-        .intro-card {
-            background: white;
-            border-radius: 15px;
-            padding: 1.2rem 1.5rem;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-            height: 100%;
-            border-top: 4px solid #7cb342;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .intro-card h3 {
-            color: #2c3e50;
-            font-size: 1.6rem;
-            margin: 0 0 0.25rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        
-        .intro-card h3 span {
-            font-size: 2rem;
-        }
-        
-        .intro-card p {
-            font-size: 1.1rem;
-            line-height: 1.4;
-            color: #34495e;
-            margin: 0 0 0.5rem;
-            flex-grow: 1;
-        }
-        
-        .garden-highlight {
-            background: #e8f5e8;
-            padding: 0.7rem 1rem;
-            border-radius: 10px;
-            margin: 0.25rem 0 0;
-            border-left: 5px solid #7cb342;
-        }
-        
-        .garden-highlight p {
-            margin: 0.15rem 0;
-            font-size: 1rem;
-        }
-        
-        .garden-highlight strong {
-            color: #2e7d32;
-            font-size: 1.1rem;
-        }
-        
-        .carrot-image-box {
-            background: #f0f7f0;
-            border-radius: 15px;
-            padding: 1.5rem 2rem;
-            grid-column: span 2;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 0.5rem;
-        }
-        
-        .carrot-image-box p {
-            font-size: 1.2rem;
-            color: #2e7d32;
-            font-weight: bold;
-            margin: 0 0 1rem;
-        }
-        
-        .carrot-image-container {
-            width: 100%;
-            max-height: 400px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: #fff;
-            border-radius: 12px;
-            padding: 1rem;
-        }
-        
-        .carrot-image-container img {
-            max-width: 100%;
-            max-height: 380px;
-            width: auto;
-            height: auto;
-            object-fit: contain;
-            border-radius: 8px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-            border: 3px solid #7cb342;
-        }
-        
-        .section-divider {
-            text-align: center;
-            padding: 1rem 2rem 0.5rem;
-            position: relative;
-            max-width: 1000px;
-            margin: 1rem auto 0.5rem;
-        }
-        
-        .section-divider h3 {
-            color: #2c3e50;
-            font-size: 1.8rem;
-            margin-bottom: 0.5rem;
-            padding: 0 2rem;
-            background: white;
-            display: inline-block;
-            position: relative;
-            z-index: 2;
-        }
-        
-        .divider-line {
-            border-top: 3px solid #3498db;
-            position: absolute;
-            top: 50%;
-            left: 0;
-            right: 0;
-            z-index: 1;
-        }
-        
-        .full-divider {
-            border-top: 4px solid #2c3e50;
-            margin: 2rem auto;
-            max-width: 1200px;
-            position: relative;
-        }
-        
-        .full-divider::after {
-            content: "🐇";
-            position: absolute;
-            top: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: white;
-            padding: 0 1rem;
-            font-size: 1.5rem;
-        }
-        
-        .rabbit-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 2rem;
-            padding: 1.5rem 2rem 2rem;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-        
-        .rabbit-card {
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-            border: 1px solid #e0e0e0;
-            position: relative;
-        }
-        
-        .for-sale-tag {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-weight: bold;
-            z-index: 3;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
-            background: #e74c3c;
-            color: white;
-        }
-        
-        .temp-tag {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-weight: bold;
-            z-index: 3;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
-            background: #f39c12;
-            color: white;
-        }
-        
-        .note-tag {
-            position: absolute;
-            top: 15px;
-            left: 15px;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-weight: bold;
-            z-index: 3;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
-            background: #3498db;
-            color: white;
-            font-size: 0.9rem;
-            max-width: 200px;
-            text-align: center;
-        }
-        
-        .price-tag {
-            position: absolute;
-            top: 15px;
-            left: 15px;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-weight: bold;
-            z-index: 3;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
-            background: #27ae60;
-            color: white;
-            opacity: 1;
-            transition: transform 0.2s ease;
-        }
-        
-        .price-tag:hover {
-            transform: scale(1.05);
-            background: #2ecc71;
-        }
-        
-        /* SPRING LITTER HIGHLIGHTS SLIDESHOW - Consolidated */
-        .spring-litter-card {
-            background: linear-gradient(135deg, #fef9e6 0%, #fff5e0 100%);
-            border-radius: 28px;
-            margin: 1.5rem auto;
-            max-width: 900px;
-            padding: 1.8rem 2rem 2rem 2rem;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-            border-left: 8px solid #ff9800;
-            transition: transform 0.2s;
-        }
-        
-        .spring-litter-card h3 {
-            font-size: 2rem;
-            color: #d35400;
-            text-align: center;
-            margin-top: 0;
-            margin-bottom: 1.5rem;
-            font-weight: 700;
-            letter-spacing: -0.5px;
-            text-shadow: 1px 1px 0 rgba(255,220,150,0.8);
-        }
-        
-        /* Reuse slideshow styles for rabbit slideshow */
-        .rabbit-slideshow-container {
-            position: relative;
-            max-width: 100%;
-            margin: 0 auto;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-            background-color: #fef5e6;
-        }
-        
-        .rabbit-slide {
-            display: none;
-            text-align: center;
-            animation: fadeEffect 1s;
-        }
-        
-        .rabbit-slide img {
-            width: 100%;
-            max-height: 420px;
-            object-fit: contain;
-            background: #fff5e6;
-            border-bottom: 2px solid #ffcc80;
-        }
-        
-        .rabbit-caption-text {
-            padding: 12px 16px;
-            background: rgba(210, 105, 30, 0.85);
-            color: white;
-            font-size: 1rem;
-            text-align: center;
-            font-style: italic;
-            font-weight: 500;
-            backdrop-filter: blur(3px);
-        }
-        
-        .rabbit-prev, .rabbit-next {
-            cursor: pointer;
-            position: absolute;
-            top: 45%;
-            width: 44px;
-            padding: 14px 0;
-            margin-top: -28px;
-            color: white;
-            font-weight: bold;
-            font-size: 22px;
-            transition: 0.3s;
-            user-select: none;
-            background-color: rgba(0, 0, 0, 0.5);
-            text-decoration: none;
-            z-index: 10;
-            text-align: center;
-            border-radius: 0;
-            backdrop-filter: blur(2px);
-        }
-        
-        .rabbit-prev {
-            left: 0;
-            border-radius: 0 8px 8px 0;
-        }
-        
-        .rabbit-next {
-            right: 0;
-            border-radius: 8px 0 0 8px;
-        }
-        
-        .rabbit-prev:hover, .rabbit-next:hover {
-            background-color: rgba(0, 0, 0, 0.85);
-            transform: scale(1.02);
-        }
-        
-        .rabbit-dot-group {
-            text-align: center;
-            padding: 12px 0;
-            background: #fff0e0;
-        }
-        
-        .rabbit-dot {
-            cursor: pointer;
-            height: 12px;
-            width: 12px;
-            margin: 0 4px;
-            background-color: #bbb;
-            border-radius: 50%;
-            display: inline-block;
-            transition: background-color 0.3s ease;
-        }
-        
-        .rabbit-dot-active, .rabbit-dot:hover {
-            background-color: #e67e22;
-        }
-        
-        @keyframes fadeEffect {
-            from {opacity: 0.4;}
-            to {opacity: 1;}
-        }
-        
-        /* Check Back Soon Message - SIMPLIFIED */
-        .check-back-soon {
-            text-align: center;
-            padding: 2rem;
-            background: #f9f9f9;
-            border-radius: 15px;
-            max-width: 600px;
-            margin: 1rem auto;
-            border: 2px dashed #3498db;
-        }
-        
-        .check-back-soon h3 {
-            font-size: 1.8rem;
-            color: #2c3e50;
-            margin: 0;
-        }
-        
-        .rabbit-card:hover {
-            transform: translateY(-8px) rotate(1deg);
-            box-shadow: 0 12px 25px rgba(0,0,0,0.15);
-        }
-        
-        .rabbit-image-container {
-            width: 100%;
-            height: 280px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: #f8f9fa;
-            border-bottom: 3px solid #3498db;
-            padding: 1rem;
-        }
-        
-        .rabbit-card img {
-            max-width: 100%;
-            max-height: 100%;
-            width: auto;
-            height: auto;
-            object-fit: contain;
-        }
-        
-        .rabbit-info {
-            padding: 1.5rem 1.8rem;
-            background: linear-gradient(to bottom, white, #f9f9f9);
-        }
-        
-        .rabbit-info h3 {
-            margin: 0 0 0.3rem;
-            color: #2c3e50;
-            font-size: 1.5rem;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 0.3rem;
-        }
-        
-        .rabbit-info p {
-            margin: 0.5rem 0;
-            color: #34495e;
-            line-height: 1.4;
-        }
-        
-        .rabbit-details {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        .breed-tag, .gender-tag, .age-tag {
-            padding: 0.4rem 1rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: bold;
-            color: white;
-        }
-        
+        /* ===== FULL ORIGINAL STYLES (PRESERVED) ===== */
+        .page-header { text-align: center; padding: 2rem 1rem; color: white; margin: 0; position: relative; background: none; }
+        .page-header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: url('images/RabbitSkinsLong.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; z-index: -1; }
+        .page-header::after { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.5); z-index: -1; }
+        .page-header h1 { font-size: 2.5rem; margin: 0; color: white; text-shadow: 0 3px 10px rgba(0,0,0,0.7); }
+        .page-header p { font-size: 1.2rem; margin: 0.5rem auto 0; color: white; max-width: 800px; text-shadow: 0 2px 5px rgba(0,0,0,0.7); }
+        nav { background: #34495e; padding: 1rem; text-align: center; border-bottom: 3px solid #3498db; }
+        nav a { color: white; text-decoration: none; margin: 0 1rem; font-weight: bold; padding: 0.7rem 1.3rem; border-radius: 5px; display: inline-block; transition: background 0.3s ease; }
+        nav a:hover, .current { background: #3498db; }
+        .combined-intro { background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%); padding: 2rem 2rem 1.5rem 2rem; border-bottom: none; }
+        .intro-content { max-width: 1200px; margin: 0 auto; }
+        .intro-text { text-align: center; margin-bottom: 1rem; }
+        .intro-text h2 { color: #2c3e50; font-size: 2.2rem; margin: 0 0 0.5rem; }
+        .intro-text p { font-size: 1.2rem; color: #34495e; max-width: 800px; margin: 0 auto; }
+        .intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: stretch; margin-top: 0.5rem; }
+        .intro-card { background: white; border-radius: 15px; padding: 1.2rem 1.5rem; box-shadow: 0 8px 25px rgba(0,0,0,0.1); height: 100%; border-top: 4px solid #7cb342; display: flex; flex-direction: column; }
+        .intro-card h3 { color: #2c3e50; font-size: 1.6rem; margin: 0 0 0.25rem; display: flex; align-items: center; gap: 0.5rem; }
+        .intro-card h3 span { font-size: 2rem; }
+        .intro-card p { font-size: 1.1rem; line-height: 1.4; color: #34495e; margin: 0 0 0.5rem; flex-grow: 1; }
+        .garden-highlight { background: #e8f5e8; padding: 0.7rem 1rem; border-radius: 10px; margin: 0.25rem 0 0; border-left: 5px solid #7cb342; }
+        .garden-highlight p { margin: 0.15rem 0; font-size: 1rem; }
+        .garden-highlight strong { color: #2e7d32; font-size: 1.1rem; }
+        .carrot-image-box { background: #f0f7f0; border-radius: 15px; padding: 1.5rem 2rem; grid-column: span 2; display: flex; flex-direction: column; align-items: center; margin-top: 0.5rem; }
+        .carrot-image-box p { font-size: 1.2rem; color: #2e7d32; font-weight: bold; margin: 0 0 1rem; }
+        .carrot-image-container { width: 100%; max-height: 400px; display: flex; align-items: center; justify-content: center; background: #fff; border-radius: 12px; padding: 1rem; }
+        .carrot-image-container img { max-width: 100%; max-height: 380px; width: auto; height: auto; object-fit: contain; border-radius: 8px; box-shadow: 0 8px 20px rgba(0,0,0,0.15); border: 3px solid #7cb342; }
+        .section-divider { text-align: center; padding: 1rem 2rem 0.5rem; position: relative; max-width: 1000px; margin: 1rem auto 0.5rem; }
+        .section-divider h3 { color: #2c3e50; font-size: 1.8rem; margin-bottom: 0.5rem; padding: 0 2rem; background: white; display: inline-block; position: relative; z-index: 2; }
+        .divider-line { border-top: 3px solid #3498db; position: absolute; top: 50%; left: 0; right: 0; z-index: 1; }
+        .full-divider { border-top: 4px solid #2c3e50; margin: 2rem auto; max-width: 1200px; position: relative; }
+        .full-divider::after { content: "🐇"; position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: white; padding: 0 1rem; font-size: 1.5rem; }
+        .rabbit-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 2rem; padding: 1.5rem 2rem 2rem; max-width: 1400px; margin: 0 auto; }
+        .rabbit-card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 6px 20px rgba(0,0,0,0.1); transition: transform 0.3s ease; border: 1px solid #e0e0e0; position: relative; }
+        .for-sale-tag { position: absolute; top: 15px; right: 15px; padding: 0.5rem 1rem; border-radius: 20px; font-weight: bold; z-index: 3; box-shadow: 0 3px 10px rgba(0,0,0,0.2); background: #e74c3c; color: white; }
+        .temp-tag { position: absolute; top: 15px; right: 15px; padding: 0.5rem 1rem; border-radius: 20px; font-weight: bold; z-index: 3; box-shadow: 0 3px 10px rgba(0,0,0,0.2); background: #f39c12; color: white; }
+        .note-tag { position: absolute; top: 15px; left: 15px; padding: 0.5rem 1rem; border-radius: 20px; font-weight: bold; z-index: 3; box-shadow: 0 3px 10px rgba(0,0,0,0.2); background: #3498db; color: white; font-size: 0.9rem; max-width: 200px; text-align: center; }
+        .price-tag { position: absolute; top: 15px; left: 15px; padding: 0.5rem 1rem; border-radius: 20px; font-weight: bold; z-index: 3; box-shadow: 0 3px 10px rgba(0,0,0,0.2); background: #27ae60; color: white; opacity: 1; transition: transform 0.2s ease; }
+        .price-tag:hover { transform: scale(1.05); background: #2ecc71; }
+        .spring-litter-card { background: linear-gradient(135deg, #fef9e6 0%, #fff5e0 100%); border-radius: 28px; margin: 1.5rem auto; max-width: 900px; padding: 1.8rem 2rem 2rem 2rem; box-shadow: 0 10px 25px rgba(0,0,0,0.08); border-left: 8px solid #ff9800; transition: transform 0.2s; }
+        .spring-litter-card h3 { font-size: 2rem; color: #d35400; text-align: center; margin-top: 0; margin-bottom: 1.5rem; font-weight: 700; letter-spacing: -0.5px; text-shadow: 1px 1px 0 rgba(255,220,150,0.8); }
+        .rabbit-slideshow-container { position: relative; max-width: 100%; margin: 0 auto; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.15); background-color: #fef5e6; }
+        .rabbit-slide { display: none; text-align: center; animation: fadeEffect 1s; }
+        .rabbit-slide img { width: 100%; max-height: 420px; object-fit: contain; background: #fff5e6; border-bottom: 2px solid #ffcc80; }
+        .rabbit-caption-text { padding: 12px 16px; background: rgba(210, 105, 30, 0.85); color: white; font-size: 1rem; text-align: center; font-style: italic; font-weight: 500; backdrop-filter: blur(3px); }
+        .rabbit-prev, .rabbit-next { cursor: pointer; position: absolute; top: 45%; width: 44px; padding: 14px 0; margin-top: -28px; color: white; font-weight: bold; font-size: 22px; transition: 0.3s; user-select: none; background-color: rgba(0, 0, 0, 0.5); text-decoration: none; z-index: 10; text-align: center; border-radius: 0; backdrop-filter: blur(2px); }
+        .rabbit-prev { left: 0; border-radius: 0 8px 8px 0; }
+        .rabbit-next { right: 0; border-radius: 8px 0 0 8px; }
+        .rabbit-prev:hover, .rabbit-next:hover { background-color: rgba(0, 0, 0, 0.85); transform: scale(1.02); }
+        .rabbit-dot-group { text-align: center; padding: 12px 0; background: #fff0e0; }
+        .rabbit-dot { cursor: pointer; height: 12px; width: 12px; margin: 0 4px; background-color: #bbb; border-radius: 50%; display: inline-block; transition: background-color 0.3s ease; }
+        .rabbit-dot-active, .rabbit-dot:hover { background-color: #e67e22; }
+        @keyframes fadeEffect { from {opacity: 0.4;} to {opacity: 1;} }
+        .check-back-soon { text-align: center; padding: 2rem; background: #f9f9f9; border-radius: 15px; max-width: 600px; margin: 1rem auto; border: 2px dashed #3498db; }
+        .check-back-soon h3 { font-size: 1.8rem; color: #2c3e50; margin: 0; }
+        .rabbit-card:hover { transform: translateY(-8px) rotate(1deg); box-shadow: 0 12px 25px rgba(0,0,0,0.15); }
+        .rabbit-image-container { width: 100%; height: 280px; display: flex; align-items: center; justify-content: center; background: #f8f9fa; border-bottom: 3px solid #3498db; padding: 1rem; }
+        .rabbit-card img { max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; }
+        .rabbit-info { padding: 1.5rem 1.8rem; background: linear-gradient(to bottom, white, #f9f9f9); }
+        .rabbit-info h3 { margin: 0 0 0.3rem; color: #2c3e50; font-size: 1.5rem; border-bottom: 2px solid #3498db; padding-bottom: 0.3rem; }
+        .rabbit-info p { margin: 0.5rem 0; color: #34495e; line-height: 1.4; }
+        .rabbit-details { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.5rem; }
+        .breed-tag, .gender-tag, .age-tag { padding: 0.4rem 1rem; border-radius: 20px; font-size: 0.9rem; font-weight: bold; color: white; }
         .breed-tag { background: #9b59b6; }
         .gender-tag { background: #3498db; }
         .age-tag { background: #2ecc71; }
-        
-        .rabbit-traits {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.4rem;
-            margin: 0.8rem 0 0.3rem;
-        }
-        
-        .trait-badge {
-            background: #f0f0f0;
-            color: #2c3e50;
-            padding: 0.2rem 0.8rem;
-            border-radius: 15px;
-            font-size: 0.85rem;
-            font-weight: 500;
-            border-left: 3px solid #3498db;
-        }
-        
-        .breeding-program {
-            background: #f8f9fa;
-            padding: 1.5rem 2rem;
-            border-radius: 10px;
-            margin: 1.5rem auto;
-            max-width: 1000px;
-            border-left: 5px solid #3498db;
-        }
-        
-        .breeding-program h3 {
-            color: #2c3e50;
-            font-size: 1.8rem;
-            margin: 0 0 0.5rem;
-        }
-        
-        .breeding-program ul {
-            font-size: 1rem;
-            line-height: 1.5;
-            color: #34495e;
-            margin: 0;
-        }
-        
-        /* Petting Zoo Section - UPDATED with Sunday Market info & CUSTOM SLIDESHOW */
-        .petting-zoo-section {
-            background: #fff3e0;
-            padding: 2rem 2rem;
-            margin: 1.5rem auto;
-            border-top: 5px solid #ff9800;
-            border-bottom: 5px solid #ff9800;
-        }
-        
-        .petting-zoo-content {
-            max-width: 1000px;
-            margin: 0 auto;
-            text-align: center;
-        }
-        
-        .petting-zoo-content h3 {
-            font-size: 2rem;
-            color: #2c3e50;
-            margin: 0 0 0.5rem;
-        }
-        
-        .petting-zoo-image {
-            max-width: 800px;
-            margin: 1.5rem auto;
-            background: white;
-            border-radius: 15px;
-            padding: 1rem;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-        
-        .petting-zoo-image img {
-            max-width: 100%;
-            max-height: 400px;
-            object-fit: contain;
-            border-radius: 10px;
-        }
-        
-        .zoo-description {
-            font-size: 1.1rem;
-            color: #34495e;
-            max-width: 700px;
-            margin: 0.5rem auto;
-        }
-        
-        /* Sunday Market Announcement Box - NEW */
-        .sunday-market-announcement {
-            background: #5d4037;
-            border-radius: 20px;
-            padding: 1rem 1.5rem;
-            margin: 1.5rem auto;
-            max-width: 700px;
-            text-align: center;
-            color: #ffecb3;
-            border: 2px solid #d9a066;
-        }
-        
-        .sunday-market-announcement p {
-            margin: 0.25rem 0;
-            font-size: 1.1rem;
-        }
-        
-        .sunday-market-announcement strong {
-            color: #ffd966;
-            font-size: 1.2rem;
-        }
-        
-        /* ARBA Convention Banner */
-        .arba-banner {
-            background: linear-gradient(135deg, #6a1b9a 0%, #4a148c 100%);
-            padding: 1.5rem;
-            text-align: center;
-            color: white;
-            border-radius: 10px;
-            max-width: 900px;
-            margin: 1.5rem auto;
-            box-shadow: 0 8px 20px rgba(106, 27, 154, 0.3);
-            border: 3px solid #ffd54f;
-        }
-        
-        .arba-banner h3 {
-            font-size: 2rem;
-            margin: 0 0 0.25rem;
-            color: #ffd54f;
-            text-shadow: 0 2px 5px rgba(0,0,0,0.3);
-        }
-        
-        .arba-banner p {
-            font-size: 1.2rem;
-            margin: 0.2rem 0;
-            font-weight: bold;
-            letter-spacing: 1px;
-        }
-        
-        .arba-banner .dates {
-            font-size: 1.3rem;
-            color: #ffd54f;
-            margin-top: 0.25rem;
-        }
-        
-        .donation-section {
-            background: #e8f5e9;
-            padding: 1.5rem;
-            border-radius: 15px;
-            margin: 1.5rem auto;
-            max-width: 700px;
-        }
-        
-        .donation-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin: 1rem 0;
-        }
-        
-        .donate-btn {
-            color: white;
-            padding: 0.8rem 1.8rem;
-            text-decoration: none;
-            border-radius: 30px;
-            font-weight: bold;
-            font-size: 1.1rem;
-            transition: transform 0.3s, background 0.3s;
-        }
-        
-        .donate-btn:hover {
-            transform: scale(1.05);
-        }
-        
-        .venmo-btn {
-            background: #3f51b5;
-        }
-        
-        .venmo-btn:hover {
-            background: #303f9f;
-        }
-        
-        .paypal-btn {
-            background: #0070ba;
-        }
-        
-        .paypal-btn:hover {
-            background: #005ea6;
-        }
-        
-        .hay-fund-note {
-            font-style: italic;
-            color: #2e7d32;
-            font-size: 1rem;
-            margin-top: 0.5rem;
-        }
-        
-        /* Christmas Pippy */
-        .christmas-pippy {
-            max-width: 600px;
-            margin: 1.5rem auto;
-            padding: 1rem;
-            background: #fce4ec;
-            border-radius: 15px;
-            text-align: center;
-            border: 3px solid #c2185b;
-        }
-        
-        .christmas-pippy img {
-            max-width: 100%;
-            max-height: 300px;
-            object-fit: contain;
-            border-radius: 10px;
-        }
-        
-        .christmas-pippy p {
-            font-size: 1.2rem;
-            color: #880e4f;
-            font-weight: bold;
-            margin: 0.5rem 0 0;
-        }
-        
-        /* Petting Zoo Custom Slideshow */
-        .zoo-slideshow-container {
-            position: relative;
-            max-width: 100%;
-            margin: 0 auto;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-            background: #fef5e6;
-        }
-        .zoo-slide {
-            display: none;
-            text-align: center;
-            animation: fadeEffect 1s;
-        }
-        .zoo-slide img {
-            width: 100%;
-            max-height: 420px;
-            object-fit: contain;
-            background: #fff5e6;
-        }
-        .zoo-caption {
-            padding: 10px;
-            background: rgba(0,0,0,0.6);
-            color: white;
-            font-style: italic;
-        }
-        .zoo-prev, .zoo-next {
-            cursor: pointer;
-            position: absolute;
-            top: 45%;
-            width: 44px;
-            padding: 14px 0;
-            margin-top: -28px;
-            color: white;
-            font-weight: bold;
-            font-size: 22px;
-            background-color: rgba(0,0,0,0.5);
-            text-align: center;
-            z-index: 10;
-        }
+        .rabbit-traits { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0.8rem 0 0.3rem; }
+        .trait-badge { background: #f0f0f0; color: #2c3e50; padding: 0.2rem 0.8rem; border-radius: 15px; font-size: 0.85rem; font-weight: 500; border-left: 3px solid #3498db; }
+        .breeding-program { background: #f8f9fa; padding: 1.5rem 2rem; border-radius: 10px; margin: 1.5rem auto; max-width: 1000px; border-left: 5px solid #3498db; }
+        .breeding-program h3 { color: #2c3e50; font-size: 1.8rem; margin: 0 0 0.5rem; }
+        .breeding-program ul { font-size: 1rem; line-height: 1.5; color: #34495e; margin: 0; }
+        .petting-zoo-section { background: #fff3e0; padding: 2rem 2rem; margin: 1.5rem auto; border-top: 5px solid #ff9800; border-bottom: 5px solid #ff9800; }
+        .petting-zoo-content { max-width: 1000px; margin: 0 auto; text-align: center; }
+        .petting-zoo-content h3 { font-size: 2rem; color: #2c3e50; margin: 0 0 0.5rem; }
+        .sunday-market-announcement { background: #5d4037; border-radius: 20px; padding: 1rem 1.5rem; margin: 1.5rem auto; max-width: 700px; text-align: center; color: #ffecb3; border: 2px solid #d9a066; }
+        .sunday-market-announcement p { margin: 0.25rem 0; font-size: 1.1rem; }
+        .sunday-market-announcement strong { color: #ffd966; font-size: 1.2rem; }
+        .arba-banner { background: linear-gradient(135deg, #6a1b9a 0%, #4a148c 100%); padding: 1.5rem; text-align: center; color: white; border-radius: 10px; max-width: 900px; margin: 1.5rem auto; box-shadow: 0 8px 20px rgba(106, 27, 154, 0.3); border: 3px solid #ffd54f; }
+        .arba-banner h3 { font-size: 2rem; margin: 0 0 0.25rem; color: #ffd54f; text-shadow: 0 2px 5px rgba(0,0,0,0.3); }
+        .arba-banner p { font-size: 1.2rem; margin: 0.2rem 0; font-weight: bold; letter-spacing: 1px; }
+        .arba-banner .dates { font-size: 1.3rem; color: #ffd54f; margin-top: 0.25rem; }
+        .donation-section { background: #e8f5e9; padding: 1.5rem; border-radius: 15px; margin: 1.5rem auto; max-width: 700px; }
+        .donation-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin: 1rem 0; }
+        .donate-btn { color: white; padding: 0.8rem 1.8rem; text-decoration: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; transition: transform 0.3s, background 0.3s; }
+        .donate-btn:hover { transform: scale(1.05); }
+        .venmo-btn { background: #3f51b5; }
+        .venmo-btn:hover { background: #303f9f; }
+        .paypal-btn { background: #0070ba; }
+        .paypal-btn:hover { background: #005ea6; }
+        .hay-fund-note { font-style: italic; color: #2e7d32; font-size: 1rem; margin-top: 0.5rem; }
+        .christmas-pippy { max-width: 600px; margin: 1.5rem auto; padding: 1rem; background: #fce4ec; border-radius: 15px; text-align: center; border: 3px solid #c2185b; }
+        .christmas-pippy img { max-width: 100%; max-height: 300px; object-fit: contain; border-radius: 10px; }
+        .christmas-pippy p { font-size: 1.2rem; color: #880e4f; font-weight: bold; margin: 0.5rem 0 0; }
+        .fur-banner { position: relative; width: 100%; height: 250px; overflow: hidden; margin: 2rem 0; }
+        .fur-banner img { width: 100%; height: 100%; object-fit: cover; }
+        .banner-overlay { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.5); display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; text-align: center; padding: 2rem; }
+        .banner-overlay h3 { font-size: 3rem; margin: 0 0 0.5rem; color: white; text-shadow: 0 3px 10px rgba(0,0,0,0.5); letter-spacing: 1px; }
+        .banner-overlay p { font-size: 1.8rem; max-width: 800px; text-shadow: 0 2px 5px rgba(0,0,0,0.5); margin: 0; }
+        .two-cards-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; max-width: 1400px; margin: 2rem auto; padding: 0 2rem; }
+        .full-width-card { max-width: 1200px; margin: 2rem auto; background: #8B5A2B; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.25); }
+        .full-width-card .card-content { padding: 2rem; background: #8B5A2B; color: #f5f0e0; }
+        .full-width-card .card-content h3 { font-size: 2rem; margin: 0 0 1rem; color: #f5e6d3; border-bottom: 3px solid #D4A373; display: inline-block; padding-bottom: 0.3rem; }
+        .section-title-banner { text-align: center; padding: 1rem; background: #5A3A1A; color: #f5e6d3; margin: 0; border-radius: 10px 10px 0 0; }
+        .section-title-banner h2 { font-size: 1.8rem; margin: 0; letter-spacing: 2px; font-weight: bold; }
+        .card-medium-tan { background: #F5EBD8; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.15); transition: transform 0.3s ease, box-shadow 0.3s ease; height: 100%; display: flex; flex-direction: column; }
+        .card-medium-tan:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.2); }
+        .card-image-container { width: 100%; height: 280px; overflow: hidden; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.05); }
+        .card-image-container img { width: 100%; height: 100%; object-fit: cover; }
+        .card-image-container.pelts-img img { object-fit: contain; background: #f5f0e8; }
+        .card-content-inner { padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column; }
+        .card-content-inner h3 { font-size: 1.8rem; margin: 0 0 0.5rem; color: #2c3e50; border-bottom: 3px solid #3498db; display: inline-block; padding-bottom: 0.3rem; }
+        .price-table { width: 100%; margin: 0.75rem 0; border-collapse: collapse; font-size: 0.9rem; }
+        .price-table td { padding: 0.4rem 0; border-bottom: 1px solid rgba(0,0,0,0.1); }
+        .price-table td:last-child { text-align: right; font-weight: bold; color: #2c3e50; }
+        .scrap-offer-card { background: rgba(0,0,0,0.08); border-radius: 12px; padding: 0.75rem; margin: 0.75rem 0; text-align: center; }
+        .scrap-offer-card img { max-width: 100%; max-height: 150px; object-fit: contain; border-radius: 8px; margin-bottom: 0.5rem; }
+        .batch-info, .policy-info { background: rgba(0,0,0,0.05); border-radius: 10px; padding: 0.75rem; margin: 0.75rem 0; font-size: 0.85rem; }
+        .custom-note { margin-top: 0.75rem; font-style: italic; font-size: 0.9rem; border-left: 3px solid #D4A373; padding-left: 0.75rem; color: #f5e6d3; }
+        .slideshow-container { position: relative; width: 100%; height: 350px; overflow: hidden; background: #f8f5ef; }
+        .slide { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; transition: opacity 0.8s ease-in-out; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+        .slide.active { opacity: 1; }
+        .slide img { width: 100%; height: 280px; object-fit: contain; background: #f8f5ef; }
+        .slide-caption { padding: 0.5rem; text-align: center; font-size: 0.9rem; font-weight: bold; color: #2c3e50; background: rgba(255,255,255,0.9); width: 100%; }
+        .slide-nav { display: flex; justify-content: center; gap: 0.75rem; padding: 0.75rem; background: rgba(0,0,0,0.05); }
+        .nav-dot { width: 10px; height: 10px; border-radius: 50%; background: #bdc3c7; cursor: pointer; transition: background 0.3s ease; }
+        .nav-dot.active { background: #3498db; transform: scale(1.2); }
+        .single-hover { display: flex; justify-content: center; margin: 1.5rem 0; }
+        .hover-image-single { position: relative; width: 100%; max-width: 500px; height: auto; min-height: 350px; overflow: hidden; border-radius: 15px; cursor: pointer; box-shadow: 0 5px 20px rgba(0,0,0,0.2); margin: 0 auto; background: #f5e6d3; }
+        .hover-image-single img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain; transition: opacity 0.5s ease-in-out; background: #f5e6d3; }
+        .hover-image-single .img-front { opacity: 1; z-index: 2; }
+        .hover-image-single .img-back { opacity: 0; z-index: 1; }
+        .hover-image-single:hover .img-front { opacity: 0; }
+        .hover-image-single:hover .img-back { opacity: 1; }
+        .slipper-gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin: 1.5rem; }
+        .slipper-image { background: rgba(0,0,0,0.2); border-radius: 15px; overflow: hidden; text-align: center; }
+        .slipper-image img { width: 100%; height: 280px; object-fit: contain; background: #f5e6d3; }
+        .slipper-image p { padding: 0.75rem; margin: 0; background: rgba(0,0,0,0.3); font-weight: bold; color: #f5e6d3; }
+        .card-email-light { text-align: center; margin-top: 1rem; padding-top: 0.75rem; border-top: 1px solid rgba(0,0,0,0.1); }
+        .card-email-light a { color: #2c3e50; text-decoration: none; font-weight: bold; }
+        .card-email-light a:hover { text-decoration: underline; color: #3498db; }
+        .card-email-dark { text-align: center; margin-top: 1rem; padding-top: 0.75rem; border-top: 1px solid rgba(255,255,255,0.2); }
+        .card-email-dark a { color: #FFD966; text-decoration: none; font-weight: bold; }
+        .card-email-dark a:hover { text-decoration: underline; }
+        .back-btn { display: inline-block; background: #7f8c8d; color: white; padding: 0.8rem 1.8rem; text-decoration: none; border-radius: 5px; font-weight: bold; margin: 1.5rem auto; transition: background 0.3s; }
+        .back-btn:hover { background: #95a5a6; }
+        footer { text-align: center; padding: 1.5rem; background: #2c3e50; color: white; }
+        .zoo-slideshow-container { position: relative; max-width: 100%; margin: 0 auto; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.15); background: #fef5e6; }
+        .zoo-slide { display: none; text-align: center; animation: fadeEffect 1s; }
+        .zoo-slide img { width: 100%; max-height: 420px; object-fit: contain; background: #fff5e6; }
+        .zoo-caption { padding: 10px; background: rgba(0,0,0,0.6); color: white; font-style: italic; }
+        .zoo-prev, .zoo-next { cursor: pointer; position: absolute; top: 45%; width: 44px; padding: 14px 0; margin-top: -28px; color: white; font-weight: bold; font-size: 22px; background-color: rgba(0,0,0,0.5); text-align: center; z-index: 10; }
         .zoo-prev { left: 0; border-radius: 0 8px 8px 0; }
         .zoo-next { right: 0; border-radius: 8px 0 0 8px; }
         .zoo-prev:hover, .zoo-next:hover { background-color: rgba(0,0,0,0.85); }
         .zoo-dot-group { text-align: center; padding: 10px; background: #fff0e0; }
         .zoo-dot { cursor: pointer; height: 12px; width: 12px; margin: 0 4px; background-color: #bbb; border-radius: 50%; display: inline-block; transition: 0.2s; }
         .zoo-dot-active, .zoo-dot:hover { background-color: #e67e22; }
-        
-        /* rest same as before */
-        .back-btn, footer, etc.
-        /* (keeping original styles) */
-        .back-btn {
-            display: inline-block;
-            background: #7f8c8d;
-            color: white;
-            padding: 0.8rem 1.8rem;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            margin: 1.5rem auto;
-            transition: background 0.3s;
-        }
-        .back-btn:hover { background: #95a5a6; }
-        footer {
-            text-align: center;
-            padding: 1.5rem;
-            background: #2c3e50;
-            color: white;
-        }
-        @media (max-width: 768px) {
-            .intro-grid { grid-template-columns: 1fr; gap: 1rem; }
-            .carrot-image-box { grid-column: span 1; }
-            .carrot-image-container { max-height: 300px; }
-            .carrot-image-container img { max-height: 280px; }
-            .rabbit-grid { grid-template-columns: 1fr; padding: 1rem; gap: 1rem; }
-            nav a { display: block; margin: 0.5rem auto; width: 80%; }
-            .donation-buttons { flex-direction: column; align-items: center; }
-            .donate-btn { width: 80%; }
-            .arba-banner h3 { font-size: 1.5rem; }
-            .two-cards-grid { grid-template-columns: 1fr; padding: 0 1rem; }
-            .full-width-card { margin: 1rem; }
-            .slipper-gallery { grid-template-columns: 1fr; margin: 1rem; }
-            .banner-overlay h3 { font-size: 1.8rem; }
-            .fur-banner { height: 180px; }
-            .slideshow-container { height: 280px; }
-            .slide img { height: 220px; }
-            .hover-image-single { min-height: 250px; }
-            .rabbit-prev, .rabbit-next { width: 36px; padding: 10px 0; font-size: 18px; }
-            .rabbit-slide img { max-height: 280px; }
-        }
+        @media (max-width: 768px) { .intro-grid, .two-cards-grid { grid-template-columns: 1fr; } .carrot-image-box { grid-column: span 1; } .rabbit-grid { grid-template-columns: 1fr; } nav a { display: block; margin: 0.5rem auto; width: 80%; } .donation-buttons { flex-direction: column; } .fur-banner { height: 180px; } .banner-overlay h3 { font-size: 1.8rem; } .banner-overlay p { font-size: 1.2rem; } .slideshow-container { height: 280px; } .rabbit-prev, .rabbit-next { width: 36px; } }
     </style>
 </head>
 <body>
-    <header class="page-header">
-        <h1>Geneva's Rabbitry</h1>
-        <p>Champagne d'Argent & Silver Fox | Fairbanks, AK</p>
-    </header>
-    
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="alaska-textiles.html">Alaskan Textile Art</a>
-        <a href="rabbitry.html" class="current">My Rabbitry</a>
-        <a href="farm-stand.html">Farm Stand</a>
-        <a href="fantasy-ball.html">Fantasy Art</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-    
+    <header class="page-header"><h1>Geneva's Rabbitry</h1><p>Champagne d'Argent & Silver Fox | Fairbanks, AK</p></header>
+    <nav><a href="index.html">Home</a><a href="alaska-textiles.html">Alaskan Textile Art</a><a href="rabbitry.html" class="current">My Rabbitry</a><a href="farm-stand.html">Farm Stand</a><a href="fantasy-ball.html">Fantasy Art</a><a href="contact.html">Contact</a></nav>
     <main>
-        <!-- Combined intro unchanged -->
-        <div class="combined-intro">...</div>
+        <!-- COMBINED INTRO -->
+        <div class="combined-intro"><div class="intro-content"><div class="intro-text"><h2>Our Alaskan Rabbit Family</h2><p>Heritage rabbits raised with care in Fairbanks and Gustavus for meat and fur. Friendly, healthy stock for homesteaders.</p></div><div class="intro-grid"><div class="intro-card"><h3><span>🐰</span> Meet the Bunnies</h3><p>Champagne d'Argent and Silver Fox rabbits with beautiful fur, excellent meat conformation, and friendly dispositions. Each gets individual attention in our Alaska setup.</p></div><div class="intro-card"><h3><span>🌱</span> Garden Gold</h3><p>Best reason to keep rabbits: their poop is the best fertilizer on the planet.</p><div class="garden-highlight"><p><strong>✓ Cold composts directly</strong></p><p><strong>✓ Won't burn plants</strong></p><p><strong>✓ Doubles your carrot size!</strong></p></div></div><div class="carrot-image-box"><p>🐇 Rabbit manure made these carrots (left side) vs. without (right side) ⬇️</p><div class="carrot-image-container"><img src="images/CarrotsWithRabbitPoopvsNot.jpg" alt="Carrot comparison" loading="lazy"></div><p style="margin: 1rem 0 0; font-size: 1.2rem;"><em>May your garden grow great!</em> 🥕</p></div></div></div></div>
         
-        <!-- SPRING LITTER SLIDESHOW (updated image for Porkins baby) -->
-        <div class="spring-litter-card">
-            <h3>🌸 Spring Litter Highlights 🐇</h3>
-            <div class="rabbit-slideshow-container" id="rabbitSlideshow">
-                <div class="rabbit-slide fade"><img src="images/SwamperAndLucille.jpg" alt="Swamper and Lucille"><div class="rabbit-caption-text">Swamper & Lucille — proud parents of 9 healthy babies!</div></div>
-                <div class="rabbit-slide fade"><img src="images/Bunnies1DayOldApril2026.jpg" alt="Newborn bunnies"><div class="rabbit-caption-text">Newborn kits — Lucille's 9 + Porkins' 8 = 17 total bunnies born April 23!</div></div>
-                <div class="rabbit-slide fade"><img src="images/BabyBunny3WeeksOldLitterof9May2026.jpg" alt="Lucille's litter"><div class="rabbit-caption-text">Lucille's 9 purebred Champagne d'Argent babies at 3 weeks old</div></div>
-                <!-- REPLACED IMAGE: Porkins 5 week old babies (exact filename) -->
-                <div class="rabbit-slide fade"><img src="images/2ofPorkins5weekoldbabies.jpg" alt="Porkins babies at 5 weeks"><div class="rabbit-caption-text">Porkins' adorable 5-week-old babies — growing fast!</div></div>
-                <div class="rabbit-slide fade"><img src="images/BabyBunny3WeeksOldMay2026.jpg" alt="Porkins baby cute"><div class="rabbit-caption-text">Porkins' baby showing off that adorable face!</div></div>
-                <a class="rabbit-prev" onclick="changeRabbitSlide(-1)">&#10094;</a>
-                <a class="rabbit-next" onclick="changeRabbitSlide(1)">&#10095;</a>
-            </div>
-            <div class="rabbit-dot-group" id="rabbitDots"></div>
-        </div>
+        <!-- SPRING LITTER SLIDESHOW (UPDATED: added 2ofPorkins5weekoldbabies.jpg) -->
+        <div class="spring-litter-card"><h3>🌸 Spring Litter Highlights 🐇</h3><div class="rabbit-slideshow-container" id="rabbitSlideshow"><div class="rabbit-slide fade"><img src="images/SwamperAndLucille.jpg" alt="Swamper and Lucille" loading="lazy"><div class="rabbit-caption-text">Swamper & Lucille — proud parents of 9 healthy babies!</div></div><div class="rabbit-slide fade"><img src="images/Bunnies1DayOldApril2026.jpg" alt="Newborn bunnies" loading="lazy"><div class="rabbit-caption-text">Newborn kits — Lucille's 9 + Porkins' 8 = 17 total bunnies born April 23!</div></div><div class="rabbit-slide fade"><img src="images/BabyBunny3WeeksOldLitterof9May2026.jpg" alt="Lucille's litter" loading="lazy"><div class="rabbit-caption-text">Lucille's 9 purebred Champagne d'Argent babies at 3 weeks old</div></div><div class="rabbit-slide fade"><img src="images/2ofPorkins5weekoldbabies.jpg" alt="Porkins babies at 5 weeks" loading="lazy"><div class="rabbit-caption-text">Porkins' adorable 5-week-old babies — growing fast!</div></div><div class="rabbit-slide fade"><img src="images/BabyBunny3WeeksOldMay2026.jpg" alt="Porkins baby cute" loading="lazy"><div class="rabbit-caption-text">Porkins' baby showing off that adorable face!</div></div><a class="rabbit-prev" onclick="changeRabbitSlide(-1)">&#10094;</a><a class="rabbit-next" onclick="changeRabbitSlide(1)">&#10095;</a></div><div class="rabbit-dot-group" id="rabbitDots"></div></div>
         
-        <!-- Available section unchanged -->
-        <div class="section-divider"><div class="divider-line"></div><h3>Available</h3></div>
-        <div class="check-back-soon"><h3>🐇 Check Back Soon! 🐇</h3></div>
-        
-        <!-- Permanent Herd -->
+        <div class="section-divider"><div class="divider-line"></div><h3>Available</h3></div><div class="check-back-soon"><h3>🐇 Check Back Soon! 🐇</h3></div>
         <div class="section-divider"><div class="divider-line"></div><h3>Breeding Herd</h3></div>
         <div class="rabbit-grid">
-            <!-- Lucille unchanged -->
-            <div class="rabbit-card"><div class="rabbit-image-container"><img src="images/Lucille.jpg" alt="Lucille"></div><div class="rabbit-info">...</div></div>
-            <!-- Porkins unchanged -->
-            <div class="rabbit-card"><div class="temp-tag">Temp - Summer Trial</div><div class="note-tag">Available Sept in Gustavus as proven doe</div><div class="rabbit-image-container"><img src="images/Porkins.jpg" alt="Porkins"></div><div class="rabbit-info">...</div></div>
-            <!-- Dusty: REPLACED image with DustyDandylion.jpg -->
-            <div class="rabbit-card"><div class="price-tag" style="background: #9b59b6; left: 15px;">🐾 Free Stud</div><div class="rabbit-image-container"><img src="images/DustyDandylion.jpg" alt="Dusty with dandelion"></div><div class="rabbit-info"><div class="rabbit-details"><span class="breed-tag">Champ/Silver Fox</span><span class="gender-tag">Buck</span><span class="age-tag">DOB 5/27/25</span></div><h3>Dusty</h3><div class="rabbit-traits"><span class="trait-badge">11 lbs</span><span class="trait-badge">Thick coat</span><span class="trait-badge">Silvering</span><span class="trait-badge">Good breeder</span></div><p>11 lbs, thick coat with silvering. Aloof but good breeder. Excellent genetics for meat and fur production. <strong>Free stud services to approved does</strong> - contact to discuss breeding.</p></div></div>
-            <!-- Pippy unchanged -->
-            <div class="rabbit-card"><div class="rabbit-image-container"><img src="images/PippieLookingLeft.jpg" alt="Pippy"></div><div class="rabbit-info">...</div></div>
+            <div class="rabbit-card"><div class="rabbit-image-container"><img src="images/Lucille.jpg" alt="Lucille" loading="lazy"></div><div class="rabbit-info"><div class="rabbit-details"><span class="breed-tag">Champagne</span><span class="gender-tag">Doe</span><span class="age-tag">3 Yrs</span></div><h3>Lucille</h3><div class="rabbit-traits"><span class="trait-badge">Matriarch</span><span class="trait-badge">Excellent mother</span><span class="trait-badge">Foundation stock</span></div><p>Matriarch from Delta. Excellent mother, foundation of our program. Produces consistently good litters with great temperament. <strong>Had 9 healthy babies on April 23!</strong></p></div></div>
+            <div class="rabbit-card"><div class="temp-tag">Temp - Summer Trial</div><div class="note-tag">Available Sept in Gustavus as proven doe</div><div class="rabbit-image-container"><img src="images/Porkins.jpg" alt="Porkins" loading="lazy"></div><div class="rabbit-info"><div class="rabbit-details"><span class="breed-tag">Champagne Mix</span><span class="gender-tag">Doe</span><span class="age-tag">DOB 8/2/25</span></div><h3>Porkins</h3><div class="rabbit-traits"><span class="trait-badge">Largest litter</span><span class="trait-badge">Best body type</span><span class="trait-badge">Silvering well</span><span class="trait-badge">Friendly</span></div><p><strong>Keeping Porkins for summer trial as mother doe.</strong> Will be available September in Gustavus as proven doe with excellent mothering instincts. <strong>Had 8 healthy babies on April 23!</strong> Largest of her litter with excellent meat conformation.</p></div></div>
+            <!-- DUSTY: UPDATED IMAGE to DustyDandylion.jpg -->
+            <div class="rabbit-card"><div class="price-tag" style="background: #9b59b6; left: 15px;">🐾 Free Stud</div><div class="rabbit-image-container"><img src="images/DustyDandylion.jpg" alt="Dusty with dandelion" loading="lazy"></div><div class="rabbit-info"><div class="rabbit-details"><span class="breed-tag">Champ/Silver Fox</span><span class="gender-tag">Buck</span><span class="age-tag">DOB 5/27/25</span></div><h3>Dusty</h3><div class="rabbit-traits"><span class="trait-badge">11 lbs</span><span class="trait-badge">Thick coat</span><span class="trait-badge">Silvering</span><span class="trait-badge">Good breeder</span></div><p>11 lbs, thick coat with silvering. Aloof but good breeder. Excellent genetics for meat and fur production. <strong>Free stud services to approved does</strong> - contact to discuss breeding.</p></div></div>
+            <div class="rabbit-card"><div class="rabbit-image-container"><img src="images/PippieLookingLeft.jpg" alt="Pippy" loading="lazy"></div><div class="rabbit-info"><div class="rabbit-details"><span class="breed-tag">Holland Lop</span><span class="gender-tag">Doe</span><span class="age-tag">Rescue</span></div><h3>Pippy</h3><div class="rabbit-traits"><span class="trait-badge">Shelter rescue</span><span class="trait-badge">Family pet</span><span class="trait-badge">Professional napper</span></div><p>Shelter rescue. Family pet, professional napper. Queen of the petting zoo and expert at stealing hearts.</p></div></div>
         </div>
         
-        <!-- PETTING ZOO SECTION with CUSTOM IMAGE SLIDESHOW (3 images) -->
-        <div class="petting-zoo-section">
-            <div class="petting-zoo-content">
-                <h3>🐰 Free Bunny Petting Zoo</h3>
-                <div class="sunday-market-announcement">
-                    <p><strong>📅 Come see us at Sunday Market!</strong></p>
-                    <p>Sundays, noon – 4pm (weather permitting)</p>
-                    <p>📍 A&E Trading Company, near the Community Garden</p>
-                    <p>🐇 Watch our bunnies grow up!</p>
-                </div>
-                
-                <!-- NEW SLIDESHOW for petting zoo photos -->
-                <div class="zoo-slideshow-container" id="zooSlideshow">
-                    <div class="zoo-slide fade"><img src="images/BunnyPettingZooDandlions.jpg" alt="Lucille's babies eating dandelions"><div class="zoo-caption">💛 Lucille's babies being fed dandelions by local kids — pure joy!</div></div>
-                    <div class="zoo-slide fade"><img src="images/BunnyPettingZooImage.jpg" alt="Dusty under sign begging for grass"><div class="zoo-caption">🌾 Dusty under the sign, begging for grass — a true character!</div></div>
-                    <div class="zoo-slide fade"><img src="images/BunnyPettingZoo1.jpg" alt="Lucille and litter at Harvest Festival"><div class="zoo-caption">Harvest Festival — Lucille and her litter with grass collected by local kids.</div></div>
-                    <a class="zoo-prev" onclick="changeZooSlide(-1)">&#10094;</a>
-                    <a class="zoo-next" onclick="changeZooSlide(1)">&#10095;</a>
-                </div>
-                <div class="zoo-dot-group" id="zooDots"></div>
-                
-                <p class="zoo-description">
-                    Last year's Harvest Festival - Lucille and her litter with grass local kids collected. 
-                    Free petting zoo to socialize our bunnies (and spread the rabbit love!).<br><br>
-                    <strong>🐇 What to expect:</strong> Friendly bunnies of all ages. 
-                    Kids and adults welcome to pet, hold (with guidance), and learn about rabbit care. 
-                    Our rabbits are well-socialized and love attention!<br><br>
-                    <strong>📍 Find us:</strong> Look for the bunny fence at Sunday Market (A&E Trading Company, noon-4pm, weather permitting) 
-                    and at special events like the Gustavus Strawberry Festival.
-                </p>
-                
-                <!-- Donation Section unchanged -->
-                <div class="donation-section">
-                    <h4 style="color: #2e7d32; margin-top: 0;">💚 Support the Winter Hay Fund</h4>
-                    <p>Petting zoo is always free, but if you'd like to help keep bellies full when Alaska winter hits, donations are gratefully accepted.</p>
-                    <div class="donation-buttons"><a href="http://venmo.com/u/GJMTradingPost" class="donate-btn venmo-btn" target="_blank">Venmo @GJMTradingPost</a><a href="http://paypal.me/AlaskaPhysics" class="donate-btn paypal-btn" target="_blank">PayPal.me/AlaskaPhysics</a></div>
-                    <p class="hay-fund-note">Every bale helps! All donations go to "the winter hay fund" 🥕</p>
-                </div>
-                
-                <!-- ARBA & Christmas unchanged -->
-                <div class="arba-banner"><h3>🐇 ARBA Convention 2026</h3><p>We're planning to attend!</p><div class="dates">103rd Annual ARBA Convention & Show</div><p>October 24–28, 2026 • Reno, Nevada</p></div>
-                <div class="christmas-pippy"><img src="images/ChristmasPippy.jpg" alt="Pippy in sweater"><p>🎄 "Annoy your pets as much as they annoy you" - Pippy, probably</p></div>
-            </div>
-        </div>
+        <!-- PETTING ZOO SECTION WITH NEW SLIDESHOW (3 images) -->
+        <div class="petting-zoo-section"><div class="petting-zoo-content"><h3>🐰 Free Bunny Petting Zoo</h3><div class="sunday-market-announcement"><p><strong>📅 Come see us at Sunday Market!</strong></p><p>Sundays, noon – 4pm (weather permitting)</p><p>📍 A&E Trading Company, near the Community Garden</p><p>🐇 Watch our bunnies grow up!</p></div><div class="zoo-slideshow-container" id="zooSlideshow"><div class="zoo-slide fade"><img src="images/BunnyPettingZooDandlions.jpg" alt="Lucille's babies eating dandelions" loading="lazy"><div class="zoo-caption">💛 Lucille's babies being fed dandelions by local kids — pure joy!</div></div><div class="zoo-slide fade"><img src="images/BunnyPettingZooImage.jpg" alt="Dusty under sign begging for grass" loading="lazy"><div class="zoo-caption">🌾 Dusty under the sign, begging for grass — a true character!</div></div><div class="zoo-slide fade"><img src="images/BunnyPettingZoo1.jpg" alt="Lucille and litter at Harvest Festival" loading="lazy"><div class="zoo-caption">Harvest Festival — Lucille and her litter with grass collected by local kids.</div></div><a class="zoo-prev" onclick="changeZooSlide(-1)">&#10094;</a><a class="zoo-next" onclick="changeZooSlide(1)">&#10095;</a></div><div class="zoo-dot-group" id="zooDots"></div><p class="zoo-description">Last year's Harvest Festival - Lucille and her litter with grass local kids collected. Free petting zoo to socialize our bunnies (and spread the rabbit love!).<br><br><strong>🐇 What to expect:</strong> Friendly bunnies of all ages. Kids and adults welcome to pet, hold (with guidance), and learn about rabbit care. Our rabbits are well-socialized and love attention!<br><br><strong>📍 Find us:</strong> Look for the bunny fence at Sunday Market (A&E Trading Company, noon-4pm, weather permitting) and at special events like the Gustavus Strawberry Festival.</p><div class="donation-section"><h4 style="color: #2e7d32; margin-top: 0;">💚 Support the Winter Hay Fund</h4><p>Petting zoo is always free, but if you'd like to help keep bellies full when Alaska winter hits, donations are gratefully accepted.</p><div class="donation-buttons"><a href="http://venmo.com/u/GJMTradingPost" class="donate-btn venmo-btn" target="_blank">Venmo @GJMTradingPost</a><a href="http://paypal.me/AlaskaPhysics" class="donate-btn paypal-btn" target="_blank">PayPal.me/AlaskaPhysics</a></div><p class="hay-fund-note">Every bale helps! All donations go to "the winter hay fund" 🥕</p></div><div class="arba-banner"><h3>🐇 ARBA Convention 2026</h3><p>We're planning to attend!</p><div class="dates">103rd Annual ARBA Convention & Show</div><p>October 24–28, 2026 • Reno, Nevada</p></div><div class="christmas-pippy"><img src="images/ChristmasPippy.jpg" alt="Pippy in sweater" loading="lazy"><p>🎄 "Annoy your pets as much as they annoy you" - Pippy, probably</p></div></div></div>
         
-       <!-- Breeding Program -->
-        <section class="breeding-program">
-            <h3>Our Breeding Program</h3>
-            <ul>
-                <li><strong>Champagne d'Argent:</strong> Silvered fur, excellent meat production</li>
-                <li><strong>Silver Fox:</strong> Dual-purpose, remarkable fur quality</li>
-                <li><strong>Goals:</strong> Healthy, friendly rabbits with meat conformation & quality pelts</li>
-                <li><strong>Care:</strong> Individual attention, spacious living, Fairbanks climate-hardy</li>
-            </ul>
-        </section>
-       
-        <div class="full-divider"></div>
-       
-        <!-- FUR BANNER -->
-        <div class="fur-banner">
-            <img src="images/TextureOfRabbitSkinInSnow.jpg" alt="Rabbit Skin in Snow">
-            <div class="banner-overlay">
-                <h3>Rabbit & Snowshoe Hare Fur</h3>
-                <p>Hand-tanned pelts • Custom hats & slippers • Tanning services</p>
-            </div>
-        </div>
-       
-        <!-- TWO CARDS SIDE BY SIDE: Pelts & Tanning Services (Medium Tan) -->
-        <div class="two-cards-grid">
-            <!-- Card 1: Pelts -->
-            <div class="card-medium-tan">
-                <div class="card-image-container pelts-img">
-                    <img src="images/RabbitSkins.jpg" alt="Hand-tanned rabbit pelts">
-                </div>
-                <div class="card-content-inner">
-                    <h3>Hand-Tanned Pelts</h3>
-                    <p>I raise Champagne d'Argent, Silver Fox, and meat mutt rabbits, hand-tanning in small batches using the traditional salt/alum method.</p>
-                    <table class="price-table">
-                        <tr><td>Grade A (Premium)</td><td>$35–50</td></tr>
-                        <tr><td>Grade B (Standard)</td><td>$18–28</td></tr>
-                        <tr><td>Grade C (Utility)</td><td>$8–15</td></tr>
-                    </table>
-                    <div class="scrap-offer-card">
-                        <img src="images/FurScrapBags.jpg" alt="Fur Scrap Bags">
-                        <strong>Fur Scrap Grab Bags – $12 each or 5 for $50</strong><br>
-                        Quart bags (6"×8") of assorted scraps. Great for fly tying, jewelry, and small crafts.
-                    </div>
-                    <div class="card-email-light">
-                        📧 <a href="contact.html">Visit Contact Page to Inquire About Availability</a>
-                    </div>
-                </div>
-            </div>
-           
-            <!-- Card 2: Tanning Services - Image uses cover (original look) -->
-            <div class="card-medium-tan">
-                <div class="card-image-container">
-                    <img src="images/RabbitSkinsLong.jpg" alt="Tanning services">
-                </div>
-                <div class="card-content-inner">
-                    <h3>Tanning Services</h3>
-                    <p>Salt/alum tanning for domestic rabbit, snowshoe hare, and squirrel hides. Small batches of 10–12 pelts.</p>
-                    <table class="price-table">
-                        <tr><td>Baby rabbit, squirrel, hare (fresh/frozen)</td><td>$6</td></tr>
-                        <tr><td>Adult prime rabbit (fresh/frozen)</td><td>$12</td></tr>
-                        <tr><td>Problem pelts*</td><td>$20</td></tr>
-                    </table>
-                    <p style="font-size: 0.75rem; margin-top: -0.5rem;">*Freezer-burned, dried out, or heavy fleshing required</p>
-                    <div class="batch-info">
-                        <strong>Batch Options:</strong><br>
-                        Add to my next batch: 3–6 weeks<br>
-                        On-demand (10–12 pelts): 3 weeks
-                    </div>
-                    <div class="policy-info">
-                        <strong>Policy:</strong> Free assessment upfront. 50% refund on good pelts if damaged. No refund on problem pelts (risk disclosed).
-                    </div>
-                    <div class="card-email-light">
-                        📧 <a href="contact.html">Visit Contact Page to Discuss Your Batch</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-       
-        <!-- FULL WIDTH CARD: Hats with Title Banner - Dark Brown -->
-        <div class="section-title-banner">
-            <h2>Rabbit Skin Hats</h2>
-        </div>
-        <div class="full-width-card">
-            <div class="slideshow-container" id="hatSlideshow">
-                <div class="slide active">
-                    <img src="images/RabbitSkinHatWornGreenAndOrangeFur.jpg" alt="Rabbit fur hat worn">
-                    <div class="slide-caption">One size fits most</div>
-                </div>
-                <div class="slide">
-                    <img src="images/FourRabbitFurHatOnSide.jpg" alt="Four rabbit fur hats">
-                    <div class="slide-caption">Unique plaid patterns, no two the same</div>
-                </div>
-                <div class="slide">
-                    <img src="images/RabbitSkinCloseUpOnSilkLiningOfHat.jpg" alt="Silk lining detail">
-                    <div class="slide-caption">Close up on hand-sewn silk liner</div>
-                </div>
-                <div class="slide">
-                    <img src="images/ThreeRabbitSkinHatsFront.jpg" alt="Three rabbit skin hats front view">
-                    <div class="slide-caption">Hand-selected furs</div>
-                </div>
-            </div>
-            <div class="slide-nav" id="hatNav">
-                <span class="nav-dot active"></span>
-                <span class="nav-dot"></span>
-                <span class="nav-dot"></span>
-                <span class="nav-dot"></span>
-            </div>
-            <div class="card-content">
-                <h3>Warm, Handcrafted Rabbit Fur Hats</h3>
-                <p><strong>Ready-Made Hats – $220 each</strong><br>I currently have a few finished hats available, each made from my own hand-tanned pelts. These hats feature silk or cotton/linen linings and are perfect for Alaska winters.</p>
-               
-                <!-- Single Centered Hover Image - FIXED -->
-                <div class="single-hover">
-                    <div class="hover-image-single" style="height: 350px;">
-                        <img src="images/RabbitSkinHat.jpg" alt="Rabbit Skin Hat" class="img-front">
-                        <img src="images/RabbitHatOn.jpg" alt="Modeling Rabbit Skin Hat" class="img-back">
-                    </div>
-                </div>
-                <p style="text-align: center; font-size: 0.85rem; margin-top: -0.5rem;"><em>Hover over image to see hat being worn</em></p>
-               
-                <div class="custom-note">
-                    <strong>Custom Hats:</strong> One hat requires two skins. Materials deposit + $160 labor. 8-week turnaround. Rush orders +$25 (1 week). Local customers can try on my basic pattern to adjust fit, ear flaps, and fur selection.
-                </div>
-                <div class="card-email-dark">
-                    📧 <a href="contact.html">Visit Contact Page to Purchase or Start a Custom Order</a>
-                </div>
-            </div>
-        </div>
-       
-        <!-- FULL WIDTH CARD: Slippers with Title Banner - Dark Brown -->
-        <div class="section-title-banner">
-            <h2>Custom Rabbit Skin Slippers</h2>
-        </div>
-        <div class="full-width-card">
-            <div class="slipper-gallery">
-                <div class="slipper-image">
-                    <img src="images/FurSlipperMakingStillLife.jpg" alt="Slipper making process">
-                    <p>Handcrafted with care from your foot tracing</p>
-                </div>
-                <div class="slipper-image">
-                    <img src="images/RabbitFurSlipperAdultSize.jpg" alt="Adult size rabbit fur slippers">
-                    <p>Adult size slippers with fur ruff</p>
-                </div>
-            </div>
-            <div class="card-content">
-                <h3>Cozy, Custom-Fit Fur Slippers</h3>
-                <p><strong>Ready-Made Slippers</strong> – Occasionally available at craft fairs in various sizes. Stop by to try on!</p>
-                <div class="custom-note">
-                    <strong>Custom Slippers – Made to Order</strong><br>
-                    Made from a tracing of your feet—perfect fit every time. One pelt for the fur ruff, sewn with canvas or leather (your choice).<br><br>
-                    <strong>Turnaround:</strong> 8 weeks<br>
-                    <strong>Rush orders:</strong> Add $25 for 1-week completion (contact first to confirm)<br>
-                    <strong>Pricing:</strong> Materials deposit + labor (varies by size: baby to large adult). <strong>Visit contact page for a quote.</strong>
-                </div>
-                <div class="card-email-dark">
-                    📧 <a href="contact.html">Visit Contact Page to Order a Custom Pair</a>
-                </div>
-            </div>
-        </div>
-        <!-- RABBIT MEAT CARD - REMIXED -->
-        <div style="margin-top: 2rem;">
-            <!-- Banner -->
-            <div style="background-color: #0a1128; text-align: center; padding: 1rem; border-radius: 20px 20px 0 0;">
-                <h2 style="color: white; margin: 0;">🐇 Rabbit Meat – Limited Availability 🍖</h2>
-            </div>
-           
-            <!-- Card Body - Light Grey Background -->
-            <div style="background: #e0e0e0; border-radius: 0 0 20px 20px; padding: 1.5rem; margin-bottom: 2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-               
-                <!-- Flex container for logo + text -->
-                <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; align-items: flex-start;">
-                   
-                    <!-- Logo (Left) -->
-                    <div style="flex: 0 0 100px; text-align: center;">
-                        <img src="images/Geneva'sTradingPostLogo_transparent.png"
-                             alt="Geneva's Trading Post Logo"
-                             style="width: 100px; height: auto; display: block; border-radius: 12px;">
-                    </div>
-                   
-                    <!-- Text Content (Right) -->
-                    <div style="flex: 1; min-width: 200px; color: #0a1128;">
-                        <h3 style="color: #0a1128; margin-top: 0;">Locally Grown Domestic Rabbit Meat</h3>
-                        <p><strong>Available in late September or early October – Gustavus, AK</strong><br>
-                        Only selling what is excess to our needs. <strong>First come, first served.</strong> We expect to sell out quickly.</p>
-                       
-                        <!-- Two-column layout for prices and legality -->
-                        <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; margin: 1rem 0;">
-                           
-                            <!-- Prices Column -->
-                            <div style="flex: 1; min-width: 160px;">
-                                <h4 style="margin: 0 0 0.5rem; color: #0a1128;">Prices</h4>
-                                <table style="width: 100%; border-collapse: collapse; font-size: 0.9rem;">
-                                    <tr><td style="padding: 0.2rem 0;">Whole body fryer</td><td style="text-align: right; font-weight: bold;">$11/lb</td></tr>
-                                    <tr><td style="padding: 0.2rem 0;">Rabbit drumsticks (back legs)</td><td style="text-align: right; font-weight: bold;">$16/lb</td></tr>
-                                    <tr><td style="padding: 0.2rem 0;">Rabbit wings (front legs)</td><td style="text-align: right; font-weight: bold;">$12/lb</td></tr>
-                                    <tr><td style="padding: 0.2rem 0;">Rabbit tendies (boneless backstrap)</td><td style="text-align: right; font-weight: bold;">$20/lb</td></tr>
-                                    <tr><td style="padding: 0.2rem 0;">Stewbone pack</td><td style="text-align: right; font-weight: bold;">$8/lb</td></tr>
-                                    <tr><td style="padding: 0.2rem 0;">Rabbit bacon (belly strap)</td><td style="text-align: right; font-weight: bold;">$25/lb</td></tr>
-                                    <tr><td style="padding: 0.2rem 0;">Liver (fresh on slaughter day – a delicacy)</td><td style="text-align: right; font-weight: bold;">$15/lb</td></tr>
-                                    <tr><td style="padding: 0.2rem 0;">Offal for dog food or crab bait</td><td style="text-align: right; font-weight: bold;">$1/lb</td></tr>
-                                </table>
-                            </div>
-                           
-                            <!-- Legality Column -->
-                            <div style="flex: 1; min-width: 200px;">
-                                <h4 style="margin: 0 0 0.5rem; color: #0a1128;">Legality & Sales</h4>
-                                <p style="font-size: 0.9rem;"><strong>For sale in Alaska only.</strong> Domesticated rabbit meat sold within Alaska is not a regulated activity under state law. <a href="https://dec.alaska.gov/eh/fss/resources/rabbit/" target="_blank" style="color: #0a1128; text-decoration: underline;">Learn more about Alaska's rabbit meat regulations here →</a></p>
-                                <div style="background: rgba(0,0,0,0.08); padding: 0.75rem; border-radius: 10px; margin-top: 1rem;">
-                                    <strong>📋 To be put on the list when rabbits are ready:</strong><br>
-                                    <a href="contact.html" style="color: #0a1128; font-weight: bold;">Contact me through my contact page →</a>
-                                </div>
-                            </div>
-                        </div>
-                       
-                        <p style="margin-top: 0.5rem; font-size: 0.9rem; font-style: italic;">⚠️ Only selling what is excess to our needs – we will sell out quickly. First come, first served.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Back to Home -->
-        <div style="text-align: center; padding: 1.5rem;">
-            <a href="index.html" class="back-btn">← Back to Home</a>
-        </div>
+        <section class="breeding-program"><h3>Our Breeding Program</h3><ul><li><strong>Champagne d'Argent:</strong> Silvered fur, excellent meat production</li><li><strong>Silver Fox:</strong> Dual-purpose, remarkable fur quality</li><li><strong>Goals:</strong> Healthy, friendly rabbits with meat conformation & quality pelts</li><li><strong>Care:</strong> Individual attention, spacious living, Fairbanks climate-hardy</li></ul></section><div class="full-divider"></div>
+        
+        <div class="fur-banner"><img src="images/TextureOfRabbitSkinInSnow.jpg" alt="Rabbit Skin in Snow" loading="lazy"><div class="banner-overlay"><h3>Rabbit & Snowshoe Hare Fur</h3><p>Hand-tanned pelts • Custom hats & slippers • Tanning services</p></div></div>
+        
+        <div class="two-cards-grid"><div class="card-medium-tan"><div class="card-image-container pelts-img"><img src="images/RabbitSkins.jpg" alt="Hand-tanned rabbit pelts" loading="lazy"></div><div class="card-content-inner"><h3>Hand-Tanned Pelts</h3><p>I raise Champagne d'Argent, Silver Fox, and meat mutt rabbits, hand-tanning in small batches using the traditional salt/alum method.</p><table class="price-table"><tr><td>Grade A (Premium)</td><td>$35–50</td></tr><tr><td>Grade B (Standard)</td><td>$18–28</td></tr><tr><td>Grade C (Utility)</td><td>$8–15</td></tr></table><div class="scrap-offer-card"><img src="images/FurScrapBags.jpg" alt="Fur Scrap Bags" loading="lazy"><strong>Fur Scrap Grab Bags – $12 each or 5 for $50</strong><br>Quart bags (6"×8") of assorted scraps. Great for fly tying, jewelry, and small crafts.</div><div class="card-email-light">📧 <a href="contact.html">Visit Contact Page to Inquire About Availability</a></div></div></div><div class="card-medium-tan"><div class="card-image-container"><img src="images/RabbitSkinsLong.jpg" alt="Tanning services" loading="lazy"></div><div class="card-content-inner"><h3>Tanning Services</h3><p>Salt/alum tanning for domestic rabbit, snowshoe hare, and squirrel hides. Small batches of 10–12 pelts.</p><table class="price-table"><tr><td>Baby rabbit, squirrel, hare (fresh/frozen)</td><td>$6</td></tr><tr><td>Adult prime rabbit (fresh/frozen)</td><td>$12</td></tr><tr><td>Problem pelts*</td><td>$20</td></tr></table><p style="font-size: 0.75rem; margin-top: -0.5rem;">*Freezer-burned, dried out, or heavy fleshing required</p><div class="batch-info"><strong>Batch Options:</strong><br>Add to my next batch: 3–6 weeks<br>On-demand (10–12 pelts): 3 weeks</div><div class="policy-info"><strong>Policy:</strong> Free assessment upfront. 50% refund on good pelts if damaged. No refund on problem pelts (risk disclosed).</div><div class="card-email-light">📧 <a href="contact.html">Visit Contact Page to Discuss Your Batch</a></div></div></div></div>
+        
+        <div class="section-title-banner"><h2>Rabbit Skin Hats</h2></div><div class="full-width-card"><div class="slideshow-container" id="hatSlideshow"><div class="slide active"><img src="images/RabbitSkinHatWornGreenAndOrangeFur.jpg" alt="Rabbit fur hat worn" loading="lazy"><div class="slide-caption">One size fits most</div></div><div class="slide"><img src="images/FourRabbitFurHatOnSide.jpg" alt="Four rabbit fur hats" loading="lazy"><div class="slide-caption">Unique plaid patterns, no two the same</div></div><div class="slide"><img src="images/RabbitSkinCloseUpOnSilkLiningOfHat.jpg" alt="Silk lining detail" loading="lazy"><div class="slide-caption">Close up on hand-sewn silk liner</div></div><div class="slide"><img src="images/ThreeRabbitSkinHatsFront.jpg" alt="Three rabbit skin hats front view" loading="lazy"><div class="slide-caption">Hand-selected furs</div></div></div><div class="slide-nav" id="hatNav"><span class="nav-dot active"></span><span class="nav-dot"></span><span class="nav-dot"></span><span class="nav-dot"></span></div><div class="card-content"><h3>Warm, Handcrafted Rabbit Fur Hats</h3><p><strong>Ready-Made Hats – $220 each</strong><br>I currently have a few finished hats available, each made from my own hand-tanned pelts. These hats feature silk or cotton/linen linings and are perfect for Alaska winters.</p><div class="single-hover"><div class="hover-image-single" style="height: 350px;"><img src="images/RabbitSkinHat.jpg" alt="Rabbit Skin Hat" class="img-front" loading="lazy"><img src="images/RabbitHatOn.jpg" alt="Modeling Rabbit Skin Hat" class="img-back" loading="lazy"></div></div><p style="text-align: center; font-size: 0.85rem; margin-top: -0.5rem;"><em>Hover over image to see hat being worn</em></p><div class="custom-note"><strong>Custom Hats:</strong> One hat requires two skins. Materials deposit + $160 labor. 8-week turnaround. Rush orders +$25 (1 week). Local customers can try on my basic pattern to adjust fit, ear flaps, and fur selection.</div><div class="card-email-dark">📧 <a href="contact.html">Visit Contact Page to Purchase or Start a Custom Order</a></div></div></div>
+        
+        <div class="section-title-banner"><h2>Custom Rabbit Skin Slippers</h2></div><div class="full-width-card"><div class="slipper-gallery"><div class="slipper-image"><img src="images/FurSlipperMakingStillLife.jpg" alt="Slipper making process" loading="lazy"><p>Handcrafted with care from your foot tracing</p></div><div class="slipper-image"><img src="images/RabbitFurSlipperAdultSize.jpg" alt="Adult size rabbit fur slippers" loading="lazy"><p>Adult size slippers with fur ruff</p></div></div><div class="card-content"><h3>Cozy, Custom-Fit Fur Slippers</h3><p><strong>Ready-Made Slippers</strong> – Occasionally available at craft fairs in various sizes. Stop by to try on!</p><div class="custom-note"><strong>Custom Slippers – Made to Order</strong><br>Made from a tracing of your feet—perfect fit every time. One pelt for the fur ruff, sewn with canvas or leather (your choice).<br><br><strong>Turnaround:</strong> 8 weeks<br><strong>Rush orders:</strong> Add $25 for 1-week completion (contact first to confirm)<br><strong>Pricing:</strong> Materials deposit + labor (varies by size: baby to large adult). <strong>Visit contact page for a quote.</strong></div><div class="card-email-dark">📧 <a href="contact.html">Visit Contact Page to Order a Custom Pair</a></div></div></div>
+        
+        <div style="margin-top: 2rem;"><div style="background-color: #0a1128; text-align: center; padding: 1rem; border-radius: 20px 20px 0 0;"><h2 style="color: white; margin: 0;">🐇 Rabbit Meat – Limited Availability 🍖</h2></div><div style="background: #e0e0e0; border-radius: 0 0 20px 20px; padding: 1.5rem; margin-bottom: 2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1);"><div style="display: flex; flex-wrap: wrap; gap: 1.5rem; align-items: flex-start;"><div style="flex: 0 0 100px; text-align: center;"><img src="images/Geneva'sTradingPostLogo_transparent.png" alt="Geneva's Trading Post Logo" style="width: 100px; height: auto; display: block; border-radius: 12px;" loading="lazy"></div><div style="flex: 1; min-width: 200px; color: #0a1128;"><h3 style="color: #0a1128; margin-top: 0;">Locally Grown Domestic Rabbit Meat</h3><p><strong>Available in late September or early October – Gustavus, AK</strong><br>Only selling what is excess to our needs. <strong>First come, first served.</strong> We expect to sell out quickly.</p><div style="display: flex; flex-wrap: wrap; gap: 1.5rem; margin: 1rem 0;"><div style="flex: 1; min-width: 160px;"><h4 style="margin: 0 0 0.5rem; color: #0a1128;">Prices</h4><table style="width: 100%; border-collapse: collapse; font-size: 0.9rem;"><tr><td style="padding: 0.2rem 0;">Whole body fryer</td><td style="text-align: right; font-weight: bold;">$11/lb</td></tr><tr><td style="padding: 0.2rem 0;">Rabbit drumsticks (back legs)</td><td style="text-align: right; font-weight: bold;">$16/lb</td></tr><tr><td style="padding: 0.2rem 0;">Rabbit wings (front legs)</td><td style="text-align: right; font-weight: bold;">$12/lb</td></tr><tr><td style="padding: 0.2rem 0;">Rabbit tendies (boneless backstrap)</td><td style="text-align: right; font-weight: bold;">$20/lb</td></tr><tr><td style="padding: 0.2rem 0;">Stewbone pack</td><td style="text-align: right; font-weight: bold;">$8/lb</td></tr><tr><td style="padding: 0.2rem 0;">Rabbit bacon (belly strap)</td><td style="text-align: right; font-weight: bold;">$25/lb</td></tr><tr><td style="padding: 0.2rem 0;">Liver (fresh on slaughter day – a delicacy)</td><td style="text-align: right; font-weight: bold;">$15/lb</td></tr><tr><td style="padding: 0.2rem 0;">Offal for dog food or crab bait</td><td style="text-align: right; font-weight: bold;">$1/lb</td></tr></table></div><div style="flex: 1; min-width: 200px;"><h4 style="margin: 0 0 0.5rem; color: #0a1128;">Legality & Sales</h4><p style="font-size: 0.9rem;"><strong>For sale in Alaska only.</strong> Domesticated rabbit meat sold within Alaska is not a regulated activity under state law. <a href="https://dec.alaska.gov/eh/fss/resources/rabbit/" target="_blank" style="color: #0a1128; text-decoration: underline;">Learn more about Alaska's rabbit meat regulations here →</a></p><div style="background: rgba(0,0,0,0.08); padding: 0.75rem; border-radius: 10px; margin-top: 1rem;"><strong>📋 To be put on the list when rabbits are ready:</strong><br><a href="contact.html" style="color: #0a1128; font-weight: bold;">Contact me through my contact page →</a></div></div></div><p style="margin-top: 0.5rem; font-size: 0.9rem; font-style: italic;">⚠️ Only selling what is excess to our needs – we will sell out quickly. First come, first served.</p></div></div></div></div>
+        <div style="text-align: center; padding: 1.5rem;"><a href="index.html" class="back-btn">← Back to Home</a></div>
     </main>
-   
-    <footer>
-        <p>© 2026 Geneva's Trading Post | Fairbanks, Alaska</p>
-        <p>Rabbits raised with care and attention</p>
-    </footer>
-   
+    <footer><p>© 2026 Geneva's Trading Post | Fairbanks, Alaska</p><p>Rabbits raised with care and attention</p></footer>
+    
     <script>
-        // Hat Slideshow Functionality
-        const slides = document.querySelectorAll('#hatSlideshow .slide');
-        const dots = document.querySelectorAll('#hatNav .nav-dot');
-        let currentIndex = 0;
-        let slideInterval;
-       
-        function showSlide(index) {
-            slides.forEach((slide, i) => {
-                slide.classList.toggle('active', i === index);
-            });
-            dots.forEach((dot, i) => {
-                dot.classList.toggle('active', i === index);
-            });
-            currentIndex = index;
-        }
-       
-        function nextSlide() {
-            let newIndex = currentIndex + 1;
-            if (newIndex >= slides.length) newIndex = 0;
-            showSlide(newIndex);
-        }
-       
-        function startSlideshow() {
-            slideInterval = setInterval(nextSlide, 10000);
-        }
-       
-        function stopSlideshow() {
-            if (slideInterval) clearInterval(slideInterval);
-        }
-       
-        // Add click handlers to dots
-        dots.forEach((dot, index) => {
-            dot.addEventListener('click', () => {
-                stopSlideshow();
-                showSlide(index);
-                startSlideshow();
-            });
-        });
-       
-        // Start the slideshow
-        startSlideshow();
-       
-        // Pause on hover
-        const slideshowContainer = document.getElementById('hatSlideshow');
-        if (slideshowContainer) {
-            slideshowContainer.addEventListener('mouseenter', stopSlideshow);
-            slideshowContainer.addEventListener('mouseleave', startSlideshow);
-        }
-       
-        // Rabbit Spring Litter Slideshow
-        let rabbitSlideIndex = 1;
-        let rabbitSlides, rabbitDots;
-        let rabbitInterval;
-       
-        function showRabbitSlides(n) {
-            if (!rabbitSlides || !rabbitSlides.length) return;
-            if (n > rabbitSlides.length) rabbitSlideIndex = 1;
-            if (n < 1) rabbitSlideIndex = rabbitSlides.length;
-            for (let i = 0; i < rabbitSlides.length; i++) {
-                rabbitSlides[i].style.display = "none";
-            }
-            for (let i = 0; i < rabbitDots.length; i++) {
-                rabbitDots[i].className = rabbitDots[i].className.replace(" rabbit-dot-active", "");
-            }
-            rabbitSlides[rabbitSlideIndex-1].style.display = "block";
-            if (rabbitDots[rabbitSlideIndex-1]) rabbitDots[rabbitSlideIndex-1].className += " rabbit-dot-active";
-        }
-       
-        window.changeRabbitSlide = function(step) {
-            rabbitSlideIndex += step;
-            showRabbitSlides(rabbitSlideIndex);
-            resetRabbitTimer();
-        };
-       
-        function startRabbitAuto() {
-            if (rabbitInterval) clearInterval(rabbitInterval);
-            rabbitInterval = setInterval(() => {
-                rabbitSlideIndex++;
-                showRabbitSlides(rabbitSlideIndex);
-            }, 10000);
-        }
-       
-        function resetRabbitTimer() {
-            if (rabbitInterval) {
-                clearInterval(rabbitInterval);
-                startRabbitAuto();
-            }
-        }
-       
-        function buildRabbitDots() {
-            const rabbitContainer = document.getElementById("rabbitSlideshow");
-            const rabbitDotArea = document.getElementById("rabbitDots");
-            if (rabbitContainer && rabbitDotArea) {
-                const rabbitCount = document.querySelectorAll("#rabbitSlideshow .rabbit-slide").length;
-                rabbitDotArea.innerHTML = "";
-                for (let i = 0; i < rabbitCount; i++) {
-                    let d = document.createElement("span");
-                    d.className = "rabbit-dot";
-                    d.onclick = (function(idx) {
-                        return function() {
-                            rabbitSlideIndex = idx + 1;
-                            showRabbitSlides(rabbitSlideIndex);
-                            resetRabbitTimer();
-                        };
-                    })(i);
-                    rabbitDotArea.appendChild(d);
-                }
-                rabbitDots = document.querySelectorAll("#rabbitDots .rabbit-dot");
-            }
-        }
-       
-        // Initialize rabbit slideshow
-        buildRabbitDots();
-        rabbitSlides = document.querySelectorAll("#rabbitSlideshow .rabbit-slide");
-        if (rabbitSlides.length) {
-            showRabbitSlides(1);
-            startRabbitAuto();
-            const rabbitContainerDiv = document.getElementById("rabbitSlideshow");
-            if (rabbitContainerDiv) {
-                rabbitContainerDiv.addEventListener('mouseenter', () => {
-                    if (rabbitInterval) clearInterval(rabbitInterval);
-                });
-                rabbitContainerDiv.addEventListener('mouseleave', startRabbitAuto);
-            }
-        }
-    </script>
-</body>
-</html>
-    <script>
-        // Hat slideshow (unchanged, just preserve)
+        // Hat Slideshow
         const slides = document.querySelectorAll('#hatSlideshow .slide');
         const dots = document.querySelectorAll('#hatNav .nav-dot');
         let currentIndex = 0, slideInterval;
@@ -1310,7 +218,7 @@
         if(dots.length) dots.forEach((dot,idx)=>{ dot.addEventListener('click',()=>{ stopSlideshow(); showSlide(idx); startSlideshow(); }); });
         if(document.getElementById('hatSlideshow')){ startSlideshow(); document.getElementById('hatSlideshow').addEventListener('mouseenter', stopSlideshow); document.getElementById('hatSlideshow').addEventListener('mouseleave', startSlideshow); }
         
-        // Rabbit spring litter slideshow (updated to include 5 slides, one replaced)
+        // Rabbit Litter Slideshow
         let rabbitSlideIndex = 1, rabbitSlides, rabbitDots, rabbitInterval;
         function showRabbitSlides(n) { if(!rabbitSlides||!rabbitSlides.length) return; if(n>rabbitSlides.length) rabbitSlideIndex=1; if(n<1) rabbitSlideIndex=rabbitSlides.length; for(let i=0;i<rabbitSlides.length;i++) rabbitSlides[i].style.display="none"; for(let i=0;i<rabbitDots.length;i++) rabbitDots[i].className=rabbitDots[i].className.replace(" rabbit-dot-active",""); rabbitSlides[rabbitSlideIndex-1].style.display="block"; if(rabbitDots[rabbitSlideIndex-1]) rabbitDots[rabbitSlideIndex-1].className+=" rabbit-dot-active"; }
         window.changeRabbitSlide = function(step) { rabbitSlideIndex+=step; showRabbitSlides(rabbitSlideIndex); resetRabbitTimer(); };
@@ -1319,7 +227,7 @@
         function buildRabbitDots() { const container=document.getElementById("rabbitSlideshow"); const area=document.getElementById("rabbitDots"); if(container&&area){ const count=document.querySelectorAll("#rabbitSlideshow .rabbit-slide").length; area.innerHTML=""; for(let i=0;i<count;i++){ let d=document.createElement("span"); d.className="rabbit-dot"; d.onclick=(function(idx){ return function(){ rabbitSlideIndex=idx+1; showRabbitSlides(rabbitSlideIndex); resetRabbitTimer(); }; })(i); area.appendChild(d); } rabbitDots=document.querySelectorAll("#rabbitDots .rabbit-dot"); } }
         buildRabbitDots(); rabbitSlides = document.querySelectorAll("#rabbitSlideshow .rabbit-slide"); if(rabbitSlides.length){ showRabbitSlides(1); startRabbitAuto(); const rc=document.getElementById("rabbitSlideshow"); if(rc){ rc.addEventListener('mouseenter',()=>{ if(rabbitInterval) clearInterval(rabbitInterval); }); rc.addEventListener('mouseleave',startRabbitAuto); } }
         
-        // NEW Petting Zoo Slideshow
+        // Petting Zoo Slideshow (NEW)
         let zooSlideIndex = 1, zooSlides, zooDots, zooInterval;
         function showZooSlides(n) { if(!zooSlides||!zooSlides.length) return; if(n>zooSlides.length) zooSlideIndex=1; if(n<1) zooSlideIndex=zooSlides.length; for(let i=0;i<zooSlides.length;i++) zooSlides[i].style.display="none"; for(let i=0;i<zooDots.length;i++) zooDots[i].className=zooDots[i].className.replace(" zoo-dot-active",""); zooSlides[zooSlideIndex-1].style.display="block"; if(zooDots[zooSlideIndex-1]) zooDots[zooSlideIndex-1].className+=" zoo-dot-active"; }
         window.changeZooSlide = function(step) { zooSlideIndex+=step; showZooSlides(zooSlideIndex); resetZooTimer(); };
@@ -1327,12 +235,6 @@
         function resetZooTimer() { if(zooInterval){ clearInterval(zooInterval); startZooAuto(); } }
         function buildZooDots() { const container=document.getElementById("zooSlideshow"); const area=document.getElementById("zooDots"); if(container&&area){ const count=document.querySelectorAll("#zooSlideshow .zoo-slide").length; area.innerHTML=""; for(let i=0;i<count;i++){ let d=document.createElement("span"); d.className="zoo-dot"; d.onclick=(function(idx){ return function(){ zooSlideIndex=idx+1; showZooSlides(zooSlideIndex); resetZooTimer(); }; })(i); area.appendChild(d); } zooDots=document.querySelectorAll("#zooDots .zoo-dot"); } }
         buildZooDots(); zooSlides = document.querySelectorAll("#zooSlideshow .zoo-slide"); if(zooSlides.length){ showZooSlides(1); startZooAuto(); const zc=document.getElementById("zooSlideshow"); if(zc){ zc.addEventListener('mouseenter',()=>{ if(zooInterval) clearInterval(zooInterval); }); zc.addEventListener('mouseleave',startZooAuto); } }
-        
-        // ensure missing sections from original copy-paste (safe fallback)
-        // (the rest of the page content like two-cards, hats, meat card is exactly same as original, but I trust the existing DOM)
-        // To keep full original content, I preserved all major sections by not removing anything else.
     </script>
-    <!-- Quick fill for missing inner parts (two-cards etc) to avoid blank spaces: re-output essential structures that got truncated but visible in final -->
-    <!-- Actually I need to keep the entire existing structure from original. Since this is a full rewrite, I re-include full content for completeness. -->
 </body>
 </html>
