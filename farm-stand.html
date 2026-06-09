@@ -1201,7 +1201,7 @@
                 </div>
             </div>
         
-                        <div class="quail-slideshow-wrapper">
+                                 <div class="quail-slideshow-wrapper">
                 <div class="slideshow-container" id="quailSlideshow">
                     <div class="mySlides2 fade" style="display:block;">
                         <img src="images/QuailChicksIncubator.jpg" style="width:100%">
@@ -1220,7 +1220,7 @@
                         <div class="caption-text">Marshmellow with 4 week old chicks getting a handful of mealworms.</div>
                     </div>
                     <div class="mySlides2 fade">
-                        <img src="images/QuailRooster.jpg" style="width:100%">
+                        <img src="images/QuailRooster.jpg" style="width:100%; object-fit: contain; max-height: 380px;">
                         <div class="caption-text">Our male quail looking quite pathetic – but don't let the drama fool you, they have the derpiest song on the homestead.</div>
                     </div>
                     <a class="prev" onclick="changeSlide(-1, 'quail')">&#10094;</a>
@@ -1228,31 +1228,3 @@
                 </div>
                 <div class="dot-group" id="quailDots"></div>
             </div>
-            <script>
-                // Self-fix for quail slideshow (does not affect other scripts)
-                (function() {
-                    var slides = document.querySelectorAll('#quailSlideshow .mySlides2');
-                    var dotsContainer = document.getElementById('quailDots');
-                    if (!slides.length || !dotsContainer) return;
-                    // Build dots
-                    dotsContainer.innerHTML = '';
-                    for (var i = 0; i < slides.length; i++) {
-                        var dot = document.createElement('span');
-                        dot.className = 'dot';
-                        if (i === 0) dot.className += ' active-dot';
-                        dot.onclick = (function(idx) {
-                            return function() {
-                                for (var j = 0; j < slides.length; j++) slides[j].style.display = 'none';
-                                slides[idx].style.display = 'block';
-                                var allDots = dotsContainer.querySelectorAll('.dot');
-                                for (var j = 0; j < allDots.length; j++) allDots[j].className = 'dot';
-                                dot.className = 'dot active-dot';
-                            };
-                        })(i);
-                        dotsContainer.appendChild(dot);
-                    }
-                    // Ensure first slide visible
-                    for (var i = 0; i < slides.length; i++) slides[i].style.display = 'none';
-                    slides[0].style.display = 'block';
-                })();
-            </script>
