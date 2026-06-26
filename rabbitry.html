@@ -245,6 +245,9 @@
             max-width: 1400px;
             margin: 0 auto;
         }
+        .breeding-herd-grid {
+            grid-template-columns: 1fr 1fr;
+        }
         .rabbit-card {
             background: white;
             border-radius: 12px;
@@ -530,6 +533,22 @@
             line-height: 1.5;
             color: #34495e;
             margin: 0;
+        }
+        .porkins-note {
+            background: #fce4ec;
+            border-left: 6px solid #c2185b;
+            padding: 1rem 1.5rem;
+            border-radius: 12px;
+            max-width: 1000px;
+            margin: 1.5rem auto;
+        }
+        .porkins-note h4 {
+            margin: 0 0 0.25rem;
+            color: #880e4f;
+        }
+        .porkins-note p {
+            margin: 0;
+            color: #4a148c;
         }
         .workshop-card {
             background: #3e2723;
@@ -1160,6 +1179,9 @@
             .rabbit-grid {
                 grid-template-columns: 1fr;
             }
+            .breeding-herd-grid {
+                grid-template-columns: 1fr;
+            }
             nav a {
                 display: block;
                 margin: 0.5rem auto;
@@ -1243,7 +1265,7 @@
             </div>
         </div>
 
-        <!-- SPRING LITTER SLIDESHOW (UPDATED: added Lucelle2026Nursing + Lucelle2026June16Babies) -->
+        <!-- SPRING LITTER SLIDESHOW (updated Porkins caption) -->
         <div class="spring-litter-card">
             <h3>🌸 Spring Litter Highlights 🐇</h3>
             <div class="rabbit-slideshow-container" id="rabbitSlideshow">
@@ -1261,18 +1283,16 @@
                 </div>
                 <div class="rabbit-slide fade">
                     <img src="images/2ofPorkins5weekoldbabies.jpg" alt="Porkins babies at 5 weeks" loading="lazy" />
-                    <div class="rabbit-caption-text">Porkins' adorable 5-week-old babies — growing fast!</div>
+                    <div class="rabbit-caption-text">Porkins' adorable 5-week-old babies — growing fast! (Being raised for meat due to congenital heart issue in dam)</div>
                 </div>
                 <div class="rabbit-slide fade">
                     <img src="images/BabyBunny3WeeksOldMay2026.jpg" alt="Porkins baby cute" loading="lazy" />
                     <div class="rabbit-caption-text">Porkins' baby showing off that adorable face!</div>
                 </div>
-                <!-- NEW: Lucelle 2026 Nursing -->
                 <div class="rabbit-slide fade">
                     <img src="images/Lucelle2026Nursing.jpg" alt="Lucelle nursing second litter" loading="lazy" />
                     <div class="rabbit-caption-text">Lucelle is on her second litter this spring — all being raised for meat (inbred line, but growing quick!)</div>
                 </div>
-                <!-- NEW: Lucelle June 16 Babies -->
                 <div class="rabbit-slide fade">
                     <img src="images/Lucelle2026June16Babies.jpg" alt="Lucelle's June 16 litter" loading="lazy" />
                     <div class="rabbit-caption-text">Second litter has 5 healthy babies born June 16 — growing strong!</div>
@@ -1283,7 +1303,7 @@
             <div class="rabbit-dot-group" id="rabbitDots"></div>
         </div>
 
-        <!-- AVAILABLE SECTION: replaced "Check Back Soon" with Fleur card -->
+        <!-- AVAILABLE SECTION -->
         <div class="section-divider">
             <div class="divider-line"></div>
             <h3>Available</h3>
@@ -1316,13 +1336,13 @@
             </div>
         </div>
 
-        <!-- BREEDING HERD SECTION -->
+        <!-- BREEDING HERD SECTION (2 columns, new order: Lucille, Chérie, Colette, Dusty, Pippy) -->
         <div class="section-divider">
             <div class="divider-line"></div>
             <h3>Breeding Herd</h3>
         </div>
-        <div class="rabbit-grid">
-            <!-- Lucille (UPDATED: added weight 7.5lb) -->
+        <div class="rabbit-grid breeding-herd-grid">
+            <!-- 1. Lucille -->
             <div class="rabbit-card">
                 <div class="rabbit-image-container">
                     <img src="images/Lucille.jpg" alt="Lucille" loading="lazy" />
@@ -1344,7 +1364,51 @@
                 </div>
             </div>
 
-            <!-- Dusty (UPDATED: weight corrected to 7lb, dad was 11lb) -->
+            <!-- 2. Chérie (French spelling with accent) -->
+            <div class="rabbit-card">
+                <div class="rabbit-image-container">
+                    <img src="images/CherieNineWeeksOld.jpe" alt="Chérie" loading="lazy" />
+                </div>
+                <div class="rabbit-info">
+                    <div class="rabbit-details">
+                        <span class="breed-tag">Champagne</span>
+                        <span class="gender-tag">Doe</span>
+                        <span class="age-tag">9 wks</span>
+                    </div>
+                    <h3>Chérie</h3>
+                    <div class="rabbit-traits">
+                        <span class="trait-badge">2 lb 7 oz @ 8 wks</span>
+                        <span class="trait-badge">Commercial body</span>
+                        <span class="trait-badge">Excellent silvering</span>
+                        <span class="trait-badge">Keep</span>
+                    </div>
+                    <p>Born April 23, litter of 9. Dam Lucelle (~7.5lb), Sire Swamper (~10lb). Expected adult weight <strong>8.5–9.5 lb</strong> — too small to show, but I'm hoping to find a larger buck to breed her to in the future. Nearly identical to Colette with commercial type and gorgeous silvering.</p>
+                </div>
+            </div>
+
+            <!-- 3. Colette -->
+            <div class="rabbit-card">
+                <div class="rabbit-image-container">
+                    <img src="images/ColetteNineWeeksOld.jpg" alt="Colette" loading="lazy" />
+                </div>
+                <div class="rabbit-info">
+                    <div class="rabbit-details">
+                        <span class="breed-tag">Champagne</span>
+                        <span class="gender-tag">Doe</span>
+                        <span class="age-tag">9 wks</span>
+                    </div>
+                    <h3>Colette</h3>
+                    <div class="rabbit-traits">
+                        <span class="trait-badge">2 lb 7 oz @ 8 wks</span>
+                        <span class="trait-badge">Commercial body</span>
+                        <span class="trait-badge">Excellent silvering</span>
+                        <span class="trait-badge">Keep</span>
+                    </div>
+                    <p>Born April 23, litter of 9. Dam Lucelle (~7.5lb), Sire Swamper (~10lb). Expected adult weight <strong>8.5–9.5 lb</strong> — too small to show, but I'm hoping to find a larger buck to breed her to in the future. Nearly identical to Chérie with commercial type and gorgeous silvering.</p>
+                </div>
+            </div>
+
+            <!-- 4. Dusty -->
             <div class="rabbit-card">
                 <div class="price-tag" style="background:#9b59b6; left:15px;">🐾 Free Stud</div>
                 <div class="rabbit-image-container">
@@ -1367,7 +1431,7 @@
                 </div>
             </div>
 
-            <!-- Pippy -->
+            <!-- 5. Pippy -->
             <div class="rabbit-card">
                 <div class="rabbit-image-container">
                     <img src="images/PippieLookingLeft.jpg" alt="Pippy" loading="lazy" />
@@ -1387,50 +1451,12 @@
                     <p>Shelter rescue. Family pet, professional napper. Queen of the petting zoo and expert at stealing hearts.</p>
                 </div>
             </div>
+        </div>
 
-            <!-- NEW: Cherie (kept kit) -->
-            <div class="rabbit-card">
-                <div class="rabbit-image-container">
-                    <img src="images/CherieNineWeeksOld.jpe" alt="Cherie" loading="lazy" />
-                </div>
-                <div class="rabbit-info">
-                    <div class="rabbit-details">
-                        <span class="breed-tag">Champagne</span>
-                        <span class="gender-tag">Doe</span>
-                        <span class="age-tag">9 wks</span>
-                    </div>
-                    <h3>Cherie</h3>
-                    <div class="rabbit-traits">
-                        <span class="trait-badge">2 lb 7 oz @ 8 wks</span>
-                        <span class="trait-badge">Commercial body</span>
-                        <span class="trait-badge">Excellent silvering</span>
-                        <span class="trait-badge">Keep</span>
-                    </div>
-                    <p>Born April 23, litter of 9. Dam Lucelle (~7.5lb), Sire Swamper (~10lb). Expected adult weight <strong>8.5–9.5 lb</strong> — too small to show, but I'm hoping to find a larger buck to breed her to in the future. Nearly identical to Colette with commercial type and gorgeous silvering.</p>
-                </div>
-            </div>
-
-            <!-- NEW: Colette (kept kit) -->
-            <div class="rabbit-card">
-                <div class="rabbit-image-container">
-                    <img src="images/ColetteNineWeeksOld.jpg" alt="Colette" loading="lazy" />
-                </div>
-                <div class="rabbit-info">
-                    <div class="rabbit-details">
-                        <span class="breed-tag">Champagne</span>
-                        <span class="gender-tag">Doe</span>
-                        <span class="age-tag">9 wks</span>
-                    </div>
-                    <h3>Colette</h3>
-                    <div class="rabbit-traits">
-                        <span class="trait-badge">2 lb 7 oz @ 8 wks</span>
-                        <span class="trait-badge">Commercial body</span>
-                        <span class="trait-badge">Excellent silvering</span>
-                        <span class="trait-badge">Keep</span>
-                    </div>
-                    <p>Born April 23, litter of 9. Dam Lucelle (~7.5lb), Sire Swamper (~10lb). Expected adult weight <strong>8.5–9.5 lb</strong> — too small to show, but I'm hoping to find a larger buck to breed her to in the future. Nearly identical to Cherie with commercial type and gorgeous silvering.</p>
-                </div>
-            </div>
+        <!-- PORKINS NOTE (new) -->
+        <div class="porkins-note">
+            <h4>🐖 In Memory of Porkins</h4>
+            <p>Our beloved doe Porkins passed suddenly earlier this season due to a congenital heart issue. All of her offspring are presumed to carry the condition, so they will be raised for meat rather than added to the breeding herd. She is deeply missed.</p>
         </div>
 
         <!-- PETTING ZOO SECTION -->
@@ -1494,7 +1520,7 @@
             </ul>
         </section>
 
-        <!-- NEW: WORKSHOP CARD (Food Sovereignty For Gustavus Meat Rabbit Husbandry Workshop) -->
+        <!-- WORKSHOP CARD -->
         <div class="workshop-card">
             <h3>🌾 Food Sovereignty For Gustavus</h3>
             <div class="workshop-sub">Meat Rabbit Husbandry Workshop</div>
