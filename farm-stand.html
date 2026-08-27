@@ -1026,77 +1026,59 @@
     <div class="white-gap"></div>
     
     <main>
-    <!-- - Image slideshow -->
-           <div class="may-highlights-card">
-            <h3>🌿 June Highlights</h3>
-            <div class="slideshow-container" id="maySlideshowNew">
-                <div class="juneSlide"><img src="images/Greenhouse2026.jpg" style="width:100%"><div class="caption-text">Plant starts in the hoop house are coming up strong! Cucumbers, melons, and zucchini soon. Bok choy just harvested from here to make room for pole beans going in the ground.</div></div>
-                <div class="juneSlide"><img src="images/RadishesJune2026.jpg" style="width:100%"><div class="caption-text">First radishes of the year – Easter Basket Mix! White = spicy, red = classic radish flavor, purple = sweet.</div></div>
-                <div class="juneSlide"><img src="images/CarrotsNeedThinningJune2026.jpg" style="width:100%"><div class="caption-text">Carrot tasting varieties are coming up – time to thin them. And yes, those are horsetail weeds. The never‑ending battle continues.</div></div>
-                <div class="juneSlide"><img src="images/BokChoyJune2026.jpg" style="width:100%"><div class="caption-text">First bok choy harvest of the year – being washed before heading to Sunday Market.</div></div>
-                <div class="juneSlide"><img src="images/StartsInTheGreenHouseJune2026.jpg" style="width:100%"><div class="caption-text">Action shot of the new Planta greenhouse – almost complete! Inside: plant beds and the batting cage that keeps porcupines out of ten garden beds (not shown).</div></div>
-                <a class="prev" onclick="changeJuneSlide(-1)">&#10094;</a>
-                <a class="next" onclick="changeJuneSlide(1)">&#10095;</a>
-            </div>
-            <div class="dot-group" id="juneDots"></div>
-        </div>
+<!-- Harvest Highlights Slideshow -->
+<div class="slideshow-container">
+  <h2>Harvest Highlights 2026</h2>
+  <div class="mySlides fade">
+    <img src="images/MagicMiraHarvestGeneva.jpg" alt="Geneva harvesting Magic Mira potatoes in the potato patch">
+    <div class="caption">Harvesting Magic Mira potatoes – they're gorgeous!</div>
+  </div>
+  <div class="mySlides fade">
+    <img src="images/AlaskanFrost.jpg" alt="Bucket of Alaskan Frost potatoes">
+    <div class="caption">One of our buckets of Alaskan Frost taters – pretty little things.</div>
+  </div>
+  <div class="mySlides fade">
+    <img src="images/Jellies.jpg" alt="Assorted homemade jellies">
+    <div class="caption">Jelly lineup – nagoon, black currant, blueberry, and more!</div>
+  </div>
+  <div class="mySlides fade">
+    <img src="images/Garlic.jpg" alt="Garlic drying in the kitchen">
+    <div class="caption">Garlic braids drying – saving the 4 biggest heads for replanting.</div>
+  </div>
+  <div class="mySlides fade">
+    <img src="images/SquashPlusGreenhouse.jpg" alt="Squash and greenhouse">
+    <div class="caption">Squash and greenhouse – despite the slug setback, we're getting plenty.</div>
+  </div>
+  <div class="mySlides fade">
+    <img src="images/Carrots2026.jpg" alt="Carrots growing for the 2026 tasting">
+    <div class="caption">Carrots are booming! Join us Sept 14 at the community center to taste all 18 varieties.</div>
+  </div>
+  <div class="mySlides fade">
+    <img src="images/SunflowervsPeas2026.jpg" alt="Sunflowers and peas competing in a small bed">
+    <div class="caption">Sunflowers vs. peas – they loved that rabbit-poop fertilizer!</div>
+  </div>
+  <div class="mySlides fade">
+    <img src="images/Lettuce2026.jpg" alt="Lettuce growing happily in a tiny pot">
+    <div class="caption">Happy little lettuce – thriving even in small containers.</div>
+  </div>
+  <!-- Navigation dots/arrows – keep your existing ones -->
+</div>
         
-        <script>
-            // Independent June Slideshow - does not affect quail slideshow
-            var juneSlideIndex = 1;
-            var juneSlides = document.querySelectorAll('#maySlideshowNew .juneSlide');
-            var juneDotsContainer = document.getElementById('juneDots');
-            
-            function showJuneSlides(n) {
-                if (n > juneSlides.length) juneSlideIndex = 1;
-                if (n < 1) juneSlideIndex = juneSlides.length;
-                for (var i = 0; i < juneSlides.length; i++) {
-                    juneSlides[i].style.display = 'none';
-                }
-                var dots = document.querySelectorAll('#juneDots .dot');
-                for (var i = 0; i < dots.length; i++) {
-                    dots[i].className = dots[i].className.replace(' active-dot', '');
-                }
-                juneSlides[juneSlideIndex - 1].style.display = 'block';
-                if (dots[juneSlideIndex - 1]) {
-                    dots[juneSlideIndex - 1].className += ' active-dot';
-                }
-            }
-            
-            function changeJuneSlide(n) {
-                showJuneSlides(juneSlideIndex += n);
-            }
-            
-            // Build dots for June slideshow
-            if (juneDotsContainer) {
-                juneDotsContainer.innerHTML = '';
-                for (var i = 0; i < juneSlides.length; i++) {
-                    var dot = document.createElement('span');
-                    dot.className = 'dot';
-                    if (i === 0) dot.className += ' active-dot';
-                    dot.onclick = (function(idx) {
-                        return function() {
-                            juneSlideIndex = idx + 1;
-                            showJuneSlides(juneSlideIndex);
-                        };
-                    })(i);
-                    juneDotsContainer.appendChild(dot);
-                }
-            }
-            
-            // Initialize
-            showJuneSlides(1);
-        </script>
 
 <!-- - Plant cards -->
-        <div class="plant-starts-brown">
-            <h3>🌱 Assorted Plant Starts Available 🌱</h3>
-            <div class="plant-list">Lettuce, bok choy, beets, chard, cabbage, spaghetti squash, zucchini, tomatoes, cucumbers, spinach, and sunflowers.</div>
-        </div>
+<div class="card patreon-card">
+  <h3>🌿 Garden Stories & Homestead Updates</h3>
+  <p>Want the full scoop on what's growing, canning, and happening around here? I share behind-the-scenes tales, harvest tips, and plenty of photos over on my Patreon.</p>
+  <a href="https://www.patreon.com/cw/GenevasTradingPost" target="_blank" class="button">Read the Blog on Patreon →</a>
+</div>
         
         <div class="strawberry-header-card">
             <div class="strawberry-content">
                 <h3>🍓 Garden Strawberry Plants 🍓</h3>
+                <div class="card strawberry-card">
+  <h3>🍓 Strawberries – Last Chance for 2026!</h3>
+  <p>We're wrapping up strawberry season. Get your order in now – this is the final call for the 2026 growing season.</p>
+</div>
                 <div class="strawberry-price">$3.50 each • 3 for $10</div>
                 <div class="strawberry-inline-image"><img src="images/Strawberry.jpg" alt="Fresh Strawberries"></div>
                 <div class="strawberry-varieties"><p><strong>🌸 Two domestic varieties available:</strong></p><p>🍓 June-bearing • 🍓 Everbearing</p><p><em>Respectable harvest from parent plants last year — strong, proven performers for Gustavus gardens!</em></p></div>
@@ -1106,6 +1088,8 @@
         <div style="background: linear-gradient(135deg, #5a3e2b 0%, #7a5a3a 100%); border-radius: 28px; margin: 2rem auto; max-width: 1000px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; padding: 1.5rem;">
             <div style="flex: 2; padding: 1rem; text-align: center; color: white;">
                 <h3 style="color: #ffdd99; font-size: 2rem; margin: 0 0 0.5rem;">🌿 Gustavus Red Rhubarb</h3>
+                  <h3>🌱 Rhubarb – Sold Out Until 2027</h3>
+  <p>We're sold out for this year, but we're already taking orders for next spring when I split my plants. Reserve yours now for 2027!</p>
                 <div style="background: #b35f1a; display: inline-block; padding: 0.3rem 1.5rem; border-radius: 40px; font-weight: bold; font-size: 1.3rem; margin: 0.5rem 0; border: 1px solid #ffcd94;">$7 per pot (1 plant)</div>
                 <p>From a 20+ year parent plant — proven hardy in Gustavus gardens. Deep red stalks, excellent for pies and preserves. Limited quantity.</p>
             </div>
@@ -1113,102 +1097,73 @@
                 <img src="images/RuhbarbStart2026.jpg" alt="Rhubarb Start" style="max-width: 100%; height: auto; border-radius: 20px; max-height: 180px; object-fit: cover;">
             </div>
         </div>
-        <!-- ===== HOMEMADE JAMS, JELLIES & RELISHES CARD ===== -->
-<div class="full-width-card" style="margin-top: 2rem;">
-    <div class="section-title-banner" style="background: #6d4c41; border-radius: 10px 10px 0 0;">
-        <h2 style="color: #f5e6d3; margin: 0; letter-spacing: 2px;">🍯 Homemade Jams, Jellies & Relishes</h2>
+        <!-- ===== HOMEMADE JAMS, JELLIES & RELISHES CARD ===== --><!-- Jelly & Preserves Section -->
+<div class="jelly-section">
+  <h2>🍯 Jams, Jellies & Syrups</h2>
+  <img src="images/Jellies.jpg" alt="Assorted homemade jellies and preserves" class="jelly-header-img">
+
+  <div class="jelly-grid">
+    <!-- Spruce Tip Syrup -->
+    <div class="jelly-item">
+      <h4>Spruce Tip Syrup</h4>
+      <p class="status">Sold out until spring 2027</p>
+      <p>4oz – $5 &nbsp;|&nbsp; 8oz – $9</p>
     </div>
-    <div class="card-content" style="background: #8d6e63; padding: 2rem;">
-        <p style="font-size: 1.2rem; color: #f5e6d3; text-align: center; margin-bottom: 1.5rem;">
-            Handcrafted in small batches from wild‑harvested Alaska ingredients and garden produce.<br>
-            <em style="color: #ffd966;">Prices TBD — just ask! I happily take requests.</em>
-        </p>
 
-        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1.5rem; max-width: 1000px; margin: 0 auto;">
-            
-            <!-- Wild Strawberry Jam -->
-            <div style="background: rgba(255,255,255,0.12); border-radius: 16px; padding: 1.2rem 1rem; text-align: center; border: 1px solid rgba(255,215,0,0.3);">
-                <div style="font-size: 2.4rem; line-height: 1;">🍓</div>
-                <h4 style="color: #fff; margin: 0.4rem 0 0.2rem; font-size: 1.1rem;">Wild Strawberry Jam</h4>
-                <p style="color: #ffd966; font-size: 0.9rem; margin: 0.2rem 0;">TBD / Request</p>
-            </div>
-
-            <!-- Wild Blueberry Jam -->
-            <div style="background: rgba(255,255,255,0.12); border-radius: 16px; padding: 1.2rem 1rem; text-align: center; border: 1px solid rgba(255,215,0,0.3);">
-                <div style="font-size: 2.4rem; line-height: 1;">🫐</div>
-                <h4 style="color: #fff; margin: 0.4rem 0 0.2rem; font-size: 1.1rem;">Wild Blueberry Jam</h4>
-                <p style="color: #ffd966; font-size: 0.9rem; margin: 0.2rem 0;">TBD / Request</p>
-            </div>
-
-            <!-- Wild Strawberry Rhubarb Pie Filling -->
-            <div style="background: rgba(255,255,255,0.12); border-radius: 16px; padding: 1.2rem 1rem; text-align: center; border: 1px solid rgba(255,215,0,0.3);">
-                <div style="font-size: 2.4rem; line-height: 1;">🥧</div>
-                <h4 style="color: #fff; margin: 0.4rem 0 0.2rem; font-size: 1.1rem;">Strawberry Rhubarb Pie Filling</h4>
-                <p style="color: #ffd966; font-size: 0.9rem; margin: 0.2rem 0;">TBD / Request</p>
-            </div>
-
-            <!-- Rhubarb Honey -->
-            <div style="background: rgba(255,255,255,0.12); border-radius: 16px; padding: 1.2rem 1rem; text-align: center; border: 1px solid rgba(255,215,0,0.3);">
-                <div style="font-size: 2.4rem; line-height: 1;">🍯</div>
-                <h4 style="color: #fff; margin: 0.4rem 0 0.2rem; font-size: 1.1rem;">Rhubarb Honey</h4>
-                <p style="color: #ffd966; font-size: 0.9rem; margin: 0.2rem 0;">TBD / Request</p>
-            </div>
-
-            <!-- Fireweed Jelly -->
-            <div style="background: rgba(255,255,255,0.12); border-radius: 16px; padding: 1.2rem 1rem; text-align: center; border: 1px solid rgba(255,215,0,0.3);">
-                <div style="font-size: 2.4rem; line-height: 1;">🌸</div>
-                <h4 style="color: #fff; margin: 0.4rem 0 0.2rem; font-size: 1.1rem;">Fireweed Jelly</h4>
-                <p style="color: #ffd966; font-size: 0.9rem; margin: 0.2rem 0;">TBD / Request</p>
-            </div>
-
-            <!-- Fireweed Syrup -->
-            <div style="background: rgba(255,255,255,0.12); border-radius: 16px; padding: 1.2rem 1rem; text-align: center; border: 1px solid rgba(255,215,0,0.3);">
-                <div style="font-size: 2.4rem; line-height: 1;">🌺</div>
-                <h4 style="color: #fff; margin: 0.4rem 0 0.2rem; font-size: 1.1rem;">Fireweed Syrup</h4>
-                <p style="color: #ffd966; font-size: 0.9rem; margin: 0.2rem 0;">TBD / Request</p>
-            </div>
-
-            <!-- Spruce Tip Jelly -->
-            <div style="background: rgba(255,255,255,0.12); border-radius: 16px; padding: 1.2rem 1rem; text-align: center; border: 1px solid rgba(255,215,0,0.3);">
-                <div style="font-size: 2.4rem; line-height: 1;">🌲</div>
-                <h4 style="color: #fff; margin: 0.4rem 0 0.2rem; font-size: 1.1rem;">Spruce Tip Jelly</h4>
-                <p style="color: #ffd966; font-size: 0.9rem; margin: 0.2rem 0;">TBD / Request</p>
-            </div>
-
-            <!-- Radish Relish -->
-            <div style="background: rgba(255,255,255,0.12); border-radius: 16px; padding: 1.2rem 1rem; text-align: center; border: 1px solid rgba(255,215,0,0.3);">
-                <div style="font-size: 2.4rem; line-height: 1;">🥗</div>
-                <h4 style="color: #fff; margin: 0.4rem 0 0.2rem; font-size: 1.1rem;">Radish Relish</h4>
-                <p style="color: #ffd966; font-size: 0.9rem; margin: 0.2rem 0;">TBD / Request</p>
-            </div>
-
-        </div>
-
-        <div style="text-align: center; margin-top: 1.5rem; padding-top: 1rem; border-top: 2px solid rgba(255,215,0,0.2);">
-            <p style="color: #f5e6d3; font-size: 1.05rem;">
-                📬 <strong style="color: #ffd966;">Want a specific flavor or a custom batch?</strong> 
-                <a href="contact.html" style="color: #ffd966; text-decoration: underline; font-weight: bold;">Just reach out — I'd love to make it for you!</a>
-            </p>
-            <p style="color: #d7ccc8; font-size: 0.9rem; margin-top: 0.3rem;">
-                ✨ All made with love in small batches — real fruit, real flavor, no shortcuts.
-            </p>
-        </div>
+    <!-- Wild Strawberry Jam -->
+    <div class="jelly-item">
+      <h4>Wild Strawberry Jam</h4>
+      <p>4oz – $8 &nbsp;|&nbsp; 8oz – $15</p>
     </div>
+
+    <!-- Wild Blueberry Jam -->
+    <div class="jelly-item">
+      <h4>Wild Blueberry Jam</h4>
+      <p>4oz – $8 &nbsp;|&nbsp; 8oz – $15</p>
+    </div>
+
+    <!-- Wild Black Currant Jelly (coming soon) -->
+    <div class="jelly-item coming-soon">
+      <h4>Wild Black Currant Jelly <span class="badge">Coming Soon</span></h4>
+      <p>4oz – $8 &nbsp;|&nbsp; 8oz – $15</p>
+    </div>
+
+    <!-- Wild Nagoon Berry Jam (coming soon) -->
+    <div class="jelly-item coming-soon">
+      <h4>Wild Nagoon Berry Jam <span class="badge">Coming Soon</span></h4>
+      <p>4oz – $10 &nbsp;|&nbsp; 8oz – $18</p>
+    </div>
+
+    <!-- Wild Strawberry-Rhubarb Pie Filling -->
+    <div class="jelly-item">
+      <h4>Wild Strawberry-Rhubarb Pie Filling</h4>
+      <p>4oz – $7 &nbsp;|&nbsp; 8oz – $13</p>
+    </div>
+
+    <!-- Rhubarb Lemon Honey -->
+    <div class="jelly-item">
+      <h4>Rhubarb Lemon Honey</h4>
+      <p>4oz – $6 &nbsp;|&nbsp; 8oz – $11</p>
+    </div>
+
+    <!-- Fireweed Syrup -->
+    <div class="jelly-item">
+      <h4>Fireweed Syrup</h4>
+      <p>4oz – $5 &nbsp;|&nbsp; 8oz – $9</p>
+    </div>
+
+    <!-- Fireweed Jelly (coming soon) -->
+    <div class="jelly-item coming-soon">
+      <h4>Fireweed Jelly <span class="badge">Coming Soon</span></h4>
+      <p>4oz – $5 &nbsp;|&nbsp; 8oz – $9</p>
+    </div>
+  </div>
+
+  <!-- Alaska-Only Disclaimer -->
+  <div class="disclaimer">
+    <p><strong>⚠️ For sale only in Alaska</strong> – these preserves are produced under Alaska's homestead food processing rules and are not available for shipment outside the state. (Other non-preserve items on this site can ship nationally.)</p>
+  </div>
 </div>
-
-<!-- - SUNDAY MARKET BANNER (with new image) -->
-<section class="market-banner">
-    <div class="market-image">
-        <img src="images/SundayMarketMay31.jpg" alt="Sunday Market at A&E Trading Company">
-    </div>
-    <div class="market-info">
-        <h3>Sunday Market</h3>
-        <p><strong>Come see us every Sunday!</strong></p>
-        <p><strong>Noon – 4pm at A&E Trading Company (near the Community Garden)</strong></p>
-        <p>We bring plant starts, fresh greens, rabbit skins, art, fresh produce harvested that morning, and the free bunny petting zoo. Weather permitting.</p>
-        <div class="season-date">Sundays · Noon–4pm · May 24 – August 30</div>
-    </div>
-</section>
 
 <!-- SECOND SATURDAY MARKET CARD (EXACTLY AS YOU PROVIDED - UNCHANGED) -->
 <section class="market-banner">
