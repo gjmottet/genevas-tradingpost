@@ -1,1236 +1,1231 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Farm Stand - Geneva's Trading Post</title>
-    <meta name="description" content="Geneva's Trading Post: Alaskan fiber art, rabbitry, and farm stand in Gustavus & Fairbanks. Hand-knit wildlife potholders, Champagne d'Argent rabbits, local produce.">
-    <meta name="keywords" content="Alaska, Gustavus, Fairbanks, knitting, fiber art, rabbitry, Champagne d'Argent, Silver Fox, farm stand, quail eggs, potholders, handmade, local produce">
-    <meta name="author" content="Geneva's Trading Post">
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        /* Farm Stand specific styles */
-        .farm-header {
-            position: relative;
-            text-align: center;
-            color: white;
-            margin: 0;
-        }
-        
-        .farm-banner {
-            width: 100%;
-            height: 350px;
-            object-fit: cover;
-            display: block;
-        }
-        
-        .banner-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.4);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        .farm-header h1 {
-            font-size: 3.5rem;
-            margin: 0;
-            color: white;
-            text-shadow: 0 3px 10px rgba(0,0,0,0.5);
-        }
-        
-        .farm-header p {
-            font-size: 1.5rem;
-            margin: 1rem 0 0 0;
-            color: white;
-            text-shadow: 0 2px 5px rgba(0,0,0,0.5);
-            max-width: 800px;
-            padding: 0 1rem;
-        }
-        
-        /* Quail Banner */
-        .quail-tan-banner {
-            position: relative;
-            width: 100%;
-            min-height: 220px;
-            background: url('images/QuailChicksIncubatorlong1.jpg') no-repeat center center;
-            background-size: cover;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-            margin: 0 0 2rem 0;
-            border-bottom: 3px solid #8b5a2b;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-            border-radius: 12px;
-        }
-        
-        .quail-tan-banner .overlay {
-            background: rgba(139, 90, 43, 0.65);
-            padding: 2rem 2.5rem;
-            border-radius: 12px;
-            width: 90%;
-            max-width: 900px;
-            margin: 2rem auto;
-            backdrop-filter: blur(2px);
-        }
-        
-        .quail-tan-banner h2 {
-            font-size: 2.8rem;
-            margin: 0 0 0.5rem 0;
-            color: white;
-            text-shadow: 0 3px 8px rgba(0,0,0,0.5);
-            letter-spacing: 1.5px;
-        }
-        
-        .quail-tan-banner p {
-            font-size: 1.4rem;
-            margin: 0;
-            opacity: 1;
-            font-weight: 500;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
-        }
-        
-        nav {
-            background: #27ae60;
-            padding: 1rem;
-            text-align: center;
-            border-bottom: 3px solid #2ecc71;
-        }
-        
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 1rem;
-            font-weight: bold;
-            padding: 0.7rem 1.3rem;
-            border-radius: 5px;
-            display: inline-block;
-            transition: all 0.3s ease;
-        }
-        
-        nav a:hover {
-            background: #2ecc71;
-            transform: translateY(-3px);
-        }
-        
-        .current {
-            background: #2ecc71;
-        }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farm Stand - Geneva's Trading Post</title>
+    <meta name="description" content="Geneva's Trading Post: Alaskan fiber art, rabbitry, and farm stand in Gustavus & Fairbanks. Hand-knit wildlife potholders, Champagne d'Argent rabbits, local produce.">
+    <meta name="keywords" content="Alaska, Gustavus, Fairbanks, knitting, fiber art, rabbitry, Champagne d'Argent, Silver Fox, farm stand, quail eggs, potholders, handmade, local produce">
+    <meta name="author" content="Geneva's Trading Post">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Farm Stand specific styles */
+        .farm-header {
+            position: relative;
+            text-align: center;
+            color: white;
+            margin: 0;
+        }
+        
+        .farm-banner {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .banner-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .farm-header h1 {
+            font-size: 3.5rem;
+            margin: 0;
+            color: white;
+            text-shadow: 0 3px 10px rgba(0,0,0,0.5);
+        }
+        
+        .farm-header p {
+            font-size: 1.5rem;
+            margin: 1rem 0 0 0;
+            color: white;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+            max-width: 800px;
+            padding: 0 1rem;
+        }
+        
+        /* Quail Banner */
+        .quail-tan-banner {
+            position: relative;
+            width: 100%;
+            min-height: 220px;
+            background: url('images/QuailChicksIncubatorlong1.jpg') no-repeat center center;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin: 0 0 2rem 0;
+            border-bottom: 3px solid #8b5a2b;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            border-radius: 12px;
+        }
+        
+        .quail-tan-banner .overlay {
+            background: rgba(139, 90, 43, 0.65);
+            padding: 2rem 2.5rem;
+            border-radius: 12px;
+            width: 90%;
+            max-width: 900px;
+            margin: 2rem auto;
+            backdrop-filter: blur(2px);
+        }
+        
+        .quail-tan-banner h2 {
+            font-size: 2.8rem;
+            margin: 0 0 0.5rem 0;
+            color: white;
+            text-shadow: 0 3px 8px rgba(0,0,0,0.5);
+            letter-spacing: 1.5px;
+        }
+        
+        .quail-tan-banner p {
+            font-size: 1.4rem;
+            margin: 0;
+            opacity: 1;
+            font-weight: 500;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        nav {
+            background: #27ae60;
+            padding: 1rem;
+            text-align: center;
+            border-bottom: 3px solid #2ecc71;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: bold;
+            padding: 0.7rem 1.3rem;
+            border-radius: 5px;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        
+        nav a:hover {
+            background: #2ecc71;
+            transform: translateY(-3px);
+        }
+        
+        .current {
+            background: #2ecc71;
+        }
 
-        /* White gap between nav and content */
-        .white-gap {
-            height: 25px;
-            background: white;
-            width: 100%;
-        }
-        
-        /* Slideshow Shared Styles */
-        .slideshow-container {
-            position: relative;
-            max-width: 100%;
-            margin: 0 auto;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-            background-color: #f0f7e8;
-        }
-        
-        .mySlides, .mySlides2 {
-            display: none;
-            text-align: center;
-            animation: fadeEffect 1s;
-        }
-        
-        @keyframes fadeEffect {
-            from {opacity: 0.4;}
-            to {opacity: 1;}
-        }
-        
-        .mySlides img, .mySlides2 img {
-            width: 100%;
-            max-height: 380px;
-            object-fit: cover;
-            border-bottom: 2px solid #c8e6b5;
-        }
-        
-        .caption-text {
-            padding: 12px 16px;
-            background: rgba(60, 80, 40, 0.85);
-            color: white;
-            font-size: 1rem;
-            text-align: center;
-            font-style: italic;
-            font-weight: 500;
-            backdrop-filter: blur(3px);
-        }
-        
-        /* Navigation buttons */
-        .prev, .next {
-            cursor: pointer;
-            position: absolute;
-            top: 45%;
-            width: 44px;
-            padding: 14px 0;
-            margin-top: -28px;
-            color: white;
-            font-weight: bold;
-            font-size: 22px;
-            transition: 0.3s;
-            user-select: none;
-            background-color: rgba(0, 0, 0, 0.5);
-            text-decoration: none;
-            z-index: 10;
-            text-align: center;
-            border-radius: 0;
-            backdrop-filter: blur(2px);
-        }
-        
-        .prev {
-            left: 0;
-            border-radius: 0 8px 8px 0;
-        }
-        
-        .next {
-            right: 0;
-            border-radius: 8px 0 0 8px;
-        }
-        
-        .prev:hover, .next:hover {
-            background-color: rgba(0, 0, 0, 0.85);
-            transform: scale(1.02);
-        }
-        
-        .dot-group {
-            text-align: center;
-            padding: 12px 0;
-            background: #eaf7e0;
-        }
-        
-        .dot {
-            cursor: pointer;
-            height: 12px;
-            width: 12px;
-            margin: 0 4px;
-            background-color: #bbb;
-            border-radius: 50%;
-            display: inline-block;
-            transition: background-color 0.3s ease;
-        }
-        
-        .active-dot, .dot:hover {
-            background-color: #2e7d32;
-        }
-        
-        /* May Highlights Card */
-        .may-highlights-card {
-            background: #d9f0ca;
-            border-radius: 28px;
-            margin: 2rem auto;
-            max-width: 1000px;
-            padding: 1.8rem 2rem 2rem 2rem;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-            border-left: 8px solid #558b2f;
-            transition: transform 0.2s;
-        }
-        
-        .may-highlights-card h3 {
-            font-size: 2.2rem;
-            color: #2c5e1a;
-            text-align: center;
-            margin-top: 0;
-            margin-bottom: 1.5rem;
-            font-weight: 700;
-            letter-spacing: -0.5px;
-            text-shadow: 1px 1px 0 #f9f9cf;
-        }
-        
-        /* Quail Slideshow */
-        .quail-slideshow-wrapper {
-            max-width: 1000px;
-            margin: 2rem auto 1rem;
-            padding: 0 2rem;
-        }
-        
-        .quail-slideshow-wrapper .slideshow-container {
-            border: 4px solid #f0e0b0;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-            border-radius: 24px;
-            position: relative;
-        }
-        
-        .quail-slideshow-wrapper .caption-text {
-            background: rgba(80, 55, 35, 0.85);
-            font-size: 1rem;
-        }
-        
-        /* Quail Section */
-        .quail-section {
-            text-align: center;
-            padding: 3rem 2rem 2rem;
-            background: linear-gradient(135deg, #f9fff9 0%, #f0fff0 100%);
-            margin: 2rem 0 0 0;
-        }
-        
-        .quail-section h2 {
-            color: #27ae60;
-            font-size: 2.2rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        .quail-intro {
-            font-size: 1.3rem;
-            color: #34495e;
-            margin-bottom: 2rem;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .quail-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            max-width: 1000px;
-            margin: 2rem auto 0;
-        }
-        
-        .quail-card {
-            background: white;
-            border-radius: 12px;
-            padding: 1.5rem;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            border: 2px solid #e0f7e0;
-        }
-        
-        .quail-image-container {
-            width: 100%;
-            height: 180px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1rem;
-        }
-        
-        .quail-card img {
-            max-width: 100%;
-            max-height: 100%;
-            width: auto;
-            height: auto;
-            object-fit: contain;
-        }
-        
-        .quail-card h3 {
-            color: #27ae60;
-            margin-top: 0;
-            font-size: 1.5rem;
-            border-bottom: 2px solid #2ecc71;
-            padding-bottom: 0.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        .availability-tag {
-            display: inline-block;
-            background: #3498db;
-            color: white;
-            padding: 0.4rem 1rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: bold;
-            margin: 0.5rem 0;
-        }
-        
-        /* Feather bag offer styling */
-        .feather-offer {
-            background: #fef5e6;
-            border: 2px solid #d4a373;
-            border-radius: 12px;
-            padding: 1rem;
-            margin: 1rem 0 0.5rem;
-            text-align: center;
-        }
-        
-        .feather-offer strong {
-            color: #8b5a2b;
-            font-size: 1.1rem;
-        }
-        
-        .feather-price {
-            display: inline-block;
-            background: #27ae60;
-            color: white;
-            padding: 0.3rem 1rem;
-            border-radius: 30px;
-            font-weight: bold;
-            margin-top: 0.5rem;
-            font-size: 0.95rem;
-        }
-        
-        .impulse-card {
-            background: #f9f3e0;
-            border: 1px solid #e6c8a0;
-            border-radius: 8px;
-            padding: 0.6rem;
-            margin: 0.8rem 0 0;
-            text-align: center;
-        }
-        
-        .impulse-card span {
-            font-weight: bold;
-            color: #8b5a2b;
-        }
-        
-        /* Announcement Card */
-        .announcement-card {
-            position: relative;
-            background-image: url('images/Carrot Tasting 2025 Geneva.jpg');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            padding: 2.5rem;
-            border-radius: 15px;
-            margin: 2rem auto;
-            max-width: 1000px;
-            text-align: center;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-            border: 3px solid #ffd700;
-            overflow: hidden;
-        }
-        
-        .announcement-card::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 1;
-        }
-        
-        .announcement-card h2,
-        .announcement-card p {
-            position: relative;
-            z-index: 2;
-            text-shadow: 0 2px 8px rgba(0,0,0,0.7);
-        }
-        
-        .announcement-card h2 {
-            font-size: 2.5rem;
-            margin-top: 0;
-            margin-bottom: 0.5rem;
-            color: #ffd700;
-        }
-        
-        .announcement-card p {
-            font-size: 1.4rem;
-            line-height: 1.6;
-            margin: 0;
-            opacity: 0.95;
-            color: white;
-        }
-        
-        /* Workshop Section */
-        .workshop-section {
-            padding: 2rem 2rem;
-            background: white;
-        }
-        
-        .workshop-section h2 {
-            color: #1a3e6f;
-            text-align: center;
-            font-size: 2.2rem;
-            margin-bottom: 2rem;
-        }
-        
-        .workshop-content {
-            display: grid;
-            grid-template-columns: 300px 1fr;
-            gap: 2rem;
-            max-width: 1000px;
-            margin: 0 auto 3rem;
-            align-items: start;
-        }
-        
-        .workshop-image {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 0.75rem;
-        }
-        
-        .workshop-image img:first-child {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-        
-        .library-logo {
-            max-width: 120px;
-            height: auto;
-            border-radius: 8px;
-            background: white;
-            padding: 4px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-        
-        .workshop-details h3 {
-            color: #2c5282;
-            margin-top: 0;
-            font-size: 1.6rem;
-            text-align: left;
-            margin-bottom: 0.25rem;
-        }
-        
-        .free-tag {
-            display: inline-block;
-            background: #e67e22;
-            color: white;
-            font-weight: bold;
-            padding: 0.25rem 0.8rem;
-            border-radius: 30px;
-            font-size: 0.9rem;
-            margin-left: 0.75rem;
-            vertical-align: middle;
-            letter-spacing: 0.5px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        
-        .workshop-date {
-            color: #7f8c8d;
-            font-weight: bold;
-            margin-bottom: 1rem;
-            display: block;
-        }
-        
-        .workshop-details p {
-            color: #34495e;
-            font-size: 1.1rem;
-            line-height: 1.6;
-            text-align: left;
-            margin: 0.8rem 0;
-        }
-        
-        .starter-kit {
-            background: #e8f0fe;
-            padding: 1rem;
-            border-radius: 8px;
-            margin: 1rem 0;
-            border-left: 4px solid #2c5282;
-        }
-        
-        .carrot-workshop {
-            display: grid;
-            grid-template-columns: 300px 1fr;
-            gap: 2rem;
-            max-width: 1000px;
-            margin: 0 auto 3rem;
-            align-items: start;
-        }
-        
-        .carrot-workshop .workshop-image {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 0.75rem;
-        }
-        
-        .carrot-data h3 {
-            color: #e67e22;
-            margin-top: 0;
-            font-size: 1.6rem;
-            text-align: left;
-            margin-bottom: 0.25rem;
-        }
-        
-        .seed-bank-note {
-            background: #e8f6f3;
-            padding: 1rem;
-            border-radius: 8px;
-            margin: 1rem 0;
-            border-left: 4px solid #27ae60;
-        }
-        
-        .harvest-workshop {
-            display: grid;
-            grid-template-columns: 300px 1fr;
-            gap: 2rem;
-            max-width: 1000px;
-            margin: 0 auto;
-            align-items: start;
-        }
-        
-        .harvest-workshop .workshop-image {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 0.75rem;
-        }
-        
-        .harvest-workshop .workshop-details h3 {
-            color: #2c5282;
-        }
-        
-        .carrot-charts {
-            margin-top: 2rem;
-            grid-column: 1 / -1;
-            width: 100%;
-        }
-        
-        .charts-full-width {
-            background: white;
-            border-radius: 12px;
-            padding: 2rem;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            border: 2px solid #fdebd0;
-            margin-top: 1rem;
-            width: 100%;
-        }
-        
-        .tasting-tables {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            margin: 1.5rem 0;
-        }
-        
-        .tasting-table {
-            background: #f9f9f9;
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-            overflow-x: auto;
-            border: 1px solid #e0e0e0;
-            max-height: 350px;
-            overflow-y: auto;
-            width: 100%;
-        }
-        
-        .tasting-table h4 {
-            color: #e67e22;
-            text-align: center;
-            margin-top: 0;
-            margin-bottom: 1rem;
-            font-size: 1.2rem;
-            position: sticky;
-            top: 0;
-            background: #f9f9f9;
-            z-index: 10;
-            padding: 10px;
-            border-bottom: 2px solid #e0e0e0;
-        }
-        
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 0.85rem;
-        }
-        
-        th {
-            background: #f1f1f1;
-            padding: 0.6rem;
-            text-align: left;
-            border-bottom: 2px solid #e67e22;
-            font-weight: bold;
-            color: #2c3e50;
-            position: sticky;
-            top: 50px;
-            z-index: 10;
-        }
-        
-        td {
-            padding: 0.5rem;
-            border-bottom: 1px solid #e0e0e0;
-        }
-        
-        .rank-1 {
-            background: #e8f6f3;
-            font-weight: bold;
-        }
-        
-        .rank-2 {
-            background: #fef9e7;
-        }
-        
-        .rank-3 {
-            background: #f4ecf7;
-        }
-        
-        .grant-note {
-            background: #e8f0fe;
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin: 3rem auto 0;
-            max-width: 1000px;
-            border-left: 4px solid #2c5282;
-            text-align: center;
-        }
-        
-        .festival-btn {
-            display: inline-block;
-            background: #e67e22;
-            color: white;
-            text-decoration: none;
-            padding: 0.8rem 1.8rem;
-            border-radius: 50px;
-            font-weight: bold;
-            margin-top: 1rem;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-            font-size: 1rem;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-        }
-        
-        .festival-btn:hover {
-            background: #d35400;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.25);
-        }
-        
-        .market-banner {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
-            color: white;
-            margin: 3rem auto;
-            max-width: 1000px;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-        }
-        
-        .market-image {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 1rem;
-            background: rgba(255,255,255,0.1);
-        }
-        
-        .market-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 10px;
-        }
-        
-        .market-info {
-            padding: 2rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-        
-        .market-info h3 {
-            font-size: 1.8rem;
-            margin-top: 0;
-            margin-bottom: 1rem;
-            color: white;
-        }
-        
-        .market-info p {
-            font-size: 1.1rem;
-            line-height: 1.5;
-            margin: 0.3rem 0;
-        }
-        
-        .season-date {
-            display: inline-block;
-            background: white;
-            color: #27ae60;
-            padding: 0.6rem 1.5rem;
-            border-radius: 30px;
-            font-size: 1.2rem;
-            font-weight: bold;
-            margin-top: 1rem;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        }
-        
-        .plant-starts-brown {
-            background: linear-gradient(135deg, #6b4f3c 0%, #8b5a2b 100%);
-            color: white;
-            padding: 2rem 2rem;
-            border-radius: 20px;
-            margin: 2rem auto 3rem;
-            max-width: 1000px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
-            border: 3px solid #b87c4b;
-            text-align: center;
-        }
-        
-        .plant-starts-brown h3 {
-            font-size: 2rem;
-            margin: 0 0 1rem 0;
-            color: #fbe9d2;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.4);
-        }
-        
-        .plant-list {
-            font-size: 1.1rem;
-            line-height: 1.6;
-        }
-        
-        .strawberry-header-card {
-            position: relative;
-            background-image: url('images/StrawberryPlantsApril2026.jpg');
-            background-size: cover;
-            background-position: center 40%;
-            border-radius: 28px;
-            margin: 2rem auto 3rem;
-            max-width: 1000px;
-            min-height: 280px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
-            border: 3px solid #e67e22;
-            overflow: hidden;
-        }
-        
-        .strawberry-header-card::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 1;
-            backdrop-filter: blur(2px);
-        }
-        
-        .strawberry-content {
-            position: relative;
-            z-index: 2;
-            color: white;
-            padding: 2rem 2rem;
-            max-width: 85%;
-            text-shadow: 0 2px 12px rgba(0,0,0,0.8);
-        }
-        
-        .strawberry-content h3 {
-            font-size: 2.8rem;
-            margin: 0 0 0.5rem;
-            color: #fff5e6;
-            letter-spacing: 1px;
-            font-weight: bold;
-        }
-        
-        .strawberry-price {
-            background: #e67e22;
-            color: white;
-            display: inline-block;
-            padding: 0.5rem 1.8rem;
-            border-radius: 60px;
-            font-size: 1.4rem;
-            font-weight: bold;
-            margin: 0.75rem 0;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-            border: 1px solid #ffd966;
-        }
-        
-        .strawberry-inline-image {
-            margin: 1rem auto;
-            display: flex;
-            justify-content: center;
-        }
-        
-        .strawberry-inline-image img {
-            max-width: 200px;
-            width: 100%;
-            height: auto;
-            border-radius: 16px;
-            border: 4px solid #8b0000;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-        }
-        
-        .strawberry-varieties {
-            background: rgba(0, 0, 0, 0.65);
-            backdrop-filter: blur(4px);
-            padding: 0.8rem 1.5rem;
-            border-radius: 40px;
-            margin: 1rem auto;
-            display: inline-block;
-            font-size: 1.1rem;
-            border-left: 4px solid #e67e22;
-            font-weight: 500;
-        }
-        
-        .email-btn {
-            display: inline-block;
-            background: #2c5282;
-            color: white;
-            text-decoration: none;
-            padding: 0.8rem 1.8rem;
-            border-radius: 50px;
-            font-weight: bold;
-            margin-top: 1rem;
-            transition: background 0.3s ease;
-            border: none;
-            cursor: pointer;
-            font-size: 1rem;
-        }
-        
-        .email-btn:hover {
-            background: #1d3f62;
-            transform: translateY(-2px);
-        }
-        
-        .back-btn {
-            display: inline-block;
-            background: #7f8c8d;
-            color: white;
-            padding: 0.9rem 2rem;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            margin: 3rem auto;
-            text-align: center;
-            font-size: 1.1rem;
-            transition: background 0.3s ease;
-        }
-        
-        .back-btn:hover {
-            background: #95a5a6;
-        }
-        
-        footer {
-            text-align: center;
-            padding: 2rem;
-            background: #2c3e50;
-            color: white;
-            margin-top: 3rem;
-        }
-        
-        .register-highlight {
-            background: #fef9e0;
-            border-left: 4px solid #e67e22;
-            padding: 0.75rem 1rem;
-            margin-top: 1rem;
-            border-radius: 8px;
-            font-weight: 500;
-        }
-        
-        .sunday-market-card {
-            background: #5d4037;
-            border-radius: 28px;
-            margin: 2rem auto;
-            max-width: 1000px;
-            padding: 1.8rem 2rem;
-            box-shadow: 0 12px 25px rgba(0,0,0,0.2);
-            text-align: center;
-            color: white;
-            border: 2px solid #d9a066;
-        }
-        .sunday-market-card h2 {
-            font-size: 2.2rem;
-            margin: 0 0 0.5rem;
-            color: #ffecb3;
-        }
-        .sunday-market-card .market-dates {
-            font-size: 1.3rem;
-            font-weight: bold;
-            margin: 0.5rem 0;
-        }
-        .sunday-market-card .market-detail {
-            font-size: 1.1rem;
-            line-height: 1.4;
-        }
-        .strawberry-festival-card {
-            background: #b71c1c;
-            border-radius: 28px;
-            margin: 2rem auto;
-            max-width: 1000px;
-            padding: 1.8rem 2rem;
-            box-shadow: 0 12px 25px rgba(0,0,0,0.25);
-            text-align: center;
-            color: white;
-            border: 2px solid #ffaa66;
-        }
-        .strawberry-festival-card h2 {
-            font-size: 2.3rem;
-            margin: 0 0 0.25rem;
-            color: #fff0b5;
-        }
-        .festival-highlight {
-            background: #ffd966;
-            display: inline-block;
-            padding: 0.3rem 1rem;
-            border-radius: 40px;
-            color: #8b0000;
-            font-weight: bold;
-            margin: 0.75rem 0;
-        }
-        .show-schedule {
-            background: rgba(255,255,240,0.15);
-            border-radius: 20px;
-            padding: 1rem;
-            margin: 1rem 0;
-            text-align: left;
-            font-size: 0.95rem;
-        }
-        
-        @media (max-width: 768px) {
-            .farm-header h1 { font-size: 2.5rem; }
-            .farm-header p { font-size: 1.2rem; }
-            .farm-banner { height: 250px; }
-            .quail-tan-banner h2 { font-size: 2rem; }
-            .quail-tan-banner p { font-size: 1.1rem; }
-            .quail-tan-banner .overlay { padding: 1.5rem 1rem; }
-            nav a { display: block; margin: 0.5rem auto; width: 80%; max-width: 250px; }
-            .workshop-content, .carrot-workshop, .harvest-workshop { grid-template-columns: 1fr; text-align: center; }
-            .workshop-details h3, .workshop-details p, .carrot-data h3, .carrot-data p { text-align: center; }
-            .quail-grid { grid-template-columns: 1fr; gap: 1.5rem; }
-            .market-banner { grid-template-columns: 1fr; }
-            .market-image { min-height: 250px; }
-            .tasting-tables { grid-template-columns: 1fr; }
-            .tasting-table { overflow-x: scroll; max-height: 400px; }
-            .tasting-table table { min-width: 600px; }
-            .strawberry-header-card { min-height: 240px; margin: 1.5rem 1rem; border-radius: 20px; }
-            .strawberry-content h3 { font-size: 1.8rem; }
-            .strawberry-price { font-size: 1.2rem; }
-            .announcement-card h2 { font-size: 1.8rem; }
-            .announcement-card p { font-size: 1.1rem; }
-            .prev, .next { width: 36px; padding: 10px 0; font-size: 18px; }
-        }
-    </style>
+        /* White gap between nav and content */
+        .white-gap {
+            height: 25px;
+            background: white;
+            width: 100%;
+        }
+        
+        /* Slideshow Shared Styles */
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            margin: 0 auto;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            background-color: #f0f7e8;
+        }
+        
+        .mySlides, .mySlides2 {
+            display: none;
+            text-align: center;
+            animation: fadeEffect 1s;
+        }
+        
+        @keyframes fadeEffect {
+            from {opacity: 0.4;}
+            to {opacity: 1;}
+        }
+        
+        .mySlides img, .mySlides2 img {
+            width: 100%;
+            max-height: 380px;
+            object-fit: cover;
+            border-bottom: 2px solid #c8e6b5;
+        }
+        
+        .caption-text {
+            padding: 12px 16px;
+            background: rgba(60, 80, 40, 0.85);
+            color: white;
+            font-size: 1rem;
+            text-align: center;
+            font-style: italic;
+            font-weight: 500;
+            backdrop-filter: blur(3px);
+        }
+        
+        /* Navigation buttons */
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 45%;
+            width: 44px;
+            padding: 14px 0;
+            margin-top: -28px;
+            color: white;
+            font-weight: bold;
+            font-size: 22px;
+            transition: 0.3s;
+            user-select: none;
+            background-color: rgba(0, 0, 0, 0.5);
+            text-decoration: none;
+            z-index: 10;
+            text-align: center;
+            border-radius: 0;
+            backdrop-filter: blur(2px);
+        }
+        
+        .prev {
+            left: 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .next {
+            right: 0;
+            border-radius: 8px 0 0 8px;
+        }
+        
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.85);
+            transform: scale(1.02);
+        }
+        
+        .dot-group {
+            text-align: center;
+            padding: 12px 0;
+            background: #eaf7e0;
+        }
+        
+        .dot {
+            cursor: pointer;
+            height: 12px;
+            width: 12px;
+            margin: 0 4px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+        
+        .active-dot, .dot:hover {
+            background-color: #2e7d32;
+        }
+        
+        /* May Highlights Card */
+        .may-highlights-card {
+            background: #d9f0ca;
+            border-radius: 28px;
+            margin: 2rem auto;
+            max-width: 1000px;
+            padding: 1.8rem 2rem 2rem 2rem;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            border-left: 8px solid #558b2f;
+            transition: transform 0.2s;
+        }
+        
+        .may-highlights-card h3 {
+            font-size: 2.2rem;
+            color: #2c5e1a;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            text-shadow: 1px 1px 0 #f9f9cf;
+        }
+        
+        /* Quail Slideshow */
+        .quail-slideshow-wrapper {
+            max-width: 1000px;
+            margin: 2rem auto 1rem;
+            padding: 0 2rem;
+        }
+        
+        .quail-slideshow-wrapper .slideshow-container {
+            border: 4px solid #f0e0b0;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            border-radius: 24px;
+            position: relative;
+        }
+        
+        .quail-slideshow-wrapper .caption-text {
+            background: rgba(80, 55, 35, 0.85);
+            font-size: 1rem;
+        }
+        
+        /* Quail Section */
+        .quail-section {
+            text-align: center;
+            padding: 3rem 2rem 2rem;
+            background: linear-gradient(135deg, #f9fff9 0%, #f0fff0 100%);
+            margin: 2rem 0 0 0;
+        }
+        
+        .quail-section h2 {
+            color: #27ae60;
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .quail-intro {
+            font-size: 1.3rem;
+            color: #34495e;
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .quail-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 2rem auto 0;
+        }
+        
+        .quail-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border: 2px solid #e0f7e0;
+        }
+        
+        .quail-image-container {
+            width: 100%;
+            height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+        
+        .quail-card img {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+        }
+        
+        .quail-card h3 {
+            color: #27ae60;
+            margin-top: 0;
+            font-size: 1.5rem;
+            border-bottom: 2px solid #2ecc71;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .availability-tag {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin: 0.5rem 0;
+        }
+        
+        /* Feather bag offer styling */
+        .feather-offer {
+            background: #fef5e6;
+            border: 2px solid #d4a373;
+            border-radius: 12px;
+            padding: 1rem;
+            margin: 1rem 0 0.5rem;
+            text-align: center;
+        }
+        
+        .feather-offer strong {
+            color: #8b5a2b;
+            font-size: 1.1rem;
+        }
+        
+        .feather-price {
+            display: inline-block;
+            background: #27ae60;
+            color: white;
+            padding: 0.3rem 1rem;
+            border-radius: 30px;
+            font-weight: bold;
+            margin-top: 0.5rem;
+            font-size: 0.95rem;
+        }
+        
+        .impulse-card {
+            background: #f9f3e0;
+            border: 1px solid #e6c8a0;
+            border-radius: 8px;
+            padding: 0.6rem;
+            margin: 0.8rem 0 0;
+            text-align: center;
+        }
+        
+        .impulse-card span {
+            font-weight: bold;
+            color: #8b5a2b;
+        }
+        
+        /* Announcement Card */
+        .announcement-card {
+            position: relative;
+            background-image: url('images/Carrot Tasting 2025 Geneva.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            margin: 2rem auto;
+            max-width: 1000px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+            border: 3px solid #ffd700;
+            overflow: hidden;
+        }
+        
+        .announcement-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+        
+        .announcement-card h2,
+        .announcement-card p {
+            position: relative;
+            z-index: 2;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.7);
+        }
+        
+        .announcement-card h2 {
+            font-size: 2.5rem;
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+            color: #ffd700;
+        }
+        
+        .announcement-card p {
+            font-size: 1.4rem;
+            line-height: 1.6;
+            margin: 0;
+            opacity: 0.95;
+            color: white;
+        }
+        
+        /* Workshop Section */
+        .workshop-section {
+            padding: 2rem 2rem;
+            background: white;
+        }
+        
+        .workshop-section h2 {
+            color: #1a3e6f;
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .workshop-content {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto 3rem;
+            align-items: start;
+        }
+        
+        .workshop-image {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .workshop-image img:first-child {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .library-logo {
+            max-width: 120px;
+            height: auto;
+            border-radius: 8px;
+            background: white;
+            padding: 4px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .workshop-details h3 {
+            color: #2c5282;
+            margin-top: 0;
+            font-size: 1.6rem;
+            text-align: left;
+            margin-bottom: 0.25rem;
+        }
+        
+        .free-tag {
+            display: inline-block;
+            background: #e67e22;
+            color: white;
+            font-weight: bold;
+            padding: 0.25rem 0.8rem;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            margin-left: 0.75rem;
+            vertical-align: middle;
+            letter-spacing: 0.5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .workshop-date {
+            color: #7f8c8d;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        
+        .workshop-details p {
+            color: #34495e;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            text-align: left;
+            margin: 0.8rem 0;
+        }
+        
+        .starter-kit {
+            background: #e8f0fe;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            border-left: 4px solid #2c5282;
+        }
+        
+        .carrot-workshop {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto 3rem;
+            align-items: start;
+        }
+        
+        .carrot-workshop .workshop-image {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .carrot-data h3 {
+            color: #e67e22;
+            margin-top: 0;
+            font-size: 1.6rem;
+            text-align: left;
+            margin-bottom: 0.25rem;
+        }
+        
+        .seed-bank-note {
+            background: #e8f6f3;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            border-left: 4px solid #27ae60;
+        }
+        
+        .harvest-workshop {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+            align-items: start;
+        }
+        
+        .harvest-workshop .workshop-image {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .harvest-workshop .workshop-details h3 {
+            color: #2c5282;
+        }
+        
+        .carrot-charts {
+            margin-top: 2rem;
+            grid-column: 1 / -1;
+            width: 100%;
+        }
+        
+        .charts-full-width {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border: 2px solid #fdebd0;
+            margin-top: 1rem;
+            width: 100%;
+        }
+        
+        .tasting-tables {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 1.5rem 0;
+        }
+        
+        .tasting-table {
+            background: #f9f9f9;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            overflow-x: auto;
+            border: 1px solid #e0e0e0;
+            max-height: 350px;
+            overflow-y: auto;
+            width: 100%;
+        }
+        
+        .tasting-table h4 {
+            color: #e67e22;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            position: sticky;
+            top: 0;
+            background: #f9f9f9;
+            z-index: 10;
+            padding: 10px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85rem;
+        }
+        
+        th {
+            background: #f1f1f1;
+            padding: 0.6rem;
+            text-align: left;
+            border-bottom: 2px solid #e67e22;
+            font-weight: bold;
+            color: #2c3e50;
+            position: sticky;
+            top: 50px;
+            z-index: 10;
+        }
+        
+        td {
+            padding: 0.5rem;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .rank-1 {
+            background: #e8f6f3;
+            font-weight: bold;
+        }
+        
+        .rank-2 {
+            background: #fef9e7;
+        }
+        
+        .rank-3 {
+            background: #f4ecf7;
+        }
+        
+        .grant-note {
+            background: #e8f0fe;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 3rem auto 0;
+            max-width: 1000px;
+            border-left: 4px solid #2c5282;
+            text-align: center;
+        }
+        
+        .festival-btn {
+            display: inline-block;
+            background: #e67e22;
+            color: white;
+            text-decoration: none;
+            padding: 0.8rem 1.8rem;
+            border-radius: 50px;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+        
+        .festival-btn:hover {
+            background: #d35400;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+        }
+        
+        .market-banner {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+            color: white;
+            margin: 3rem auto;
+            max-width: 1000px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+        
+        .market-image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            background: rgba(255,255,255,0.1);
+        }
+        
+        .market-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        
+        .market-info {
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .market-info h3 {
+            font-size: 1.8rem;
+            margin-top: 0;
+            margin-bottom: 1rem;
+            color: white;
+        }
+        
+        .market-info p {
+            font-size: 1.1rem;
+            line-height: 1.5;
+            margin: 0.3rem 0;
+        }
+        
+        .season-date {
+            display: inline-block;
+            background: white;
+            color: #27ae60;
+            padding: 0.6rem 1.5rem;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-top: 1rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .plant-starts-brown {
+            background: linear-gradient(135deg, #6b4f3c 0%, #8b5a2b 100%);
+            color: white;
+            padding: 2rem 2rem;
+            border-radius: 20px;
+            margin: 2rem auto 3rem;
+            max-width: 1000px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+            border: 3px solid #b87c4b;
+            text-align: center;
+        }
+        
+        .plant-starts-brown h3 {
+            font-size: 2rem;
+            margin: 0 0 1rem 0;
+            color: #fbe9d2;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+        }
+        
+        .plant-list {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        
+        .strawberry-header-card {
+            position: relative;
+            background-image: url('images/StrawberryPlantsApril2026.jpg');
+            background-size: cover;
+            background-position: center 40%;
+            border-radius: 28px;
+            margin: 2rem auto 3rem;
+            max-width: 1000px;
+            min-height: 280px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            border: 3px solid #e67e22;
+            overflow: hidden;
+        }
+        
+        .strawberry-header-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+            backdrop-filter: blur(2px);
+        }
+        
+        .strawberry-content {
+            position: relative;
+            z-index: 2;
+            color: white;
+            padding: 2rem 2rem;
+            max-width: 85%;
+            text-shadow: 0 2px 12px rgba(0,0,0,0.8);
+        }
+        
+        .strawberry-content h3 {
+            font-size: 2.8rem;
+            margin: 0 0 0.5rem;
+            color: #fff5e6;
+            letter-spacing: 1px;
+            font-weight: bold;
+        }
+        
+        .strawberry-price {
+            background: #e67e22;
+            color: white;
+            display: inline-block;
+            padding: 0.5rem 1.8rem;
+            border-radius: 60px;
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin: 0.75rem 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            border: 1px solid #ffd966;
+        }
+        
+        .strawberry-inline-image {
+            margin: 1rem auto;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .strawberry-inline-image img {
+            max-width: 200px;
+            width: 100%;
+            height: auto;
+            border-radius: 16px;
+            border: 4px solid #8b0000;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+        
+        .strawberry-varieties {
+            background: rgba(0, 0, 0, 0.65);
+            backdrop-filter: blur(4px);
+            padding: 0.8rem 1.5rem;
+            border-radius: 40px;
+            margin: 1rem auto;
+            display: inline-block;
+            font-size: 1.1rem;
+            border-left: 4px solid #e67e22;
+            font-weight: 500;
+        }
+        
+        .email-btn {
+            display: inline-block;
+            background: #2c5282;
+            color: white;
+            text-decoration: none;
+            padding: 0.8rem 1.8rem;
+            border-radius: 50px;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: background 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        
+        .email-btn:hover {
+            background: #1d3f62;
+            transform: translateY(-2px);
+        }
+        
+        .back-btn {
+            display: inline-block;
+            background: #7f8c8d;
+            color: white;
+            padding: 0.9rem 2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin: 3rem auto;
+            text-align: center;
+            font-size: 1.1rem;
+            transition: background 0.3s ease;
+        }
+        
+        .back-btn:hover {
+            background: #95a5a6;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: #2c3e50;
+            color: white;
+            margin-top: 3rem;
+        }
+        
+        .register-highlight {
+            background: #fef9e0;
+            border-left: 4px solid #e67e22;
+            padding: 0.75rem 1rem;
+            margin-top: 1rem;
+            border-radius: 8px;
+            font-weight: 500;
+        }
+        
+        .sunday-market-card {
+            background: #5d4037;
+            border-radius: 28px;
+            margin: 2rem auto;
+            max-width: 1000px;
+            padding: 1.8rem 2rem;
+            box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+            text-align: center;
+            color: white;
+            border: 2px solid #d9a066;
+        }
+        .sunday-market-card h2 {
+            font-size: 2.2rem;
+            margin: 0 0 0.5rem;
+            color: #ffecb3;
+        }
+        .sunday-market-card .market-dates {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin: 0.5rem 0;
+        }
+        .sunday-market-card .market-detail {
+            font-size: 1.1rem;
+            line-height: 1.4;
+        }
+        .strawberry-festival-card {
+            background: #b71c1c;
+            border-radius: 28px;
+            margin: 2rem auto;
+            max-width: 1000px;
+            padding: 1.8rem 2rem;
+            box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+            text-align: center;
+            color: white;
+            border: 2px solid #ffaa66;
+        }
+        .strawberry-festival-card h2 {
+            font-size: 2.3rem;
+            margin: 0 0 0.25rem;
+            color: #fff0b5;
+        }
+        .festival-highlight {
+            background: #ffd966;
+            display: inline-block;
+            padding: 0.3rem 1rem;
+            border-radius: 40px;
+            color: #8b0000;
+            font-weight: bold;
+            margin: 0.75rem 0;
+        }
+        .show-schedule {
+            background: rgba(255,255,240,0.15);
+            border-radius: 20px;
+            padding: 1rem;
+            margin: 1rem 0;
+            text-align: left;
+            font-size: 0.95rem;
+        }
+        
+        @media (max-width: 768px) {
+            .farm-header h1 { font-size: 2.5rem; }
+            .farm-header p { font-size: 1.2rem; }
+            .farm-banner { height: 250px; }
+            .quail-tan-banner h2 { font-size: 2rem; }
+            .quail-tan-banner p { font-size: 1.1rem; }
+            .quail-tan-banner .overlay { padding: 1.5rem 1rem; }
+            nav a { display: block; margin: 0.5rem auto; width: 80%; max-width: 250px; }
+            .workshop-content, .carrot-workshop, .harvest-workshop { grid-template-columns: 1fr; text-align: center; }
+            .workshop-details h3, .workshop-details p, .carrot-data h3, .carrot-data p { text-align: center; }
+            .quail-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+            .market-banner { grid-template-columns: 1fr; }
+            .market-image { min-height: 250px; }
+            .tasting-tables { grid-template-columns: 1fr; }
+            .tasting-table { overflow-x: scroll; max-height: 400px; }
+            .tasting-table table { min-width: 600px; }
+            .strawberry-header-card { min-height: 240px; margin: 1.5rem 1rem; border-radius: 20px; }
+            .strawberry-content h3 { font-size: 1.8rem; }
+            .strawberry-price { font-size: 1.2rem; }
+            .announcement-card h2 { font-size: 1.8rem; }
+            .announcement-card p { font-size: 1.1rem; }
+            .prev, .next { width: 36px; padding: 10px 0; font-size: 18px; }
+        }
+    </style>
 </head>
 <body>
-    <header class="farm-header">
-        <img src="images/SquashPlant.jpg" alt="Squash Plant in Garden" class="farm-banner">
-        <div class="banner-overlay">
-            <h1>Farm Stand</h1>
-            <p>Local Food, Quail Eggs & Sustainable Farming in Gustavus</p>
-        </div>
-    </header>
-    
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="alaska-textiles.html">Alaskan Textile Art</a>
-        <a href="rabbitry.html">My Rabbitry</a>
-        <a href="farm-stand.html" class="current">Farm Stand</a>
-        <a href="fantasy-ball.html">Fantasy Art</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+    <header class="farm-header">
+        <img src="images/SquashPlant.jpg" alt="Squash Plant in Garden" class="farm-banner">
+        <div class="banner-overlay">
+            <h1>Farm Stand</h1>
+            <p>Local Food, Quail Eggs & Sustainable Farming in Gustavus</p>
+        </div>
+    </header>
+    
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="alaska-textiles.html">Alaskan Textile Art</a>
+        <a href="rabbitry.html">My Rabbitry</a>
+        <a href="farm-stand.html" class="current">Farm Stand</a>
+        <a href="fantasy-ball.html">Fantasy Art</a>
+        <a href="contact.html">Contact</a>
+    </nav>
 
-    <div class="white-gap"></div>
-    
-    <main>
-    <!-- - Image slideshow -->
-           <div class="may-highlights-card">
-            <h3> June Highlights</h3>
-            <div class="slideshow-container" id="maySlideshowNew">
-                <div class="juneSlide"><img src="images/Greenhouse2026.jpg" style="width:100%"><div class="caption-text">Plant starts in the hoop house are coming up strong! Cucumbers, melons, and zucchini soon. Bok choy just harvested from here to make room for pole beans going in the ground.</div></div>
-                <div class="juneSlide"><img src="images/RadishesJune2026.jpg" style="width:100%"><div class="caption-text">First radishes of the year – Easter Basket Mix! White = spicy, red = classic radish flavor, purple = sweet.</div></div>
-                <div class="juneSlide"><img src="images/CarrotsNeedThinningJune2026.jpg" style="width:100%"><div class="caption-text">Carrot tasting varieties are coming up – time to thin them. And yes, those are horsetail weeds. The never‑ending battle continues.</div></div>
-                <div class="juneSlide"><img src="images/BokChoyJune2026.jpg" style="width:100%"><div class="caption-text">First bok choy harvest of the year – being washed before heading to Sunday Market.</div></div>
-                <div class="juneSlide"><img src="images/StartsInTheGreenHouseJune2026.jpg" style="width:100%"><div class="caption-text">Action shot of the new Planta greenhouse – almost complete! Inside: plant beds and the batting cage that keeps porcupines out of ten garden beds (not shown).</div></div>
-                <a class="prev" onclick="changeJuneSlide(-1)">&#10094;</a>
-                <a class="next" onclick="changeJuneSlide(1)">&#10095;</a>
-            </div>
-            <div class="dot-group" id="juneDots"></div>
-        </div>
-        
-        <script>
-            // Independent June Slideshow - does not affect quail slideshow
-            var juneSlideIndex = 1;
-            var juneSlides = document.querySelectorAll('#maySlideshowNew .juneSlide');
-            var juneDotsContainer = document.getElementById('juneDots');
-            
-            function showJuneSlides(n) {
-                if (n > juneSlides.length) juneSlideIndex = 1;
-                if (n < 1) juneSlideIndex = juneSlides.length;
-                for (var i = 0; i < juneSlides.length; i++) {
-                    juneSlides[i].style.display = 'none';
-                }
-                var dots = document.querySelectorAll('#juneDots .dot');
-                for (var i = 0; i < dots.length; i++) {
-                    dots[i].className = dots[i].className.replace(' active-dot', '');
-                }
-                juneSlides[juneSlideIndex - 1].style.display = 'block';
-                if (dots[juneSlideIndex - 1]) {
-                    dots[juneSlideIndex - 1].className += ' active-dot';
-                }
-            }
-            
-            function changeJuneSlide(n) {
-                showJuneSlides(juneSlideIndex += n);
-            }
-            
-            // Build dots for June slideshow
-            if (juneDotsContainer) {
-                juneDotsContainer.innerHTML = '';
-                for (var i = 0; i < juneSlides.length; i++) {
-                    var dot = document.createElement('span');
-                    dot.className = 'dot';
-                    if (i === 0) dot.className += ' active-dot';
-                    dot.onclick = (function(idx) {
-                        return function() {
-                            juneSlideIndex = idx + 1;
-                            showJuneSlides(juneSlideIndex);
-                        };
-                    })(i);
-                    juneDotsContainer.appendChild(dot);
-                }
-            }
-            
-            // Initialize
-            showJuneSlides(1);
-        </script>
+    <div class="white-gap"></div>
+    
+    <main>
+    <!-- - Image slideshow: Harvest Highlights -->
+           <div class="may-highlights-card">
+            <h3> Harvest Highlights 2026</h3>
+            <div class="slideshow-container" id="harvestSlideshow">
+                <div class="harvestSlide"><img src="images/MagicMiraHarvestGeneva.jpg" style="width:100%"><div class="caption-text">Geneva harvesting Magic Mira potatoes – they're gorgeous!</div></div>
+                <div class="harvestSlide"><img src="images/AlaskanFrost.jpg" style="width:100%"><div class="caption-text">One of our buckets of Alaskan Frost taters – pretty little things.</div></div>
+                <div class="harvestSlide"><img src="images/Jellies.jpg" style="width:100%"><div class="caption-text">Jelly lineup – nagoon, black currant, blueberry, and more!</div></div>
+                <div class="harvestSlide"><img src="images/Garlic.jpg" style="width:100%"><div class="caption-text">Garlic braids drying – saving the 4 biggest heads for replanting.</div></div>
+                <div class="harvestSlide"><img src="images/SquashPlusGreenhouse.jpg" style="width:100%"><div class="caption-text">Squash and greenhouse – despite the slug setback, we're getting plenty.</div></div>
+                <div class="harvestSlide"><img src="images/Carrots2026.jpg" style="width:100%"><div class="caption-text">Carrots are booming! Join us Sept 14 at the community center to taste all 18 varieties.</div></div>
+                <div class="harvestSlide"><img src="images/SunflowervsPeas2026.jpg" style="width:100%"><div class="caption-text">Sunflowers vs. peas – they loved that rabbit-poop fertilizer!</div></div>
+                <div class="harvestSlide"><img src="images/Lettuce2026.jpg" style="width:100%"><div class="caption-text">Happy little lettuce – thriving even in small containers.</div></div>
+                <a class="prev" onclick="changeHarvestSlide(-1)">&#10094;</a>
+                <a class="next" onclick="changeHarvestSlide(1)">&#10095;</a>
+            </div>
+            <div class="dot-group" id="harvestDots"></div>
+        </div>
+        
+        <script>
+            // Independent Harvest Slideshow
+            var harvestSlideIndex = 1;
+            var harvestSlides = document.querySelectorAll('#harvestSlideshow .harvestSlide');
+            var harvestDotsContainer = document.getElementById('harvestDots');
+            
+            function showHarvestSlides(n) {
+                if (n > harvestSlides.length) harvestSlideIndex = 1;
+                if (n < 1) harvestSlideIndex = harvestSlides.length;
+                for (var i = 0; i < harvestSlides.length; i++) {
+                    harvestSlides[i].style.display = 'none';
+                }
+                var dots = document.querySelectorAll('#harvestDots .dot');
+                for (var i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(' active-dot', '');
+                }
+                harvestSlides[harvestSlideIndex - 1].style.display = 'block';
+                if (dots[harvestSlideIndex - 1]) {
+                    dots[harvestSlideIndex - 1].className += ' active-dot';
+                }
+            }
+            
+            function changeHarvestSlide(n) {
+                showHarvestSlides(harvestSlideIndex += n);
+            }
+            
+            // Build dots for harvest slideshow
+            if (harvestDotsContainer) {
+                harvestDotsContainer.innerHTML = '';
+                for (var i = 0; i < harvestSlides.length; i++) {
+                    var dot = document.createElement('span');
+                    dot.className = 'dot';
+                    if (i === 0) dot.className += ' active-dot';
+                    dot.onclick = (function(idx) {
+                        return function() {
+                            harvestSlideIndex = idx + 1;
+                            showHarvestSlides(harvestSlideIndex);
+                        };
+                    })(i);
+                    harvestDotsContainer.appendChild(dot);
+                }
+            }
+            
+            // Initialize
+            showHarvestSlides(1);
+        </script>
 
-<!-- - Plant cards -->
-        <div class="plant-starts-brown">
-            <h3> Assorted Plant Starts Available </h3>
-            <div class="plant-list">Lettuce, bok choy, beets, chard, cabbage, spaghetti squash, zucchini, tomatoes, cucumbers, spinach, and sunflowers.</div>
-        </div>
-        
-        <div class="strawberry-header-card">
-            <div class="strawberry-content">
-                <h3> Garden Strawberry Plants </h3>
-                <div class="strawberry-price">$3.50 each • 3 for $10</div>
-                <div class="strawberry-inline-image"><img src="images/Strawberry.jpg" alt="Fresh Strawberries"></div>
-                <div class="strawberry-varieties"><p><strong> Two domestic varieties available:</strong></p><p> June-bearing • Everbearing</p><p><em>Respectable harvest from parent plants last year — strong, proven performers for Gustavus gardens!</em></p></div>
-            </div>
-        </div>
-        
-        <div style="background: linear-gradient(135deg, #5a3e2b 0%, #7a5a3a 100%); border-radius: 28px; margin: 2rem auto; max-width: 1000px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; padding: 1.5rem;">
-            <div style="flex: 2; padding: 1rem; text-align: center; color: white;">
-                <h3 style="color: #ffdd99; font-size: 2rem; margin: 0 0 0.5rem;"> Gustavus Red Rhubarb</h3>
-                <div style="background: #b35f1a; display: inline-block; padding: 0.3rem 1.5rem; border-radius: 40px; font-weight: bold; font-size: 1.3rem; margin: 0.5rem 0; border: 1px solid #ffcd94;">$7 per pot (1 plant)</div>
-                <p>From a 20+ year parent plant — proven hardy in Gustavus gardens. Deep red stalks, excellent for pies and preserves. Limited quantity.</p>
-            </div>
-            <div style="flex: 1; padding: 1rem; min-width: 180px; display: flex; justify-content: center;">
-                <img src="images/RuhbarbStart2026.jpg" alt="Rhubarb Start" style="max-width: 100%; height: auto; border-radius: 20px; max-height: 180px; object-fit: cover;">
-            </div>
-        </div>
-        <!-- ===== HOMEMADE JAMS, JELLIES & RELISHES CARD ===== -->
-<div class="full-width-card" style="margin-top: 2rem;">
-    <div class="section-title-banner" style="background: #6d4c41; border-radius: 10px 10px 0 0;">
-        <h2 style="color: #f5e6d3; margin: 0; letter-spacing: 2px;"> Homemade Jams, Jellies & Relishes</h2>
-    </div>
-    <div class="card-content" style="background: #8d6e63; padding: 2rem;">
-        <p style="font-size: 1.2rem; color: #f5e6d3; text-align: center; margin-bottom: 1.5rem;">
-            Handcrafted in small batches from wild‑harvested Alaska ingredients and garden produce.<br>
-            <em style="color: #ffd966;">Prices TBD — just ask! I happily take requests.</em>
-        </p>
+<!-- - Patreon Card (replaces Plant Starts) -->
+        <div class="plant-starts-brown" style="background: linear-gradient(135deg, #4a2f1a 0%, #6b4f3c 100%);">
+            <h3 style="color: #fbe9d2;"> Garden Stories & Homestead Updates</h3>
+            <div class="plant-list" style="font-size: 1.2rem; color: #f5e6d3;">
+                Want the full scoop on what's growing, canning, and happening around here? I share behind‑the‑scenes tales, harvest tips, and plenty of photos over on my Patreon.
+            </div>
+            <div style="margin-top: 1.5rem;">
+                <a href="https://www.patreon.com/cw/GenevasTradingPost" target="_blank" style="display: inline-block; background: #f1c40f; color: #2c3e50; padding: 0.8rem 2rem; border-radius: 50px; font-weight: bold; text-decoration: none; font-size: 1.2rem; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">Read the Blog on Patreon </a>
+            </div>
+        </div>
+        
+        <!-- Updated Strawberry Card: Last Chance 2026 -->
+        <div class="strawberry-header-card">
+            <div class="strawberry-content">
+                <h3> Strawberries – Last Chance for 2026!</h3>
+                <div class="strawberry-price">$3.50 each • 3 for $10</div>
+                <div class="strawberry-inline-image"><img src="images/Strawberry.jpg" alt="Fresh Strawberries"></div>
+                <div class="strawberry-varieties"><p><strong>Two domestic varieties available:</strong></p><p> June-bearing • Everbearing</p><p><em>We're wrapping up the season – get your plants now before they're gone!</em></p></div>
+            </div>
+        </div>
+        
+        <!-- Updated Rhubarb Card: Sold Out Until 2027 -->
+        <div style="background: linear-gradient(135deg, #5a3e2b 0%, #7a5a3a 100%); border-radius: 28px; margin: 2rem auto; max-width: 1000px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; padding: 1.5rem;">
+            <div style="flex: 2; padding: 1rem; text-align: center; color: white;">
+                <h3 style="color: #ffdd99; font-size: 2rem; margin: 0 0 0.5rem;"> Gustavus Red Rhubarb</h3>
+                <div style="background: #b35f1a; display: inline-block; padding: 0.3rem 1.5rem; border-radius: 40px; font-weight: bold; font-size: 1.3rem; margin: 0.5rem 0; border: 1px solid #ffcd94;">Sold Out Until 2027</div>
+                <p>We're sold out for this year, but we're already taking orders for next spring when I split my plants. <strong>Reserve yours now for 2027!</strong></p>
+                <p style="margin-top: 0.5rem;"><a href="contact.html" style="color: #ffd966; text-decoration: underline;">Contact me to pre‑order</a></p>
+            </div>
+            <div style="flex: 1; padding: 1rem; min-width: 180px; display: flex; justify-content: center;">
+                <img src="images/RuhbarbStart2026.jpg" alt="Rhubarb Start" style="max-width: 100%; height: auto; border-radius: 20px; max-height: 180px; object-fit: cover;">
+            </div>
+        </div>
 
-        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1.5rem; max-width: 1000px; margin: 0 auto;">
-            
-            <!-- Wild Strawberry Jam -->
-            <div style="background: rgba(255,255,255,0.12); border-radius: 16px; padding: 1.2rem 1rem; text-align: center; border: 1px solid rgba(255,215,0,0.3);">
-                <div style="font-size: 2.4rem; line-height: 1;"> </div>
-                <h4 style="color: #fff; margin: 0.4rem 0 0.2rem; font-size: 1.1rem;">Wild Strawberry Jam</h4>
-                <p style="color: #ffd966; font-size: 0.9rem; margin: 0.2rem 0;">TBD / Request</p>
-            </div>
+        <!-- ===== UPDATED JAMS, JELLIES & SYRUPS (AUGUST 2026) ===== -->
+        <div class="full-width-card" style="margin-top: 2rem;">
+            <div class="section-title-banner" style="background: #6d4c41; border-radius: 10px 10px 0 0;">
+                <h2 style="color: #f5e6d3; margin: 0; letter-spacing: 2px;"> Jams, Jellies & Syrups</h2>
+            </div>
+            <div class="card-content" style="background: #8d6e63; padding: 2rem;">
+                <!-- Header image -->
+                <div style="text-align: center; margin-bottom: 1.5rem;">
+                    <img src="images/Jellies.jpg" alt="Assorted homemade jellies" style="max-width: 100%; max-height: 300px; border-radius: 16px; border: 3px solid #f5e6d3; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+                </div>
 
-            <!-- Wild Blueberry Jam -->
-            <div style="background: rgba(255,255,255,0.12); border-radius: 16px; padding: 1.2rem 1rem; text-align: center; border: 1px solid rgba(255,215,0,0.3);">
-                <div style="font-size: 2.4rem; line-height: 1;"> </div>
-                <h4 style="color: #fff; margin: 0.4rem 0 0.2rem; font-size: 1.1rem;">Wild Blueberry Jam</h4>
-                <p style="color: #ffd966; font-size: 0.9rem; margin: 0.2rem 0;">TBD / Request</p>
-            </div>
+                <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 1.5rem; max-width: 1000px; margin: 0 auto;">
 
-            <!-- Wild Strawberry Rhubarb Pie Filling -->
-            <div style="background: rgba(255,255,255,0.12); border-radius: 16px; padding: 1.2rem 1rem; text-align: center; border: 1px solid rgba(255,215,0,0.3);">
-                <div style="font-size: 2.4rem; line-height: 1;"> </div>
-                <h4 style="color: #fff; margin: 0.4rem 0 0.2rem; font-size: 1.1rem;">Strawberry Rhubarb Pie Filling</h4>
-                <p style="color: #ffd966; font-size: 0.9rem; margin: 0.2rem 0;">TBD / Request</p>
-            </div>
+                    <!-- Spruce Tip Syrup -->
+                    <div style="background: rgba(255,255,255,0.12); border-radius: 16px; padding: 1.2rem 1rem; text-align: center; border: 1px solid rgba(255,215,0,0.3);">
+                        <h4 style="color: #fff; margin: 0.4rem 0 0.2rem;">Spruce Tip Syrup</h4>
+                        <p style="color: #ffb3b3; font-size: 0.9rem; margin: 0.2rem 0;"><strong>Sold out until spring 2027</strong></p>
+                        <p style="color: #ffd966; font-size: 1rem;">4oz – $5 &nbsp;|&nbsp; 8oz – $9</p>
+                    </div>
 
-            <!-- Rhubarb Honey -->
-            <div style="background: rgba(255,255,255,0.12); border-radius: 16px; padding: 1.2rem 1rem; text-align: center; border: 1px solid rgba(255,215,0,0.3);">
-                <div style="font-size: 2.4rem; line-height: 1;"> </div>
-                <h4 style="color: #fff; margin: 0.4rem 0 0.2rem; font-size: 1.1rem;">Rhubarb Honey</h4>
-                <p style="color: #ffd966; font-size: 0.9rem; margin: 0.2rem 0;">TBD / Request</p>
-            </div>
+                    <!-- Wild Strawberry Jam -->
+                    <div style="background: rgba(255,255,255,0.12); border-radius: 16px; padding: 1.2rem 1rem; text-align: center; border: 1px solid rgba(255,215,0,0.3);">
+                        <h4 style="color: #fff; margin: 0.4rem 0 0.2rem;">Wild Strawberry Jam</h4>
+                        <p style="color: #ffd966; font-size: 1rem;">4oz – $8 &nbsp;|&nbsp; 8oz – $15</p>
+                    </div>
 
-            <!-- Fireweed Jelly -->
-            <div style="background: rgba(255,255,255,0.12); border-radius: 16px; padding: 1.2rem 1rem; text-align: center; border: 1px solid rgba(255,215,0,0.3);">
-                <div style="font-size: 2.4rem; line-height: 1;"> </div>
-                <h4 style="color: #fff; margin: 0.4rem 0 0.2rem; font-size: 1.1rem;">Fireweed Jelly</h4>
-                <p style="color: #ffd966; font-size: 0.9rem; margin: 0.2rem 0;">TBD / Request</p>
-            </div>
+                    <!-- Wild Blueberry Jam -->
+                    <div style="background: rgba(255,255,255,0.12); border-radius: 16px; padding: 1.2rem 1rem; text-align: center; border: 1px solid rgba(255,215,0,0.3);">
+                        <h4 style="color: #fff; margin: 0.4rem 0 0.2rem;">Wild Blueberry Jam</h4>
+                        <p style="color: #ffd966; font-size: 1rem;">4oz – $8 &nbsp;|&nbsp; 8oz – $15</p>
+                    </div>
 
-            <!-- Fireweed Syrup -->
-            <div style="background: rgba(255,255,255,0.12); border-radius: 16px; padding: 1.2rem 1rem; text-align: center; border: 1px solid rgba(255,215,0,0.3);">
-                <div style="font-size: 2.4rem; line-height: 1;"> </div>
-                <h4 style="color: #fff; margin: 0.4rem 0 0.2rem; font-size: 1.1rem;">Fireweed Syrup</h4>
-                <p style="color: #ffd966; font-size: 0.9rem; margin: 0.2rem 0;">TBD / Request</p>
-            </div>
+                    <!-- Wild Black Currant Jelly (coming soon) -->
+                    <div style="background: rgba(255,255,255,0.12); border-radius: 16px; padding: 1.2rem 1rem; text-align: center; border: 1px solid #ffaa66;">
+                        <h4 style="color: #fff; margin: 0.4rem 0 0.2rem;">Wild Black Currant Jelly <span style="background: #f1c40f; color: #2c3e50; padding: 0.1rem 0.6rem; border-radius: 20px; font-size: 0.7rem; font-weight: bold; margin-left: 0.3rem;">Coming Soon</span></h4>
+                        <p style="color: #ffd966; font-size: 1rem;">4oz – $8 &nbsp;|&nbsp; 8oz – $15</p>
+                    </div>
 
-            <!-- Spruce Tip Jelly -->
-            <div style="background: rgba(255,255,255,0.12); border-radius: 16px; padding: 1.2rem 1rem; text-align: center; border: 1px solid rgba(255,215,0,0.3);">
-                <div style="font-size: 2.4rem; line-height: 1;"> </div>
-                <h4 style="color: #fff; margin: 0.4rem 0 0.2rem; font-size: 1.1rem;">Spruce Tip Jelly</h4>
-                <p style="color: #ffd966; font-size: 0.9rem; margin: 0.2rem 0;">TBD / Request</p>
-            </div>
+                    <!-- Wild Nagoon Berry Jam (coming soon) -->
+                    <div style="background: rgba(255,255,255,0.12); border-radius: 16px; padding: 1.2rem 1rem; text-align: center; border: 1px solid #ffaa66;">
+                        <h4 style="color: #fff; margin: 0.4rem 0 0.2rem;">Wild Nagoon Berry Jam <span style="background: #f1c40f; color: #2c3e50; padding: 0.1rem 0.6rem; border-radius: 20px; font-size: 0.7rem; font-weight: bold; margin-left: 0.3rem;">Coming Soon</span></h4>
+                        <p style="color: #ffd966; font-size: 1rem;">4oz – $10 &nbsp;|&nbsp; 8oz – $18</p>
+                    </div>
 
-            <!-- Radish Relish -->
-            <div style="background: rgba(255,255,255,0.12); border-radius: 16px; padding: 1.2rem 1rem; text-align: center; border: 1px solid rgba(255,215,0,0.3);">
-                <div style="font-size: 2.4rem; line-height: 1;"> </div>
-                <h4 style="color: #fff; margin: 0.4rem 0 0.2rem; font-size: 1.1rem;">Radish Relish</h4>
-                <p style="color: #ffd966; font-size: 0.9rem; margin: 0.2rem 0;">TBD / Request</p>
-            </div>
+                    <!-- Wild Strawberry‑Rhubarb Pie Filling -->
+                    <div style="background: rgba(255,255,255,0.12); border-radius: 16px; padding: 1.2rem 1rem; text-align: center; border: 1px solid rgba(255,215,0,0.3);">
+                        <h4 style="color: #fff; margin: 0.4rem 0 0.2rem;">Strawberry‑Rhubarb Pie Filling</h4>
+                        <p style="color: #ffd966; font-size: 1rem;">4oz – $7 &nbsp;|&nbsp; 8oz – $13</p>
+                    </div>
 
-        </div>
+                    <!-- Rhubarb Lemon Honey -->
+                    <div style="background: rgba(255,255,255,0.12); border-radius: 16px; padding: 1.2rem 1rem; text-align: center; border: 1px solid rgba(255,215,0,0.3);">
+                        <h4 style="color: #fff; margin: 0.4rem 0 0.2rem;">Rhubarb Lemon Honey</h4>
+                        <p style="color: #ffd966; font-size: 1rem;">4oz – $6 &nbsp;|&nbsp; 8oz – $11</p>
+                    </div>
 
-        <div style="text-align: center; margin-top: 1.5rem; padding-top: 1rem; border-top: 2px solid rgba(255,215,0,0.2);">
-            <p style="color: #f5e6d3; font-size: 1.05rem;">
-                <strong style="color: #ffd966;">Want a specific flavor or a custom batch?</strong> 
-                <a href="contact.html" style="color: #ffd966; text-decoration: underline; font-weight: bold;">Just reach out — I'd love to make it for you!</a>
-            </p>
-            <p style="color: #d7ccc8; font-size: 0.9rem; margin-top: 0.3rem;">
-                All made with love in small batches — real fruit, real flavor, no shortcuts.
-            </p>
-        </div>
-    </div>
-</div>
+                    <!-- Fireweed Syrup -->
+                    <div style="background: rgba(255,255,255,0.12); border-radius: 16px; padding: 1.2rem 1rem; text-align: center; border: 1px solid rgba(255,215,0,0.3);">
+                        <h4 style="color: #fff; margin: 0.4rem 0 0.2rem;">Fireweed Syrup</h4>
+                        <p style="color: #ffd966; font-size: 1rem;">4oz – $5 &nbsp;|&nbsp; 8oz – $9</p>
+                    </div>
 
-<!-- - SUNDAY MARKET BANNER (with new image) -->
-<section class="market-banner">
-    <div class="market-image">
-        <img src="images/SundayMarketMay31.jpg" alt="Sunday Market at A&E Trading Company">
-    </div>
-    <div class="market-info">
-        <h3>Sunday Market</h3>
-        <p><strong>Come see us every Sunday!</strong></p>
-        <p><strong>Noon – 4pm at A&E Trading Company (near the Community Garden)</strong></p>
-        <p>We bring plant starts, fresh greens, rabbit skins, art, fresh produce harvested that morning, and the free bunny petting zoo. Weather permitting.</p>
-        <div class="season-date">Sundays · Noon–4pm · May 24 – August 30</div>
-    </div>
-</section>
+                    <!-- Fireweed Jelly (coming soon) -->
+                    <div style="background: rgba(255,255,255,0.12); border-radius: 16px; padding: 1.2rem 1rem; text-align: center; border: 1px solid #ffaa66;">
+                        <h4 style="color: #fff; margin: 0.4rem 0 0.2rem;">Fireweed Jelly <span style="background: #f1c40f; color: #2c3e50; padding: 0.1rem 0.6rem; border-radius: 20px; font-size: 0.7rem; font-weight: bold; margin-left: 0.3rem;">Coming Soon</span></h4>
+                        <p style="color: #ffd966; font-size: 1rem;">4oz – $5 &nbsp;|&nbsp; 8oz – $9</p>
+                    </div>
 
-<!-- SECOND SATURDAY MARKET CARD (EXACTLY AS YOU PROVIDED - UNCHANGED) -->
-<section class="market-banner">
-    <div class="market-image">
-        <img src="images/May9SecondSaturdayMarket2026.jpg" alt="Second Saturday Market">
-    </div>
-    <div class="market-info">
-        <h3>Second Saturday Market</h3>
-        <p><strong>Check us out at the next Second Saturday Market on July 11</strong></p>
-        <p><strong>Noon – 2:30pm at the Gustavus Community Center</strong></p>
-        <p>We will have plant starts, fresh produce, rabbit skins, art, and much much more!</p>
-        <div class="season-date">July 11 · Noon–2:30pm</div>
-    </div>
-</section> 
+                </div>
 
-        
-        <div class="announcement-card"><h2>Announcing</h2><p>Cultivating Food Sovereignty for Gustavus</p></div>
-        
-        <section class="workshop-section">
-            <h2>2026 Workshop Series</h2>
-          
-            <div class="carrot-workshop"><div class="workshop-image"><img src="images/Carrot Tasting 2025.jpg" alt="Carrot Tasting 2025"><img src="images/FINAL library logo transparent.png" alt="Library Logo" class="library-logo"></div><div class="carrot-data"><h3>Carrot Tasting <span class="free-tag">FREE</span></h3><span class="workshop-date"> September 14, 2026 · 5:30–8:00 PM · Gustavus Community Center</span><p>The carrots were planted <strong>May 7</strong>. There are <strong>18 varieties</strong> this year!</p><p><strong>Varieties:</strong> Bolero, Candy, Orange Fancy, Napoli, Mokum, Romance, Shin Kuroda, Sugarsnax 54, Rubypak, Deep Purple, Purple Elite, Dragon, Gold Nugget, Rainbow (donated by Rural CAP Foundation from Johnny's Selected Seeds), Atomic Red and Cosmic Purple (donated by an online follower), St. Valery and Little Fingers (leftover from last year, used as controls).</p><p><em> Will update photos as they grow, so check back!</em></p><div class="seed-bank-note"><strong> Seed Bank Update:</strong> <strong>Bolero</strong> and <strong>Purple Dragon</strong> carrot seeds are now available at the free Gustavus Library Seed Bank — pick them up for your garden!</div></div><div class="carrot-charts"><div class="charts-full-width"><div class="tasting-tables"><div class="tasting-table"><h4>2025 Results - 17 Varieties</h4><table><thead><tr><th>Rank</th><th>Variety</th><th>Total</th><th>Score</th><th>Norm</th></tr></thead><tbody><tr class="rank-1"><td>1</td><td>Royal Chantenay</td><td>24</td><td>94</td><td>3.92</td></tr>
+                <!-- Alaska‑only disclaimer -->
+                <div style="margin-top: 2rem; padding: 1rem; background: rgba(0,0,0,0.2); border-radius: 12px; border-left: 4px solid #f1c40f; max-width: 900px; margin-left: auto; margin-right: auto;">
+                    <p style="color: #f5e6d3; font-size: 0.95rem; text-align: center; margin: 0;">
+                        <strong style="color: #ffd966;">⚠️ For sale only in Alaska</strong> – these preserves are produced under Alaska's homestead food processing rules and are not available for shipment outside the state. (Other non‑preserve items on this site can ship nationally.)
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECOND SATURDAY MARKET BANNER (KEPT - July 11) -->
+        <section class="market-banner">
+            <div class="market-image">
+                <img src="images/May9SecondSaturdayMarket2026.jpg" alt="Second Saturday Market">
+            </div>
+            <div class="market-info">
+                <h3>Second Saturday Market</h3>
+                <p><strong>Check us out at the next Second Saturday Market on July 11</strong></p>
+                <p><strong>Noon – 2:30pm at the Gustavus Community Center</strong></p>
+                <p>We will have plant starts, fresh produce, rabbit skins, art, and much much more!</p>
+                <div class="season-date">July 11 · Noon–2:30pm</div>
+            </div>
+        </section> 
+
+        <!-- ANNOUNCEMENT CARD (KEPT) -->
+        <div class="announcement-card"><h2>Announcing</h2><p>Cultivating Food Sovereignty for Gustavus</p></div>
+        
+        <!-- WORKSHOP SECTION (KEPT) -->
+        <section class="workshop-section">
+            <h2>2026 Workshop Series</h2>
+          
+            <div class="carrot-workshop"><div class="workshop-image"><img src="images/Carrot Tasting 2025.jpg" alt="Carrot Tasting 2025"><img src="images/FINAL library logo transparent.png" alt="Library Logo" class="library-logo"></div><div class="carrot-data"><h3>Carrot Tasting <span class="free-tag">FREE</span></h3><span class="workshop-date"> September 14, 2026 · 5:30–8:00 PM · Gustavus Community Center</span><p>The carrots were planted <strong>May 7</strong>. There are <strong>18 varieties</strong> this year!</p><p><strong>Varieties:</strong> Bolero, Candy, Orange Fancy, Napoli, Mokum, Romance, Shin Kuroda, Sugarsnax 54, Rubypak, Deep Purple, Purple Elite, Dragon, Gold Nugget, Rainbow (donated by Rural CAP Foundation from Johnny's Selected Seeds), Atomic Red and Cosmic Purple (donated by an online follower), St. Valery and Little Fingers (leftover from last year, used as controls).</p><p><em> Will update photos as they grow, so check back!</em></p><div class="seed-bank-note"><strong> Seed Bank Update:</strong> <strong>Bolero</strong> and <strong>Purple Dragon</strong> carrot seeds are now available at the free Gustavus Library Seed Bank — pick them up for your garden!</div></div><div class="carrot-charts"><div class="charts-full-width"><div class="tasting-tables"><div class="tasting-table"><h4>2025 Results - 17 Varieties</h4><table><thead><tr><th>Rank</th><th>Variety</th><th>Total</th><th>Score</th><th>Norm</th></tr></thead><tbody><tr class="rank-1"><td>1</td><td>Royal Chantenay</td><td>24</td><td>94</td><td>3.92</td></tr>
 <tr class="rank-2"><td>2</td><td>St. Valery</td><td>25</td><td>95</td><td>3.80</td></tr>
 <tr class="rank-3"><td>3</td><td>Purple Dragon</td><td>23</td><td>82</td><td>3.57</td></tr>
 <tr><td>4</td><td>Gniff</td><td>24</td><td>84</td><td>3.50</td></tr>
@@ -1268,125 +1263,116 @@
 </div>
 </div>
 </div>
-            
-            <div class="harvest-workshop"><div class="workshop-image"><img src="images/WinningBasketHarvestFestival2025.jpg" alt="Winning Basket"><img src="images/FINAL library logo transparent.png" alt="Library Logo" class="library-logo"></div><div class="workshop-details"><h3>Rabbit & Poultry Show <span class="free-tag">FREE</span></h3><span class="workshop-date"> Saturday, September 19, 2026 · Gustavus Community Center (Outdoor Barn Tent)</span><div class="show-schedule"><strong> Show Schedule:</strong><br> Drop-off & Health Check: 8:00 – 9:00 AM<br> Judging: 10:00 – 11:00 AM<br> Showmanship: 11:00 AM – 1:00 PM<br> Cage Decor Setup: 8:00 – 10:00 AM<br> Chicken & Rabbit Race: 1:00 PM<br><br><strong> The show runs concurrently with the Harvest Festival in the outdoor tent.</strong><br><strong> Important Rules:</strong> Pregnant or sick animals will be turned away at health check. Borrow a show cage from the library (16 available, 2 per person guaranteed).</div><p><strong>To register live animals (by Sept 17, 5pm):</strong> Contact Geneva Mottet — early registration helps us arrange cages for critter comfort.</p><a href="mailto:gjmottet@alaska.edu?subject=Rabbit%20%26%20Poultry%20Show%20Registration" class="email-btn"> Register Animals Now</a><div class="register-highlight"><strong> Show Cages Available:</strong> 16 show cages provided. If you have your own cage, we can accept additional critters beyond that!</div><a href="https://gjmottet.github.io/gustavus-harvest-festival/" target="_blank" class="festival-btn"> Visit Gustavus Harvest Festival Website →</a></div></div>
-            <div class="grant-note"><p><strong>Community Support:</strong> This workshop series receives financial support from the RurAL CAP Foundation. <strong>All workshops are free and open to the public!</strong></p></div>
-        </section>
-        
-               <div class="strawberry-festival-card">
-            <h2> Strawberry Festival </h2>
-            <div class="festival-highlight">August 15–16 | Salmon River Park</div>
-            <p> Live music, games, and a special strawberry recipe contest — share and judge your favorite treats!</p>
-            <p> Find me near the bunny petting zoo: homemade wild strawberry jelly & strawberry rhubarb pie filling jars for sale. Original art also available.</p>
-            <p><em>Come celebrate summer's sweetest berry!</em></p>
-        </div>
-
-        <!-- - Quail Section -->
-        
-        <section class="quail-section">
-            <div class="quail-tan-banner">
-                <div class="overlay">
-                    <h2>We Have Coturnix Quail!</h2>
-                    <p>Our flock restarted in Gustavus with hatching eggs — eggs available starting in June</p>
-                </div>
-            </div>
-            <div class="quail-grid">
-                <div class="quail-card">
-                    <div class="quail-image-container">
-                        <img src="images/QuailEggs.jpg" alt="Fresh Quail Eggs">
-                    </div>
-                    <h3>Fresh Quail Eggs</h3>
-                    <div style="background: #e74c3c; color: white; padding: 0.6rem 1.5rem; border-radius: 30px; font-size: 1.3rem; font-weight: bold; margin: 0.5rem 0; display: inline-block;">$10/dozen</div>
-                    <p>Fertile eggs - perfect for eating or hatching. Some eggs have rare celadon genetics for possible blue egg layers!</p>
-                    <p><strong>Available in Gustavus:</strong> Eggs available starting June 2026</p>
-                    <span class="availability-tag">June Availability</span>
-                </div>
-                <div class="quail-card">
-                    <div class="quail-image-container">
-                        <img src="images/Quail1.jpg" alt="Coturnix Quail">
-                    </div>
-                    <h3>Quail Chicks & Adults</h3>
-                    <p>We have about 30 Coturnix Quail.</p>
-                    <div class="feather-offer">
-                        <strong> Quail Feathers for Fly Tying</strong>
-                        <p>Assorted Coturnix feathers — many colors. Perfect for salmon and Dolly Varden flies.</p>
-                        <span class="feather-price">$3 per card (15+ feathers)</span>
-                        <div class="impulse-card">
-                            <span> Bulk bag:</span> 40-50 feathers for $6 — great value for serious tyers
-                        </div>
-                    </div>
-                </div>
-            </div>
-        
-                                       
-<!-- - Quail Slideshow -->
-          <div class="quail-slideshow-wrapper">
-                <div class="slideshow-container" id="quailSlideshowNew">
-                    <div class="quailSlide"><img src="images/QuailChicksIncubator.jpg" style="width:100%"><div class="caption-text"> Our Gustavus flock restarted with hatching eggs April 20</div></div>
-                    <div class="quailSlide"><img src="images/QuailDotWith4DayOldChicks.jpg" style="width:100%"><div class="caption-text">Dot protecting her 4 day old chicks, dice in the water dish keep chicks from swimming in the water dish.</div></div>
-                    <div class="quailSlide"><img src="images/QuailMarshmellowMama2WeeksOld2026.jpg" style="width:100%"><div class="caption-text">Marshmellow trying to parent 34 2 week old chicks.</div></div>
-                    <div class="quailSlide"><img src="images/QuailFeedingFrenzy.jpg" style="width:100%"><div class="caption-text">Marshmellow with 4 week old chicks getting a handful of mealworms.</div></div>
-                    <div class="quailSlide"><img src="images/QuailRooster.jpg" style="width:100%; object-fit: contain; max-height: 500px; background: #2c5e1a;"><div class="caption-text">Our male quail looking quite pathetic – but don't let the drama fool you, they have the derpiest song on the homestead.</div></div>
-                    <a class="prev" onclick="changeQuailSlide(-1)">&#10094;</a>
-                    <a class="next" onclick="changeQuailSlide(1)">&#10095;</a>
-                </div>
-                <div class="dot-group" id="quailDotsNew"></div>
-            </div>
-        </section>
-        
-        <div style="text-align: center; padding: 2rem;"><a href="index.html" class="back-btn">← Back to Home</a></div>
-    </main>
-    
-    <footer>
-        <p>© 2026 Geneva's Trading Post | Farm Stand in Gustavus, Alaska</p>
-        <p>Supporting local food sovereignty through education and community resources</p>
-    </footer>
-    
-    <script>
-        // Independent Quail Slideshow - does not affect June slideshow
-        var quailSlideIndex = 1;
-        var quailSlidesNew = document.querySelectorAll('#quailSlideshowNew .quailSlide');
-        var quailDotsNew = document.getElementById('quailDotsNew');
-        
-        function showQuailSlides(n) {
-            if (n > quailSlidesNew.length) quailSlideIndex = 1;
-            if (n < 1) quailSlideIndex = quailSlidesNew.length;
-            for (var i = 0; i < quailSlidesNew.length; i++) {
-                quailSlidesNew[i].style.display = 'none';
-            }
-            var dots = document.querySelectorAll('#quailDotsNew .dot');
-            for (var i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(' active-dot', '');
-            }
-            quailSlidesNew[quailSlideIndex - 1].style.display = 'block';
-            if (dots[quailSlideIndex - 1]) {
-                dots[quailSlideIndex - 1].className += ' active-dot';
-            }
-        }
-        
-        function changeQuailSlide(n) {
-            showQuailSlides(quailSlideIndex += n);
-        }
-        
-        // Build dots for quail
-        if (quailDotsNew) {
-            quailDotsNew.innerHTML = '';
-            for (var i = 0; i < quailSlidesNew.length; i++) {
-                var dot = document.createElement('span');
-                dot.className = 'dot';
-                if (i === 0) dot.className += ' active-dot';
-                dot.onclick = (function(idx) {
-                    return function() {
-                        quailSlideIndex = idx + 1;
-                        showQuailSlides(quailSlideIndex);
-                    };
-                })(i);
-                quailDotsNew.appendChild(dot);
-            }
-        }
-        
-        // Initialize
-        showQuailSlides(1);
-    </script>
+            
+            <div class="harvest-workshop"><div class="workshop-image"><img src="images/WinningBasketHarvestFestival2025.jpg" alt="Winning Basket"><img src="images/FINAL library logo transparent.png" alt="Library Logo" class="library-logo"></div><div class="workshop-details"><h3>Rabbit & Poultry Show <span class="free-tag">FREE</span></h3><span class="workshop-date"> Saturday, September 19, 2026 · Gustavus Community Center (Outdoor Barn Tent)</span><div class="show-schedule"><strong> Show Schedule:</strong><br> Drop-off & Health Check: 8:00 – 9:00 AM<br> Judging: 10:00 – 11:00 AM<br> Showmanship: 11:00 AM – 1:00 PM<br> Cage Decor Setup: 8:00 – 10:00 AM<br> Chicken & Rabbit Race: 1:00 PM<br><br><strong> The show runs concurrently with the Harvest Festival in the outdoor tent.</strong><br><strong> Important Rules:</strong> Pregnant or sick animals will be turned away at health check. Borrow a show cage from the library (16 available, 2 per person guaranteed).</div><p><strong>To register live animals (by Sept 17, 5pm):</strong> Contact Geneva Mottet — early registration helps us arrange cages for critter comfort.</p><a href="mailto:gjmottet@alaska.edu?subject=Rabbit%20%26%20Poultry%20Show%20Registration" class="email-btn"> Register Animals Now</a><div class="register-highlight"><strong> Show Cages Available:</strong> 16 show cages provided. If you have your own cage, we can accept additional critters beyond that!</div><a href="https://gjmottet.github.io/gustavus-harvest-festival/" target="_blank" class="festival-btn"> Visit Gustavus Harvest Festival Website →</a></div></div>
+            <div class="grant-note"><p><strong>Community Support:</strong> This workshop series receives financial support from the RurAL CAP Foundation. <strong>All workshops are free and open to the public!</strong></p></div>
+        </section>
+        
+        <!-- - Quail Section (KEPT UNCHANGED) -->
+        <section class="quail-section">
+            <div class="quail-tan-banner">
+                <div class="overlay">
+                    <h2>We Have Coturnix Quail!</h2>
+                    <p>Our flock restarted in Gustavus with hatching eggs — eggs available starting in June</p>
+                </div>
+            </div>
+            <div class="quail-grid">
+                <div class="quail-card">
+                    <div class="quail-image-container">
+                        <img src="images/QuailEggs.jpg" alt="Fresh Quail Eggs">
+                    </div>
+                    <h3>Fresh Quail Eggs</h3>
+                    <div style="background: #e74c3c; color: white; padding: 0.6rem 1.5rem; border-radius: 30px; font-size: 1.3rem; font-weight: bold; margin: 0.5rem 0; display: inline-block;">$10/dozen</div>
+                    <p>Fertile eggs - perfect for eating or hatching. Some eggs have rare celadon genetics for possible blue egg layers!</p>
+                    <p><strong>Available in Gustavus:</strong> Eggs available starting June 2026</p>
+                    <span class="availability-tag">June Availability</span>
+                </div>
+                <div class="quail-card">
+                    <div class="quail-image-container">
+                        <img src="images/Quail1.jpg" alt="Coturnix Quail">
+                    </div>
+                    <h3>Quail Chicks & Adults</h3>
+                    <p>We have about 30 Coturnix Quail.</p>
+                    <div class="feather-offer">
+                        <strong> Quail Feathers for Fly Tying</strong>
+                        <p>Assorted Coturnix feathers — many colors. Perfect for salmon and Dolly Varden flies.</p>
+                        <span class="feather-price">$3 per card (15+ feathers)</span>
+                        <div class="impulse-card">
+                            <span> Bulk bag:</span> 40-50 feathers for $6 — great value for serious tyers
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+                                       
+<!-- - Quail Slideshow (KEPT UNCHANGED) -->
+          <div class="quail-slideshow-wrapper">
+                <div class="slideshow-container" id="quailSlideshowNew">
+                    <div class="quailSlide"><img src="images/QuailChicksIncubator.jpg" style="width:100%"><div class="caption-text"> Our Gustavus flock restarted with hatching eggs April 20</div></div>
+                    <div class="quailSlide"><img src="images/QuailDotWith4DayOldChicks.jpg" style="width:100%"><div class="caption-text">Dot protecting her 4 day old chicks, dice in the water dish keep chicks from swimming in the water dish.</div></div>
+                    <div class="quailSlide"><img src="images/QuailMarshmellowMama2WeeksOld2026.jpg" style="width:100%"><div class="caption-text">Marshmellow trying to parent 34 2 week old chicks.</div></div>
+                    <div class="quailSlide"><img src="images/QuailFeedingFrenzy.jpg" style="width:100%"><div class="caption-text">Marshmellow with 4 week old chicks getting a handful of mealworms.</div></div>
+                    <div class="quailSlide"><img src="images/QuailRooster.jpg" style="width:100%; object-fit: contain; max-height: 500px; background: #2c5e1a;"><div class="caption-text">Our male quail looking quite pathetic – but don't let the drama fool you, they have the derpiest song on the homestead.</div></div>
+                    <a class="prev" onclick="changeQuailSlide(-1)">&#10094;</a>
+                    <a class="next" onclick="changeQuailSlide(1)">&#10095;</a>
+                </div>
+                <div class="dot-group" id="quailDotsNew"></div>
+            </div>
+        </section>
+        
+        <div style="text-align: center; padding: 2rem;"><a href="index.html" class="back-btn">← Back to Home</a></div>
+    </main>
+    
+    <footer>
+        <p>© 2026 Geneva's Trading Post | Farm Stand in Gustavus, Alaska</p>
+        <p>Supporting local food sovereignty through education and community resources</p>
+    </footer>
+    
+    <script>
+        // Independent Quail Slideshow (KEPT UNCHANGED)
+        var quailSlideIndex = 1;
+        var quailSlidesNew = document.querySelectorAll('#quailSlideshowNew .quailSlide');
+        var quailDotsNew = document.getElementById('quailDotsNew');
+        
+        function showQuailSlides(n) {
+            if (n > quailSlidesNew.length) quailSlideIndex = 1;
+            if (n < 1) quailSlideIndex = quailSlidesNew.length;
+            for (var i = 0; i < quailSlidesNew.length; i++) {
+                quailSlidesNew[i].style.display = 'none';
+            }
+            var dots = document.querySelectorAll('#quailDotsNew .dot');
+            for (var i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(' active-dot', '');
+            }
+            quailSlidesNew[quailSlideIndex - 1].style.display = 'block';
+            if (dots[quailSlideIndex - 1]) {
+                dots[quailSlideIndex - 1].className += ' active-dot';
+            }
+        }
+        
+        function changeQuailSlide(n) {
+            showQuailSlides(quailSlideIndex += n);
+        }
+        
+        // Build dots for quail
+        if (quailDotsNew) {
+            quailDotsNew.innerHTML = '';
+            for (var i = 0; i < quailSlidesNew.length; i++) {
+                var dot = document.createElement('span');
+                dot.className = 'dot';
+                if (i === 0) dot.className += ' active-dot';
+                dot.onclick = (function(idx) {
+                    return function() {
+                        quailSlideIndex = idx + 1;
+                        showQuailSlides(quailSlideIndex);
+                    };
+                })(i);
+                quailDotsNew.appendChild(dot);
+            }
+        }
+        
+        // Initialize
+        showQuailSlides(1);
+    </script>
 </body>
 </html>
