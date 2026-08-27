@@ -1026,67 +1026,118 @@
     <div class="white-gap"></div>
     
     <main>
-    <!-- - Image slideshow -->
-           <div class="may-highlights-card">
-            <h3> June Highlights</h3>
-            <div class="slideshow-container" id="maySlideshowNew">
-                <div class="juneSlide"><img src="images/Greenhouse2026.jpg" style="width:100%"><div class="caption-text">Plant starts in the hoop house are coming up strong! Cucumbers, melons, and zucchini soon. Bok choy just harvested from here to make room for pole beans going in the ground.</div></div>
-                <div class="juneSlide"><img src="images/RadishesJune2026.jpg" style="width:100%"><div class="caption-text">First radishes of the year – Easter Basket Mix! White = spicy, red = classic radish flavor, purple = sweet.</div></div>
-                <div class="juneSlide"><img src="images/CarrotsNeedThinningJune2026.jpg" style="width:100%"><div class="caption-text">Carrot tasting varieties are coming up – time to thin them. And yes, those are horsetail weeds. The never‑ending battle continues.</div></div>
-                <div class="juneSlide"><img src="images/BokChoyJune2026.jpg" style="width:100%"><div class="caption-text">First bok choy harvest of the year – being washed before heading to Sunday Market.</div></div>
-                <div class="juneSlide"><img src="images/StartsInTheGreenHouseJune2026.jpg" style="width:100%"><div class="caption-text">Action shot of the new Planta greenhouse – almost complete! Inside: plant beds and the batting cage that keeps porcupines out of ten garden beds (not shown).</div></div>
-                <a class="prev" onclick="changeJuneSlide(-1)">&#10094;</a>
-                <a class="next" onclick="changeJuneSlide(1)">&#10095;</a>
-            </div>
-            <div class="dot-group" id="juneDots"></div>
-        </div>
-        
-        <script>
-            // Independent June Slideshow - does not affect quail slideshow
-            var juneSlideIndex = 1;
-            var juneSlides = document.querySelectorAll('#maySlideshowNew .juneSlide');
-            var juneDotsContainer = document.getElementById('juneDots');
-            
-            function showJuneSlides(n) {
-                if (n > juneSlides.length) juneSlideIndex = 1;
-                if (n < 1) juneSlideIndex = juneSlides.length;
-                for (var i = 0; i < juneSlides.length; i++) {
-                    juneSlides[i].style.display = 'none';
-                }
-                var dots = document.querySelectorAll('#juneDots .dot');
-                for (var i = 0; i < dots.length; i++) {
-                    dots[i].className = dots[i].className.replace(' active-dot', '');
-                }
-                juneSlides[juneSlideIndex - 1].style.display = 'block';
-                if (dots[juneSlideIndex - 1]) {
-                    dots[juneSlideIndex - 1].className += ' active-dot';
-                }
-            }
-            
-            function changeJuneSlide(n) {
-                showJuneSlides(juneSlideIndex += n);
-            }
-            
-            // Build dots for June slideshow
-            if (juneDotsContainer) {
-                juneDotsContainer.innerHTML = '';
-                for (var i = 0; i < juneSlides.length; i++) {
-                    var dot = document.createElement('span');
-                    dot.className = 'dot';
-                    if (i === 0) dot.className += ' active-dot';
-                    dot.onclick = (function(idx) {
-                        return function() {
-                            juneSlideIndex = idx + 1;
-                            showJuneSlides(juneSlideIndex);
-                        };
-                    })(i);
-                    juneDotsContainer.appendChild(dot);
-                }
-            }
-            
-            // Initialize
-            showJuneSlides(1);
-        </script>
+ <!-- - Image slideshow -->
+<div class="may-highlights-card">
+    <h3> June Highlights</h3>
+    <div class="slideshow-container" id="maySlideshowNew">
+        ... (5 slides with class "juneSlide")
+        <a class="prev" onclick="changeJuneSlide(-1)">...</a>
+        <a class="next" onclick="changeJuneSlide(1)">...</a>
+    </div>
+    <div class="dot-group" id="juneDots"></div>
+</div>
+
+<script>
+    // Independent June Slideshow ...
+</script>
+       <!-- - Image slideshow: Harvest Highlights -->
+<div class="may-highlights-card">
+    <h3>🍂 Harvest Highlights 2026</h3>
+    <div class="slideshow-container" id="harvestSlideshow">
+        <!-- Slide 1 -->
+        <div class="harvestSlide">
+            <img src="images/MagicMiraHarvestGeneva.jpg" style="width:100%">
+            <div class="caption-text">Geneva harvesting Magic Mira potatoes – they're gorgeous!</div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="harvestSlide">
+            <img src="images/AlaskanFrost.jpg" style="width:100%">
+            <div class="caption-text">One of our buckets of Alaskan Frost taters – pretty little things.</div>
+        </div>
+        <!-- Slide 3 -->
+        <div class="harvestSlide">
+            <img src="images/Jellies.jpg" style="width:100%">
+            <div class="caption-text">Jelly lineup – nagoon, black currant, blueberry, and more!</div>
+        </div>
+        <!-- Slide 4 -->
+        <div class="harvestSlide">
+            <img src="images/Garlic.jpg" style="width:100%">
+            <div class="caption-text">Garlic braids drying – saving the 4 biggest heads for replanting.</div>
+        </div>
+        <!-- Slide 5 -->
+        <div class="harvestSlide">
+            <img src="images/SquashPlusGreenhouse.jpg" style="width:100%">
+            <div class="caption-text">Squash and greenhouse – despite the slug setback, we're getting plenty.</div>
+        </div>
+        <!-- Slide 6 -->
+        <div class="harvestSlide">
+            <img src="images/Carrots2026.jpg" style="width:100%">
+            <div class="caption-text">Carrots are booming! Join us Sept 14 at the community center to taste all 18 varieties.</div>
+        </div>
+        <!-- Slide 7 -->
+        <div class="harvestSlide">
+            <img src="images/SunflowervsPeas2026.jpg" style="width:100%">
+            <div class="caption-text">Sunflowers vs. peas – they loved that rabbit-poop fertilizer!</div>
+        </div>
+        <!-- Slide 8 -->
+        <div class="harvestSlide">
+            <img src="images/Lettuce2026.jpg" style="width:100%">
+            <div class="caption-text">Happy little lettuce – thriving even in small containers.</div>
+        </div>
+
+        <!-- Navigation arrows -->
+        <a class="prev" onclick="changeHarvestSlide(-1)">&#10094;</a>
+        <a class="next" onclick="changeHarvestSlide(1)">&#10095;</a>
+    </div>
+    <div class="dot-group" id="harvestDots"></div>
+</div>
+
+<script>
+    // Independent Harvest Slideshow - same pattern as June
+    var harvestSlideIndex = 1;
+    var harvestSlides = document.querySelectorAll('#harvestSlideshow .harvestSlide');
+    var harvestDotsContainer = document.getElementById('harvestDots');
+
+    function showHarvestSlides(n) {
+        if (n > harvestSlides.length) harvestSlideIndex = 1;
+        if (n < 1) harvestSlideIndex = harvestSlides.length;
+        for (var i = 0; i < harvestSlides.length; i++) {
+            harvestSlides[i].style.display = 'none';
+        }
+        var dots = document.querySelectorAll('#harvestDots .dot');
+        for (var i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(' active-dot', '');
+        }
+        harvestSlides[harvestSlideIndex - 1].style.display = 'block';
+        if (dots[harvestSlideIndex - 1]) {
+            dots[harvestSlideIndex - 1].className += ' active-dot';
+        }
+    }
+
+    function changeHarvestSlide(n) {
+        showHarvestSlides(harvestSlideIndex += n);
+    }
+
+    // Build dots for harvest slideshow
+    if (harvestDotsContainer) {
+        harvestDotsContainer.innerHTML = '';
+        for (var i = 0; i < harvestSlides.length; i++) {
+            var dot = document.createElement('span');
+            dot.className = 'dot';
+            if (i === 0) dot.className += ' active-dot';
+            dot.onclick = (function(idx) {
+                return function() {
+                    harvestSlideIndex = idx + 1;
+                    showHarvestSlides(harvestSlideIndex);
+                };
+            })(i);
+            harvestDotsContainer.appendChild(dot);
+        }
+    }
+
+    // Initialize
+    showHarvestSlides(1);
+</script>
 
 <!-- - Plant cards -->
         <div class="plant-starts-brown">
