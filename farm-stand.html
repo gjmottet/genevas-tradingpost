@@ -244,6 +244,39 @@
             color: #f1c40f;
         }
         
+        /* Top page countdowns - brighter colors */
+        .countdown-carrot-top {
+            background: #e67e22;
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin: 0.5rem 0.5rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            display: inline-block;
+        }
+        .countdown-carrot-top span {
+            color: #fff5e6;
+            font-weight: bold;
+        }
+        
+        .countdown-rabbit-top {
+            background: #f1c40f;
+            color: #2c3e50;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin: 0.5rem 0.5rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            display: inline-block;
+        }
+        .countdown-rabbit-top span {
+            color: #2c3e50;
+            font-weight: bold;
+        }
+        
         /* May Highlights Card */
         .may-highlights-card {
             background: #d9f0ca;
@@ -1074,7 +1107,7 @@
             .prev, .next { width: 36px; padding: 10px 0; font-size: 18px; }
             .berry-gallery { grid-template-columns: 1fr 1fr; }
             .berry-gallery-item img { height: 150px; }
-            .countdown-box { font-size: 1rem; padding: 0.3rem 1rem; }
+            .countdown-box, .countdown-carrot-top, .countdown-rabbit-top { font-size: 1rem; padding: 0.3rem 1rem; }
         }
         
         @media (max-width: 480px) {
@@ -1130,8 +1163,8 @@
             <p><strong>Rabbit & Poultry Show</strong> – September 19, 2026</p>
             <p class="event-detail">10:00 AM – 1:00 PM · Gustavus Community Center (Outdoor Barn Tent)</p>
             <div style="margin-top: 1rem;">
-                <div class="countdown-box" id="carrotCountdownTop">⏳ Carrot Tasting: <span id="carrotDaysTop">9</span> days away</div>
-                <div class="countdown-box" style="margin-left: 0.5rem;" id="rabbitCountdownTop">⏳ Rabbit Show: <span id="rabbitDaysTop">14</span> days away</div>
+                <div class="countdown-carrot-top">🥕 Carrot Tasting: <span id="carrotDaysTop">9</span> days away</div>
+                <div class="countdown-rabbit-top">🐇 Rabbit Show: <span id="rabbitDaysTop">14</span> days away</div>
             </div>
         </div>
 
@@ -1213,6 +1246,12 @@
                         <p style="color: #ffd966; font-size: 1rem;">4oz – $10 &nbsp;|&nbsp; 8oz – $18</p>
                     </div>
 
+                    <!-- Wild Nagoon Berry Syrup (NEW - coming soon) -->
+                    <div style="background: rgba(255,255,255,0.12); border-radius: 16px; padding: 1.2rem 1rem; text-align: center; border: 1px solid #ffaa66;">
+                        <h4 style="color: #fff; margin: 0.4rem 0 0.2rem;">Wild Nagoon Berry Syrup <span style="background: #f1c40f; color: #2c3e50; padding: 0.1rem 0.6rem; border-radius: 20px; font-size: 0.7rem; font-weight: bold; margin-left: 0.3rem;">Coming Soon</span></h4>
+                        <p style="color: #ffd966; font-size: 1rem;">4oz – $10 &nbsp;|&nbsp; 8oz – $18</p>
+                    </div>
+
                     <!-- Wild Strawberry‑Rhubarb Pie Filling -->
                     <div style="background: rgba(255,255,255,0.12); border-radius: 16px; padding: 1.2rem 1rem; text-align: center; border: 1px solid rgba(255,215,0,0.3);">
                         <h4 style="color: #fff; margin: 0.4rem 0 0.2rem;">Strawberry‑Rhubarb Pie Filling</h4>
@@ -1280,8 +1319,6 @@
                 <div class="season-date">July 11 · Noon–2:30pm</div>
             </div>
         </section> 
-
-        <!-- ANNOUNCEMENT CARD - REMOVED (replaced by Upcoming Event card at top) -->
 
         <!-- WORKSHOP SECTION (KEPT - with countdowns added) -->
         <section class="workshop-section">
