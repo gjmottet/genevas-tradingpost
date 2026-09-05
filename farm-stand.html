@@ -228,7 +228,7 @@
             background-color: #2e7d32;
         }
         
-        /* Countdown Styles */
+        /* Countdown Styles - inside workshop cards */
         .countdown-box {
             display: inline-block;
             background: #2c3e50;
@@ -244,47 +244,72 @@
             color: #f1c40f;
         }
         
-        /* Top page countdowns - SUPER BRIGHT & BOLD */
-        .countdown-carrot-top {
-            background: #e67e22;
-            color: white;
-            padding: 0.6rem 2rem;
-            border-radius: 50px;
-            font-size: 1.4rem;
-            font-weight: bold;
-            margin: 0.5rem 0.5rem;
-            box-shadow: 0 6px 25px rgba(230, 126, 34, 0.6), 0 0 20px rgba(230, 126, 34, 0.3);
+        /* ===== TOP PAGE COUNTDOWN BUTTONS ===== */
+        /* Carrot Tasting Button - Orange */
+        .countdown-btn-carrot {
             display: inline-block;
-            border: 2px solid #f39c12;
-            text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+            background: #e67e22;
+            background: linear-gradient(145deg, #f39c12, #e67e22);
+            color: #ffffff;
+            font-size: 1.4rem;
+            font-weight: 800;
+            padding: 0.7rem 2rem;
+            margin: 0.4rem 0.6rem;
+            border-radius: 60px;
+            border: 4px solid #f1c40f;
+            box-shadow: 
+                0 0 25px rgba(230, 126, 34, 0.7),
+                0 0 50px rgba(230, 126, 34, 0.3),
+                inset 0 -3px 0 rgba(0,0,0,0.2);
+            text-shadow: 0 2px 8px rgba(0,0,0,0.4);
             letter-spacing: 0.5px;
+            transition: all 0.2s ease;
         }
-        .countdown-carrot-top span {
-            color: #fff5e6;
-            font-weight: bold;
+        .countdown-btn-carrot span {
+            color: #ffffff;
             font-size: 1.6rem;
-            text-shadow: 0 0 15px rgba(255,255,255,0.4);
+            font-weight: 900;
+            text-shadow: 0 0 20px rgba(255,255,255,0.3);
+            background: rgba(0,0,0,0.15);
+            padding: 0 0.3rem;
+            border-radius: 8px;
+        }
+        .countdown-btn-carrot:hover {
+            transform: scale(1.03);
+            box-shadow: 0 0 35px rgba(230, 126, 34, 0.9), 0 0 60px rgba(230, 126, 34, 0.4);
         }
         
-        .countdown-rabbit-top {
-            background: #f1c40f;
-            color: #1a2a3a;
-            padding: 0.6rem 2rem;
-            border-radius: 50px;
-            font-size: 1.4rem;
-            font-weight: bold;
-            margin: 0.5rem 0.5rem;
-            box-shadow: 0 6px 25px rgba(241, 196, 15, 0.6), 0 0 20px rgba(241, 196, 15, 0.3);
+        /* Rabbit Show Button - Yellow */
+        .countdown-btn-rabbit {
             display: inline-block;
-            border: 2px solid #f7dc6f;
-            text-shadow: 0 2px 8px rgba(255,255,255,0.3);
-            letter-spacing: 0.5px;
-        }
-        .countdown-rabbit-top span {
+            background: #f1c40f;
+            background: linear-gradient(145deg, #f7dc6f, #f1c40f);
             color: #1a2a3a;
-            font-weight: bold;
+            font-size: 1.4rem;
+            font-weight: 800;
+            padding: 0.7rem 2rem;
+            margin: 0.4rem 0.6rem;
+            border-radius: 60px;
+            border: 4px solid #ffffff;
+            box-shadow: 
+                0 0 25px rgba(241, 196, 15, 0.7),
+                0 0 50px rgba(241, 196, 15, 0.3),
+                inset 0 -3px 0 rgba(0,0,0,0.1);
+            text-shadow: 0 1px 4px rgba(255,255,255,0.3);
+            letter-spacing: 0.5px;
+            transition: all 0.2s ease;
+        }
+        .countdown-btn-rabbit span {
+            color: #1a2a3a;
             font-size: 1.6rem;
-            text-shadow: 0 0 20px rgba(255,255,200,0.5);
+            font-weight: 900;
+            background: rgba(255,255,255,0.3);
+            padding: 0 0.3rem;
+            border-radius: 8px;
+        }
+        .countdown-btn-rabbit:hover {
+            transform: scale(1.03);
+            box-shadow: 0 0 35px rgba(241, 196, 15, 0.9), 0 0 60px rgba(241, 196, 15, 0.4);
         }
         
         /* May Highlights Card */
@@ -1117,12 +1142,14 @@
             .prev, .next { width: 36px; padding: 10px 0; font-size: 18px; }
             .berry-gallery { grid-template-columns: 1fr 1fr; }
             .berry-gallery-item img { height: 150px; }
-            .countdown-box, .countdown-carrot-top, .countdown-rabbit-top { font-size: 1rem; padding: 0.3rem 1rem; }
+            .countdown-box, .countdown-btn-carrot, .countdown-btn-rabbit { font-size: 1rem; padding: 0.4rem 1rem; }
+            .countdown-btn-carrot span, .countdown-btn-rabbit span { font-size: 1.2rem; }
         }
         
         @media (max-width: 480px) {
             .berry-gallery { grid-template-columns: 1fr; }
             .berry-gallery-item img { height: 180px; }
+            .countdown-btn-carrot, .countdown-btn-rabbit { display: block; margin: 0.5rem auto; width: 90%; }
         }
     </style>
 </head>
@@ -1173,8 +1200,8 @@
             <p><strong>Rabbit & Poultry Show</strong> – September 19, 2026</p>
             <p class="event-detail">10:00 AM – 1:00 PM · Gustavus Community Center (Outdoor Barn Tent)</p>
             <div style="margin-top: 1rem;">
-                <div class="countdown-carrot-top">🥕 Carrot Tasting: <span id="carrotDaysTop">9</span> days away</div>
-                <div class="countdown-rabbit-top">🐇 Rabbit Show: <span id="rabbitDaysTop">14</span> days away</div>
+                <div class="countdown-btn-carrot">🥕 Carrot Tasting: <span id="carrotDaysTop">9</span> days away</div>
+                <div class="countdown-btn-rabbit">🐇 Rabbit Show: <span id="rabbitDaysTop">14</span> days away</div>
             </div>
         </div>
 
@@ -1250,13 +1277,13 @@
                         <p style="color: #ffd966; font-size: 1rem;">4oz – $8 &nbsp;|&nbsp; 8oz – $15</p>
                     </div>
 
-                    <!-- Wild Nagoon Berry Jelly (coming soon) - CORRECTED from Jam to Jelly -->
+                    <!-- Wild Nagoon Berry Jelly (coming soon) -->
                     <div style="background: rgba(255,255,255,0.12); border-radius: 16px; padding: 1.2rem 1rem; text-align: center; border: 1px solid #ffaa66;">
                         <h4 style="color: #fff; margin: 0.4rem 0 0.2rem;">Wild Nagoon Berry Jelly <span style="background: #f1c40f; color: #2c3e50; padding: 0.1rem 0.6rem; border-radius: 20px; font-size: 0.7rem; font-weight: bold; margin-left: 0.3rem;">Coming Soon</span></h4>
                         <p style="color: #ffd966; font-size: 1rem;">4oz – $10 &nbsp;|&nbsp; 8oz – $18</p>
                     </div>
 
-                    <!-- Wild Nagoon Berry Syrup (NEW - coming soon) -->
+                    <!-- Wild Nagoon Berry Syrup (coming soon) -->
                     <div style="background: rgba(255,255,255,0.12); border-radius: 16px; padding: 1.2rem 1rem; text-align: center; border: 1px solid #ffaa66;">
                         <h4 style="color: #fff; margin: 0.4rem 0 0.2rem;">Wild Nagoon Berry Syrup <span style="background: #f1c40f; color: #2c3e50; padding: 0.1rem 0.6rem; border-radius: 20px; font-size: 0.7rem; font-weight: bold; margin-left: 0.3rem;">Coming Soon</span></h4>
                         <p style="color: #ffd966; font-size: 1rem;">4oz – $10 &nbsp;|&nbsp; 8oz – $18</p>
