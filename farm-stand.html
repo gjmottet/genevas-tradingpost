@@ -244,72 +244,86 @@
             color: #f1c40f;
         }
         
-        /* ===== TOP PAGE COUNTDOWN BUTTONS ===== */
-        /* Carrot Tasting Button - Orange */
+        /* ===== SUPER BOLD TOP PAGE COUNTDOWN BUTTONS ===== */
+        /* Container to hold buttons on a light background */
+        .countdown-button-wrapper {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(4px);
+            padding: 0.5rem 1rem;
+            border-radius: 80px;
+            margin: 0.5rem auto;
+            box-shadow: 0 0 30px rgba(0,0,0,0.3);
+        }
+        
+        /* Carrot Tasting Button - SOLID & BOLD */
         .countdown-btn-carrot {
             display: inline-block;
             background: #e67e22;
-            background: linear-gradient(145deg, #f39c12, #e67e22);
-            color: #ffffff;
-            font-size: 1.4rem;
-            font-weight: 800;
-            padding: 0.7rem 2rem;
-            margin: 0.4rem 0.6rem;
+            background: linear-gradient(145deg, #f39c12, #d35400);
+            color: #ffffff !important;
+            font-size: 1.5rem;
+            font-weight: 900;
+            padding: 0.8rem 2.2rem;
+            margin: 0.2rem;
             border-radius: 60px;
             border: 4px solid #f1c40f;
             box-shadow: 
-                0 0 25px rgba(230, 126, 34, 0.7),
-                0 0 50px rgba(230, 126, 34, 0.3),
-                inset 0 -3px 0 rgba(0,0,0,0.2);
-            text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+                0 0 30px rgba(230, 126, 34, 0.8),
+                0 0 60px rgba(230, 126, 34, 0.4),
+                inset 0 -4px 0 rgba(0,0,0,0.2);
+            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
             letter-spacing: 0.5px;
             transition: all 0.2s ease;
+            opacity: 1 !important;
         }
         .countdown-btn-carrot span {
-            color: #ffffff;
-            font-size: 1.6rem;
+            color: #ffffff !important;
+            font-size: 1.8rem;
             font-weight: 900;
-            text-shadow: 0 0 20px rgba(255,255,255,0.3);
             background: rgba(0,0,0,0.15);
-            padding: 0 0.3rem;
+            padding: 0 0.4rem;
             border-radius: 8px;
+            text-shadow: 0 0 20px rgba(255,255,255,0.3);
         }
         .countdown-btn-carrot:hover {
-            transform: scale(1.03);
-            box-shadow: 0 0 35px rgba(230, 126, 34, 0.9), 0 0 60px rgba(230, 126, 34, 0.4);
+            transform: scale(1.04);
+            box-shadow: 0 0 45px rgba(230, 126, 34, 1), 0 0 80px rgba(230, 126, 34, 0.5);
         }
         
-        /* Rabbit Show Button - Yellow */
+        /* Rabbit Show Button - SOLID & BOLD */
         .countdown-btn-rabbit {
             display: inline-block;
             background: #f1c40f;
-            background: linear-gradient(145deg, #f7dc6f, #f1c40f);
-            color: #1a2a3a;
-            font-size: 1.4rem;
-            font-weight: 800;
-            padding: 0.7rem 2rem;
-            margin: 0.4rem 0.6rem;
+            background: linear-gradient(145deg, #f7dc6f, #f39c12);
+            color: #1a2a3a !important;
+            font-size: 1.5rem;
+            font-weight: 900;
+            padding: 0.8rem 2.2rem;
+            margin: 0.2rem;
             border-radius: 60px;
             border: 4px solid #ffffff;
             box-shadow: 
-                0 0 25px rgba(241, 196, 15, 0.7),
-                0 0 50px rgba(241, 196, 15, 0.3),
-                inset 0 -3px 0 rgba(0,0,0,0.1);
-            text-shadow: 0 1px 4px rgba(255,255,255,0.3);
+                0 0 30px rgba(241, 196, 15, 0.8),
+                0 0 60px rgba(241, 196, 15, 0.4),
+                inset 0 -4px 0 rgba(0,0,0,0.1);
+            text-shadow: 0 1px 6px rgba(255,255,255,0.3);
             letter-spacing: 0.5px;
             transition: all 0.2s ease;
+            opacity: 1 !important;
         }
         .countdown-btn-rabbit span {
-            color: #1a2a3a;
-            font-size: 1.6rem;
+            color: #1a2a3a !important;
+            font-size: 1.8rem;
             font-weight: 900;
-            background: rgba(255,255,255,0.3);
-            padding: 0 0.3rem;
+            background: rgba(255,255,255,0.35);
+            padding: 0 0.4rem;
             border-radius: 8px;
+            text-shadow: 0 0 20px rgba(255,255,200,0.5);
         }
         .countdown-btn-rabbit:hover {
-            transform: scale(1.03);
-            box-shadow: 0 0 35px rgba(241, 196, 15, 0.9), 0 0 60px rgba(241, 196, 15, 0.4);
+            transform: scale(1.04);
+            box-shadow: 0 0 45px rgba(241, 196, 15, 1), 0 0 80px rgba(241, 196, 15, 0.5);
         }
         
         /* May Highlights Card */
@@ -523,6 +537,17 @@
         .upcoming-event-card .event-detail {
             font-size: 1.1rem;
             opacity: 0.9;
+        }
+        
+        /* The countdown buttons container - sits ON TOP of the overlay */
+        .countdown-button-container {
+            position: relative;
+            z-index: 3;
+            margin-top: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.5rem;
         }
         
         /* Workshop Section */
@@ -1142,14 +1167,16 @@
             .prev, .next { width: 36px; padding: 10px 0; font-size: 18px; }
             .berry-gallery { grid-template-columns: 1fr 1fr; }
             .berry-gallery-item img { height: 150px; }
-            .countdown-box, .countdown-btn-carrot, .countdown-btn-rabbit { font-size: 1rem; padding: 0.4rem 1rem; }
-            .countdown-btn-carrot span, .countdown-btn-rabbit span { font-size: 1.2rem; }
+            .countdown-box, .countdown-btn-carrot, .countdown-btn-rabbit { font-size: 1.1rem; padding: 0.5rem 1.2rem; }
+            .countdown-btn-carrot span, .countdown-btn-rabbit span { font-size: 1.3rem; }
+            .countdown-button-container { gap: 0.3rem; }
         }
         
         @media (max-width: 480px) {
             .berry-gallery { grid-template-columns: 1fr; }
             .berry-gallery-item img { height: 180px; }
-            .countdown-btn-carrot, .countdown-btn-rabbit { display: block; margin: 0.5rem auto; width: 90%; }
+            .countdown-btn-carrot, .countdown-btn-rabbit { display: block; margin: 0.3rem auto; width: 90%; font-size: 1rem; padding: 0.6rem 1rem; }
+            .countdown-btn-carrot span, .countdown-btn-rabbit span { font-size: 1.2rem; }
         }
     </style>
 </head>
@@ -1192,14 +1219,16 @@
             <div class="dot-group" id="harvestDots"></div>
         </div>
         
-        <!-- UPCOMING EVENT CARD (formerly Announcement) - MOVED TO TOP -->
+        <!-- UPCOMING EVENT CARD - with BOLD COUNTDOWN BUTTONS -->
         <div class="upcoming-event-card">
             <h2>🌱 Upcoming Event: Cultivating Food Sovereignty for Gustavus</h2>
             <p><strong>Carrot Tasting #3</strong> – September 14, 2026</p>
             <p class="event-detail">5:30–8:00 PM · Gustavus Community Center</p>
             <p><strong>Rabbit & Poultry Show</strong> – September 19, 2026</p>
             <p class="event-detail">10:00 AM – 1:00 PM · Gustavus Community Center (Outdoor Barn Tent)</p>
-            <div style="margin-top: 1rem;">
+            
+            <!-- COUNTDOWN BUTTONS - on their own layer with z-index to appear OVER the overlay -->
+            <div class="countdown-button-container">
                 <div class="countdown-btn-carrot">🥕 Carrot Tasting: <span id="carrotDaysTop">9</span> days away</div>
                 <div class="countdown-btn-rabbit">🐇 Rabbit Show: <span id="rabbitDaysTop">14</span> days away</div>
             </div>
