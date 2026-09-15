@@ -483,7 +483,7 @@
             color: #8b5a2b;
         }
         
-        /* Upcoming Event Card (formerly Announcement) */
+        /* Upcoming Event Card */
         .upcoming-event-card {
             position: relative;
             background-image: url('images/Carrot Tasting 2025 Geneva.jpg');
@@ -512,8 +512,7 @@
         }
         
         .upcoming-event-card h2,
-        .upcoming-event-card p,
-        .upcoming-event-card h3 {
+        .upcoming-event-card p {
             position: relative;
             z-index: 2;
             text-shadow: 0 2px 8px rgba(0,0,0,0.7);
@@ -523,12 +522,6 @@
             font-size: 2.5rem;
             margin-top: 0;
             margin-bottom: 0.5rem;
-            color: #ffd700;
-        }
-        
-        .upcoming-event-card h3 {
-            font-size: 1.8rem;
-            margin: 1.5rem 0 0.5rem;
             color: #ffd700;
         }
         
@@ -545,7 +538,6 @@
             opacity: 0.9;
         }
         
-        /* The countdown buttons container - sits ON TOP of the overlay */
         .countdown-button-container {
             position: relative;
             z-index: 3;
@@ -698,91 +690,6 @@
             color: #2c5282;
         }
         
-        .carrot-charts {
-            margin-top: 2rem;
-            grid-column: 1 / -1;
-            width: 100%;
-        }
-        
-        .charts-full-width {
-            background: white;
-            border-radius: 12px;
-            padding: 2rem;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            border: 2px solid #fdebd0;
-            margin-top: 1rem;
-            width: 100%;
-        }
-        
-        .tasting-tables {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            margin: 1.5rem 0;
-        }
-        
-        .tasting-table {
-            background: #f9f9f9;
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-            overflow-x: auto;
-            border: 1px solid #e0e0e0;
-            max-height: 350px;
-            overflow-y: auto;
-            width: 100%;
-        }
-        
-        .tasting-table h4 {
-            color: #e67e22;
-            text-align: center;
-            margin-top: 0;
-            margin-bottom: 1rem;
-            font-size: 1.2rem;
-            position: sticky;
-            top: 0;
-            background: #f9f9f9;
-            z-index: 10;
-            padding: 10px;
-            border-bottom: 2px solid #e0e0e0;
-        }
-        
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 0.85rem;
-        }
-        
-        th {
-            background: #f1f1f1;
-            padding: 0.6rem;
-            text-align: left;
-            border-bottom: 2px solid #e67e22;
-            font-weight: bold;
-            color: #2c3e50;
-            position: sticky;
-            top: 50px;
-            z-index: 10;
-        }
-        
-        td {
-            padding: 0.5rem;
-            border-bottom: 1px solid #e0e0e0;
-        }
-        
-        .rank-1 {
-            background: #e8f6f3;
-            font-weight: bold;
-        }
-        
-        .rank-2 {
-            background: #fef9e7;
-        }
-        
-        .rank-3 {
-            background: #f4ecf7;
-        }
-        
         .grant-note {
             background: #e8f0fe;
             padding: 1.5rem;
@@ -820,7 +727,7 @@
             grid-template-columns: 1fr 2fr;
             background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
             color: white;
-            margin: 3rem auto;
+            margin: 2rem auto;
             max-width: 1000px;
             border-radius: 15px;
             overflow: hidden;
@@ -1041,56 +948,6 @@
             font-weight: 500;
         }
         
-        .sunday-market-card {
-            background: #5d4037;
-            border-radius: 28px;
-            margin: 2rem auto;
-            max-width: 1000px;
-            padding: 1.8rem 2rem;
-            box-shadow: 0 12px 25px rgba(0,0,0,0.2);
-            text-align: center;
-            color: white;
-            border: 2px solid #d9a066;
-        }
-        .sunday-market-card h2 {
-            font-size: 2.2rem;
-            margin: 0 0 0.5rem;
-            color: #ffecb3;
-        }
-        .sunday-market-card .market-dates {
-            font-size: 1.3rem;
-            font-weight: bold;
-            margin: 0.5rem 0;
-        }
-        .sunday-market-card .market-detail {
-            font-size: 1.1rem;
-            line-height: 1.4;
-        }
-        .strawberry-festival-card {
-            background: #b71c1c;
-            border-radius: 28px;
-            margin: 2rem auto;
-            max-width: 1000px;
-            padding: 1.8rem 2rem;
-            box-shadow: 0 12px 25px rgba(0,0,0,0.25);
-            text-align: center;
-            color: white;
-            border: 2px solid #ffaa66;
-        }
-        .strawberry-festival-card h2 {
-            font-size: 2.3rem;
-            margin: 0 0 0.25rem;
-            color: #fff0b5;
-        }
-        .festival-highlight {
-            background: #ffd966;
-            display: inline-block;
-            padding: 0.3rem 1rem;
-            border-radius: 40px;
-            color: #8b0000;
-            font-weight: bold;
-            margin: 0.75rem 0;
-        }
         .show-schedule {
             background: rgba(255,255,240,0.15);
             border-radius: 20px;
@@ -1174,71 +1031,13 @@
             opacity: 0.95;
             text-shadow: 0 2px 5px rgba(0,0,0,0.4);
         }
-        .carrot-collage {
-            display: grid;
-            grid-template-columns: 1fr 1.2fr 1fr;
-            grid-template-areas:
-                "tall square ."
-                "long long long";
-            gap: 1rem;
-            align-items: center;
-            margin: 1.5rem 0;
-        }
-        .carrot-collage figure {
-            margin: 0;
-            text-align: center;
-        }
-        .carrot-img-tall { grid-area: tall; }
-        .carrot-img-square { grid-area: square; }
-        .carrot-img-long { grid-area: long; }
-        .carrot-collage img {
-            width: 100%;
-            height: auto;
-            display: block;
-            border-radius: 14px;
-            border: 4px solid #fff;
-            box-shadow: 0 6px 18px rgba(0,0,0,0.3);
-            background: #fff;
-        }
-        .carrot-collage figcaption {
-            margin-top: 0.4rem;
-            font-size: 0.9rem;
-            font-weight: 600;
-            color: #fff8e1;
-            text-shadow: 0 1px 4px rgba(0,0,0,0.5);
-        }
-        .carrot-pdf-links {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 1rem;
-            margin: 1.5rem 0;
-        }
-        .pdf-btn {
-            display: inline-block;
-            background: #fff;
-            color: #d35400;
-            text-decoration: none;
-            padding: 0.8rem 1.5rem;
-            border-radius: 50px;
-            font-weight: 800;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.25);
-            transition: all 0.2s ease;
-            border: 2px solid #ffd966;
-            cursor: pointer;
-        }
-        .pdf-btn:hover {
-            background: #ffd966;
-            color: #8b3e00;
-            transform: translateY(-2px);
-        }
         .carrot-2026-results {
             background: rgba(255,255,255,0.96);
             color: #2c3e50;
             border-radius: 18px;
             padding: 1rem;
             margin: 1.5rem 0 0;
-            overflow-x: auto;
+            overflow: hidden;
             box-shadow: inset 0 0 0 2px #ffd966;
         }
         .carrot-2026-results h4 {
@@ -1247,23 +1046,30 @@
             margin: 0 0 0.75rem;
             text-align: center;
         }
+        .carrot-2026-results .scroll-area {
+            max-height: 300px;
+            overflow-y: scroll;
+            overflow-x: auto;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+            background: #fff;
+        }
         .carrot-2026-results table {
             width: 100%;
             border-collapse: collapse;
-            font-size: 0.82rem;
-            min-width: 720px;
+            font-size: 0.9rem;
         }
         .carrot-2026-results th {
             background: #f1c40f;
             color: #2c3e50;
-            padding: 0.55rem 0.4rem;
+            padding: 0.6rem 0.5rem;
             border-bottom: 2px solid #d35400;
             position: sticky;
             top: 0;
             z-index: 2;
         }
         .carrot-2026-results td {
-            padding: 0.45rem 0.4rem;
+            padding: 0.5rem;
             border-bottom: 1px solid #e0e0e0;
             text-align: center;
         }
@@ -1305,6 +1111,60 @@
             font-weight: 800;
             text-decoration: underline;
         }
+        /* Row with two small images flanking the three stacked buttons */
+        .carrot-image-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        .carrot-image-row figure {
+            flex: 0 1 220px;
+            max-width: 220px;
+            margin: 0;
+            text-align: center;
+        }
+        .carrot-image-row img {
+            width: 100%;
+            height: auto;
+            border-radius: 14px;
+            border: 4px solid #fff;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+            background: #fff;
+        }
+        .carrot-image-row figcaption {
+            margin-top: 0.4rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #fff8e1;
+            text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+        }
+        .carrot-button-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        .pdf-btn {
+            display: inline-block;
+            background: #fff;
+            color: #d35400;
+            text-decoration: none;
+            padding: 0.7rem 1.3rem;
+            border-radius: 50px;
+            font-weight: 800;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+            transition: all 0.2s ease;
+            border: 2px solid #ffd966;
+            cursor: pointer;
+            font-size: 0.95rem;
+        }
+        .pdf-btn:hover {
+            background: #ffd966;
+            color: #8b3e00;
+            transform: translateY(-2px);
+        }
         
         @media (max-width: 768px) {
             .farm-header h1 { font-size: 2.5rem; }
@@ -1319,14 +1179,10 @@
             .quail-grid { grid-template-columns: 1fr; gap: 1.5rem; }
             .market-banner { grid-template-columns: 1fr; }
             .market-image { min-height: 250px; }
-            .tasting-tables { grid-template-columns: 1fr; }
-            .tasting-table { overflow-x: scroll; max-height: 400px; }
-            .tasting-table table { min-width: 600px; }
             .strawberry-header-card { min-height: 240px; margin: 1.5rem 1rem; border-radius: 20px; }
             .strawberry-content h3 { font-size: 1.8rem; }
             .strawberry-price { font-size: 1.2rem; }
             .upcoming-event-card h2 { font-size: 1.8rem; }
-            .upcoming-event-card h3 { font-size: 1.4rem; }
             .upcoming-event-card p { font-size: 1.1rem; }
             .prev, .next { width: 36px; padding: 10px 0; font-size: 18px; }
             .berry-gallery { grid-template-columns: 1fr 1fr; }
@@ -1334,16 +1190,9 @@
             .countdown-box, .countdown-btn-carrot, .countdown-btn-rabbit { font-size: 1.1rem; padding: 0.5rem 1.2rem; }
             .countdown-btn-carrot span, .countdown-btn-rabbit span { font-size: 1.3rem; }
             .countdown-button-container { gap: 0.3rem; }
-            .carrot-collage {
-                grid-template-columns: 1fr;
-                grid-template-areas:
-                    "tall"
-                    "square"
-                    "long";
-            }
             .carrot-results-card { padding: 1.2rem; }
             .carrot-results-card h3 { font-size: 1.8rem; }
-            .carrot-2026-results table { min-width: 600px; }
+            .carrot-2026-results table { font-size: 0.8rem; }
         }
         
         @media (max-width: 480px) {
@@ -1351,6 +1200,7 @@
             .berry-gallery-item img { height: 180px; }
             .countdown-btn-carrot, .countdown-btn-rabbit { display: block; margin: 0.3rem auto; width: 90%; font-size: 1rem; padding: 0.6rem 1rem; }
             .countdown-btn-carrot span, .countdown-btn-rabbit span { font-size: 1.2rem; }
+            .carrot-image-row figure { flex: 1 1 100%; max-width: 280px; }
         }
     </style>
 </head>
@@ -1375,323 +1225,331 @@
     <div class="white-gap"></div>
     
     <main>
-    <!-- - Image slideshow: Harvest Highlights -->
-           <div class="may-highlights-card">
-            <h3> Harvest Highlights 2026</h3>
-            <div class="slideshow-container" id="harvestSlideshow">
-                <div class="harvestSlide"><img src="images/MagicMiraHarvestGeneva.jpg" style="width:100%"><div class="caption-text">Geneva harvesting Magic Mira potatoes – they're gorgeous!</div></div>
-                <div class="harvestSlide"><img src="images/AlaskanFrost.jpg" style="width:100%"><div class="caption-text">One of our buckets of Alaskan Frost taters – pretty little things.</div></div>
-                <div class="harvestSlide"><img src="images/Jellies.jpg" style="width:100%"><div class="caption-text">Jelly lineup – nagoon, black currant, blueberry, and more!</div></div>
-                <div class="harvestSlide"><img src="images/Garlic.jpg" style="width:100%"><div class="caption-text">Garlic braids drying – saving the 4 biggest heads for replanting.</div></div>
-                <div class="harvestSlide"><img src="images/SquashPlusGreenhouse.jpg" style="width:100%"><div class="caption-text">Squash and greenhouse – despite the slug setback, we're getting plenty.</div></div>
-                <div class="harvestSlide"><img src="images/Carrots2026.jpg" style="width:100%"><div class="caption-text">Carrots were booming! We tasted all 18 varieties at the Sept 14 Carrot Tasting — see the results and photos below.</div></div>
-                <div class="harvestSlide"><img src="images/SunflowervsPeas2026.jpg" style="width:100%"><div class="caption-text">Sunflowers vs. peas – they loved that rabbit-poop fertilizer!</div></div>
-                <div class="harvestSlide"><img src="images/Lettuce2026.jpg" style="width:100%"><div class="caption-text">Happy little lettuce – thriving even in small containers.</div></div>
-                <a class="prev" onclick="changeHarvestSlide(-1)">&#10094;</a>
-                <a class="next" onclick="changeHarvestSlide(1)">&#10095;</a>
-            </div>
-            <div class="dot-group" id="harvestDots"></div>
+    <!-- Harvest Highlights slideshow -->
+    <div class="may-highlights-card">
+        <h3> Harvest Highlights 2026</h3>
+        <div class="slideshow-container" id="harvestSlideshow">
+            <div class="harvestSlide"><img src="images/MagicMiraHarvestGeneva.jpg" style="width:100%"><div class="caption-text">Geneva harvesting Magic Mira potatoes – they're gorgeous!</div></div>
+            <div class="harvestSlide"><img src="images/AlaskanFrost.jpg" style="width:100%"><div class="caption-text">One of our buckets of Alaskan Frost taters – pretty little things.</div></div>
+            <div class="harvestSlide"><img src="images/Jellies.jpg" style="width:100%"><div class="caption-text">Jelly lineup – nagoon, black currant, blueberry, and more!</div></div>
+            <div class="harvestSlide"><img src="images/Garlic.jpg" style="width:100%"><div class="caption-text">Garlic braids drying – saving the 4 biggest heads for replanting.</div></div>
+            <div class="harvestSlide"><img src="images/SquashPlusGreenhouse.jpg" style="width:100%"><div class="caption-text">Squash and greenhouse – despite the slug setback, we're getting plenty.</div></div>
+            <div class="harvestSlide"><img src="images/Carrots2026.jpg" style="width:100%"><div class="caption-text">Carrots were booming! We tasted all 18 varieties at the Sept 14 Carrot Tasting — see the results and photos below.</div></div>
+            <div class="harvestSlide"><img src="images/SunflowervsPeas2026.jpg" style="width:100%"><div class="caption-text">Sunflowers vs. peas – they loved that rabbit-poop fertilizer!</div></div>
+            <div class="harvestSlide"><img src="images/Lettuce2026.jpg" style="width:100%"><div class="caption-text">Happy little lettuce – thriving even in small containers.</div></div>
+            <a class="prev" onclick="changeHarvestSlide(-1)">&#10094;</a>
+            <a class="next" onclick="changeHarvestSlide(1)">&#10095;</a>
         </div>
-        
-        <!-- UPCOMING EVENT CARD - with BOLD COUNTDOWN BUTTONS -->
-        <div class="upcoming-event-card">
-            <h2>🌱 Upcoming Events</h2>
-            <p><strong>Rabbit & Poultry Show</strong> – September 19, 2026</p>
-            <p class="event-detail">10:00 AM – 1:00 PM · Gustavus Community Center (Outdoor Barn Tent)</p>
-            <p class="event-detail">Carrot Tasting 2026 is complete — see the results and photos below.</p>
-            
-            <h3>🛒 Second Saturday Market</h3>
-            <p><strong>Final market of the season:</strong> October 10, 2026</p>
-            <p class="event-detail">Noon – 2:30 PM · Gustavus Community Center</p>
-            <p class="event-detail">Last chance to pick up your jellies in person!</p>
+        <div class="dot-group" id="harvestDots"></div>
+    </div>
+    
+    <!-- UPCOMING EVENT CARD - Rabbit & Poultry Show only -->
+    <div class="upcoming-event-card">
+        <h2>🌱 Upcoming Event: Rabbit & Poultry Show</h2>
+        <p><strong>Rabbit & Poultry Show</strong> – September 19, 2026</p>
+        <p class="event-detail">10:00 AM – 1:00 PM · Gustavus Community Center (Outdoor Barn Tent)</p>
+        <p class="event-detail">Carrot Tasting 2026 is complete — see the results and photos below.</p>
 
-            <!-- COUNTDOWN BUTTONS - on their own layer with z-index to appear OVER the overlay -->
-            <div class="countdown-button-container">
-                <div class="countdown-btn-rabbit">🐇 Rabbit Show: <span id="rabbitDaysTop">14</span> days away</div>
-            </div>
+        <div class="countdown-button-container">
+            <div class="countdown-btn-rabbit">🐇 Rabbit Show: <span id="rabbitDaysTop">14</span> days away</div>
         </div>
+    </div>
 
-        <!-- - Patreon Card (replaces Plant Starts) -->
-        <div class="plant-starts-brown" style="background: linear-gradient(135deg, #4a2f1a 0%, #6b4f3c 100%);">
-            <h3 style="color: #fbe9d2;"> Garden Stories & Homestead Updates</h3>
-            <div class="plant-list" style="font-size: 1.2rem; color: #f5e6d3;">
+    <!-- SECOND SATURDAY MARKET - final market of season -->
+    <section class="market-banner">
+        <div class="market-image">
+            <img src="images/May9SecondSaturdayMarket2026.jpg" alt="Second Saturday Market">
+        </div>
+        <div class="market-info">
+            <h3>Second Saturday Market</h3>
+            <p><strong>Final market of the season: October 10, 2026</strong></p>
+            <p><strong>Noon – 2:30pm at the Gustavus Community Center</strong></p>
+            <p>Last chance to pick up your jellies in person! We'll also have produce, rabbit skins, art, and much more.</p>
+            <div class="season-date">October 10 · Noon–2:30pm</div>
+        </div>
+    </section>
+
+    <!-- BLOG CARD with Bok Choy image -->
+    <div class="plant-starts-brown" style="background: linear-gradient(135deg, #4a2f1a 0%, #6b4f3c 100%);">
+        <h3 style="color: #fbe9d2;"> Garden Stories &amp; Homestead Updates</h3>
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:1.5rem; justify-content:center;">
+            <img src="images/BokChoyJune2026.jpg" alt="Bok choy growing in June 2026" style="max-width:260px; width:100%; border-radius:18px; border:3px solid #f1c40f; box-shadow:0 4px 15px rgba(0,0,0,0.3);">
+            <div class="plant-list" style="font-size:1.2rem; color:#f5e6d3; flex:1; min-width:240px; text-align:left;">
                 Want the full scoop on what's growing, canning, and happening around here? I share behind‑the‑scenes tales, harvest tips, and plenty of photos over on my Patreon.
-            </div>
-            <div style="margin-top: 1.5rem;">
-                <a href="https://www.patreon.com/cw/GenevasTradingPost" target="_blank" style="display: inline-block; background: #f1c40f; color: #2c3e50; padding: 0.8rem 2rem; border-radius: 50px; font-weight: bold; text-decoration: none; font-size: 1.2rem; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">Read the Blog on Patreon </a>
-            </div>
-        </div>
-        
-        <!-- ===== UPDATED JAMS, JELLIES & SYRUPS (AUGUST 2026) ===== -->
-        <div class="full-width-card" style="margin-top: 2rem;">
-            <div class="section-title-banner" style="background: #6d4c41; border-radius: 10px 10px 0 0;">
-                <h2 style="color: #f5e6d3; margin: 0; letter-spacing: 2px;"> Jams, Jellies & Syrups</h2>
-            </div>
-            <div class="card-content" style="background: #8d6e63; padding: 2rem;">
-                <!-- Header image -->
-                <div style="text-align: center; margin-bottom: 1.5rem;">
-                    <img src="images/Jellies.jpg" alt="Assorted homemade jellies" style="max-width: 100%; max-height: 300px; border-radius: 16px; border: 3px solid #f5e6d3; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
-                </div>
-
-                <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 1.5rem; max-width: 1000px; margin: 0 auto;">
-
-                    <!-- Spruce Tip Syrup -->
-                    <div style="background: rgba(255,255,255,0.12); border-radius: 16px; padding: 1.2rem 1rem; text-align: center; border: 1px solid rgba(255,215,0,0.3);">
-                        <h4 style="color: #fff; margin: 0.4rem 0 0.2rem;">Spruce Tip Syrup</h4>
-                        <p style="color: #ffb3b3; font-size: 0.9rem; margin: 0.2rem 0;"><strong>Sold out until spring 2027</strong></p>
-                        <p style="color: #ffd966; font-size: 1rem;">4oz – $5 &nbsp;|&nbsp; 8oz – $9</p>
-                    </div>
-
-                    <!-- Wild Strawberry Jam -->
-                    <div style="background: rgba(255,255,255,0.12); border-radius: 16px; padding: 1.2rem 1rem; text-align: center; border: 1px solid rgba(255,215,0,0.3);">
-                        <h4 style="color: #fff; margin: 0.4rem 0 0.2rem;">Wild Strawberry Jam</h4>
-                        <p style="color: #ffd966; font-size: 1rem;">4oz – $8 &nbsp;|&nbsp; 8oz – $15</p>
-                    </div>
-
-                    <!-- Wild Blueberry Jam -->
-                    <div style="background: rgba(255,255,255,0.12); border-radius: 16px; padding: 1.2rem 1rem; text-align: center; border: 1px solid rgba(255,215,0,0.3);">
-                        <h4 style="color: #fff; margin: 0.4rem 0 0.2rem;">Wild Blueberry Jam</h4>
-                        <p style="color: #ffd966; font-size: 1rem;">4oz – $8 &nbsp;|&nbsp; 8oz – $15</p>
-                    </div>
-
-                    <!-- Wild Black Currant Syrup -->
-                    <div style="background: rgba(255,255,255,0.12); border-radius: 16px; padding: 1.2rem 1rem; text-align: center; border: 1px solid rgba(255,215,0,0.3);">
-                        <h4 style="color: #fff; margin: 0.4rem 0 0.2rem;">Wild Black Currant Syrup</h4>
-                        <p style="color: #ffd966; font-size: 1rem;">4oz – $8 &nbsp;|&nbsp; 8oz – $15</p>
-                    </div>
-
-                    <!-- Wild Nagoon Berry Jelly -->
-                    <div style="background: rgba(255,255,255,0.12); border-radius: 16px; padding: 1.2rem 1rem; text-align: center; border: 1px solid rgba(255,215,0,0.3);">
-                        <h4 style="color: #fff; margin: 0.4rem 0 0.2rem;">Wild Nagoon Berry Jelly</h4>
-                        <p style="color: #ffd966; font-size: 1rem;">4oz – $10 &nbsp;|&nbsp; 8oz – $18</p>
-                    </div>
-
-                    <!-- Wild Nagoon Berry Syrup -->
-                    <div style="background: rgba(255,255,255,0.12); border-radius: 16px; padding: 1.2rem 1rem; text-align: center; border: 1px solid rgba(255,215,0,0.3);">
-                        <h4 style="color: #fff; margin: 0.4rem 0 0.2rem;">Wild Nagoon Berry Syrup</h4>
-                        <p style="color: #ffd966; font-size: 1rem;">4oz – $10 &nbsp;|&nbsp; 8oz – $18</p>
-                    </div>
-
-                    <!-- Wild Strawberry‑Rhubarb Pie Filling -->
-                    <div style="background: rgba(255,255,255,0.12); border-radius: 16px; padding: 1.2rem 1rem; text-align: center; border: 1px solid rgba(255,215,0,0.3);">
-                        <h4 style="color: #fff; margin: 0.4rem 0 0.2rem;">Strawberry‑Rhubarb Pie Filling</h4>
-                        <p style="color: #ffd966; font-size: 1rem;">4oz – $7 &nbsp;|&nbsp; 8oz – $13</p>
-                    </div>
-
-                    <!-- Rhubarb Lemon Honey -->
-                    <div style="background: rgba(255,255,255,0.12); border-radius: 16px; padding: 1.2rem 1rem; text-align: center; border: 1px solid rgba(255,215,0,0.3);">
-                        <h4 style="color: #fff; margin: 0.4rem 0 0.2rem;">Rhubarb Lemon Honey</h4>
-                        <p style="color: #ffd966; font-size: 1rem;">4oz – $6 &nbsp;|&nbsp; 8oz – $11</p>
-                    </div>
-
-                    <!-- Fireweed Syrup -->
-                    <div style="background: rgba(255,255,255,0.12); border-radius: 16px; padding: 1.2rem 1rem; text-align: center; border: 1px solid rgba(255,215,0,0.3);">
-                        <h4 style="color: #fff; margin: 0.4rem 0 0.2rem;">Fireweed Syrup</h4>
-                        <p style="color: #ffd966; font-size: 1rem;">4oz – $5 &nbsp;|&nbsp; 8oz – $9</p>
-                    </div>
-
-                    <!-- Fireweed Jelly -->
-                    <div style="background: rgba(255,255,255,0.12); border-radius: 16px; padding: 1.2rem 1rem; text-align: center; border: 1px solid rgba(255,215,0,0.3);">
-                        <h4 style="color: #fff; margin: 0.4rem 0 0.2rem;">Fireweed Jelly</h4>
-                        <p style="color: #ffd966; font-size: 1rem;">4oz – $5 &nbsp;|&nbsp; 8oz – $9</p>
-                    </div>
-
-                </div>
-
-                <!-- NEW: Berry Gallery - Added 3 images elegantly -->
-                <div style="margin: 2rem 0 1rem 0;">
-                    <div class="gallery-caption">✨ Fresh from the wild — nagoonberries and blueberries</div>
-                    <div class="berry-gallery">
-                        <div class="berry-gallery-item">
-                            <img src="images/NagoonBerries2026.jpg" alt="Fresh nagoonberries in a bowl">
-                            <div class="berry-label">Nagoonberries</div>
-                        </div>
-                        <div class="berry-gallery-item">
-                            <img src="images/Berries2026.jpg" alt="Metal bowl of blueberries and green bowl of nagoonberries">
-                            <div class="berry-label">Blueberries &amp; Nagoonberries</div>
-                        </div>
-                        <div class="berry-gallery-item">
-                            <img src="images/Blueberries2026.jpg" alt="Close-up of blueberries">
-                            <div class="berry-label">Wild Blueberries</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Alaska‑only disclaimer -->
-                <div style="margin-top: 2rem; padding: 1rem; background: rgba(0,0,0,0.2); border-radius: 12px; border-left: 4px solid #f1c40f; max-width: 900px; margin-left: auto; margin-right: auto;">
-                    <p style="color: #f5e6d3; font-size: 0.95rem; text-align: center; margin: 0;">
-                        <strong style="color: #ffd966;">⚠️ For sale only in Alaska</strong> – these preserves are produced under Alaska's homestead food processing rules and are not available for shipment outside the state. (Other non‑preserve items on this site can ship nationally.)
-                    </p>
+                <div style="margin-top: 1.5rem;">
+                    <a href="https://www.patreon.com/cw/GenevasTradingPost" target="_blank" style="display: inline-block; background: #f1c40f; color: #2c3e50; padding: 0.8rem 2rem; border-radius: 50px; font-weight: bold; text-decoration: none; font-size: 1.2rem; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">Read the Blog on Patreon </a>
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- WORKSHOP SECTION (KEPT - with countdowns added) -->
-        <section class="workshop-section">
-            <h2>2026 Workshop Series</h2>
-          
-            <!-- Carrot Tasting 2026 Results Card -->
-            <div class="carrot-results-card">
-                <!-- Top image: 2026 community taste test -->
-                <figure style="margin:0 0 1rem 0;">
-                    <img src="images/CarrotTasting2026_1.jpg" alt="2026 Carrot Tasting community taste test" style="width:100%; border-radius:14px; border:4px solid #fff; box-shadow:0 6px 18px rgba(0,0,0,0.3);">
-                    <figcaption style="margin-top:0.4rem; font-size:0.9rem; font-weight:600; color:#fff8e1; text-shadow:0 1px 4px rgba(0,0,0,0.5);">2026 Carrot Tasting — community taste test in action</figcaption>
+    <!-- JAMS, JELLIES & SYRUPS -->
+    <div class="full-width-card" style="margin-top: 2rem;">
+        <div class="section-title-banner" style="background: #6d4c41; border-radius: 10px 10px 0 0;">
+            <h2 style="color: #f5e6d3; margin: 0; letter-spacing: 2px;"> Jams, Jellies & Syrups</h2>
+        </div>
+        <div class="card-content" style="background: #8d6e63; padding: 2rem;">
+            <div style="text-align: center; margin-bottom: 1.5rem;">
+                <img src="images/Jellies.jpg" alt="Assorted homemade jellies" style="max-width: 100%; max-height: 300px; border-radius: 16px; border: 3px solid #f5e6d3; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 1.5rem; max-width: 1000px; margin: 0 auto;">
+
+                <div style="background: rgba(255,255,255,0.12); border-radius: 16px; padding: 1.2rem 1rem; text-align: center; border: 1px solid rgba(255,215,0,0.3);">
+                    <h4 style="color: #fff; margin: 0.4rem 0 0.2rem;">Spruce Tip Syrup</h4>
+                    <p style="color: #ffb3b3; font-size: 0.9rem; margin: 0.2rem 0;"><strong>Sold out until spring 2027</strong></p>
+                    <p style="color: #ffd966; font-size: 1rem;">4oz – $5 &nbsp;|&nbsp; 8oz – $9</p>
+                </div>
+
+                <div style="background: rgba(255,255,255,0.12); border-radius: 16px; padding: 1.2rem 1rem; text-align: center; border: 1px solid rgba(255,215,0,0.3);">
+                    <h4 style="color: #fff; margin: 0.4rem 0 0.2rem;">Wild Strawberry Jam</h4>
+                    <p style="color: #ffd966; font-size: 1rem;">4oz – $8 &nbsp;|&nbsp; 8oz – $15</p>
+                </div>
+
+                <div style="background: rgba(255,255,255,0.12); border-radius: 16px; padding: 1.2rem 1rem; text-align: center; border: 1px solid rgba(255,215,0,0.3);">
+                    <h4 style="color: #fff; margin: 0.4rem 0 0.2rem;">Wild Blueberry Jam</h4>
+                    <p style="color: #ffd966; font-size: 1rem;">4oz – $8 &nbsp;|&nbsp; 8oz – $15</p>
+                </div>
+
+                <div style="background: rgba(255,255,255,0.12); border-radius: 16px; padding: 1.2rem 1rem; text-align: center; border: 1px solid rgba(255,215,0,0.3);">
+                    <h4 style="color: #fff; margin: 0.4rem 0 0.2rem;">Wild Black Currant Syrup</h4>
+                    <p style="color: #ffd966; font-size: 1rem;">4oz – $8 &nbsp;|&nbsp; 8oz – $15</p>
+                </div>
+
+                <div style="background: rgba(255,255,255,0.12); border-radius: 16px; padding: 1.2rem 1rem; text-align: center; border: 1px solid rgba(255,215,0,0.3);">
+                    <h4 style="color: #fff; margin: 0.4rem 0 0.2rem;">Wild Nagoon Berry Jelly</h4>
+                    <p style="color: #ffd966; font-size: 1rem;">4oz – $10 &nbsp;|&nbsp; 8oz – $18</p>
+                </div>
+
+                <div style="background: rgba(255,255,255,0.12); border-radius: 16px; padding: 1.2rem 1rem; text-align: center; border: 1px solid rgba(255,215,0,0.3);">
+                    <h4 style="color: #fff; margin: 0.4rem 0 0.2rem;">Wild Nagoon Berry Syrup</h4>
+                    <p style="color: #ffd966; font-size: 1rem;">4oz – $10 &nbsp;|&nbsp; 8oz – $18</p>
+                </div>
+
+                <div style="background: rgba(255,255,255,0.12); border-radius: 16px; padding: 1.2rem 1rem; text-align: center; border: 1px solid rgba(255,215,0,0.3);">
+                    <h4 style="color: #fff; margin: 0.4rem 0 0.2rem;">Strawberry‑Rhubarb Pie Filling</h4>
+                    <p style="color: #ffd966; font-size: 1rem;">4oz – $7 &nbsp;|&nbsp; 8oz – $13</p>
+                </div>
+
+                <div style="background: rgba(255,255,255,0.12); border-radius: 16px; padding: 1.2rem 1rem; text-align: center; border: 1px solid rgba(255,215,0,0.3);">
+                    <h4 style="color: #fff; margin: 0.4rem 0 0.2rem;">Rhubarb Lemon Honey</h4>
+                    <p style="color: #ffd966; font-size: 1rem;">4oz – $6 &nbsp;|&nbsp; 8oz – $11</p>
+                </div>
+
+                <div style="background: rgba(255,255,255,0.12); border-radius: 16px; padding: 1.2rem 1rem; text-align: center; border: 1px solid rgba(255,215,0,0.3);">
+                    <h4 style="color: #fff; margin: 0.4rem 0 0.2rem;">Fireweed Syrup</h4>
+                    <p style="color: #ffd966; font-size: 1rem;">4oz – $5 &nbsp;|&nbsp; 8oz – $9</p>
+                </div>
+
+                <div style="background: rgba(255,255,255,0.12); border-radius: 16px; padding: 1.2rem 1rem; text-align: center; border: 1px solid rgba(255,215,0,0.3);">
+                    <h4 style="color: #fff; margin: 0.4rem 0 0.2rem;">Fireweed Jelly</h4>
+                    <p style="color: #ffd966; font-size: 1rem;">4oz – $5 &nbsp;|&nbsp; 8oz – $9</p>
+                </div>
+
+            </div>
+
+            <div style="margin: 2rem 0 1rem 0;">
+                <div class="gallery-caption">✨ Fresh from the wild — nagoonberries and blueberries</div>
+                <div class="berry-gallery">
+                    <div class="berry-gallery-item">
+                        <img src="images/NagoonBerries2026.jpg" alt="Fresh nagoonberries in a bowl">
+                        <div class="berry-label">Nagoonberries</div>
+                    </div>
+                    <div class="berry-gallery-item">
+                        <img src="images/Berries2026.jpg" alt="Metal bowl of blueberries and green bowl of nagoonberries">
+                        <div class="berry-label">Blueberries &amp; Nagoonberries</div>
+                    </div>
+                    <div class="berry-gallery-item">
+                        <img src="images/Blueberries2026.jpg" alt="Close-up of blueberries">
+                        <div class="berry-label">Wild Blueberries</div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 2rem; padding: 1rem; background: rgba(0,0,0,0.2); border-radius: 12px; border-left: 4px solid #f1c40f; max-width: 900px; margin-left: auto; margin-right: auto;">
+                <p style="color: #f5e6d3; font-size: 0.95rem; text-align: center; margin: 0;">
+                    <strong style="color: #ffd966;">⚠️ For sale only in Alaska</strong> – these preserves are produced under Alaska's homestead food processing rules and are not available for shipment outside the state. (Other non‑preserve items on this site can ship nationally.)
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- WORKSHOP SECTION -->
+    <section class="workshop-section">
+        <h2>2026 Workshop Series</h2>
+      
+        <!-- Carrot Tasting 2026 Results Card -->
+        <div class="carrot-results-card">
+            <figure style="margin:0 0 1rem 0;">
+                <img src="images/CarrotTasting2026_1.jpg" alt="2026 Carrot Tasting community taste test" style="width:100%; border-radius:14px; border:4px solid #fff; box-shadow:0 6px 18px rgba(0,0,0,0.3);">
+                <figcaption style="margin-top:0.4rem; font-size:0.9rem; font-weight:600; color:#fff8e1; text-shadow:0 1px 4px rgba(0,0,0,0.5);">2026 Carrot Tasting — community taste test in action</figcaption>
+            </figure>
+
+            <h3>🥕 Carrot Tasting 2026 — Results Are In!</h3>
+            <p class="carrot-subhead">Thank you to everyone who joined us September 14 at the Gustavus Community Center. Eighteen varieties, lots of laughs, and plenty of crunchy data!</p>
+
+            <div class="carrot-2026-results">
+                <h4>2026 Results — 18 Varieties</h4>
+                <div class="scroll-area">
+                    <table>
+                        <thead>
+                            <tr><th>Rank</th><th>Variety</th><th>Total</th><th>Score</th><th>Normalized</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr class="johnnys"><td>1</td><td>Mokum*</td><td>11</td><td>44</td><td>4.00</td></tr>
+                            <tr class="johnnys"><td>2</td><td>Gold Nugget*</td><td>11</td><td>37</td><td>3.36</td></tr>
+                            <tr class="johnnys"><td>3</td><td>Napoli*</td><td>12</td><td>37</td><td>3.08</td></tr>
+                            <tr class="control"><td>4</td><td>Little Fingers</td><td>12</td><td>37</td><td>3.08</td></tr>
+                            <tr class="johnnys"><td>5</td><td>Romance*</td><td>12</td><td>35</td><td>2.92</td></tr>
+                            <tr class="johnnys"><td>6</td><td>Rainbow*</td><td>11</td><td>32</td><td>2.91</td></tr>
+                            <tr class="johnnys"><td>7</td><td>Purple Elite*</td><td>11</td><td>28</td><td>2.55</td></tr>
+                            <tr class="control"><td>8</td><td>St. Valery</td><td>11</td><td>28</td><td>2.55</td></tr>
+                            <tr class="johnnys"><td>9</td><td>Candy F1*</td><td>12</td><td>29</td><td>2.42</td></tr>
+                            <tr class="johnnys"><td>10</td><td>Orange Fancy*</td><td>12</td><td>28</td><td>2.33</td></tr>
+                            <tr class="johnnys"><td>11</td><td>Sugarsnax 54*</td><td>12</td><td>27</td><td>2.25</td></tr>
+                            <tr class="johnnys"><td>12</td><td>Bolero*</td><td>12</td><td>27</td><td>2.25</td></tr>
+                            <tr class="johnnys"><td>13</td><td>Purple Dragon*</td><td>12</td><td>25</td><td>2.08</td></tr>
+                            <tr class="donation"><td>14</td><td>Cosmic Purple</td><td>11</td><td>20</td><td>1.82</td></tr>
+                            <tr class="johnnys"><td>15</td><td>Shin Kuroda*</td><td>12</td><td>20</td><td>1.67</td></tr>
+                            <tr class="donation"><td>16</td><td>Atomic Red</td><td>11</td><td>18</td><td>1.64</td></tr>
+                            <tr class="johnnys"><td>17</td><td>Deep Purple*</td><td>11</td><td>18</td><td>1.64</td></tr>
+                            <tr class="johnnys"><td>18</td><td>Rubypak*</td><td>11</td><td>12</td><td>1.09</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="carrot-legend">
+                    <span class="legend-item johnnys">* Johnny's Selected Seeds, sponsored by RurAL CAP Foundation</span>
+                    <span class="legend-item control">Controls: St. Valery &amp; Little Fingers</span>
+                    <span class="legend-item donation">Online supporter donations: Atomic Red &amp; Cosmic Purple</span>
+                </div>
+            </div>
+
+            <div class="carrot-image-row">
+                <figure>
+                    <img src="images/Carrot Tasting 2025.jpg" alt="2025 carrots">
+                    <figcaption>2025 carrots</figcaption>
                 </figure>
-
-                <h3>🥕 Carrot Tasting 2026 — Results Are In!</h3>
-                <p class="carrot-subhead">Thank you to everyone who joined us September 14 at the Gustavus Community Center. Eighteen varieties, lots of laughs, and plenty of crunchy data!</p>
-
-                <!-- 2026 results table with scrollbar for top 6 -->
-                <div class="carrot-2026-results">
-                    <h4>2026 Results — 18 Varieties</h4>
-                    <div style="max-height: 260px; overflow-y: auto; border-radius: 8px;">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Rank</th>
-                                    <th>Variety</th>
-                                    <th>Display #</th>
-                                    <th>0</th>
-                                    <th>1</th>
-                                    <th>2</th>
-                                    <th>3</th>
-                                    <th>4</th>
-                                    <th>5</th>
-                                    <th>Total</th>
-                                    <th>Score</th>
-                                    <th>Normalized</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="johnnys"><td>1</td><td>Mokum*</td><td>10</td><td>0</td><td>0</td><td>1</td><td>1</td><td>6</td><td>3</td><td>11</td><td>44</td><td>4.00</td></tr>
-                                <tr class="johnnys"><td>2</td><td>Gold Nugget*</td><td>18</td><td>0</td><td>1</td><td>1</td><td>4</td><td>3</td><td>2</td><td>11</td><td>37</td><td>3.36</td></tr>
-                                <tr class="johnnys"><td>3</td><td>Napoli*</td><td>1</td><td>0</td><td>0</td><td>3</td><td>5</td><td>4</td><td>0</td><td>12</td><td>37</td><td>3.08</td></tr>
-                                <tr class="control"><td>4</td><td>Little Fingers</td><td>7</td><td>0</td><td>0</td><td>4</td><td>3</td><td>5</td><td>0</td><td>12</td><td>37</td><td>3.08</td></tr>
-                                <tr class="johnnys"><td>5</td><td>Romance*</td><td>5</td><td>0</td><td>1</td><td>2</td><td>6</td><td>3</td><td>0</td><td>12</td><td>35</td><td>2.92</td></tr>
-                                <tr class="johnnys"><td>6</td><td>Rainbow*</td><td>14</td><td>0</td><td>3</td><td>1</td><td>2</td><td>4</td><td>1</td><td>11</td><td>32</td><td>2.91</td></tr>
-                                <tr class="johnnys"><td>7</td><td>Purple Elite*</td><td>11</td><td>0</td><td>2</td><td>3</td><td>4</td><td>2</td><td>0</td><td>11</td><td>28</td><td>2.55</td></tr>
-                                <tr class="control"><td>8</td><td>St. Valery</td><td>17</td><td>0</td><td>0</td><td>5</td><td>6</td><td>0</td><td>0</td><td>11</td><td>28</td><td>2.55</td></tr>
-                                <tr class="johnnys"><td>9</td><td>Candy F1*</td><td>4</td><td>0</td><td>2</td><td>4</td><td>5</td><td>1</td><td>0</td><td>12</td><td>29</td><td>2.42</td></tr>
-                                <tr class="johnnys"><td>10</td><td>Orange Fancy*</td><td>9</td><td>2</td><td>1</td><td>3</td><td>3</td><td>3</td><td>0</td><td>12</td><td>28</td><td>2.33</td></tr>
-                                <tr class="johnnys"><td>11</td><td>Sugarsnax 54*</td><td>2</td><td>0</td><td>3</td><td>4</td><td>4</td><td>1</td><td>0</td><td>12</td><td>27</td><td>2.25</td></tr>
-                                <tr class="johnnys"><td>12</td><td>Bolero*</td><td>3</td><td>0</td><td>3</td><td>3</td><td>6</td><td>0</td><td>0</td><td>12</td><td>27</td><td>2.25</td></tr>
-                                <tr class="johnnys"><td>13</td><td>Purple Dragon*</td><td>8</td><td>0</td><td>3</td><td>6</td><td>2</td><td>1</td><td>0</td><td>12</td><td>25</td><td>2.08</td></tr>
-                                <tr class="donation"><td>14</td><td>Cosmic Purple</td><td>15</td><td>2</td><td>3</td><td>2</td><td>3</td><td>1</td><td>0</td><td>11</td><td>20</td><td>1.82</td></tr>
-                                <tr class="johnnys"><td>15</td><td>Shin Kuroda*</td><td>6</td><td>1</td><td>5</td><td>4</td><td>1</td><td>1</td><td>0</td><td>12</td><td>20</td><td>1.67</td></tr>
-                                <tr class="donation"><td>16</td><td>Atomic Red</td><td>12</td><td>2</td><td>3</td><td>3</td><td>3</td><td>0</td><td>0</td><td>11</td><td>18</td><td>1.64</td></tr>
-                                <tr class="johnnys"><td>17</td><td>Deep Purple*</td><td>16</td><td>2</td><td>3</td><td>4</td><td>1</td><td>1</td><td>0</td><td>11</td><td>18</td><td>1.64</td></tr>
-                                <tr class="johnnys"><td>18</td><td>Rubypak*</td><td>13</td><td>3</td><td>5</td><td>2</td><td>1</td><td>0</td><td>0</td><td>11</td><td>12</td><td>1.09</td></tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="carrot-legend">
-                        <span class="legend-item johnnys">* Johnny's Selected Seeds, sponsored by RurAL CAP Foundation</span>
-                        <span class="legend-item control">Controls: St. Valery &amp; Little Fingers</span>
-                        <span class="legend-item donation">Online supporter donations: Atomic Red &amp; Cosmic Purple</span>
-                    </div>
+                <div class="carrot-button-stack">
+                    <button class="pdf-btn" onclick="openPrintWindow('print2024')">📄 Printable 2024 Results</button>
+                    <button class="pdf-btn" onclick="openPrintWindow('print2025')">📄 Printable 2025 Results</button>
+                    <button class="pdf-btn" onclick="openPrintWindow('print2026')">📄 Printable 2026 Results</button>
                 </div>
-
-                <!-- Two images with buttons between -->
-                <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:1rem; margin:1.5rem 0;">
-                    <figure style="flex:1; min-width:200px; margin:0;">
-                        <img src="images/Carrot Tasting 2025.jpg" alt="2025 carrots" style="width:100%; border-radius:14px; border:4px solid #fff; box-shadow:0 6px 18px rgba(0,0,0,0.3);">
-                        <figcaption style="margin-top:0.4rem; font-size:0.9rem; font-weight:600; color:#fff8e1; text-shadow:0 1px 4px rgba(0,0,0,0.5);">2025 carrots</figcaption>
-                    </figure>
-                    <div style="display:flex; flex-direction:column; gap:0.5rem;">
-                        <button class="pdf-btn" onclick="openPrintWindow('print2024')">📄 Printable 2024 Results</button>
-                        <button class="pdf-btn" onclick="openPrintWindow('print2025')">📄 Printable 2025 Results</button>
-                    </div>
-                    <figure style="flex:1; min-width:200px; margin:0;">
-                        <img src="images/CarrotTasting2026_2.jpg" alt="Geneva and husband with carrots" style="width:100%; border-radius:14px; border:4px solid #fff; box-shadow:0 6px 18px rgba(0,0,0,0.3);">
-                        <figcaption style="margin-top:0.4rem; font-size:0.9rem; font-weight:600; color:#fff8e1; text-shadow:0 1px 4px rgba(0,0,0,0.5);">2026 — Geneva & husband with the harvest</figcaption>
-                    </figure>
-                </div>
-
-                <div class="carrot-cta">
-                    <strong>Join the fun in 2027!</strong> Have a carrot variety you'd like us to grow and taste next year? <a href="contact.html">Send us your recommendation</a> — we'd love to hear from you.
-                </div>
+                <figure>
+                    <img src="images/CarrotTasting2026_2.jpg" alt="Geneva and husband with carrots">
+                    <figcaption>2026 — Geneva &amp; husband with the harvest</figcaption>
+                </figure>
             </div>
-            
-            <div class="harvest-workshop"><div class="workshop-image"><img src="images/WinningBasketHarvestFestival2025.jpg" alt="Winning Basket"><img src="images/FINAL library logo transparent.png" alt="Library Logo" class="library-logo"></div><div class="workshop-details"><h3>Rabbit & Poultry Show <span class="free-tag">FREE</span></h3><span class="workshop-date"> Saturday, September 19, 2026 · Gustavus Community Center (Outdoor Barn Tent)</span><div class="countdown-box">⏳ <span id="rabbitDays">14</span> days until Rabbit & Poultry Show!</div><div class="show-schedule"><strong> Show Schedule:</strong><br> Drop-off & Health Check: 8:00 – 9:00 AM<br> Judging: 10:00 – 11:00 AM<br> Showmanship: 11:00 AM – 1:00 PM<br> Cage Decor Setup: 8:00 – 10:00 AM<br> Chicken & Rabbit Race: 1:00 PM<br><br><strong> The show runs concurrently with the Harvest Festival in the outdoor tent.</strong><br><strong> Important Rules:</strong> Pregnant or sick animals will be turned away at health check. Borrow a show cage from the library (16 available, 2 per person guaranteed).</div><p><strong>To register live animals (by Sept 17, 5pm):</strong> Contact Geneva Mottet — early registration helps us arrange cages for critter comfort.</p><a href="mailto:gjmottet@alaska.edu?subject=Rabbit%20%26%20Poultry%20Show%20Registration" class="email-btn"> Register Animals Now</a><div class="register-highlight"><strong> Show Cages Available:</strong> 16 show cages provided. If you have your own cage, we can accept additional critters beyond that!</div><a href="https://gjmottet.github.io/gustavus-harvest-festival/" target="_blank" class="festival-btn"> Visit Gustavus Harvest Festival Website →</a></div></div>
-            <div class="grant-note"><p><strong>Community Support:</strong> This workshop series receives financial support from the RurAL CAP Foundation. <strong>All workshops are free and open to the public!</strong></p></div>
-        </section>
-        
-        <!-- - Quail Section (KEPT UNCHANGED) -->
-        <section class="quail-section">
-            <div class="quail-tan-banner">
-                <div class="overlay">
-                    <h2>We Have Coturnix Quail!</h2>
-                    <p>Our flock restarted in Gustavus with hatching eggs — eggs available starting in June</p>
-                </div>
-            </div>
-            <div class="quail-grid">
-                <div class="quail-card">
-                    <div class="quail-image-container">
-                        <img src="images/QuailEggs.jpg" alt="Fresh Quail Eggs">
-                    </div>
-                    <h3>Fresh Quail Eggs</h3>
-                    <div style="background: #e74c3c; color: white; padding: 0.6rem 1.5rem; border-radius: 30px; font-size: 1.3rem; font-weight: bold; margin: 0.5rem 0; display: inline-block;">$10/dozen</div>
-                    <p>Fertile eggs - perfect for eating or hatching. Some eggs have rare celadon genetics for possible blue egg layers!</p>
-                    <p><strong>Available in Gustavus:</strong> Eggs available starting June 2026</p>
-                    <span class="availability-tag">June Availability</span>
-                </div>
-                <div class="quail-card">
-                    <div class="quail-image-container">
-                        <img src="images/Quail1.jpg" alt="Coturnix Quail">
-                    </div>
-                    <h3>Quail Chicks & Adults</h3>
-                    <p>We have about 30 Coturnix Quail.</p>
-                    <div class="feather-offer">
-                        <strong> Quail Feathers for Fly Tying</strong>
-                        <p>Assorted Coturnix feathers — many colors. Perfect for salmon and Dolly Varden flies.</p>
-                        <span class="feather-price">$3 per card (15+ feathers)</span>
-                        <div class="impulse-card">
-                            <span> Bulk bag:</span> 40-50 feathers for $6 — great value for serious tyers
-                        </div>
-                    </div>
-                </div>
-            </div>
-        
-                                       
-<!-- - Quail Slideshow (KEPT UNCHANGED) -->
-          <div class="quail-slideshow-wrapper">
-                <div class="slideshow-container" id="quailSlideshowNew">
-                    <div class="quailSlide"><img src="images/QuailChicksIncubator.jpg" style="width:100%"><div class="caption-text"> Our Gustavus flock restarted with hatching eggs April 20</div></div>
-                    <div class="quailSlide"><img src="images/QuailDotWith4DayOldChicks.jpg" style="width:100%"><div class="caption-text">Dot protecting her 4 day old chicks, dice in the water dish keep chicks from swimming in the water dish.</div></div>
-                    <div class="quailSlide"><img src="images/QuailMarshmellowMama2WeeksOld2026.jpg" style="width:100%"><div class="caption-text">Marshmellow trying to parent 34 2 week old chicks.</div></div>
-                    <div class="quailSlide"><img src="images/QuailFeedingFrenzy.jpg" style="width:100%"><div class="caption-text">Marshmellow with 4 week old chicks getting a handful of mealworms.</div></div>
-                    <div class="quailSlide"><img src="images/QuailRooster.jpg" style="width:100%; object-fit: contain; max-height: 500px; background: #2c5e1a;"><div class="caption-text">Our male quail looking quite pathetic – but don't let the drama fool you, they have the derpiest song on the homestead.</div></div>
-                    <a class="prev" onclick="changeQuailSlide(-1)">&#10094;</a>
-                    <a class="next" onclick="changeQuailSlide(1)">&#10095;</a>
-                </div>
-                <div class="dot-group" id="quailDotsNew"></div>
-            </div>
-        </section>
 
-        <!-- Moved Strawberry Card here -->
-        <div class="strawberry-header-card">
-            <div class="strawberry-content">
-                <h3> Strawberries – Last Chance for 2026!</h3>
-                <div class="strawberry-price">$3.50 each • 3 for $10</div>
-                <div class="strawberry-inline-image"><img src="images/Strawberry.jpg" alt="Fresh Strawberries"></div>
-                <div class="strawberry-varieties"><p><strong>Two domestic varieties available:</strong></p><p> June-bearing • Everbearing</p><p><em>We're wrapping up the season – get your plants now before they're gone!</em></p></div>
+            <div class="carrot-cta">
+                <strong>Join the fun in 2027!</strong> Have a carrot variety you'd like us to grow and taste next year? <a href="contact.html">Send us your recommendation</a> — we'd love to hear from you.
             </div>
         </div>
         
-        <!-- Moved Rhubarb Card here -->
-        <div style="background: linear-gradient(135deg, #5a3e2b 0%, #7a5a3a 100%); border-radius: 28px; margin: 2rem auto; max-width: 1000px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; padding: 1.5rem;">
-            <div style="flex: 2; padding: 1rem; text-align: center; color: white;">
-                <h3 style="color: #ffdd99; font-size: 2rem; margin: 0 0 0.5rem;"> Gustavus Red Rhubarb</h3>
-                <div style="background: #b35f1a; display: inline-block; padding: 0.3rem 1.5rem; border-radius: 40px; font-weight: bold; font-size: 1.3rem; margin: 0.5rem 0; border: 1px solid #ffcd94;">Sold Out Until 2027</div>
-                <p>We're sold out for this year, but we're already taking orders for next spring when I split my plants. <strong>Reserve yours now for 2027!</strong></p>
-                <p style="margin-top: 0.5rem;"><a href="contact.html" style="color: #ffd966; text-decoration: underline;">Contact me to pre‑order</a></p>
+        <!-- Rabbit & Poultry Show -->
+        <div class="harvest-workshop">
+            <div class="workshop-image">
+                <img src="images/WinningBasketHarvestFestival2025.jpg" alt="Winning Basket">
+                <img src="images/FINAL library logo transparent.png" alt="Library Logo" class="library-logo">
             </div>
-            <div style="flex: 1; padding: 1rem; min-width: 180px; display: flex; justify-content: center;">
-                <img src="images/RuhbarbStart2026.jpg" alt="Rhubarb Start" style="max-width: 100%; height: auto; border-radius: 20px; max-height: 180px; object-fit: cover;">
+            <div class="workshop-details">
+                <h3>Rabbit &amp; Poultry Show <span class="free-tag">FREE</span></h3>
+                <span class="workshop-date"> Saturday, September 19, 2026 · Gustavus Community Center (Outdoor Barn Tent)</span>
+                <div class="countdown-box">⏳ <span id="rabbitDays">14</span> days until Rabbit &amp; Poultry Show!</div>
+                <div class="show-schedule">
+                    <strong>📋 FESTIVAL SCHEDULE &amp; ACTIVITIES</strong><br>
+                    8:00am–noon — Animal drop-off &amp; Animal Health Check-In, Set-up Cage Decor<br>
+                    noon–1:00pm — Vegetable drop-off (Can be dropped off early at animal tent)<br>
+                    noon–2:00pm — Animals, Cage Decor, and Animal Still Life Judging<br>
+                    noon — Animal Showmanship<br>
+                    12:45pm — Zucchini 500<br>
+                    1:00pm — Chicken &amp; Rabbit Race<br>
+                    1:00pm–2:00pm — Judging of Vegetables/Garden Classes<br>
+                    2:00pm — Awards Presentation: Class Ribbons, Special Rosettes, Best in Show<br>
+                    3:00pm — Festival Concludes
+                </div>
+                <p><strong>To register live animals (by Sept 17, 5pm):</strong> Contact Geneva Mottet — early registration helps us arrange cages for critter comfort.</p>
+                <a href="mailto:gjmottet@alaska.edu?subject=Rabbit%20%26%20Poultry%20Show%20Registration" class="email-btn"> Register Animals Now</a>
+                <div class="register-highlight"><strong> Show Cages Available:</strong> 16 show cages provided. If you have your own cage, we can accept additional critters beyond that!</div>
+                <a href="https://gjmottet.github.io/gustavus-harvest-festival/" target="_blank" class="festival-btn"> Visit Gustavus Harvest Festival Website →</a>
             </div>
         </div>
+        <div class="grant-note"><p><strong>Community Support:</strong> This workshop series receives financial support from the RurAL CAP Foundation. <strong>All workshops are free and open to the public!</strong></p></div>
+    </section>
+    
+    <!-- Quail Section -->
+    <section class="quail-section">
+        <div class="quail-tan-banner">
+            <div class="overlay">
+                <h2>We Have Coturnix Quail!</h2>
+                <p>Our flock restarted in Gustavus with hatching eggs — eggs available starting in June</p>
+            </div>
+        </div>
+        <div class="quail-grid">
+            <div class="quail-card">
+                <div class="quail-image-container">
+                    <img src="images/QuailEggs.jpg" alt="Fresh Quail Eggs">
+                </div>
+                <h3>Fresh Quail Eggs</h3>
+                <div style="background: #e74c3c; color: white; padding: 0.6rem 1.5rem; border-radius: 30px; font-size: 1.3rem; font-weight: bold; margin: 0.5rem 0; display: inline-block;">$10/dozen</div>
+                <p>Fertile eggs - perfect for eating or hatching. Some eggs have rare celadon genetics for possible blue egg layers!</p>
+                <p><strong>Available in Gustavus:</strong> Eggs available starting June 2026</p>
+                <span class="availability-tag">June Availability</span>
+            </div>
+            <div class="quail-card">
+                <div class="quail-image-container">
+                    <img src="images/Quail1.jpg" alt="Coturnix Quail">
+                </div>
+                <h3>Quail Chicks &amp; Adults</h3>
+                <p>We have about 30 Coturnix Quail.</p>
+                <div class="feather-offer">
+                    <strong> Quail Feathers for Fly Tying</strong>
+                    <p>Assorted Coturnix feathers — many colors. Perfect for salmon and Dolly Varden flies.</p>
+                    <span class="feather-price">$3 per card (15+ feathers)</span>
+                    <div class="impulse-card">
+                        <span> Bulk bag:</span> 40-50 feathers for $6 — great value for serious tyers
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="quail-slideshow-wrapper">
+            <div class="slideshow-container" id="quailSlideshowNew">
+                <div class="quailSlide"><img src="images/QuailChicksIncubator.jpg" style="width:100%"><div class="caption-text"> Our Gustavus flock restarted with hatching eggs April 20</div></div>
+                <div class="quailSlide"><img src="images/QuailDotWith4DayOldChicks.jpg" style="width:100%"><div class="caption-text">Dot protecting her 4 day old chicks, dice in the water dish keep chicks from swimming in the water dish.</div></div>
+                <div class="quailSlide"><img src="images/QuailMarshmellowMama2WeeksOld2026.jpg" style="width:100%"><div class="caption-text">Marshmellow trying to parent 34 2 week old chicks.</div></div>
+                <div class="quailSlide"><img src="images/QuailFeedingFrenzy.jpg" style="width:100%"><div class="caption-text">Marshmellow with 4 week old chicks getting a handful of mealworms.</div></div>
+                <div class="quailSlide"><img src="images/QuailRooster.jpg" style="width:100%; object-fit: contain; max-height: 500px; background: #2c5e1a;"><div class="caption-text">Our male quail looking quite pathetic – but don't let the drama fool you, they have the derpiest song on the homestead.</div></div>
+                <a class="prev" onclick="changeQuailSlide(-1)">&#10094;</a>
+                <a class="next" onclick="changeQuailSlide(1)">&#10095;</a>
+            </div>
+            <div class="dot-group" id="quailDotsNew"></div>
+        </div>
+    </section>
 
-        <div style="text-align: center; padding: 2rem;"><a href="index.html" class="back-btn">← Back to Home</a></div>
+    <!-- Moved Strawberry Card below Quail -->
+    <div class="strawberry-header-card">
+        <div class="strawberry-content">
+            <h3> Strawberries – Last Chance for 2026!</h3>
+            <div class="strawberry-price">$3.50 each • 3 for $10</div>
+            <div class="strawberry-inline-image"><img src="images/Strawberry.jpg" alt="Fresh Strawberries"></div>
+            <div class="strawberry-varieties"><p><strong>Two domestic varieties available:</strong></p><p> June-bearing • Everbearing</p><p><em>We're wrapping up the season – get your plants now before they're gone!</em></p></div>
+        </div>
+    </div>
+    
+    <!-- Moved Rhubarb Card below Quail -->
+    <div style="background: linear-gradient(135deg, #5a3e2b 0%, #7a5a3a 100%); border-radius: 28px; margin: 2rem auto; max-width: 1000px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; padding: 1.5rem;">
+        <div style="flex: 2; padding: 1rem; text-align: center; color: white;">
+            <h3 style="color: #ffdd99; font-size: 2rem; margin: 0 0 0.5rem;"> Gustavus Red Rhubarb</h3>
+            <div style="background: #b35f1a; display: inline-block; padding: 0.3rem 1.5rem; border-radius: 40px; font-weight: bold; font-size: 1.3rem; margin: 0.5rem 0; border: 1px solid #ffcd94;">Sold Out Until 2027</div>
+            <p>We're sold out for this year, but we're already taking orders for next spring when I split my plants. <strong>Reserve yours now for 2027!</strong></p>
+            <p style="margin-top: 0.5rem;"><a href="contact.html" style="color: #ffd966; text-decoration: underline;">Contact me to pre‑order</a></p>
+        </div>
+        <div style="flex: 1; padding: 1rem; min-width: 180px; display: flex; justify-content: center;">
+            <img src="images/RuhbarbStart2026.jpg" alt="Rhubarb Start" style="max-width: 100%; height: auto; border-radius: 20px; max-height: 180px; object-fit: cover;">
+        </div>
+    </div>
+
+    <div style="text-align: center; padding: 2rem;"><a href="index.html" class="back-btn">← Back to Home</a></div>
     </main>
     
     <footer>
@@ -1699,7 +1557,7 @@
         <p>Supporting local food sovereignty through education and community resources</p>
     </footer>
 
-    <!-- Hidden printable tables for 2024 and 2025 -->
+    <!-- Hidden printable tables for 2024, 2025, and 2026 -->
     <div id="print2024" style="display:none;">
         <h2>Carrot Tasting Results 2024</h2>
         <table border="1" cellpadding="5" cellspacing="0">
@@ -1747,6 +1605,36 @@
             </tbody>
         </table>
     </div>
+    <div id="print2026" style="display:none;">
+        <h2>Carrot Tasting Results 2026</h2>
+        <table border="1" cellpadding="5" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>Rank</th><th>Variety</th><th>Display #</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>Total</th><th>Score</th><th>Normalized</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>1</td><td>Mokum*</td><td>10</td><td>0</td><td>0</td><td>1</td><td>1</td><td>6</td><td>3</td><td>11</td><td>44</td><td>4.00</td></tr>
+                <tr><td>2</td><td>Gold Nugget*</td><td>18</td><td>0</td><td>1</td><td>1</td><td>4</td><td>3</td><td>2</td><td>11</td><td>37</td><td>3.36</td></tr>
+                <tr><td>3</td><td>Napoli*</td><td>1</td><td>0</td><td>0</td><td>3</td><td>5</td><td>4</td><td>0</td><td>12</td><td>37</td><td>3.08</td></tr>
+                <tr><td>4</td><td>Little Fingers</td><td>7</td><td>0</td><td>0</td><td>4</td><td>3</td><td>5</td><td>0</td><td>12</td><td>37</td><td>3.08</td></tr>
+                <tr><td>5</td><td>Romance*</td><td>5</td><td>0</td><td>1</td><td>2</td><td>6</td><td>3</td><td>0</td><td>12</td><td>35</td><td>2.92</td></tr>
+                <tr><td>6</td><td>Rainbow*</td><td>14</td><td>0</td><td>3</td><td>1</td><td>2</td><td>4</td><td>1</td><td>11</td><td>32</td><td>2.91</td></tr>
+                <tr><td>7</td><td>Purple Elite*</td><td>11</td><td>0</td><td>2</td><td>3</td><td>4</td><td>2</td><td>0</td><td>11</td><td>28</td><td>2.55</td></tr>
+                <tr><td>8</td><td>St. Valery</td><td>17</td><td>0</td><td>0</td><td>5</td><td>6</td><td>0</td><td>0</td><td>11</td><td>28</td><td>2.55</td></tr>
+                <tr><td>9</td><td>Candy F1*</td><td>4</td><td>0</td><td>2</td><td>4</td><td>5</td><td>1</td><td>0</td><td>12</td><td>29</td><td>2.42</td></tr>
+                <tr><td>10</td><td>Orange Fancy*</td><td>9</td><td>2</td><td>1</td><td>3</td><td>3</td><td>3</td><td>0</td><td>12</td><td>28</td><td>2.33</td></tr>
+                <tr><td>11</td><td>Sugarsnax 54*</td><td>2</td><td>0</td><td>3</td><td>4</td><td>4</td><td>1</td><td>0</td><td>12</td><td>27</td><td>2.25</td></tr>
+                <tr><td>12</td><td>Bolero*</td><td>3</td><td>0</td><td>3</td><td>3</td><td>6</td><td>0</td><td>0</td><td>12</td><td>27</td><td>2.25</td></tr>
+                <tr><td>13</td><td>Purple Dragon*</td><td>8</td><td>0</td><td>3</td><td>6</td><td>2</td><td>1</td><td>0</td><td>12</td><td>25</td><td>2.08</td></tr>
+                <tr><td>14</td><td>Cosmic Purple</td><td>15</td><td>2</td><td>3</td><td>2</td><td>3</td><td>1</td><td>0</td><td>11</td><td>20</td><td>1.82</td></tr>
+                <tr><td>15</td><td>Shin Kuroda*</td><td>6</td><td>1</td><td>5</td><td>4</td><td>1</td><td>1</td><td>0</td><td>12</td><td>20</td><td>1.67</td></tr>
+                <tr><td>16</td><td>Atomic Red</td><td>12</td><td>2</td><td>3</td><td>3</td><td>3</td><td>0</td><td>0</td><td>11</td><td>18</td><td>1.64</td></tr>
+                <tr><td>17</td><td>Deep Purple*</td><td>16</td><td>2</td><td>3</td><td>4</td><td>1</td><td>1</td><td>0</td><td>11</td><td>18</td><td>1.64</td></tr>
+                <tr><td>18</td><td>Rubypak*</td><td>13</td><td>3</td><td>5</td><td>2</td><td>1</td><td>0</td><td>0</td><td>11</td><td>12</td><td>1.09</td></tr>
+            </tbody>
+        </table>
+    </div>
 
     <script>
         // Open a print window with the given table HTML
@@ -1760,11 +1648,10 @@
             printWindow.document.write('</body></html>');
             printWindow.document.close();
             printWindow.focus();
-            // Delay print slightly to ensure content is loaded
             setTimeout(function() { printWindow.print(); }, 250);
         }
 
-        // Independent Quail Slideshow (KEPT UNCHANGED)
+        // Quail Slideshow
         var quailSlideIndex = 1;
         var quailSlidesNew = document.querySelectorAll('#quailSlideshowNew .quailSlide');
         var quailDotsNew = document.getElementById('quailDotsNew');
@@ -1789,7 +1676,6 @@
             showQuailSlides(quailSlideIndex += n);
         }
         
-        // Build dots for quail
         if (quailDotsNew) {
             quailDotsNew.innerHTML = '';
             for (var i = 0; i < quailSlidesNew.length; i++) {
@@ -1806,15 +1692,13 @@
             }
         }
         
-        // Initialize
         showQuailSlides(1);
 
-        // ===== COUNTDOWN TIMERS =====
+        // Countdown Timers
         function updateCountdowns() {
             var now = new Date();
             var today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
             
-            // Rabbit Show: Sept 19, 2026
             var rabbitDate = new Date(2026, 8, 19);
             var rabbitDiff = Math.ceil((rabbitDate - today) / (1000 * 60 * 60 * 24));
             
@@ -1824,12 +1708,10 @@
             });
         }
         
-        // Run once on page load
         updateCountdowns();
-        // Update daily
-        setInterval(updateCountdowns, 86400000); // 24 hours
+        setInterval(updateCountdowns, 86400000);
 
-        // Independent Harvest Slideshow
+        // Harvest Slideshow
         var harvestSlideIndex = 1;
         var harvestSlides = document.querySelectorAll('#harvestSlideshow .harvestSlide');
         var harvestDotsContainer = document.getElementById('harvestDots');
@@ -1854,7 +1736,6 @@
             showHarvestSlides(harvestSlideIndex += n);
         }
         
-        // Build dots for harvest slideshow
         if (harvestDotsContainer) {
             harvestDotsContainer.innerHTML = '';
             for (var i = 0; i < harvestSlides.length; i++) {
@@ -1871,7 +1752,6 @@
             }
         }
         
-        // Initialize
         showHarvestSlides(1);
     </script>
 </body>
