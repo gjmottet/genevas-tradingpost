@@ -1143,6 +1143,162 @@
             opacity: 0.9;
         }
         
+        /* ===== Carrot Tasting Results Card ===== */
+        .carrot-results-card {
+            background: linear-gradient(135deg, #f39c12 0%, #e67e22 55%, #d35400 100%);
+            border-radius: 28px;
+            margin: 2rem auto 3rem;
+            max-width: 1000px;
+            padding: 2rem 2rem 2.5rem;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+            border: 4px solid #ffd966;
+            color: #fff;
+            text-align: center;
+        }
+        .carrot-results-card h3 {
+            font-size: 2.4rem;
+            margin: 0 0 0.5rem;
+            color: #fff8e1;
+            text-shadow: 0 3px 8px rgba(0,0,0,0.4);
+            letter-spacing: 1px;
+        }
+        .carrot-results-card .carrot-subhead {
+            font-size: 1.2rem;
+            margin: 0 0 1.5rem;
+            opacity: 0.95;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.4);
+        }
+        .carrot-collage {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr 1fr;
+            grid-template-areas:
+                "tall square ."
+                "long long long";
+            gap: 1rem;
+            align-items: center;
+            margin: 1.5rem 0;
+        }
+        .carrot-collage figure {
+            margin: 0;
+            text-align: center;
+        }
+        .carrot-img-tall { grid-area: tall; }
+        .carrot-img-square { grid-area: square; }
+        .carrot-img-long { grid-area: long; }
+        .carrot-collage img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 14px;
+            border: 4px solid #fff;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+            background: #fff;
+        }
+        .carrot-collage figcaption {
+            margin-top: 0.4rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #fff8e1;
+            text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+        }
+        .carrot-pdf-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        .pdf-btn {
+            display: inline-block;
+            background: #fff;
+            color: #d35400;
+            text-decoration: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 800;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+            transition: all 0.2s ease;
+            border: 2px solid #ffd966;
+        }
+        .pdf-btn:hover {
+            background: #ffd966;
+            color: #8b3e00;
+            transform: translateY(-2px);
+        }
+        .carrot-2026-results {
+            background: rgba(255,255,255,0.96);
+            color: #2c3e50;
+            border-radius: 18px;
+            padding: 1rem;
+            margin: 1.5rem 0 0;
+            overflow-x: auto;
+            box-shadow: inset 0 0 0 2px #ffd966;
+        }
+        .carrot-2026-results h4 {
+            color: #d35400;
+            font-size: 1.5rem;
+            margin: 0 0 0.75rem;
+            text-align: center;
+        }
+        .carrot-2026-results table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.82rem;
+            min-width: 720px;
+        }
+        .carrot-2026-results th {
+            background: #f1c40f;
+            color: #2c3e50;
+            padding: 0.55rem 0.4rem;
+            border-bottom: 2px solid #d35400;
+            position: sticky;
+            top: 0;
+            z-index: 2;
+        }
+        .carrot-2026-results td {
+            padding: 0.45rem 0.4rem;
+            border-bottom: 1px solid #e0e0e0;
+            text-align: center;
+        }
+        .carrot-2026-results td:nth-child(2),
+        .carrot-2026-results th:nth-child(2) {
+            text-align: left;
+        }
+        .carrot-2026-results tr.johnnys { background: #fff3cd; }
+        .carrot-2026-results tr.control { background: #d6eaf8; }
+        .carrot-2026-results tr.donation { background: #f4ecf7; }
+        .carrot-legend {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.5rem;
+            margin: 0.75rem 0 0;
+            font-size: 0.8rem;
+        }
+        .legend-item {
+            display: inline-block;
+            padding: 0.25rem 0.7rem;
+            border-radius: 20px;
+            font-weight: 700;
+        }
+        .legend-item.johnnys { background: #fff3cd; color: #7a5c00; }
+        .legend-item.control { background: #d6eaf8; color: #1a5276; }
+        .legend-item.donation { background: #f4ecf7; color: #6c3483; }
+        .carrot-cta {
+            background: rgba(0,0,0,0.22);
+            border-left: 5px solid #ffd966;
+            padding: 1rem 1.2rem;
+            border-radius: 14px;
+            margin-top: 1.5rem;
+            text-align: center;
+            font-size: 1.05rem;
+        }
+        .carrot-cta a {
+            color: #fff8e1;
+            font-weight: 800;
+            text-decoration: underline;
+        }
+        
         @media (max-width: 768px) {
             .farm-header h1 { font-size: 2.5rem; }
             .farm-header p { font-size: 1.2rem; }
@@ -1170,6 +1326,16 @@
             .countdown-box, .countdown-btn-carrot, .countdown-btn-rabbit { font-size: 1.1rem; padding: 0.5rem 1.2rem; }
             .countdown-btn-carrot span, .countdown-btn-rabbit span { font-size: 1.3rem; }
             .countdown-button-container { gap: 0.3rem; }
+            .carrot-collage {
+                grid-template-columns: 1fr;
+                grid-template-areas:
+                    "tall"
+                    "square"
+                    "long";
+            }
+            .carrot-results-card { padding: 1.2rem; }
+            .carrot-results-card h3 { font-size: 1.8rem; }
+            .carrot-2026-results table { min-width: 600px; }
         }
         
         @media (max-width: 480px) {
@@ -1210,7 +1376,7 @@
                 <div class="harvestSlide"><img src="images/Jellies.jpg" style="width:100%"><div class="caption-text">Jelly lineup – nagoon, black currant, blueberry, and more!</div></div>
                 <div class="harvestSlide"><img src="images/Garlic.jpg" style="width:100%"><div class="caption-text">Garlic braids drying – saving the 4 biggest heads for replanting.</div></div>
                 <div class="harvestSlide"><img src="images/SquashPlusGreenhouse.jpg" style="width:100%"><div class="caption-text">Squash and greenhouse – despite the slug setback, we're getting plenty.</div></div>
-                <div class="harvestSlide"><img src="images/Carrots2026.jpg" style="width:100%"><div class="caption-text">Carrots are booming! Join us Sept 14 at the community center to taste all 18 varieties.</div></div>
+                <div class="harvestSlide"><img src="images/Carrots2026.jpg" style="width:100%"><div class="caption-text">Carrots were booming! We tasted all 18 varieties at the Sept 14 Carrot Tasting — see the results and photos below.</div></div>
                 <div class="harvestSlide"><img src="images/SunflowervsPeas2026.jpg" style="width:100%"><div class="caption-text">Sunflowers vs. peas – they loved that rabbit-poop fertilizer!</div></div>
                 <div class="harvestSlide"><img src="images/Lettuce2026.jpg" style="width:100%"><div class="caption-text">Happy little lettuce – thriving even in small containers.</div></div>
                 <a class="prev" onclick="changeHarvestSlide(-1)">&#10094;</a>
@@ -1221,15 +1387,13 @@
         
         <!-- UPCOMING EVENT CARD - with BOLD COUNTDOWN BUTTONS -->
         <div class="upcoming-event-card">
-            <h2>🌱 Upcoming Event: Cultivating Food Sovereignty for Gustavus</h2>
-            <p><strong>Carrot Tasting #3</strong> – September 14, 2026</p>
-            <p class="event-detail">5:30–8:00 PM · Gustavus Community Center</p>
+            <h2>🌱 Upcoming Event: Rabbit & Poultry Show</h2>
             <p><strong>Rabbit & Poultry Show</strong> – September 19, 2026</p>
             <p class="event-detail">10:00 AM – 1:00 PM · Gustavus Community Center (Outdoor Barn Tent)</p>
+            <p class="event-detail">Carrot Tasting 2026 is complete — see the results and photos below.</p>
             
             <!-- COUNTDOWN BUTTONS - on their own layer with z-index to appear OVER the overlay -->
             <div class="countdown-button-container">
-                <div class="countdown-btn-carrot">🥕 Carrot Tasting: <span id="carrotDaysTop">9</span> days away</div>
                 <div class="countdown-btn-rabbit">🐇 Rabbit Show: <span id="rabbitDaysTop">14</span> days away</div>
             </div>
         </div>
@@ -1390,44 +1554,82 @@
         <section class="workshop-section">
             <h2>2026 Workshop Series</h2>
           
-            <div class="carrot-workshop"><div class="workshop-image"><img src="images/Carrot Tasting 2025.jpg" alt="Carrot Tasting 2025"><img src="images/FINAL library logo transparent.png" alt="Library Logo" class="library-logo"></div><div class="carrot-data"><h3>Carrot Tasting <span class="free-tag">FREE</span></h3><span class="workshop-date"> September 14, 2026 · 5:30–8:00 PM · Gustavus Community Center</span><div class="countdown-box">⏳ <span id="carrotDays">9</span> days until Carrot Tasting!</div><p>The carrots were planted <strong>May 7</strong>. There are <strong>18 varieties</strong> this year!</p><p><strong>Varieties:</strong> Bolero, Candy, Orange Fancy, Napoli, Mokum, Romance, Shin Kuroda, Sugarsnax 54, Rubypak, Deep Purple, Purple Elite, Dragon, Gold Nugget, Rainbow (donated by Rural CAP Foundation from Johnny's Selected Seeds), Atomic Red and Cosmic Purple (donated by an online follower), St. Valery and Little Fingers (leftover from last year, used as controls).</p><p><em> Will update photos as they grow, so check back!</em></p><div class="seed-bank-note"><strong> Seed Bank Update:</strong> <strong>Bolero</strong> and <strong>Purple Dragon</strong> carrot seeds are now available at the free Gustavus Library Seed Bank — pick them up for your garden!</div></div><div class="carrot-charts"><div class="charts-full-width"><div class="tasting-tables"><div class="tasting-table"><h4>2025 Results - 17 Varieties</h4><table><thead><tr><th>Rank</th><th>Variety</th><th>Total</th><th>Score</th><th>Norm</th></tr></thead><tbody><tr class="rank-1"><td>1</td><td>Royal Chantenay</td><td>24</td><td>94</td><td>3.92</td></tr>
-<tr class="rank-2"><td>2</td><td>St. Valery</td><td>25</td><td>95</td><td>3.80</td></tr>
-<tr class="rank-3"><td>3</td><td>Purple Dragon</td><td>23</td><td>82</td><td>3.57</td></tr>
-<tr><td>4</td><td>Gniff</td><td>24</td><td>84</td><td>3.50</td></tr>
-<tr><td>5</td><td>Little Fingers</td><td>25</td><td>87</td><td>3.48</td></tr>
-<tr><td>6</td><td>Bolero Nantes</td><td>24</td><td>79</td><td>3.29</td></tr>
-<tr><td>7</td><td>Oxheart</td><td>26</td><td>79</td><td>3.04</td></tr>
-<tr><td>8</td><td>Giant Red</td><td>25</td><td>74</td><td>2.96</td></tr>
-<tr><td>9</td><td>Chantenay Red Core</td><td>24</td><td>75</td><td>3.13</td></tr>
-<tr><td>10</td><td>Bambino</td><td>22</td><td>60</td><td>2.73</td></tr>
-<tr><td>11</td><td>Imperator 58</td><td>25</td><td>62</td><td>2.48</td></tr>
-<tr><td>12</td><td>Seedra Scarlet Nantes</td><td>24</td><td>56</td><td>2.33</td></tr>
-<tr><td>13</td><td>Scarlet Nantes</td><td>26</td><td>52</td><td>2.00</td></tr>
-<tr><td>14</td><td>Lunar White</td><td>25</td><td>48</td><td>1.92</td></tr>
-<tr><td>15</td><td>Solar Yellow</td><td>22</td><td>41</td><td>1.86</td></tr>
-<tr><td>16</td><td>Black Nebula</td><td>26</td><td>48</td><td>1.85</td></tr>
-<tr><td>17</td><td>Pusa Asita Black</td><td>24</td><td>36</td><td>1.50</td></tr>
-</tbody>
-</table>
-</div>
-<div class="tasting-table">
-<h4>2024 Results - 6 Varieties</h4>
-<table>
-<thead><tr><th>Rank</th><th>Variety</th><th>Total</th><th>Score</th><th>Norm</th></tr></thead>
-<tbody>
-<tr class="rank-1"><td>1</td><td>Royal Chantenay</td><td>10</td><td>41</td><td>4.10</td></tr>
-<tr class="rank-2"><td>2</td><td>Bolero Nantes</td><td>10</td><td>31</td><td>3.10</td></tr>
-<tr class="rank-3"><td>3</td><td>Bambino</td><td>10</td><td>31</td><td>3.10</td></tr>
-<tr><td>4</td><td>Scarlet Nantes</td><td>11</td><td>33</td><td>3.00</td></tr>
-<tr><td>5</td><td>Yellow</td><td>10</td><td>30</td><td>3.00</td></tr>
-<tr><td>6</td><td>Imperator 58</td><td>10</td><td>29</td><td>2.90</td></tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-</div>
-</div>
+            <!-- Carrot Tasting 2026 Results Card -->
+            <div class="carrot-results-card">
+                <h3>🥕 Carrot Tasting 2026 — Results Are In!</h3>
+                <p class="carrot-subhead">Thank you to everyone who joined us September 14 at the Gustavus Community Center. Eighteen varieties, lots of laughs, and plenty of crunchy data!</p>
+
+                <div class="carrot-collage">
+                    <figure class="carrot-img-tall">
+                        <img src="images/Carrot Tasting 2025.jpg" alt="2025 carrots at the Carrot Tasting">
+                        <figcaption>2025 carrots</figcaption>
+                    </figure>
+                    <figure class="carrot-img-square">
+                        <img src="images/CarrotTasting2026_2.jpg" alt="Geneva and her husband with carrots at the end of the 2026 Carrot Tasting">
+                        <figcaption>2026 — Geneva &amp; husband with the harvest</figcaption>
+                    </figure>
+                    <figure class="carrot-img-long">
+                        <img src="images/CarrotTasting2026_1.jpg" alt="Crowd at the 2026 Carrot Tasting event">
+                        <figcaption>2026 Carrot Tasting — community taste test in action</figcaption>
+                    </figure>
+                </div>
+
+                <div class="carrot-pdf-links">
+                    <a href="CarrotTastingResults2024.pdf" target="_blank" class="pdf-btn">📄 Printable 2024 Results (PDF)</a>
+                    <a href="CarrotTastingResults2025.pdf" target="_blank" class="pdf-btn">📄 Printable 2025 Results (PDF)</a>
+                </div>
+
+                <div class="carrot-2026-results">
+                    <h4>2026 Results — 18 Varieties</h4>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Variety</th>
+                                <th>Display #</th>
+                                <th>0</th>
+                                <th>1</th>
+                                <th>2</th>
+                                <th>3</th>
+                                <th>4</th>
+                                <th>5</th>
+                                <th>Total</th>
+                                <th>Score</th>
+                                <th>Normalized</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="johnnys"><td>1</td><td>Mokum*</td><td>10</td><td>0</td><td>0</td><td>1</td><td>1</td><td>6</td><td>3</td><td>11</td><td>44</td><td>4.00</td></tr>
+                            <tr class="johnnys"><td>2</td><td>Gold Nugget*</td><td>18</td><td>0</td><td>1</td><td>1</td><td>4</td><td>3</td><td>2</td><td>11</td><td>37</td><td>3.36</td></tr>
+                            <tr class="johnnys"><td>3</td><td>Napoli*</td><td>1</td><td>0</td><td>0</td><td>3</td><td>5</td><td>4</td><td>0</td><td>12</td><td>37</td><td>3.08</td></tr>
+                            <tr class="control"><td>4</td><td>Little Fingers</td><td>7</td><td>0</td><td>0</td><td>4</td><td>3</td><td>5</td><td>0</td><td>12</td><td>37</td><td>3.08</td></tr>
+                            <tr class="johnnys"><td>5</td><td>Romance*</td><td>5</td><td>0</td><td>1</td><td>2</td><td>6</td><td>3</td><td>0</td><td>12</td><td>35</td><td>2.92</td></tr>
+                            <tr class="johnnys"><td>6</td><td>Rainbow*</td><td>14</td><td>0</td><td>3</td><td>1</td><td>2</td><td>4</td><td>1</td><td>11</td><td>32</td><td>2.91</td></tr>
+                            <tr class="johnnys"><td>7</td><td>Purple Elite*</td><td>11</td><td>0</td><td>2</td><td>3</td><td>4</td><td>2</td><td>0</td><td>11</td><td>28</td><td>2.55</td></tr>
+                            <tr class="control"><td>8</td><td>St. Valery</td><td>17</td><td>0</td><td>0</td><td>5</td><td>6</td><td>0</td><td>0</td><td>11</td><td>28</td><td>2.55</td></tr>
+                            <tr class="johnnys"><td>9</td><td>Candy F1*</td><td>4</td><td>0</td><td>2</td><td>4</td><td>5</td><td>1</td><td>0</td><td>12</td><td>29</td><td>2.42</td></tr>
+                            <tr class="johnnys"><td>10</td><td>Orange Fancy*</td><td>9</td><td>2</td><td>1</td><td>3</td><td>3</td><td>3</td><td>0</td><td>12</td><td>28</td><td>2.33</td></tr>
+                            <tr class="johnnys"><td>11</td><td>Sugarsnax 54*</td><td>2</td><td>0</td><td>3</td><td>4</td><td>4</td><td>1</td><td>0</td><td>12</td><td>27</td><td>2.25</td></tr>
+                            <tr class="johnnys"><td>12</td><td>Bolero*</td><td>3</td><td>0</td><td>3</td><td>3</td><td>6</td><td>0</td><td>0</td><td>12</td><td>27</td><td>2.25</td></tr>
+                            <tr class="johnnys"><td>13</td><td>Purple Dragon*</td><td>8</td><td>0</td><td>3</td><td>6</td><td>2</td><td>1</td><td>0</td><td>12</td><td>25</td><td>2.08</td></tr>
+                            <tr class="donation"><td>14</td><td>Cosmic Purple</td><td>15</td><td>2</td><td>3</td><td>2</td><td>3</td><td>1</td><td>0</td><td>11</td><td>20</td><td>1.82</td></tr>
+                            <tr class="johnnys"><td>15</td><td>Shin Kuroda*</td><td>6</td><td>1</td><td>5</td><td>4</td><td>1</td><td>1</td><td>0</td><td>12</td><td>20</td><td>1.67</td></tr>
+                            <tr class="donation"><td>16</td><td>Atomic Red</td><td>12</td><td>2</td><td>3</td><td>3</td><td>3</td><td>0</td><td>0</td><td>11</td><td>18</td><td>1.64</td></tr>
+                            <tr class="johnnys"><td>17</td><td>Deep Purple*</td><td>16</td><td>2</td><td>3</td><td>4</td><td>1</td><td>1</td><td>0</td><td>11</td><td>18</td><td>1.64</td></tr>
+                            <tr class="johnnys"><td>18</td><td>Rubypak*</td><td>13</td><td>3</td><td>5</td><td>2</td><td>1</td><td>0</td><td>0</td><td>11</td><td>12</td><td>1.09</td></tr>
+                        </tbody>
+                    </table>
+                    <div class="carrot-legend">
+                        <span class="legend-item johnnys">* Johnny's Selected Seeds, sponsored by RurAL CAP Foundation</span>
+                        <span class="legend-item control">Controls: St. Valery &amp; Little Fingers</span>
+                        <span class="legend-item donation">Online supporter donations: Atomic Red &amp; Cosmic Purple</span>
+                    </div>
+                </div>
+
+                <div class="carrot-cta">
+                    <strong>Join the fun in 2027!</strong> Have a carrot variety you’d like us to grow and taste next year? <a href="contact.html">Send us your recommendation</a> — we’d love to hear from you.
+                </div>
+            </div>
             
             <div class="harvest-workshop"><div class="workshop-image"><img src="images/WinningBasketHarvestFestival2025.jpg" alt="Winning Basket"><img src="images/FINAL library logo transparent.png" alt="Library Logo" class="library-logo"></div><div class="workshop-details"><h3>Rabbit & Poultry Show <span class="free-tag">FREE</span></h3><span class="workshop-date"> Saturday, September 19, 2026 · Gustavus Community Center (Outdoor Barn Tent)</span><div class="countdown-box">⏳ <span id="rabbitDays">14</span> days until Rabbit & Poultry Show!</div><div class="show-schedule"><strong> Show Schedule:</strong><br> Drop-off & Health Check: 8:00 – 9:00 AM<br> Judging: 10:00 – 11:00 AM<br> Showmanship: 11:00 AM – 1:00 PM<br> Cage Decor Setup: 8:00 – 10:00 AM<br> Chicken & Rabbit Race: 1:00 PM<br><br><strong> The show runs concurrently with the Harvest Festival in the outdoor tent.</strong><br><strong> Important Rules:</strong> Pregnant or sick animals will be turned away at health check. Borrow a show cage from the library (16 available, 2 per person guaranteed).</div><p><strong>To register live animals (by Sept 17, 5pm):</strong> Contact Geneva Mottet — early registration helps us arrange cages for critter comfort.</p><a href="mailto:gjmottet@alaska.edu?subject=Rabbit%20%26%20Poultry%20Show%20Registration" class="email-btn"> Register Animals Now</a><div class="register-highlight"><strong> Show Cages Available:</strong> 16 show cages provided. If you have your own cage, we can accept additional critters beyond that!</div><a href="https://gjmottet.github.io/gustavus-harvest-festival/" target="_blank" class="festival-btn"> Visit Gustavus Harvest Festival Website →</a></div></div>
             <div class="grant-note"><p><strong>Community Support:</strong> This workshop series receives financial support from the RurAL CAP Foundation. <strong>All workshops are free and open to the public!</strong></p></div>
@@ -1544,19 +1746,9 @@
             var now = new Date();
             var today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
             
-            // Carrot Tasting: Sept 14, 2026
-            var carrotDate = new Date(2026, 8, 14); // Month is 0-indexed, so 8 = September
-            var carrotDiff = Math.ceil((carrotDate - today) / (1000 * 60 * 60 * 24));
-            
             // Rabbit Show: Sept 19, 2026
             var rabbitDate = new Date(2026, 8, 19);
             var rabbitDiff = Math.ceil((rabbitDate - today) / (1000 * 60 * 60 * 24));
-            
-            // Update all countdown elements
-            var carrotElements = document.querySelectorAll('#carrotDays, #carrotDaysTop');
-            carrotElements.forEach(function(el) {
-                el.textContent = carrotDiff > 0 ? carrotDiff : 0;
-            });
             
             var rabbitElements = document.querySelectorAll('#rabbitDays, #rabbitDaysTop');
             rabbitElements.forEach(function(el) {
