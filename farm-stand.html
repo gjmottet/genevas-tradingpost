@@ -245,7 +245,6 @@
         }
         
         /* ===== SUPER BOLD TOP PAGE COUNTDOWN BUTTONS ===== */
-        /* Container to hold buttons on a light background */
         .countdown-button-wrapper {
             display: inline-block;
             background: rgba(255, 255, 255, 0.15);
@@ -513,7 +512,8 @@
         }
         
         .upcoming-event-card h2,
-        .upcoming-event-card p {
+        .upcoming-event-card p,
+        .upcoming-event-card h3 {
             position: relative;
             z-index: 2;
             text-shadow: 0 2px 8px rgba(0,0,0,0.7);
@@ -523,6 +523,12 @@
             font-size: 2.5rem;
             margin-top: 0;
             margin-bottom: 0.5rem;
+            color: #ffd700;
+        }
+        
+        .upcoming-event-card h3 {
+            font-size: 1.8rem;
+            margin: 1.5rem 0 0.5rem;
             color: #ffd700;
         }
         
@@ -1219,6 +1225,7 @@
             box-shadow: 0 4px 12px rgba(0,0,0,0.25);
             transition: all 0.2s ease;
             border: 2px solid #ffd966;
+            cursor: pointer;
         }
         .pdf-btn:hover {
             background: #ffd966;
@@ -1264,9 +1271,9 @@
         .carrot-2026-results th:nth-child(2) {
             text-align: left;
         }
-        .carrot-2026-results tr.johnnys { background: #fff3cd; }
-        .carrot-2026-results tr.control { background: #d6eaf8; }
-        .carrot-2026-results tr.donation { background: #f4ecf7; }
+        .carrot-2026-results tr.johnnys { background: #ffe082; }
+        .carrot-2026-results tr.control { background: #81d4fa; }
+        .carrot-2026-results tr.donation { background: #ce93d8; }
         .carrot-legend {
             display: flex;
             flex-wrap: wrap;
@@ -1281,9 +1288,9 @@
             border-radius: 20px;
             font-weight: 700;
         }
-        .legend-item.johnnys { background: #fff3cd; color: #7a5c00; }
-        .legend-item.control { background: #d6eaf8; color: #1a5276; }
-        .legend-item.donation { background: #f4ecf7; color: #6c3483; }
+        .legend-item.johnnys { background: #ffe082; color: #7a5c00; }
+        .legend-item.control { background: #81d4fa; color: #1a5276; }
+        .legend-item.donation { background: #ce93d8; color: #6c3483; }
         .carrot-cta {
             background: rgba(0,0,0,0.22);
             border-left: 5px solid #ffd966;
@@ -1319,6 +1326,7 @@
             .strawberry-content h3 { font-size: 1.8rem; }
             .strawberry-price { font-size: 1.2rem; }
             .upcoming-event-card h2 { font-size: 1.8rem; }
+            .upcoming-event-card h3 { font-size: 1.4rem; }
             .upcoming-event-card p { font-size: 1.1rem; }
             .prev, .next { width: 36px; padding: 10px 0; font-size: 18px; }
             .berry-gallery { grid-template-columns: 1fr 1fr; }
@@ -1387,11 +1395,16 @@
         
         <!-- UPCOMING EVENT CARD - with BOLD COUNTDOWN BUTTONS -->
         <div class="upcoming-event-card">
-            <h2>🌱 Upcoming Event: Rabbit & Poultry Show</h2>
+            <h2>🌱 Upcoming Events</h2>
             <p><strong>Rabbit & Poultry Show</strong> – September 19, 2026</p>
             <p class="event-detail">10:00 AM – 1:00 PM · Gustavus Community Center (Outdoor Barn Tent)</p>
             <p class="event-detail">Carrot Tasting 2026 is complete — see the results and photos below.</p>
             
+            <h3>🛒 Second Saturday Market</h3>
+            <p><strong>Final market of the season:</strong> October 10, 2026</p>
+            <p class="event-detail">Noon – 2:30 PM · Gustavus Community Center</p>
+            <p class="event-detail">Last chance to pick up your jellies in person!</p>
+
             <!-- COUNTDOWN BUTTONS - on their own layer with z-index to appear OVER the overlay -->
             <div class="countdown-button-container">
                 <div class="countdown-btn-rabbit">🐇 Rabbit Show: <span id="rabbitDaysTop">14</span> days away</div>
@@ -1409,29 +1422,6 @@
             </div>
         </div>
         
-        <!-- Updated Strawberry Card: Last Chance 2026 -->
-        <div class="strawberry-header-card">
-            <div class="strawberry-content">
-                <h3> Strawberries – Last Chance for 2026!</h3>
-                <div class="strawberry-price">$3.50 each • 3 for $10</div>
-                <div class="strawberry-inline-image"><img src="images/Strawberry.jpg" alt="Fresh Strawberries"></div>
-                <div class="strawberry-varieties"><p><strong>Two domestic varieties available:</strong></p><p> June-bearing • Everbearing</p><p><em>We're wrapping up the season – get your plants now before they're gone!</em></p></div>
-            </div>
-        </div>
-        
-        <!-- Updated Rhubarb Card: Sold Out Until 2027 -->
-        <div style="background: linear-gradient(135deg, #5a3e2b 0%, #7a5a3a 100%); border-radius: 28px; margin: 2rem auto; max-width: 1000px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; padding: 1.5rem;">
-            <div style="flex: 2; padding: 1rem; text-align: center; color: white;">
-                <h3 style="color: #ffdd99; font-size: 2rem; margin: 0 0 0.5rem;"> Gustavus Red Rhubarb</h3>
-                <div style="background: #b35f1a; display: inline-block; padding: 0.3rem 1.5rem; border-radius: 40px; font-weight: bold; font-size: 1.3rem; margin: 0.5rem 0; border: 1px solid #ffcd94;">Sold Out Until 2027</div>
-                <p>We're sold out for this year, but we're already taking orders for next spring when I split my plants. <strong>Reserve yours now for 2027!</strong></p>
-                <p style="margin-top: 0.5rem;"><a href="contact.html" style="color: #ffd966; text-decoration: underline;">Contact me to pre‑order</a></p>
-            </div>
-            <div style="flex: 1; padding: 1rem; min-width: 180px; display: flex; justify-content: center;">
-                <img src="images/RuhbarbStart2026.jpg" alt="Rhubarb Start" style="max-width: 100%; height: auto; border-radius: 20px; max-height: 180px; object-fit: cover;">
-            </div>
-        </div>
-
         <!-- ===== UPDATED JAMS, JELLIES & SYRUPS (AUGUST 2026) ===== -->
         <div class="full-width-card" style="margin-top: 2rem;">
             <div class="section-title-banner" style="background: #6d4c41; border-radius: 10px 10px 0 0;">
@@ -1536,89 +1526,64 @@
             </div>
         </div>
 
-        <!-- SECOND SATURDAY MARKET BANNER (KEPT - July 11) -->
-        <section class="market-banner">
-            <div class="market-image">
-                <img src="images/May9SecondSaturdayMarket2026.jpg" alt="Second Saturday Market">
-            </div>
-            <div class="market-info">
-                <h3>Second Saturday Market</h3>
-                <p><strong>Check us out at the next Second Saturday Market on July 11</strong></p>
-                <p><strong>Noon – 2:30pm at the Gustavus Community Center</strong></p>
-                <p>We will have plant starts, fresh produce, rabbit skins, art, and much much more!</p>
-                <div class="season-date">July 11 · Noon–2:30pm</div>
-            </div>
-        </section> 
-
         <!-- WORKSHOP SECTION (KEPT - with countdowns added) -->
         <section class="workshop-section">
             <h2>2026 Workshop Series</h2>
           
             <!-- Carrot Tasting 2026 Results Card -->
             <div class="carrot-results-card">
+                <!-- Top image: 2026 community taste test -->
+                <figure style="margin:0 0 1rem 0;">
+                    <img src="images/CarrotTasting2026_1.jpg" alt="2026 Carrot Tasting community taste test" style="width:100%; border-radius:14px; border:4px solid #fff; box-shadow:0 6px 18px rgba(0,0,0,0.3);">
+                    <figcaption style="margin-top:0.4rem; font-size:0.9rem; font-weight:600; color:#fff8e1; text-shadow:0 1px 4px rgba(0,0,0,0.5);">2026 Carrot Tasting — community taste test in action</figcaption>
+                </figure>
+
                 <h3>🥕 Carrot Tasting 2026 — Results Are In!</h3>
                 <p class="carrot-subhead">Thank you to everyone who joined us September 14 at the Gustavus Community Center. Eighteen varieties, lots of laughs, and plenty of crunchy data!</p>
 
-                <div class="carrot-collage">
-                    <figure class="carrot-img-tall">
-                        <img src="images/Carrot Tasting 2025.jpg" alt="2025 carrots at the Carrot Tasting">
-                        <figcaption>2025 carrots</figcaption>
-                    </figure>
-                    <figure class="carrot-img-square">
-                        <img src="images/CarrotTasting2026_2.jpg" alt="Geneva and her husband with carrots at the end of the 2026 Carrot Tasting">
-                        <figcaption>2026 — Geneva &amp; husband with the harvest</figcaption>
-                    </figure>
-                    <figure class="carrot-img-long">
-                        <img src="images/CarrotTasting2026_1.jpg" alt="Crowd at the 2026 Carrot Tasting event">
-                        <figcaption>2026 Carrot Tasting — community taste test in action</figcaption>
-                    </figure>
-                </div>
-
-                <div class="carrot-pdf-links">
-                    <a href="CarrotTastingResults2024.pdf" target="_blank" class="pdf-btn">📄 Printable 2024 Results (PDF)</a>
-                    <a href="CarrotTastingResults2025.pdf" target="_blank" class="pdf-btn">📄 Printable 2025 Results (PDF)</a>
-                </div>
-
+                <!-- 2026 results table with scrollbar for top 6 -->
                 <div class="carrot-2026-results">
                     <h4>2026 Results — 18 Varieties</h4>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Rank</th>
-                                <th>Variety</th>
-                                <th>Display #</th>
-                                <th>0</th>
-                                <th>1</th>
-                                <th>2</th>
-                                <th>3</th>
-                                <th>4</th>
-                                <th>5</th>
-                                <th>Total</th>
-                                <th>Score</th>
-                                <th>Normalized</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr class="johnnys"><td>1</td><td>Mokum*</td><td>10</td><td>0</td><td>0</td><td>1</td><td>1</td><td>6</td><td>3</td><td>11</td><td>44</td><td>4.00</td></tr>
-                            <tr class="johnnys"><td>2</td><td>Gold Nugget*</td><td>18</td><td>0</td><td>1</td><td>1</td><td>4</td><td>3</td><td>2</td><td>11</td><td>37</td><td>3.36</td></tr>
-                            <tr class="johnnys"><td>3</td><td>Napoli*</td><td>1</td><td>0</td><td>0</td><td>3</td><td>5</td><td>4</td><td>0</td><td>12</td><td>37</td><td>3.08</td></tr>
-                            <tr class="control"><td>4</td><td>Little Fingers</td><td>7</td><td>0</td><td>0</td><td>4</td><td>3</td><td>5</td><td>0</td><td>12</td><td>37</td><td>3.08</td></tr>
-                            <tr class="johnnys"><td>5</td><td>Romance*</td><td>5</td><td>0</td><td>1</td><td>2</td><td>6</td><td>3</td><td>0</td><td>12</td><td>35</td><td>2.92</td></tr>
-                            <tr class="johnnys"><td>6</td><td>Rainbow*</td><td>14</td><td>0</td><td>3</td><td>1</td><td>2</td><td>4</td><td>1</td><td>11</td><td>32</td><td>2.91</td></tr>
-                            <tr class="johnnys"><td>7</td><td>Purple Elite*</td><td>11</td><td>0</td><td>2</td><td>3</td><td>4</td><td>2</td><td>0</td><td>11</td><td>28</td><td>2.55</td></tr>
-                            <tr class="control"><td>8</td><td>St. Valery</td><td>17</td><td>0</td><td>0</td><td>5</td><td>6</td><td>0</td><td>0</td><td>11</td><td>28</td><td>2.55</td></tr>
-                            <tr class="johnnys"><td>9</td><td>Candy F1*</td><td>4</td><td>0</td><td>2</td><td>4</td><td>5</td><td>1</td><td>0</td><td>12</td><td>29</td><td>2.42</td></tr>
-                            <tr class="johnnys"><td>10</td><td>Orange Fancy*</td><td>9</td><td>2</td><td>1</td><td>3</td><td>3</td><td>3</td><td>0</td><td>12</td><td>28</td><td>2.33</td></tr>
-                            <tr class="johnnys"><td>11</td><td>Sugarsnax 54*</td><td>2</td><td>0</td><td>3</td><td>4</td><td>4</td><td>1</td><td>0</td><td>12</td><td>27</td><td>2.25</td></tr>
-                            <tr class="johnnys"><td>12</td><td>Bolero*</td><td>3</td><td>0</td><td>3</td><td>3</td><td>6</td><td>0</td><td>0</td><td>12</td><td>27</td><td>2.25</td></tr>
-                            <tr class="johnnys"><td>13</td><td>Purple Dragon*</td><td>8</td><td>0</td><td>3</td><td>6</td><td>2</td><td>1</td><td>0</td><td>12</td><td>25</td><td>2.08</td></tr>
-                            <tr class="donation"><td>14</td><td>Cosmic Purple</td><td>15</td><td>2</td><td>3</td><td>2</td><td>3</td><td>1</td><td>0</td><td>11</td><td>20</td><td>1.82</td></tr>
-                            <tr class="johnnys"><td>15</td><td>Shin Kuroda*</td><td>6</td><td>1</td><td>5</td><td>4</td><td>1</td><td>1</td><td>0</td><td>12</td><td>20</td><td>1.67</td></tr>
-                            <tr class="donation"><td>16</td><td>Atomic Red</td><td>12</td><td>2</td><td>3</td><td>3</td><td>3</td><td>0</td><td>0</td><td>11</td><td>18</td><td>1.64</td></tr>
-                            <tr class="johnnys"><td>17</td><td>Deep Purple*</td><td>16</td><td>2</td><td>3</td><td>4</td><td>1</td><td>1</td><td>0</td><td>11</td><td>18</td><td>1.64</td></tr>
-                            <tr class="johnnys"><td>18</td><td>Rubypak*</td><td>13</td><td>3</td><td>5</td><td>2</td><td>1</td><td>0</td><td>0</td><td>11</td><td>12</td><td>1.09</td></tr>
-                        </tbody>
-                    </table>
+                    <div style="max-height: 260px; overflow-y: auto; border-radius: 8px;">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Rank</th>
+                                    <th>Variety</th>
+                                    <th>Display #</th>
+                                    <th>0</th>
+                                    <th>1</th>
+                                    <th>2</th>
+                                    <th>3</th>
+                                    <th>4</th>
+                                    <th>5</th>
+                                    <th>Total</th>
+                                    <th>Score</th>
+                                    <th>Normalized</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="johnnys"><td>1</td><td>Mokum*</td><td>10</td><td>0</td><td>0</td><td>1</td><td>1</td><td>6</td><td>3</td><td>11</td><td>44</td><td>4.00</td></tr>
+                                <tr class="johnnys"><td>2</td><td>Gold Nugget*</td><td>18</td><td>0</td><td>1</td><td>1</td><td>4</td><td>3</td><td>2</td><td>11</td><td>37</td><td>3.36</td></tr>
+                                <tr class="johnnys"><td>3</td><td>Napoli*</td><td>1</td><td>0</td><td>0</td><td>3</td><td>5</td><td>4</td><td>0</td><td>12</td><td>37</td><td>3.08</td></tr>
+                                <tr class="control"><td>4</td><td>Little Fingers</td><td>7</td><td>0</td><td>0</td><td>4</td><td>3</td><td>5</td><td>0</td><td>12</td><td>37</td><td>3.08</td></tr>
+                                <tr class="johnnys"><td>5</td><td>Romance*</td><td>5</td><td>0</td><td>1</td><td>2</td><td>6</td><td>3</td><td>0</td><td>12</td><td>35</td><td>2.92</td></tr>
+                                <tr class="johnnys"><td>6</td><td>Rainbow*</td><td>14</td><td>0</td><td>3</td><td>1</td><td>2</td><td>4</td><td>1</td><td>11</td><td>32</td><td>2.91</td></tr>
+                                <tr class="johnnys"><td>7</td><td>Purple Elite*</td><td>11</td><td>0</td><td>2</td><td>3</td><td>4</td><td>2</td><td>0</td><td>11</td><td>28</td><td>2.55</td></tr>
+                                <tr class="control"><td>8</td><td>St. Valery</td><td>17</td><td>0</td><td>0</td><td>5</td><td>6</td><td>0</td><td>0</td><td>11</td><td>28</td><td>2.55</td></tr>
+                                <tr class="johnnys"><td>9</td><td>Candy F1*</td><td>4</td><td>0</td><td>2</td><td>4</td><td>5</td><td>1</td><td>0</td><td>12</td><td>29</td><td>2.42</td></tr>
+                                <tr class="johnnys"><td>10</td><td>Orange Fancy*</td><td>9</td><td>2</td><td>1</td><td>3</td><td>3</td><td>3</td><td>0</td><td>12</td><td>28</td><td>2.33</td></tr>
+                                <tr class="johnnys"><td>11</td><td>Sugarsnax 54*</td><td>2</td><td>0</td><td>3</td><td>4</td><td>4</td><td>1</td><td>0</td><td>12</td><td>27</td><td>2.25</td></tr>
+                                <tr class="johnnys"><td>12</td><td>Bolero*</td><td>3</td><td>0</td><td>3</td><td>3</td><td>6</td><td>0</td><td>0</td><td>12</td><td>27</td><td>2.25</td></tr>
+                                <tr class="johnnys"><td>13</td><td>Purple Dragon*</td><td>8</td><td>0</td><td>3</td><td>6</td><td>2</td><td>1</td><td>0</td><td>12</td><td>25</td><td>2.08</td></tr>
+                                <tr class="donation"><td>14</td><td>Cosmic Purple</td><td>15</td><td>2</td><td>3</td><td>2</td><td>3</td><td>1</td><td>0</td><td>11</td><td>20</td><td>1.82</td></tr>
+                                <tr class="johnnys"><td>15</td><td>Shin Kuroda*</td><td>6</td><td>1</td><td>5</td><td>4</td><td>1</td><td>1</td><td>0</td><td>12</td><td>20</td><td>1.67</td></tr>
+                                <tr class="donation"><td>16</td><td>Atomic Red</td><td>12</td><td>2</td><td>3</td><td>3</td><td>3</td><td>0</td><td>0</td><td>11</td><td>18</td><td>1.64</td></tr>
+                                <tr class="johnnys"><td>17</td><td>Deep Purple*</td><td>16</td><td>2</td><td>3</td><td>4</td><td>1</td><td>1</td><td>0</td><td>11</td><td>18</td><td>1.64</td></tr>
+                                <tr class="johnnys"><td>18</td><td>Rubypak*</td><td>13</td><td>3</td><td>5</td><td>2</td><td>1</td><td>0</td><td>0</td><td>11</td><td>12</td><td>1.09</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
                     <div class="carrot-legend">
                         <span class="legend-item johnnys">* Johnny's Selected Seeds, sponsored by RurAL CAP Foundation</span>
                         <span class="legend-item control">Controls: St. Valery &amp; Little Fingers</span>
@@ -1626,8 +1591,24 @@
                     </div>
                 </div>
 
+                <!-- Two images with buttons between -->
+                <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:1rem; margin:1.5rem 0;">
+                    <figure style="flex:1; min-width:200px; margin:0;">
+                        <img src="images/Carrot Tasting 2025.jpg" alt="2025 carrots" style="width:100%; border-radius:14px; border:4px solid #fff; box-shadow:0 6px 18px rgba(0,0,0,0.3);">
+                        <figcaption style="margin-top:0.4rem; font-size:0.9rem; font-weight:600; color:#fff8e1; text-shadow:0 1px 4px rgba(0,0,0,0.5);">2025 carrots</figcaption>
+                    </figure>
+                    <div style="display:flex; flex-direction:column; gap:0.5rem;">
+                        <button class="pdf-btn" onclick="openPrintWindow('print2024')">📄 Printable 2024 Results</button>
+                        <button class="pdf-btn" onclick="openPrintWindow('print2025')">📄 Printable 2025 Results</button>
+                    </div>
+                    <figure style="flex:1; min-width:200px; margin:0;">
+                        <img src="images/CarrotTasting2026_2.jpg" alt="Geneva and husband with carrots" style="width:100%; border-radius:14px; border:4px solid #fff; box-shadow:0 6px 18px rgba(0,0,0,0.3);">
+                        <figcaption style="margin-top:0.4rem; font-size:0.9rem; font-weight:600; color:#fff8e1; text-shadow:0 1px 4px rgba(0,0,0,0.5);">2026 — Geneva & husband with the harvest</figcaption>
+                    </figure>
+                </div>
+
                 <div class="carrot-cta">
-                    <strong>Join the fun in 2027!</strong> Have a carrot variety you’d like us to grow and taste next year? <a href="contact.html">Send us your recommendation</a> — we’d love to hear from you.
+                    <strong>Join the fun in 2027!</strong> Have a carrot variety you'd like us to grow and taste next year? <a href="contact.html">Send us your recommendation</a> — we'd love to hear from you.
                 </div>
             </div>
             
@@ -1686,7 +1667,30 @@
                 <div class="dot-group" id="quailDotsNew"></div>
             </div>
         </section>
+
+        <!-- Moved Strawberry Card here -->
+        <div class="strawberry-header-card">
+            <div class="strawberry-content">
+                <h3> Strawberries – Last Chance for 2026!</h3>
+                <div class="strawberry-price">$3.50 each • 3 for $10</div>
+                <div class="strawberry-inline-image"><img src="images/Strawberry.jpg" alt="Fresh Strawberries"></div>
+                <div class="strawberry-varieties"><p><strong>Two domestic varieties available:</strong></p><p> June-bearing • Everbearing</p><p><em>We're wrapping up the season – get your plants now before they're gone!</em></p></div>
+            </div>
+        </div>
         
+        <!-- Moved Rhubarb Card here -->
+        <div style="background: linear-gradient(135deg, #5a3e2b 0%, #7a5a3a 100%); border-radius: 28px; margin: 2rem auto; max-width: 1000px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; padding: 1.5rem;">
+            <div style="flex: 2; padding: 1rem; text-align: center; color: white;">
+                <h3 style="color: #ffdd99; font-size: 2rem; margin: 0 0 0.5rem;"> Gustavus Red Rhubarb</h3>
+                <div style="background: #b35f1a; display: inline-block; padding: 0.3rem 1.5rem; border-radius: 40px; font-weight: bold; font-size: 1.3rem; margin: 0.5rem 0; border: 1px solid #ffcd94;">Sold Out Until 2027</div>
+                <p>We're sold out for this year, but we're already taking orders for next spring when I split my plants. <strong>Reserve yours now for 2027!</strong></p>
+                <p style="margin-top: 0.5rem;"><a href="contact.html" style="color: #ffd966; text-decoration: underline;">Contact me to pre‑order</a></p>
+            </div>
+            <div style="flex: 1; padding: 1rem; min-width: 180px; display: flex; justify-content: center;">
+                <img src="images/RuhbarbStart2026.jpg" alt="Rhubarb Start" style="max-width: 100%; height: auto; border-radius: 20px; max-height: 180px; object-fit: cover;">
+            </div>
+        </div>
+
         <div style="text-align: center; padding: 2rem;"><a href="index.html" class="back-btn">← Back to Home</a></div>
     </main>
     
@@ -1694,8 +1698,72 @@
         <p>© 2026 Geneva's Trading Post | Farm Stand in Gustavus, Alaska</p>
         <p>Supporting local food sovereignty through education and community resources</p>
     </footer>
-    
+
+    <!-- Hidden printable tables for 2024 and 2025 -->
+    <div id="print2024" style="display:none;">
+        <h2>Carrot Tasting Results 2024</h2>
+        <table border="1" cellpadding="5" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>Rank</th><th>Variety</th><th>Display #</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>Total</th><th>Score</th><th>Normalized</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>1</td><td>Royal Chantenay</td><td>4</td><td>0</td><td>0</td><td>1</td><td>2</td><td>2</td><td>5</td><td>10</td><td>41</td><td>4.10</td></tr>
+                <tr><td>2</td><td>Bolero Nantes</td><td>3</td><td>0</td><td>0</td><td>3</td><td>3</td><td>4</td><td>0</td><td>10</td><td>31</td><td>3.10</td></tr>
+                <tr><td>3</td><td>Bambino</td><td>5</td><td>0</td><td>2</td><td>1</td><td>4</td><td>0</td><td>3</td><td>10</td><td>31</td><td>3.10</td></tr>
+                <tr><td>4</td><td>Scarlet Nantes</td><td>2</td><td>0</td><td>0</td><td>1</td><td>9</td><td>1</td><td>0</td><td>11</td><td>33</td><td>3.00</td></tr>
+                <tr><td>5</td><td>Yellow</td><td>6</td><td>0</td><td>0</td><td>3</td><td>4</td><td>3</td><td>0</td><td>10</td><td>30</td><td>3.00</td></tr>
+                <tr><td>6</td><td>Imperator 58</td><td>1</td><td>0</td><td>0</td><td>5</td><td>2</td><td>2</td><td>1</td><td>10</td><td>29</td><td>2.90</td></tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="print2025" style="display:none;">
+        <h2>Carrot Tasting Results 2025</h2>
+        <table border="1" cellpadding="5" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>Rank</th><th>Variety</th><th>Display #</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>Total</th><th>Score</th><th>Normalized</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>1</td><td>Royal Chantenay</td><td>4</td><td>0</td><td>1</td><td>1</td><td>8</td><td>3</td><td>11</td><td>24</td><td>94</td><td>3.92</td></tr>
+                <tr><td>2</td><td>St. Valery</td><td>6</td><td>0</td><td>1</td><td>3</td><td>7</td><td>3</td><td>11</td><td>25</td><td>95</td><td>3.80</td></tr>
+                <tr><td>3</td><td>Purple Dragon</td><td>17</td><td>0</td><td>1</td><td>5</td><td>5</td><td>4</td><td>8</td><td>23</td><td>82</td><td>3.57</td></tr>
+                <tr><td>4</td><td>Gniff</td><td>16</td><td>0</td><td>1</td><td>5</td><td>7</td><td>3</td><td>8</td><td>24</td><td>84</td><td>3.50</td></tr>
+                <tr><td>5</td><td>Little Fingers</td><td>1</td><td>0</td><td>0</td><td>4</td><td>13</td><td>0</td><td>8</td><td>25</td><td>87</td><td>3.48</td></tr>
+                <tr><td>6</td><td>Bolero Nantes</td><td>10</td><td>0</td><td>0</td><td>6</td><td>11</td><td>1</td><td>6</td><td>24</td><td>79</td><td>3.29</td></tr>
+                <tr><td>7</td><td>Oxheart</td><td>5</td><td>1</td><td>0</td><td>5</td><td>15</td><td>1</td><td>4</td><td>26</td><td>79</td><td>3.04</td></tr>
+                <tr><td>8</td><td>Giant Red</td><td>9</td><td>0</td><td>2</td><td>8</td><td>8</td><td>3</td><td>4</td><td>25</td><td>74</td><td>2.96</td></tr>
+                <tr><td>9</td><td>Chantenay Red Core</td><td>3</td><td>0</td><td>1</td><td>8</td><td>8</td><td>1</td><td>6</td><td>24</td><td>75</td><td>3.13</td></tr>
+                <tr><td>10</td><td>Bambino</td><td>7</td><td>1</td><td>3</td><td>2</td><td>13</td><td>1</td><td>2</td><td>22</td><td>60</td><td>2.73</td></tr>
+                <tr><td>11</td><td>Imperator 58</td><td>2</td><td>0</td><td>3</td><td>11</td><td>8</td><td>2</td><td>1</td><td>25</td><td>62</td><td>2.48</td></tr>
+                <tr><td>12</td><td>Seedra Scarlet Nantes</td><td>11</td><td>5</td><td>1</td><td>8</td><td>5</td><td>1</td><td>4</td><td>24</td><td>56</td><td>2.33</td></tr>
+                <tr><td>13</td><td>Scarlet Nantes</td><td>8</td><td>0</td><td>9</td><td>12</td><td>3</td><td>0</td><td>2</td><td>26</td><td>52</td><td>2.00</td></tr>
+                <tr><td>14</td><td>Lunar White</td><td>13</td><td>3</td><td>9</td><td>7</td><td>2</td><td>1</td><td>3</td><td>25</td><td>48</td><td>1.92</td></tr>
+                <tr><td>15</td><td>Solar Yellow</td><td>15</td><td>4</td><td>4</td><td>7</td><td>6</td><td>0</td><td>1</td><td>22</td><td>41</td><td>1.86</td></tr>
+                <tr><td>16</td><td>Black Nebula</td><td>14</td><td>7</td><td>3</td><td>10</td><td>2</td><td>1</td><td>3</td><td>26</td><td>48</td><td>1.85</td></tr>
+                <tr><td>17</td><td>Pusa Asita Black</td><td>12</td><td>4</td><td>11</td><td>4</td><td>4</td><td>0</td><td>1</td><td>24</td><td>36</td><td>1.50</td></tr>
+            </tbody>
+        </table>
+    </div>
+
     <script>
+        // Open a print window with the given table HTML
+        function openPrintWindow(tableId) {
+            var content = document.getElementById(tableId).innerHTML;
+            var printWindow = window.open('', '_blank');
+            printWindow.document.write('<html><head><title>Carrot Tasting Results</title>');
+            printWindow.document.write('<style>body { font-family: Arial, sans-serif; margin: 1rem; } table { border-collapse: collapse; width: 100%; } th, td { border: 1px solid #999; padding: 6px 8px; text-align: center; } th { background: #f1c40f; } td:nth-child(2) { text-align: left; }</style>');
+            printWindow.document.write('</head><body>');
+            printWindow.document.write(content);
+            printWindow.document.write('</body></html>');
+            printWindow.document.close();
+            printWindow.focus();
+            // Delay print slightly to ensure content is loaded
+            setTimeout(function() { printWindow.print(); }, 250);
+        }
+
         // Independent Quail Slideshow (KEPT UNCHANGED)
         var quailSlideIndex = 1;
         var quailSlidesNew = document.querySelectorAll('#quailSlideshowNew .quailSlide');
