@@ -1102,9 +1102,11 @@
             border-left: 5px solid #ffd966;
             padding: 1rem 1.2rem;
             border-radius: 14px;
-            margin-top: 1.5rem;
-            text-align: center;
+            margin-top: 0;
+            text-align: left;
             font-size: 1.05rem;
+            flex: 1;
+            min-width: 220px;
         }
         .carrot-cta a {
             color: #fff8e1;
@@ -1145,6 +1147,36 @@
             display: flex;
             flex-direction: column;
             gap: 0.5rem;
+        }
+        /* Side-by-side row: Geneva image + 2027 CTA */
+        .carrot-final-row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 1.2rem;
+            margin-top: 1.5rem;
+        }
+        .carrot-final-row figure {
+            flex: 0 1 260px;
+            max-width: 260px;
+            margin: 0;
+            text-align: center;
+        }
+        .carrot-final-row img {
+            width: 100%;
+            height: auto;
+            border-radius: 14px;
+            border: 4px solid #fff;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+            background: #fff;
+        }
+        .carrot-final-row figcaption {
+            margin-top: 0.4rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #fff8e1;
+            text-shadow: 0 1px 4px rgba(0,0,0,0.5);
         }
         .pdf-btn {
             display: inline-block;
@@ -1193,6 +1225,7 @@
             .carrot-results-card { padding: 1.2rem; }
             .carrot-results-card h3 { font-size: 1.8rem; }
             .carrot-2026-results table { font-size: 0.8rem; }
+            .carrot-cta { text-align: center; }
         }
         
         @media (max-width: 480px) {
@@ -1201,6 +1234,7 @@
             .countdown-btn-carrot, .countdown-btn-rabbit { display: block; margin: 0.3rem auto; width: 90%; font-size: 1rem; padding: 0.6rem 1rem; }
             .countdown-btn-carrot span, .countdown-btn-rabbit span { font-size: 1.2rem; }
             .carrot-image-row figure { flex: 1 1 100%; max-width: 280px; }
+            .carrot-final-row figure { flex: 1 1 100%; max-width: 280px; }
         }
     </style>
 </head>
@@ -1424,6 +1458,7 @@
                 </div>
             </div>
 
+            <!-- Row: 2025 image, 3 stacked buttons -->
             <div class="carrot-image-row">
                 <figure>
                     <img src="images/Carrot Tasting 2025.jpg" alt="2025 carrots">
@@ -1434,14 +1469,17 @@
                     <button class="pdf-btn" onclick="openPrintWindow('print2025')">📄 Printable 2025 Results</button>
                     <button class="pdf-btn" onclick="openPrintWindow('print2026')">📄 Printable 2026 Results</button>
                 </div>
+            </div>
+
+            <!-- Side-by-side row: Geneva image + 2027 CTA -->
+            <div class="carrot-final-row">
                 <figure>
                     <img src="images/CarrotTasting2026_2.jpg" alt="Geneva and husband with carrots">
                     <figcaption>2026 — Geneva &amp; husband with the harvest</figcaption>
                 </figure>
-            </div>
-
-            <div class="carrot-cta">
-                <strong>Join the fun in 2027!</strong> Have a carrot variety you'd like us to grow and taste next year? <a href="contact.html">Send us your recommendation</a> — we'd love to hear from you.
+                <div class="carrot-cta">
+                    <strong>Join the fun in 2027!</strong> Have a carrot variety you'd like us to grow and taste next year? <a href="contact.html">Send us your recommendation</a> — we'd love to hear from you.
+                </div>
             </div>
         </div>
         
@@ -1526,17 +1564,7 @@
         </div>
     </section>
 
-    <!-- Moved Strawberry Card below Quail -->
-    <div class="strawberry-header-card">
-        <div class="strawberry-content">
-            <h3> Strawberries – Last Chance for 2026!</h3>
-            <div class="strawberry-price">$3.50 each • 3 for $10</div>
-            <div class="strawberry-inline-image"><img src="images/Strawberry.jpg" alt="Fresh Strawberries"></div>
-            <div class="strawberry-varieties"><p><strong>Two domestic varieties available:</strong></p><p> June-bearing • Everbearing</p><p><em>We're wrapping up the season – get your plants now before they're gone!</em></p></div>
-        </div>
-    </div>
-    
-    <!-- Moved Rhubarb Card below Quail -->
+    <!-- Rhubarb Card (now before Strawberry) -->
     <div style="background: linear-gradient(135deg, #5a3e2b 0%, #7a5a3a 100%); border-radius: 28px; margin: 2rem auto; max-width: 1000px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; padding: 1.5rem;">
         <div style="flex: 2; padding: 1rem; text-align: center; color: white;">
             <h3 style="color: #ffdd99; font-size: 2rem; margin: 0 0 0.5rem;"> Gustavus Red Rhubarb</h3>
@@ -1546,6 +1574,16 @@
         </div>
         <div style="flex: 1; padding: 1rem; min-width: 180px; display: flex; justify-content: center;">
             <img src="images/RuhbarbStart2026.jpg" alt="Rhubarb Start" style="max-width: 100%; height: auto; border-radius: 20px; max-height: 180px; object-fit: cover;">
+        </div>
+    </div>
+
+    <!-- Strawberry Card (now after Rhubarb) -->
+    <div class="strawberry-header-card">
+        <div class="strawberry-content">
+            <h3> Strawberries – Last Chance for 2026!</h3>
+            <div class="strawberry-price">$3.50 each • 3 for $10</div>
+            <div class="strawberry-inline-image"><img src="images/Strawberry.jpg" alt="Fresh Strawberries"></div>
+            <div class="strawberry-varieties"><p><strong>Two domestic varieties available:</strong></p><p> June-bearing • Everbearing</p><p><em>We're wrapping up the season – get your plants now before they're gone!</em></p></div>
         </div>
     </div>
 
