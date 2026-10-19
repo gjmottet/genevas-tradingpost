@@ -23,6 +23,14 @@
             --text-medium: #34495E;
             --text-light: #7F8C8D;
             --background-light: #F8F9FA;
+
+            /* Winter palette */
+            --winter-blue: #2563EB;
+            --winter-blue-dark: #1E3A8A;
+            --winter-blue-mid: #1E40AF;
+            --winter-blue-light: #BFDBFE;
+            --winter-blue-pale: #DBEAFE;
+            --winter-frost: #EFF6FF;
         }
         
         /* Fantasy Ball specific styles */
@@ -98,7 +106,7 @@
             box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
         
-        /* Combined Summer & Seasonal Card */
+        /* Combined Winter & Seasonal Card (formerly Summer) */
         .welcome-card {
             max-width: 1200px;
             margin: 3rem auto 1rem;
@@ -106,36 +114,69 @@
         }
         
         .welcome-card-content {
-            background: linear-gradient(135deg, #FFF9E6 0%, #FFF2D9 100%);
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 50%, #BFDBFE 100%);
             border-radius: 15px;
             padding: 2rem 2.5rem;
-            border: 3px solid var(--summer-sun);
+            border: 3px solid var(--winter-blue);
             text-align: center;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 6px 20px rgba(37, 99, 235, 0.15);
+        }
+        
+        /* Subtle snowflake accents */
+        .welcome-card-content::before,
+        .welcome-card-content::after {
+            content: "❄";
+            position: absolute;
+            color: #93C5FD;
+            opacity: 0.4;
+            line-height: 1;
+            pointer-events: none;
+        }
+        
+        .welcome-card-content::before {
+            top: 0.5rem;
+            left: 1rem;
+            font-size: 4rem;
+            transform: rotate(15deg);
+        }
+        
+        .welcome-card-content::after {
+            bottom: 0.5rem;
+            right: 1rem;
+            font-size: 3rem;
+            transform: rotate(-20deg);
         }
         
         .welcome-card-content h2 {
-            color: var(--summer-sun);
+            position: relative;
+            z-index: 1;
+            color: var(--winter-blue-dark);
             font-size: 2rem;
             margin-top: 0;
             margin-bottom: 1rem;
         }
         
         .welcome-card-content p {
+            position: relative;
+            z-index: 1;
             font-size: 1.2rem;
-            color: var(--text-medium);
+            color: #1E293B;
             max-width: 800px;
             margin: 0 auto 1.5rem;
         }
         
         .embroidery-offer {
-            background: #FDEBD0;
-            color: #BA4A00;
+            position: relative;
+            z-index: 1;
+            background: var(--winter-blue-pale);
+            color: var(--winter-blue-mid);
             padding: 0.8rem 2rem;
             border-radius: 8px;
             margin: 1rem auto 0.5rem;
             font-weight: bold;
-            border-left: 4px solid var(--summer-sun);
+            border-left: 4px solid var(--winter-blue);
             display: inline-block;
             width: auto;
             font-size: 1.1rem;
@@ -156,7 +197,7 @@
             border-radius: 12px;
             overflow: hidden;
             box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-            border: 2px solid var(--summer-sun);
+            border: 2px solid var(--winter-blue);
             transition: transform 0.3s ease;
         }
         
@@ -170,9 +211,9 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(135deg, #FFF9E6 0%, #FFF2D9 100%);
+            background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
             padding: 1.5rem;
-            border-bottom: 3px solid var(--summer-sun);
+            border-bottom: 3px solid var(--winter-blue);
         }
         
         .seasonal-image img {
@@ -188,10 +229,10 @@
         }
         
         .seasonal-info h3 {
-            color: var(--summer-sun);
+            color: var(--winter-blue-dark);
             margin-top: 0;
             font-size: 1.5rem;
-            border-bottom: 2px solid #FDE3A7;
+            border-bottom: 2px solid var(--winter-blue-light);
             padding-bottom: 0.5rem;
             margin-bottom: 1rem;
         }
@@ -204,7 +245,7 @@
         }
         
         .summer-tag {
-            background: var(--summer-sun);
+            background: #3B82F6;
             color: white;
             padding: 0.3rem 0.8rem;
             border-radius: 20px;
@@ -213,7 +254,7 @@
         }
         
         .memory-tag {
-            background: var(--summer-grass);
+            background: var(--winter-blue-mid);
             color: white;
             padding: 0.3rem 0.8rem;
             border-radius: 20px;
@@ -716,14 +757,14 @@
     </nav>
     
     <main>
-        <!-- COMBINED Welcome & Seasonal Card -->
+        <!-- COMBINED Welcome & Seasonal Card (Winter / Holiday Theme) -->
         <div class="welcome-card">
             <div class="welcome-card-content">
-                <h2>☀️ Summer Memories & Seasonal Gifts</h2>
-                <p>Planning an Alaska vacation or looking for a meaningful souvenir? I create custom pieces that capture your special moments—wildlife sightings, favorite trails, beloved pets, or Alaska adventures. Folk hearts and teddy bears make perfect keepsakes with free embroidery of names, dates, or places.</p>
+                <h2>❄️ Holiday-Ready Personalized Gifts</h2>
+                <p>Getting ready for the holiday season? Looking for a personalized gift or a meaningful Alaska souvenir? I create custom pieces that capture your special moments—wildlife sightings, favorite trails, beloved pets, or Alaska adventures. Folk hearts and teddy bears make perfect holiday keepsakes with free embroidery of names, dates, or places.</p>
                 
                 <div class="embroidery-offer">
-                    ✨ FREE embroidery on folk hearts & teddy bears! Custom orders welcome.
+                    ✨ FREE embroidery on folk hearts &amp; teddy bears! Custom orders welcome.
                 </div>
             </div>
         </div>
@@ -739,9 +780,9 @@
                     <h3>Folk Hearts</h3>
                     <div class="seasonal-tags">
                         <span class="memory-tag">Keepsake</span>
-                        <span class="summer-tag">Tourist Favorite</span>
+                        <span class="summer-tag">Holiday Favorite</span>
                     </div>
-                    <p>Charming folk art hearts, perfect for Alaska souvenirs or home decorations. Made with natural fibers and traditional patterns.</p>
+                    <p>Charming folk art hearts, perfect for holiday gifts or home decorations. Made with natural fibers and traditional patterns.</p>
                     <p><strong>Price:</strong> $6 each | <strong>Special:</strong> 4 for $20</p>
                 </div>
             </div>
@@ -757,8 +798,8 @@
                         <span class="memory-tag">Keepsake</span>
                         <span class="memory-tag">Children's Gift</span>
                     </div>
-                    <p>Adorable hand-knit teddy bears, each with unique details like scarves, bows, or the name of special someones embroidered.</p>
-                    <p><strong>Features:</strong> Soft natural and novely fibers, detailed accessories, embroidered faces</p>
+                    <p>Adorable hand-knit teddy bears, each with unique details like scarves, bows, or the name of a special someone embroidered.</p>
+                    <p><strong>Features:</strong> Soft natural and novelty fibers, detailed accessories, embroidered faces</p>
                 </div>
             </div>
         </div>
@@ -796,67 +837,44 @@
         <section class="events-section">
             <h2>Upcoming Events & Exhibitions</h2>
             <div class="event-calendar">
-                <!-- NEW: 2nd Saturday Market - placed at top because happening now -->
-                <div class="event-card">
-                    <h3>Gustavus 2nd Saturday Market</h3>
-                    <div class="event-date">June 13, July 11, Aug 8, Sept 12, Oct 10 • 12:00–2:30pm</div>
-                    <p>Gustavus Community Center</p>
-                    <div class="event-description">Alaskan wildlife-inspired fiber art, rabbitry information, and seasonal creations. Stop by my booth!</div>
-                </div>
-                
-                <!-- NEW: Sunday Market - placed at top because happening now -->
-                <div class="event-card">
-                    <h3>Sunday Market at A&E Trading Company</h3>
-                    <div class="event-date">Sundays • May 24 – Aug 30 • Noon–4pm (weather permitting)</div>
-                    <p>Near the Community Garden</p>
-                    <div class="event-description">Free bunny petting zoo, plant starts, art, and handmade goods. Come watch our bunnies grow up!</div>
-                </div>
-                
-                <!-- NEW: Strawberry Festival - placed at top because happening now -->
-                <div class="event-card">
-                    <h3>Strawberry Festival</h3>
-                    <div class="event-date">August 15–16 • Salmon River Park</div>
-                    <div class="event-description">Live music, games, strawberry recipe contest! Find me near the bunny petting zoo with homemade wild strawberry jelly, strawberry rhubarb pie filling, and original art.</div>
-                </div>
-                
                 <!-- PopCon -->
                 <div class="event-card">
                     <h3>PopCon Fairbanks</h3>
-                    <div class="event-date">November 2026</div>
-                    <p>University gaming & pop culture convention</p>
-                    <div class="event-description">Dice bags, fantasy accessories, and unique creations for gamers and fantasy fans.</div>
-                </div>
-                
-                <!-- LARS Holiday Bazaar -->
-                <div class="event-card">
-                    <h3>LARS Holiday Bazaar</h3>
-                    <div class="event-date">November 2026</div>
-                    <p>Large Animal Research Station, UAF</p>
-                    <div class="event-description">Handmade textile and rabbit products, perfect for holiday gifts.</div>
+                    <div class="event-date">Friday, November 6: 11am–7pm<br>Saturday, November 7: 11am–7pm</div>
+                    <p>University gaming &amp; pop culture convention</p>
+                    <div class="event-description">Dice bags, fantasy accessories, and unique creations for gamers and fantasy fans. <em>Not currently planning to attend Sunday.</em></div>
                 </div>
                 
                 <!-- First Friday -->
                 <div class="event-card">
                     <h3>First Friday Art Show</h3>
-                    <div class="event-date">Nov/Dec 2026</div>
+                    <div class="event-date">TBA — likely evening of November 7, same day as PopCon</div>
                     <p>Keith B. Mather Library, Geophysical Institute, UAF</p>
                     <div class="event-description">Scientific and mathematical art exhibition featuring "A Dynamics Yarn" potholders.</div>
+                </div>
+                
+                <!-- LARS Holiday Bazaar -->
+                <div class="event-card">
+                    <h3>LARS &amp; Friends Holiday Market</h3>
+                    <div class="event-date">Wednesday, November 18: 11am–4pm</div>
+                    <p>Large Animal Research Station, UAF</p>
+                    <div class="event-description">Handmade textile and rabbit products, perfect for holiday gifts.</div>
+                </div>
+                
+                <!-- Morris Thompson Holiday Bazaar -->
+                <div class="event-card">
+                    <h3>2026 MTCVC Holiday Bazaar — Morris Thompson Building</h3>
+                    <div class="event-date">Friday, December 11: 11am–6pm<br>Saturday, December 12: 10am–6pm</div>
+                    <p>Morris Thompson Cultural &amp; Visitors Center</p>
+                    <div class="event-description">Holiday gift craft fair featuring local artisans.</div>
                 </div>
                 
                 <!-- Calypso Farm - December -->
                 <div class="event-card">
                     <h3>Calypso Farm Holiday Craft Fair</h3>
-                    <div class="event-date">December 2026</div>
+                    <div class="event-date">December 2026: TBA</div>
                     <p>Calypso Farm and Ecology Center</p>
                     <div class="event-description">Local artists featuring handmade, sustainable textile art and gifts.</div>
-                </div>
-                
-                <!-- Morris Thompson Holiday Bazaar -->
-                <div class="event-card">
-                    <h3>Holiday Bazaar</h3>
-                    <div class="event-date">December 2026</div>
-                    <p>Morris Thompson Cultural & Visitors Center</p>
-                    <div class="event-description">Holiday gift craft fair featuring local artisans.</div>
                 </div>
                 
                 <!-- Persephone's Lair -->
@@ -866,13 +884,37 @@
                     <p>Fantasy Ball</p>
                     <div class="event-description">Greek underworld themed fantasy ball. Custom mythologically-inspired creations available!</div>
                 </div>
+                
+                <!-- Strawberry Festival -->
+                <div class="event-card">
+                    <h3>Strawberry Festival</h3>
+                    <div class="event-date">Time: TBA</div>
+                    <p>Salmon River Park</p>
+                    <div class="event-description">Live music, games, strawberry recipe contest! Find me near the bunny petting zoo with homemade wild strawberry jelly, strawberry rhubarb pie filling, and original art.</div>
+                </div>
+                
+                <!-- Sunday Market - coming 2027 -->
+                <div class="event-card">
+                    <h3>Sunday Market at A&amp;E Trading Company</h3>
+                    <div class="event-date">Coming 2027: Sundays, June–August (TBA)</div>
+                    <p>Near the Community Garden</p>
+                    <div class="event-description">Free bunny petting zoo, plant starts, art, and handmade goods. Come watch our bunnies grow up!</div>
+                </div>
+                
+                <!-- 2nd Saturday Market - coming 2027, at the end -->
+                <div class="event-card">
+                    <h3>Gustavus 2nd Saturday Market</h3>
+                    <div class="event-date">Coming 2027: April–October, TBA</div>
+                    <p>Gustavus Community Center</p>
+                    <div class="event-description">Alaskan wildlife-inspired fiber art, rabbitry information, and seasonal creations. Stop by my booth!</div>
+                </div>
             </div>
         </section>
         
         <!-- Fantasy Creations Section -->
         <section class="fantasy-section">
             <div class="fantasy-header">
-                <h2>Fantasy & Gaming Creations</h2>
+                <h2>Fantasy &amp; Gaming Creations</h2>
                 <p>Handmade accessories for fantasy events, gaming conventions, or imaginative everyday use</p>
             </div>
             
@@ -880,12 +922,12 @@
                 <!-- D&D Dice Bags -->
                 <div class="fantasy-card">
                     <div class="fantasy-image">
-                        <img src="images/DandDDiceBag.jpg" alt="Dungeons & Dragons Dice Bag">
+                        <img src="images/DandDDiceBag.jpg" alt="Dungeons &amp; Dragons Dice Bag">
                     </div>
                     <div class="fantasy-info">
-                        <h3>D&D Dice Bags</h3>
+                        <h3>D&amp;D Dice Bags</h3>
                         <div class="fantasy-tags">
-                            <span class="fantasy-tag dnd-tag">Dungeons & Dragons</span>
+                            <span class="fantasy-tag dnd-tag">Dungeons &amp; Dragons</span>
                             <span class="fantasy-tag dnd-tag">Tabletop Gaming</span>
                         </div>
                         <p>Hand-sewn dice bags perfect for your gaming sessions! Each bag includes a matching set of dice.</p>
@@ -981,7 +1023,7 @@
         
         <!-- Custom Commissions -->
         <section class="custom-section">
-            <h3>Custom Commissions & Quick Turnaround</h3>
+            <h3>Custom Commissions &amp; Quick Turnaround</h3>
             <p>Looking for something specific? I accept custom commissions for:</p>
             <p><strong>• Fantasy themes</strong> (Persephone's Lair, dragons, mythology)<br>
                <strong>• Science/Math concepts</strong> (mathematical potholders)<br>
@@ -1002,7 +1044,7 @@
     </main>
     
     <footer>
-        <p>© 2026 Geneva's Trading Post | Fantasy, Science & Seasonal Creations</p>
+        <p>© 2026 Geneva's Trading Post | Fantasy, Science &amp; Seasonal Creations</p>
         <p>Handmade in Fairbanks, Alaska | PopCon • Holiday Bazaars • Special Occasions</p>
     </footer>
 </body>
