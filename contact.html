@@ -4,40 +4,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Geneva's Trading Post</title>
-    <meta name="description" content="Geneva's Trading Post: Alaskan fiber art, rabbitry, and farm stand in Gustavus & Fairbanks. Hand-knit wildlife potholders, Champagne d'Argent rabbits, local produce.">
-<meta name="keywords" content="Alaska, Gustavus, Fairbanks, knitting, fiber art, rabbitry, Champagne d'Argent, Silver Fox, farm stand, quail eggs, potholders, handmade, local produce">
+    <meta name="description" content="Contact Geneva's Trading Post: Alaskan fiber art, rabbitry, farm stand, and holiday markets in Gustavus & Fairbanks. Hand-knit wildlife potholders, Champagne d'Argent rabbits, embroidered keepsakes.">
+<meta name="keywords" content="Alaska, Gustavus, Fairbanks, knitting, fiber art, rabbitry, Champagne d'Argent, Silver Fox, farm stand, quail eggs, potholders, handmade, local produce, holiday market">
 <meta name="author" content="Geneva's Trading Post">
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* Contact page specific styles */
+        /* Winter palette */
+        :root {
+            --winter-blue: #2563EB;
+            --winter-blue-dark: #1E3A8A;
+            --winter-blue-mid: #1E40AF;
+            --winter-blue-light: #BFDBFE;
+            --winter-blue-pale: #DBEAFE;
+            --winter-frost: #EFF6FF;
+            --persephone-purple: #6C3483;
+            --persephone-dark: #4A235A;
+            --fantasy-gold: #D4AC0D;
+        }
+
+        /* Header — winter theme */
         .page-header {
+            position: relative;
             text-align: center;
-            padding: 2rem 1rem;
-            background: #2c3e50;
+            padding: 3rem 1rem;
+            background: linear-gradient(135deg, #1E3A8A 0%, #2563EB 60%, #60A5FA 100%);
             color: white;
             margin: 0;
+            overflow: hidden;
         }
-        
+
+        .page-header::before,
+        .page-header::after {
+            content: "❄";
+            position: absolute;
+            color: white;
+            opacity: 0.25;
+            pointer-events: none;
+            line-height: 1;
+        }
+        .page-header::before {
+            top: 0.5rem;
+            left: 1.5rem;
+            font-size: 5rem;
+            transform: rotate(12deg);
+        }
+        .page-header::after {
+            bottom: 0.5rem;
+            right: 1.5rem;
+            font-size: 4rem;
+            transform: rotate(-18deg);
+        }
+
         .page-header h1 {
+            position: relative;
+            z-index: 1;
             font-size: 2.5rem;
             margin: 0;
             color: white;
+            text-shadow: 0 3px 10px rgba(0,0,0,0.4);
         }
-        
+
         .page-header p {
+            position: relative;
+            z-index: 1;
             font-size: 1.2rem;
             margin: 0.5rem auto 0;
-            color: #ecf0f1;
+            color: #EFF6FF;
             max-width: 800px;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.3);
         }
-        
+
+        /* Nav — Persephone palette to match updated pages */
         nav {
-            background: #34495e;
+            background: var(--persephone-dark);
             padding: 1rem;
             text-align: center;
-            border-bottom: 3px solid #3498db;
+            border-bottom: 3px solid var(--fantasy-gold);
         }
-        
+
         nav a {
             color: white;
             text-decoration: none;
@@ -46,13 +90,15 @@
             padding: 0.7rem 1.3rem;
             border-radius: 5px;
             display: inline-block;
-            transition: background 0.3s ease;
+            transition: all 0.3s ease;
         }
-        
+
         nav a:hover, .current {
-            background: #3498db;
+            background: var(--persephone-purple);
+            transform: translateY(-2px);
         }
-        
+
+        /* Contact container */
         .contact-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -61,72 +107,72 @@
             max-width: 1400px;
             margin: 0 auto;
         }
-        
+
         .contact-info {
             background: white;
             padding: 2.5rem;
             border-radius: 12px;
             box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-            border-left: 5px solid #3498db;
+            border-left: 5px solid var(--winter-blue);
             display: flex;
             flex-direction: column;
         }
-        
+
         .contact-info h2 {
-            color: #2c3e50;
+            color: var(--winter-blue-dark);
             font-size: 1.8rem;
             margin-top: 0;
-            border-bottom: 2px solid #3498db;
+            border-bottom: 2px solid var(--winter-blue-light);
             padding-bottom: 0.8rem;
             margin-bottom: 1.5rem;
         }
-        
+
         .contact-details {
             margin-bottom: 1rem;
             flex: 0;
         }
-        
+
         .contact-item {
             margin-bottom: 1.5rem;
             padding-left: 1.5rem;
             position: relative;
         }
-        
+
         .contact-item::before {
             content: "•";
-            color: #3498db;
+            color: var(--winter-blue);
             font-size: 1.5rem;
             position: absolute;
             left: 0;
             top: -2px;
         }
-        
+
         .contact-item h3 {
             color: #2c3e50;
             margin: 0 0 0.5rem 0;
             font-size: 1.3rem;
         }
-        
+
         .contact-item p {
             color: #34495e;
             margin: 0;
             line-height: 1.6;
             font-size: 1.1rem;
         }
-        
-        /* Email button styling */
+
+        /* Email button */
         .email-button-section {
-            background: #f8f9fa;
+            background: var(--winter-frost);
             padding: 1.5rem;
             border-radius: 8px;
-            border: 2px solid #3498db;
+            border: 2px solid var(--winter-blue);
             margin: 1.5rem 0;
             text-align: center;
         }
-        
+
         .email-btn {
             display: inline-block;
-            background: #3498db;
+            background: var(--winter-blue);
             color: white;
             padding: 1rem 2rem;
             text-decoration: none;
@@ -136,68 +182,68 @@
             border: none;
             cursor: pointer;
             transition: transform 0.3s, background 0.3s;
-            box-shadow: 0 4px 10px rgba(52, 152, 219, 0.3);
+            box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
             margin: 0.5rem 0;
         }
-        
+
         .email-btn:hover {
-            background: #2980b9;
+            background: var(--winter-blue-dark);
             transform: scale(1.05);
         }
-        
+
         .email-note {
             font-size: 0.9rem;
             color: #7f8c8d;
             margin-top: 1rem;
             font-style: italic;
         }
-        
-        /* Shipping card styling */
+
+        /* Shipping card */
         .shipping-card {
-            background: #e8f4fd;
+            background: var(--winter-frost);
             padding: 1.2rem;
             border-radius: 8px;
             margin-top: 1rem;
-            border: 2px solid #3498db;
+            border: 2px solid var(--winter-blue);
             text-align: left;
         }
-        
+
         .shipping-card h4 {
-            color: #2c3e50;
+            color: var(--winter-blue-dark);
             margin: 0 0 0.8rem 0;
             font-size: 1.2rem;
             display: flex;
             align-items: center;
             gap: 0.5rem;
         }
-        
+
         .shipping-card p {
             margin: 0.5rem 0;
             color: #2c3e50;
         }
-        
+
         .shipping-rate {
             font-weight: bold;
         }
-        
+
         .shipping-international {
             color: #34495e;
             font-size: 0.95rem;
         }
-        
+
         .shipping-details {
             margin: 0.8rem 0 0 0;
             color: #34495e;
             font-size: 0.95rem;
-            border-top: 1px dashed #3498db;
+            border-top: 1px dashed var(--winter-blue);
             padding-top: 0.8rem;
         }
-        
+
         .shipping-bold {
             font-weight: bold;
         }
-        
-        /* Sunflower image styling */
+
+        /* Sunflower */
         .sunflower-container {
             margin-top: 1rem;
             width: 100%;
@@ -210,7 +256,7 @@
             align-items: center;
             justify-content: center;
         }
-        
+
         .sunflower-image {
             width: 100%;
             height: auto;
@@ -220,11 +266,11 @@
             transition: transform 0.3s ease;
             background: #f9f3e9;
         }
-        
+
         .sunflower-image:hover {
             transform: scale(1.02);
         }
-        
+
         .sunflower-caption {
             width: 100%;
             padding: 0.8rem;
@@ -236,199 +282,88 @@
             font-style: italic;
             letter-spacing: 0.5px;
         }
-        
+
+        /* Events / Markets section — winter themed */
         .markets-section {
-            background: #f8f9fa;
+            background: linear-gradient(135deg, var(--winter-frost) 0%, var(--winter-blue-pale) 100%);
             padding: 2.5rem;
             border-radius: 12px;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 6px 20px rgba(37, 99, 235, 0.1);
+            border: 2px solid var(--winter-blue-light);
         }
-        
+
         .markets-section h2 {
-            color: #2c3e50;
+            color: var(--winter-blue-dark);
             font-size: 1.8rem;
             margin-top: 0;
-            border-bottom: 2px solid #3498db;
+            border-bottom: 2px solid var(--winter-blue);
             padding-bottom: 0.8rem;
             margin-bottom: 1.5rem;
             text-align: center;
         }
-        
-        .market-grid {
+
+        .event-calendar {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
+            gap: 1.5rem;
+            margin-top: 1rem;
         }
-        
-        .market-card {
+
+        .event-card {
             background: white;
             border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-            transition: transform 0.3s ease;
-        }
-        
-        .market-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .market-image-container {
-            width: 100%;
-            height: 280px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: #f8f9fa;
-            border-bottom: 3px solid #3498db;
-            padding: 1rem;
-        }
-        
-        .market-card img {
-            max-width: 100%;
-            max-height: 100%;
-            width: auto;
-            height: auto;
-            object-fit: contain;
-        }
-        
-        .market-info {
             padding: 1.5rem;
+            border: 2px solid var(--winter-blue-light);
+            border-left: 5px solid var(--winter-blue);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: left;
         }
-        
-        .market-info h3 {
-            color: #2c3e50;
+
+        .event-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.18);
+        }
+
+        .event-card h3 {
+            color: var(--winter-blue-dark);
             margin-top: 0;
-            font-size: 1.4rem;
+            font-size: 1.3rem;
+            border-bottom: 1px solid var(--winter-blue-pale);
+            padding-bottom: 0.5rem;
+            margin-bottom: 0.8rem;
         }
-        
-        .market-info p {
-            color: #34495e;
-            line-height: 1.5;
-            margin: 0.5rem 0;
-            font-size: 1rem;
-        }
-        
-        /* Clean date section */
-        .gustavus-dates {
-            margin: 1.5rem 0 0.5rem;
-            padding: 1rem;
-            background: #e8f5e9;
-            border-radius: 8px;
-            border-left: 4px solid #2ecc71;
-        }
-        
-        .gustavus-dates p {
-            margin: 0.5rem 0;
-            font-weight: bold;
-            color: #2c3e50;
-        }
-        
-        .date-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem 1rem;
-            justify-content: center;
-            margin: 1rem 0;
-        }
-        
-        .date-item {
-            background: white;
-            padding: 0.3rem 1rem;
-            border-radius: 30px;
-            font-weight: bold;
-            color: #2e7d32;
-            border: 1px solid #2ecc71;
-            font-size: 1rem;
-        }
-        
-        .market-time {
-            font-size: 1.2rem;
-            color: #2e7d32;
-            font-weight: bold;
-            margin: 0.5rem 0;
-        }
-        
-        .market-location {
-            font-style: italic;
-            color: #7f8c8d;
-            margin-top: 0.5rem;
-        }
-        
-        .market-season {
+
+        .event-date {
             display: inline-block;
-            background: #2ecc71;
-            color: white;
+            background: var(--winter-blue-pale);
+            color: var(--winter-blue-mid);
             padding: 0.3rem 0.8rem;
             border-radius: 20px;
-            font-size: 0.9rem;
             font-weight: bold;
-            margin-top: 0.5rem;
-        }
-        
-        /* Sunday Market Blurb - NEW */
-        .sunday-market-blurb {
-            background: #5d4037;
-            border-radius: 15px;
-            padding: 1.2rem;
-            margin: 1.5rem 0 0.5rem;
-            text-align: center;
-            color: #ffecb3;
-            border: 2px solid #d9a066;
-        }
-        
-        .sunday-market-blurb p {
-            margin: 0.25rem 0;
-            font-size: 1rem;
-        }
-        
-        .sunday-market-blurb strong {
-            color: #ffd966;
-            font-size: 1.1rem;
-        }
-        
-        /* Strawberry Festival Card - NEW */
-        .strawberry-festival-card {
-            background: #b71c1c;
-            border-radius: 20px;
-            margin-top: 1rem;
-            padding: 1.2rem;
-            text-align: center;
-            color: white;
-            border: 2px solid #ffaa66;
-            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
-        }
-        
-        .strawberry-festival-card h3 {
-            font-size: 1.6rem;
-            margin: 0 0 0.25rem;
-            color: #fff0b5;
-        }
-        
-        .festival-highlight {
-            background: #ffd966;
-            display: inline-block;
-            padding: 0.2rem 0.8rem;
-            border-radius: 40px;
-            color: #8b0000;
-            font-weight: bold;
-            margin: 0.5rem 0;
-            font-size: 0.9rem;
-        }
-        
-        .strawberry-festival-card p {
-            margin: 0.4rem 0;
+            margin: 0.3rem 0;
             font-size: 0.95rem;
         }
-        
-        /* Two-card wrapper for Gustavus card + extras */
-        .gustavus-card-wrapper {
-            display: flex;
-            flex-direction: column;
-            height: 100%;
+
+        .event-card p {
+            color: #34495E;
+            margin: 0.4rem 0;
+            font-size: 0.95rem;
+            line-height: 1.5;
         }
-        
-        /* Bio Section - Trading Post Story */
+
+        .event-description {
+            font-size: 0.95rem;
+            margin-top: 0.8rem;
+            color: #475569;
+        }
+
+        .event-description em {
+            color: var(--winter-blue);
+            font-style: italic;
+        }
+
+        /* Bio section — preserved */
         .bio-section {
             grid-column: 1 / -1;
             background: linear-gradient(135deg, #e8f4f8 0%, #f0f7ff 100%);
@@ -437,7 +372,7 @@
             margin-top: 2rem;
             border-left: 5px solid #9b59b6;
         }
-        
+
         .bio-section h2 {
             color: #2c3e50;
             font-size: 1.8rem;
@@ -445,14 +380,13 @@
             text-align: center;
             margin-bottom: 2rem;
         }
-        
-        /* Story intro image styling */
+
         .story-intro-image {
             text-align: center;
             margin: 0 auto 2rem auto;
             max-width: 500px;
         }
-        
+
         .story-intro-image img {
             width: 100%;
             max-width: 400px;
@@ -462,19 +396,18 @@
             border: 3px solid #9b59b6;
             transition: transform 0.3s ease;
         }
-        
+
         .story-intro-image img:hover {
             transform: scale(1.02);
         }
-        
+
         .story-intro-image .image-caption {
             font-size: 0.85rem;
             color: #7f8c8d;
             margin-top: 0.5rem;
             font-style: italic;
         }
-        
-        /* Updated story with multiple paragraphs */
+
         .bio-story {
             font-size: 1.15rem;
             line-height: 1.7;
@@ -486,16 +419,15 @@
             border-radius: 12px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
         }
-        
+
         .bio-story p {
             margin: 0 0 1.2rem 0;
         }
-        
+
         .bio-story p:last-child {
             margin-bottom: 0;
         }
-        
-        /* Credentials as bullet points */
+
         .credentials-box {
             background: white;
             padding: 2rem;
@@ -504,7 +436,7 @@
             margin: 0 auto;
             border: 2px solid #9b59b6;
         }
-        
+
         .credentials-box h3 {
             color: #9b59b6;
             font-size: 1.5rem;
@@ -512,7 +444,7 @@
             margin-bottom: 1.5rem;
             text-align: center;
         }
-        
+
         .credentials-list {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -521,7 +453,7 @@
             padding: 0;
             margin: 0;
         }
-        
+
         .credentials-list li {
             color: #34495e;
             font-size: 1.1rem;
@@ -529,7 +461,7 @@
             padding-left: 1.8rem;
             position: relative;
         }
-        
+
         .credentials-list li::before {
             content: "•";
             color: #9b59b6;
@@ -538,8 +470,8 @@
             left: 0;
             top: -8px;
         }
-        
-        /* Homestead Tour Card - NEW */
+
+        /* Homestead tour — preserved */
         .homestead-tour-card {
             grid-column: 1 / -1;
             background: linear-gradient(135deg, #f5f0e8 0%, #e8e0d0 100%);
@@ -552,19 +484,19 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.15);
             border: 1px solid #c4a86a;
         }
-        
+
         .homestead-image {
             flex: 1.2;
             min-width: 250px;
         }
-        
+
         .homestead-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             display: block;
         }
-        
+
         .homestead-text {
             flex: 1;
             padding: 2rem;
@@ -573,21 +505,21 @@
             flex-direction: column;
             justify-content: center;
         }
-        
+
         .homestead-text h3 {
             color: #2c5a2e;
             font-size: 1.8rem;
             margin-top: 0;
             margin-bottom: 0.5rem;
         }
-        
+
         .homestead-text p {
             color: #4a3b2c;
             font-size: 1.15rem;
             line-height: 1.6;
             margin: 0.5rem 0;
         }
-        
+
         .tour-note {
             margin-top: 1rem;
             font-style: italic;
@@ -595,7 +527,8 @@
             border-top: 1px solid #d4a373;
             padding-top: 1rem;
         }
-        
+
+        /* Donation banner — preserved */
         .donation-banner {
             grid-column: 1 / -1;
             background: linear-gradient(135deg, #2e7d32 0%, #1b5e20 100%);
@@ -607,14 +540,14 @@
             border: 4px solid #ffd54f;
             box-shadow: 0 10px 30px rgba(46, 125, 50, 0.3);
         }
-        
+
         .donation-banner h3 {
             font-size: 2.2rem;
             margin: 0 0 0.5rem;
             color: #ffd54f;
             text-shadow: 0 2px 5px rgba(0,0,0,0.3);
         }
-        
+
         .donation-banner p {
             font-size: 1.3rem;
             margin: 0.5rem 0 1.5rem;
@@ -622,7 +555,7 @@
             margin-left: auto;
             margin-right: auto;
         }
-        
+
         .donation-buttons {
             display: flex;
             gap: 1.5rem;
@@ -630,7 +563,7 @@
             flex-wrap: wrap;
             margin: 1.5rem 0;
         }
-        
+
         .donate-btn {
             color: white;
             padding: 1rem 2rem;
@@ -642,34 +575,34 @@
             min-width: 200px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
-        
+
         .donate-btn:hover {
             transform: scale(1.05);
         }
-        
+
         .venmo-btn {
             background: #3f51b5;
         }
-        
+
         .venmo-btn:hover {
             background: #303f9f;
         }
-        
+
         .paypal-btn {
             background: #0070ba;
         }
-        
+
         .paypal-btn:hover {
             background: #005ea6;
         }
-        
+
         .donation-note {
             font-size: 1rem;
             opacity: 0.9;
             margin-top: 1rem;
             font-style: italic;
         }
-        
+
         .back-btn {
             display: inline-block;
             background: #7f8c8d;
@@ -685,11 +618,11 @@
             grid-column: 1 / -1;
             justify-self: center;
         }
-        
+
         .back-btn:hover {
             background: #95a5a6;
         }
-        
+
         footer {
             text-align: center;
             padding: 2rem;
@@ -697,96 +630,83 @@
             color: white;
             margin-top: 3rem;
         }
-        
+
         @media (max-width: 768px) {
             .contact-container {
                 grid-template-columns: 1fr;
                 padding: 1.5rem;
             }
-            
+
             nav a {
                 display: block;
                 margin: 0.5rem auto;
                 width: 80%;
                 max-width: 300px;
             }
-            
+
             .bio-story {
                 padding: 1.5rem;
                 font-size: 1rem;
             }
-            
+
             .credentials-list {
                 grid-template-columns: 1fr;
             }
-            
+
             .contact-info, .markets-section {
                 padding: 1.8rem;
             }
-            
-            .market-image-container {
-                height: 240px;
-            }
-            
+
             .donation-banner h3 {
                 font-size: 1.8rem;
             }
-            
+
             .donation-banner p {
                 font-size: 1.1rem;
             }
-            
+
             .donation-buttons {
                 flex-direction: column;
                 align-items: center;
             }
-            
+
             .donate-btn {
                 width: 80%;
             }
-            
-            .date-grid {
-                gap: 0.3rem;
-            }
-            
-            .date-item {
-                font-size: 0.9rem;
-                padding: 0.2rem 0.8rem;
-            }
-            
+
             .sunflower-image {
                 max-height: 350px;
             }
-            
+
             .sunflower-caption {
                 font-size: 0.9rem;
                 padding: 0.6rem;
             }
-            
+
             .story-intro-image {
                 max-width: 300px;
             }
-            
+
             .story-intro-image img {
                 max-width: 100%;
             }
-            
+
             .homestead-tour-card {
                 flex-direction: column;
             }
-            
+
             .homestead-image {
                 min-height: 250px;
             }
-            
+
             .homestead-text {
                 padding: 1.5rem;
             }
-            
+
             .homestead-text h3 {
                 font-size: 1.5rem;
             }
-            
+
             .homestead-text p {
                 font-size: 1rem;
             }
@@ -796,9 +716,9 @@
 <body>
     <header class="page-header">
         <h1>Contact Geneva's Trading Post</h1>
-        <p>Get in Touch for Commissions, Rabbitry Inquiries & Market Information</p>
+        <p>Get in Touch for Commissions, Rabbitry Inquiries & Holiday Market Information</p>
     </header>
-    
+
     <!-- Navigation -->
     <nav>
         <a href="index.html">Home</a>
@@ -808,13 +728,13 @@
         <a href="fantasy-ball.html">Fantasy Art</a>
         <a href="contact.html" class="current">Contact</a>
     </nav>
-    
+
     <main>
         <div class="contact-container">
-            <!-- Contact Information - with shipping card added -->
+            <!-- Contact Information -->
             <section class="contact-info">
                 <h2>Contact & Commission Info</h2>
-                
+
                 <div class="contact-details">
                     <div class="contact-item">
                         <h3>Email</h3>
@@ -822,10 +742,10 @@
                             <button onclick="sendEmail()" class="email-btn">
                                 <span style="font-size:1.3rem;">✉️</span> Click to Email Me
                             </button>
-                            
+
                             <div class="email-note">No spam, just rabbits and art! 🐰</div>
                         </div>
-                        
+
                         <!-- Shipping Information Card -->
                         <div class="shipping-card">
                             <h4><span>📦</span> I Ship Anywhere!</h4>
@@ -835,7 +755,7 @@
                                 <span class="shipping-bold">📅 Shipping day:</span> Tuesdays, April–October, from Gustavus Post Office
                             </p>
                         </div>
-                        
+
                         <script>
                         function sendEmail() {
                             var user = "gjmottet";
@@ -843,133 +763,148 @@
                             window.location.href = "mailto:" + user + "@" + domain;
                         }
                         </script>
-                        
+
                         <noscript>
                             <div style="background:#f8d7da; padding:1rem; border-radius:5px; margin-top:0.5rem;">
                                 <p>Please enable JavaScript to use the email button.</p>
                             </div>
                         </noscript>
                     </div>
-                    
+
                     <div class="contact-item">
                         <h3>Based In</h3>
                         <p>Gustavus (Summer)</p>
                         <p>Fairbanks (Winter)</p>
                     </div>
-                    
+
                     <div class="contact-item">
                         <h3>Available For</h3>
                         <p>• Art commissions</p>
+                        <p>• Holiday gifts & embroidered keepsakes</p>
                         <p>• Plant starts & garden products (spring)</p>
                         <p>• Rabbitry adoptions & inquiries</p>
                         <p>• Fur tanning services</p>
                     </div>
-                    
+
                     <div class="contact-item">
                         <h3>Commission Process</h3>
                         <p>Contact me to discuss your vision. Prices based on time and material.</p>
                     </div>
                 </div>
-                
+
                 <!-- Sunflower image with caption -->
                 <div class="sunflower-container">
                     <img src="images/Sunflower2.jpg" alt="Tall sunflower growing in front of our Gustavus home" class="sunflower-image">
                     <div class="sunflower-caption">🌻 Sunflower growing in front of our Gustavus house</div>
                 </div>
             </section>
-            
-            <!-- Markets Section -->
+
+            <!-- Upcoming Events & Markets -->
             <section class="markets-section">
-                <h2>Gustavus Markets</h2>
-                
-                <div class="market-grid">
-                    <!-- Gustavus Market Card with wrapper to contain extra cards below it -->
-                    <div class="gustavus-card-wrapper">
-                        <div class="market-card">
-                            <div class="market-image-container">
-                                <img src="images/craftfair_rsz.jpg" alt="Gustavus Community Center Market">
-                            </div>
-                            <div class="market-info">
-                                <h3>Gustavus 2nd Saturday Market</h3>
-                                <p>Alaskan wildlife-inspired pieces, fiber art, and rabbitry information. Perfect for visitors and locals alike.</p>
-                                
-                                <div class="gustavus-dates">
-                                    <p>📅 2026 Market Dates:</p>
-                                    <div class="date-grid">
-                                        <span class="date-item">June 13</span>
-                                        <span class="date-item">July 11</span>
-                                        <span class="date-item">August 8</span>
-                                        <span class="date-item">September 12</span>
-                                        <span class="date-item">October 10</span>
-                                    </div>
-                                    <div class="market-time">All markets: 12:00–2:30pm</div>
-                                    <div class="market-location">Gustavus Community Center</div>
-                                </div>
-                                
-                                <p><strong>Season:</strong> June - October</p>
-                                <span class="market-season">2nd Saturday • Join Us!</span>
-                            </div>
-                        </div>
-                        
-                        <!-- Sunday Market Blurb - directly below Gustavus card -->
-                        <div class="sunday-market-blurb">
-                            <p><strong>🐇 Sunday Market at A&E Trading Company</strong></p>
-                            <p>Sundays, Noon – 4pm (weather permitting) • May 24 – August 30</p>
-                            <p>📍 Near the Community Garden • Free bunny petting zoo, plant starts, and art!</p>
-                            <p><em>Come watch our bunnies grow up!</em></p>
-                        </div>
-                        
-                        <!-- Strawberry Festival Card - directly below Sunday Market blurb -->
-                        <div class="strawberry-festival-card">
-                            <h3>🍓 Strawberry Festival 🍓</h3>
-                            <div class="festival-highlight">August 15–16 | Salmon River Park</div>
-                            <p>🎶 Live music, games, and a special strawberry recipe contest</p>
-                            <p>🧸 Find Geneva near the bunny petting zoo.</p>
-                            <p><em>Come celebrate summer's sweetest berry!</em></p>
-                        </div>
+                <h2>Upcoming Events &amp; Markets</h2>
+
+                <div class="event-calendar">
+
+                    <!-- PopCon -->
+                    <div class="event-card">
+                        <h3>🎲 PopCon Fairbanks</h3>
+                        <div class="event-date">Friday, November 6: 11am–7pm</div><br>
+                        <div class="event-date">Saturday, November 7: 11am–7pm</div>
+                        <p>University gaming &amp; pop culture convention</p>
+                        <div class="event-description">Dice bags, fantasy accessories, and unique creations for gamers and fantasy fans. <em>Not currently planning to attend Sunday.</em></div>
                     </div>
-                    
-                    <!-- Fairbanks Market -->
-                    <div class="market-card">
-                        <div class="market-image-container">
-                            <img src="images/holiday_market_rsz.jpg" alt="Fairbanks Craft Fair">
-                        </div>
-                        <div class="market-info">
-                            <h3>Fairbanks Winter Markets</h3>
-                            <p>Winter craft fairs and holiday markets featuring textile art and the popular hand-knit teddy bear collection.</p>
-                            <p><strong>Season:</strong> October - March</p>
-                            <span class="market-season">Winter Season</span>
-                        </div>
+
+                    <!-- First Friday -->
+                    <div class="event-card">
+                        <h3>🎨 First Friday Art Show</h3>
+                        <div class="event-date">TBA — likely evening of November 7, same day as PopCon</div>
+                        <p>Keith B. Mather Library, Geophysical Institute, UAF</p>
+                        <div class="event-description">Scientific and mathematical art exhibition featuring "A Dynamics Yarn" potholders.</div>
                     </div>
+
+                    <!-- LARS Holiday Market -->
+                    <div class="event-card">
+                        <h3>🐄 LARS &amp; Friends Holiday Market</h3>
+                        <div class="event-date">Wednesday, November 18: 11am–4pm</div>
+                        <p>Large Animal Research Station, UAF</p>
+                        <div class="event-description">Handmade textile and rabbit products, perfect for holiday gifts.</div>
+                    </div>
+
+                    <!-- Morris Thompson Holiday Bazaar -->
+                    <div class="event-card">
+                        <h3>🏛️ 2026 MTCVC Holiday Bazaar — Morris Thompson Building</h3>
+                        <div class="event-date">Friday, December 11: 11am–6pm</div><br>
+                        <div class="event-date">Saturday, December 12: 10am–6pm</div>
+                        <p>Morris Thompson Cultural &amp; Visitors Center</p>
+                        <div class="event-description">Holiday gift craft fair featuring local artisans.</div>
+                    </div>
+
+                    <!-- Calypso -->
+                    <div class="event-card">
+                        <h3>🌱 Calypso Farm Holiday Craft Fair</h3>
+                        <div class="event-date">December 2026: TBA</div>
+                        <p>Calypso Farm and Ecology Center</p>
+                        <div class="event-description">Local artists featuring handmade, sustainable textile art and gifts.</div>
+                    </div>
+
+                    <!-- Persephone's Lair -->
+                    <div class="event-card">
+                        <h3>🏺 Persephone's Lair</h3>
+                        <div class="event-date">February 2027</div>
+                        <p>Fantasy Ball</p>
+                        <div class="event-description">Greek underworld themed fantasy ball. Custom mythologically-inspired creations available!</div>
+                    </div>
+
+                    <!-- Strawberry Festival — TBA time, near the end -->
+                    <div class="event-card">
+                        <h3>🍓 Strawberry Festival</h3>
+                        <div class="event-date">Time: TBA</div>
+                        <p>Salmon River Park</p>
+                        <div class="event-description">Live music, games, strawberry recipe contest! Find me near the bunny petting zoo with homemade wild strawberry jelly, strawberry rhubarb pie filling, and original art.</div>
+                    </div>
+
+                    <!-- Sunday Market — Coming 2027, near the end -->
+                    <div class="event-card">
+                        <h3>🐇 Sunday Market at A&amp;E Trading Company</h3>
+                        <div class="event-date">Coming 2027: Sundays, June–August (TBA)</div>
+                        <p>Near the Community Garden</p>
+                        <div class="event-description">Free bunny petting zoo, plant starts, art, and handmade goods. Come watch our bunnies grow up!</div>
+                    </div>
+
+                    <!-- 2nd Saturday Market — Coming 2027, at the end -->
+                    <div class="event-card">
+                        <h3>🌿 Gustavus 2nd Saturday Market</h3>
+                        <div class="event-date">Coming 2027: April–October, TBA</div>
+                        <p>Gustavus Community Center</p>
+                        <div class="event-description">Alaskan wildlife-inspired fiber art, rabbitry information, and seasonal creations. Stop by my booth!</div>
+                    </div>
+
                 </div>
             </section>
-            
-            <!-- The Story of Geneva's Trading Post - with new image -->
+
+            <!-- The Story of Geneva's Trading Post -->
             <section class="bio-section">
                 <h2>The Story of Geneva's Trading Post</h2>
-                
-                <!-- Black Rabbit Fur Hat Image below title -->
+
                 <div class="story-intro-image">
                     <img src="images/BlackRabbitFurHat.jpg" alt="Black Rabbit Fur Hat - Handcrafted Alaskan Art">
                     <div class="image-caption">Handcrafted rabbit fur hat from our own hand-tanned pelts</div>
                 </div>
-                
-                <!-- Your updated story with multiple paragraphs -->
+
                 <div class="bio-story">
                     <p>I grew up between Sitka, Alaska and the San Juan Islands. 4‑H was a constant through my childhood—nine years as a member, then five more as an adult leader before I left for college. That program taught me everything from textile arts to astronomy, and it's come full circle now: I'm currently becoming a leader for Gustavus Country Critters.</p>
-                    
+
                     <p>By high school, I was already running a sole proprietorship, selling my art and animals at craft fairs. I started with meat rabbits at seventeen. From there, I went to Evergreen for dual degrees in physics and math, with my math degree focused on nonlinear modeling of biological complex systems—a thread that would carry forward.</p>
-                    
+
                     <p>I came to Fairbanks to start a physics Ph.D. studying auroras. Along the way, I shifted gears and earned an MS in Physics with an emphasis in biological modeling and nonlinear dynamics—picking up right where my Evergreen work left off. During grad school, I bought my house in Fairbanks, and homesteading became my anchor. Through every twist and turn, the animals and the garden kept me grounded.</p>
-                    
+
                     <p>I married my husband in 2019. When COVID hit the next year, my off‑grid skills weren't just hobbies anymore—they carried me through seven layoffs in twelve months. In 2021, instead of pulling back, we doubled down: we bought our off‑grid Gustavus homestead near Glacier Bay while keeping our original Fairbanks home.</p>
-                    
+
                     <p>Today, I'm a Certified Master Gardener (2024) and an active ARBA member. I'm back at UAF for more training, and I still find time to be an amateur astronomer. The details have changed over the years, but the core of what I do hasn't: raising animals, growing food, and building something that lasts.</p>
                 </div>
-                
-                <!-- Credentials as bullet points -->
+
                 <div class="credentials-box">
-                    <h3>Credentials & Experience</h3>
+                    <h3>Credentials &amp; Experience</h3>
                     <ul class="credentials-list">
                         <li>Current ARBA Member</li>
                         <li>Certified Southeast Master Gardener (2024)</li>
@@ -979,7 +914,7 @@
                     </ul>
                 </div>
             </section>
-            
+
             <!-- Homestead Tour Card -->
             <div class="homestead-tour-card">
                 <div class="homestead-image">
@@ -992,7 +927,7 @@
                     <div class="tour-note">📅 Contact us to schedule your visit — learn what's possible on a small homestead in Gustavus!</div>
                 </div>
             </div>
-            
+
             <!-- Homestead Donation Banner -->
             <div class="donation-banner">
                 <h3>🌿 Support Our Homestead</h3>
@@ -1003,12 +938,12 @@
                 </div>
                 <p class="donation-note">Every bit helps keep the rabbits fed and the yarn flowing! 🐇🧶</p>
             </div>
-            
+
             <!-- Back to Home Button -->
             <a href="index.html" class="back-btn">← Back to Home</a>
         </div>
     </main>
-    
+
     <footer>
         <p>© 2026 Geneva's Trading Post | Fairbanks & Gustavus, Alaska</p>
         <p>ARBA Member | Certified Master Gardener | Physics-trained, Homesteader-raised</p>
